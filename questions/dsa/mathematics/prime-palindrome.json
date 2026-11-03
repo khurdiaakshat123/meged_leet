@@ -1,0 +1,151 @@
+{
+  "id": "866",
+  "slug": "prime-palindrome",
+  "title": "Prime Palindrome",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Number Theory",
+    "Primality Test"
+  ],
+  "statement": "Given an integer n, return _the smallest **prime palindrome** greater than or equal to_ `n`.\n\nAn integer is **prime** if it has exactly two divisors: `1` and itself. Note that `1` is not a prime number.\n\n*   For example, `2`, `3`, `5`, `7`, `11`, and `13` are all primes.\n\nAn integer is a **palindrome** if it reads the same from left to right as it does from right to left.\n\n*   For example, `101` and `12321` are palindromes.\n\nThe test cases are generated so that the answer always exists and is in the range `[2, 2 * 10^(8)]`.\n\n**Example 1:**\n\n```\nInput: n = 6\nOutput: 7\n```\n\n**Example 2:**\n\n```\nInput: n = 8\nOutput: 11\n```\n\n**Example 3:**\n\n```\nInput: n = 13\nOutput: 101\n```\n\n**Constraints:**\n\n*   `1 <= n <= 10^(8)`",
+  "constraints": [
+    "1 <= n <= 108"
+  ],
+  "examples": [
+    {
+      "input": "n = 6",
+      "output": "7",
+      "explanation": null
+    },
+    {
+      "input": "n = 8",
+      "output": "11",
+      "explanation": null
+    },
+    {
+      "input": "n = 13",
+      "output": "101",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int primePalindrome(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int primePalindrome(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def primePalindrome(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def primePalindrome(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar primePalindrome = function(n) {\n    \n};",
+    "typescript": "function primePalindrome(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int PrimePalindrome(int n) {\n        \n    }\n}",
+    "c": "int primePalindrome(int n) {\n    \n}",
+    "golang": "func primePalindrome(n int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun primePalindrome(n: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func primePalindrome(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn prime_palindrome(n: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef prime_palindrome(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function primePalindrome($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int primePalindrome(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def primePalindrome(n: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec prime_palindrome(n :: integer) :: integer\n  def prime_palindrome(n) do\n    \n  end\nend",
+    "erlang": "-spec prime_palindrome(N :: integer()) -> integer().\nprime_palindrome(N) ->\n  .",
+    "racket": "(define/contract (prime-palindrome n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "2",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "100000000",
+      "expectedOutput": "100030001"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "99999999",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "61648327",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "62771375",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "87193350",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "48763865",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "6767813",
+      "expectedOutput": "7014107"
+    },
+    {
+      "input": "95894470",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "35901439",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "9538520",
+      "expectedOutput": "9547459"
+    },
+    {
+      "input": "15680524",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "51147176",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "29935120",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "37743875",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "30364476",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "10198949",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "38859598",
+      "expectedOutput": "100030001"
+    },
+    {
+      "input": "62747125",
+      "expectedOutput": "100030001"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/prime-palindrome/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:26.909Z",
+    "sourceUpdatedAt": null
+  }
+}

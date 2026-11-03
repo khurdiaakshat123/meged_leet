@@ -1,0 +1,161 @@
+{
+  "id": "2801",
+  "slug": "count-stepping-numbers-in-range",
+  "title": "Count Stepping Numbers in Range",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "statement": "Given two positive integers `low` and `high` represented as strings, find the count of **stepping numbers** in the inclusive range `[low, high]`.\n\nA **stepping number** is an integer such that all of its adjacent digits have an absolute difference of **exactly** `1`.\n\nReturn _an integer denoting the count of stepping numbers in the inclusive range_ `[low, high]`_._\n\nSince the answer may be very large, return it **modulo** `10^(9) + 7`.\n\n**Note:** A stepping number should not have a leading zero.\n\n**Example 1:**\n\n```\nInput: low = \"1\", high = \"11\"\nOutput: 10\nExplanation: The stepping numbers in the range [1,11] are 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10. There are a total of 10 stepping numbers in the range. Hence, the output is 10.\n```\n\n**Example 2:**\n\n```\nInput: low = \"90\", high = \"101\"\nOutput: 2\nExplanation: The stepping numbers in the range [90,101] are 98 and 101. There are a total of 2 stepping numbers in the range. Hence, the output is 2.\n```\n\n**Constraints:**\n\n*   `1 <= int(low) <= int(high) < 10^(100)`\n*   `1 <= low.length, high.length <= 100`\n*   `low` and `high` consist of only digits.\n*   `low` and `high` don't have any leading zeros.",
+  "constraints": [
+    "1 <= int(low) <= int(high) < 10100",
+    "1 <= low.length, high.length <= 100",
+    "low and high consist of only digits.",
+    "low and high don't have any leading zeros."
+  ],
+  "examples": [
+    {
+      "input": "low = \"1\", high = \"11\"",
+      "output": "10",
+      "explanation": "The stepping numbers in the range [1,11] are 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10. There are a total of 10 stepping numbers in the range. Hence, the output is 10."
+    },
+    {
+      "input": "low = \"90\", high = \"101\"",
+      "output": "2",
+      "explanation": "The stepping numbers in the range [90,101] are 98 and 101. There are a total of 2 stepping numbers in the range. Hence, the output is 2."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countSteppingNumbers(string low, string high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSteppingNumbers(String low, String high) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countSteppingNumbers(self, low: str, high: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def countSteppingNumbers(self, low, high):\n        \"\"\"\n        :type low: str\n        :type high: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} low\n * @param {string} high\n * @return {number}\n */\nvar countSteppingNumbers = function(low, high) {\n    \n};",
+    "typescript": "function countSteppingNumbers(low: string, high: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int CountSteppingNumbers(string low, string high) {\n        \n    }\n}",
+    "c": "int countSteppingNumbers(char* low, char* high) {\n    \n}",
+    "golang": "func countSteppingNumbers(low string, high string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countSteppingNumbers(low: String, high: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSteppingNumbers(_ low: String, _ high: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_stepping_numbers(low: String, high: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} low\n# @param {String} high\n# @return {Integer}\ndef count_stepping_numbers(low, high)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $low\n     * @param String $high\n     * @return Integer\n     */\n    function countSteppingNumbers($low, $high) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSteppingNumbers(String low, String high) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def countSteppingNumbers(low: String, high: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec count_stepping_numbers(low :: String.t, high :: String.t) :: integer\n  def count_stepping_numbers(low, high) do\n    \n  end\nend",
+    "erlang": "-spec count_stepping_numbers(Low :: unicode:unicode_binary(), High :: unicode:unicode_binary()) -> integer().\ncount_stepping_numbers(Low, High) ->\n  .",
+    "racket": "(define/contract (count-stepping-numbers low high)\n  (-> string? string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"1\"\n\"11\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"90\"\n\"101\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"1\"\n\"11\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"90\"\n\"101\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"10\"\n\"10\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"11\"\n\"11\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"101\"\n\"101\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"1\"\n\"9\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"98\"\n\"123\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"1241261244\"\n\"8248228639\"",
+      "expectedOutput": "2358"
+    },
+    {
+      "input": "\"1254296024192\"\n\"8261363519149\"",
+      "expectedOutput": "16762"
+    },
+    {
+      "input": "\"12783209042867647\"\n\"82853983992337662\"",
+      "expectedOutput": "227290"
+    },
+    {
+      "input": "\"1292465894370758780\"\n\"8209423289326650190\"",
+      "expectedOutput": "836880"
+    },
+    {
+      "input": "\"12154906744\"\n\"82225681695\"",
+      "expectedOutput": "4758"
+    },
+    {
+      "input": "\"1239525555557637\"\n\"8236693940604530\"",
+      "expectedOutput": "118180"
+    },
+    {
+      "input": "\"124366043564153247\"\n\"825062883079852499\"",
+      "expectedOutput": "435372"
+    },
+    {
+      "input": "\"13677952258445264010362\"\n\"83737636108815198213238\"",
+      "expectedOutput": "11345952"
+    },
+    {
+      "input": "\"13807201059384113316194620271\"\n\"83978985909754038519069331739\"",
+      "expectedOutput": "566462044"
+    },
+    {
+      "input": "\"130486598502240626128359421963519\"\n\"831192348006949878257006435541260\"",
+      "expectedOutput": "681073599"
+    },
+    {
+      "input": "\"132899087511539029286763550129822133431\"\n\"833496826125238261215429664707483197429\"",
+      "expectedOutput": "551723645"
+    },
+    {
+      "input": "\"1331025756209385122441767793750450613071848093145134150177376227659235931474094693589691429977516196\"\n\"9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\"",
+      "expectedOutput": "434609172"
+    },
+    {
+      "input": "\"1355060536393279052025908975312680891749196105120708866766449547913771271109191659701376943189135\"\n\"8362127031430262572302469021099299431628365761168030674506076197049409936572730646827774609799985\"",
+      "expectedOutput": "484252889"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Calculate the number of stepping numbers in the range [1, high] and subtract the number of stepping numbers in the range [1, low - 1].",
+    "The main problem is calculating the number of stepping numbers in the range [1, x].",
+    "First, calculate the number of stepping numbers shorter than x in length, which can be done using dynamic programming. (dp[i][j] is the number of i-digit stepping numbers ending with digit j).",
+    "Finally, calculate the number of stepping numbers that have the same length as x similarly. However, this time we need to maintain whether the prefix (in string) is smaller than or equal to x in the DP state."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-stepping-numbers-in-range/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.599Z",
+    "sourceUpdatedAt": null
+  }
+}

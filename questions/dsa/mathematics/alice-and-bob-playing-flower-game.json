@@ -1,0 +1,146 @@
+{
+  "id": "3021",
+  "slug": "alice-and-bob-playing-flower-game",
+  "title": "Alice and Bob Playing Flower Game",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Math"
+  ],
+  "statement": "Alice and Bob are playing a turn-based game on a field, with two lanes of flowers between them. There are `x` flowers in the first lane between Alice and Bob, and `y` flowers in the second lane between them.\n\n![](./assets/alice-and-bob-playing-flower-game-1.png)\n\nThe game proceeds as follows:\n\n1.  Alice takes the first turn.\n2.  In each turn, a player must choose either one of the lane and pick one flower from that side.\n3.  At the end of the turn, if there are no flowers left at all in either lane, the **current** player captures their opponent and wins the game.\n\nGiven two integers, `n` and `m`, the task is to compute the number of possible pairs `(x, y)` that satisfy the conditions:\n\n*   Alice must win the game according to the described rules.\n*   The number of flowers `x` in the first lane must be in the range `[1,n]`.\n*   The number of flowers `y` in the second lane must be in the range `[1,m]`.\n\nReturn _the number of possible pairs_ `(x, y)` _that satisfy the conditions mentioned in the statement_.\n\n**Example 1:**\n\n```\nInput: n = 3, m = 2\nOutput: 3\nExplanation: The following pairs satisfy conditions described in the statement: (1,2), (3,2), (2,1).\n```\n\n**Example 2:**\n\n```\nInput: n = 1, m = 1\nOutput: 0\nExplanation: No pairs satisfy the conditions described in the statement.\n```\n\n**Constraints:**\n\n*   `1 <= n, m <= 10^(5)`",
+  "constraints": [
+    "1 <= n, m <= 105"
+  ],
+  "examples": [
+    {
+      "input": "n = 3, m = 2",
+      "output": "3",
+      "explanation": "The following pairs satisfy conditions described in the statement: (1,2), (3,2), (2,1)."
+    },
+    {
+      "input": "n = 1, m = 1",
+      "output": "0",
+      "explanation": "No pairs satisfy the conditions described in the statement."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    long long flowerGame(int n, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long flowerGame(int n, int m) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def flowerGame(self, n: int, m: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def flowerGame(self, n, m):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @return {number}\n */\nvar flowerGame = function(n, m) {\n    \n};",
+    "typescript": "function flowerGame(n: number, m: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public long FlowerGame(int n, int m) {\n        \n    }\n}",
+    "c": "long long flowerGame(int n, int m) {\n    \n}",
+    "golang": "func flowerGame(n int, m int) int64 {\n    \n}",
+    "kotlin": "class Solution {\n    fun flowerGame(n: Int, m: Int): Long {\n        \n    }\n}",
+    "swift": "class Solution {\n    func flowerGame(_ n: Int, _ m: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn flower_game(n: i32, m: i32) -> i64 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @return {Integer}\ndef flower_game(n, m)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @return Integer\n     */\n    function flowerGame($n, $m) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int flowerGame(int n, int m) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def flowerGame(n: Int, m: Int): Long = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec flower_game(n :: integer, m :: integer) :: integer\n  def flower_game(n, m) do\n    \n  end\nend",
+    "erlang": "-spec flower_game(N :: integer(), M :: integer()) -> integer().\nflower_game(N, M) ->\n  .",
+    "racket": "(define/contract (flower-game n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1\n43552",
+      "expectedOutput": "21776"
+    },
+    {
+      "input": "2\n18138",
+      "expectedOutput": "18138"
+    },
+    {
+      "input": "100000\n73520",
+      "expectedOutput": "3676000000"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "99999\n64409",
+      "expectedOutput": "3220417795"
+    },
+    {
+      "input": "34168\n39768",
+      "expectedOutput": "679396512"
+    },
+    {
+      "input": "62412\n21017",
+      "expectedOutput": "655856502"
+    },
+    {
+      "input": "81620\n92793",
+      "expectedOutput": "3786882330"
+    },
+    {
+      "input": "58960\n80650",
+      "expectedOutput": "2377562000"
+    },
+    {
+      "input": "38555\n3204",
+      "expectedOutput": "61765110"
+    },
+    {
+      "input": "52361\n48730",
+      "expectedOutput": "1275775765"
+    },
+    {
+      "input": "96675\n43218",
+      "expectedOutput": "2089050075"
+    },
+    {
+      "input": "52247\n77826",
+      "expectedOutput": "2033087511"
+    },
+    {
+      "input": "12395\n86061",
+      "expectedOutput": "533363047"
+    },
+    {
+      "input": "95843\n27146",
+      "expectedOutput": "1300877039"
+    },
+    {
+      "input": "46759\n74635",
+      "expectedOutput": "1744928982"
+    },
+    {
+      "input": "68852\n27161",
+      "expectedOutput": "935044586"
+    },
+    {
+      "input": "83437\n27521",
+      "expectedOutput": "1148134838"
+    },
+    {
+      "input": "80349\n68575",
+      "expectedOutput": "2754966337"
+    },
+    {
+      "input": "96512\n50108",
+      "expectedOutput": "2418011648"
+    },
+    {
+      "input": "66284\n73017",
+      "expectedOutput": "2419929414"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "(x, y) is valid if and only if they have different parities."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/alice-and-bob-playing-flower-game/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:12.941Z",
+    "sourceUpdatedAt": null
+  }
+}

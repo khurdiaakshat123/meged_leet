@@ -1,0 +1,151 @@
+{
+  "id": "780",
+  "slug": "reaching-points",
+  "title": "Reaching Points",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Hard",
+  "tags": [
+    "Math",
+    "Euclidean Algorithm",
+    "Greatest Common Divisor"
+  ],
+  "statement": "Given four integers `sx`, `sy`, `tx`, and `ty`, return `true` _if it is possible to convert the point_ `(sx, sy)` _to the point_ `(tx, ty)` _through some operations__, or_ `false` _otherwise_.\n\nThe allowed operation on some point `(x, y)` is to convert it to either `(x, x + y)` or `(x + y, y)`.\n\n**Example 1:**\n\n```\nInput: sx = 1, sy = 1, tx = 3, ty = 5\nOutput: true\nExplanation:\nOne series of moves that transforms the starting point to the target is:\n(1, 1) -> (1, 2)\n(1, 2) -> (3, 2)\n(3, 2) -> (3, 5)\n```\n\n**Example 2:**\n\n```\nInput: sx = 1, sy = 1, tx = 2, ty = 2\nOutput: false\n```\n\n**Example 3:**\n\n```\nInput: sx = 1, sy = 1, tx = 1, ty = 1\nOutput: true\n```\n\n**Constraints:**\n\n*   `1 <= sx, sy, tx, ty <= 10^(9)`",
+  "constraints": [
+    "1 <= sx, sy, tx, ty <= 109"
+  ],
+  "examples": [
+    {
+      "input": "sx = 1, sy = 1, tx = 3, ty = 5",
+      "output": "true",
+      "explanation": "One series of moves that transforms the starting point to the target is:\n(1, 1) -> (1, 2)\n(1, 2) -> (3, 2)\n(3, 2) -> (3, 5)"
+    },
+    {
+      "input": "sx = 1, sy = 1, tx = 2, ty = 2",
+      "output": "false",
+      "explanation": null
+    },
+    {
+      "input": "sx = 1, sy = 1, tx = 1, ty = 1",
+      "output": "true",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool reachingPoints(int sx, int sy, int tx, int ty) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean reachingPoints(int sx, int sy, int tx, int ty) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def reachingPoints(self, sx: int, sy: int, tx: int, ty: int) -> bool:\n        ",
+    "python": "class Solution(object):\n    def reachingPoints(self, sx, sy, tx, ty):\n        \"\"\"\n        :type sx: int\n        :type sy: int\n        :type tx: int\n        :type ty: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} sx\n * @param {number} sy\n * @param {number} tx\n * @param {number} ty\n * @return {boolean}\n */\nvar reachingPoints = function(sx, sy, tx, ty) {\n    \n};",
+    "typescript": "function reachingPoints(sx: number, sy: number, tx: number, ty: number): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool ReachingPoints(int sx, int sy, int tx, int ty) {\n        \n    }\n}",
+    "c": "bool reachingPoints(int sx, int sy, int tx, int ty) {\n    \n}",
+    "golang": "func reachingPoints(sx int, sy int, tx int, ty int) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun reachingPoints(sx: Int, sy: Int, tx: Int, ty: Int): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reachingPoints(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reaching_points(sx: i32, sy: i32, tx: i32, ty: i32) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {Integer} sx\n# @param {Integer} sy\n# @param {Integer} tx\n# @param {Integer} ty\n# @return {Boolean}\ndef reaching_points(sx, sy, tx, ty)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $sx\n     * @param Integer $sy\n     * @param Integer $tx\n     * @param Integer $ty\n     * @return Boolean\n     */\n    function reachingPoints($sx, $sy, $tx, $ty) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool reachingPoints(int sx, int sy, int tx, int ty) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def reachingPoints(sx: Int, sy: Int, tx: Int, ty: Int): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec reaching_points(sx :: integer, sy :: integer, tx :: integer, ty :: integer) :: boolean\n  def reaching_points(sx, sy, tx, ty) do\n    \n  end\nend",
+    "erlang": "-spec reaching_points(Sx :: integer(), Sy :: integer(), Tx :: integer(), Ty :: integer()) -> boolean().\nreaching_points(Sx, Sy, Tx, Ty) ->\n  .",
+    "racket": "(define/contract (reaching-points sx sy tx ty)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "6338\n9946\n405910518\n44682859",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "3654\n2220\n21276\n5874",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "8460\n6799\n670361414\n14604716",
+      "expectedOutput": "false"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "2088\n7721\n2088\n9809",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "6509\n346\n20968975\n635012717",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "4809\n7689\n17307\n12498",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "6402\n9048\n821095934\n815921982",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1088\n6796\n1088\n7884",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "2074\n2043\n993137747\n259919339",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "9246\n8148\n17394\n8148",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "7032\n9841\n727928672\n661109273",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "4500\n5784\n54636\n94488",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "1002\n8706\n74050030\n490475949",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "9792\n3430\n118002\n75404",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "3810\n1124\n731421111\n614392467",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "9748\n1099\n81281\n50938",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "819\n8882\n690044783\n283005741",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "7485\n6400\n51310\n43825",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "9732\n1488\n394323207\n821084880",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "153\n5379\n153\n5532",
+      "expectedOutput": "true"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/reaching-points/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.247Z",
+    "sourceUpdatedAt": null
+  }
+}

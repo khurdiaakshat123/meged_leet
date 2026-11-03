@@ -1,0 +1,150 @@
+{
+  "id": "2496",
+  "slug": "maximum-value-of-a-string-in-an-array",
+  "title": "Maximum Value of a String in an Array",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String"
+  ],
+  "statement": "The **value** of an alphanumeric string can be defined as:\n\n*   The **numeric** representation of the string in base `10`, if it comprises of digits **only**.\n*   The **length** of the string, otherwise.\n\nGiven an array `strs` of alphanumeric strings, return _the **maximum value** of any string in_ `strs`.\n\n**Example 1:**\n\n```\nInput: strs = [\"alic3\",\"bob\",\"3\",\"4\",\"00000\"]\nOutput: 5\nExplanation: \n- \"alic3\" consists of both letters and digits, so its value is its length, i.e. 5.\n- \"bob\" consists only of letters, so its value is also its length, i.e. 3.\n- \"3\" consists only of digits, so its value is its numeric equivalent, i.e. 3.\n- \"4\" also consists only of digits, so its value is 4.\n- \"00000\" consists only of digits, so its value is 0.\nHence, the maximum value is 5, of \"alic3\".\n```\n\n**Example 2:**\n\n```\nInput: strs = [\"1\",\"01\",\"001\",\"0001\"]\nOutput: 1\nExplanation: \nEach string in the array has value 1. Hence, we return 1.\n```\n\n**Constraints:**\n\n*   `1 <= strs.length <= 100`\n*   `1 <= strs[i].length <= 9`\n*   `strs[i]` consists of only lowercase English letters and digits.",
+  "constraints": [
+    "1 <= strs.length <= 100",
+    "1 <= strs[i].length <= 9",
+    "strs[i] consists of only lowercase English letters and digits."
+  ],
+  "examples": [
+    {
+      "input": "strs = [\"alic3\",\"bob\",\"3\",\"4\",\"00000\"]",
+      "output": "5",
+      "explanation": "- \"alic3\" consists of both letters and digits, so its value is its length, i.e. 5.\n- \"bob\" consists only of letters, so its value is also its length, i.e. 3.\n- \"3\" consists only of digits, so its value is its numeric equivalent, i.e. 3.\n- \"4\" also consists only of digits, so its value is 4.\n- \"00000\" consists only of digits, so its value is 0.\nHence, the maximum value is 5, of \"alic3\"."
+    },
+    {
+      "input": "strs = [\"1\",\"01\",\"001\",\"0001\"]",
+      "output": "1",
+      "explanation": "Each string in the array has value 1. Hence, we return 1."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maximumValue(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumValue(String[] strs) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maximumValue(self, strs: list[str]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maximumValue(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar maximumValue = function(strs) {\n    \n};",
+    "typescript": "function maximumValue(strs: string[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaximumValue(string[] strs) {\n        \n    }\n}",
+    "c": "int maximumValue(char** strs, int strsSize) {\n    \n}",
+    "golang": "func maximumValue(strs []string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maximumValue(strs: Array<String>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumValue(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_value(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef maximum_value(strs)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function maximumValue($strs) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumValue(List<String> strs) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maximumValue(strs: Array[String]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec maximum_value(strs :: [String.t]) :: integer\n  def maximum_value(strs) do\n    \n  end\nend",
+    "erlang": "-spec maximum_value(Strs :: [unicode:unicode_binary()]) -> integer().\nmaximum_value(Strs) ->\n  .",
+    "racket": "(define/contract (maximum-value strs)\n  (-> (listof string?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"18\"]",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "[\"0296134\",\"blpwv\"]",
+      "expectedOutput": "296134"
+    },
+    {
+      "input": "[\"795399\",\"obmghaz\",\"nfsrlklt\"]",
+      "expectedOutput": "795399"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"1825921\",\"usgyhcm\",\"zbovba\",\"043140696\",\"pjs\"]",
+      "expectedOutput": "43140696"
+    },
+    {
+      "input": "[\"93674\",\"vnqsxhj\",\"mgrp\",\"958837408\",\"fpmrsy\",\"jsbzh\",\"1\"]",
+      "expectedOutput": "958837408"
+    },
+    {
+      "input": "[\"87\",\"sojlxnz\",\"vhasinl\",\"8714199\",\"khb\",\"nbjyc\",\"693\",\"aipvyvcnu\",\"se\",\"8\"]",
+      "expectedOutput": "8714199"
+    },
+    {
+      "input": "[\"88632\",\"bh\",\"ajzbprnt\",\"843\",\"iqjlai\",\"izpwtj\",\"4830\",\"oyaxf\",\"hgpv\",\"86240100\",\"tylellqxi\",\"cszzquwl\",\"3028\"]",
+      "expectedOutput": "86240100"
+    },
+    {
+      "input": "[\"422178153\",\"dn\",\"wezay\",\"698845\",\"manblg\",\"pfduo\",\"23402\",\"zmlavtu\",\"ydkii\",\"407\",\"mc\",\"juhf\",\"552013\",\"hhbkvd\",\"lqpbkw\",\"524780\"]",
+      "expectedOutput": "422178153"
+    },
+    {
+      "input": "[\"7858486\",\"rhdpkh\",\"t\",\"10790\",\"wg\",\"kgrkdfazo\",\"84\",\"apaeqd\",\"exs\",\"2\",\"kupmrwrfy\",\"ko\",\"8405422\",\"znnkhv\",\"dumzefztf\",\"945634\",\"pndsngq\",\"d\",\"7231986\"]",
+      "expectedOutput": "8405422"
+    },
+    {
+      "input": "[\"3\",\"n\",\"ptpapmteg\",\"0342554\",\"iywuwf\",\"ncequuxsk\",\"07211473\",\"dlxbsj\",\"flfddrlk\",\"346900403\",\"hslrglv\",\"obg\",\"4594\",\"krjccrw\",\"sr\",\"05335251\",\"jbk\",\"z\",\"6862\",\"pox\",\"hx\",\"5779\",\"ifichrzso\"]",
+      "expectedOutput": "346900403"
+    },
+    {
+      "input": "[\"42992566\",\"btjexkweu\",\"wzfeksj\",\"9089\",\"pgubxix\",\"w\",\"42982459\",\"oocq\",\"ubd\",\"091\",\"pv\",\"ccwmi\",\"6405754\",\"qxzeydb\",\"dpjnoy\",\"4\",\"iae\",\"umd\",\"2684311\",\"el\",\"l\",\"09426197\",\"dwqzen\",\"fj\",\"511246103\",\"kk\",\"eqoti\"]",
+      "expectedOutput": "511246103"
+    },
+    {
+      "input": "[\"7423\",\"vaq\",\"sgzxttfwm\",\"58124431\",\"qox\",\"z\",\"2693\",\"nqezu\",\"juyxgfk\",\"851\",\"hon\",\"xvleooxwn\",\"654559266\",\"heod\",\"otpgqvh\",\"526\",\"iydrn\",\"wznijf\",\"037373\",\"fpjrxzthk\",\"fsfu\",\"916\",\"uuycofylr\",\"hqltarld\",\"56\",\"xzfmxrlwp\",\"teqrzclog\",\"6279\",\"rvidntpui\",\"guwtdyvfn\",\"780151\",\"ozkx\"]",
+      "expectedOutput": "654559266"
+    },
+    {
+      "input": "[\"993\",\"hynbenl\",\"tstcizaz\",\"59\",\"hf\",\"yiegh\",\"714154160\",\"ibzrrgrmw\",\"w\",\"79\",\"bpwbb\",\"xfofqis\",\"3663\",\"j\",\"cvelvlxiz\",\"17715\",\"wsivh\",\"omqjtf\",\"2021961\",\"xt\",\"iilz\",\"597636781\",\"eo\",\"likzyz\",\"7570\",\"bvfbtuwb\",\"wbt\",\"94559160\",\"ugjcdfli\",\"vmvoc\",\"11\",\"yliwef\",\"ygcf\",\"30728592\",\"l\",\"ziq\",\"56104\"]",
+      "expectedOutput": "714154160"
+    },
+    {
+      "input": "[\"480428\",\"ulibti\",\"nuab\",\"938744482\",\"njsoiply\",\"ltzeivuw\",\"2478792\",\"nkzrjb\",\"szwcm\",\"62904\",\"nyy\",\"ngu\",\"658227282\",\"zm\",\"kvfexl\",\"4792135\",\"j\",\"l\",\"451151\",\"m\",\"qkuxf\",\"296\",\"pqwrb\",\"jyekkx\",\"376\",\"mhqf\",\"rpdxoai\",\"0929978\",\"mgw\",\"kcugxjlc\",\"02750291\",\"h\",\"xdqzqvezk\",\"1\",\"ctpkif\",\"xkjzj\",\"801274\",\"mzq\",\"wlvl\",\"0818\",\"fj\",\"tar\"]",
+      "expectedOutput": "938744482"
+    },
+    {
+      "input": "[\"42899\",\"jftmlr\",\"dwjjyda\",\"103190334\",\"fywsmmi\",\"luz\",\"0605361\",\"wqxhv\",\"egltqh\",\"606210262\",\"utszxydf\",\"x\",\"739870\",\"qapu\",\"jbfphn\",\"1673705\",\"omvf\",\"njd\",\"439985529\",\"znjpohpb\",\"lyd\",\"4\",\"osim\",\"clvcuixe\",\"31959\",\"tsoc\",\"yieyiya\",\"49546624\",\"o\",\"ygoadrw\",\"8\",\"kpwq\",\"uzmabue\",\"83450\",\"oxtksz\",\"v\",\"00572\",\"bov\",\"ekazhl\",\"7623\",\"aacsdhs\",\"kajbbarnq\",\"7\",\"hjtkiasr\",\"attsuxfy\",\"19119\",\"stair\"]",
+      "expectedOutput": "606210262"
+    },
+    {
+      "input": "[\"02463\",\"np\",\"uvoll\",\"13\",\"tr\",\"tbwvdfpv\",\"20\",\"p\",\"vwwklpmmn\",\"8695288\",\"zwdlew\",\"hfau\",\"531470\",\"u\",\"rfc\",\"9900313\",\"rmehcvky\",\"klvctjnz\",\"716\",\"itfhcj\",\"lrqaax\",\"574281418\",\"t\",\"vfgfrlwt\",\"2920788\",\"ghuzjj\",\"cjeanwyt\",\"2859866\",\"ekusbphac\",\"jrijfxpyb\",\"349175556\",\"s\",\"e\",\"720246654\",\"lwhnndsl\",\"sq\",\"13689\",\"gvdj\",\"yn\",\"184970476\",\"wq\",\"uyymcvy\",\"154\",\"khs\",\"ilyuo\",\"01983696\",\"n\",\"rb\",\"538214\",\"p\",\"luaugjg\",\"786655\",\"ivzn\"]",
+      "expectedOutput": "720246654"
+    },
+    {
+      "input": "[\"6186255\",\"mmlzalsi\",\"df\",\"367\",\"cexuoxynn\",\"eqkfpoqj\",\"5479\",\"cdzmbildn\",\"ponqhw\",\"59212058\",\"misw\",\"jfgii\",\"9125918\",\"uaqlkb\",\"trflren\",\"898540\",\"tezbpswm\",\"mefoixkzc\",\"763\",\"bd\",\"n\",\"0\",\"lo\",\"rvd\",\"63342623\",\"cfuoyck\",\"xqsldpsg\",\"849022301\",\"skljcywq\",\"rjqlke\",\"075\",\"izihhyz\",\"ual\",\"5799127\",\"dgkm\",\"x\",\"19081965\",\"iinzymu\",\"gpejhk\",\"130581017\",\"oszyflol\",\"ooqqbfytn\",\"398395168\",\"q\",\"eb\",\"02040\",\"qtz\",\"hg\",\"9\",\"itexlguv\",\"iixlktlqy\",\"613\",\"mxpwx\",\"fcqezrmqd\",\"634484848\",\"gtstgbvlv\",\"jhrrrjssm\",\"896\",\"etwtha\"]",
+      "expectedOutput": "849022301"
+    },
+    {
+      "input": "[\"368405233\",\"n\",\"je\",\"54\",\"uau\",\"tmuaq\",\"52975021\",\"mfw\",\"jrdw\",\"2691\",\"p\",\"p\",\"4238\",\"f\",\"kmjuflyn\",\"3502\",\"nk\",\"i\",\"912\",\"qcpvkesq\",\"a\",\"3672067\",\"qkxborxe\",\"hcsyuxwz\",\"64138181\",\"bgxsnvt\",\"stxwkn\",\"5357\",\"f\",\"zgz\",\"768988222\",\"lvryrqm\",\"ae\",\"75718671\",\"dizm\",\"yrgex\",\"45848\",\"vjvnbeyj\",\"y\",\"8531\",\"ii\",\"qckddg\",\"077235\",\"xbqr\",\"kb\",\"574\",\"obcx\",\"hptdd\",\"77\",\"yddxg\",\"bhfiej\",\"401664\",\"ikog\",\"uyvzlmgrx\",\"982\",\"yrliixu\",\"jyunue\",\"7\",\"lyfuqpvu\",\"kvbsmhvo\",\"827\",\"fkinoe\",\"e\",\"052416201\",\"uw\",\"oiguwnnpk\"]",
+      "expectedOutput": "768988222"
+    },
+    {
+      "input": "[\"2536100\",\"h\",\"bcmtr\",\"4225715\",\"dxs\",\"zvjdatid\",\"61301153\",\"zalm\",\"xgh\",\"920\",\"tkyo\",\"wiiy\",\"36\",\"fms\",\"wuvwfncyj\",\"27\",\"x\",\"k\",\"3\",\"tdm\",\"vfvsogl\",\"83671\",\"ugmsxuvbs\",\"ggdapln\",\"90045438\",\"hnxacops\",\"iobduuxtk\",\"051155\",\"aclkwtmfo\",\"te\",\"771076\",\"ovjlutje\",\"obuel\",\"75261855\",\"chbmawjs\",\"nlebohurw\",\"942145\",\"aqohbocul\",\"qvkjwhg\",\"68\",\"jj\",\"psyfcrh\",\"72836284\",\"yslciemm\",\"j\",\"6574\",\"st\",\"uth\",\"2827945\",\"isnkxjlsa\"]",
+      "expectedOutput": "90045438"
+    },
+    {
+      "input": "[\"50\",\"jzbjoh\",\"jcguunfch\",\"19312\",\"g\",\"pldkjmj\",\"8557908\",\"phyg\",\"wggcrb\",\"31424\",\"ctcielotz\",\"ggjsrkq\",\"2\",\"uv\",\"c\",\"51266832\",\"qz\",\"gjsxspu\",\"809563\",\"w\",\"fcqwrbpd\",\"494216\",\"kmi\",\"ndfa\",\"9135\",\"unbknbm\",\"zrbjngxg\",\"179902\",\"qmijeha\",\"dcy\",\"120590\",\"hayugxq\",\"euyoc\",\"85\",\"ruoao\",\"sxrhqadxk\",\"574656521\",\"ol\",\"m\",\"70631706\",\"pz\",\"vvnp\",\"695858\",\"irun\",\"oneqzs\",\"318\",\"ilytfhtfc\",\"v\",\"9878806\",\"letvc\",\"syysnvdn\",\"5071\",\"cvs\",\"qhni\",\"347250581\",\"mso\",\"mv\",\"8794199\",\"tsomkyt\",\"mhbz\",\"974\",\"xnzpl\",\"xajrv\",\"15488307\",\"oxnuhp\",\"fvyzsjjvr\",\"465604\",\"pl\",\"dbbxqh\",\"3242\",\"wbgqcf\",\"mzvxymiu\",\"741355903\",\"uuunty\",\"zvrgp\",\"3479599\",\"bkplcfn\",\"bcxlqnsdx\",\"494457\",\"d\",\"czxwj\",\"856507213\",\"xtu\",\"naarhjqpy\",\"3\",\"hquybgxf\",\"lkhficq\",\"429466\",\"svesbvdbu\",\"elvtqrueg\",\"1331\",\"go\",\"o\",\"04302263\",\"gvjpdvy\",\"gbaoawhv\",\"5912442\",\"zqglewd\",\"bfddypu\",\"25959\"]",
+      "expectedOutput": "856507213"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "For strings comprising only of digits, convert them into integers.",
+    "For all other strings, calculate their length."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.914Z",
+    "sourceUpdatedAt": null
+  }
+}

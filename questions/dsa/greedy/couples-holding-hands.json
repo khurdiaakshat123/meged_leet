@@ -1,0 +1,165 @@
+{
+  "id": "765",
+  "slug": "couples-holding-hands",
+  "title": "Couples Holding Hands",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Hard",
+  "tags": [
+    "Greedy",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Graph Theory"
+  ],
+  "statement": "There are `n` couples sitting in `2n` seats arranged in a row and want to hold hands.\n\nThe people and seats are represented by an integer array `row` where `row[i]` is the ID of the person sitting in the `i^(th)` seat. The couples are numbered in order, the first couple being `(0, 1)`, the second couple being `(2, 3)`, and so on with the last couple being `(2n - 2, 2n - 1)`.\n\nReturn _the minimum number of swaps so that every couple is sitting side by side_. A swap consists of choosing any two people, then they stand up and switch seats.\n\n**Example 1:**\n\n```\nInput: row = [0,2,1,3]\nOutput: 1\nExplanation: We only need to swap the second (row[1]) and third (row[2]) person.\n```\n\n**Example 2:**\n\n```\nInput: row = [3,2,0,1]\nOutput: 0\nExplanation: All couples are already seated side by side.\n```\n\n**Constraints:**\n\n*   `2n == row.length`\n*   `2 <= n <= 30`​​​​​​​\n*   `0 <= row[i] < 2n`\n*   All the elements of `row` are **unique**.",
+  "constraints": [
+    "2n == row.length",
+    "2 <= n <= 30​​​​​​​",
+    "0 <= row[i] < 2n",
+    "All the elements of row are unique."
+  ],
+  "examples": [
+    {
+      "input": "row = [0,2,1,3]",
+      "output": "1",
+      "explanation": "We only need to swap the second (row[1]) and third (row[2]) person."
+    },
+    {
+      "input": "row = [3,2,0,1]",
+      "output": "0",
+      "explanation": "All couples are already seated side by side."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minSwapsCouples(vector<int>& row) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwapsCouples(int[] row) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minSwapsCouples(self, row: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def minSwapsCouples(self, row):\n        \"\"\"\n        :type row: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} row\n * @return {number}\n */\nvar minSwapsCouples = function(row) {\n    \n};",
+    "typescript": "function minSwapsCouples(row: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinSwapsCouples(int[] row) {\n        \n    }\n}",
+    "c": "int minSwapsCouples(int* row, int rowSize) {\n    \n}",
+    "golang": "func minSwapsCouples(row []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minSwapsCouples(row: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwapsCouples(_ row: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps_couples(row: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} row\n# @return {Integer}\ndef min_swaps_couples(row)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $row\n     * @return Integer\n     */\n    function minSwapsCouples($row) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwapsCouples(List<int> row) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minSwapsCouples(row: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec min_swaps_couples(row :: [integer]) :: integer\n  def min_swaps_couples(row) do\n    \n  end\nend",
+    "erlang": "-spec min_swaps_couples(Row :: [integer()]) -> integer().\nmin_swaps_couples(Row) ->\n  .",
+    "racket": "(define/contract (min-swaps-couples row)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1,2,3,0]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[4,3,2,1,5,0]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[6,4,7,1,2,0,3,5]",
+      "expectedOutput": "3"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1,2,3,0]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[4,3,2,1,5,0]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[6,4,7,1,2,0,3,5]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[1,0,3,2]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[2,3,1,0,4,5]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[5,1,3,4,7,2,6,0]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[2,1,3,5,4,7,0,6]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[2,6,8,4,0,9,3,5,1,7]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[4,14,10,0,7,5,15,1,11,8,9,3,2,6,12,13]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[9,7,8,2,6,0,4,5,3,1]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[8,10,3,6,0,7,2,9,4,5,1,11]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[4,9,7,0,8,6,5,3,2,1]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[4,11,0,8,10,9,12,1,5,13,6,2,3,7]",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[7,1,12,4,2,5,15,9,11,6,8,13,14,0,3,10]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "[10,15,7,8,3,13,16,9,21,18,14,0,19,20,4,1,17,2,6,12,11,5]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[8,23,14,19,10,18,4,22,21,12,2,17,3,0,1,6,13,7,11,5,15,20,9,16]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[15,23,1,16,20,31,33,12,25,32,11,18,10,3,4,19,30,5,2,6,0,24,27,28,26,9,14,21,8,17,13,22,7,29]",
+      "expectedOutput": "16"
+    },
+    {
+      "input": "[18,17,7,0,14,4,10,3,21,6,15,19,11,2,9,22,13,16,1,23,8,20,12,5]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[54,19,51,46,53,35,11,20,31,4,8,42,7,41,18,27,38,6,28,21,24,5,1,22,25,40,34,26,0,10,58,23,9,32,33,44,59,57,48,29,50,16,43,36,3,47,30,56,49,14,12,2,52,13,39,17,55,45,37,15]",
+      "expectedOutput": "29"
+    },
+    {
+      "input": "[7,33,44,38,4,26,50,47,17,57,51,21,23,39,13,48,30,45,20,41,49,37,9,53,31,15,6,32,25,1,0,3,14,18,29,24,19,35,34,22,42,10,46,36,54,11,16,5,43,56,28,2,52,8,55,27,40,12]",
+      "expectedOutput": "23"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Say there are N two-seat couches.  For each couple, draw an edge from the couch of one partner to the couch of the other partner."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/couples-holding-hands/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:16.004Z",
+    "sourceUpdatedAt": null
+  }
+}

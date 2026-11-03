@@ -1,0 +1,156 @@
+{
+  "id": "3006",
+  "slug": "find-beautiful-indices-in-the-given-array-i",
+  "title": "Find Beautiful Indices in the Given Array I",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Binary Search",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function",
+    "Z Algorithm",
+    "Knuth–Morris–Pratt Algorithm",
+    "Boyer–Moore String-Search Algorithm"
+  ],
+  "statement": "You are given a **0-indexed** string `s`, a string `a`, a string `b`, and an integer `k`.\n\nAn index `i` is **beautiful** if:\n\n*   `0 <= i <= s.length - a.length`\n*   `s[i..(i + a.length - 1)] == a`\n*   There exists an index `j` such that:\n    *   `0 <= j <= s.length - b.length`\n    *   `s[j..(j + b.length - 1)] == b`\n    *   `|j - i| <= k`\n\nReturn _the array that contains beautiful indices in **sorted order from smallest to largest**_.\n\n**Example 1:**\n\n```\nInput: s = \"isawsquirrelnearmysquirrelhouseohmy\", a = \"my\", b = \"squirrel\", k = 15\nOutput: [16,33]\nExplanation: There are 2 beautiful indices: [16,33].\n- The index 16 is beautiful as s[16..17] == \"my\" and there exists an index 4 with s[4..11] == \"squirrel\" and |16 - 4| <= 15.\n- The index 33 is beautiful as s[33..34] == \"my\" and there exists an index 18 with s[18..25] == \"squirrel\" and |33 - 18| <= 15.\nThus we return [16,33] as the result.\n```\n\n**Example 2:**\n\n```\nInput: s = \"abcd\", a = \"a\", b = \"a\", k = 4\nOutput: [0]\nExplanation: There is 1 beautiful index: [0].\n- The index 0 is beautiful as s[0..0] == \"a\" and there exists an index 0 with s[0..0] == \"a\" and |0 - 0| <= 4.\nThus we return [0] as the result.\n```\n\n**Constraints:**\n\n*   `1 <= k <= s.length <= 10^(5)`\n*   `1 <= a.length, b.length <= 10`\n*   `s`, `a`, and `b` contain only lowercase English letters.",
+  "constraints": [
+    "1 <= k <= s.length <= 105",
+    "1 <= a.length, b.length <= 10",
+    "s, a, and b contain only lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "s = \"isawsquirrelnearmysquirrelhouseohmy\", a = \"my\", b = \"squirrel\", k = 15",
+      "output": "[16,33]",
+      "explanation": "There are 2 beautiful indices: [16,33].\n- The index 16 is beautiful as s[16..17] == \"my\" and there exists an index 4 with s[4..11] == \"squirrel\" and |16 - 4| <= 15.\n- The index 33 is beautiful as s[33..34] == \"my\" and there exists an index 18 with s[18..25] == \"squirrel\" and |33 - 18| <= 15.\nThus we return [16,33] as the result."
+    },
+    {
+      "input": "s = \"abcd\", a = \"a\", b = \"a\", k = 4",
+      "output": "[0]",
+      "explanation": "There is 1 beautiful index: [0].\n- The index 0 is beautiful as s[0..0] == \"a\" and there exists an index 0 with s[0..0] == \"a\" and |0 - 0| <= 4.\nThus we return [0] as the result."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> beautifulIndices(string s, string a, string b, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> beautifulIndices(String s, String a, String b, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def beautifulIndices(self, s: str, a: str, b: str, k: int) -> List[int]:\n        ",
+    "python": "class Solution(object):\n    def beautifulIndices(self, s, a, b, k):\n        \"\"\"\n        :type s: str\n        :type a: str\n        :type b: str\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {string} a\n * @param {string} b\n * @param {number} k\n * @return {number[]}\n */\nvar beautifulIndices = function(s, a, b, k) {\n    \n};",
+    "typescript": "function beautifulIndices(s: string, a: string, b: string, k: number): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<int> BeautifulIndices(string s, string a, string b, int k) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* beautifulIndices(char* s, char* a, char* b, int k, int* returnSize) {\n    \n}",
+    "golang": "func beautifulIndices(s string, a string, b string, k int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun beautifulIndices(s: String, a: String, b: String, k: Int): List<Int> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func beautifulIndices(_ s: String, _ a: String, _ b: String, _ k: Int) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn beautiful_indices(s: String, a: String, b: String, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {String} a\n# @param {String} b\n# @param {Integer} k\n# @return {Integer[]}\ndef beautiful_indices(s, a, b, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $a\n     * @param String $b\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function beautifulIndices($s, $a, $b, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> beautifulIndices(String s, String a, String b, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def beautifulIndices(s: String, a: String, b: String, k: Int): List[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec beautiful_indices(s :: String.t, a :: String.t, b :: String.t, k :: integer) :: [integer]\n  def beautiful_indices(s, a, b, k) do\n    \n  end\nend",
+    "erlang": "-spec beautiful_indices(S :: unicode:unicode_binary(), A :: unicode:unicode_binary(), B :: unicode:unicode_binary(), K :: integer()) -> [integer()].\nbeautiful_indices(S, A, B, K) ->\n  .",
+    "racket": "(define/contract (beautiful-indices s a b k)\n  (-> string? string? string? exact-integer? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"d\"\n\"e\"\n\"c\"\n1",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"bccb\"\n\"bcc\"\n\"cb\"\n4",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"bb\"\n\"ae\"\n\"b\"\n2",
+      "expectedOutput": "[]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"dea\"\n\"adb\"\n\"e\"\n1",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ccdaeb\"\n\"d\"\n\"abdb\"\n2",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ccdadadd\"\n\"ebddbdc\"\n\"d\"\n5",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ccddadcace\"\n\"ccd\"\n\"ce\"\n10",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"deacbdbaceae\"\n\"abead\"\n\"aedddaccb\"\n10",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"edddabcecdcedae\"\n\"ebabeebae\"\n\"decda\"\n3",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"cbdebaadbcadddedea\"\n\"cbd\"\n\"ea\"\n18",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"caeaaedceccdeecabdaee\"\n\"ea\"\n\"becdccdc\"\n19",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"abadbcccedabaebecccbdbcd\"\n\"cce\"\n\"bdcdbbcdce\"\n18",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"bbddbabdaddaddadddaedacebad\"\n\"bbd\"\n\"ad\"\n27",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"aeecebbaaeaebcecbbedaaeddbbedb\"\n\"bcdebcdcd\"\n\"cb\"\n1",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"adcebabbccdeaceceabeeaadedaddecdde\"\n\"adbcbddaba\"\n\"cbbcebade\"\n34",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"eeaacedadebcebccedebbcedcddcabababcbab\"\n\"eea\"\n\"ab\"\n38",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"cdecacccaaebcdeadabbeadadcdebdaebadbdccbcd\"\n\"eccb\"\n\"edda\"\n26",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"dcdddeeeeeedeacdadecdbabdcadddebaaccaeabaddbbe\"\n\"aceb\"\n\"cd\"\n36",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"adedeeceeecdaaddcbbbeeeedadbdcbececcccedcaaabbbdcdbacccbaeabeaeacdecacdecbcecbbbaddaeedcceebcccdbcaabcabbbbecdcbcbcbaceabeacbdaddedcaeddedcbadbbacddbdacbabeacadeeebdcedaebbecbbbadeaabaaaeceabbadaededbedabbdddbcabdccedacbacdbeaabccdaacceaddbabccabedaaabdcdbecbeececdbdebbeceabedcdecccdcacdbccaaaecbbddbbeaeedcccbcaaeaadbdcbeabcccbecaedddadecbcabadbdcacdeecceecbdbdabdaadbbaaaadbbaabcadaaddebecceeeeebeacdcacaaaacbdcaaabdcaaccbebebacdcdbdcdeaceaccdaeaeaabcbaeccccdbbcbdbabdecdeacaedaeddaabbadaabdadacbbcaaeceedbadbaadccbccaddaacacccbbbcabddaceeaeeadaaeecbceabcdedadebddbecabeddcaabbcbcdaebdddbdbeededcaedaaeecaccaadcdeaabbcecdaadabbaabcaddddcecaeaaabeccbeabcabeecadeaddabadbcbcbecaadabbcaabeaacddebdecddedaeaddbabacdddbbaeeddcdaaaeaaccdaddecddadcaddcbebecdebaaceaaadeccbdecadebbceadbceabebecaebdaaacdbcabeeecbbbebbcbbacdbccacbedcaeedebebeecbaedaeddeaccadaeeecebdaeabadedadeecddaadbbbdcadbcceadddbcebbadeaddcadccccebdcdabbbaeaebbdabbdccadaaceaedbeaccddaadadecbecceebcbccbceabadebcdccccedcaaeddaaedcdcbcadebccedbdceebdcacbdbadacddbaaccacdeadadbbbdeccbedebbcbcdeaceeceeeedadbbbeaedbaadadecadcdadbaeedbeabaacacbbcbdacccbaeadecebecdaebebbaecbecbccaedeebbededaadcdeadeaddeebeacccddcbdeeadbcabecccadbacedccbbeeebdbaaeebceaddeceddebdcdccdddeaadbeaecbedebbaacdbeeecbaaaacebaebbcddbcaaccedbbdecadaeeabcedbacbdcdbcedbebcdacaccdceacbabbceaeddabcbbdcbadedabdcabbdcaaeeacddaeeccdedbeaeddbeaebbbcdeacaeccdeaeadcbcbdabaaeeabdbaacccdcaabaacbeedbddaeaebabceecbceaaeecdcdacaaddceddadbbeeccbdeabeebadcbcdbacaaeeebceacbaacaadedababdcaedaadbebabedddddededbbadbbedebbaccbdeaaaedcaddbddceebdbbeaedbcdcadceaecadcacbaebbcbeeeecbcbcbadaeddedaedaccdadbeadedecacbeadebceeaacabcbdddacdcdccdcdceeddbedbbaaddebeadceccadcbbcdbcadcecdbaeeacddeabeeaaaecedebccdbcadebeadceeabaceebdbaecabacccadacdecddbdacbcacaecbddbaebecdddcdcccbbeaddbaacadceddadcbbeceeadcddebbbebbccebbaabbcecebcbadcedececbcdaddccadeecbabceaaaebecaeddeaabceddcdcdabbcaabdaceccccbedbebecbebedeadcbeaaaeebebcdbedeeacebcbaaaaeedbdaebdebaeddaecdacccbbecabaaeeedeebaddaecbacbabbbacdbbeabbdebaabebdaaabbaaaeeddacebdbadddcaedbaacdbaeddedcbecaddabeeecdcabbcccabeccebadbbaebaaeabdbeedadcacaadabdcddbdeccebbecbbdeaebcaddeeceecaeecdcaeadecdbcbdadaadbddadabceddaaabacecddabaaccdcceddbcddaacdccdddacdceddbdbdabdbeedeececcecdcdbaecbadedbeecbeccedaeeacccdbaceccdbcaddbedcedcaaececaabbdabdccaacbbcdbdecdedcdedcbbeaedcabaeacadeaacccaaeeedacecacdbdeecbaeacbbbbaccedadabbeeeadbddeddceeccbecaeadcbcedeabeaadddddcbcdcdcaaabaeddbabaacaccbaabebbcddcecaeaaaecbeeeccadadecacbadbebbbdebeebdebaaea\"\n\"ade\"\n\"ea\"\n2500",
+      "expectedOutput": "[0,158,177,336,561,661,762,771,864,868,898,952,972,999,1080,1116,1157,1336,1500,1623,1633,1725,1860,2154,2248,2337,2473]"
+    },
+    {
+      "input": "\"acddacabbcccbceaecccecbddeceeaecadaccddedbbeacdcadacaeecedcacbaeedbadcbdcccabadadcccbdbbeeaacdcdadecbabeedabcadadaceededaaaeedebbadabeacbcacececbedaeecdbcaecacadbaeccdcdeaedbaeeacbbcaeddaecadeaebaceeaaecddaebaeeceeedbaebdaebeacdcadeacccadccecbecbedddeaedadcbbaaebabadabbaccbaacacddecdbbbaaaabdbdabccbceebbdcdccbbbdcbcccabbdccceceecdddeacaecbccdbcdebdcaabbcbaedceeacccbeaadacdebedebededadbaecaceacbeccaadcececeedeabaeeccdeeebbaeebeabaabedadececacacaacbbccddbeabadcaebccacaeaeccaddccbecbaceacdacdbdbaedaceadeabdcdebcbcebdebdebaaebadcabdaebebbcedaabbbacdecdbdcdbeacdaeeaaeceadadddecbbaaccbeaeaeccadacddedabbeeaabaadeadeaadcebcebccdadbeadcbbebecdbddecddbbeabeeeeebdedeceacadcaeeeeebebdcbccbaddeeccaebaeecacabbbababeeaeadbaabdebdecabebebdeeccedebeccebeacceecededbaeecedbeeacbebebbaecbddebddacddccbbecddbaeeeccbbeecdccdeecaacacacecdabbbbcaecdedceecaccbcceadacbaddadeaabccadbedcadacebcaacbcdeeebdcbbbcedaaedbedeeaaababebbeecadeaeadeabeaeaaababcdabdbcbdabccdddbcdddcbdbdeaddbededdeccbbbcddddddbbcedadeaaadededbeaaeacdbeacbabaeedaeeddbcbcaadaeecdededdabdeececaabccbbdcedcbcebbeddacadbdcdedcaacedadecabedddeaecadeabdddaecbeddcdcceeaacadadcebcbcccdecdeaaebaaccaabeeeedabacaeecdeaeeedaccecdeadebcddbbecddbdcabbdaeceaeeadddecaabbbbbeeabbecbbadedccccbbcbbbcbecebebbcceabeaaecacabeadacbebecacbaeacababaeacdbddbeeceaacebdbbbbbaeededeedbededbdecddceaccbabeaaecdabdaacbbabebbeddaaabcaaaeeeacbdbdcbdebcdbaacabaccbbbdbebebbdaaebdcbaccddeadadabecbbeedebabaecabebcceebbeabdeaaacaceaedbcddccaedbdbeaadadceccebaeeebaabbcacceccacdbbedcddcdeeddddbeacebedcedabacbdccaabacbcbbcdacdcccdbaccbcbbeaeaaeadcdccdbdeadcdeaeadaaaddbdcadddbaebdbacdbbdabcedecdcacccaeedeeeebbaeaecedaadadeebabcbadacbcadcceaeeedacbacedcbedecdeabbabeacbbabdeaaeccbeccbbcbbecdbeeaabdeecdcdbaedabacaddecbecddabceadabebbdeeebcbcdadbaacaadaabccbabbecbcbadbcaecdcececdbaccccddacdbbdabeabcdbbddcacccdbdcbedddbbdedacdbedebdbdcdabccddccdadeedaaadbeeebbceebccebdcbddaebadeaedcbcdddeedbbadebeaeaccadadacdeeadeacdbcdebbccbeaecbcdccccdccdbaedccccbcaaedeaaccebdaeeebdababecdedaedeeddaccaeebbdcebecebdddaacbdacceacedbbacbbebcdbacbccaebecceceaaabcededececbddceadaeeaeacbbeebeaddadaebddcdcbbbcebdbcaddaacadbceeadbdadaedadabbceabccadccbedcbeadbbbceeeaaeaabccbebcabddedbbccedbbadeaaeabbdecaddeadbbebecccededcbdcaedadbecedccaebebbcbbcaeabccabaebaacdceedbeabcdadedeacdbbeeddcebebaabdbbbecadeebaecacbaeacbabecaeebcacbaaebcabedaebaadcdedeaeedcddddedbdddbbbcbdebabeecdaebdbcdeccadbbabaaeaacbdadddedcbeaaccbcebccabeedbcddadddcdcdabbacabbccceedeadbeccbbbbcebcceeeaaeabdbdeeccbdbabbbeabddbebebeccbabaadeeadadbeacccceddeeeccdaabacebbadcbbcabdaeaecacbecdaeeeaceacabbaeebaedacccacddabdbeeeacbbabbdecdabcedabadbacbaabccedeaebcdbdebbdccbdddddecebabdcaeccbcbcbaeebededaaadaacabaccacbebbadeceedccccddbacadbdaabcbdbddccceecdeaeedebcbaedbeeabcbcdeddeabdaaccabbbcebdeadccdbacaabbababeabbcaadeddeacbdbebeebbeabbbbbbececcadbaaebbeabaeaabdabdadbeedbcaadaaceacecceaecccedaeceabdaddadedeeeaebbbbdcaeeeabbdccdddadeadececddbabbbdedcccddccadcccadbedbcddcaeeadccdabceabcdccaaacbabbeedeedebbcaeccbdbebdbcbdacebaaeeecbdeccecddeeaedbddaebdebbccadedeacbcbbbcbdabacebdcaaedcbedcedeebadebcbebeacaecbdeecabbbababecbeaaebeccbcbaaebebeabcbceabbebbcaecbbbbcddaebabcecdcdbbdddcadbacabccabedaaddebbbacdcbddecbdeccccebaddeaadbcabbcccbaecbcababbaacceabbcecbeddbbdcaeadceeceabecccbbcbbccbdebdbaaaaabeccceddaaebeaabcddaadbcddabdcbdbbcacaaadbbdadcceebeaeddbeddcebcecbaeaeedbaebeaaacdbeedbebcaedaadccbcdbcbbcbaedacddcecbdaabeacbbbdedbcaacedadbbdacdbceddbcbabecaddbabbadbccdabaacdaebebbbcbdbeeaaaceeecebeaaacaaceaeeeabdccececebeeeeeeececdbebecbeeacacbaaaacbaacdacdcbbecbcebbdedebdddceacebecabbbceddedacdbaaeceaadccdeccdceecaeaeaedeabaaaceedacbabbdcdecbedebacdcbbbdabababbdbebdcbbaeaeeeecddedbdbbbaeaecaaedcedbbbdaceecbbdceeccdbadaaeccdadbeaabbcaacaaabaaebebabbabddbddedddacdaecbbdedeccbdaeabcbcdeccdaeacbadabbdeaecabddecdbbdbdacbeccaacacaaabdadecebbdabedbaadcecaabececadebddeddeacdebddcecdabceaaeebbabcdaaeaabebbcaeaadebcabaccebdcecaeaaedaddacbecbaaacddadeeeeedebcecbebbecdaceeadbaaccbeeceebacceabbdddbdcdbaedebedabdbedcddeabdaebcccdcdbaadbacdbabadbcedadddeeedcecdbbcadaadbcdbaeabcbbbeaececedcbbececadeaebaeddcddbaedcdecccaceebeebecbeabcaecabaaddcbccceedcdecabaadddbbcbadebebbeabbddceacaacbdcbdbcabcbebddcabddbdbbdeaaabdaeccccbebaadcdbbdabecceacbccccdaccbadcedbaddcbbedceacbbbdcdecdcbaaadedbcbdaeaeacddaeeabaaaacedcbceebbaaaaabecacdbcdaeececdeecccdeaedaaddabaabaaeacbcedbcaeebccddccaddbcddeddacdaccccaededdcbccebbcebbeebcdecddebedccacaaaaacadcceacdaadbdbaaeaedcdcdbcccedaacacdabcedbceaeacbbacdaaeddeddcbabceadcabdcccacceccabbaeaaddceebbebbecacccdadddeabdabbadadbdbebcadcabeaaacbabdeeaccdaddceddcbdceabaebaadbeebaebedacdbcbeecbedcbedcabbcaebbadbabaecacdbcbebaadcdacdcaedbdbdcabaeeadacdccabaaaecbdbeedaccdbededccbcecaeeaacaeddecdddceceaaabcdcaebeabdebedabacabadeebbddbdaecbdbabaccdeaaeaaddcddbdeceaeadddbcebacedcbdadbddeaabdddadaeeaeecdbebccdbeeadabacbadaddbdbbcbdabddbeedcbbeaabbbebeedeeecabeecbcaacbecaedbadbaeeaadcacecdccceadaecbbeabbadeecbaeeeeadbecbedeaecdecbcededcabaedecdedbbacdabbdeecdbeabbeadbcbbeecebcadbccdecbede\"\n\"ea\"\n\"eeccc\"\n2372",
+      "expectedOutput": "[1954,1983,2040,2069,2087,2092,2094,2102,2136,2152,2166,2175,2178,2204,2207,2217,2259,2278,2287,2323,2358,2406,2420,2462,2480,2483,2500,2520,2526,2559,2572,2575,2602,2634,2733,2747,2757,2773,2790,2801,2813,2834,2838,2860,2866,2877,2890,2902,2914,2955,2964,3023,3043,3084,3106,3123,3129,3206,3233,3249,3256,3293,3332,3349,3358,3404,3471,3482,3490,3494,3524,3562,3587,3603,3605,3609,3659,3676,3717,3767,3779,3789,3856,3871,3884,3893,3912,3955,3973,4001,4056,4063,4080,4112,4155,4162,4193,4221,4249,4274,4276,4283,4327,4342,4423,4435,4462,4464,4485,4505,4529,4551,4561,4577,4657,4695,4711,4722,4758,4761,4773,4775,4796,4807,4821,4852,4889,4902,4910,4924,4933,4971,4975]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "For each <code>i</code>, you can iterate over all <code>j</code>s and determine if <code>i</code> is beautiful or not."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:17.484Z",
+    "sourceUpdatedAt": null
+  }
+}

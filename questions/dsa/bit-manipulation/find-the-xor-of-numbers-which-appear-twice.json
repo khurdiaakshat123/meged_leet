@@ -1,0 +1,167 @@
+{
+  "id": "3158",
+  "slug": "find-the-xor-of-numbers-which-appear-twice",
+  "title": "Find the XOR of Numbers Which Appear Twice",
+  "category": "dsa",
+  "subcategory": "bit-manipulation",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation"
+  ],
+  "statement": "You are given an array `nums`, where each number in the array appears **either** once or twice.\n\nReturn the bitwise `XOR` of all the numbers that appear twice in the array, or 0 if no number appears twice.\n\n**Example 1:**\n\n**Input:** nums = \\[1,2,1,3\\]\n\n**Output:** 1\n\n**Explanation:**\n\nThe only number that appears twice in `nums` is 1.\n\n**Example 2:**\n\n**Input:** nums = \\[1,2,3\\]\n\n**Output:** 0\n\n**Explanation:**\n\nNo number appears twice in `nums`.\n\n**Example 3:**\n\n**Input:** nums = \\[1,2,2,1\\]\n\n**Output:** 3\n\n**Explanation:**\n\nNumbers 1 and 2 appeared twice. `1 XOR 2 == 3`.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 50`\n*   `1 <= nums[i] <= 50`\n*   Each number in `nums` appears either once or twice.",
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 50",
+    "Each number in nums appears either once or twice."
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,1,3]",
+      "output": "1",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,2,3]",
+      "output": "0",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,2,2,1]",
+      "output": "3",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int duplicateNumbersXOR(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int duplicateNumbersXOR(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def duplicateNumbersXOR(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def duplicateNumbersXOR(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar duplicateNumbersXOR = function(nums) {\n    \n};",
+    "typescript": "function duplicateNumbersXOR(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int DuplicateNumbersXOR(int[] nums) {\n        \n    }\n}",
+    "c": "int duplicateNumbersXOR(int* nums, int numsSize) {\n    \n}",
+    "golang": "func duplicateNumbersXOR(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun duplicateNumbersXOR(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func duplicateNumbersXOR(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn duplicate_numbers_xor(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef duplicate_numbers_xor(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function duplicateNumbersXOR($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int duplicateNumbersXOR(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def duplicateNumbersXOR(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec duplicate_numbers_xor(nums :: [integer]) :: integer\n  def duplicate_numbers_xor(nums) do\n    \n  end\nend",
+    "erlang": "-spec duplicate_numbers_xor(Nums :: [integer()]) -> integer().\nduplicate_numbers_xor(Nums) ->\n  .",
+    "racket": "(define/contract (duplicate-numbers-xor nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1,2,1,3]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[1,2,2,1]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[3,5,6,3,5,6]",
+      "expectedOutput": "0"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[50,50]",
+      "expectedOutput": "50"
+    },
+    {
+      "input": "[1,2,1,3]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[1,2,3]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[1,2,2,1]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[3,5,6,3,5,6]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[2,4,2,7,7]",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[43,50,2,45,45,2,21,18,14,18,43]",
+      "expectedOutput": "22"
+    },
+    {
+      "input": "[7,45,27,32,5,22,19,40,25,4,47,9,12,50,29,20,38,13,23]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[11,18,28,6,38,47,30,11,38,47,18,6,30]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[48,34,19,43,16,34,38,33,5,39,5,17,47,22,31,40,12]",
+      "expectedOutput": "39"
+    },
+    {
+      "input": "[22,26,15,26,22,13,11,15,6,11,6,13]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[42,33,46,34,49,24,5,18,24,33,18,49,26,35,48,46,26,42]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[8,49,25,40,46,36,36,8,22,46,22,9,14,18,40]",
+      "expectedOutput": "60"
+    },
+    {
+      "input": "[5,29,8,25,11,20,37,50,27,7,10,25,36,45,10,35,27,45,33,5,21,36,37,11,33,3,8,35,21,2,7]",
+      "expectedOutput": "50"
+    },
+    {
+      "input": "[4,50,32,24,8,25,44,38,22,18,36,20,11,16,39,40,28,33,22,39,15,4,42]",
+      "expectedOutput": "53"
+    },
+    {
+      "input": "[12,17,48,21,10,32,12,29,10,43,19,43,33,37,32,39,26,28,26,5,16,48,40,9,29,28,5,9,37,40,39,25,21,33,4,19,4]",
+      "expectedOutput": "35"
+    },
+    {
+      "input": "[20,9,41,14,9,21,27,4,16,11,40,29,35,34,46,31,29,3,28,40,6,38,31,3,45,36,16,22,14]",
+      "expectedOutput": "62"
+    },
+    {
+      "input": "[34,18,41,42,36,33,21,44,6,45,50,43,44,47,20,42,21,28,33,50,49,7,2,5,47,48,45,40,7,20,14,8,10,10,11,49,14,6,36,13,9,18,11,2,27,41,3,43,13,8]",
+      "expectedOutput": "26"
+    },
+    {
+      "input": "[44,30,37,4,43,23,6,4,40,34,19,2,30,17,40,22,10,44,18,28,3,28,26,18,14,43,22,26,31,23,34,17,45,10,6,14,19,11,2,15,49,31,37,15,48,11,45,49,48]",
+      "expectedOutput": "18"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "The constraints are small. Brute force checking each value in the array."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:18.703Z",
+    "sourceUpdatedAt": null
+  }
+}

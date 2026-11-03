@@ -1,0 +1,137 @@
+{
+  "id": "2723",
+  "slug": "add-two-promises",
+  "title": "Add Two Promises",
+  "category": "dsa",
+  "subcategory": "miscellaneous",
+  "difficulty": "Easy",
+  "tags": [],
+  "statement": "Given two promises `promise1` and `promise2`, return a new promise. `promise1` and `promise2` will both resolve with a number. The returned promise should resolve with the sum of the two numbers.\n\n**Example 1:**\n\n```\nInput: \npromise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))\nOutput: 7\nExplanation: The two input promises resolve with the values of 2 and 5 respectively. The returned promise should resolve with a value of 2 + 5 = 7. The time the returned promise resolves is not judged for this problem.\n```\n\n**Example 2:**\n\n```\nInput: \npromise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))\nOutput: -2\nExplanation: The two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2.\n```\n\n**Constraints:**\n\n*   `promise1` and `promise2` are promises that resolve with a number",
+  "constraints": [
+    "promise1 and promise2 are promises that resolve with a number"
+  ],
+  "examples": [
+    {
+      "input": "promise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))",
+      "output": "7",
+      "explanation": "The two input promises resolve with the values of 2 and 5 respectively. The returned promise should resolve with a value of 2 + 5 = 7. The time the returned promise resolves is not judged for this problem."
+    },
+    {
+      "input": "promise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))",
+      "output": "-2",
+      "explanation": "The two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2."
+    }
+  ],
+  "starterCode": {
+    "javascript": "/**\n * @param {Promise} promise1\n * @param {Promise} promise2\n * @return {Promise}\n */\nvar addTwoPromises = async function(promise1, promise2) {\n    \n};\n\n/**\n * addTwoPromises(Promise.resolve(2), Promise.resolve(2))\n *   .then(console.log); // 4\n */",
+    "typescript": "type P = Promise<number>\n\nasync function addTwoPromises(promise1: P, promise2: P): P {\n    \n};\n\n/**\n * addTwoPromises(Promise.resolve(2), Promise.resolve(2))\n *   .then(console.log); // 4\n */"
+  },
+  "publicTests": [
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(2), 20))\nnew Promise(resolve => setTimeout(() => resolve(5), 60))",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(10), 50))\nnew Promise(resolve => setTimeout(() => resolve(-12), 30))",
+      "expectedOutput": "-2"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-48743), 14))\nnew Promise(resolve => setTimeout(() => resolve(-7688), 29))",
+      "expectedOutput": "-56431"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(2), 20))\nnew Promise(resolve => setTimeout(() => resolve(5), 60))",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(10), 50))\nnew Promise(resolve => setTimeout(() => resolve(-12), 30))",
+      "expectedOutput": "-2"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-48743), 14))\nnew Promise(resolve => setTimeout(() => resolve(-7688), 29))",
+      "expectedOutput": "-56431"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-36577), 21))\nnew Promise(resolve => setTimeout(() => resolve(73986), 42))",
+      "expectedOutput": "37409"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-3444), 28))\nnew Promise(resolve => setTimeout(() => resolve(-91848), 55))",
+      "expectedOutput": "-95292"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-52559), 35))\nnew Promise(resolve => setTimeout(() => resolve(57484), 68))",
+      "expectedOutput": "4925"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-54336), 42))\nnew Promise(resolve => setTimeout(() => resolve(-44627), 8))",
+      "expectedOutput": "-98963"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(42393), 49))\nnew Promise(resolve => setTimeout(() => resolve(28721), 21))",
+      "expectedOutput": "71114"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(83109), 56))\nnew Promise(resolve => setTimeout(() => resolve(-46125), 34))",
+      "expectedOutput": "36984"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-7038), 2))\nnew Promise(resolve => setTimeout(() => resolve(56220), 47))",
+      "expectedOutput": "49182"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(9403), 9))\nnew Promise(resolve => setTimeout(() => resolve(55368), 60))",
+      "expectedOutput": "64771"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(20726), 16))\nnew Promise(resolve => setTimeout(() => resolve(93055), 0))",
+      "expectedOutput": "113781"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-62254), 23))\nnew Promise(resolve => setTimeout(() => resolve(43947), 13))",
+      "expectedOutput": "-18307"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-4292), 30))\nnew Promise(resolve => setTimeout(() => resolve(72595), 26))",
+      "expectedOutput": "68303"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(5161), 37))\nnew Promise(resolve => setTimeout(() => resolve(-87313), 39))",
+      "expectedOutput": "-82152"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-74259), 44))\nnew Promise(resolve => setTimeout(() => resolve(-62017), 52))",
+      "expectedOutput": "-136276"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-62643), 51))\nnew Promise(resolve => setTimeout(() => resolve(36978), 65))",
+      "expectedOutput": "-25665"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-19519), 58))\nnew Promise(resolve => setTimeout(() => resolve(24228), 5))",
+      "expectedOutput": "4709"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(11425), 4))\nnew Promise(resolve => setTimeout(() => resolve(-96343), 18))",
+      "expectedOutput": "-84918"
+    },
+    {
+      "input": "new Promise(resolve => setTimeout(() => resolve(-1097), 11))\nnew Promise(resolve => setTimeout(() => resolve(-94181), 31))",
+      "expectedOutput": "-95278"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/add-two-promises/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:12.861Z",
+    "sourceUpdatedAt": null
+  }
+}

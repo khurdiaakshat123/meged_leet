@@ -1,0 +1,162 @@
+{
+  "id": "71",
+  "slug": "simplify-path",
+  "title": "Simplify Path",
+  "category": "dsa",
+  "subcategory": "stacks-queues",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Stack"
+  ],
+  "statement": "You are given an _absolute_ path for a Unix-style file system, which always begins with a slash `'/'`. Your task is to transform this absolute path into its **simplified canonical path**.\n\nThe _rules_ of a Unix-style file system are as follows:\n\n*   A single period `'.'` represents the current directory.\n*   A double period `'..'` represents the previous/parent directory.\n*   Multiple consecutive slashes such as `'//'` and `'///'` are treated as a single slash `'/'`.\n*   Any sequence of periods that does **not match** the rules above should be treated as a **valid directory or** **file** **name**. For example, `'...'` and `'....'` are valid directory or file names.\n\nThe simplified canonical path should follow these _rules_:\n\n*   The path must start with a single slash `'/'`.\n*   Directories within the path must be separated by exactly one slash `'/'`.\n*   The path must not end with a slash `'/'`, unless it is the root directory.\n*   The path must not have any single or double periods (`'.'` and `'..'`) used to denote current or parent directories.\n\nReturn the **simplified canonical path**.\n\n**Example 1:**\n\n**Input:** path = \"/home/\"\n\n**Output:** \"/home\"\n\n**Explanation:**\n\nThe trailing slash should be removed.\n\n**Example 2:**\n\n**Input:** path = \"/home//foo/\"\n\n**Output:** \"/home/foo\"\n\n**Explanation:**\n\nMultiple consecutive slashes are replaced by a single one.\n\n**Example 3:**\n\n**Input:** path = \"/home/user/Documents/../Pictures\"\n\n**Output:** \"/home/user/Pictures\"\n\n**Explanation:**\n\nA double period `\"..\"` refers to the directory up a level (the parent directory).\n\n**Example 4:**\n\n**Input:** path = \"/../\"\n\n**Output:** \"/\"\n\n**Explanation:**\n\nGoing one level up from the root directory is not possible.\n\n**Example 5:**\n\n**Input:** path = \"/.../a/../b/c/../d/./\"\n\n**Output:** \"/.../b/d\"\n\n**Explanation:**\n\n`\"...\"` is a valid name for a directory in this problem.\n\n**Constraints:**\n\n*   `1 <= path.length <= 3000`\n*   `path` consists of English letters, digits, period `'.'`, slash `'/'` or `'_'`.\n*   `path` is a valid absolute Unix path.",
+  "constraints": [
+    "1 <= path.length <= 3000",
+    "path consists of English letters, digits, period '.', slash '/' or '_'.",
+    "path is a valid absolute Unix path."
+  ],
+  "examples": [
+    {
+      "input": "path = \"/home/\"",
+      "output": "\"/home\"",
+      "explanation": null
+    },
+    {
+      "input": "path = \"/home//foo/\"",
+      "output": "\"/home/foo\"",
+      "explanation": null
+    },
+    {
+      "input": "path = \"/home/user/Documents/../Pictures\"",
+      "output": "\"/home/user/Pictures\"",
+      "explanation": null
+    },
+    {
+      "input": "path = \"/../\"",
+      "output": "\"/\"",
+      "explanation": null
+    },
+    {
+      "input": "path = \"/.../a/../b/c/../d/./\"",
+      "output": "\"/.../b/d\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string simplifyPath(string path) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String simplifyPath(String path) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def simplifyPath(self, path: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def simplifyPath(self, path):\n        \"\"\"\n        :type path: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} path\n * @return {string}\n */\nvar simplifyPath = function(path) {\n    \n};",
+    "typescript": "function simplifyPath(path: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string SimplifyPath(string path) {\n        \n    }\n}",
+    "c": "char* simplifyPath(char* path) {\n    \n}",
+    "golang": "func simplifyPath(path string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun simplifyPath(path: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func simplifyPath(_ path: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn simplify_path(path: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} path\n# @return {String}\ndef simplify_path(path)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $path\n     * @return String\n     */\n    function simplifyPath($path) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String simplifyPath(String path) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def simplifyPath(path: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec simplify_path(path :: String.t) :: String.t\n  def simplify_path(path) do\n    \n  end\nend",
+    "erlang": "-spec simplify_path(Path :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsimplify_path(Path) ->\n  .",
+    "racket": "(define/contract (simplify-path path)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"/dl\"",
+      "expectedOutput": "\"/dl\""
+    },
+    {
+      "input": "\"/../.\"",
+      "expectedOutput": "\"/\""
+    },
+    {
+      "input": "\"/4ag/../..\"",
+      "expectedOutput": "\"/\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"/../d/././ss0k\"",
+      "expectedOutput": "\"/d/ss0k\""
+    },
+    {
+      "input": "\"/../././7j6iknd5/././.\"",
+      "expectedOutput": "\"/7j6iknd5\""
+    },
+    {
+      "input": "\"/3r9j/../././fek/././74mz/../8kny\"",
+      "expectedOutput": "\"/fek/8kny\""
+    },
+    {
+      "input": "\"/./hn/d8osbox/../../sb/./../../../././ccptn3v\"",
+      "expectedOutput": "\"/ccptn3v\""
+    },
+    {
+      "input": "\"/../../g/././../../.././t/w4nrret/../5b0n9o/.././b8io8ecz\"",
+      "expectedOutput": "\"/t/b8io8ecz\""
+    },
+    {
+      "input": "\"/9/.././8bxxtc2g/../jbddsnb/../w9l4/./../././wtx_f/../../dnshkob/././.\"",
+      "expectedOutput": "\"/dnshkob\""
+    },
+    {
+      "input": "\"/rp4/b48rk/././././../j/./wz0/./c3/../zs7/./.././././../rdnxy5o/qgomh/..\"",
+      "expectedOutput": "\"/rp4/j/rdnxy5o\""
+    },
+    {
+      "input": "\"/.././ofmdha/./6_q33fp/whl5zy3/../../ubb/_rgsz7n_/../../../../p_maqs/././wtkom/qk/8/.././8uqp/./ms/./.\"",
+      "expectedOutput": "\"/p_maqs/wtkom/qk/8uqp/ms\""
+    },
+    {
+      "input": "\"/../././pqqxmhos/../../../../././../8/ao/o5/././_fe32/./.././../u/./../corus7o4/../../../././rw1abtl/.\"",
+      "expectedOutput": "\"/rw1abtl\""
+    },
+    {
+      "input": "\"/e6018/../4m02/np13/././../h43c/.././../.././37i/./vdipd1b/vxmt7so/../_v/dvuikd1k/./././95/../../../jpmmz9a1/../w78v7s/././../.././6nfx/.\"",
+      "expectedOutput": "\"/37i/6nfx\""
+    },
+    {
+      "input": "\"/d/ti/mn0/./././.././../../.././9g3e99/../../rz85krn/k7z/../.././p0s4u/0u287eg/../.././pu4g5/././../../../../5pfel/4kfj_/3u/hyyx4g/./.././../../2rd3sk\"",
+      "expectedOutput": "\"/5pfel/2rd3sk\""
+    },
+    {
+      "input": "\"/_/5cl31a7w/3hvmh5a/ohxc302/./y7g5xw/../dee/./0f/../../../e/./../1ulr/7/mgx8zw/pq/9f0s3i1/.././../././../././../../../../sldct32o/././x9bob/2h9s2/././4uoc/7t_1y6qz/../3_wjq/././..\"",
+      "expectedOutput": "\"/_/sldct32o/x9bob/2h9s2/4uoc\""
+    },
+    {
+      "input": "\"/./../././9o553zd8/ak8vpkp/uf/y70e/y/../5kg/n4/zoqicpi/.././lkq/2xkv/../qgnk/../5r_t/.././../llp_0/77a/t8oz4f/././../../86b/../../../5vn20r/././../zwf__p/./70f4/45/yo5vn/.././x130el_h/r0p6j4/../nyw/././.\"",
+      "expectedOutput": "\"/9o553zd8/ak8vpkp/uf/y70e/5kg/zwf__p/70f4/45/x130el_h/nyw\""
+    },
+    {
+      "input": "\"/../././../../w9t/4/3c7n/././././././../../o0p6ikpb/./.././../.././.././st/4/fab/iavmdn5t/p2emib5/./../././../uq1j/.././../../../hcd9mfhx/././eyt/x1/uz7/4oo/yh5q/.././../././lubxgno/1tgfi/q/./.\"",
+      "expectedOutput": "\"/hcd9mfhx/eyt/x1/uz7/lubxgno/1tgfi/q\""
+    },
+    {
+      "input": "\"/.././17v/./p/./../h9am0km/../././././b/.././../vqulf/./../../.././5cwq49/./2060a/./././../../.././../../hg7zxr/./././8kbrtk/9bmyklc/.././r/sg9z1ylv/wg5b/.././8s/./h21_ds/6bo09sl/./../tgxra9/m_wwm3a7/.././.././sgy1uw9o/d8kzb/h6u3pa/../r/.\"",
+      "expectedOutput": "\"/hg7zxr/8kbrtk/r/sg9z1ylv/8s/h21_ds/sgy1uw9o/d8kzb/r\""
+    },
+    {
+      "input": "\"/m5on6tg/../../dm0ff/././../2/../cfq/b65/v9akmapc/../gv2/m0pt6m7g/./../././.././9_ck/./.././../.././../rg6p19/bnq8sn/./../../../ihrbwkkr/a89qi/./ii/ebh/.././pm74/../z/0/../././../jjm26cu/../././../ub3vkj/qkyhxd0/6g/89ktp/../nntgaag_/./././o/./0vgch/../9hmlw59/./././../../..\"",
+      "expectedOutput": "\"/ihrbwkkr/a89qi/ub3vkj/qkyhxd0/6g\""
+    },
+    {
+      "input": "\"/../2i/../../97iwblzy/./zf/9men1hy/.././0uo/../../././adr_g36d/./../cuwow/nm/../o32ojelh/i_bir3ks/../.././../../wcw5lm/./.././0pdg/6sste/./../.././../o9sphg/o9/./../k2dkai/./y0/././././a/../../././27i9/../.././../wzj/x/././../zavzol/./o_f/./xxwt_6w5/.././7h25/../.././../././.././009j/../../8k/./././8/./../jl/./../../././././hc7npiqz/./../.././6ov09x/../u873dp/./../././37nheog/h/././.././../q/9ib8mp/../../w5qrzbe/./../u_gk/la/rkmb/jq15g/../../qkarlpx/cl_srt5p/./../../0/../bmjyx1l4/6wo4/tkl/../../2s7040l/hn6qm/../pl6m_/hgiyx1/../9j_4v8\"",
+      "expectedOutput": "\"/u_gk/la/bmjyx1l4/2s7040l/pl6m_/9j_4v8\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/simplify-path/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:29.633Z",
+    "sourceUpdatedAt": null
+  }
+}

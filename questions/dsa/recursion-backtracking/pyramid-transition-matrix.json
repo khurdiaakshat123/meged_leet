@@ -1,0 +1,151 @@
+{
+  "id": "756",
+  "slug": "pyramid-transition-matrix",
+  "title": "Pyramid Transition Matrix",
+  "category": "dsa",
+  "subcategory": "recursion-backtracking",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "statement": "You are stacking blocks to form a pyramid. Each block has a color, which is represented by a single letter. Each row of blocks contains **one less block** than the row beneath it and is centered on top.\n\nTo make the pyramid aesthetically pleasing, there are only specific **triangular patterns** that are allowed. A triangular pattern consists of a **single block** stacked on top of **two blocks**. The patterns are given as a list of three-letter strings `allowed`, where the first two characters of a pattern represent the left and right bottom blocks respectively, and the third character is the top block.\n\n*   For example, `\"ABC\"` represents a triangular pattern with a `'C'` block stacked on top of an `'A'` (left) and `'B'` (right) block. Note that this is different from `\"BAC\"` where `'B'` is on the left bottom and `'A'` is on the right bottom.\n\nYou start with a bottom row of blocks `bottom`, given as a single string, that you **must** use as the base of the pyramid.\n\nGiven `bottom` and `allowed`, return `true` _if you can build the pyramid all the way to the top such that **every triangular pattern** in the pyramid is in_ `allowed`_, or_ `false` _otherwise_.\n\n**Example 1:**\n\n![](./assets/pyramid-transition-matrix-1.jpg)\n```\nInput: bottom = \"BCD\", allowed = [\"BCC\",\"CDE\",\"CEA\",\"FFF\"]\nOutput: true\nExplanation: The allowed triangular patterns are shown on the right.\nStarting from the bottom (level 3), we can build \"CE\" on level 2 and then build \"A\" on level 1.\nThere are three triangular patterns in the pyramid, which are \"BCC\", \"CDE\", and \"CEA\". All are allowed.\n```\n\n**Example 2:**\n\n![](./assets/pyramid-transition-matrix-2.jpg)\n```\nInput: bottom = \"AAAA\", allowed = [\"AAB\",\"AAC\",\"BCD\",\"BBE\",\"DEF\"]\nOutput: false\nExplanation: The allowed triangular patterns are shown on the right.\nStarting from the bottom (level 4), there are multiple ways to build level 3, but trying all the possibilites, you will get always stuck before building level 1.\n```\n\n**Constraints:**\n\n*   `2 <= bottom.length <= 6`\n*   `0 <= allowed.length <= 216`\n*   `allowed[i].length == 3`\n*   The letters in all input strings are from the set `{'A', 'B', 'C', 'D', 'E', 'F'}`.\n*   All the values of `allowed` are **unique**.",
+  "constraints": [
+    "2 <= bottom.length <= 6",
+    "0 <= allowed.length <= 216",
+    "allowed[i].length == 3",
+    "The letters in all input strings are from the set {'A', 'B', 'C', 'D', 'E', 'F'}.",
+    "All the values of allowed are unique."
+  ],
+  "examples": [
+    {
+      "input": "bottom = \"BCD\", allowed = [\"BCC\",\"CDE\",\"CEA\",\"FFF\"]",
+      "output": "true",
+      "explanation": "The allowed triangular patterns are shown on the right.\nStarting from the bottom (level 3), we can build \"CE\" on level 2 and then build \"A\" on level 1.\nThere are three triangular patterns in the pyramid, which are \"BCC\", \"CDE\", and \"CEA\". All are allowed."
+    },
+    {
+      "input": "bottom = \"AAAA\", allowed = [\"AAB\",\"AAC\",\"BCD\",\"BBE\",\"DEF\"]",
+      "output": "false",
+      "explanation": "The allowed triangular patterns are shown on the right.\nStarting from the bottom (level 4), there are multiple ways to build level 3, but trying all the possibilites, you will get always stuck before building level 1."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool pyramidTransition(string bottom, vector<string>& allowed) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean pyramidTransition(String bottom, List<String> allowed) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def pyramidTransition(self, bottom: str, allowed: list[str]) -> bool:\n        ",
+    "python": "class Solution(object):\n    def pyramidTransition(self, bottom, allowed):\n        \"\"\"\n        :type bottom: str\n        :type allowed: List[str]\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} bottom\n * @param {string[]} allowed\n * @return {boolean}\n */\nvar pyramidTransition = function(bottom, allowed) {\n    \n};",
+    "typescript": "function pyramidTransition(bottom: string, allowed: string[]): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool PyramidTransition(string bottom, IList<string> allowed) {\n        \n    }\n}",
+    "c": "bool pyramidTransition(char* bottom, char** allowed, int allowedSize) {\n    \n}",
+    "golang": "func pyramidTransition(bottom string, allowed []string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun pyramidTransition(bottom: String, allowed: List<String>): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func pyramidTransition(_ bottom: String, _ allowed: [String]) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn pyramid_transition(bottom: String, allowed: Vec<String>) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String} bottom\n# @param {String[]} allowed\n# @return {Boolean}\ndef pyramid_transition(bottom, allowed)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $bottom\n     * @param String[] $allowed\n     * @return Boolean\n     */\n    function pyramidTransition($bottom, $allowed) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool pyramidTransition(String bottom, List<String> allowed) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def pyramidTransition(bottom: String, allowed: List[String]): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec pyramid_transition(bottom :: String.t, allowed :: [String.t]) :: boolean\n  def pyramid_transition(bottom, allowed) do\n    \n  end\nend",
+    "erlang": "-spec pyramid_transition(Bottom :: unicode:unicode_binary(), Allowed :: [unicode:unicode_binary()]) -> boolean().\npyramid_transition(Bottom, Allowed) ->\n  .",
+    "racket": "(define/contract (pyramid-transition bottom allowed)\n  (-> string? (listof string?) boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"DC\"\n[\"BAB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"DD\"\n[\"CCA\",\"AAB\",\"BBB\",\"AAA\",\"ACB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"CBC\"\n[\"CAC\",\"BAA\",\"CDC\",\"BCC\",\"AAB\",\"DBC\",\"CCC\",\"ACD\",\"DDC\"]",
+      "expectedOutput": "false"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"CCCA\"\n[\"EDC\",\"EBC\",\"AAC\",\"DEB\",\"DBB\",\"DCB\",\"ACE\",\"CEA\",\"EAC\",\"DCE\",\"AEC\",\"ECE\",\"ECC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"AFDDA\"\n[\"BAA\",\"BAB\",\"AAA\",\"AAB\",\"ABB\",\"BBA\",\"ABA\",\"BBB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"DFEDEC\"\n[\"CCA\",\"CBC\",\"ACB\",\"BAA\",\"CCC\",\"ABC\",\"BCB\",\"ABB\",\"CAA\",\"BBB\",\"BAB\",\"AAA\",\"CAB\",\"CAC\",\"ACA\",\"BAC\",\"BCC\",\"ABA\",\"BBC\",\"CBA\",\"CBB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"FABDAC\"\n[\"ABD\",\"BAD\",\"DDB\",\"BDD\",\"BCD\",\"BCC\",\"CDB\",\"BCA\",\"DAB\",\"DAD\",\"DDA\",\"ADB\",\"ADC\",\"DDC\",\"ADA\",\"BBB\",\"BBC\",\"BAA\",\"ABB\",\"AAB\",\"CAC\",\"ADD\",\"ACD\",\"CCC\",\"DBC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"FABBAB\"\n[\"ACB\",\"BAA\",\"EBD\",\"ADC\",\"BED\",\"CBB\",\"CCB\",\"CAD\",\"ADD\",\"AEE\",\"AAE\",\"CBE\",\"EAC\",\"AEC\",\"AAB\",\"BBA\",\"DAD\",\"EDC\",\"AEB\",\"ACC\",\"CAC\",\"ABA\",\"ADE\",\"EEA\",\"ACA\",\"ECD\",\"BCA\",\"EEC\",\"BBB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"CEFBAD\"\n[\"BBA\",\"ABA\",\"ABB\",\"AAB\",\"BAB\",\"BBB\",\"BAA\",\"AAA\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"DCDECC\"\n[\"BAC\",\"BBA\",\"CCB\",\"CCC\",\"AAC\",\"BAB\",\"CCA\",\"ABA\",\"BCA\",\"CAC\",\"CAB\",\"ACC\",\"ACB\",\"CBB\",\"AAB\",\"ABB\",\"BCB\",\"CBC\",\"ABC\",\"AAA\",\"CAA\",\"BCC\",\"BAA\",\"BBB\",\"ACA\",\"CBA\",\"BBC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"DBBBAB\"\n[\"ADC\",\"CBD\",\"CCB\",\"DBB\",\"ADB\",\"DCD\",\"DCC\",\"DAD\",\"CBC\",\"CCA\",\"BAB\",\"ACB\",\"CCD\",\"DAA\",\"ABC\",\"DDA\",\"CDB\",\"BCC\",\"DBA\",\"BBA\",\"CCC\",\"BDC\",\"DBC\",\"ABA\",\"AAC\",\"BBD\",\"CAB\",\"CAC\",\"CDA\",\"BDA\",\"BCD\",\"CDC\",\"BAD\",\"BDB\",\"BBB\",\"DDD\",\"ACC\",\"ABB\",\"ACA\",\"ACD\",\"DCB\"]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"ABDCDF\"\n[\"ABE\",\"BCA\",\"BAE\",\"CAC\",\"CEB\",\"BBD\",\"CCC\",\"EAC\",\"ECC\",\"BDB\",\"CEE\",\"DBC\",\"ADC\",\"EEB\",\"AEC\",\"DDA\",\"EDC\",\"DBE\",\"AEB\",\"EAE\",\"BEA\",\"ECA\",\"BBA\",\"DBD\",\"CBD\",\"EBC\",\"EDB\",\"DBB\",\"CBA\",\"DDD\",\"ACE\",\"BCB\",\"CEA\",\"CCB\",\"CDC\",\"ADE\",\"BCD\",\"DCE\",\"DEA\",\"DED\",\"BEC\",\"BBB\",\"ACB\",\"ACC\",\"BAD\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"BBEAFF\"\n[\"BAA\",\"ABB\",\"AAB\",\"BBA\",\"BBB\",\"BAB\",\"ABA\",\"AAA\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"FEEEBD\"\n[\"ACB\",\"AAB\",\"ACA\",\"BBA\",\"ABB\",\"CBC\",\"AAA\",\"BCC\",\"CAA\",\"AAC\",\"CCA\",\"CAC\",\"BBC\",\"CCC\",\"ACC\",\"CCB\",\"BCB\",\"BAC\",\"BAB\",\"CBA\",\"BBB\",\"BCA\",\"CAB\",\"ABC\",\"BAA\",\"CBB\",\"ABA\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"EACEBF\"\n[\"ACD\",\"BBA\",\"ADB\",\"DDC\",\"ABB\",\"DBA\",\"ADD\",\"DCD\",\"BDD\",\"DAA\",\"BDB\",\"CDA\",\"ADA\",\"DDB\",\"BAA\",\"CDD\",\"ACB\",\"CBB\",\"BAC\",\"BCB\",\"CCA\",\"DDD\",\"CAD\",\"CDC\",\"DBD\",\"ABA\",\"BBD\",\"DCC\",\"ADC\",\"BDA\",\"DBB\",\"AAA\",\"CBC\",\"CCC\",\"DAD\",\"CAB\",\"ACC\",\"BBB\",\"CBA\",\"AAD\",\"CBD\",\"BCC\",\"CDB\",\"DAB\",\"BAD\",\"BCA\",\"AAB\",\"BBC\",\"ABC\",\"DBC\",\"ABD\",\"BDC\",\"BAB\",\"CAA\",\"DCB\",\"DDA\",\"CCB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"DBFCFC\"\n[\"EBA\",\"DEA\",\"BCC\",\"AED\",\"DCE\",\"DAB\",\"DDD\",\"DBC\",\"CAE\",\"CCE\",\"DAE\",\"DDE\",\"ACC\",\"DDC\",\"DAC\",\"ACD\",\"ECA\",\"BCD\",\"BDA\",\"EBE\",\"BAC\",\"CBC\",\"DAA\",\"ECE\",\"ADD\",\"AEC\",\"BDC\",\"CDD\",\"DCB\",\"CAB\",\"CBA\",\"BEB\",\"BCE\",\"ADA\",\"DCD\",\"BED\",\"CCC\",\"ECB\",\"BCB\",\"ACB\",\"CDE\",\"EAB\",\"CDA\",\"DBB\",\"EEE\",\"ECD\",\"EAE\",\"ECC\",\"ADB\",\"EDA\",\"DBA\",\"BBE\",\"AAC\",\"CDC\",\"ABD\",\"CEA\",\"BDE\",\"BAB\",\"ABA\",\"AEA\",\"ABC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"ABDBAA\"\n[\"BBB\",\"BAA\",\"BBA\",\"AAA\",\"ABA\",\"BAB\",\"AAB\",\"ABB\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"AADFFF\"\n[\"CCB\",\"BCB\",\"AAB\",\"BBC\",\"AAC\",\"ACB\",\"ACC\",\"CAC\",\"BAA\",\"ACA\",\"BBA\",\"ABB\",\"BCA\",\"AAA\",\"ABC\",\"CCC\",\"CBA\",\"BAB\",\"BAC\",\"CBB\",\"BCC\",\"BBB\",\"CAA\",\"CAB\",\"CCA\",\"ABA\",\"CBC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"BEEBDB\"\n[\"ACD\",\"BBB\",\"AAC\",\"BAC\",\"BAD\",\"DAA\",\"CBB\",\"CCC\",\"CDA\",\"BBC\",\"DDB\",\"DDA\",\"BDD\",\"DBD\",\"BAA\",\"ACA\",\"ABB\",\"DCA\",\"ADA\",\"CCA\",\"CBA\",\"ACC\",\"BDC\",\"BDA\",\"ADC\",\"DCC\",\"BBD\",\"DBA\",\"ABA\",\"ADD\",\"DAB\",\"CAA\",\"CBD\",\"ACB\",\"CCB\",\"CDC\",\"AAB\",\"ABC\",\"DBC\",\"AAA\",\"DCD\",\"DCB\",\"CDD\",\"AAD\",\"DBB\",\"BAB\",\"ADB\",\"BCB\",\"CAB\",\"CDB\",\"CAC\",\"CCD\",\"BCD\",\"DAD\",\"ABD\",\"DAC\",\"CBC\",\"BDB\",\"BBA\",\"BCC\",\"DDD\",\"CAD\",\"BCA\",\"DDC\"]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"CDBCEF\"\n[\"EDC\",\"BDB\",\"CED\",\"BDE\",\"EDA\",\"EDB\",\"ABA\",\"BCA\",\"DCB\",\"ACA\",\"DCA\",\"DBC\",\"BED\",\"AEE\",\"CCD\",\"CEC\",\"AEA\",\"BAC\",\"BDC\",\"BBA\",\"BBC\",\"BCE\",\"EAB\",\"DAA\",\"ECC\",\"BBE\",\"BAB\",\"DDB\",\"AAD\",\"DAC\",\"AAB\",\"CAE\",\"DCC\",\"DBA\",\"AED\",\"DAD\",\"DEC\",\"EEC\",\"CCB\",\"BDD\",\"CBC\",\"ADD\",\"ACB\",\"BAA\",\"BEE\",\"DBE\",\"ABB\",\"BEA\",\"BAE\",\"CCC\",\"DDE\",\"CBE\",\"ABE\",\"EEE\",\"CDB\",\"DCD\",\"DDD\",\"BBD\",\"CEB\",\"EEB\",\"CBA\",\"EBD\",\"EDD\",\"EAD\",\"EBC\",\"DED\",\"CBB\",\"AAE\",\"ACD\",\"ACC\",\"CDE\",\"DEA\",\"CAC\",\"CEA\",\"ADE\",\"EBB\",\"ADB\"]",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/pyramid-transition-matrix/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.059Z",
+    "sourceUpdatedAt": null
+  }
+}

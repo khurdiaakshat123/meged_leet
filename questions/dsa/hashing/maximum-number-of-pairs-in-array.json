@@ -1,0 +1,163 @@
+{
+  "id": "2341",
+  "slug": "maximum-number-of-pairs-in-array",
+  "title": "Maximum Number of Pairs in Array",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "statement": "You are given a **0-indexed** integer array `nums`. In one operation, you may do the following:\n\n*   Choose **two** integers in `nums` that are **equal**.\n*   Remove both integers from `nums`, forming a **pair**.\n\nThe operation is done on `nums` as many times as possible.\n\nReturn _a **0-indexed** integer array_ `answer` _of size_ `2` _where_ `answer[0]` _is the number of pairs that are formed and_ `answer[1]` _is the number of leftover integers in_ `nums` _after doing the operation as many times as possible_.\n\n**Example 1:**\n\n```\nInput: nums = [1,3,2,1,3,2,2]\nOutput: [3,1]\nExplanation:\nForm a pair with nums[0] and nums[3] and remove them from nums. Now, nums = [3,2,3,2,2].\nForm a pair with nums[0] and nums[2] and remove them from nums. Now, nums = [2,2,2].\nForm a pair with nums[0] and nums[1] and remove them from nums. Now, nums = [2].\nNo more pairs can be formed. A total of 3 pairs have been formed, and there is 1 number leftover in nums.\n```\n\n**Example 2:**\n\n```\nInput: nums = [1,1]\nOutput: [1,0]\nExplanation: Form a pair with nums[0] and nums[1] and remove them from nums. Now, nums = [].\nNo more pairs can be formed. A total of 1 pair has been formed, and there are 0 numbers leftover in nums.\n```\n\n**Example 3:**\n\n```\nInput: nums = [0]\nOutput: [0,1]\nExplanation: No pairs can be formed, and there is 1 number leftover in nums.\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `0 <= nums[i] <= 100`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,3,2,1,3,2,2]",
+      "output": "[3,1]",
+      "explanation": "Form a pair with nums[0] and nums[3] and remove them from nums. Now, nums = [3,2,3,2,2].\nForm a pair with nums[0] and nums[2] and remove them from nums. Now, nums = [2,2,2].\nForm a pair with nums[0] and nums[1] and remove them from nums. Now, nums = [2].\nNo more pairs can be formed. A total of 3 pairs have been formed, and there is 1 number leftover in nums."
+    },
+    {
+      "input": "nums = [1,1]",
+      "output": "[1,0]",
+      "explanation": "Form a pair with nums[0] and nums[1] and remove them from nums. Now, nums = [].\nNo more pairs can be formed. A total of 1 pair has been formed, and there are 0 numbers leftover in nums."
+    },
+    {
+      "input": "nums = [0]",
+      "output": "[0,1]",
+      "explanation": "No pairs can be formed, and there is 1 number leftover in nums."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> numberOfPairs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numberOfPairs(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def numberOfPairs(self, nums: list[int]) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def numberOfPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar numberOfPairs = function(nums) {\n    \n};",
+    "typescript": "function numberOfPairs(nums: number[]): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public int[] NumberOfPairs(int[] nums) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numberOfPairs(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "golang": "func numberOfPairs(nums []int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun numberOfPairs(nums: IntArray): IntArray {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfPairs(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_pairs(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef number_of_pairs(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function numberOfPairs($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> numberOfPairs(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def numberOfPairs(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec number_of_pairs(nums :: [integer]) :: [integer]\n  def number_of_pairs(nums) do\n    \n  end\nend",
+    "erlang": "-spec number_of_pairs(Nums :: [integer()]) -> [integer()].\nnumber_of_pairs(Nums) ->\n  .",
+    "racket": "(define/contract (number-of-pairs nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1,3,2,1,3,2,2]",
+      "expectedOutput": "[3,1]"
+    },
+    {
+      "input": "[100,0,100,0]",
+      "expectedOutput": "[2,0]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[0]",
+      "expectedOutput": "[0,1]"
+    },
+    {
+      "input": "[1,1]",
+      "expectedOutput": "[1,0]"
+    },
+    {
+      "input": "[1,3,2,1,3,2,2]",
+      "expectedOutput": "[3,1]"
+    },
+    {
+      "input": "[0,0,0]",
+      "expectedOutput": "[1,1]"
+    },
+    {
+      "input": "[100,0,100,0]",
+      "expectedOutput": "[2,0]"
+    },
+    {
+      "input": "[2,3,4,5]",
+      "expectedOutput": "[0,4]"
+    },
+    {
+      "input": "[7,7,7,7,7]",
+      "expectedOutput": "[2,1]"
+    },
+    {
+      "input": "[0,1,5,2,3,2,5,3,1,2,2]",
+      "expectedOutput": "[5,1]"
+    },
+    {
+      "input": "[1,3,4,3,1,1,2,3,5,3,6,1,2,5,4,0,0,3,4]",
+      "expectedOutput": "[8,3]"
+    },
+    {
+      "input": "[0,2,1,2,4,4,3,1,1,2,1,4,1]",
+      "expectedOutput": "[4,5]"
+    },
+    {
+      "input": "[1,6,9,5,5,6,1,2,7,5,7,5,2,5,0,9,3]",
+      "expectedOutput": "[7,3]"
+    },
+    {
+      "input": "[0,4,3,3,1,2,3,1,1,3,1,1,1,3,1]",
+      "expectedOutput": "[5,5]"
+    },
+    {
+      "input": "[1,7,2,5,8,1,0,1,6,5,5,8,2,4,4,8,5,4]",
+      "expectedOutput": "[6,6]"
+    },
+    {
+      "input": "[1,6,6,4,3,6,3,0,1,4,0,4,1,3]",
+      "expectedOutput": "[5,4]"
+    },
+    {
+      "input": "[1,9,6,7,2,6,8,9,7,7,5,3,1,3,9,8,9,5,3,9,1,3,7]",
+      "expectedOutput": "[10,3]"
+    },
+    {
+      "input": "[2,0,4,10,12,5,4,12,4,11,13,0,2,4,2,4,1,8,9,12,11,13,5,3,8,13,13,12,3,11,4,6,8,0,11,12,3,8,12]",
+      "expectedOutput": "[16,7]"
+    },
+    {
+      "input": "[2,2,0,14,10,2,13,14,14,15,7,12,2,5,7,13,4,10,17,13,9,8,1,6,13,7,10,11,0]",
+      "expectedOutput": "[8,13]"
+    },
+    {
+      "input": "[1,2,8,9,2,10,1,8,3,11,10,4,1,3,7,2,4,7,3,7,2,0,9,4,10,10,1,4,10,0,6,9,6,2,7,8,11]",
+      "expectedOutput": "[16,5]"
+    },
+    {
+      "input": "[67,12,68,11,30,36,21,19,96,82,51,4,70,64,69,47,25,26,95,45,50,27,83,15,28,60,81,44,100,62,91,24,80,5,40,23,78,85,37,71,87,79,55,39,9,13,88,56,63,1,89,52,31,65,20,77,29,75,42,17,3,35,6,54,98,2,58,34,66,8,72,97,14,94,22,74,38,99,49,73,43,46,53,48,93,92,18,10,7,32,90,76,59,57,61,86,84,41,33,16]",
+      "expectedOutput": "[0,100]"
+    },
+    {
+      "input": "[7,77,0,70,70,77,63,21,84,70,63,21,84,84,77,35,84,63,84,28,0,63,35,84,14,63,14,70,84,14,77,70,28,42,0,14,14,49,7,0,70,77,63,70,35,56,7,14,77,84,0,77,7,84,77,28,70,7,21,63,49,28,21,84,84,77,77,14,77,70,21,84,77,42,84,84,63,28,70,63,70,7,84,7,0,70,77,0,21,63,0,35,63,84,0,42,7]",
+      "expectedOutput": "[45,7]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "What do we need to know to find how many pairs we can make? We need to know the frequency of each integer.",
+    "When will there be a leftover number? When the frequency of an integer is an odd number."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-number-of-pairs-in-array/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.141Z",
+    "sourceUpdatedAt": null
+  }
+}

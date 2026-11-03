@@ -1,0 +1,164 @@
+{
+  "id": "738",
+  "slug": "monotone-increasing-digits",
+  "title": "Monotone Increasing Digits",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Greedy"
+  ],
+  "statement": "An integer has **monotone increasing digits** if and only if each pair of adjacent digits `x` and `y` satisfy `x <= y`.\n\nGiven an integer `n`, return _the largest number that is less than or equal to_ `n` _with **monotone increasing digits**_.\n\n**Example 1:**\n\n```\nInput: n = 10\nOutput: 9\n```\n\n**Example 2:**\n\n```\nInput: n = 1234\nOutput: 1234\n```\n\n**Example 3:**\n\n```\nInput: n = 332\nOutput: 299\n```\n\n**Constraints:**\n\n*   `0 <= n <= 10^(9)`",
+  "constraints": [
+    "0 <= n <= 109"
+  ],
+  "examples": [
+    {
+      "input": "n = 10",
+      "output": "9",
+      "explanation": null
+    },
+    {
+      "input": "n = 1234",
+      "output": "1234",
+      "explanation": null
+    },
+    {
+      "input": "n = 332",
+      "output": "299",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int monotoneIncreasingDigits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int monotoneIncreasingDigits(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def monotoneIncreasingDigits(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def monotoneIncreasingDigits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar monotoneIncreasingDigits = function(n) {\n    \n};",
+    "typescript": "function monotoneIncreasingDigits(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MonotoneIncreasingDigits(int n) {\n        \n    }\n}",
+    "c": "int monotoneIncreasingDigits(int n) {\n    \n}",
+    "golang": "func monotoneIncreasingDigits(n int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun monotoneIncreasingDigits(n: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func monotoneIncreasingDigits(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn monotone_increasing_digits(n: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef monotone_increasing_digits(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function monotoneIncreasingDigits($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int monotoneIncreasingDigits(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def monotoneIncreasingDigits(n: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec monotone_increasing_digits(n :: integer) :: integer\n  def monotone_increasing_digits(n) do\n    \n  end\nend",
+    "erlang": "-spec monotone_increasing_digits(N :: integer()) -> integer().\nmonotone_increasing_digits(N) ->\n  .",
+    "racket": "(define/contract (monotone-increasing-digits n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "37",
+      "expectedOutput": "37"
+    },
+    {
+      "input": "41",
+      "expectedOutput": "39"
+    },
+    {
+      "input": "221",
+      "expectedOutput": "199"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "0",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "37",
+      "expectedOutput": "37"
+    },
+    {
+      "input": "41",
+      "expectedOutput": "39"
+    },
+    {
+      "input": "99",
+      "expectedOutput": "99"
+    },
+    {
+      "input": "60",
+      "expectedOutput": "59"
+    },
+    {
+      "input": "98",
+      "expectedOutput": "89"
+    },
+    {
+      "input": "96",
+      "expectedOutput": "89"
+    },
+    {
+      "input": "221",
+      "expectedOutput": "199"
+    },
+    {
+      "input": "277",
+      "expectedOutput": "277"
+    },
+    {
+      "input": "207",
+      "expectedOutput": "199"
+    },
+    {
+      "input": "100",
+      "expectedOutput": "99"
+    },
+    {
+      "input": "254",
+      "expectedOutput": "249"
+    },
+    {
+      "input": "103",
+      "expectedOutput": "99"
+    },
+    {
+      "input": "222",
+      "expectedOutput": "222"
+    },
+    {
+      "input": "841",
+      "expectedOutput": "799"
+    },
+    {
+      "input": "886",
+      "expectedOutput": "799"
+    },
+    {
+      "input": "608",
+      "expectedOutput": "599"
+    },
+    {
+      "input": "994",
+      "expectedOutput": "899"
+    },
+    {
+      "input": "1000000000",
+      "expectedOutput": "999999999"
+    },
+    {
+      "input": "975677411",
+      "expectedOutput": "899999999"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Build the answer digit by digit, adding the largest possible one that would make the number still less than or equal to N."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/monotone-increasing-digits/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.414Z",
+    "sourceUpdatedAt": null
+  }
+}

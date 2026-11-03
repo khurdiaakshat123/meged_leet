@@ -1,0 +1,150 @@
+{
+  "id": "522",
+  "slug": "longest-uncommon-subsequence-ii",
+  "title": "Longest Uncommon Subsequence II",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Sorting"
+  ],
+  "statement": "Given an array of strings `strs`, return _the length of the **longest uncommon subsequence** between them_. If the longest uncommon subsequence does not exist, return `-1`.\n\nAn **uncommon subsequence** between an array of strings is a string that is a **subsequence of one string but not the others**.\n\nA **subsequence** of a string `s` is a string that can be obtained after deleting any number of characters from `s`.\n\n*   For example, `\"abc\"` is a subsequence of `\"aebdc\"` because you can delete the underlined characters in `\"aebdc\"` to get `\"abc\"`. Other subsequences of `\"aebdc\"` include `\"aebdc\"`, `\"aeb\"`, and `\"\"` (empty string).\n\n**Example 1:**\n\n```\nInput: strs = [\"aba\",\"cdc\",\"eae\"]\nOutput: 3\n```\n\n**Example 2:**\n\n```\nInput: strs = [\"aaa\",\"aaa\",\"aa\"]\nOutput: -1\n```\n\n**Constraints:**\n\n*   `2 <= strs.length <= 50`\n*   `1 <= strs[i].length <= 10`\n*   `strs[i]` consists of lowercase English letters.",
+  "constraints": [
+    "2 <= strs.length <= 50",
+    "1 <= strs[i].length <= 10",
+    "strs[i] consists of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "strs = [\"aba\",\"cdc\",\"eae\"]",
+      "output": "3",
+      "explanation": null
+    },
+    {
+      "input": "strs = [\"aaa\",\"aaa\",\"aa\"]",
+      "output": "-1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int findLUSlength(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLUSlength(String[] strs) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def findLUSlength(self, strs: list[str]) -> int:\n        ",
+    "python": "class Solution(object):\n    def findLUSlength(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar findLUSlength = function(strs) {\n    \n};",
+    "typescript": "function findLUSlength(strs: string[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int FindLUSlength(string[] strs) {\n        \n    }\n}",
+    "c": "int findLUSlength(char** strs, int strsSize) {\n    \n}",
+    "golang": "func findLUSlength(strs []string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun findLUSlength(strs: Array<String>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLUSlength(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_lu_slength(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef find_lu_slength(strs)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function findLUSlength($strs) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLUSlength(List<String> strs) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def findLUSlength(strs: Array[String]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec find_lu_slength(strs :: [String.t]) :: integer\n  def find_lu_slength(strs) do\n    \n  end\nend",
+    "erlang": "-spec find_lu_slength(Strs :: [unicode:unicode_binary()]) -> integer().\nfind_lu_slength(Strs) ->\n  .",
+    "racket": "(define/contract (find-lu-slength strs)\n  (-> (listof string?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"bbaa\",\"ecedddead\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"dadc\",\"bbbddeaa\",\"bb\"]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[\"cbddedd\",\"aaeecad\",\"ededaed\",\"a\",\"beeabeadda\",\"cbcd\",\"acbadbb\",\"bedaaecc\",\"bcb\",\"cdeccbabe\",\"beede\",\"e\",\"baccdb\"]",
+      "expectedOutput": "10"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"ddeebcd\",\"bdcecd\",\"ad\",\"eabaaddda\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"eabcababb\",\"aacaeba\",\"dbdaab\",\"c\",\"acdaec\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"ddad\",\"eed\",\"dbeb\",\"dbadcec\",\"edbdaaeee\",\"a\",\"bbdaee\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"accacc\",\"bdec\",\"ceee\",\"dceaeead\",\"b\",\"dbdec\",\"ddedb\",\"bdddaceeb\",\"d\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"ddcaed\",\"aabeca\",\"bdcbedc\",\"addcca\",\"aac\",\"eceaabaed\",\"bbab\",\"dbbdeecda\",\"cbea\",\"eccceeab\",\"aabccbc\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"deeeaedaea\",\"b\",\"addbccdbbd\",\"bad\",\"ab\",\"eaeda\",\"ecccdcac\",\"aadeabaaa\",\"cbaceddbcc\",\"abbeec\",\"beaacecac\",\"acb\",\"ddd\",\"bcdce\",\"eacaebdeaa\",\"aabebbbcd\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"ebbeaa\",\"dedbcb\",\"a\",\"ca\",\"beccdcaa\",\"cebecb\",\"ecceddde\",\"d\",\"ccaeea\",\"add\",\"eecabaa\",\"cbaccedaa\",\"cbedbaaaae\",\"aecdec\",\"dadabeb\",\"cae\",\"d\",\"b\",\"beaacaeea\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"ececbcab\",\"dde\",\"b\",\"ebebabbded\",\"eeccceddde\",\"aabadcdadd\",\"bb\",\"adabdd\",\"cdbca\",\"eeabbced\",\"ecdebee\",\"dbc\",\"daecc\",\"cbeccb\",\"bd\",\"accec\",\"deadaa\",\"baeabbc\",\"deeaadbccb\",\"ddececa\",\"ccbec\",\"cbeecaabbc\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"cdedda\",\"dddaa\",\"ccbaacba\",\"bddddab\",\"aceba\",\"eade\",\"cacaadde\",\"c\",\"eadcaa\",\"dadeacae\",\"bbabc\",\"dacc\",\"aacdccdc\",\"eedccbea\",\"cccebaad\",\"bebcadcdb\",\"daeebae\",\"b\",\"bbd\",\"ddbbb\",\"cb\",\"bbeecd\",\"abddbbba\",\"aeadebba\",\"deee\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"babcda\",\"ababcadbc\",\"ccdecd\",\"dbba\",\"eaaa\",\"ebe\",\"ec\",\"c\",\"eacd\",\"bb\",\"bedecaeeab\",\"bbaaea\",\"ab\",\"d\",\"dcbd\",\"bebc\",\"eadeabee\",\"addeeeaaa\",\"c\",\"aa\",\"eee\",\"dcbeecad\",\"bdc\",\"aababaaa\",\"bbbaaebebe\",\"caeee\",\"ceecbcced\",\"abe\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"bdececa\",\"eecdbbedc\",\"eeacaaad\",\"deacd\",\"bbd\",\"eaebd\",\"dee\",\"ceebddbaca\",\"dccacbd\",\"aacecbdcbe\",\"eebcebdc\",\"ceebdeb\",\"abeeeebdab\",\"ceaceb\",\"eadaeeed\",\"adbbebcdb\",\"dedba\",\"cecabdab\",\"be\",\"e\",\"d\",\"ced\",\"eacbbaeebb\",\"cccabcd\",\"dbddb\",\"aecceadea\",\"dacaea\",\"abadbccaea\",\"acdaae\",\"cadcddba\",\"edbd\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"ece\",\"ecde\",\"cdcedccdec\",\"eaccdbdebb\",\"aea\",\"aecbbecceb\",\"edd\",\"ebede\",\"bebeaaddba\",\"cedecbeaad\",\"bebcaa\",\"acae\",\"b\",\"baddecc\",\"b\",\"ceaeece\",\"ebea\",\"daeeed\",\"adbea\",\"bbaabdcec\",\"eccca\",\"a\",\"bbbd\",\"cdcee\",\"cb\",\"aba\",\"ddbedcb\",\"ebb\",\"bdbd\",\"bac\",\"ab\",\"ee\",\"be\",\"ddd\",\"cacc\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"e\",\"aad\",\"a\",\"eaabdeec\",\"dcceadca\",\"debeed\",\"dca\",\"aedbbcd\",\"b\",\"b\",\"e\",\"dadbadeb\",\"bddecdbdbb\",\"acbdddec\",\"deeab\",\"adebbcddeb\",\"e\",\"bda\",\"cbeedeeddb\",\"dba\",\"dce\",\"ec\",\"eda\",\"e\",\"beb\",\"ede\",\"ebeaaaac\",\"ecbdaddec\",\"bedadbec\",\"ecaebec\",\"baadddbe\",\"eaaede\",\"cbe\",\"aeb\",\"aeebdaed\",\"ebaa\",\"dceab\",\"a\",\"cceada\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"bcdbaddddc\",\"bbebdc\",\"d\",\"dadeebacc\",\"aecba\",\"dbeab\",\"c\",\"eedc\",\"e\",\"aedacaa\",\"adcaaaec\",\"cabdedbb\",\"dadea\",\"bee\",\"e\",\"c\",\"ccbbb\",\"cceabeac\",\"cd\",\"daaa\",\"bcbb\",\"decacaa\",\"ebdb\",\"abccecd\",\"adcaadab\",\"ecbbceaaba\",\"e\",\"cccdacceed\",\"cba\",\"e\",\"cbeccccc\",\"ec\",\"a\",\"bcda\",\"dcbb\",\"d\",\"b\",\"baaaaaaced\",\"e\",\"decaabea\",\"b\",\"bccdadbeab\",\"ddcaaa\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"caece\",\"bbaecbbb\",\"b\",\"deedeaead\",\"abdcbeacd\",\"dbecaebdab\",\"bebe\",\"becb\",\"bd\",\"ccbdbcc\",\"beda\",\"deddbbbce\",\"edbacaabb\",\"dbabb\",\"abadecadce\",\"aeec\",\"ccbeaab\",\"dadaadabdb\",\"eddcbee\",\"dadbbdbe\",\"eaeba\",\"aeeb\",\"baa\",\"bce\",\"cdabadaaae\",\"cbac\",\"bd\",\"bbdbccac\",\"adbc\",\"daa\",\"aeb\",\"ccac\",\"beeecbd\",\"bd\",\"dcdcbbcca\",\"acc\",\"e\",\"bcbbeb\",\"daaae\",\"ce\",\"ebcee\",\"ccadedcea\",\"db\",\"ccb\",\"beabbd\",\"ccbbadbba\",\"bbcc\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"ebebdcbbe\",\"ddad\",\"eda\",\"cbabdb\",\"acdeda\",\"aedada\",\"cadeaeee\",\"acedb\",\"d\",\"ceebbea\",\"beec\",\"cb\",\"eacabdbaac\",\"aebebdaed\",\"edcde\",\"abdacbadca\",\"baecdbce\",\"bbeee\",\"edaecdddb\",\"bae\",\"ecbc\",\"aaeccaaa\",\"aadeebd\",\"caaedeaa\",\"cddecc\"]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"adeab\",\"bbc\",\"acbbd\",\"accaabdebe\",\"acadd\",\"dbce\",\"ece\",\"babaacea\",\"de\",\"eadcdadeac\",\"aadd\",\"acccccd\",\"daedde\",\"adecddc\",\"ba\",\"acd\",\"caddaaca\",\"ec\",\"cbbdd\",\"aeb\",\"deeda\",\"bbcabcda\",\"eeaaabab\",\"abbcacdad\",\"eccded\",\"aedebeeeee\",\"caeebcaece\",\"badddaeb\",\"cdbeb\",\"dcbbce\",\"cabccdac\",\"dcaeca\",\"cbdaacee\",\"abedabecae\",\"eadda\",\"ccccd\",\"abbde\",\"adbe\",\"ca\",\"eaacdcbb\",\"ddddcee\",\"ae\",\"bdccdccab\",\"d\",\"ebbabeaae\",\"babc\",\"a\",\"abdceec\",\"edceea\",\"bbd\"]",
+      "expectedOutput": "10"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/longest-uncommon-subsequence-ii/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.730Z",
+    "sourceUpdatedAt": null
+  }
+}

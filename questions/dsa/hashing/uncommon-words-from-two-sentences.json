@@ -1,0 +1,157 @@
+{
+  "id": "884",
+  "slug": "uncommon-words-from-two-sentences",
+  "title": "Uncommon Words from Two Sentences",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "statement": "A **sentence** is a string of single-space separated words where each word consists only of lowercase letters.\n\nA word is **uncommon** if it appears exactly once in one of the sentences, and **does not appear** in the other sentence.\n\nGiven two **sentences** `s1` and `s2`, return _a list of all the **uncommon words**_. You may return the answer in **any order**.\n\n**Example 1:**\n\n**Input:** s1 = \"this apple is sweet\", s2 = \"this apple is sour\"\n\n**Output:** \\[\"sweet\",\"sour\"\\]\n\n**Explanation:**\n\nThe word `\"sweet\"` appears only in `s1`, while the word `\"sour\"` appears only in `s2`.\n\n**Example 2:**\n\n**Input:** s1 = \"apple apple\", s2 = \"banana\"\n\n**Output:** \\[\"banana\"\\]\n\n**Constraints:**\n\n*   `1 <= s1.length, s2.length <= 200`\n*   `s1` and `s2` consist of lowercase English letters and spaces.\n*   `s1` and `s2` do not have leading or trailing spaces.\n*   All the words in `s1` and `s2` are separated by a single space.",
+  "constraints": [
+    "1 <= s1.length, s2.length <= 200",
+    "s1 and s2 consist of lowercase English letters and spaces.",
+    "s1 and s2 do not have leading or trailing spaces.",
+    "All the words in s1 and s2 are separated by a single space."
+  ],
+  "examples": [
+    {
+      "input": "s1 = \"this apple is sweet\", s2 = \"this apple is sour\"",
+      "output": "[\"sweet\",\"sour\"]",
+      "explanation": null
+    },
+    {
+      "input": "s1 = \"apple apple\", s2 = \"banana\"",
+      "output": "[\"banana\"]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<string> uncommonFromSentences(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] uncommonFromSentences(String s1, String s2) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def uncommonFromSentences(self, s1: str, s2: str) -> list[str]:\n        ",
+    "python": "class Solution(object):\n    def uncommonFromSentences(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {string[]}\n */\nvar uncommonFromSentences = function(s1, s2) {\n    \n};",
+    "typescript": "function uncommonFromSentences(s1: string, s2: string): string[] {\n    \n};",
+    "csharp": "public class Solution {\n    public string[] UncommonFromSentences(string s1, string s2) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** uncommonFromSentences(char* s1, char* s2, int* returnSize) {\n    \n}",
+    "golang": "func uncommonFromSentences(s1 string, s2 string) []string {\n    \n}",
+    "kotlin": "class Solution {\n    fun uncommonFromSentences(s1: String, s2: String): Array<String> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uncommonFromSentences(_ s1: String, _ s2: String) -> [String] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn uncommon_from_sentences(s1: String, s2: String) -> Vec<String> {\n        \n    }\n}",
+    "ruby": "# @param {String} s1\n# @param {String} s2\n# @return {String[]}\ndef uncommon_from_sentences(s1, s2)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s1\n     * @param String $s2\n     * @return String[]\n     */\n    function uncommonFromSentences($s1, $s2) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> uncommonFromSentences(String s1, String s2) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def uncommonFromSentences(s1: String, s2: String): Array[String] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec uncommon_from_sentences(s1 :: String.t, s2 :: String.t) :: [String.t]\n  def uncommon_from_sentences(s1, s2) do\n    \n  end\nend",
+    "erlang": "-spec uncommon_from_sentences(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nuncommon_from_sentences(S1, S2) ->\n  .",
+    "racket": "(define/contract (uncommon-from-sentences s1 s2)\n  (-> string? string? (listof string?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"this apple is sweet\"\n\"this apple is sour\"",
+      "expectedOutput": "[\"sweet\",\"sour\"]"
+    },
+    {
+      "input": "\"apple apple\"\n\"banana\"",
+      "expectedOutput": "[\"banana\"]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"a\"\n\"ba\"",
+      "expectedOutput": "[\"a\",\"ba\"]"
+    },
+    {
+      "input": "\"a\"\n\"a\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"a a\"\n\"b\"",
+      "expectedOutput": "[\"b\"]"
+    },
+    {
+      "input": "\"a b\"\n\"b c\"",
+      "expectedOutput": "[\"a\",\"c\"]"
+    },
+    {
+      "input": "\"x x\"\n\"x\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"aa a\"\n\"a\"",
+      "expectedOutput": "[\"aa\"]"
+    },
+    {
+      "input": "\"z y\"\n\"a z\"",
+      "expectedOutput": "[\"y\",\"a\"]"
+    },
+    {
+      "input": "\"this apple is sweet\"\n\"this apple is sour\"",
+      "expectedOutput": "[\"sweet\",\"sour\"]"
+    },
+    {
+      "input": "\"apple apple\"\n\"banana\"",
+      "expectedOutput": "[\"banana\"]"
+    },
+    {
+      "input": "\"mxa wha xlaqq\"\n\"mxa gfa iba rbbqq\"",
+      "expectedOutput": "[\"wha\",\"xlaqq\",\"gfa\",\"iba\",\"rbbqq\"]"
+    },
+    {
+      "input": "\"gga zkb dra oza gga ykb cdb hlb gkbqq\"\n\"oza cra ykb rqa whb cra ckbqq\"",
+      "expectedOutput": "[\"zkb\",\"dra\",\"cdb\",\"hlb\",\"gkbqq\",\"rqa\",\"whb\",\"ckbqq\"]"
+    },
+    {
+      "input": "\"pjb gsa fmb\"\n\"pjb yka pca ecb ndb\"",
+      "expectedOutput": "[\"gsa\",\"fmb\",\"yka\",\"pca\",\"ecb\",\"ndb\"]"
+    },
+    {
+      "input": "\"bgb zcb fea yya yya lpa\"\n\"hsa raa bgb zla fea nkb zla vya\"",
+      "expectedOutput": "[\"zcb\",\"lpa\",\"hsa\",\"raa\",\"nkb\",\"vya\"]"
+    },
+    {
+      "input": "\"nwa sdb qta hgb dkb\"\n\"sdb plb jkaqq\"",
+      "expectedOutput": "[\"nwa\",\"qta\",\"hgb\",\"dkb\",\"plb\",\"jkaqq\"]"
+    },
+    {
+      "input": "\"vcb wxa neb yfb mfb zla wib rwa pha idb waa nza dlb aab vjb lpa bxa veaqq\"\n\"sca hoa pha wra wxa gab rwa iha ygb mfb gdb xfa yfb tia sebqq\"",
+      "expectedOutput": "[\"vcb\",\"neb\",\"zla\",\"wib\",\"idb\",\"waa\",\"nza\",\"dlb\",\"aab\",\"vjb\",\"lpa\",\"bxa\",\"veaqq\",\"sca\",\"hoa\",\"wra\",\"gab\",\"iha\",\"ygb\",\"gdb\",\"xfa\",\"tia\",\"sebqq\"]"
+    },
+    {
+      "input": "\"sca nab pua lta mha doa wha awa swa fea sla sla cgb xma wka mga zha iea bra nja\"\n\"pva dja dda jga uza nma nla sca hba lta uza iea ofb nab mha ulb jfb\"",
+      "expectedOutput": "[\"pua\",\"doa\",\"wha\",\"awa\",\"swa\",\"fea\",\"cgb\",\"xma\",\"wka\",\"mga\",\"zha\",\"bra\",\"nja\",\"pva\",\"dja\",\"dda\",\"jga\",\"nma\",\"nla\",\"hba\",\"ofb\",\"ulb\",\"jfb\"]"
+    },
+    {
+      "input": "\"fla zla kba ehb xwa kha voa lka mga nhb nja vna\"\n\"ewa zla zga bfa ata osa nhb lqa gza kba mga eeb gkaqq\"",
+      "expectedOutput": "[\"fla\",\"ehb\",\"xwa\",\"kha\",\"voa\",\"lka\",\"nja\",\"vna\",\"ewa\",\"zga\",\"bfa\",\"ata\",\"osa\",\"lqa\",\"gza\",\"eeb\",\"gkaqq\"]"
+    },
+    {
+      "input": "\"wva dfb jva mya mha tca mmb mha bna nfa goa kaa qja fbb uma\"\n\"xja rxa qja kaa mya wda rlb wxa jva cha bna bda kza ara tla kza veb qqa\"",
+      "expectedOutput": "[\"wva\",\"dfb\",\"tca\",\"mmb\",\"nfa\",\"goa\",\"fbb\",\"uma\",\"xja\",\"rxa\",\"wda\",\"rlb\",\"wxa\",\"cha\",\"bda\",\"ara\",\"tla\",\"veb\",\"qqa\"]"
+    },
+    {
+      "input": "\"gmb sda tdb bda uba jga caa qcb rpa xdb xwa tva sib bjb rva rma pcb zsa dcb sdb tca lga swa eva yya nia coa xgb zla qua skb gba rjb isa jdb uza sra wqa rxa yea xab ada xla uva waa aha gaa tma mya dmbq\"\n\"zab bva wza eva qcb zca lba jdb tjb sdb nbb nka nab sqa uza iya mfa bia amb xab zlb nhb xaa xwa xla wqa rxa ojb ada tva nia xhb wlb dza tca jga rfb vta zba ehb pua tlb kza bmb zsa zfa eta sua zxa wkbq\"",
+      "expectedOutput": "[\"gmb\",\"sda\",\"tdb\",\"bda\",\"uba\",\"caa\",\"rpa\",\"xdb\",\"sib\",\"bjb\",\"rva\",\"rma\",\"pcb\",\"dcb\",\"lga\",\"swa\",\"yya\",\"coa\",\"xgb\",\"zla\",\"qua\",\"skb\",\"gba\",\"rjb\",\"isa\",\"sra\",\"yea\",\"uva\",\"waa\",\"aha\",\"gaa\",\"tma\",\"mya\",\"dmbq\",\"zab\",\"bva\",\"wza\",\"zca\",\"lba\",\"tjb\",\"nbb\",\"nka\",\"nab\",\"sqa\",\"iya\",\"mfa\",\"bia\",\"amb\",\"zlb\",\"nhb\",\"xaa\",\"ojb\",\"xhb\",\"wlb\",\"dza\",\"rfb\",\"vta\",\"zba\",\"ehb\",\"pua\",\"tlb\",\"kza\",\"bmb\",\"zfa\",\"eta\",\"sua\",\"zxa\",\"wkbq\"]"
+    },
+    {
+      "input": "\"uba sja pia upa pna gjb wya lhb cra xfb cib dca vna dkb ybb sjb yea yna zgb tsa xab tra hza wcb nha rlb jqa rba ooa ana tdb alb ipa sab wca fwa zfb sta toa wxa kna lka hdb iya iab pna xkb heb mmbqq\"\n\"xgb iya nqa wca sja bwa taa uba nha qab lhb kma jba oea roa fdb cra nqa fca yha vgb tna bia sab ira lra hza rlb ooa iba yna sxa ola zhb beb tma ana dba zgb wya tba kab haa zpa dkb uca rea ataqq\"",
+      "expectedOutput": "[\"pia\",\"upa\",\"gjb\",\"xfb\",\"cib\",\"dca\",\"vna\",\"ybb\",\"sjb\",\"yea\",\"tsa\",\"xab\",\"tra\",\"wcb\",\"jqa\",\"rba\",\"tdb\",\"alb\",\"ipa\",\"fwa\",\"zfb\",\"sta\",\"toa\",\"wxa\",\"kna\",\"lka\",\"hdb\",\"iab\",\"xkb\",\"heb\",\"mmbqq\",\"xgb\",\"bwa\",\"taa\",\"qab\",\"kma\",\"jba\",\"oea\",\"roa\",\"fdb\",\"fca\",\"yha\",\"vgb\",\"tna\",\"bia\",\"ira\",\"lra\",\"iba\",\"sxa\",\"ola\",\"zhb\",\"beb\",\"tma\",\"dba\",\"tba\",\"kab\",\"haa\",\"zpa\",\"uca\",\"rea\",\"ataqq\"]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/uncommon-words-from-two-sentences/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.349Z",
+    "sourceUpdatedAt": null
+  }
+}

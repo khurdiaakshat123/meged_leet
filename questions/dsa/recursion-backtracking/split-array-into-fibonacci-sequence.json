@@ -1,0 +1,151 @@
+{
+  "id": "842",
+  "slug": "split-array-into-fibonacci-sequence",
+  "title": "Split Array into Fibonacci Sequence",
+  "category": "dsa",
+  "subcategory": "recursion-backtracking",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Backtracking"
+  ],
+  "statement": "You are given a string of digits `num`, such as `\"123456579\"`. We can split it into a Fibonacci-like sequence `[123, 456, 579]`.\n\nFormally, a **Fibonacci-like** sequence is a list `f` of non-negative integers such that:\n\n*   `0 <= f[i] < 2^(31)`, (that is, each integer fits in a **32-bit** signed integer type),\n*   `f.length >= 3`, and\n*   `f[i] + f[i + 1] == f[i + 2]` for all `0 <= i < f.length - 2`.\n\nNote that when splitting the string into pieces, each piece must not have extra leading zeroes, except if the piece is the number `0` itself.\n\nReturn any Fibonacci-like sequence split from `num`, or return `[]` if it cannot be done.\n\n**Example 1:**\n\n```\nInput: num = \"1101111\"\nOutput: [11,0,11,11]\nExplanation: The output [110, 1, 111] would also be accepted.\n```\n\n**Example 2:**\n\n```\nInput: num = \"112358130\"\nOutput: []\nExplanation: The task is impossible.\n```\n\n**Example 3:**\n\n```\nInput: num = \"0123\"\nOutput: []\nExplanation: Leading zeroes are not allowed, so \"01\", \"2\", \"3\" is not valid.\n```\n\n**Constraints:**\n\n*   `1 <= num.length <= 200`\n*   `num` contains only digits.",
+  "constraints": [
+    "1 <= num.length <= 200",
+    "num contains only digits."
+  ],
+  "examples": [
+    {
+      "input": "num = \"1101111\"",
+      "output": "[11,0,11,11]",
+      "explanation": "The output [110, 1, 111] would also be accepted."
+    },
+    {
+      "input": "num = \"112358130\"",
+      "output": "[]",
+      "explanation": "The task is impossible."
+    },
+    {
+      "input": "num = \"0123\"",
+      "output": "[]",
+      "explanation": "Leading zeroes are not allowed, so \"01\", \"2\", \"3\" is not valid."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> splitIntoFibonacci(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> splitIntoFibonacci(String num) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def splitIntoFibonacci(self, num: str) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def splitIntoFibonacci(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} num\n * @return {number[]}\n */\nvar splitIntoFibonacci = function(num) {\n    \n};",
+    "typescript": "function splitIntoFibonacci(num: string): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<int> SplitIntoFibonacci(string num) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* splitIntoFibonacci(char* num, int* returnSize) {\n    \n}",
+    "golang": "func splitIntoFibonacci(num string) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun splitIntoFibonacci(num: String): List<Int> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitIntoFibonacci(_ num: String) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_into_fibonacci(num: String) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {String} num\n# @return {Integer[]}\ndef split_into_fibonacci(num)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return Integer[]\n     */\n    function splitIntoFibonacci($num) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> splitIntoFibonacci(String num) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def splitIntoFibonacci(num: String): List[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec split_into_fibonacci(num :: String.t) :: [integer]\n  def split_into_fibonacci(num) do\n    \n  end\nend",
+    "erlang": "-spec split_into_fibonacci(Num :: unicode:unicode_binary()) -> [integer()].\nsplit_into_fibonacci(Num) ->\n  .",
+    "racket": "(define/contract (split-into-fibonacci num)\n  (-> string? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"5779136215351\"",
+      "expectedOutput": "[57,79,136,215,351]"
+    },
+    {
+      "input": "\"13\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"5971130201331532863\"",
+      "expectedOutput": "[59,71,130,201,331,532,863]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"8571\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"16314778125203328\"",
+      "expectedOutput": "[16,31,47,78,125,203,328]"
+    },
+    {
+      "input": "\"309835\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"118798185283468\"",
+      "expectedOutput": "[11,87,98,185,283,468]"
+    },
+    {
+      "input": "\"94753465\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"3696132228\"",
+      "expectedOutput": "[36,96,132,228]"
+    },
+    {
+      "input": "\"6569849081\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"4771118189307496\"",
+      "expectedOutput": "[47,71,118,189,307,496]"
+    },
+    {
+      "input": "\"16345734269384\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"217697173270443713\"",
+      "expectedOutput": "[21,76,97,173,270,443,713]"
+    },
+    {
+      "input": "\"98316832944273528086\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"594099139238\"",
+      "expectedOutput": "[59,40,99,139,238]"
+    },
+    {
+      "input": "\"25226091991559440032\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"257121931\"",
+      "expectedOutput": "[2,5,7,12,19,31]"
+    },
+    {
+      "input": "\"66140659041948442068\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"5949108157265\"",
+      "expectedOutput": "[59,49,108,157,265]"
+    },
+    {
+      "input": "\"67927896508710395621204941499351662774815741383755026129458110591344956393595693705522511836250312150377838490875048665398271710040366925666152203061789660830369678980418202453908143286167855809248286\"",
+      "expectedOutput": "[]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/split-array-into-fibonacci-sequence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.122Z",
+    "sourceUpdatedAt": null
+  }
+}

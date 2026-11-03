@@ -1,0 +1,148 @@
+{
+  "id": "2413",
+  "slug": "smallest-even-multiple",
+  "title": "Smallest Even Multiple",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Number Theory"
+  ],
+  "statement": "Given a **positive** integer `n`, return _the smallest positive integer that is a multiple of **both**_ `2` _and_ `n`.\n\n**Example 1:**\n\n```\nInput: n = 5\nOutput: 10\nExplanation: The smallest multiple of both 5 and 2 is 10.\n```\n\n**Example 2:**\n\n```\nInput: n = 6\nOutput: 6\nExplanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a multiple of itself.\n```\n\n**Constraints:**\n\n*   `1 <= n <= 150`",
+  "constraints": [
+    "1 <= n <= 150"
+  ],
+  "examples": [
+    {
+      "input": "n = 5",
+      "output": "10",
+      "explanation": "The smallest multiple of both 5 and 2 is 10."
+    },
+    {
+      "input": "n = 6",
+      "output": "6",
+      "explanation": "The smallest multiple of both 6 and 2 is 6. Note that a number is a multiple of itself."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int smallestEvenMultiple(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestEvenMultiple(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def smallestEvenMultiple(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def smallestEvenMultiple(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar smallestEvenMultiple = function(n) {\n    \n};",
+    "typescript": "function smallestEvenMultiple(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int SmallestEvenMultiple(int n) {\n        \n    }\n}",
+    "c": "int smallestEvenMultiple(int n) {\n    \n}",
+    "golang": "func smallestEvenMultiple(n int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun smallestEvenMultiple(n: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestEvenMultiple(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_even_multiple(n: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef smallest_even_multiple(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function smallestEvenMultiple($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int smallestEvenMultiple(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def smallestEvenMultiple(n: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec smallest_even_multiple(n :: integer) :: integer\n  def smallest_even_multiple(n) do\n    \n  end\nend",
+    "erlang": "-spec smallest_even_multiple(N :: integer()) -> integer().\nsmallest_even_multiple(N) ->\n  .",
+    "racket": "(define/contract (smallest-even-multiple n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "2",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "150",
+      "expectedOutput": "150"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "149",
+      "expectedOutput": "298"
+    },
+    {
+      "input": "33",
+      "expectedOutput": "66"
+    },
+    {
+      "input": "76",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "50",
+      "expectedOutput": "50"
+    },
+    {
+      "input": "132",
+      "expectedOutput": "132"
+    },
+    {
+      "input": "18",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "46",
+      "expectedOutput": "46"
+    },
+    {
+      "input": "104",
+      "expectedOutput": "104"
+    },
+    {
+      "input": "28",
+      "expectedOutput": "28"
+    },
+    {
+      "input": "49",
+      "expectedOutput": "98"
+    },
+    {
+      "input": "89",
+      "expectedOutput": "178"
+    },
+    {
+      "input": "114",
+      "expectedOutput": "114"
+    },
+    {
+      "input": "107",
+      "expectedOutput": "214"
+    },
+    {
+      "input": "123",
+      "expectedOutput": "246"
+    },
+    {
+      "input": "135",
+      "expectedOutput": "270"
+    },
+    {
+      "input": "92",
+      "expectedOutput": "92"
+    },
+    {
+      "input": "3",
+      "expectedOutput": "6"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "A guaranteed way to find a multiple of 2 and n is to multiply them together. When is this the answer, and when is there a smaller answer?",
+    "There is a smaller answer when n is even."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/smallest-even-multiple/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:29.723Z",
+    "sourceUpdatedAt": null
+  }
+}

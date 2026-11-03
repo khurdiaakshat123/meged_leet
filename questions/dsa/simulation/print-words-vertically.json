@@ -1,0 +1,151 @@
+{
+  "id": "1324",
+  "slug": "print-words-vertically",
+  "title": "Print Words Vertically",
+  "category": "dsa",
+  "subcategory": "simulation",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "String",
+    "Simulation"
+  ],
+  "statement": "Given a string `s`. Return all the words vertically in the same order in which they appear in `s`.  \nWords are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed).  \nEach word would be put on only one column and that in one column there will be only one word.\n\n**Example 1:**\n\n```\nInput: s = \"HOW ARE YOU\"\nOutput: [\"HAY\",\"ORO\",\"WEU\"]\nExplanation: Each word is printed vertically. \n \"HAY\"\n \"ORO\"\n \"WEU\"\n```\n\n**Example 2:**\n\n```\nInput: s = \"TO BE OR NOT TO BE\"\nOutput: [\"TBONTB\",\"OEROOE\",\"   T\"]\nExplanation: Trailing spaces is not allowed. \n\"TBONTB\"\n\"OEROOE\"\n\"   T\"\n```\n\n**Example 3:**\n\n```\nInput: s = \"CONTEST IS COMING\"\nOutput: [\"CIC\",\"OSO\",\"N M\",\"T I\",\"E N\",\"S G\",\"T\"]\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 200`\n*   `s` contains only upper case English letters.\n*   It's guaranteed that there is only one space between 2 words.",
+  "constraints": [
+    "1 <= s.length <= 200",
+    "s contains only upper case English letters.",
+    "It's guaranteed that there is only one space between 2 words."
+  ],
+  "examples": [
+    {
+      "input": "s = \"HOW ARE YOU\"",
+      "output": "[\"HAY\",\"ORO\",\"WEU\"]",
+      "explanation": "Each word is printed vertically. \r\n \"HAY\"\r\n \"ORO\"\r\n \"WEU\""
+    },
+    {
+      "input": "s = \"TO BE OR NOT TO BE\"",
+      "output": "[\"TBONTB\",\"OEROOE\",\"   T\"]",
+      "explanation": "Trailing spaces is not allowed. \r\n\"TBONTB\"\r\n\"OEROOE\"\r\n\"   T\""
+    },
+    {
+      "input": "s = \"CONTEST IS COMING\"",
+      "output": "[\"CIC\",\"OSO\",\"N M\",\"T I\",\"E N\",\"S G\",\"T\"]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<string> printVertically(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> printVertically(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def printVertically(self, s: str) -> List[str]:\n        ",
+    "python": "class Solution(object):\n    def printVertically(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar printVertically = function(s) {\n    \n};",
+    "typescript": "function printVertically(s: string): string[] {\n\n};",
+    "csharp": "public class Solution {\n    public IList<string> PrintVertically(string s) {\n        \n    }\n}",
+    "c": "\n\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar ** printVertically(char * s, int* returnSize){\n\n}",
+    "golang": "func printVertically(s string) []string {\n    \n}",
+    "kotlin": "class Solution {\n    fun printVertically(s: String): List<String> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func printVertically(_ s: String) -> [String] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn print_vertically(s: String) -> Vec<String> {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String[]}\ndef print_vertically(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String[]\n     */\n    function printVertically($s) {\n        \n    }\n}",
+    "scala": "object Solution {\n    def printVertically(s: String): List[String] = {\n        \n    }\n}"
+  },
+  "publicTests": [
+    {
+      "input": "\"BABBAABBB\"",
+      "expectedOutput": "[\"B\",\"A\",\"B\",\"B\",\"A\",\"A\",\"B\",\"B\",\"B\"]"
+    },
+    {
+      "input": "\"CBBBBBC ADABCAACC AD EBEC\"",
+      "expectedOutput": "[\"CAAE\",\"BDDB\",\"BA E\",\"BB C\",\"BC\",\"BA\",\"CA\",\" C\",\" C\"]"
+    },
+    {
+      "input": "\"CCDA ABBCD BD ABGAFE CDECGECAF HF\"",
+      "expectedOutput": "[\"CABACH\",\"CBDBDF\",\"DB GE\",\"AC AC\",\" D FG\",\"   EE\",\"    C\",\"    A\",\"    F\"]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"AAABBBCDDE FEFFFF DBAEFFFG ACAFD CIBDHGEAA AA B BCCCCBC\"",
+      "expectedOutput": "[\"AFDACABB\",\"AEBCIA C\",\"AFAAB  C\",\"BFEFD  C\",\"BFFDH  C\",\"BFF G  B\",\"C F E  C\",\"D G A\",\"D   A\",\"E\"]"
+    },
+    {
+      "input": "\"A BAB G FBIDBFGH ABAB ACCCC DCBACDBDD AE DFCB EABD\"",
+      "expectedOutput": "[\"ABGFAADADE\",\" A BBCCEFA\",\" B IACB CB\",\"   DBCA BD\",\"   B CC\",\"   F  D\",\"   G  B\",\"   H  D\",\"      D\"]"
+    },
+    {
+      "input": "\"BGDFACFDCB BGABAAAF CCGDII AAAABABABB ACC C AEBCBCC ECAEFE GFFFCDCAG AEC AABCCD A CAAC\"",
+      "expectedOutput": "[\"BBCAACAEGAAAC\",\"GGCAC ECFEA A\",\"DAGAC BAFCB A\",\"FBDA  CEF C C\",\"AAIB  BFC C\",\"CAIA  CED D\",\"FA B  C C\",\"DF A    A\",\"C  B    G\",\"B  B\"]"
+    },
+    {
+      "input": "\"EFBBBACGDG G AA AABBBCC BBDAADA E EDBDAABEDB ADFGG DCEEHEC BBCDEH AAA BABABBB DAAACBAADC BDCDAB EAAACA\"",
+      "expectedOutput": "[\"EGAABEEADBABDBE\",\"F AAB DDCBAAADA\",\"B  BD BFECABACA\",\"B  BA DGED AADA\",\"B  BA AGHE BCAC\",\"A  CD A EH BBBA\",\"C  CA B C  BA\",\"G     E     A\",\"D     D     D\",\"G     B     C\"]"
+    },
+    {
+      "input": "\"FGAHHGF AAAABA AB ADAC CCECDD EEC DDBGAEDD GFGGCGGB AGGIII AA AACB CDCBA EE C AD\"",
+      "expectedOutput": "[\"FAAACEDGAAACECA\",\"GABDCEDFGAADE D\",\"AA AECBGG CC\",\"HA CC GGI BB\",\"HB  D ACI  A\",\"GA  D EGI\",\"F     DG\",\"      DB\"]"
+    },
+    {
+      "input": "\"AAAAABBAAB AAAAAABCCC BDDABDAD BBBCB EFEBCD AEGFCFGAG HBEGGDG ABBCEEFGGI BBAABABABA BABBACACAC C D FCBBEA ABBCD AAF\"",
+      "expectedOutput": "[\"AABBEAHABBCDFAA\",\"AADBFEBBBA  CBA\",\"AADBEGEBAB  BBF\",\"AAACBFGCAB  BC\",\"AABBCCGEBA  ED\",\"BAD DFDEAC  A\",\"BBA  GGFBA\",\"ACD  A GAC\",\"AC   G GBA\",\"BC     IAC\"]"
+    },
+    {
+      "input": "\"C CBCABAABAD ACE AFCBE BBECBBABD CHGBGFG II B CA CABAABBA BAEBBD ACABAFDBB C DFEBDCCHF EABIIHA\"",
+      "expectedOutput": "[\"CCAABCIBCCBACDE\",\" BCFBHI AAAC FA\",\" CECEG   BEA EB\",\" A BCB   ABB BI\",\" B EBG   ABA DI\",\" A  BF   BDF CH\",\" A  AG   B D CA\",\" B  B    A B H\",\" A  D      B F\",\" D\"]"
+    },
+    {
+      "input": "\"A DEE EBDDAFFDE FAEC EEA CEFI ABBBBBA BCBABBC B EDBBC A BCCEE CEBBHCFBC FBIDHADCC AABBBABBBB\"",
+      "expectedOutput": "[\"ADEFECABBEABCFA\",\" EBAEEBC D CEBA\",\" EDEAFBB B CBIB\",\"  DC IBA B EBDB\",\"  A   BB C EHHB\",\"  F   BB    CAA\",\"  F   AC    FDB\",\"  D         BCB\",\"  E         CCB\",\"              B\"]"
+    },
+    {
+      "input": "\"BB BADA C HF BDH ABABBB CBC CD CACEDCAACD CCEC AG CCFDEDBF GEGC ABBA CBC\"",
+      "expectedOutput": "[\"BBCHBACCCCACGAC\",\"BA FDBBDACGCEBB\",\" D  HAC CE FGBC\",\" A   B  EC DCA\",\"     B  D  E\",\"     B  C  D\",\"        A  B\",\"        A  F\",\"        C\",\"        D\"]"
+    },
+    {
+      "input": "\"AEADFFEEF FDFG A BEFHI ABBBB BBBCBB DBABBD EBCEDAEDBD EE A BHEBFFG IC AB ACCBBAA C\"",
+      "expectedOutput": "[\"AFABABDEEABIAAC\",\"ED EBBBBE HCBC\",\"AF FBBAC  E  C\",\"DG HBCBE  B  B\",\"F  IBBBD  F  B\",\"F    BDA  F  A\",\"E      E  G  A\",\"E      D\",\"F      B\",\"       D\"]"
+    },
+    {
+      "input": "\"E BFE DDEI BABBBB CC CDADCB CBCBE EBDBBDDCDE ACDG BFDHHB G AB BBCCCAA ABCAA ACCDEE\"",
+      "expectedOutput": "[\"EBDBCCCEABGABAA\",\" FDACDBBCF BBBC\",\" EEB ACDDD  CCC\",\"  IB DBBGH  CAD\",\"   B CEB H  CAE\",\"   B B D B  A E\",\"       D    A\",\"       C\",\"       D\",\"       E\"]"
+    },
+    {
+      "input": "\"GEHH BC AAABAAAAA AAAACAAAA C AD B CDDFG EDABDFFDHE BFCHDE AAAA A B ACD CCFEEBAFE\"",
+      "expectedOutput": "[\"GBAACABCEBAABAC\",\"ECAA D DDFA  CC\",\"H AA   DACA  DF\",\"H BA   FBHA   E\",\"  AC   GDD    E\",\"  AA    FE    B\",\"  AA    F     A\",\"  AA    D     F\",\"  AA    H     E\",\"        E\"]"
+    },
+    {
+      "input": "\"BCEEFH BB A CDCC ECDBCB BDBAE AG EAGBAE IADIE AAABAAAAA BCCBCBCC BCCBC ADE EECCDFBFC DFCAEAGDC\"",
+      "expectedOutput": "[\"BBACEBAEIABBAED\",\"CB DCDGAAACCDEF\",\"E  CDB GDACCECC\",\"E  CBA BIBBB CA\",\"F   CE AEACC DE\",\"H   B  E AB  FA\",\"         AC  BG\",\"         AC  FD\",\"         A   CC\"]"
+    },
+    {
+      "input": "\"BABBBAAA BCCA ABBB DC CBBDBF ABCCDEFG AFBGBCGFFG FBCGFDFE BABAAB ACCBCCBCA B AD A CEDA CEEEFDACEF\"",
+      "expectedOutput": "[\"BBADCAAFBABAACC\",\"ACBCBBFBAC D EE\",\"BCB BCBCBC   DE\",\"BAB DCGGAB   AE\",\"B   BDBFAC    F\",\"A   FECDBC    D\",\"A    FGF B    A\",\"A    GFE C    C\",\"      F  A    E\",\"      G       F\"]"
+    },
+    {
+      "input": "\"CCABCABAB ADBBAD BCBBEDADB BA AAABCEG CCBFFD EAAG BBBBAAABB BAACACBAA DD ABBBCDEEE EBAAFCEAA AFCECDB GCGGGB HG\"",
+      "expectedOutput": "[\"CABBACEBBDAEAGH\",\"CDCAACABADBBFCG\",\"ABB ABABA BACG\",\"BBB BFGBC BAEG\",\"CAE CF AA CFCG\",\"ADD ED AC DCDB\",\"B A G  AB EEB\",\"A D    BA EA\",\"B B    BA EA\"]"
+    },
+    {
+      "input": "\"DCCCCDA CDADBAEED FCCBBDFAAF ACDD BB HIF ABBBABBA ACBAABC DBCAADB BCE B AADFGGCFFA DGFEFBDEF ACGBHGBFI B\"",
+      "expectedOutput": "[\"DCFABHAADBBADAB\",\"CDCCBIBCBC AGC\",\"CACD FBBCE DFG\",\"CDBD  BAA  FEB\",\"CBB   AAA  GFH\",\"DAD   BBD  GBG\",\"AEF   BCB  CDB\",\" EA   A    FEF\",\" DA        FFI\",\"  F        A\"]"
+    },
+    {
+      "input": "\"CAA EEFDFBD DEEFG HACE GCDI ABBBBB CBAB DBBCCAAA ABCE AFDBE EGAGCBEE GCDFE HABDCIGFED ABAAA ABC\"",
+      "expectedOutput": "[\"CEDHGACDAAEGHAA\",\"AEEACBBBBFGCABB\",\"AFECDBABCDADBAC\",\" DFEIBBCEBGFDA\",\" FG  B C ECECA\",\" B   B A  B I\",\" D     A  E G\",\"       A  E F\",\"            E\",\"            D\"]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use the maximum length of words to determine the length of the returned answer. However, don't forget to remove trailing spaces."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/print-words-vertically/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:26.941Z",
+    "sourceUpdatedAt": null
+  }
+}

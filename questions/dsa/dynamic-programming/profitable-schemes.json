@@ -1,0 +1,160 @@
+{
+  "id": "879",
+  "slug": "profitable-schemes",
+  "title": "Profitable Schemes",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Knapsack Problem",
+    "0-1 Knapsack"
+  ],
+  "statement": "There is a group of `n` members, and a list of various crimes they could commit. The `i^(th)` crime generates a `profit[i]` and requires `group[i]` members to participate in it. If a member participates in one crime, that member can't participate in another crime.\n\nLet's call a **profitable scheme** any subset of these crimes that generates at least `minProfit` profit, and the total number of members participating in that subset of crimes is at most `n`.\n\nReturn the number of schemes that can be chosen. Since the answer may be very large, **return it modulo** `10^(9) + 7`.\n\n**Example 1:**\n\n```\nInput: n = 5, minProfit = 3, group = [2,2], profit = [2,3]\nOutput: 2\nExplanation: To make a profit of at least 3, the group could either commit crimes 0 and 1, or just crime 1.\nIn total, there are 2 schemes.\n```\n\n**Example 2:**\n\n```\nInput: n = 10, minProfit = 5, group = [2,3,5], profit = [6,7,8]\nOutput: 7\nExplanation: To make a profit of at least 5, the group could commit any crimes, as long as they commit one.\nThere are 7 possible schemes: (0), (1), (2), (0,1), (0,2), (1,2), and (0,1,2).\n```\n\n**Constraints:**\n\n*   `1 <= n <= 100`\n*   `0 <= minProfit <= 100`\n*   `1 <= group.length <= 100`\n*   `1 <= group[i] <= 100`\n*   `profit.length == group.length`\n*   `0 <= profit[i] <= 100`",
+  "constraints": [
+    "1 <= n <= 100",
+    "0 <= minProfit <= 100",
+    "1 <= group.length <= 100",
+    "1 <= group[i] <= 100",
+    "profit.length == group.length",
+    "0 <= profit[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "n = 5, minProfit = 3, group = [2,2], profit = [2,3]",
+      "output": "2",
+      "explanation": "To make a profit of at least 3, the group could either commit crimes 0 and 1, or just crime 1.\nIn total, there are 2 schemes."
+    },
+    {
+      "input": "n = 10, minProfit = 5, group = [2,3,5], profit = [6,7,8]",
+      "output": "7",
+      "explanation": "To make a profit of at least 5, the group could commit any crimes, as long as they commit one.\nThere are 7 possible schemes: (0), (1), (2), (0,1), (0,2), (1,2), and (0,1,2)."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int profitableSchemes(int n, int minProfit, vector<int>& group, vector<int>& profit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int profitableSchemes(int n, int minProfit, int[] group, int[] profit) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def profitableSchemes(self, n: int, minProfit: int, group: list[int], profit: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def profitableSchemes(self, n, minProfit, group, profit):\n        \"\"\"\n        :type n: int\n        :type minProfit: int\n        :type group: List[int]\n        :type profit: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @param {number} minProfit\n * @param {number[]} group\n * @param {number[]} profit\n * @return {number}\n */\nvar profitableSchemes = function(n, minProfit, group, profit) {\n    \n};",
+    "typescript": "function profitableSchemes(n: number, minProfit: number, group: number[], profit: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int ProfitableSchemes(int n, int minProfit, int[] group, int[] profit) {\n        \n    }\n}",
+    "c": "int profitableSchemes(int n, int minProfit, int* group, int groupSize, int* profit, int profitSize) {\n    \n}",
+    "golang": "func profitableSchemes(n int, minProfit int, group []int, profit []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun profitableSchemes(n: Int, minProfit: Int, group: IntArray, profit: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func profitableSchemes(_ n: Int, _ minProfit: Int, _ group: [Int], _ profit: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn profitable_schemes(n: i32, min_profit: i32, group: Vec<i32>, profit: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} min_profit\n# @param {Integer[]} group\n# @param {Integer[]} profit\n# @return {Integer}\ndef profitable_schemes(n, min_profit, group, profit)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $minProfit\n     * @param Integer[] $group\n     * @param Integer[] $profit\n     * @return Integer\n     */\n    function profitableSchemes($n, $minProfit, $group, $profit) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int profitableSchemes(int n, int minProfit, List<int> group, List<int> profit) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def profitableSchemes(n: Int, minProfit: Int, group: Array[Int], profit: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec profitable_schemes(n :: integer, min_profit :: integer, group :: [integer], profit :: [integer]) :: integer\n  def profitable_schemes(n, min_profit, group, profit) do\n    \n  end\nend",
+    "erlang": "-spec profitable_schemes(N :: integer(), MinProfit :: integer(), Group :: [integer()], Profit :: [integer()]) -> integer().\nprofitable_schemes(N, MinProfit, Group, Profit) ->\n  .",
+    "racket": "(define/contract (profitable-schemes n minProfit group profit)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "5\n3\n[2,2]\n[2,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "10\n5\n[2,3,5]\n[6,7,8]",
+      "expectedOutput": "7"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "5\n3\n[2,2]\n[2,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "10\n5\n[2,3,5]\n[6,7,8]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "1\n0\n[1]\n[0]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "1\n1\n[2]\n[100]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "3\n0\n[1,1,1]\n[0,0,0]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "2\n1\n[1,1]\n[1,1]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "2\n3\n[2,2]\n[3,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "13\n7\n[5,3,1,7,1,2,2,6,5,2,4]\n[4,3,5,7,6,7,4,5,1,2,0]",
+      "expectedOutput": "396"
+    },
+    {
+      "input": "19\n31\n[5,2,6,5,3,2,6,1,6,3,5,6,5,3,4,5,6]\n[60,31,41,67,8,91,20,2,34,46,3,40,62,33,70,17,0]",
+      "expectedOutput": "4635"
+    },
+    {
+      "input": "11\n0\n[5,6,1,3,3,5,4,5,7,4,6,1,2]\n[4,7,5,2,0,2,7,4,4,3,1,5,0]",
+      "expectedOutput": "273"
+    },
+    {
+      "input": "17\n19\n[5,7,2,6,3,5,5,5,1,1,2,2,7,7,3,5,3,6,7]\n[61,3,96,78,7,34,13,51,61,18,64,95,93,89,55,16,46,76,0]",
+      "expectedOutput": "5682"
+    },
+    {
+      "input": "15\n11\n[5,4,3,7,3,1,3,1,2,4,7,3,6,5,5]\n[4,4,0,0,0,6,5,0,5,4,2,0,6,4,0]",
+      "expectedOutput": "744"
+    },
+    {
+      "input": "12\n23\n[5,5,5,3,3,1,4,1,2,2,3,5]\n[62,67,28,45,7,80,90,0,77,21,81,0]",
+      "expectedOutput": "533"
+    },
+    {
+      "input": "18\n17\n[5,1,4,1,1,1,3,6,3,1,5,4,2,3,1,4,4,2]\n[4,0,1,0,5,6,6,5,7,1,0,1,1,1,2,0,5,0]",
+      "expectedOutput": "16541"
+    },
+    {
+      "input": "29\n23\n[5,1,6,4,1,7,4,6,4,6,1,6,7,5,6,1,3,4,5,4,7,5,5,5,5,2,4,5,5,4,5]\n[63,20,45,48,74,73,97,66,0,83,51,45,87,67,5,60,51,45,97,41,55,18,24,66,80,60,15,43,44,9,0]",
+      "expectedOutput": "2482672"
+    },
+    {
+      "input": "37\n37\n[5,2,7,7,1,7,5,6,5,4,4,7,5,1,4,6,2,5,2,2,2,3,5]\n[5,2,5,7,5,5,1,5,0,4,7,5,4,0,6,1,2,5,4,0,6,7,0]",
+      "expectedOutput": "246990"
+    },
+    {
+      "input": "31\n19\n[5,3,3,7,3,4,4,4,5,4,3,3,4,1,1,5,4,5,6,7,4,4,7,5,3,3,7,3,7,1,6,7,4,5,3,6,4,2,7]\n[64,47,3,0,6,20,0,48,13,63,87,3,54,100,25,12,66,67,15,83,22,6,63,66,44,79,54,17,79,74,38,2,43,19,72,76,29,98,0]",
+      "expectedOutput": "42696208"
+    },
+    {
+      "input": "23\n31\n[5,6,3,4,1,3,4,2,6,4,5,3,2,2,5,1,7,7,5,1,5,4,5,6,2,3,4]\n[5,7,7,4,5,1,7,1,2,4,1,7,1,1,7,4,0,7,7,0,2,0,2,6,2,6,0]",
+      "expectedOutput": "39886"
+    },
+    {
+      "input": "100\n100\n[100,7,4,1,1,3,5,2,7,2,1,4,7,5,3,5,6,1,2,6,7,2,6,5,5,6,6,7,5,3,2,2,4,4,4,5,3,2,1,3,5,2,2,7,5,4,3,4,2,3,1,4,7,7,3,4,2,4,5,5,4,6,3,4,2,7,1,1,6,2,4,2,5,1,7,4,2,2,3,4,2,3,2,2,6,7,4,7,1,7,4,1,3,1,2,5,2,7,5,5]\n[100,1,21,3,73,13,6,13,37,23,57,21,90,64,64,17,95,9,51,66,57,83,40,67,73,15,32,65,46,2,84,37,40,17,85,59,27,100,94,55,33,13,81,52,22,43,75,18,52,74,22,43,95,78,8,90,11,5,89,35,11,37,31,72,52,63,87,32,49,88,11,72,1,80,16,12,63,7,39,35,98,37,30,80,12,89,21,73,61,61,10,9,38,81,81,58,33,48,43,0]",
+      "expectedOutput": "412454990"
+    },
+    {
+      "input": "97\n93\n[100,4,5,2,1,7,2,6,7,4,6,5,6,3,6,4,5,2,1,1,1,5,6,1,3,3,3,4,4,1,6,1,2,2,6,2,4,1,4,2,7,5,5,3,2,3,6,7,1,4,2,6,2,5,1,7,7,7,3,5,3,2,3,4,2,7,4,4,3,2,4,3,6,1,4,7,7,3,4,4,6,6,7,7,1,5,1,3,5,7,7,3,6,6,5,3,7]\n[100,4,2,2,5,4,5,5,3,4,2,2,6,2,0,7,6,1,2,7,5,1,3,0,3,6,7,2,2,5,2,2,1,6,1,1,3,7,2,3,5,3,1,6,6,3,1,5,2,6,3,4,2,3,6,2,7,3,5,1,7,5,2,5,3,4,1,5,1,7,1,6,1,6,6,4,3,1,3,2,4,6,0,4,3,4,6,1,1,5,4,2,6,4,1,2,0]",
+      "expectedOutput": "931521576"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/profitable-schemes/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.021Z",
+    "sourceUpdatedAt": null
+  }
+}

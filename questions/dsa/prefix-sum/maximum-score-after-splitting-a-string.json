@@ -1,0 +1,154 @@
+{
+  "id": "1422",
+  "slug": "maximum-score-after-splitting-a-string",
+  "title": "Maximum Score After Splitting a String",
+  "category": "dsa",
+  "subcategory": "prefix-sum",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Prefix Sum"
+  ],
+  "statement": "Given a string `s` of zeros and ones, _return the maximum score after splitting the string into two **non-empty** substrings_ (i.e. **left** substring and **right** substring).\n\nThe score after splitting a string is the number of **zeros** in the **left** substring plus the number of **ones** in the **right** substring.\n\n**Example 1:**\n\n```\nInput: s = \"011101\"\nOutput: 5 \nExplanation: \nAll possible ways of splitting s into two non-empty substrings are:\nleft = \"0\" and right = \"11101\", score = 1 + 4 = 5 \nleft = \"01\" and right = \"1101\", score = 1 + 3 = 4 \nleft = \"011\" and right = \"101\", score = 1 + 2 = 3 \nleft = \"0111\" and right = \"01\", score = 1 + 1 = 2 \nleft = \"01110\" and right = \"1\", score = 2 + 1 = 3\n```\n\n**Example 2:**\n\n```\nInput: s = \"00111\"\nOutput: 5\nExplanation: When left = \"00\" and right = \"111\", we get the maximum score = 2 + 3 = 5\n```\n\n**Example 3:**\n\n```\nInput: s = \"1111\"\nOutput: 3\n```\n\n**Constraints:**\n\n*   `2 <= s.length <= 500`\n*   The string `s` consists of characters `'0'` and `'1'` only.",
+  "constraints": [
+    "2 <= s.length <= 500",
+    "The string s consists of characters '0' and '1' only."
+  ],
+  "examples": [
+    {
+      "input": "s = \"011101\"",
+      "output": "5",
+      "explanation": "All possible ways of splitting s into two non-empty substrings are:\nleft = \"0\" and right = \"11101\", score = 1 + 4 = 5 \nleft = \"01\" and right = \"1101\", score = 1 + 3 = 4 \nleft = \"011\" and right = \"101\", score = 1 + 2 = 3 \nleft = \"0111\" and right = \"01\", score = 1 + 1 = 2 \nleft = \"01110\" and right = \"1\", score = 2 + 1 = 3"
+    },
+    {
+      "input": "s = \"00111\"",
+      "output": "5",
+      "explanation": "When left = \"00\" and right = \"111\", we get the maximum score = 2 + 3 = 5"
+    },
+    {
+      "input": "s = \"1111\"",
+      "output": "3",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxScore(self, s: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxScore(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxScore = function(s) {\n    \n};",
+    "typescript": "function maxScore(s: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxScore(string s) {\n        \n    }\n}",
+    "c": "int maxScore(char* s) {\n    \n}",
+    "golang": "func maxScore(s string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxScore(s: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ s: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(s: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_score(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxScore($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxScore(s: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_score(s :: String.t) :: integer\n  def max_score(s) do\n    \n  end\nend",
+    "erlang": "-spec max_score(S :: unicode:unicode_binary()) -> integer().\nmax_score(S) ->\n  .",
+    "racket": "(define/contract (max-score s)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"00\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"11\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"000\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"0001\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"11100\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"0001000\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"010101111\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"101101110110\"",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "\"1111001100100100\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"000000000001111111111111\"",
+      "expectedOutput": "24"
+    },
+    {
+      "input": "\"11101101000001101101100000100001000\"",
+      "expectedOutput": "20"
+    },
+    {
+      "input": "\"00101111000111000101101010001010101000011111101011\"",
+      "expectedOutput": "31"
+    },
+    {
+      "input": "\"111001111111111110010011010101001000011011110100111010100010110100001100001\"",
+      "expectedOutput": "40"
+    },
+    {
+      "input": "\"10111100101011101111110011001111110001010101011010111000001001111011010000110011000011110011001101010000010110\"",
+      "expectedOutput": "59"
+    },
+    {
+      "input": "\"1110010010100000010000011011001010001111101001011000010000110111011000011100000000010110011001011010000011101001110100101010010001001011110011110111111110111011\"",
+      "expectedOutput": "99"
+    },
+    {
+      "input": "\"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111\"",
+      "expectedOutput": "250"
+    },
+    {
+      "input": "\"0110001111010110010101010111101000001010110000001100000000110010111101110100001111100001011011001010010001011101101100000110111001110100011111000100011001101000100010000001111111010100011001111100101100110110111101000111010101001011011011010101110100010011010100011001001100100100000000110110001001000011110000111010000000110101011100010100001010111100110000000100101000010011011001110011010110100001\"",
+      "expectedOutput": "216"
+    },
+    {
+      "input": "\"10011100000111100001010000001100000010010110000000001110111010000100000100111100011100100100111110011100100011110100001110001101100000101001000011010010100111100111100111101100100100110000000011011001111111101100111000110111000101101000011000101001010110000000001011110010010110100010100001001100110110110011001000000111110011010000001110010010011110010110011110010101010010010111100100011011111101000011100110100110010111011011100011101111001110100110000111110100000100010001100101011110011000000111\"",
+      "expectedOutput": "275"
+    },
+    {
+      "input": "\"10111010111101010110000011110101110110010110001100101101000110011011000111110001000110111000101001101001100110011100001111010101010001110011111110101010000100011011111101010011111101001110001101001010101010110110101000011111001101100100110001100100110111101001010010101001100001001010101100101100100001010001110011000010001011101000110000001010000110111101110110100010011101101101110110010000000000011110101010010000001011101001101000100110011110000000011011010111000011101011100000110101011010100100\"",
+      "expectedOutput": "255"
+    },
+    {
+      "input": "\"11101011010010010011001010011101101111110000101000010110111111010110011010110011110011111011110001011011011000110111111011110110100110101100011010010101100111101000011111001100010100110110001011011001111101000010111100100001011111101111000110010101111111010110011101001101011010011000000111010000000111010001000111110101100110001010110111101001111100000001011111110010110011101011000111010110110011010100001101111100101000111010010110100000111011111111100111101001101000010001001100111110011010011001\"",
+      "expectedOutput": "277"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Precompute a prefix sum of ones ('1').",
+    "Iterate from left to right counting the number of zeros ('0'), then use the precomputed prefix sum for counting ones ('1'). Update the answer."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-score-after-splitting-a-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.534Z",
+    "sourceUpdatedAt": null
+  }
+}

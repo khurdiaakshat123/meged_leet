@@ -1,0 +1,159 @@
+{
+  "id": "3042",
+  "slug": "count-prefix-and-suffix-pairs-i",
+  "title": "Count Prefix and Suffix Pairs I",
+  "category": "dsa",
+  "subcategory": "tries",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String",
+    "Trie",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ],
+  "statement": "You are given a **0-indexed** string array `words`.\n\nLet's define a **boolean** function `isPrefixAndSuffix` that takes two strings, `str1` and `str2`:\n\n*   `isPrefixAndSuffix(str1, str2)` returns `true` if `str1` is **both** a prefix and a suffix of `str2`, and `false` otherwise.\n\nFor example, `isPrefixAndSuffix(\"aba\", \"ababa\")` is `true` because `\"aba\"` is a prefix of `\"ababa\"` and also a suffix, but `isPrefixAndSuffix(\"abc\", \"abcd\")` is `false`.\n\nReturn _an integer denoting the **number** of index pairs_ `(i, j)` _such that_ `i < j`_, and_ `isPrefixAndSuffix(words[i], words[j])` _is_ `true`_._\n\n**Example 1:**\n\n```\nInput: words = [\"a\",\"aba\",\"ababa\",\"aa\"]\nOutput: 4\nExplanation: In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"a\", \"aba\") is true.\ni = 0 and j = 2 because isPrefixAndSuffix(\"a\", \"ababa\") is true.\ni = 0 and j = 3 because isPrefixAndSuffix(\"a\", \"aa\") is true.\ni = 1 and j = 2 because isPrefixAndSuffix(\"aba\", \"ababa\") is true.\nTherefore, the answer is 4.\n```\n\n**Example 2:**\n\n```\nInput: words = [\"pa\",\"papa\",\"ma\",\"mama\"]\nOutput: 2\nExplanation: In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"pa\", \"papa\") is true.\ni = 2 and j = 3 because isPrefixAndSuffix(\"ma\", \"mama\") is true.\nTherefore, the answer is 2.\n```\n\n**Example 3:**\n\n```\nInput: words = [\"abab\",\"ab\"]\nOutput: 0\nExplanation: In this example, the only valid index pair is i = 0 and j = 1, and isPrefixAndSuffix(\"abab\", \"ab\") is false.\nTherefore, the answer is 0.\n```\n\n**Constraints:**\n\n*   `1 <= words.length <= 50`\n*   `1 <= words[i].length <= 10`\n*   `words[i]` consists only of lowercase English letters.",
+  "constraints": [
+    "1 <= words.length <= 50",
+    "1 <= words[i].length <= 10",
+    "words[i] consists only of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "words = [\"a\",\"aba\",\"ababa\",\"aa\"]",
+      "output": "4",
+      "explanation": "In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"a\", \"aba\") is true.\ni = 0 and j = 2 because isPrefixAndSuffix(\"a\", \"ababa\") is true.\ni = 0 and j = 3 because isPrefixAndSuffix(\"a\", \"aa\") is true.\ni = 1 and j = 2 because isPrefixAndSuffix(\"aba\", \"ababa\") is true.\nTherefore, the answer is 4."
+    },
+    {
+      "input": "words = [\"pa\",\"papa\",\"ma\",\"mama\"]",
+      "output": "2",
+      "explanation": "In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"pa\", \"papa\") is true.\ni = 2 and j = 3 because isPrefixAndSuffix(\"ma\", \"mama\") is true.\nTherefore, the answer is 2."
+    },
+    {
+      "input": "words = [\"abab\",\"ab\"]",
+      "output": "0",
+      "explanation": "In this example, the only valid index pair is i = 0 and j = 1, and isPrefixAndSuffix(\"abab\", \"ab\") is false.\nTherefore, the answer is 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countPrefixSuffixPairs(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPrefixSuffixPairs(String[] words) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countPrefixSuffixPairs(self, words: List[str]) -> int:\n        ",
+    "python": "class Solution(object):\n    def countPrefixSuffixPairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar countPrefixSuffixPairs = function(words) {\n    \n};",
+    "typescript": "function countPrefixSuffixPairs(words: string[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int CountPrefixSuffixPairs(string[] words) {\n        \n    }\n}",
+    "c": "int countPrefixSuffixPairs(char** words, int wordsSize) {\n    \n}",
+    "golang": "func countPrefixSuffixPairs(words []string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countPrefixSuffixPairs(words: Array<String>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPrefixSuffixPairs(_ words: [String]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_prefix_suffix_pairs(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef count_prefix_suffix_pairs(words)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function countPrefixSuffixPairs($words) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPrefixSuffixPairs(List<String> words) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def countPrefixSuffixPairs(words: Array[String]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec count_prefix_suffix_pairs(words :: [String.t]) :: integer\n  def count_prefix_suffix_pairs(words) do\n    \n  end\nend",
+    "erlang": "-spec count_prefix_suffix_pairs(Words :: [unicode:unicode_binary()]) -> integer().\ncount_prefix_suffix_pairs(Words) ->\n  .",
+    "racket": "(define/contract (count-prefix-suffix-pairs words)\n  (-> (listof string?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"ad\",\"adead\"]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"dc\",\"dcdc\",\"bdce\"]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"aa\",\"aabaa\",\"acbddaba\",\"cadcdddcdb\"]",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"bb\",\"bbcbb\",\"ed\",\"ccbeedcbb\",\"ceabdabedb\",\"bb\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"be\",\"beabe\",\"adaaaebce\",\"ee\",\"e\",\"be\",\"cbbdcbd\",\"eba\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"c\",\"cdc\",\"be\",\"ecdceaadbd\",\"aaaddc\",\"c\",\"a\",\"cabecdac\",\"ccbc\",\"dacdaaecd\"]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[\"aa\",\"aaddaaa\",\"c\",\"daebad\",\"ecbdbbd\",\"aa\",\"eedabaadc\",\"ab\",\"aaceaaa\",\"badbbcec\",\"aa\",\"deadee\",\"bdbecbdebb\"]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[\"ec\",\"eccecec\",\"aacc\",\"e\",\"be\",\"ec\",\"ddb\",\"ebdbecbd\",\"ecdec\",\"beddb\",\"ec\",\"d\",\"babeccb\",\"dddeb\",\"ddab\",\"ecabdec\"]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"ded\",\"dedaded\",\"dbd\",\"bebaceaca\",\"bbddcdc\",\"ded\",\"bab\",\"bb\",\"dedaded\",\"bbc\",\"ded\",\"eddabcedc\",\"ebdce\",\"aaebc\",\"acc\",\"dedaded\",\"acbbdecbac\",\"b\",\"ddba\"]",
+      "expectedOutput": "12"
+    },
+    {
+      "input": "[\"db\",\"dbdddb\",\"baa\",\"cbbcdebca\",\"e\",\"db\",\"cacdca\",\"ddedaacb\",\"dbaddb\",\"d\",\"db\",\"cacee\",\"cdedeebdac\",\"ccbeecceda\",\"aeecbc\",\"dbdb\",\"dcbeeee\",\"acedeab\",\"b\",\"d\",\"db\",\"bbbaceb\"]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[\"ce\",\"ceadace\",\"ecbcabdb\",\"cbccabdab\",\"eccbeebcda\",\"ce\",\"accaebebe\",\"b\",\"cece\",\"adeaee\",\"ce\",\"caeda\",\"dceaaa\",\"eecaceb\",\"ceea\",\"cecabce\",\"bcadebca\",\"c\",\"d\",\"bbaabe\",\"ce\",\"ababec\",\"ceebcce\",\"ddb\",\"a\",\"ce\"]",
+      "expectedOutput": "20"
+    },
+    {
+      "input": "[\"b\",\"babb\",\"d\",\"ddcccdcbc\",\"eee\",\"b\",\"caccc\",\"cebd\",\"babdb\",\"bebdebc\",\"b\",\"baabbc\",\"badbdb\",\"ddceaacc\",\"de\",\"bb\",\"deca\",\"ec\",\"aaae\",\"edebce\",\"b\",\"bbdae\",\"bebab\",\"eecbbedc\",\"ecaabbccd\",\"b\",\"bedeceda\",\"b\",\"de\",\"beb\"]",
+      "expectedOutput": "35"
+    },
+    {
+      "input": "[\"cde\",\"cdeecacde\",\"eccadbe\",\"eedccdbc\",\"cccdebead\",\"cde\",\"cbdbb\",\"adb\",\"cdeeecde\",\"cdcade\",\"cde\",\"ddbecae\",\"bceceecb\",\"eededbdcba\",\"cacbc\",\"cdebecde\",\"eedccbbacc\",\"bebecbae\",\"eedcbc\",\"da\",\"cde\",\"edcbdbbbe\",\"cdecde\",\"eaacc\",\"be\",\"cde\",\"ca\",\"edacdcebac\",\"badaceecb\",\"cdecde\",\"cde\",\"bcaaaceeda\",\"cc\",\"babbabd\"]",
+      "expectedOutput": "31"
+    },
+    {
+      "input": "[\"ab\",\"abcadab\",\"aecdacc\",\"ebace\",\"ca\",\"ab\",\"abdc\",\"aeeece\",\"abcebab\",\"b\",\"ab\",\"cdebdbc\",\"dcbdcbbec\",\"aaa\",\"cc\",\"abab\",\"caecad\",\"ecbec\",\"bde\",\"dcccbcbda\",\"ab\",\"a\",\"abbbab\",\"d\",\"dedecbbc\",\"ab\",\"eaadabeb\",\"edbbadc\",\"edeceeaad\",\"abcdab\",\"ab\",\"bcaaeb\",\"edda\",\"aecbcdce\",\"edacebc\",\"ab\",\"abab\",\"dbcdadeb\",\"aeb\"]",
+      "expectedOutput": "45"
+    },
+    {
+      "input": "[\"ec\",\"ecddbec\",\"be\",\"dbeacaab\",\"caddebae\",\"ec\",\"ddeebbbda\",\"aeaeec\",\"ecdbec\",\"adeabbc\",\"ec\",\"ddcae\",\"abbee\",\"addedd\",\"aaebaabd\",\"ecaec\",\"acaedbec\",\"dccdeebae\",\"ebdddecaa\",\"e\",\"ec\",\"ceaa\",\"ecec\",\"accec\",\"aa\",\"ec\",\"ceeebab\",\"cbcdaa\",\"dccdadbd\",\"ecebcec\",\"ec\",\"abdcacce\",\"edcbdbedbd\",\"dce\",\"db\",\"ec\",\"ecec\",\"eeebee\",\"cab\",\"ce\",\"ec\",\"eedeac\",\"ddbeb\",\"eccec\"]",
+      "expectedOutput": "60"
+    },
+    {
+      "input": "[\"eba\",\"ebaabeba\",\"dcaee\",\"baa\",\"bdae\",\"eba\",\"ad\",\"dedb\",\"ebaeba\",\"a\",\"eba\",\"ceabbdd\",\"acdcacdde\",\"bb\",\"bebbce\",\"ebaaeeba\",\"b\",\"bccdbabc\",\"cbbabbabaa\",\"cd\",\"eba\",\"bceebdc\",\"ebaeba\",\"addaada\",\"ddbecbc\",\"eba\",\"e\",\"ccdedbedbb\",\"aadcdcacb\",\"ebaabeba\",\"eba\",\"bb\",\"e\",\"ca\",\"de\",\"eba\",\"ebadeba\",\"abaebbad\",\"b\",\"dddeddb\",\"eba\",\"eece\",\"eacce\",\"ebaaceba\",\"ebd\",\"eba\",\"eceedeadd\",\"dcbc\",\"babcdcbb\"]",
+      "expectedOutput": "79"
+    },
+    {
+      "input": "[\"aed\",\"aedbbaed\",\"ededc\",\"caaebed\",\"dcdade\",\"aed\",\"aedbecbcb\",\"aaed\",\"aedaed\",\"eeaaadc\",\"aed\",\"ada\",\"ce\",\"bcbcebdabe\",\"abbd\",\"aedaed\",\"bbdcbd\",\"caacbeace\",\"eecddcbd\",\"cedeaee\",\"aed\",\"bdc\",\"aedaed\",\"daaaddb\",\"adbbedaddb\",\"aed\",\"c\",\"ddacaadba\",\"e\",\"aeddbaed\",\"aed\",\"ced\",\"eabac\",\"edecedecab\",\"acdcd\",\"aed\",\"aedcaed\",\"dd\",\"edbaec\",\"bbecceab\",\"aed\",\"bccbaceda\",\"c\",\"aedaed\",\"caacebabd\",\"aed\",\"a\",\"eedd\",\"acbc\",\"abbeacddb\"]",
+      "expectedOutput": "73"
+    },
+    {
+      "input": "[\"e\",\"ecbe\",\"ebcecbc\",\"ebc\",\"eeaaddead\",\"e\",\"eececcdac\",\"bceadbdcb\",\"eee\",\"ec\",\"e\",\"dbbdbbba\",\"bedecaceeb\",\"eeee\",\"edaacac\",\"ebde\",\"cbcbc\",\"cccadaa\",\"cedbbbdba\",\"b\",\"e\",\"bbebe\",\"edbde\",\"acccbb\",\"eabebdbbbc\",\"e\",\"da\",\"ccbeedcd\",\"c\",\"ece\",\"e\",\"e\",\"cabbcded\",\"bdaeacbb\",\"d\",\"e\",\"ece\",\"cedd\",\"ceacbcae\",\"cbbd\",\"e\",\"dccecdea\",\"ececbbabc\",\"ee\",\"bb\",\"e\",\"b\",\"eedaa\",\"adde\",\"cbcdcaadbc\"]",
+      "expectedOutput": "86"
+    },
+    {
+      "input": "[\"cd\",\"cdcd\",\"adeeb\",\"aacbabddb\",\"bd\",\"cd\",\"cdea\",\"bcdbbb\",\"cdcd\",\"cecaec\",\"cd\",\"baeace\",\"bddbbbc\",\"bddbdae\",\"eccceccbae\",\"cdcdcd\",\"bdcdddaeba\",\"ca\",\"bcdcbedcb\",\"ecdddaeb\",\"cd\",\"badbecac\",\"cdceecd\",\"cdadd\",\"b\"]",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "[\"cab\",\"cabbcab\",\"b\",\"dddbbbdb\",\"debcadacd\",\"cab\",\"abaabd\",\"daaeceaabd\",\"cabedbcab\",\"dadacebebc\",\"cab\",\"bda\",\"bdbaec\",\"ecbdedb\",\"aa\",\"cabaeacab\",\"eddeabed\",\"bccceecca\",\"eccaabaebe\",\"dcadccaeab\",\"cab\",\"abbbe\",\"cabcab\",\"daacdd\",\"dbaaab\",\"cab\",\"ccedddba\",\"ecd\",\"cccc\",\"cabccab\",\"cab\",\"eab\",\"bdaecaeaea\",\"bebe\",\"dae\",\"cab\",\"cabdbacab\",\"cdee\",\"bcd\",\"accded\",\"cab\",\"dcecb\",\"aad\",\"cabcab\",\"c\",\"cab\",\"ccbbb\",\"ab\",\"de\",\"c\"]",
+      "expectedOutput": "68"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Iterate through all index pairs <code>(i, j)</code>, such that <code>i < j</code>, and check <code>isPrefixAndSuffix(words[i], words[j])</code>.",
+    "The answer is the total number of pairs where <code>isPrefixAndSuffix(words[i], words[j]) == true</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.504Z",
+    "sourceUpdatedAt": null
+  }
+}

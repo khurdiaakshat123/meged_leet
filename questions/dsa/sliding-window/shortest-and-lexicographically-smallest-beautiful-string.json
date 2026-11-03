@@ -1,0 +1,154 @@
+{
+  "id": "2904",
+  "slug": "shortest-and-lexicographically-smallest-beautiful-string",
+  "title": "Shortest and Lexicographically Smallest Beautiful String",
+  "category": "dsa",
+  "subcategory": "sliding-window",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Sliding Window"
+  ],
+  "statement": "You are given a binary string `s` and a positive integer `k`.\n\nA substring of `s` is **beautiful** if the number of `1`'s in it is exactly `k`.\n\nLet `len` be the length of the **shortest** beautiful substring.\n\nReturn _the lexicographically **smallest** beautiful substring of string_ `s` _with length equal to_ `len`. If `s` doesn't contain a beautiful substring, return _an **empty** string_.\n\nA string `a` is lexicographically **larger** than a string `b` (of the same length) if in the first position where `a` and `b` differ, `a` has a character strictly larger than the corresponding character in `b`.\n\n*   For example, `\"abcd\"` is lexicographically larger than `\"abcc\"` because the first position they differ is at the fourth character, and `d` is greater than `c`.\n\n**Example 1:**\n\n```\nInput: s = \"100011001\", k = 3\nOutput: \"11001\"\nExplanation: There are 7 beautiful substrings in this example:\n1. The substring \"100011001\".\n2. The substring \"100011001\".\n3. The substring \"100011001\".\n4. The substring \"100011001\".\n5. The substring \"100011001\".\n6. The substring \"100011001\".\n7. The substring \"100011001\".\nThe length of the shortest beautiful substring is 5.\nThe lexicographically smallest beautiful substring with length 5 is the substring \"11001\".\n```\n\n**Example 2:**\n\n```\nInput: s = \"1011\", k = 2\nOutput: \"11\"\nExplanation: There are 3 beautiful substrings in this example:\n1. The substring \"1011\".\n2. The substring \"1011\".\n3. The substring \"1011\".\nThe length of the shortest beautiful substring is 2.\nThe lexicographically smallest beautiful substring with length 2 is the substring \"11\".\n```\n\n**Example 3:**\n\n```\nInput: s = \"000\", k = 1\nOutput: \"\"\nExplanation: There are no beautiful substrings in this example.\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `1 <= k <= s.length`",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "1 <= k <= s.length"
+  ],
+  "examples": [
+    {
+      "input": "s = \"100011001\", k = 3",
+      "output": "\"11001\"",
+      "explanation": "There are 7 beautiful substrings in this"
+    },
+    {
+      "input": "s = \"1011\", k = 2",
+      "output": "\"11\"",
+      "explanation": "There are 3 beautiful substrings in this"
+    },
+    {
+      "input": "s = \"000\", k = 1",
+      "output": "\"\"",
+      "explanation": "There are no beautiful substrings in this example."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string shortestBeautifulSubstring(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestBeautifulSubstring(String s, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def shortestBeautifulSubstring(self, s: str, k: int) -> str:\n        ",
+    "python": "class Solution(object):\n    def shortestBeautifulSubstring(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar shortestBeautifulSubstring = function(s, k) {\n    \n};",
+    "typescript": "function shortestBeautifulSubstring(s: string, k: number): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ShortestBeautifulSubstring(string s, int k) {\n        \n    }\n}",
+    "c": "char* shortestBeautifulSubstring(char* s, int k) {\n    \n}",
+    "golang": "func shortestBeautifulSubstring(s string, k int) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun shortestBeautifulSubstring(s: String, k: Int): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestBeautifulSubstring(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_beautiful_substring(s: String, k: i32) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef shortest_beautiful_substring(s, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function shortestBeautifulSubstring($s, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String shortestBeautifulSubstring(String s, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def shortestBeautifulSubstring(s: String, k: Int): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec shortest_beautiful_substring(s :: String.t, k :: integer) :: String.t\n  def shortest_beautiful_substring(s, k) do\n    \n  end\nend",
+    "erlang": "-spec shortest_beautiful_substring(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nshortest_beautiful_substring(S, K) ->\n  .",
+    "racket": "(define/contract (shortest-beautiful-substring s k)\n  (-> string? exact-integer? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"1\"\n1",
+      "expectedOutput": "\"1\""
+    },
+    {
+      "input": "\"1000\"\n4",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"010011\"\n3",
+      "expectedOutput": "\"10011\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"00000011\"\n2",
+      "expectedOutput": "\"11\""
+    },
+    {
+      "input": "\"1011011000\"\n10",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"1111110101100\"\n1",
+      "expectedOutput": "\"1\""
+    },
+    {
+      "input": "\"0110000010001001\"\n16",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"00000010000001001000\"\n10",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"0010000000100011100000011\"\n8",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"000000000000000011111111111111111\"\n15",
+      "expectedOutput": "\"111111111111111\""
+    },
+    {
+      "input": "\"001000101110100001110010110011101010111010\"\n1",
+      "expectedOutput": "\"1\""
+    },
+    {
+      "input": "\"11111100000000101100010111101100001101111111010011000000010\"\n59",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"01010110111111101010011001001111111101000101011110101011100111000010010100101010010001\"\n43",
+      "expectedOutput": "\"10101101111111010100110010011111111010001010111101010111001110000100101001\""
+    },
+    {
+      "input": "\"1000000011001000111111000000110010001110110111010100100010100010010000100010101011001110010011111000\"\n33",
+      "expectedOutput": "\"110010001110110111010100100010100010010000100010101011001110010011111\""
+    },
+    {
+      "input": "\"1111101011110111110011101110011000110111010110011101101011010110101001101000000000100110011001001010\"\n37",
+      "expectedOutput": "\"1111101011110111110011101110011000110111010110011101101\""
+    },
+    {
+      "input": "\"0000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111\"\n1",
+      "expectedOutput": "\"1\""
+    },
+    {
+      "input": "\"1001100010101001011011000000000010100111011101011111111100011110101100110000011111101101101100011010\"\n100",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"1110100101100101110111100001100011100010100111101010111001011101101111101110010101010000111101100001\"\n50",
+      "expectedOutput": "\"11001011101111000011000111000101001111010101110010111011011111011100101010100001111011\""
+    },
+    {
+      "input": "\"0000001001101101001011101011010100101110000001101100011100110110010101010001100100111101100110101111\"\n33",
+      "expectedOutput": "\"110000001101100011100110110010101010001100100111101100110101111\""
+    },
+    {
+      "input": "\"0010110100001000000000110001111100001100001100011010001001110010011110100110100000101001110100001100\"\n74",
+      "expectedOutput": "\"\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Notice that if we consider that index <code>i</code> is the leftmost index of a beautiful substring, it has only one candidate <code>j</code>, such that <code>s[i:j]</code> is beautiful and shortest too.",
+    "We can iterate over all possibilities of leftmost index <code>i</code> take <code>s[i:j]</code> and compare with the shortest and the lexicographically smallest beautiful string we could get before index <code>i</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.362Z",
+    "sourceUpdatedAt": null
+  }
+}

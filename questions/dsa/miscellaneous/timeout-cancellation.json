@@ -1,0 +1,146 @@
+{
+  "id": "2715",
+  "slug": "timeout-cancellation",
+  "title": "Timeout Cancellation",
+  "category": "dsa",
+  "subcategory": "miscellaneous",
+  "difficulty": "Easy",
+  "tags": [],
+  "statement": "Given a function `fn`, an array of arguments `args`, and a timeout `t` in milliseconds, return a cancel function `cancelFn`.\n\nAfter a delay of `cancelTimeMs`, the returned cancel function `cancelFn` will be invoked.\n\n```\nsetTimeout(cancelFn, cancelTimeMs)\n```\n\nInitially, the execution of the function `fn` should be delayed by `t` milliseconds.\n\nIf, before the delay of `t` milliseconds, the function `cancelFn` is invoked, it should cancel the delayed execution of `fn`. Otherwise, if `cancelFn` is not invoked within the specified delay `t`, `fn` should be executed with the provided `args` as arguments.\n\n**Example 1:**\n\n```\nInput: fn = (x) => x * 5, args = [2], t = 20\nOutput: [{\"time\": 20, \"returned\": 10}]\nExplanation: \nconst cancelTimeMs = 50;\nconst cancelFn = cancellable((x) => x * 5, [2], 20);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (50ms), which happened after the execution of fn(2) at 20ms.\n```\n\n**Example 2:**\n\n```\nInput: fn = (x) => x**2, args = [2], t = 100\nOutput: []\nExplanation: \nconst cancelTimeMs = 50;\nconst cancelFn = cancellable((x) => x**2, [2], 100);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (50ms), which happened before the execution of fn(2) at 100ms, resulting in fn(2) never being called.\n```\n\n**Example 3:**\n\n```\nInput: fn = (x1, x2) => x1 * x2, args = [2,4], t = 30\nOutput: [{\"time\": 30, \"returned\": 8}]\nExplanation: \nconst cancelTimeMs = 100;\nconst cancelFn = cancellable((x1, x2) => x1 * x2, [2,4], 30);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (100ms), which happened after the execution of fn(2,4) at 30ms.\n```\n\n**Constraints:**\n\n*   `fn` is a function\n*   `args` is a valid JSON array\n*   `1 <= args.length <= 10`\n*   `20 <= t <= 1000`\n*   `10 <= cancelTimeMs <= 1000`",
+  "constraints": [
+    "fn is a function",
+    "args is a valid JSON array",
+    "1 <= args.length <= 10",
+    "20 <= t <= 1000",
+    "10 <= cancelTimeMs <= 1000"
+  ],
+  "examples": [
+    {
+      "input": "fn = (x) => x * 5, args = [2], t = 20",
+      "output": "[{\"time\": 20, \"returned\": 10}]",
+      "explanation": "const cancelTimeMs = 50;\nconst cancelFn = cancellable((x) => x * 5, [2], 20);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (50ms), which happened after the execution of fn(2) at 20ms."
+    },
+    {
+      "input": "fn = (x) => x**2, args = [2], t = 100",
+      "output": "[]",
+      "explanation": "const cancelTimeMs = 50;\nconst cancelFn = cancellable((x) => x**2, [2], 100);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (50ms), which happened before the execution of fn(2) at 100ms, resulting in fn(2) never being called."
+    },
+    {
+      "input": "fn = (x1, x2) => x1 * x2, args = [2,4], t = 30",
+      "output": "[{\"time\": 30, \"returned\": 8}]",
+      "explanation": "const cancelTimeMs = 100;\nconst cancelFn = cancellable((x1, x2) => x1 * x2, [2,4], 30);\nsetTimeout(cancelFn, cancelTimeMs);\n\nThe cancellation was scheduled to occur after a delay of cancelTimeMs (100ms), which happened after the execution of fn(2,4) at 30ms."
+    }
+  ],
+  "starterCode": {
+    "javascript": "/**\n * @param {Function} fn\n * @param {Array} args\n * @param {number} t\n * @return {Function}\n */\nvar cancellable = function(fn, args, t) {\n    \n};\n\n/**\n *  const result = [];\n *\n *  const fn = (x) => x * 5;\n *  const args = [2], t = 20, cancelTimeMs = 50;\n *\n *  const start = performance.now();\n *\n *  const log = (...argsArr) => {\n *      const diff = Math.floor(performance.now() - start);\n *      result.push({\"time\": diff, \"returned\": fn(...argsArr)});\n *  }\n *       \n *  const cancel = cancellable(log, args, t);\n *\n *  const maxT = Math.max(t, cancelTimeMs);\n *           \n *  setTimeout(cancel, cancelTimeMs);\n *\n *  setTimeout(() => {\n *      console.log(result); // [{\"time\":20,\"returned\":10}]\n *  }, maxT + 15)\n */",
+    "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\ntype Fn = (...args: JSONValue[]) => void\n\nfunction cancellable(fn: Fn, args: JSONValue[], t: number): Function {\n    \n};\n\n/**\n *  const result = [];\n *\n *  const fn = (x) => x * 5;\n *  const args = [2], t = 20, cancelTimeMs = 50;\n *\n *  const start = performance.now();\n *\n *  const log = (...argsArr) => {\n *      const diff = Math.floor(performance.now() - start);\n *      result.push({\"time\": diff, \"returned\": fn(...argsArr)});\n *  }\n *       \n *  const cancel = cancellable(log, args, t);\n *\n *  const maxT = Math.max(t, cancelTimeMs);\n *           \n *  setTimeout(cancel, cancelTimeMs);\n *\n *  setTimeout(() => {\n *      console.log(result); // [{\"time\":20,\"returned\":10}]\n *  }, maxT + 15)\n */"
+  },
+  "publicTests": [
+    {
+      "input": "(x) => x * 5\n[-40]\n20\n10",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "(x) => x ** 2\n[-21]\n63\n71",
+      "expectedOutput": "[{\"time\":63,\"returned\":441}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-82,-20]\n106\n132",
+      "expectedOutput": "[{\"time\":106,\"returned\":1640}]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "(x) => x * 5\n[-40]\n20\n10",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "(x) => x ** 2\n[-21]\n63\n71",
+      "expectedOutput": "[{\"time\":63,\"returned\":441}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-82,-20]\n106\n132",
+      "expectedOutput": "[{\"time\":106,\"returned\":1640}]"
+    },
+    {
+      "input": "(a,b) => a - b\n[31,-45]\n149\n193",
+      "expectedOutput": "[{\"time\":149,\"returned\":76}]"
+    },
+    {
+      "input": "(x) => x * 5\n[-77]\n192\n254",
+      "expectedOutput": "[{\"time\":192,\"returned\":-385}]"
+    },
+    {
+      "input": "(x) => x ** 2\n[-46]\n235\n315",
+      "expectedOutput": "[{\"time\":235,\"returned\":2116}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[30,39]\n278\n376",
+      "expectedOutput": "[{\"time\":278,\"returned\":1170}]"
+    },
+    {
+      "input": "(a,b) => a - b\n[67,-72]\n321\n437",
+      "expectedOutput": "[{\"time\":321,\"returned\":139}]"
+    },
+    {
+      "input": "(x) => x * 5\n[22]\n364\n498",
+      "expectedOutput": "[{\"time\":364,\"returned\":110}]"
+    },
+    {
+      "input": "(x) => x ** 2\n[51]\n407\n559",
+      "expectedOutput": "[{\"time\":407,\"returned\":2601}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-7,-7]\n450\n620",
+      "expectedOutput": "[{\"time\":450,\"returned\":49}]"
+    },
+    {
+      "input": "(a,b) => a - b\n[80,65]\n493\n681",
+      "expectedOutput": "[{\"time\":493,\"returned\":15}]"
+    },
+    {
+      "input": "(x) => x * 5\n[42]\n536\n742",
+      "expectedOutput": "[{\"time\":536,\"returned\":210}]"
+    },
+    {
+      "input": "(x) => x ** 2\n[45]\n579\n803",
+      "expectedOutput": "[{\"time\":579,\"returned\":2025}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[39,26]\n622\n864",
+      "expectedOutput": "[{\"time\":622,\"returned\":1014}]"
+    },
+    {
+      "input": "(a,b) => a - b\n[-26,-37]\n665\n925",
+      "expectedOutput": "[{\"time\":665,\"returned\":11}]"
+    },
+    {
+      "input": "(x) => x * 5\n[69]\n708\n986",
+      "expectedOutput": "[{\"time\":708,\"returned\":345}]"
+    },
+    {
+      "input": "(x) => x ** 2\n[10]\n751\n56",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-88,-49]\n794\n117",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "(a,b) => a - b\n[89,87]\n837\n178",
+      "expectedOutput": "[]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/timeout-cancellation/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.069Z",
+    "sourceUpdatedAt": null
+  }
+}

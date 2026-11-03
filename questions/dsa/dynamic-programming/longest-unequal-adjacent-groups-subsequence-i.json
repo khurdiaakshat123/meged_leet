@@ -1,0 +1,163 @@
+{
+  "id": "2900",
+  "slug": "longest-unequal-adjacent-groups-subsequence-i",
+  "title": "Longest Unequal Adjacent Groups Subsequence I",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "statement": "You are given a string array `words` and a **binary** array `groups` both of length `n`.\n\nA subsequence of `words` is **alternating** if for any two _consecutive_ strings in the sequence, their corresponding elements at the _same_ indices in `groups` are **different** (that is, there _cannot_ be consecutive 0 or 1).\n\nYour task is to select the **longest alternating** subsequence from `words`.\n\nReturn _the selected subsequence. If there are multiple answers, return **any** of them._\n\n**Note:** The elements in `words` are distinct.\n\n**Example 1:**\n\n**Input:** words = \\[\"e\",\"a\",\"b\"\\], groups = \\[0,0,1\\]\n\n**Output:** \\[\"e\",\"b\"\\]\n\n**Explanation:** A subsequence that can be selected is `[\"e\",\"b\"]` because `groups[0] != groups[2]`. Another subsequence that can be selected is `[\"a\",\"b\"]` because `groups[1] != groups[2]`. It can be demonstrated that the length of the longest subsequence of indices that satisfies the condition is `2`.\n\n**Example 2:**\n\n**Input:** words = \\[\"a\",\"b\",\"c\",\"d\"\\], groups = \\[1,0,1,1\\]\n\n**Output:** \\[\"a\",\"b\",\"c\"\\]\n\n**Explanation:** A subsequence that can be selected is `[\"a\",\"b\",\"c\"]` because `groups[0] != groups[1]` and `groups[1] != groups[2]`. Another subsequence that can be selected is `[\"a\",\"b\",\"d\"]` because `groups[0] != groups[1]` and `groups[1] != groups[3]`. It can be shown that the length of the longest subsequence of indices that satisfies the condition is `3`.\n\n**Constraints:**\n\n*   `1 <= n == words.length == groups.length <= 100`\n*   `1 <= words[i].length <= 10`\n*   `groups[i]` is either `0` or `1.`\n*   `words` consists of **distinct** strings.\n*   `words[i]` consists of lowercase English letters.",
+  "constraints": [
+    "1 <= n == words.length == groups.length <= 100",
+    "1 <= words[i].length <= 10",
+    "groups[i] is either 0 or 1.",
+    "words consists of distinct strings.",
+    "words[i] consists of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "words = [\"e\",\"a\",\"b\"], groups = [0,0,1]",
+      "output": "[\"e\",\"b\"]",
+      "explanation": "A subsequence that can be selected is [\"e\",\"b\"] because groups[0] != groups[2]. Another subsequence that can be selected is [\"a\",\"b\"] because groups[1] != groups[2]. It can be demonstrated that the length of the longest subsequence of indices that satisfies the condition is 2."
+    },
+    {
+      "input": "words = [\"a\",\"b\",\"c\",\"d\"], groups = [1,0,1,1]",
+      "output": "[\"a\",\"b\",\"c\"]",
+      "explanation": "A subsequence that can be selected is [\"a\",\"b\",\"c\"] because groups[0] != groups[1] and groups[1] != groups[2]. Another subsequence that can be selected is [\"a\",\"b\",\"d\"] because groups[0] != groups[1] and groups[1] != groups[3]. It can be shown that the length of the longest subsequence of indices that satisfies the condition is 3."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<string> getLongestSubsequence(vector<string>& words, vector<int>& groups) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> getLongestSubsequence(String[] words, int[] groups) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def getLongestSubsequence(self, words: List[str], groups: List[int]) -> List[str]:\n        ",
+    "python": "class Solution(object):\n    def getLongestSubsequence(self, words, groups):\n        \"\"\"\n        :type words: List[str]\n        :type groups: List[int]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number[]} groups\n * @return {string[]}\n */\nvar getLongestSubsequence = function(words, groups) {\n    \n};",
+    "typescript": "function getLongestSubsequence(words: string[], groups: number[]): string[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<string> GetLongestSubsequence(string[] words, int[] groups) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** getLongestSubsequence(char** words, int wordsSize, int* groups, int groupsSize, int* returnSize) {\n    \n}",
+    "golang": "func getLongestSubsequence(words []string, groups []int) []string {\n    \n}",
+    "kotlin": "class Solution {\n    fun getLongestSubsequence(words: Array<String>, groups: IntArray): List<String> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getLongestSubsequence(_ words: [String], _ groups: [Int]) -> [String] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_longest_subsequence(words: Vec<String>, groups: Vec<i32>) -> Vec<String> {\n        \n    }\n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer[]} groups\n# @return {String[]}\ndef get_longest_subsequence(words, groups)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer[] $groups\n     * @return String[]\n     */\n    function getLongestSubsequence($words, $groups) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> getLongestSubsequence(List<String> words, List<int> groups) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def getLongestSubsequence(words: Array[String], groups: Array[Int]): List[String] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec get_longest_subsequence(words :: [String.t], groups :: [integer]) :: [String.t]\n  def get_longest_subsequence(words, groups) do\n    \n  end\nend",
+    "erlang": "-spec get_longest_subsequence(Words :: [unicode:unicode_binary()], Groups :: [integer()]) -> [unicode:unicode_binary()].\nget_longest_subsequence(Words, Groups) ->\n  .",
+    "racket": "(define/contract (get-longest-subsequence words groups)\n  (-> (listof string?) (listof exact-integer?) (listof string?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"e\",\"a\",\"b\"]\n[0,0,1]",
+      "expectedOutput": "[\"e\",\"b\"]"
+    },
+    {
+      "input": "[\"a\",\"b\",\"c\",\"d\"]\n[1,0,1,1]",
+      "expectedOutput": "[\"a\",\"b\",\"c\"]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"e\",\"a\",\"b\"]\n[0,0,1]",
+      "expectedOutput": "[\"e\",\"b\"]"
+    },
+    {
+      "input": "[\"a\",\"b\",\"c\",\"d\"]\n[1,0,1,1]",
+      "expectedOutput": "[\"a\",\"b\",\"c\"]"
+    },
+    {
+      "input": "[\"z\"]\n[0]",
+      "expectedOutput": "[\"z\"]"
+    },
+    {
+      "input": "[\"a\",\"b\",\"c\"]\n[1,1,1]",
+      "expectedOutput": "[\"a\"]"
+    },
+    {
+      "input": "[\"one\",\"two\"]\n[0,1]",
+      "expectedOutput": "[\"one\",\"two\"]"
+    },
+    {
+      "input": "[\"ab\",\"cd\",\"ef\",\"gh\",\"ij\",\"kl\"]\n[0,1,0,1,0,1]",
+      "expectedOutput": "[\"ab\",\"cd\",\"ef\",\"gh\",\"ij\",\"kl\"]"
+    },
+    {
+      "input": "[\"x\",\"ax\",\"b\",\"cc\",\"ddd\"]\n[0,1,0,0,1]",
+      "expectedOutput": "[\"x\",\"ax\",\"b\",\"ddd\"]"
+    },
+    {
+      "input": "[\"mzbmvfo\",\"maomxq\",\"nrpdwzqt\",\"iq\",\"jhzyzlbb\",\"sdqzbd\",\"arufcrobt\",\"w\",\"mlt\",\"rxlsnxj\",\"swoysk\"]\n[0,0,1,1,0,0,0,1,0,1,1]",
+      "expectedOutput": "[\"mzbmvfo\",\"nrpdwzqt\",\"jhzyzlbb\",\"w\",\"mlt\",\"rxlsnxj\"]"
+    },
+    {
+      "input": "[\"fljvuqx\",\"yrahnlm\",\"vzgknaid\",\"lxwfseshg\",\"khiuv\",\"ph\",\"rzdmncyeh\",\"oe\",\"fvwjlycefj\",\"gybnshxrs\",\"vmkgdla\",\"wyiduenytd\",\"lnfk\"]\n[0,0,0,1,1,0,1,1,0,0,1,1,1]",
+      "expectedOutput": "[\"fljvuqx\",\"lxwfseshg\",\"ph\",\"rzdmncyeh\",\"fvwjlycefj\",\"vmkgdla\"]"
+    },
+    {
+      "input": "[\"hruvtvx\",\"qcgayebp\",\"owsgbfndqc\",\"qtbgoa\",\"recoqw\",\"ydrt\",\"b\",\"kgtrsnts\",\"oqclvzbxd\",\"hb\",\"trm\",\"gyuupiur\",\"ib\",\"glaibbp\",\"r\",\"qftp\",\"ootmnviyt\"]\n[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]",
+      "expectedOutput": "[\"hruvtvx\"]"
+    },
+    {
+      "input": "[\"fnemgdb\",\"fqculmsdd\",\"tpwtxs\",\"qtruqp\",\"qztgkcayt\",\"nersmahiwg\",\"qqkjy\",\"c\",\"ljgqekx\",\"ukhidjxnwb\",\"daz\",\"t\",\"bhetuua\",\"oz\",\"cyn\",\"ywfxszbe\",\"tzpc\",\"m\",\"qgzc\"]\n[0,0,0,0,1,1,0,0,1,1,0,1,1,1,1,1,0,0,0]",
+      "expectedOutput": "[\"fnemgdb\",\"qztgkcayt\",\"qqkjy\",\"ljgqekx\",\"daz\",\"t\",\"tzpc\"]"
+    },
+    {
+      "input": "[\"jybmemb\",\"p\",\"nfhyxu\",\"saekvq\",\"eaecqs\",\"aenx\",\"cqnnciwq\",\"gheuynm\",\"rmp\",\"gmqblcalqx\"]\n[0,0,1,0,0,1,0,1,1,0]",
+      "expectedOutput": "[\"jybmemb\",\"nfhyxu\",\"saekvq\",\"aenx\",\"cqnnciwq\",\"gheuynm\",\"gmqblcalqx\"]"
+    },
+    {
+      "input": "[\"oidvriw\",\"s\",\"xefkv\",\"nh\",\"oneutbfs\",\"wxqykitn\",\"lvaxlzwq\",\"t\",\"nifovghn\",\"w\",\"xflkrtcj\",\"l\",\"ulqa\",\"a\",\"bpbehief\",\"fbtrx\",\"rneincg\",\"gqyt\"]\n[0,0,0,1,1,1,0,1,0,0,1,1,0,0,0,0,1,1]",
+      "expectedOutput": "[\"oidvriw\",\"nh\",\"lvaxlzwq\",\"t\",\"nifovghn\",\"xflkrtcj\",\"ulqa\",\"rneincg\"]"
+    },
+    {
+      "input": "[\"xbhmrbn\",\"y\",\"qca\",\"sspn\",\"itwb\",\"vpu\",\"igguvxlybb\",\"ylsfh\",\"qsyxcru\",\"kyjhcjnlla\",\"kzhccawvhc\",\"wecx\",\"n\",\"vszmenmzc\",\"wtywwmdvhg\",\"fjjitroux\"]\n[0,0,1,0,0,0,1,0,1,1,0,0,1,1,0,0]",
+      "expectedOutput": "[\"xbhmrbn\",\"qca\",\"sspn\",\"igguvxlybb\",\"ylsfh\",\"qsyxcru\",\"kzhccawvhc\",\"n\",\"wtywwmdvhg\"]"
+    },
+    {
+      "input": "[\"qoournw\",\"kx\",\"xq\",\"ly\",\"xlwhfqej\",\"xlgym\",\"rcvuqf\",\"uoercq\",\"ritqoeft\",\"cvo\",\"rxlhor\",\"dhmlzrqf\",\"paenfdvwv\",\"objwol\",\"genxoh\",\"vlotehyhnt\",\"kxlkgicch\",\"bcwmfdjsak\",\"jpqcjkffc\",\"stb\",\"srqulrpbp\",\"vejamhkw\",\"ygvd\"]\n[0,0,0,0,1,1,1,1,0,0,1,1,1,1,0,0,0,1,1,1,0,0,0]",
+      "expectedOutput": "[\"qoournw\",\"xlwhfqej\",\"ritqoeft\",\"rxlhor\",\"genxoh\",\"bcwmfdjsak\",\"srqulrpbp\"]"
+    },
+    {
+      "input": "[\"equudcj\",\"tp\",\"tin\",\"wvr\",\"aqgbwazn\",\"zmkh\",\"mjyo\",\"mexnasq\",\"dd\",\"usmxnsxfj\",\"oglf\",\"penynm\",\"u\",\"uhjdfmt\",\"oqeedmz\",\"zszanfrbjt\",\"o\",\"d\",\"zxtw\",\"whzrujk\",\"q\",\"ybkbmpdu\",\"fzmaoxpai\",\"ikd\",\"gfniucz\",\"yabmyazju\",\"tpkubzqa\",\"grmciuqodu\",\"sdztq\",\"bvjyefse\",\"airroxq\"]\n[0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0]",
+      "expectedOutput": "[\"equudcj\",\"zmkh\",\"mexnasq\",\"oglf\",\"o\",\"q\",\"grmciuqodu\"]"
+    },
+    {
+      "input": "[\"okymdva\",\"zly\",\"dlcmwwh\",\"xxjiukpo\",\"vadtb\",\"j\",\"fbdmufdqt\",\"i\",\"odr\",\"r\",\"tlpz\",\"ml\",\"vgbkaeede\",\"wog\",\"guvybe\",\"xekkqhxh\",\"sz\",\"kt\",\"pprbvle\",\"tphkwosq\",\"o\",\"fkyfdayatc\",\"wetbiwgtfc\",\"jotsfft\",\"lemqv\",\"y\",\"dvzqtqi\",\"anonshfv\",\"wgyeto\",\"mx\",\"tm\",\"whfu\",\"ibt\",\"nnimm\",\"vckwizkc\",\"fv\",\"ivtw\",\"pwpz\",\"inj\"]\n[0,0,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,1,0,0,1,1,1,0,1]",
+      "expectedOutput": "[\"okymdva\",\"dlcmwwh\",\"vadtb\",\"j\",\"odr\",\"r\",\"vgbkaeede\",\"wog\",\"sz\",\"tphkwosq\",\"o\",\"jotsfft\",\"y\",\"anonshfv\",\"wgyeto\",\"tm\",\"ibt\",\"vckwizkc\",\"pwpz\",\"inj\"]"
+    },
+    {
+      "input": "[\"hwguchj\",\"lbl\",\"tgvsz\",\"khk\",\"yhh\",\"sa\",\"nhvp\",\"lfk\",\"fzpgr\",\"pyasdcacga\",\"mzbdiyk\",\"k\",\"wgfoog\",\"p\",\"bykhlxocfw\",\"gihaw\",\"woe\",\"gcnkpt\",\"ytjusorpaw\",\"d\",\"ryynzg\",\"jhsdaziv\",\"g\",\"wly\",\"mmvywc\",\"fs\",\"jngqyswn\"]\n[0,0,0,0,1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0]",
+      "expectedOutput": "[\"hwguchj\",\"yhh\",\"lfk\",\"k\",\"p\",\"woe\",\"g\"]"
+    },
+    {
+      "input": "[\"xexuoaw\",\"mftbx\",\"fmgq\",\"tnif\",\"gznp\",\"cbenk\",\"q\",\"owe\",\"isvpcj\",\"n\",\"mzihbv\",\"ot\",\"akwgjyjdqs\",\"iptgiu\",\"iqzin\",\"kyofffaew\",\"po\",\"tyjbidj\",\"pcooi\",\"uqwyatu\",\"aliwdfcs\",\"pfe\",\"xd\",\"npyzvrze\",\"iptvrgi\",\"fiqxwkxve\",\"ewqq\",\"bxan\",\"lxawtp\",\"jknugh\",\"wvhnekh\",\"ltafleme\",\"kyaoim\",\"gknoi\",\"tzakmh\",\"munaqtblc\",\"rsgvnkocmn\",\"qhaf\",\"yqj\",\"tiy\",\"lmdw\",\"mx\",\"bvdi\",\"llyhlomjpn\",\"gepzlm\",\"nwy\",\"klmrz\",\"qilexkhjo\",\"ahrvesfg\",\"cidvqyt\",\"ldkqozj\",\"kffjozng\",\"mjqf\",\"quv\",\"ap\",\"rnx\",\"wdmyqvjc\",\"f\",\"li\",\"jwe\",\"euyh\",\"bqpdurgss\",\"taulrhdhbr\",\"uw\",\"rnyekuyt\",\"odovea\",\"lgdfwfyy\",\"iatfybvq\",\"fpg\",\"mylag\",\"quptyoejcv\",\"niordzbgfl\",\"grnldt\",\"kb\",\"yt\",\"ralpgo\",\"ds\",\"tckhsoros\",\"b\",\"ldyhk\",\"cd\",\"zphcexf\",\"faizxdmesc\",\"prv\",\"ddcbwn\",\"evwth\",\"pwhicmi\",\"brpdi\",\"rxylad\",\"gwaqtpxu\",\"gtnaz\",\"wu\",\"vzjdwnd\",\"atrpcbgj\",\"lpl\",\"cg\",\"dnqq\",\"vh\",\"xqkib\",\"gje\"]\n[0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0]",
+      "expectedOutput": "[\"xexuoaw\",\"cbenk\",\"akwgjyjdqs\",\"uqwyatu\",\"ewqq\",\"wvhnekh\",\"gknoi\",\"qhaf\",\"llyhlomjpn\",\"ldkqozj\",\"ap\",\"jwe\",\"uw\",\"rnyekuyt\",\"quptyoejcv\",\"ralpgo\",\"cd\",\"evwth\",\"brpdi\",\"lpl\",\"dnqq\"]"
+    },
+    {
+      "input": "[\"vbhmbia\",\"atpvkq\",\"zkqgrebyo\",\"zfsrzqv\",\"jgfloi\",\"mxgxp\",\"u\",\"b\",\"cndfd\",\"upflp\",\"lnyfr\",\"imrwgkxzi\",\"pguput\",\"oygzymxvr\",\"w\",\"grdglm\",\"p\",\"ovksrutej\",\"fprnilcs\",\"ybpornnjvo\",\"yxvj\",\"vfjrcvrh\",\"dxztvswvwz\",\"oqhtxdk\",\"sazsjij\",\"ynlqfmhb\",\"yerkuxa\",\"rpdyvr\",\"j\",\"i\",\"lbrobtxr\",\"gnrgmsvf\",\"dhkb\",\"qw\",\"hmjrnit\",\"ldqoy\",\"maub\",\"aet\",\"yiiowpx\",\"ucnlooys\",\"ui\",\"gh\",\"fgr\",\"xdtxemauqp\",\"mzwoy\",\"szo\",\"un\",\"sl\",\"n\",\"oobhkuilf\",\"wccumpk\",\"ipsqtggt\",\"mqnjn\",\"iz\",\"irwf\",\"otfzpmnwtu\",\"kuzwthmjay\",\"mgb\",\"gpedwxnxd\",\"ultrba\",\"zgrjdskdp\",\"bcczn\",\"gnthyg\",\"tbirligmjt\",\"arr\",\"pk\",\"id\",\"ynncnkcz\",\"bkwh\",\"y\",\"jffqkkej\",\"qp\",\"focyal\",\"dazoabyhb\",\"wjbiwxjwxe\",\"atbzbe\",\"g\",\"nkdlvib\",\"rmt\",\"llpsm\",\"lhgzucvuq\",\"glhewnzy\",\"yse\",\"co\",\"nb\",\"dni\",\"rxrmfr\",\"t\",\"ufwvcenld\",\"mrxojb\",\"dfdezm\",\"twhxkhnz\",\"ehryedqv\",\"m\",\"c\",\"rekhjh\",\"nc\"]\n[0,0,0,1,1,1,1,0,0,0,1,1,0,1,1,1,1,0,0,0,0,1,1,1,1,0,1,0,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,1,1,0,0,0,0,1,0,0,1,1,1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,0,0,0,1,1,0,0,0,1,1,1,1,0,0,0,0,1,0,0,0,0,1,0,1,1,0,0]",
+      "expectedOutput": "[\"vbhmbia\",\"zfsrzqv\",\"b\",\"lnyfr\",\"pguput\",\"oygzymxvr\",\"ovksrutej\",\"vfjrcvrh\",\"ynlqfmhb\",\"yerkuxa\",\"rpdyvr\",\"j\",\"lbrobtxr\",\"hmjrnit\",\"maub\",\"ui\",\"fgr\",\"xdtxemauqp\",\"szo\",\"oobhkuilf\",\"wccumpk\",\"mqnjn\",\"otfzpmnwtu\",\"gpedwxnxd\",\"ultrba\",\"gnthyg\",\"tbirligmjt\",\"id\",\"jffqkkej\",\"dazoabyhb\",\"atbzbe\",\"rmt\",\"yse\",\"rxrmfr\",\"t\",\"twhxkhnz\",\"ehryedqv\",\"m\",\"rekhjh\"]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "This problem can be solved greedily.",
+    "Begin by constructing the answer starting with the first number in <code>groups</code>.",
+    "For each index <code>i</code> in the range <code>[1, n - 1]</code>, add <code>i</code> to the answer if <code>groups[i] != groups[i - 1]</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.736Z",
+    "sourceUpdatedAt": null
+  }
+}

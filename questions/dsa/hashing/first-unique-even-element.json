@@ -1,0 +1,155 @@
+{
+  "id": "3866",
+  "slug": "first-unique-even-element",
+  "title": "First Unique Even Element",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "statement": "You are given an integer array `nums`.\n\nReturn an integer denoting the first **even** integer (earliest by array index) that appears **exactly** once in `nums`. If no such integer exists, return -1.\n\nAn integer `x` is considered **even** if it is divisible by 2.\n\n**Example 1:**\n\n**Input:** nums = \\[3,4,2,5,4,6\\]\n\n**Output:** 2\n\n**Explanation:**\n\nBoth 2 and 6 are even and they appear exactly once. Since 2 occurs first in the array, the answer is 2.\n\n**Example 2:**\n\n**Input:** nums = \\[4,4\\]\n\n**Output:** \\-1\n\n**Explanation:**\n\nNo even integer appears exactly once, so return -1.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `1 <= nums[i] <= 100`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [3,4,2,5,4,6]",
+      "output": "2",
+      "explanation": null
+    },
+    {
+      "input": "nums = [4,4]",
+      "output": "-1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int firstUniqueEven(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int firstUniqueEven(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def firstUniqueEven(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def firstUniqueEven(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar firstUniqueEven = function(nums) {\n    \n};",
+    "typescript": "function firstUniqueEven(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int FirstUniqueEven(int[] nums) {\n        \n    }\n}",
+    "c": "int firstUniqueEven(int* nums, int numsSize) {\n    \n}",
+    "golang": "func firstUniqueEven(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun firstUniqueEven(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func firstUniqueEven(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn first_unique_even(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef first_unique_even(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function firstUniqueEven($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int firstUniqueEven(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def firstUniqueEven(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec first_unique_even(nums :: [integer]) :: integer\n  def first_unique_even(nums) do\n    \n  end\nend",
+    "erlang": "-spec first_unique_even(Nums :: [integer()]) -> integer().\nfirst_unique_even(Nums) ->\n  .",
+    "racket": "(define/contract (first-unique-even nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[8,2,3]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[4,2,4,6]",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1]",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[100]",
+      "expectedOutput": "100"
+    },
+    {
+      "input": "[4,4]",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[8,2,3]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[4,2,4,6]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[9,7,5,6,3]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[2,4,2,4,1,10,8]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[96,4,2,2,4,1,2,4,2,4,4,73,45]",
+      "expectedOutput": "96"
+    },
+    {
+      "input": "[4,2,4,6,2,6,9,4,71,17,83,35,69,6,31,2,4,13,92]",
+      "expectedOutput": "92"
+    },
+    {
+      "input": "[4,2,2,4,19,37,45,2,4,3,65]",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[2,6,4,2,4,6,27,88,4,2,99,93,6,59,85,35,5]",
+      "expectedOutput": "88"
+    },
+    {
+      "input": "[2,4,4,2,6,6,37,4,95,84,6,99,39,55,31]",
+      "expectedOutput": "84"
+    },
+    {
+      "input": "[4,2,2,4,6,6,45,49,71,83,2,2,49,6,4,6,6,41]",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[2,2,98,4,4,55,4,2,4,11,77,45,2,2]",
+      "expectedOutput": "98"
+    },
+    {
+      "input": "[2,4,8,6,6,2,4,8,65,6,19,6,2,4,41,6,41,6,3,94,55,6,77]",
+      "expectedOutput": "94"
+    },
+    {
+      "input": "[4,10,14,12,4,2,8,6,10,6,2,14,8,12,73,59,95,57,23,13,35,17,43,8,10,63,14,8,67,10,93,12,3,9,27,4,31,14,8]",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[2,8,6,4,6,2,10,4,10,8,83,63,8,6,4,10,31,86,63,43,37,15,8,6,29,29,73,55,71]",
+      "expectedOutput": "86"
+    },
+    {
+      "input": "[10,14,8,90,6,10,14,6,4,4,12,2,8,2,12,91,10,45,41,35,51,4,2,8,27,71,77,14,2,14,14,15,10,10,39,2,4]",
+      "expectedOutput": "90"
+    },
+    {
+      "input": "[34,28,36,38,20,40,6,14,24,14,4,22,8,40,36,22,20,12,18,28,10,6,24,30,2,34,10,26,12,32,30,38,16,2,26,18,16,4,8,32,1,71,19,14,16,8,10,24,20,8,12,85,31,83,22,2,75,55,20,53,38,83,31,15,26,28,32,18,47,43,25,25,38,26,6,79,15,45,18,69,45,23,4,24,40,20,40,96,4,26,8,36,28,53,25,6,22,22,51,9]",
+      "expectedOutput": "96"
+    },
+    {
+      "input": "[2,12,8,20,10,34,28,26,2,16,38,38,12,28,20,32,36,26,36,34,6,14,24,4,22,22,32,16,30,6,10,4,8,24,18,18,14,30,9,75,36,23,45,87,8,3,20,3,34,36,75,59,15,19,37,20,31,69,83,16,12,34,38,55,22,32,5,4,32,41,61,87,30,12,32,3,27,51,22,85,1,14,63,53,30,99,10,6,41,89,15,20,38,23,14,27,6]",
+      "expectedOutput": "-1"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/first-unique-even-element/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:18.928Z",
+    "sourceUpdatedAt": null
+  }
+}

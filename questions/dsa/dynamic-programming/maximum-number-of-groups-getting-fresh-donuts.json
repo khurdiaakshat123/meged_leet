@@ -1,0 +1,163 @@
+{
+  "id": "1815",
+  "slug": "maximum-number-of-groups-getting-fresh-donuts",
+  "title": "Maximum Number of Groups Getting Fresh Donuts",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Memoization",
+    "Bitmask"
+  ],
+  "statement": "There is a donuts shop that bakes donuts in batches of `batchSize`. They have a rule where they must serve **all** of the donuts of a batch before serving any donuts of the next batch. You are given an integer `batchSize` and an integer array `groups`, where `groups[i]` denotes that there is a group of `groups[i]` customers that will visit the shop. Each customer will get exactly one donut.\n\nWhen a group visits the shop, all customers of the group must be served before serving any of the following groups. A group will be happy if they all get fresh donuts. That is, the first customer of the group does not receive a donut that was left over from the previous group.\n\nYou can freely rearrange the ordering of the groups. Return _the **maximum** possible number of happy groups after rearranging the groups._\n\n**Example 1:**\n\n```\nInput: batchSize = 3, groups = [1,2,3,4,5,6]\nOutput: 4\nExplanation: You can arrange the groups as [6,2,4,5,1,3]. Then the 1st, 2nd, 4th, and 6th groups will be happy.\n```\n\n**Example 2:**\n\n```\nInput: batchSize = 4, groups = [1,3,2,5,2,2,1,6]\nOutput: 4\n```\n\n**Constraints:**\n\n*   `1 <= batchSize <= 9`\n*   `1 <= groups.length <= 30`\n*   `1 <= groups[i] <= 10^(9)`",
+  "constraints": [
+    "1 <= batchSize <= 9",
+    "1 <= groups.length <= 30",
+    "1 <= groups[i] <= 109"
+  ],
+  "examples": [
+    {
+      "input": "batchSize = 3, groups = [1,2,3,4,5,6]",
+      "output": "4",
+      "explanation": "You can arrange the groups as [6,2,4,5,1,3]. Then the 1st, 2nd, 4th, and 6th groups will be happy."
+    },
+    {
+      "input": "batchSize = 4, groups = [1,3,2,5,2,2,1,6]",
+      "output": "4",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxHappyGroups(int batchSize, vector<int>& groups) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxHappyGroups(int batchSize, int[] groups) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxHappyGroups(self, batchSize: int, groups: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxHappyGroups(self, batchSize, groups):\n        \"\"\"\n        :type batchSize: int\n        :type groups: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} batchSize\n * @param {number[]} groups\n * @return {number}\n */\nvar maxHappyGroups = function(batchSize, groups) {\n    \n};",
+    "typescript": "function maxHappyGroups(batchSize: number, groups: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxHappyGroups(int batchSize, int[] groups) {\n        \n    }\n}",
+    "c": "int maxHappyGroups(int batchSize, int* groups, int groupsSize) {\n    \n}",
+    "golang": "func maxHappyGroups(batchSize int, groups []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxHappyGroups(batchSize: Int, groups: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxHappyGroups(_ batchSize: Int, _ groups: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_happy_groups(batch_size: i32, groups: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} batch_size\n# @param {Integer[]} groups\n# @return {Integer}\ndef max_happy_groups(batch_size, groups)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $batchSize\n     * @param Integer[] $groups\n     * @return Integer\n     */\n    function maxHappyGroups($batchSize, $groups) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxHappyGroups(int batchSize, List<int> groups) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxHappyGroups(batchSize: Int, groups: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_happy_groups(batch_size :: integer, groups :: [integer]) :: integer\n  def max_happy_groups(batch_size, groups) do\n    \n  end\nend",
+    "erlang": "-spec max_happy_groups(BatchSize :: integer(), Groups :: [integer()]) -> integer().\nmax_happy_groups(BatchSize, Groups) ->\n  .",
+    "racket": "(define/contract (max-happy-groups batchSize groups)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "3\n[1,2,3,4,5,6]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "4\n[1,1,1]",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "3\n[1,2,3,4,5,6]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "4\n[1,3,2,5,2,2,1,6]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "1\n[1,1000000000,37]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "9\n[1000000000]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "7\n[7,14,999999994]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "5\n[1,4,2,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "4\n[1,1,1]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "2\n[863056401,190819192,551597225,606259497,324728861,541849633,494854301,590246360,57755951,459362035,827241090]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "5\n[863831506,372226723,921013770,680292229,657661376,37271367,356928365,422552284,75186218,574259023,734692386,79684642,313869305]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "7\n[868482135,460671905,137513038,124488620,655256469,9801772,529372753,416387825,179767819,263640945,179400167,297430679,36204158,961159466,195548589,750966267,360032301]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "9\n[870807449,4894496,245762672,346586815,654054016,496066974,115594946,913305596,232058619,608331906,901754057,406303698,897371585,672065202,565508666,547537612,278957575,92201029,152619168]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "4\n[874682974,911932147,92845395,716750474,318716594,973175645,425965269,74835214,319209953,182816842,439010540,254425395]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "6\n[875458078,93339678,462261940,790783206,651649109,468597379,288039334,907141137,336640220,297713829,346461837,624049735,619706438,93876674,305428819,140680303]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "8\n[879333603,377329,309344663,160946865,316311687,945706050,598409656,68670755,423791554,872198765,883718320,472171432,388318816,612052900,588695614,801632546,648350245,426607883]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "7\n[881658917,544599920,417594297,383045061,315109233,431971253,184631850,565588526,476082355,216889726,606072210,581044451,249486242,322958636,958655690,598203891,567275519,517809752,512977126,485263573,584537893]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "8\n[889409966,358675224,111759744,123372379,644434389,386188594,805372496,888647761,650385023,365859597,680585177,277287846,786710998,359311089,525189279,920108376,630359764,821815983,484661381,220878131,406277582,427553596,884245672]",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "9\n[890960176,721490284,850592834,271437843,310299420,377032063,529520625,553259609,685245557,595653571,495487771,16536525,694155949,166581579,438495997,784489273,242976613,882617229,678998232,768001043,170625520,678868945,565176440,548979343,76446207]",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "6\n[901036539,79788178,653007914,233863356,638422122,817514607,736483464,373236615,911839026,89314403,292354628,821652938,92548132,913839768,374989662,902965104,224986133,277825330,442187765,824299968,138887116,312418712,991226433,413424186]",
+      "expectedOutput": "16"
+    },
+    {
+      "input": "9\n[740390223,913117307,912764632,160551934,911706616,495828894,159659839,639664584,881251541,575309377,988011501,831997949,545082477,258167014,913469973,657849800,912059282,208913422,913822648,471240118,905471078,538609899,782744366,912411957,822930655,243092357,605979689,572294794,504925013,914175323]",
+      "expectedOutput": "15"
+    },
+    {
+      "input": "8\n[151327229,635704852,601649795,912162547,912519100,567594738,318222159,654089912,879946606,780356944,913232198,987879764,250014997,490288553,820984834,911449449,830151771,911806002,904432299,669759909,911092904,737537369,540083388,589878223,234774694,912875645,533539681,200220162,913588743]",
+      "expectedOutput": "16"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "The maximum number of happy groups is the maximum number of partitions you can split the groups into such that the sum of group sizes in each partition is 0 mod batchSize. At most one partition is allowed to have a different remainder (the first group will get fresh donuts anyway).",
+    "Suppose you have an array freq of length k where freq[i] = number of groups of size i mod batchSize. How can you utilize this in a dp solution?",
+    "Make a DP state dp[freq][r] that represents \"the maximum number of partitions you can form given the current freq and current remainder r\". You can hash the freq array to store it more easily in the dp table.",
+    "For each i from 0 to batchSize-1, the next DP state is dp[freq`][(r+i)%batchSize] where freq` is freq but with freq[i] decremented by 1. Take the largest of all of the next states and store it in ans. If r == 0, then return ans+1 (because you can form a new partition), otherwise return ans (continuing the current partition)."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-number-of-groups-getting-fresh-donuts/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.051Z",
+    "sourceUpdatedAt": null
+  }
+}

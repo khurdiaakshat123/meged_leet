@@ -1,0 +1,163 @@
+{
+  "id": "3745",
+  "slug": "maximize-expression-of-three-elements",
+  "title": "Maximize Expression of Three Elements",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Enumeration"
+  ],
+  "statement": "You are given an integer array `nums`.\n\nChoose three elements `a`, `b`, and `c` from `nums` at **distinct** indices such that the value of the expression `a + b - c` is maximized.\n\nReturn an integer denoting the **maximum possible value** of this expression.\n\n**Example 1:**\n\n**Input:** nums = \\[1,4,2,5\\]\n\n**Output:** 8\n\n**Explanation:**\n\nWe can choose `a = 4`, `b = 5`, and `c = 1`. The expression value is `4 + 5 - 1 = 8`, which is the maximum possible.\n\n**Example 2:**\n\n**Input:** nums = \\[-2,0,5,-2,4\\]\n\n**Output:** 11\n\n**Explanation:**\n\nWe can choose `a = 5`, `b = 4`, and `c = -2`. The expression value is `5 + 4 - (-2) = 11`, which is the maximum possible.\n\n**Constraints:**\n\n*   `3 <= nums.length <= 100`\n*   `-100 <= nums[i] <= 100`",
+  "constraints": [
+    "3 <= nums.length <= 100",
+    "-100 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,4,2,5]",
+      "output": "8",
+      "explanation": null
+    },
+    {
+      "input": "nums = [-2,0,5,-2,4]",
+      "output": "11",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maximizeExpressionOfThree(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximizeExpressionOfThree(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maximizeExpressionOfThree(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maximizeExpressionOfThree(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximizeExpressionOfThree = function(nums) {\n    \n};",
+    "typescript": "function maximizeExpressionOfThree(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaximizeExpressionOfThree(int[] nums) {\n        \n    }\n}",
+    "c": "int maximizeExpressionOfThree(int* nums, int numsSize) {\n    \n}",
+    "golang": "func maximizeExpressionOfThree(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maximizeExpressionOfThree(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeExpressionOfThree(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_expression_of_three(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximize_expression_of_three(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximizeExpressionOfThree($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeExpressionOfThree(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maximizeExpressionOfThree(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec maximize_expression_of_three(nums :: [integer]) :: integer\n  def maximize_expression_of_three(nums) do\n    \n  end\nend",
+    "erlang": "-spec maximize_expression_of_three(Nums :: [integer()]) -> integer().\nmaximize_expression_of_three(Nums) ->\n  .",
+    "racket": "(define/contract (maximize-expression-of-three nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[-83,-75,-81]",
+      "expectedOutput": "-73"
+    },
+    {
+      "input": "[91,27,13,91,-26]",
+      "expectedOutput": "208"
+    },
+    {
+      "input": "[-19,-17,92,100,-27,95,33,-100]",
+      "expectedOutput": "295"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[-83,-75,-81]",
+      "expectedOutput": "-73"
+    },
+    {
+      "input": "[91,27,13,91,-26]",
+      "expectedOutput": "208"
+    },
+    {
+      "input": "[0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-19,-17,92,100,-27,95,33,-100]",
+      "expectedOutput": "295"
+    },
+    {
+      "input": "[-21,-21,-21]",
+      "expectedOutput": "-21"
+    },
+    {
+      "input": "[-59,-56,-17,79,35,92,1]",
+      "expectedOutput": "230"
+    },
+    {
+      "input": "[43,22,84,-99,60,-7]",
+      "expectedOutput": "243"
+    },
+    {
+      "input": "[49,-23,61,-16,89,14,11,-2,15,-83,-53,-74,75,40,35,-76,100]",
+      "expectedOutput": "272"
+    },
+    {
+      "input": "[-38,-63,-62,26,97,44,-83,58,-14,-86,-48]",
+      "expectedOutput": "241"
+    },
+    {
+      "input": "[-63,-73,52,39,14,-15,-30,-75,-38,-40,76,-71,28,-31,-50,-62,-82,80,-43]",
+      "expectedOutput": "238"
+    },
+    {
+      "input": "[16,-98,20,30,41,-87,-6,52,43,-91,-46,18,83]",
+      "expectedOutput": "233"
+    },
+    {
+      "input": "[-44,99,-49,68,23,-28,-12,89,-43,-86,-78,38,-80,-4,56,-26]",
+      "expectedOutput": "274"
+    },
+    {
+      "input": "[-49,-15,70,88,-45,26,-19,68,-50,73]",
+      "expectedOutput": "211"
+    },
+    {
+      "input": "[16,-50,-13,38,8,-4,54,-75,-43,-18,36,-91,86,-6]",
+      "expectedOutput": "231"
+    },
+    {
+      "input": "[-85,21,-79,-26,-94,-35,64,4,87,-33,29,34,-2,81,-40,28,94,79,-97,-6,63,85,-67,22,-81,30,3,53,-56]",
+      "expectedOutput": "278"
+    },
+    {
+      "input": "[-46,-34,6,-9,-47,86,-23,81,-5,-6,-53,-93,-14,-45,51,29,3,17,52,-69,26,53,44,-74,-97,-5,-64,-51,47,-38,71,-53,27,-38,-37,-20,-100,39]",
+      "expectedOutput": "267"
+    },
+    {
+      "input": "[-44,33,-51,-50,91,43,0,7,56,-9,-89,-65,-68,-3,-73,63,6,-3,-43,-49,33,-27,3]",
+      "expectedOutput": "243"
+    },
+    {
+      "input": "[80,97,-50,-70,-78,-9,66,75,28,34,-66,74,-10,83,-95,-37,91,48,51,-31,76,-12,-53,50,-96,4,-61,-41,67,-65,-94,48,26,-39]",
+      "expectedOutput": "284"
+    },
+    {
+      "input": "[76,63,-77,100,6,-27,97,7,-91,17,30,79,86,-28,10,-32,35,89,-50,-55,3,57,38,-87,-34,47,-70,15,-13,-73,-72,-45,9,80,29,-89,-19,17,21,-12,-60,-87,-93,-36,24,-49,10,31,54,13,-38,-79,35,-53,-35,-99,4,-82,-81,-3,28,-37,47,42,44,87,-100,17,53,10,-82,89,68,-46,55,56,-82,-60,-74,24,-63,20,-42,-94,-32,-41,-4,22,8,84,-50,59,-16,34,67,-46,-98,-78,-79,27]",
+      "expectedOutput": "297"
+    },
+    {
+      "input": "[-83,-96,-94,-83,-72,-82,-92,-76,-92,-82,-69,-96,-94,-96,-94,-75,-80,-95,-92,-81,-81,-97,-81,-71,-75,-75,-90,-85,-100,-92,-82,-100,-69,-86,-73,-83,-92,-85,-76,-75,-96,-70,-77,-98,-87,-100,-93,-75,-97,-73,-88,-77,-100,-84,-92,-80,-71,-79,-70,-77,-94,-84,-98,-85,-74,-69,-76,-82,-94,-77,-96,-76,-98,-88,-88,-86,-93,-97,-88,-90,-78,-99,-77,-67,-70,-97,-84,-93,-81,-74,-94,-75,-70,-79,-100,-87,-84]",
+      "expectedOutput": "-36"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "<code>a</code> and <code>b</code> should be the two largest values in <code>nums</code>",
+    "<code>c</code> should be the smallest value in <code>nums</code>"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximize-expression-of-three-elements/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:21.265Z",
+    "sourceUpdatedAt": null
+  }
+}

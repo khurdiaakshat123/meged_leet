@@ -1,0 +1,155 @@
+{
+  "id": "1079",
+  "slug": "letter-tile-possibilities",
+  "title": "Letter Tile Possibilities",
+  "category": "dsa",
+  "subcategory": "recursion-backtracking",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Backtracking",
+    "Counting"
+  ],
+  "statement": "You have `n`  `tiles`, where each tile has one letter `tiles[i]` printed on it.\n\nReturn _the number of possible non-empty sequences of letters_ you can make using the letters printed on those `tiles`.\n\n**Example 1:**\n\n```\nInput: tiles = \"AAB\"\nOutput: 8\nExplanation: The possible sequences are \"A\", \"B\", \"AA\", \"AB\", \"BA\", \"AAB\", \"ABA\", \"BAA\".\n```\n\n**Example 2:**\n\n```\nInput: tiles = \"AAABBC\"\nOutput: 188\n```\n\n**Example 3:**\n\n```\nInput: tiles = \"V\"\nOutput: 1\n```\n\n**Constraints:**\n\n*   `1 <= tiles.length <= 7`\n*   `tiles` consists of uppercase English letters.",
+  "constraints": [
+    "1 <= tiles.length <= 7",
+    "tiles consists of uppercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "tiles = \"AAB\"",
+      "output": "8",
+      "explanation": "The possible sequences are \"A\", \"B\", \"AA\", \"AB\", \"BA\", \"AAB\", \"ABA\", \"BAA\"."
+    },
+    {
+      "input": "tiles = \"AAABBC\"",
+      "output": "188",
+      "explanation": null
+    },
+    {
+      "input": "tiles = \"V\"",
+      "output": "1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int numTilePossibilities(string tiles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numTilePossibilities(String tiles) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def numTilePossibilities(self, tiles: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def numTilePossibilities(self, tiles):\n        \"\"\"\n        :type tiles: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} tiles\n * @return {number}\n */\nvar numTilePossibilities = function(tiles) {\n    \n};",
+    "typescript": "function numTilePossibilities(tiles: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int NumTilePossibilities(string tiles) {\n        \n    }\n}",
+    "c": "int numTilePossibilities(char* tiles) {\n    \n}",
+    "golang": "func numTilePossibilities(tiles string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun numTilePossibilities(tiles: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numTilePossibilities(_ tiles: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_tile_possibilities(tiles: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} tiles\n# @return {Integer}\ndef num_tile_possibilities(tiles)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $tiles\n     * @return Integer\n     */\n    function numTilePossibilities($tiles) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numTilePossibilities(String tiles) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def numTilePossibilities(tiles: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec num_tile_possibilities(tiles :: String.t) :: integer\n  def num_tile_possibilities(tiles) do\n    \n  end\nend",
+    "erlang": "-spec num_tile_possibilities(Tiles :: unicode:unicode_binary()) -> integer().\nnum_tile_possibilities(Tiles) ->\n  .",
+    "racket": "(define/contract (num-tile-possibilities tiles)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"A\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"ED\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"CAE\"",
+      "expectedOutput": "15"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"CACB\"",
+      "expectedOutput": "34"
+    },
+    {
+      "input": "\"ADBCD\"",
+      "expectedOutput": "170"
+    },
+    {
+      "input": "\"EECCAD\"",
+      "expectedOutput": "522"
+    },
+    {
+      "input": "\"EDBEDAB\"",
+      "expectedOutput": "1840"
+    },
+    {
+      "input": "\"AEABECB\"",
+      "expectedOutput": "1840"
+    },
+    {
+      "input": "\"AAADCAD\"",
+      "expectedOutput": "349"
+    },
+    {
+      "input": "\"BBBBAAE\"",
+      "expectedOutput": "349"
+    },
+    {
+      "input": "\"ACCEAEC\"",
+      "expectedOutput": "649"
+    },
+    {
+      "input": "\"BBCABAD\"",
+      "expectedOutput": "1265"
+    },
+    {
+      "input": "\"DAADEDA\"",
+      "expectedOutput": "447"
+    },
+    {
+      "input": "\"BADCAAE\"",
+      "expectedOutput": "2467"
+    },
+    {
+      "input": "\"DBAECCC\"",
+      "expectedOutput": "2467"
+    },
+    {
+      "input": "\"CDCEEDC\"",
+      "expectedOutput": "649"
+    },
+    {
+      "input": "\"DAAEBBC\"",
+      "expectedOutput": "3591"
+    },
+    {
+      "input": "\"CEBECCC\"",
+      "expectedOutput": "349"
+    },
+    {
+      "input": "\"BCADEDD\"",
+      "expectedOutput": "2467"
+    },
+    {
+      "input": "\"EBCDCDA\"",
+      "expectedOutput": "3591"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Try to build the string with a backtracking DFS by considering what you can put in every position."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/letter-tile-possibilities/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.173Z",
+    "sourceUpdatedAt": null
+  }
+}

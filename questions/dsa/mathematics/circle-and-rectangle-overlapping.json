@@ -1,0 +1,155 @@
+{
+  "id": "1401",
+  "slug": "circle-and-rectangle-overlapping",
+  "title": "Circle and Rectangle Overlapping",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Geometry"
+  ],
+  "statement": "You are given a circle represented as `(radius, xCenter, yCenter)` and an axis-aligned rectangle represented as `(x1, y1, x2, y2)`, where `(x1, y1)` are the coordinates of the bottom-left corner, and `(x2, y2)` are the coordinates of the top-right corner of the rectangle.\n\nReturn `true` _if the circle and rectangle are overlapped otherwise return_ `false`. In other words, check if there is **any** point `(x_(i), y_(i))` that belongs to the circle and the rectangle at the same time.\n\n**Example 1:**\n\n![](./assets/circle-and-rectangle-overlapping-1.png)\n```\nInput: radius = 1, xCenter = 0, yCenter = 0, x1 = 1, y1 = -1, x2 = 3, y2 = 1\nOutput: true\nExplanation: Circle and rectangle share the point (1,0).\n```\n\n**Example 2:**\n\n```\nInput: radius = 1, xCenter = 1, yCenter = 1, x1 = 1, y1 = -3, x2 = 2, y2 = -1\nOutput: false\n```\n\n**Example 3:**\n\n![](./assets/circle-and-rectangle-overlapping-2.png)\n```\nInput: radius = 1, xCenter = 0, yCenter = 0, x1 = -1, y1 = 0, x2 = 0, y2 = 1\nOutput: true\n```\n\n**Constraints:**\n\n*   `1 <= radius <= 2000`\n*   `-10^(4) <= xCenter, yCenter <= 10^(4)`\n*   `-10^(4) <= x1 < x2 <= 10^(4)`\n*   `-10^(4) <= y1 < y2 <= 10^(4)`",
+  "constraints": [
+    "1 <= radius <= 2000",
+    "-104 <= xCenter, yCenter <= 104",
+    "-104 <= x1 < x2 <= 104",
+    "-104 <= y1 < y2 <= 104"
+  ],
+  "examples": [
+    {
+      "input": "radius = 1, xCenter = 0, yCenter = 0, x1 = 1, y1 = -1, x2 = 3, y2 = 1",
+      "output": "true",
+      "explanation": "Circle and rectangle share the point (1,0)."
+    },
+    {
+      "input": "radius = 1, xCenter = 1, yCenter = 1, x1 = 1, y1 = -3, x2 = 2, y2 = -1",
+      "output": "false",
+      "explanation": null
+    },
+    {
+      "input": "radius = 1, xCenter = 0, yCenter = 0, x1 = -1, y1 = 0, x2 = 0, y2 = 1",
+      "output": "true",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def checkOverlap(self, radius: int, xCenter: int, yCenter: int, x1: int, y1: int, x2: int, y2: int) -> bool:\n        ",
+    "python": "class Solution(object):\n    def checkOverlap(self, radius, xCenter, yCenter, x1, y1, x2, y2):\n        \"\"\"\n        :type radius: int\n        :type xCenter: int\n        :type yCenter: int\n        :type x1: int\n        :type y1: int\n        :type x2: int\n        :type y2: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} radius\n * @param {number} xCenter\n * @param {number} yCenter\n * @param {number} x1\n * @param {number} y1\n * @param {number} x2\n * @param {number} y2\n * @return {boolean}\n */\nvar checkOverlap = function(radius, xCenter, yCenter, x1, y1, x2, y2) {\n    \n};",
+    "typescript": "function checkOverlap(radius: number, xCenter: number, yCenter: number, x1: number, y1: number, x2: number, y2: number): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool CheckOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n        \n    }\n}",
+    "c": "bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n    \n}",
+    "golang": "func checkOverlap(radius int, xCenter int, yCenter int, x1 int, y1 int, x2 int, y2 int) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun checkOverlap(radius: Int, xCenter: Int, yCenter: Int, x1: Int, y1: Int, x2: Int, y2: Int): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkOverlap(_ radius: Int, _ xCenter: Int, _ yCenter: Int, _ x1: Int, _ y1: Int, _ x2: Int, _ y2: Int) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_overlap(radius: i32, x_center: i32, y_center: i32, x1: i32, y1: i32, x2: i32, y2: i32) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {Integer} radius\n# @param {Integer} x_center\n# @param {Integer} y_center\n# @param {Integer} x1\n# @param {Integer} y1\n# @param {Integer} x2\n# @param {Integer} y2\n# @return {Boolean}\ndef check_overlap(radius, x_center, y_center, x1, y1, x2, y2)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $radius\n     * @param Integer $xCenter\n     * @param Integer $yCenter\n     * @param Integer $x1\n     * @param Integer $y1\n     * @param Integer $x2\n     * @param Integer $y2\n     * @return Boolean\n     */\n    function checkOverlap($radius, $xCenter, $yCenter, $x1, $y1, $x2, $y2) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def checkOverlap(radius: Int, xCenter: Int, yCenter: Int, x1: Int, y1: Int, x2: Int, y2: Int): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec check_overlap(radius :: integer, x_center :: integer, y_center :: integer, x1 :: integer, y1 :: integer, x2 :: integer, y2 :: integer) :: boolean\n  def check_overlap(radius, x_center, y_center, x1, y1, x2, y2) do\n    \n  end\nend",
+    "erlang": "-spec check_overlap(Radius :: integer(), XCenter :: integer(), YCenter :: integer(), X1 :: integer(), Y1 :: integer(), X2 :: integer(), Y2 :: integer()) -> boolean().\ncheck_overlap(Radius, XCenter, YCenter, X1, Y1, X2, Y2) ->\n  .",
+    "racket": "(define/contract (check-overlap radius xCenter yCenter x1 y1 x2 y2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1725\n1504\n-9181\n-288\n9051\n9914\n9603",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1443\n-5124\n-2796\n6372\n5338\n8024\n7505",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1661\n3187\n-2602\n-741\n-1148\n6975\n4513",
+      "expectedOutput": "true"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "1676\n-9416\n6781\n-7752\n4861\n6950\n9261",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "212\n-6623\n-4142\n-458\n7639\n-124\n8870",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "432\n-4285\n3731\n5007\n-3617\n8623\n7684",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1166\n-3598\n-5159\n397\n-3160\n2173\n780",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1585\n3374\n723\n5647\n-1462\n6846\n8374",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1499\n418\n-5292\n1023\n5714\n1843\n8920",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1206\n-5948\n-3167\n-7056\n-2860\n-3826\n2123",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "114\n1351\n4904\n-95\n-672\n354\n4648",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1047\n6123\n-5589\n152\n6494\n8791\n8933",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1593\n9562\n-6448\n4181\n-6544\n6875\n5467",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1010\n5485\n-3551\n7405\n9216\n8634\n9304",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1797\n8152\n1083\n-3520\n460\n4135\n7348",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "605\n-6591\n-3674\n2391\n-4330\n6333\n696",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "946\n5108\n7023\n-558\n-7671\n1273\n86",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1786\n-1277\n8299\n4383\n-8848\n4925\n5146",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1427\n-9608\n-1622\n-2523\n-5278\n6643\n1277",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "1374\n2695\n-7652\n1767\n5918\n5315\n8467",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Locate the closest point of the square to the circle, you can then find the distance from this point to the center of the circle and check if this is less than or equal to the radius."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/circle-and-rectangle-overlapping/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.362Z",
+    "sourceUpdatedAt": null
+  }
+}

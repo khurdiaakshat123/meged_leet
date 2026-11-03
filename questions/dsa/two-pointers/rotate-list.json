@@ -1,0 +1,147 @@
+{
+  "id": "61",
+  "slug": "rotate-list",
+  "title": "Rotate List",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "statement": "Given the `head` of a linked list, rotate the list to the right by `k` places.\n\n**Example 1:**\n\n![](./assets/rotate-list-1.jpg)\n```\nInput: head = [1,2,3,4,5], k = 2\nOutput: [4,5,1,2,3]\n```\n\n**Example 2:**\n\n![](./assets/rotate-list-2.jpg)\n```\nInput: head = [0,1,2], k = 4\nOutput: [2,0,1]\n```\n\n**Constraints:**\n\n*   The number of nodes in the list is in the range `[0, 500]`.\n*   `-100 <= Node.val <= 100`\n*   `0 <= k <= 2 * 10^(9)`",
+  "constraints": [
+    "The number of nodes in the list is in the range [0, 500].",
+    "-100 <= Node.val <= 100",
+    "0 <= k <= 2 * 109"
+  ],
+  "examples": [
+    {
+      "input": "head = [1,2,3,4,5], k = 2",
+      "output": "[4,5,1,2,3]",
+      "explanation": null
+    },
+    {
+      "input": "head = [0,1,2], k = 4",
+      "output": "[2,0,1]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* rotateRight(ListNode* head, int k) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode rotateRight(ListNode head, int k) {\n        \n    }\n}",
+    "python3": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def rotateRight(self, head: ListNode | None, k: int) -> ListNode | None:\n        ",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def rotateRight(self, head, k):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :type k: int\n        :rtype: Optional[ListNode]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar rotateRight = function(head, k) {\n    \n};",
+    "typescript": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     val: number\n *     next: ListNode | null\n *     constructor(val?: number, next?: ListNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.next = (next===undefined ? null : next)\n *     }\n * }\n */\n\nfunction rotateRight(head: ListNode | null, k: number): ListNode | null {\n    \n};",
+    "csharp": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public int val;\n *     public ListNode next;\n *     public ListNode(int val=0, ListNode next=null) {\n *         this.val = val;\n *         this.next = next;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode RotateRight(ListNode head, int k) {\n        \n    }\n}",
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* rotateRight(struct ListNode* head, int k) {\n    \n}",
+    "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc rotateRight(head *ListNode, k int) *ListNode {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var li = ListNode(5)\n * var v = li.`val`\n * Definition for singly-linked list.\n * class ListNode(var `val`: Int) {\n *     var next: ListNode? = null\n * }\n */\nclass Solution {\n    fun rotateRight(head: ListNode?, k: Int): ListNode? {\n        \n    }\n}",
+    "swift": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public var val: Int\n *     public var next: ListNode?\n *     public init() { self.val = 0; self.next = nil; }\n *     public init(_ val: Int) { self.val = val; self.next = nil; }\n *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }\n * }\n */\nclass Solution {\n    func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {\n        \n    }\n}",
+    "rust": "// Definition for singly-linked list.\n// #[derive(PartialEq, Eq, Clone, Debug)]\n// pub struct ListNode {\n//   pub val: i32,\n//   pub next: Option<Box<ListNode>>\n// }\n// \n// impl ListNode {\n//   #[inline]\n//   fn new(val: i32) -> Self {\n//     ListNode {\n//       next: None,\n//       val\n//     }\n//   }\n// }\nimpl Solution {\n    pub fn rotate_right(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {\n        \n    }\n}",
+    "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val = 0, _next = nil)\n#         @val = val\n#         @next = _next\n#     end\n# end\n# @param {ListNode} head\n# @param {Integer} k\n# @return {ListNode}\ndef rotate_right(head, k)\n    \nend",
+    "php": "/**\n * Definition for a singly-linked list.\n * class ListNode {\n *     public $val = 0;\n *     public $next = null;\n *     function __construct($val = 0, $next = null) {\n *         $this->val = $val;\n *         $this->next = $next;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param ListNode $head\n     * @param Integer $k\n     * @return ListNode\n     */\n    function rotateRight($head, $k) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *   int val;\n *   ListNode? next;\n *   ListNode([this.val = 0, this.next]);\n * }\n */\nclass Solution {\n  ListNode? rotateRight(ListNode? head, int k) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(_x: Int = 0, _next: ListNode = null) {\n *   var next: ListNode = _next\n *   var x: Int = _x\n * }\n */\nobject Solution {\n    def rotateRight(head: ListNode, k: Int): ListNode = {\n        \n    }\n}",
+    "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec rotate_right(head :: ListNode.t | nil, k :: integer) :: ListNode.t | nil\n  def rotate_right(head, k) do\n    \n  end\nend",
+    "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec rotate_right(Head :: #list_node{} | null, K :: integer()) -> #list_node{} | null.\nrotate_right(Head, K) ->\n  .",
+    "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (rotate-right head k)\n  (-> (or/c list-node? #f) exact-integer? (or/c list-node? #f))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[]\n1225119263",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[-17]\n1923038205",
+      "expectedOutput": "[-17]"
+    },
+    {
+      "input": "[1,-80]\n1593953071",
+      "expectedOutput": "[-80,1]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[-40,74,56]\n373714615",
+      "expectedOutput": "[56,-40,74]"
+    },
+    {
+      "input": "[-49,-10,-15,-67,-97]\n312060316",
+      "expectedOutput": "[-97,-49,-10,-15,-67]"
+    },
+    {
+      "input": "[19,34,63,49,55,26,64]\n1978367270",
+      "expectedOutput": "[63,49,55,26,64,19,34]"
+    },
+    {
+      "input": "[53,-58,97,-14,-39,16,-68,95,50]\n871836552",
+      "expectedOutput": "[53,-58,97,-14,-39,16,-68,95,50]"
+    },
+    {
+      "input": "[-80,21,27,40,29,30,59,-49,-56,-7,-89]\n1692515966",
+      "expectedOutput": "[27,40,29,30,59,-49,-56,-7,-89,-80,21]"
+    },
+    {
+      "input": "[37,10,90,19,47,-82,-52,54,87,92,-9,17,-83,-55]\n358337715",
+      "expectedOutput": "[-55,37,10,90,19,47,-82,-52,54,87,92,-9,17,-83]"
+    },
+    {
+      "input": "[54,97,-28,70,18,-11,-63,-62,83,84,-56,8,38,83,20,97,27]\n1190975271",
+      "expectedOutput": "[-28,70,18,-11,-63,-62,83,84,-56,8,38,83,20,97,27,54,97]"
+    },
+    {
+      "input": "[-59,55,-3,39,-97,77,-74,57,8,-12,52,-23,-4,-17,-33,-11,-2,-33,-71,-63]\n1538807912",
+      "expectedOutput": "[8,-12,52,-23,-4,-17,-33,-11,-2,-33,-71,-63,-59,55,-3,39,-97,77,-74,57]"
+    },
+    {
+      "input": "[97,82,-65,-29,-37,-82,50,44,-32,-90,-36,21,41,-83,-83,82,-69,82,-54,38,-11,55,50]\n1645104528",
+      "expectedOutput": "[-37,-82,50,44,-32,-90,-36,21,41,-83,-83,82,-69,82,-54,38,-11,55,50,97,82,-65,-29]"
+    },
+    {
+      "input": "[92,-21,-73,90,0,21,49,-14,-93,-72,31,-90,20,-55,89,-30,-31,81,22,-94,83,-78,15,-35,-19,-55]\n155773844",
+      "expectedOutput": "[-93,-72,31,-90,20,-55,89,-30,-31,81,22,-94,83,-78,15,-35,-19,-55,92,-21,-73,90,0,21,49,-14]"
+    },
+    {
+      "input": "[-89,2,90,-26,39,9,89,44,-90,3,-47,70,-83,-26,64,-65,-88,8,-98,56,-41,38,79,-86,6,95,-19,69,-25]\n97425143",
+      "expectedOutput": "[3,-47,70,-83,-26,64,-65,-88,8,-98,56,-41,38,79,-86,6,95,-19,69,-25,-89,2,90,-26,39,9,89,44,-90]"
+    },
+    {
+      "input": "[-2,-53,49,-6,-100,12,-16,-73,100,55,20,2,-21,2,25,-31,-68,-41,57,57,-92,49,57,45,87,-58,74,37,8,-74,-93,-17,-70]\n1531374958",
+      "expectedOutput": "[100,55,20,2,-21,2,25,-31,-68,-41,57,57,-92,49,57,45,87,-58,74,37,8,-74,-93,-17,-70,-2,-53,49,-6,-100,12,-16,-73]"
+    },
+    {
+      "input": "[-59,67,-93,48,-69,38,-24,71,37,-87,76,23,-5,-77,62,-9,-29,58,-93,6,95,-82,-17,3,62,68,-2,3,-69,62,64,5,2,86,20,53,82]\n198250506",
+      "expectedOutput": "[37,-87,76,23,-5,-77,62,-9,-29,58,-93,6,95,-82,-17,3,62,68,-2,3,-69,62,64,5,2,86,20,53,82,-59,67,-93,48,-69,38,-24,71]"
+    },
+    {
+      "input": "[-76,-41,28,-71,12,51,37,-51,-39,65,-45,-90,-41,22,48,23,-60,38,-24,-2,-11,87,-75,80,-10,7,-8,24,-89,53,-8,23,11,-19,89,82,-35,-95,63,-17,-16]\n1456634985",
+      "expectedOutput": "[-24,-2,-11,87,-75,80,-10,7,-8,24,-89,53,-8,23,11,-19,89,82,-35,-95,63,-17,-16,-76,-41,28,-71,12,51,37,-51,-39,65,-45,-90,-41,22,48,23,-60,38]"
+    },
+    {
+      "input": "[-76,32,-48,98,46,82,80,-97,-93,55,44,75,-52,-90,21,30,40,45,81,-19,54,27,38,-88,30,18,-28,46,90,-72,-42,-34,100,24,-27,-49,-83,2,-32,80,-67,-86,-46,73,21]\n581595178",
+      "expectedOutput": "[100,24,-27,-49,-83,2,-32,80,-67,-86,-46,73,21,-76,32,-48,98,46,82,80,-97,-93,55,44,75,-52,-90,21,30,40,45,81,-19,54,27,38,-88,30,18,-28,46,90,-72,-42,-34]"
+    },
+    {
+      "input": "[-88,-16,72,65,98,6,73,31,-23,-14,96,-25,-13,75,-94,-15,-2,-92,52,3,77,-83,95,-48,-33,7,-71,-72,-1,34,48,-25,52,13,-25,89,57,-60,20,24,9,28,51,-72,-4,-45,-90,-5,52,63,-88,29,26,32,-38,80,-44,-3,-65,77,95,-30,-22,30,53,-80,-74,-36,-3,-84,-25,-13,-25,93,-38,-90,-13,26,-15,-52,56,-49,65,92,72,37,-69,-46,89,60,-37,-77,-27,-42,-37,-17,46,3,-3,-8,96,1,27,-26,80,17,71,78,-71,-92,-92,-68,-6,-2,18,11,73,56,-65,-53,39,-45,-10,-93,-83,-9,99,16,-24,70,61,-59,-20,32,50,-83,-96,-18,-56,-99,63,-92,64,-21,66,-90,62,98,-97,-24,59,-20,-90,-95,37,-2,-97,-85,56,89,-100,56,17,-93,65,-56,-57,-82,72,-48,-15,49,-44,-9,19,-4,-69,7,3,96,-48,17,-98,-17,57,-98,-72,-88,74,80,-62,33,29,-19,-48,87,12,-45,-1,-67,1,78,7,8,25,24,80,100,-65,-87,-72,-62,22,-96,-75,59,-66,35,70,-71,64,6,-32,25,-100,22,48,23,89,-58,0,90,37,79,-83,97,56,92,33,0,-96,-72,-3,47,84,47,-72,-20,-43,21]\n71962120",
+      "expectedOutput": "[61,-59,-20,32,50,-83,-96,-18,-56,-99,63,-92,64,-21,66,-90,62,98,-97,-24,59,-20,-90,-95,37,-2,-97,-85,56,89,-100,56,17,-93,65,-56,-57,-82,72,-48,-15,49,-44,-9,19,-4,-69,7,3,96,-48,17,-98,-17,57,-98,-72,-88,74,80,-62,33,29,-19,-48,87,12,-45,-1,-67,1,78,7,8,25,24,80,100,-65,-87,-72,-62,22,-96,-75,59,-66,35,70,-71,64,6,-32,25,-100,22,48,23,89,-58,0,90,37,79,-83,97,56,92,33,0,-96,-72,-3,47,84,47,-72,-20,-43,21,-88,-16,72,65,98,6,73,31,-23,-14,96,-25,-13,75,-94,-15,-2,-92,52,3,77,-83,95,-48,-33,7,-71,-72,-1,34,48,-25,52,13,-25,89,57,-60,20,24,9,28,51,-72,-4,-45,-90,-5,52,63,-88,29,26,32,-38,80,-44,-3,-65,77,95,-30,-22,30,53,-80,-74,-36,-3,-84,-25,-13,-25,93,-38,-90,-13,26,-15,-52,56,-49,65,92,72,37,-69,-46,89,60,-37,-77,-27,-42,-37,-17,46,3,-3,-8,96,1,27,-26,80,17,71,78,-71,-92,-92,-68,-6,-2,18,11,73,56,-65,-53,39,-45,-10,-93,-83,-9,99,16,-24,70]"
+    },
+    {
+      "input": "[-2,25,81,-20,-37,33,58,58,-53,-41,-87,38,-55,-66,-69,5,15,-45,-88,-29,22,-61,29,-48,-24,-59,-37,10,-62,68,67,-67,-42,14,-99,47,-91,-13,36,-7,-61,-65,32,91,-21,-79,-98,-73,-94,-44,68,4,-66,50,-94,-70,-47,88,-98,83,-94,86,-67,-42,-6,85,-13,-98,5,36,-100,39,-1,-38,5,14,97,-87,66,-19,-82,-55,71,84,70,-97,-75,0,1,41,77,-73,8,-42,6,51,32,-45,64,53,-18,-23,-67,23,2,71,-53,-46,35,66,44,32,2,13,55,-49,-73,-4,-28,84,44,75,-99,-21,75,72,-81,-29,68,30,0,27,-64,-76,-41,60,43,-94,84,-43,4,-86,-94,0,98,-76,-95,-56,-63,17,84,10,3,-93,-42,97,-47,-61,31,48,-38,73,-66,30,-97,25,4,32,-69,62,-17,-95,53,-35,24,57,58,90,9,80,12,-22,-47,-22,-52,-39,19,-99,-25,-28,-70,-95,39,65,48,-94,90,-96,-23,-68,-50,-77,-96,66,-61,49,100,-39,46,-60,71,15,-32,57,11,-29,-33,-26,30,22,-46,97,63,28,-71,-91,-66,-1,75,-3,66,-36,66,-75,57,93,-82,-35,43,4,89,1,52,-34,-78,-29,43,23,87,100,48,19,5,65,-45,-74,-95,42,-90,-9,-96,23,-63,97,71,73,-48,71,-100,-84,-98,-71,50,-3,10,-8,-80,-17,98,82,-95,-85,-26,-93,24,-39,-15,-85,-60,90,79,78,-62,74,32,-26,71,13,48,-64,85,85,24,-44,-70,86,-71,-82,-37,34,36,66,44,-71,-84,71,-73,-31,97,-40,-90,-79,42,-16,76,-99,81,-89,51,22,-80,-73,-77,-62,22,44,-64,29,98,16,-18,59,-37,-73,72,82,34,7,-85,55,28,95,-85,64,-82,91,-98,27,5,96,-3,-3,-68,44,-27,21,-88,-95,-70,-46,9,-19,-4,-92,74,98,41,-47,-52,-78,-99,-5,-4,58,80,40,62,16,-34,1,81,-23,80,16,-58,70,-51,-28,40,66,-11,-9,-71,-67,92,12,-74,72,87,-87,72,62,-62,23,57,-81,93,9,76,30,-20,70,-23,-18,61,18,-60,46,-96,-80,-14,-89,-24,49,52,1,80,-33,-83,57,31,63,-87,-97,-70,-31,-30,20,60,-11,35,-72,-74,-40,-8,-24,-33,84,38,-41,-74,94,91,31,83,96,-62,-92,-46,-6,-41,-98,25,96,32,66,50,-33,-49,-44,-9,-6,35,89,96,-83,83,-9,-79,78,52,10,1,88,-6,-99,63,43,56,89]\n610117042",
+      "expectedOutput": "[38,-41,-74,94,91,31,83,96,-62,-92,-46,-6,-41,-98,25,96,32,66,50,-33,-49,-44,-9,-6,35,89,96,-83,83,-9,-79,78,52,10,1,88,-6,-99,63,43,56,89,-2,25,81,-20,-37,33,58,58,-53,-41,-87,38,-55,-66,-69,5,15,-45,-88,-29,22,-61,29,-48,-24,-59,-37,10,-62,68,67,-67,-42,14,-99,47,-91,-13,36,-7,-61,-65,32,91,-21,-79,-98,-73,-94,-44,68,4,-66,50,-94,-70,-47,88,-98,83,-94,86,-67,-42,-6,85,-13,-98,5,36,-100,39,-1,-38,5,14,97,-87,66,-19,-82,-55,71,84,70,-97,-75,0,1,41,77,-73,8,-42,6,51,32,-45,64,53,-18,-23,-67,23,2,71,-53,-46,35,66,44,32,2,13,55,-49,-73,-4,-28,84,44,75,-99,-21,75,72,-81,-29,68,30,0,27,-64,-76,-41,60,43,-94,84,-43,4,-86,-94,0,98,-76,-95,-56,-63,17,84,10,3,-93,-42,97,-47,-61,31,48,-38,73,-66,30,-97,25,4,32,-69,62,-17,-95,53,-35,24,57,58,90,9,80,12,-22,-47,-22,-52,-39,19,-99,-25,-28,-70,-95,39,65,48,-94,90,-96,-23,-68,-50,-77,-96,66,-61,49,100,-39,46,-60,71,15,-32,57,11,-29,-33,-26,30,22,-46,97,63,28,-71,-91,-66,-1,75,-3,66,-36,66,-75,57,93,-82,-35,43,4,89,1,52,-34,-78,-29,43,23,87,100,48,19,5,65,-45,-74,-95,42,-90,-9,-96,23,-63,97,71,73,-48,71,-100,-84,-98,-71,50,-3,10,-8,-80,-17,98,82,-95,-85,-26,-93,24,-39,-15,-85,-60,90,79,78,-62,74,32,-26,71,13,48,-64,85,85,24,-44,-70,86,-71,-82,-37,34,36,66,44,-71,-84,71,-73,-31,97,-40,-90,-79,42,-16,76,-99,81,-89,51,22,-80,-73,-77,-62,22,44,-64,29,98,16,-18,59,-37,-73,72,82,34,7,-85,55,28,95,-85,64,-82,91,-98,27,5,96,-3,-3,-68,44,-27,21,-88,-95,-70,-46,9,-19,-4,-92,74,98,41,-47,-52,-78,-99,-5,-4,58,80,40,62,16,-34,1,81,-23,80,16,-58,70,-51,-28,40,66,-11,-9,-71,-67,92,12,-74,72,87,-87,72,62,-62,23,57,-81,93,9,76,30,-20,70,-23,-18,61,18,-60,46,-96,-80,-14,-89,-24,49,52,1,80,-33,-83,57,31,63,-87,-97,-70,-31,-30,20,60,-11,35,-72,-74,-40,-8,-24,-33,84]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/rotate-list/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.003Z",
+    "sourceUpdatedAt": null
+  }
+}

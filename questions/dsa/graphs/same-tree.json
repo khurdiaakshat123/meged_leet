@@ -1,0 +1,165 @@
+{
+  "id": "100",
+  "slug": "same-tree",
+  "title": "Same Tree",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Easy",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "statement": "Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.\n\nTwo binary trees are considered the same if they are structurally identical, and the nodes have the same value.\n\n**Example 1:**\n\n![](./assets/same-tree-1.jpg)\n```\nInput: p = [1,2,3], q = [1,2,3]\nOutput: true\n```\n\n**Example 2:**\n\n![](./assets/same-tree-2.jpg)\n```\nInput: p = [1,2], q = [1,null,2]\nOutput: false\n```\n\n**Example 3:**\n\n![](./assets/same-tree-3.jpg)\n```\nInput: p = [1,2,1], q = [1,1,2]\nOutput: false\n```\n\n**Constraints:**\n\n*   The number of nodes in both trees is in the range `[0, 100]`.\n*   `-10^(4) <= Node.val <= 10^(4)`",
+  "constraints": [
+    "The number of nodes in both trees is in the range [0, 100].",
+    "-104 <= Node.val <= 104"
+  ],
+  "examples": [
+    {
+      "input": "p = [1,2,3], q = [1,2,3]",
+      "output": "true",
+      "explanation": null
+    },
+    {
+      "input": "p = [1,2], q = [1,null,2]",
+      "output": "false",
+      "explanation": null
+    },
+    {
+      "input": "p = [1,2,1], q = [1,1,2]",
+      "output": "false",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isSameTree(TreeNode* p, TreeNode* q) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public boolean isSameTree(TreeNode p, TreeNode q) {\n        \n    }\n}",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def isSameTree(self, p: TreeNode | None, q: TreeNode | None) -> bool:\n        ",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def isSameTree(self, p, q):\n        \"\"\"\n        :type p: Optional[TreeNode]\n        :type q: Optional[TreeNode]\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} p\n * @param {TreeNode} q\n * @return {boolean}\n */\nvar isSameTree = function(p, q) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {\n    \n};",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public bool IsSameTree(TreeNode p, TreeNode q) {\n        \n    }\n}",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nbool isSameTree(struct TreeNode* p, struct TreeNode* q) {\n    \n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc isSameTree(p *TreeNode, q *TreeNode) bool {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn is_same_tree(p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> bool {\n        \n    }\n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} p\n# @param {TreeNode} q\n# @return {Boolean}\ndef is_same_tree(p, q)\n    \nend",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $p\n     * @param TreeNode $q\n     * @return Boolean\n     */\n    function isSameTree($p, $q) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  bool isSameTree(TreeNode? p, TreeNode? q) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def isSameTree(p: TreeNode, q: TreeNode): Boolean = {\n        \n    }\n}",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec is_same_tree(p :: TreeNode.t | nil, q :: TreeNode.t | nil) :: boolean\n  def is_same_tree(p, q) do\n    \n  end\nend",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec is_same_tree(P :: #tree_node{} | null, Q :: #tree_node{} | null) -> boolean().\nis_same_tree(P, Q) ->\n  .",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (is-same-tree p q)\n  (-> (or/c tree-node? #f) (or/c tree-node? #f) boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[]\n[]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[1,2]\n[1,null,2]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[0,-7,31,null,-10000,10000]\n[0,-7,31,null,-10000,10000]",
+      "expectedOutput": "true"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[]\n[]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[]\n[0]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[-17]\n[-17]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[1,2]\n[1,null,2]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[37,17,37]\n[37,37,17]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[0,-7,31,null,-10000,10000]\n[0,-7,31,null,-10000,10000]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[59,13,71,17,23,37,41]\n[59,13,71,17,23,37,43]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[8325,-9163,null,null,6432,-2115,null,null,-6525,-3022,null,null,1528,3275,null,null,1828,-9651,null,null,-1358]\n[8325,-9163,null,null,6432,-2115,null,null,-6525,-3022,null,null,1528,3275,null,null,1828,-9651,null,null,-1358]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-6,-5,null,-4,null,-3,null,-2,null,-1,null,0,null,1,null,2,null,3,null,4,null,5,null,6]\n[1,-3,5,-5,-1,3,6,-6,-4,-2,0,2,4]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[3412,-7352,-2983,-3784,2054,null,-8388,null,-9223,-3087,9651,null,null,-7055,null,-5450,-8513,null,1149,-3459,null,null,null,-9572,null,null,null,-6,null,null,null,629]\n[3412,-7352,-2983,-3784,2054,null,-8388,null,-9223,-3087,9651,null,null,-7055,null,-5450,-8513,null,1149,-3459,null,null,null,-9572,null,null,null,-6,null,null,null,629]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-128,-4250,-9565,7303,-4871,-9991,2197,-5231,-1173,9612,-414,-9395,8966,-5553,3232,-4413,-9773,-1254,-9430]\n[128,-4250,-9565,7303,-4871,-9991,2197,-5231,-1173,9612,-414,-9395,8966,-5553,3232,-4413,-9773,-1254,-9430]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[0,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0]\n[0,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0,null,0]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-901,null,659,4691,-3721,-574,-9050,3857,-4946,4405,9858,null,4714,7962,9659,8591,null,null,null,null,null,null,6854,null,null,9732,null,null,null,null,-5859]\n[901,null,659,4691,-3721,-574,-9050,3857,-4946,4405,9858,null,4714,7962,9659,8591,null,null,null,null,null,null,6854,null,null,9732,null,null,null,null,-5859]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[7618,-5834,-1650,-2802,1456,4347,7380,8404,-2897,-5654,-3208,6295,6189,5151,4517,6455,-2260,4163,-8783]\n[7618,-5834,-1650,-2802,1456,4347,7380,8404,-2897,-5654,-3208,6295,6189,5151,4517,6455,-2260,4163,-8783]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-9002,-1171,-5444,null,null,743,6616,6074,9282,-6482,3873,1943,null,null,null,-1122,null,6645,-5466,null,null,-8794,-4833,-1534,null,-1102,null,null,null,null,9862,null,null,-9307,null,null,-5007,null,9676,null,null,-1597,null,null,-7379]\n[-9002,-1171,-5444,null,null,743,6616,6074,9282,-6482,3873,1943,null,null,null,-1122,null,6645,-5466,null,null,-8794,-4833,-1534,null,-1102,null,null,null,null,9862,null,null,-9307,null,null,-5007,null,9676,null,null,-1597,null,null,-7379]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[511,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511]\n[511,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,511,null,null,511]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[-10000,10000,6322,7828,-3901,-7142,-4785,1083,7213,-10000,3287,-8037,4526,398,8841,788,5827,5149,-6516,-2253,7349,4,9809,-6534,-8483,-1540,8327,-9354,-7645,1809,8198]\n[-10000,10000,6322,7828,-3901,-7142,-4785,1083,7213,-10000,3287,-8037,4526,398,8841,788,5827,5149,-6516,-2253,7349,4,9809,-6534,-8483,-1540,8327,-9354,-7645,1809,8198]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-8020,8347,-1902,871,null,4870,-6867,4221,3433,-1280,982,9891,1322,5865,-4044,null,-5075,null,null,8313,7709,null,7790,6422,-2627,4746,6638,null,2806,null,6949,null,null,-3128,null,-7165,-7909,4642,4743,5220,null,-6986,-9024,1262,null,-8422,null,null,-3910,null,null,null,null,null,null,null,null,null,null,null,null,4769,null,null,9406]\n[-8020,8347,-1902,871,null,4870,-6867,4221,3433,-1280,982,9891,1322,5865,-4044,null,-5075,null,null,8313,7709,null,7790,6422,-2627,4746,6638,null,2806,null,6949,null,null,-3128,null,-7165,-7909,4642,4743,5220,null,-6986,-9024,1262,null,-8422,null,null,-3910,null,null,null,null,null,null,null,null,null,null,null,null,4769,null,null,9407]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[9080,-3378,null,null,3598,-1489,null,null,-5550,-2538,null,null,311,1422,null,null,-1007,8459,null,null,8828,5440,null,null,4525,-9704,null,null,7720,-329,null,null,7708,-4563,null,null,-4115,-6355,null,null,7426,3990,null,null,-2480,1453,null,null,409,-1469,null,null,-6969,894,null,null,6889,-2757,null,null,6096,2335,null,null,-3927,7437,null,null,1361,669,null,null,912,242,null,null,4398,-601,null,null,6257,9640,null,null,-7882,-4799,null,null,-4381,3348,null,null,8541,-3135,null,null,-133,6390,null,null,6861,1625,null,null,8807,-2664,null,null,-8633,5283,null,null,-4135,-4451,null,null,7256,2135,null,null,9024,9458,null,null,-5967,3793,null,null,7777,-6026,null,null,7538,3830,null,null,3861,1595,null,null,-7146,5152,null,null,9302,2341,null,null,-3604,7220,null,null,7735,3209,null,null,4569,8853,null,null,434,-1633,null,null,-1065,7143,null,null,-8570,9909,null,null,-5113,-1746,null,null,-2221,-3141,null,null,2646,7281,null,null,-9230,7919,null,null,9331,4060,null,null,-8735,2262,null,null,5330,-5251]\n[9080,-3378,null,null,3598,-1489,null,null,-5550,-2538,null,null,311,1422,null,null,-1007,8459,null,null,8828,5440,null,null,4525,-9704,null,null,7720,-329,null,null,7708,-4563,null,null,-4115,-6355,null,null,7426,3990,null,null,-2480,1453,null,null,409,-1469,null,null,-6969,894,null,null,6889,-2757,null,null,6096,2335,null,null,-3927,7437,null,null,1361,669,null,null,912,242,null,null,4398,-601,null,null,6257,9640,null,null,-7882,-4799,null,null,-4381,3348,null,null,8541,-3135,null,null,-133,6390,null,null,6861,1625,null,null,8807,-2664,null,null,-8633,5283,null,null,-4135,-4451,null,null,7256,2135,null,null,9024,9458,null,null,-5967,3793,null,null,7777,-6026,null,null,7538,3830,null,null,3861,1595,null,null,-7146,5152,null,null,9302,2341,null,null,-3604,7220,null,null,7735,3209,null,null,4569,8853,null,null,434,-1633,null,null,-1065,7143,null,null,-8570,9909,null,null,-5113,-1746,null,null,-2221,-3141,null,null,2646,7281,null,null,-9230,7919,null,null,9331,4060,null,null,-8735,2262,null,null,5330,-5251]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[-6469,3146,-5150,-2711,-9913,-3950,9913,-4600,406,6168,1023,5662,314,-8761,4378,-5629,-7088,-2679,-4080,-4689,5852,4921,3168,-2514,5491,-2434,2803,2062,-1194,-6781,-1144,-6065,107,-5103,-9079,9826,8922,-1058,9286,-4610,-9997,9004,-695,9008,-77,1000,2853,4219,4656,-2415,1582,-6116,8751,-1342,5498,-6731,-2153,1060,3775,-5743,6937,7884,-616,7721,918,5436,2745,9679,-2113,9686,-9887,-5478,-9641,-8708,3625,5360,-657,2886,4833,8579,5477,-1055,4836,3264,1650,7519,6429,-9838,1947,5089,-341,36,-6236,-1129,-8045,7200,-2722]\n[-6469,3146,-5150,-2711,-9913,-3950,9913,-4600,406,6168,1023,5662,314,-8761,4378,-5629,-7088,-2679,-4080,-4689,5852,4921,3168,-2514,5491,-2434,2803,2062,-1194,-6781,-1144,-6065,107,-5103,-9079,9826,8922,-1058,9286,-4610,-9997,9004,-695,9008,-77,1000,2853,4219,4656,-2415,1582,-6116,8751,-1342,5498,-6731,-2153,1060,3775,-5743,6937,7884,-616,7721,918,5436,2745,9679,-2113,9686,-9887,-5478,-9641,-8708,3625,5360,-657,2886,4833,8579,5477,-1055,4836,3264,1650,7519,6429,-9838,1947,5089,-341,36,-6236,-1129,-8045,7200,-2721]",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/same-tree/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.086Z",
+    "sourceUpdatedAt": null
+  }
+}

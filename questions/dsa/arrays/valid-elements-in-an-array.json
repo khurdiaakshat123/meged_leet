@@ -1,0 +1,165 @@
+{
+  "id": "3912",
+  "slug": "valid-elements-in-an-array",
+  "title": "Valid Elements in an Array",
+  "category": "dsa",
+  "subcategory": "arrays",
+  "difficulty": "Easy",
+  "tags": [
+    "Array"
+  ],
+  "statement": "You are given an integer array `nums`.\n\nAn element `nums[i]` is considered **valid** if it satisfies **at least** one of the following conditions:\n\n*   It is **strictly greater** than every element to its left.\n*   It is **strictly greater** than every element to its right.\n\nThe first and last elements are always valid.\n\nReturn an array of all valid elements in the same order as they appear in `nums`.\n\n**Example 1:**\n\n**Input:** nums = \\[1,2,4,2,3,2\\]\n\n**Output:** \\[1,2,4,3,2\\]\n\n**Explanation:**\n\n*   `nums[0]` and `nums[5]` are always valid.\n*   `nums[1]` and `nums[2]` are strictly greater than every element to their left.\n*   `nums[4]` is strictly greater than every element to its right.\n*   Thus, the answer is `[1, 2, 4, 3, 2]`.\n\n**Example 2:**\n\n**Input:** nums = \\[5,5,5,5\\]\n\n**Output:** \\[5,5\\]\n\n**Explanation:**\n\n*   The first and last elements are always valid.\n*   No other elements are strictly greater than all elements to their left or to their right.\n*   Thus, the answer is `[5, 5]`.\n\n**Example 3:**\n\n**Input:** nums = \\[1\\]\n\n**Output:** \\[1\\]\n\n**Explanation:**\n\nSince there is only one element, it is always valid. Thus, the answer is `[1]`.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `1 <= nums[i] <= 100`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,4,2,3,2]",
+      "output": "[1,2,4,3,2]",
+      "explanation": "nums[0] and nums[5] are always valid.\n\tnums[1] and nums[2] are strictly greater than every element to their left.\n\tnums[4] is strictly greater than every element to its right.\n\tThus, the answer is [1, 2, 4, 3, 2]."
+    },
+    {
+      "input": "nums = [5,5,5,5]",
+      "output": "[5,5]",
+      "explanation": "The first and last elements are always valid.\n\tNo other elements are strictly greater than all elements to their left or to their right.\n\tThus, the answer is [5, 5]."
+    },
+    {
+      "input": "nums = [1]",
+      "output": "[1]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findValidElements(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findValidElements(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def findValidElements(self, nums: list[int]) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def findValidElements(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findValidElements = function(nums) {\n    \n};",
+    "typescript": "function findValidElements(nums: number[]): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<int> FindValidElements(int[] nums) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findValidElements(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "golang": "func findValidElements(nums []int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun findValidElements(nums: IntArray): List<Int> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findValidElements(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_valid_elements(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef find_valid_elements(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function findValidElements($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findValidElements(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def findValidElements(nums: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec find_valid_elements(nums :: [integer]) :: [integer]\n  def find_valid_elements(nums) do\n    \n  end\nend",
+    "erlang": "-spec find_valid_elements(Nums :: [integer()]) -> [integer()].\nfind_valid_elements(Nums) ->\n  .",
+    "racket": "(define/contract (find-valid-elements nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[5,5,5,5]",
+      "expectedOutput": "[5,5]"
+    },
+    {
+      "input": "[1,2,4,2,3,2]",
+      "expectedOutput": "[1,2,4,3,2]"
+    },
+    {
+      "input": "[1,5,2]",
+      "expectedOutput": "[1,5,2]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1]",
+      "expectedOutput": "[1]"
+    },
+    {
+      "input": "[100]",
+      "expectedOutput": "[100]"
+    },
+    {
+      "input": "[5,5]",
+      "expectedOutput": "[5,5]"
+    },
+    {
+      "input": "[5,5,5,5]",
+      "expectedOutput": "[5,5]"
+    },
+    {
+      "input": "[1,2,4,2,3,2]",
+      "expectedOutput": "[1,2,4,3,2]"
+    },
+    {
+      "input": "[1,5,2]",
+      "expectedOutput": "[1,5,2]"
+    },
+    {
+      "input": "[9,1,2,1,9]",
+      "expectedOutput": "[9,9]"
+    },
+    {
+      "input": "[1,2,3,4,5,6,7,8]",
+      "expectedOutput": "[1,2,3,4,5,6,7,8]"
+    },
+    {
+      "input": "[20,19,18,17,16,15,14,13,12]",
+      "expectedOutput": "[20,19,18,17,16,15,14,13,12]"
+    },
+    {
+      "input": "[2,9,7,9,1,5,9,3,6,4]",
+      "expectedOutput": "[2,9,9,6,4]"
+    },
+    {
+      "input": "[1,3,5,7,9,10,8,6,4,2,1]",
+      "expectedOutput": "[1,3,5,7,9,10,8,6,4,2,1]"
+    },
+    {
+      "input": "[100,90,89,88,87,86,85,84,83,82,81,80]",
+      "expectedOutput": "[100,90,89,88,87,86,85,84,83,82,81,80]"
+    },
+    {
+      "input": "[43,90,91,88,51,28,96,24,76,65,3,99,68,46,62]",
+      "expectedOutput": "[43,90,91,96,99,68,62]"
+    },
+    {
+      "input": "[1,3,7,9,12,16,21,23,29,34,41,45,52,61,65,72,78,83,91,100]",
+      "expectedOutput": "[1,3,7,9,12,16,21,23,29,34,41,45,52,61,65,72,78,83,91,100]"
+    },
+    {
+      "input": "[95,84,40,36,68,16,72,79,71,41,64,42,71,18,27,84,9,100,22,77,73,21,72,72,60,5,9,39,18,35,25,100,46,60,80,57,21,46,69,87,44,61,30,94,55,13,78,22,36,3]",
+      "expectedOutput": "[95,100,100,94,78,36,3]"
+    },
+    {
+      "input": "[3,11,7,19,5,23,9,16,28,2,41,17,60,21,44,32,57,35,48,24,39,12,25,7,1]",
+      "expectedOutput": "[3,11,19,23,28,41,60,57,48,39,25,7,1]"
+    },
+    {
+      "input": "[43,100,60,92,18,3,40,15,27,71,48,67,65,41,84,93,94,21,32,88,79,47,89,2,41,50,62,74,57,94,65,7,91,73,34,79,68,10,46,22,97,76,13,27,11]",
+      "expectedOutput": "[43,100,97,76,27,11]"
+    },
+    {
+      "input": "[95,77,54,2,23,28,53,69,78,56,24,59,4,61,22,65,73,100,91,80,77,75,74,71,45,38,31,27,24,23,21,18,16,13,12]",
+      "expectedOutput": "[95,100,91,80,77,75,74,71,45,38,31,27,24,23,21,18,16,13,12]"
+    },
+    {
+      "input": "[5,16,17,21,23,24,25,26,28,30,35,36,40,41,43,44,45,46,47,48,51,52,54,56,60,62,64,70,72,76,77,80,81,82,83,84,96,97,98,99,100,95,94,93,92,91,90,89,88,87,86,85,79,78,75,74,73,71,69,68,67,66,65,63,61,59,58,57,55,53,50,49,42,39,38,37,34,33,32,31,29,27,22,20,19,18,15,14,13,12,11,10,9,8,7,6,4,3,2,1]",
+      "expectedOutput": "[5,16,17,21,23,24,25,26,28,30,35,36,40,41,43,44,45,46,47,48,51,52,54,56,60,62,64,70,72,76,77,80,81,82,83,84,96,97,98,99,100,95,94,93,92,91,90,89,88,87,86,85,79,78,75,74,73,71,69,68,67,66,65,63,61,59,58,57,55,53,50,49,42,39,38,37,34,33,32,31,29,27,22,20,19,18,15,14,13,12,11,10,9,8,7,6,4,3,2,1]"
+    },
+    {
+      "input": "[100,42,9,28,95,83,77,82,7,77,76,93,35,62,36,7,39,9,22,62,76,47,3,55,9,52,94,22,50,37,55,24,22,87,33,73,71,53,91,35,36,69,64,68,82,71,25,23,37,30,52,84,1,31,43,43,8,52,5,27,68,32,15,20,12,29,42,67,14,7,61,23,82,5,14,8,21,75,78,70,15,94,76,78,93,83,14,72,67,90,28,69,42,23,9,97,66,39,100]",
+      "expectedOutput": "[100,100]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Precompute the maximum left and right for each index.",
+    "The first and last are always valid."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/valid-elements-in-an-array/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.470Z",
+    "sourceUpdatedAt": null
+  }
+}

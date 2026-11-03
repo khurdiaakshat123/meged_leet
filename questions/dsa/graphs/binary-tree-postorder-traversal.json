@@ -1,0 +1,170 @@
+{
+  "id": "145",
+  "slug": "binary-tree-postorder-traversal",
+  "title": "Binary Tree Postorder Traversal",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Easy",
+  "tags": [
+    "Stack",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "statement": "Given the `root` of a binary tree, return _the postorder traversal of its nodes' values_.\n\n**Example 1:**\n\n**Input:** root = \\[1,null,2,3\\]\n\n**Output:** \\[3,2,1\\]\n\n**Explanation:**\n\n![](./assets/binary-tree-postorder-traversal-1.png)\n\n**Example 2:**\n\n**Input:** root = \\[1,2,3,4,5,null,8,null,null,6,7,9\\]\n\n**Output:** \\[4,6,7,5,2,9,8,3,1\\]\n\n**Explanation:**\n\n![](./assets/binary-tree-postorder-traversal-2.png)\n\n**Example 3:**\n\n**Input:** root = \\[\\]\n\n**Output:** \\[\\]\n\n**Example 4:**\n\n**Input:** root = \\[1\\]\n\n**Output:** \\[1\\]\n\n**Constraints:**\n\n*   The number of the nodes in the tree is in the range `[0, 100]`.\n*   `-100 <= Node.val <= 100`\n\n**Follow up:** Recursive solution is trivial, could you do it iteratively?",
+  "constraints": [
+    "The number of the nodes in the tree is in the range [0, 100].",
+    "-100 <= Node.val <= 100"
+  ],
+  "examples": [
+    {
+      "input": "root = [1,null,2,3]",
+      "output": "[3,2,1]",
+      "explanation": null
+    },
+    {
+      "input": "root = [1,2,3,4,5,null,8,null,null,6,7,9]",
+      "output": "[4,6,7,5,2,9,8,3,1]",
+      "explanation": null
+    },
+    {
+      "input": "root = []",
+      "output": "[]",
+      "explanation": null
+    },
+    {
+      "input": "root = [1]",
+      "output": "[1]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> postorderTraversal(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<Integer> postorderTraversal(TreeNode root) {\n        \n    }\n}",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def postorderTraversal(self, root: TreeNode | None) -> list[int]:\n        ",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def postorderTraversal(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar postorderTraversal = function(root) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction postorderTraversal(root: TreeNode | null): number[] {\n    \n};",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public IList<int> PostorderTraversal(TreeNode root) {\n        \n    }\n}",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* postorderTraversal(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc postorderTraversal(root *TreeNode) []int {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun postorderTraversal(root: TreeNode?): List<Int> {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func postorderTraversal(_ root: TreeNode?) -> [Int] {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn postorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @return {Integer[]}\ndef postorder_traversal(root)\n    \nend",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $root\n     * @return Integer[]\n     */\n    function postorderTraversal($root) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  List<int> postorderTraversal(TreeNode? root) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def postorderTraversal(root: TreeNode): List[Int] = {\n        \n    }\n}",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec postorder_traversal(root :: TreeNode.t | nil) :: [integer]\n  def postorder_traversal(root) do\n    \n  end\nend",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec postorder_traversal(Root :: #tree_node{} | null) -> [integer()].\npostorder_traversal(Root) ->\n  .",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (postorder-traversal root)\n  (-> (or/c tree-node? #f) (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[11,7,3]",
+      "expectedOutput": "[7,3,11]"
+    },
+    {
+      "input": "[9,null,-5,7,-2]",
+      "expectedOutput": "[7,-2,-5,9]"
+    },
+    {
+      "input": "[2,8,-4,null,6,-7]",
+      "expectedOutput": "[6,8,-7,-4,2]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[100]",
+      "expectedOutput": "[100]"
+    },
+    {
+      "input": "[-100,null,0]",
+      "expectedOutput": "[0,-100]"
+    },
+    {
+      "input": "[11,7,3]",
+      "expectedOutput": "[7,3,11]"
+    },
+    {
+      "input": "[9,null,-5,7,-2]",
+      "expectedOutput": "[7,-2,-5,9]"
+    },
+    {
+      "input": "[2,8,-4,null,6,-7]",
+      "expectedOutput": "[6,8,-7,-4,2]"
+    },
+    {
+      "input": "[0,0,0,0,0,0,0]",
+      "expectedOutput": "[0,0,0,0,0,0,0]"
+    },
+    {
+      "input": "[-8,-35,null,-8,null,-86,null,10,null,79,null,82,null,-36,null,61,null,-77,null,-34,null,-32,null,82,null,64]",
+      "expectedOutput": "[64,82,-32,-34,-77,61,-36,82,79,10,-86,-8,-35,-8]"
+    },
+    {
+      "input": "[-8,99,-20,null,-92,-96,null,null,null,-86,null,null,-8,18,49,-27,null,null,-97]",
+      "expectedOutput": "[-92,99,-27,18,-97,49,-8,-86,-96,-20,-8]"
+    },
+    {
+      "input": "[66,null,-70,null,-78,null,-69,null,91,null,-35,null,-72,null,64,null,-82,null,82,null,17,null,-52,null,-20,null,48,null,-15,null,-45,null,58,null,-94]",
+      "expectedOutput": "[-94,58,-45,-15,48,-20,-52,17,82,-82,64,-72,-35,91,-69,-78,-70,66]"
+    },
+    {
+      "input": "[66,null,60,-50,null,null,76,93,null,null,3,-84,null,null,4,-86,null,null,-13,-18,null,null,1,22,null,null,-23,-57,null,null,88]",
+      "expectedOutput": "[88,-57,-23,22,1,-18,-13,-86,4,-84,3,93,76,-50,60,66]"
+    },
+    {
+      "input": "[39,-87,-19,18,51,90,-31,48,15,18,60,-50,-49,-51,27,99,-54,-31,72]",
+      "expectedOutput": "[99,-54,48,-31,72,15,18,18,60,51,-87,-50,-49,90,-51,27,-31,-19,39]"
+    },
+    {
+      "input": "[2,74,100,null,0,-47,null,null,97,null,null,null,27,null,86,null,66,null,-51,null,5,null,-22]",
+      "expectedOutput": "[-22,5,-51,66,86,27,97,0,74,-47,100,2]"
+    },
+    {
+      "input": "[3,91,-97,null,null,-13,19,93,-90,null,null,-44,-35,null,null,null,null,-63,57,-28,-30,null,null,null,null,-50,14,null,null,78,-96]",
+      "expectedOutput": "[91,-44,-28,-50,78,-96,14,-30,-63,57,-35,93,-90,-13,19,-97,3]"
+    },
+    {
+      "input": "[-69,-40,-42,-31,39,null,-35,3,42,null,-38,-93,56,-80,null,-36,75,-67,null,17,72,-35,null,null,null,100,48,null,null,null,null,null,null,null,54,null,67,-63,-63,null,null,null,11,null,null,null,null,null,null,-80]",
+      "expectedOutput": "[-80,3,-63,-63,100,48,-36,75,42,-31,-67,-38,39,-40,17,-80,11,54,72,-93,67,-35,56,-35,-42,-69]"
+    },
+    {
+      "input": "[-68,-78,null,87,null,-56,null,-76,null,-59,null,-2,null,-89,null,93,null,-29,null,84,null,-25,null,18,null,-59,null,-79,null,97,null,-31,null,84,null,-23,null,11,null,-56,null,-83,null,82,null,-68,null,32,null,40,null,-45,null,34,null,-29,null,-44,null,4,null,-6,null,-69,null,74,null,-57,null,87,null,-6,null,-12]",
+      "expectedOutput": "[-12,-6,87,-57,74,-69,-6,4,-44,-29,34,-45,40,32,-68,82,-83,-56,11,-23,84,-31,97,-79,-59,18,-25,84,-29,93,-89,-2,-59,-76,-56,87,-78,-68]"
+    },
+    {
+      "input": "[88,11,10,-81,-25,40,-28,-75,-45,-20,59,-90,-20,-72,2,null,null,null,26,null,55,null,-97,null,null,null,89,null,100,null,96]",
+      "expectedOutput": "[-75,26,-45,-81,55,-20,-97,59,-25,11,-90,89,-20,40,100,-72,96,2,-28,10,88]"
+    },
+    {
+      "input": "[-88,100,-40,82,-36,null,null,null,null,-91,-32,-13,-78,null,null,null,null,2,56,null,null,-12,52,-48,-37,null,null,-6,-100,null,null,null,null,55,-81,88,-94,null,null,null,null,-66,-83,27,-59,null,null,null,null,86,62,64,-33,null,null,-16,19,null,null,null,null,51,69]",
+      "expectedOutput": "[82,-13,2,-6,88,27,-16,51,69,19,64,-33,86,62,-59,-66,-83,-94,55,-81,-100,-48,-37,-12,52,56,-78,-91,-32,-36,100,-40,-88]"
+    },
+    {
+      "input": "[-5,-82,null,88,null,null,29,null,-9,null,-99,-28,null,null,-78,null,-49,null,-8,null,-92,70,null,-86,null,14,null,null,-41,null,-16,-46,null,76,null,13,null,6,null,53,null,89,null,-35,null,null,-24,83,null,null,84,null,-55,55,null,null,24,null,57,-96,null,98,null,null,5,95,null,null,-84,69,null,null,-50,-3,null,null,-28,null,-81,null,36,null,47,-22,null,-28,null,null,-15,null,-93,78,null,null,-96,-16,null,72,null,46,null,78,null,null,-15,72,null,-74,null,88,null,58,null,null,5,null,-67,15,null,-39,null,null,-8,null,-94,73,null,null,-38,null,-62,-27,null,33,null,null,21,null,-73,null,58,83,null,null,-25,null,78,-11,null,84,null,47,null,null,9,-58,null,46,null,-48,null,-56,null,95,null,null,20,41,null,null,77,-12,null,null,16,11,null,85,null,-96,null,20,null,null,-48,null,-39,null,4,null,74,47,null,-19,null,null,29,null,7]",
+      "expectedOutput": "[7,29,-19,47,74,4,-39,-48,20,-96,85,11,16,-12,77,41,20,95,-56,-48,46,-58,9,47,84,-11,78,-25,83,58,-73,21,33,-27,-62,-38,73,-94,-8,-39,15,-67,5,58,88,-74,72,-15,78,46,72,-16,-96,78,-93,-15,-28,-22,47,36,-81,-28,-3,-50,69,-84,95,5,98,-96,57,24,55,-55,84,83,-24,-35,89,53,6,13,76,-46,-16,-41,14,-86,70,-92,-8,-49,-78,-28,-99,-9,29,88,-82,-5]"
+    },
+    {
+      "input": "[36,-28,29,-17,51,54,10,7,28,-68,24,35,-8,98,-12,46,92,-11,-35,35,-67,84,-44,45,-17,38,86,14,-4,-62,92,100,-34,-85,-47,7,61,86,82,62,-37,-96,65,-46,58,100,50,-46,14,1,-71,25,-65,-21,-55,-19,-26,17,-47,58,-42,73,66,-39,46,17,-46,-13,-74,60,-21,86,7,-19,26,88,-13,-80,-80,12,-29,31,9,18,11,-64,-4,-97,15,18,40,34,4,63,-29,-84,27,29]",
+      "expectedOutput": "[-39,46,100,17,-46,-34,46,-13,-74,-85,60,-21,-47,92,7,86,7,7,-19,26,61,-11,88,-13,86,-80,-80,82,-35,28,-17,12,-29,62,31,9,-37,35,18,11,-96,-64,-4,65,-67,-68,-97,15,-46,18,40,58,84,34,4,100,63,-29,50,-44,24,51,-28,-84,27,-46,29,14,45,1,-71,-17,35,25,-65,38,-21,-55,86,-8,54,-19,-26,14,17,-47,-4,98,58,-42,-62,73,66,92,-12,10,29,36]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.622Z",
+    "sourceUpdatedAt": null
+  }
+}

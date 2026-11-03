@@ -1,0 +1,168 @@
+{
+  "id": "2078",
+  "slug": "two-furthest-houses-with-different-colors",
+  "title": "Two Furthest Houses With Different Colors",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Greedy"
+  ],
+  "statement": "There are `n` houses evenly lined up on the street, and each house is beautifully painted. You are given a **0-indexed** integer array `colors` of length `n`, where `colors[i]` represents the color of the `i^(th)` house.\n\nReturn _the **maximum** distance between **two** houses with **different** colors_.\n\nThe distance between the `i^(th)` and `j^(th)` houses is `abs(i - j)`, where `abs(x)` is the **absolute value** of `x`.\n\n**Example 1:**\n\n![](./assets/two-furthest-houses-with-different-colors-1.png)\n```\nInput: colors = [1,1,1,6,1,1,1]\nOutput: 3\nExplanation: In the above image, color 1 is blue, and color 6 is red.\nThe furthest two houses with different colors are house 0 and house 3.\nHouse 0 has color 1, and house 3 has color 6. The distance between them is abs(0 - 3) = 3.\nNote that houses 3 and 6 can also produce the optimal answer.\n```\n\n**Example 2:**\n\n![](./assets/two-furthest-houses-with-different-colors-2.png)\n```\nInput: colors = [1,8,3,8,3]\nOutput: 4\nExplanation: In the above image, color 1 is blue, color 8 is yellow, and color 3 is green.\nThe furthest two houses with different colors are house 0 and house 4.\nHouse 0 has color 1, and house 4 has color 3. The distance between them is abs(0 - 4) = 4.\n```\n\n**Example 3:**\n\n```\nInput: colors = [0,1]\nOutput: 1\nExplanation: The furthest two houses with different colors are house 0 and house 1.\nHouse 0 has color 0, and house 1 has color 1. The distance between them is abs(0 - 1) = 1.\n```\n\n**Constraints:**\n\n*   `n == colors.length`\n*   `2 <= n <= 100`\n*   `0 <= colors[i] <= 100`\n*   Test data are generated such that **at least** two houses have different colors.",
+  "constraints": [
+    "n == colors.length",
+    "2 <= n <= 100",
+    "0 <= colors[i] <= 100",
+    "Test data are generated such that at least two houses have different colors."
+  ],
+  "examples": [
+    {
+      "input": "colors = [1,1,1,6,1,1,1]",
+      "output": "3",
+      "explanation": "In the above image, color 1 is blue, and color 6 is red.\nThe furthest two houses with different colors are house 0 and house 3.\nHouse 0 has color 1, and house 3 has color 6. The distance between them is abs(0 - 3) = 3.\nNote that houses 3 and 6 can also produce the optimal answer."
+    },
+    {
+      "input": "colors = [1,8,3,8,3]",
+      "output": "4",
+      "explanation": "In the above image, color 1 is blue, color 8 is yellow, and color 3 is green.\nThe furthest two houses with different colors are house 0 and house 4.\nHouse 0 has color 1, and house 4 has color 3. The distance between them is abs(0 - 4) = 4."
+    },
+    {
+      "input": "colors = [0,1]",
+      "output": "1",
+      "explanation": "The furthest two houses with different colors are house 0 and house 1.\nHouse 0 has color 0, and house 1 has color 1. The distance between them is abs(0 - 1) = 1."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(vector<int>& colors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(int[] colors) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxDistance(self, colors: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxDistance(self, colors):\n        \"\"\"\n        :type colors: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} colors\n * @return {number}\n */\nvar maxDistance = function(colors) {\n    \n};",
+    "typescript": "function maxDistance(colors: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxDistance(int[] colors) {\n        \n    }\n}",
+    "c": "int maxDistance(int* colors, int colorsSize) {\n    \n}",
+    "golang": "func maxDistance(colors []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxDistance(colors: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ colors: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(colors: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} colors\n# @return {Integer}\ndef max_distance(colors)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $colors\n     * @return Integer\n     */\n    function maxDistance($colors) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(List<int> colors) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxDistance(colors: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_distance(colors :: [integer]) :: integer\n  def max_distance(colors) do\n    \n  end\nend",
+    "erlang": "-spec max_distance(Colors :: [integer()]) -> integer().\nmax_distance(Colors) ->\n  .",
+    "racket": "(define/contract (max-distance colors)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[6,12,6]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[37,35,72,27]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[72,93,29,72,72]",
+      "expectedOutput": "3"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[82,67]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[6,12,6]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[37,35,72,27]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[36,36,14,36,71,36,36]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[0,0,31,0,0,0,0,0]",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[32,32,4,11,4,32]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[72,93,29,72,72]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[93,18,100,4,36,40,88,79,15,25,61]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[8,8,8,59,74,52,19,8,8,8]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,97,4]",
+      "expectedOutput": "15"
+    },
+    {
+      "input": "[29,29,29,45,85,10,38,29,43,85,72,29]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[0,0,71,56,46,79,97,89,91,0,45,0,0,0,0,0]",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "[100,100,100,100,100,94,73,27,7,39,56,1,56,70,14,100,100,100]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[7,75,42,18,40,39,85,28,58,57,53,39,45,26,80,36,13,64,69]",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "[69,69,69,69,69,69,69,69,69,69,24,75,77,99,94,13,11,79,34,69,52,12,46,40,64,72,44,69,69,69,69,69]",
+      "expectedOutput": "26"
+    },
+    {
+      "input": "[1,73,1,71,41,49,21,46,24,79,27,13,98,30,16,96,59,96,32,17,53,41,20,71,54,49,87,66,34,53,26,44,20,28,27,61,41,89]",
+      "expectedOutput": "37"
+    },
+    {
+      "input": "[83,83,83,83,83,83,83,11,83,83,83,83,83,83,83,83,83,83,11,83,83,83,83,83,83,83,83,83,83,83,83,83,83]",
+      "expectedOutput": "25"
+    },
+    {
+      "input": "[57,57,57,57,57,57,57,57,57,99,21,21,7,55,50,4,57,33,33,75,6,51,77,56,55,84,57,57,57,57,57,57,57,57,57,57,57]",
+      "expectedOutput": "27"
+    },
+    {
+      "input": "[53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,81,40,53,53,68,71,93,85,76,20,0,11,84,30,52,40,14,87,10,41,17,57,34,31,52,48,14,15,87,66,42,62,96,36,52,45,21,43,49,11,100,36,61,53,12,62,54,69,50,13,13,43,33,85,98,79,0,31,52,53,91,73,89,2,38,26,91,70,60,80,40,52,83,53,53,53,53,53,53,53,53]",
+      "expectedOutput": "91"
+    },
+    {
+      "input": "[40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,26,88,87,43,40,44,22,54,60,46,68,62,33,87,1,22,87,85,79,63,8,87,73,44,51,71,82,95,97,83,9,29,31,67,34,64,77,40,76,87,57,54,20,45,82,48,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40]",
+      "expectedOutput": "73"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "The constraints are small. Can you try the combination of every two houses?",
+    "Greedily, the maximum distance will come from either the pair of the leftmost house and possibly some house on the right with a different color, or the pair of the rightmost house and possibly some house on the left with a different color."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/two-furthest-houses-with-different-colors/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.296Z",
+    "sourceUpdatedAt": null
+  }
+}

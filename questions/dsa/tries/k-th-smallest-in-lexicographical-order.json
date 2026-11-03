@@ -1,0 +1,144 @@
+{
+  "id": "440",
+  "slug": "k-th-smallest-in-lexicographical-order",
+  "title": "K-th Smallest in Lexicographical Order",
+  "category": "dsa",
+  "subcategory": "tries",
+  "difficulty": "Hard",
+  "tags": [
+    "Trie"
+  ],
+  "statement": "Given two integers `n` and `k`, return _the_ `k^(th)` _lexicographically smallest integer in the range_ `[1, n]`.\n\n**Example 1:**\n\n```\nInput: n = 13, k = 2\nOutput: 10\nExplanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.\n```\n\n**Example 2:**\n\n```\nInput: n = 1, k = 1\nOutput: 1\n```\n\n**Constraints:**\n\n*   `1 <= k <= n <= 10^(9)`",
+  "constraints": [
+    "1 <= k <= n <= 109"
+  ],
+  "examples": [
+    {
+      "input": "n = 13, k = 2",
+      "output": "10",
+      "explanation": "The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10."
+    },
+    {
+      "input": "n = 1, k = 1",
+      "output": "1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int findKthNumber(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findKthNumber(int n, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def findKthNumber(self, n: int, k: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def findKthNumber(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar findKthNumber = function(n, k) {\n    \n};",
+    "typescript": "function findKthNumber(n: number, k: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int FindKthNumber(int n, int k) {\n        \n    }\n}",
+    "c": "int findKthNumber(int n, int k) {\n    \n}",
+    "golang": "func findKthNumber(n int, k int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun findKthNumber(n: Int, k: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findKthNumber(_ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_kth_number(n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef find_kth_number(n, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function findKthNumber($n, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findKthNumber(int n, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def findKthNumber(n: Int, k: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec find_kth_number(n :: integer, k :: integer) :: integer\n  def find_kth_number(n, k) do\n    \n  end\nend",
+    "erlang": "-spec find_kth_number(N :: integer(), K :: integer()) -> integer().\nfind_kth_number(N, K) ->\n  .",
+    "racket": "(define/contract (find-kth-number n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "13\n5",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "136\n111",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "1074\n346",
+      "expectedOutput": "342"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "10110\n9697",
+      "expectedOutput": "9626"
+    },
+    {
+      "input": "100148\n94644",
+      "expectedOutput": "95043"
+    },
+    {
+      "input": "999999995\n757640607",
+      "expectedOutput": "781876543"
+    },
+    {
+      "input": "235\n186",
+      "expectedOutput": "54"
+    },
+    {
+      "input": "358\n103",
+      "expectedOutput": "191"
+    },
+    {
+      "input": "1296\n1072",
+      "expectedOutput": "797"
+    },
+    {
+      "input": "10332\n6193",
+      "expectedOutput": "6272"
+    },
+    {
+      "input": "100370\n84158",
+      "expectedOutput": "85406"
+    },
+    {
+      "input": "999999989\n793751148",
+      "expectedOutput": "814376029"
+    },
+    {
+      "input": "457\n274",
+      "expectedOutput": "345"
+    },
+    {
+      "input": "580\n332",
+      "expectedOutput": "398"
+    },
+    {
+      "input": "1518\n1067",
+      "expectedOutput": "592"
+    },
+    {
+      "input": "10554\n5037",
+      "expectedOutput": "5031"
+    },
+    {
+      "input": "100592\n564",
+      "expectedOutput": "100503"
+    },
+    {
+      "input": "999999983\n598463651",
+      "expectedOutput": "638617282"
+    },
+    {
+      "input": "679\n150",
+      "expectedOutput": "233"
+    },
+    {
+      "input": "802\n451",
+      "expectedOutput": "504"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.771Z",
+    "sourceUpdatedAt": null
+  }
+}

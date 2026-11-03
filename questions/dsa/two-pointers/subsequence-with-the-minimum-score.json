@@ -1,0 +1,151 @@
+{
+  "id": "2565",
+  "slug": "subsequence-with-the-minimum-score",
+  "title": "Subsequence With the Minimum Score",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Hard",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Binary Search"
+  ],
+  "statement": "You are given two strings `s` and `t`.\n\nYou are allowed to remove any number of characters from the string `t`.\n\nThe score of the string is `0` if no characters are removed from the string `t`, otherwise:\n\n*   Let `left` be the minimum index among all removed characters.\n*   Let `right` be the maximum index among all removed characters.\n\nThen the score of the string is `right - left + 1`.\n\nReturn _the minimum possible score to make_ `t` _a subsequence of_ `s`_._\n\nA **subsequence** of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., `\"ace\"` is a subsequence of `\"abcde\"` while `\"aec\"` is not).\n\n**Example 1:**\n\n```\nInput: s = \"abacaba\", t = \"bzaa\"\nOutput: 1\nExplanation: In this example, we remove the character \"z\" at index 1 (0-indexed).\nThe string t becomes \"baa\" which is a subsequence of the string \"abacaba\" and the score is 1 - 1 + 1 = 1.\nIt can be proven that 1 is the minimum score that we can achieve.\n```\n\n**Example 2:**\n\n```\nInput: s = \"cde\", t = \"xyz\"\nOutput: 3\nExplanation: In this example, we remove characters \"x\", \"y\" and \"z\" at indices 0, 1, and 2 (0-indexed).\nThe string t becomes \"\" which is a subsequence of the string \"cde\" and the score is 2 - 0 + 1 = 3.\nIt can be proven that 3 is the minimum score that we can achieve.\n```\n\n**Constraints:**\n\n*   `1 <= s.length, t.length <= 10^(5)`\n*   `s` and `t` consist of only lowercase English letters.",
+  "constraints": [
+    "1 <= s.length, t.length <= 105",
+    "s and t consist of only lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "s = \"abacaba\", t = \"bzaa\"",
+      "output": "1",
+      "explanation": "In this example, we remove the character \"z\" at index 1 (0-indexed).\nThe string t becomes \"baa\" which is a subsequence of the string \"abacaba\" and the score is 1 - 1 + 1 = 1.\nIt can be proven that 1 is the minimum score that we can achieve."
+    },
+    {
+      "input": "s = \"cde\", t = \"xyz\"",
+      "output": "3",
+      "explanation": "In this example, we remove characters \"x\", \"y\" and \"z\" at indices 0, 1, and 2 (0-indexed).\nThe string t becomes \"\" which is a subsequence of the string \"cde\" and the score is 2 - 0 + 1 = 3.\nIt can be proven that 3 is the minimum score that we can achieve."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minimumScore(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumScore(String s, String t) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minimumScore(self, s: str, t: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def minimumScore(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar minimumScore = function(s, t) {\n    \n};",
+    "typescript": "function minimumScore(s: string, t: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinimumScore(string s, string t) {\n        \n    }\n}",
+    "c": "int minimumScore(char* s, char* t) {\n    \n}",
+    "golang": "func minimumScore(s string, t string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minimumScore(s: String, t: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumScore(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_score(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef minimum_score(s, t)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function minimumScore($s, $t) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumScore(String s, String t) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minimumScore(s: String, t: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec minimum_score(s :: String.t, t :: String.t) :: integer\n  def minimum_score(s, t) do\n    \n  end\nend",
+    "erlang": "-spec minimum_score(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nminimum_score(S, T) ->\n  .",
+    "racket": "(define/contract (minimum-score s t)\n  (-> string? string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"e\"\n\"eceadcde\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"dd\"\n\"ebaddeadbe\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"ecdb\"\n\"ebbdcddbacaaeaa\"",
+      "expectedOutput": "13"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"dbb\"\n\"cacdcedaebbb\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"ebdcec\"\n\"eeecdbccadabbdbdab\"",
+      "expectedOutput": "16"
+    },
+    {
+      "input": "\"bdeccbcc\"\n\"cbbededcdcdbacbcaddde\"",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "\"baaecacebe\"\n\"dededdcdadebdaaeadbbedde\"",
+      "expectedOutput": "23"
+    },
+    {
+      "input": "\"bdceabbabbea\"\n\"cbbcbcbacccbcabdeecaaeedeea\"",
+      "expectedOutput": "22"
+    },
+    {
+      "input": "\"dccddccaecbcbca\"\n\"ebaacdbabbbbadbcbeabddebaabeec\"",
+      "expectedOutput": "27"
+    },
+    {
+      "input": "\"bcaddeddbbadacbcba\"\n\"bbdaedbdeabecbbacdceddececdcbcbbeb\"",
+      "expectedOutput": "29"
+    },
+    {
+      "input": "\"ddccdadbbedcbbababbeb\"\n\"eadbebeeccbddbaaaeccdcccdbecadbccedbae\"",
+      "expectedOutput": "31"
+    },
+    {
+      "input": "\"ababcdcdebecbaecbdaeacde\"\n\"aceaaacbddadebcabdbebceaabbbebaeccbebdadbd\"",
+      "expectedOutput": "34"
+    },
+    {
+      "input": "\"bacaeaeaccbdadcddbcdcecccdd\"\n\"adacdedbadedeaecaaddbccaeddbbbcbdbaaebcbdbadcd\"",
+      "expectedOutput": "38"
+    },
+    {
+      "input": "\"ccbeddbadbcdeaebdedceabaeebccb\"\n\"bebabebcceaecbcbaddcaebbacddbdaddaaccddcdadeacedcaadbdceabcacabbaddebacaecebaebdccbdabdaeaaceebeceebacaeddaedddbceabcaaabebdccbebedceacecebadadeddaacbdaebcdedcaddaeeedbcecddeccbedbccebdcaebbcbbbeaedbceddbadbbbacceddadbebcbebaddccbdddebcedaceedbbdcbcbaedbedbddcccabaccebadeceeabceadcccaeeeecaaabaebaeddababcdbceaceeadbebaabaabbebdeeadebebbdbbadeeeaddabcbaaabddbeddbeddaadddcdbccadadeabdcadbbdcbaedabcbaacbccdcdcedcecdcaddeaacddeddcdcdcabaedddbabddcceabdedabeabeccadecdababcaccccebdcbdaeaaccbecbdabeaeacbcacccebadaecadaecbeaabeabddcbaeddebdbbacdcbcaacadcbaebdaeceaadedcdaadcbeacaaebbceeeadddbebaecaceabacabccabbadcbeeddcecedddedeedceeeebdacbccbcaabedcaedddacdcdcbcddddcaaeeceeeaccacdcdbacabbeabeaaebdabebbbaaaacdeabcaddbaccdabbcbebaebeebccbcdeeaceddeaccbbdacbbbdebcabcecacddbaebcadbccbaedbbbadeebdabcbacccddddcbecebcbcebeceaeadbbeaaadbedccdeeaadbaeadcedecdebbcadcedebdabadeedcbcbccbbccaddcabbebbaeaaedbccccdcaadeeaeeceeacbbaaeebccedebcbbdacaacabaacaaedebdaeedeecadcbbdabecacccedcebcaabbddedcaeaeaeaedaeaacceaeddeaedebeeadcccedcadacdacddaddadabbedbaedadcdadddcbdcdccccbbabbcbcbcbaccbaeacdadeccceebbcbcadbbceaccbbabceadacebcdabcbaccadcbbdabbddacebcdecebdbacadbccceebcaeddacceccacdadccedcbeecebddcdbabcdcabaadbaaddadabcbebcddeeddadadbcebedbddcbdaeddcddcacabbcbaddaaccdbcabeebacddbddbaacdecdaccdacadbdeaaaccaaaccdbbdcabbdeeddacbdadcbbaeecdbdadeadaaeeadadddbcbbbaceedbceaedcabebdbbcaaabbbcdcbeeebcddaaadbebbddecdddbebadbedcecabbaeabadcbbaecabcacdbdddecbecebeaeaaaddcbdcbbbeeecbebacbeadbeacbabcebecacadcceecdbeeabeaeaedbddbbdbeaecbaceadceeaeceddebecdbbbaddceaacdddcaddbdaceabceacadebdcdebbeeecacbecbcaeeacbadddcaaebbbebecbbadbeaedccadeeecbccaceabbddbebcddecdeadbdbacbceacaddaedeebcccbababbbceeddabeacdaeceabeaacaaddbeaccbceeeddacdcbdcebabeadeeebeddabbadacecbbceacaeaaedddbcacebcebbaccbbbcbdabeeadcdaedcaaeeaaaaeedddcaecdeeecbcbbbcabedddbddcbeebceeccbebdbcabadededacabccaadeacedcddaadecdacdaacdeeacddbdcaaecbedcdbdabcaedbbcadcacedcdcaacaeeccecabaddedbeeccbecaeddaddaaabdbadbbecccdbabbeeeabcdbdccaadceaeddcbbbaacccceadcbeadbeeacecbabbcedcdecebbeabedacbdcbcebdadbadcadeddbeccadceebedacaddcbaeadecadbcaddabadddbcceabbceeeebccdababbacabaededbbeacececcaddddecdeaecdbebbbaaaddbbddccbdcdddeceaadebccdadaedeaeadecacceabacdbddebdadadabbdcbeaecedddedbeeedeaaeeebeddabceaacaceaadaadbaeedebcabbcddbbbedaedcccabdedbbdbaccdbbadeddeeddeaaedbaccdeadbbdddbeaebadcceaeeceecabdbbacdbabaadeaaeabdceedacaacbabbbedcbacdaecabecbbabeeccccaadaaadcebbebddcceeedbabaacdaabdacdededaaaecbccdcdbdbbdeebbddcbebddadbabeabcbbabcdbdeaccacccbec\"",
+      "expectedOutput": "2489"
+    },
+    {
+      "input": "\"ccabcebbbdaeadbbbcddeceaddedecdcdc\"\n\"eecedbbbadcdcddcadabaaeeecbddcaeabddcedcbeabedcddadbdaddedaebaadadcebacdceecdcaeaebaacbcacebbcbeedaeebbaeeeccdcdaaadaeeccdccedebcdabbbcdcebbaeaedeceecbdadacecbdabdddccddbeedededcbdbdadecceddbdcbccdaabdbcadbcbcccbbeabbecabdeebbbaedabbceadceaedcaebddddaabedcccdecdcedcddbcadadaedcbcecdcedddbcaabbabcaebbcccebbbeaaccaaccbacdbdacbbccbbcccdbbbebcccebccedeedbbaaececadaeceaabeabbdccbbabdaceacdebeadeedadbeecaaadebdbdcedbdbeebbaedcceeeabddaccbcdcdeacaacdbaeacbcdcabebdeeeaeebcdbabceeeccbecceaabadeaaadcdbdaadbdddaacbbdcbcddcbbdbaadeeeceabcbcabadebbebddddabbeeabdcebbcbaaceedabecceabecbbadadcaadcebebeebdadccdaebecaabecacebaabbbbdaacacceaabbecbbdacddbddcccdebeccbbccaddbbebdccdbcebbdddeebbecaeedbaaeeabbbabeddddecabdcdbcedbabcceadccaaabaacbbbccebeddebdaedbceaebbcddccddceedaecbdbaedeaddecbddcecbaeeceabddebecebbadedeceaeabbaadbdeadcabaccadbddbbbaedcacadadccedaaedbbbeaebbabadbeebabbbcbdddccaeddedebbcbdedacdceadbbbdbcddbbadbbecccadcdecddbaecbaabcbacadceddeddccedeabcbaabbaddaeeabcaedcacdabacaedcbaecadebcbabbacacebcbaebecaacdccbeabdddebaeceebabadbcaedacaabcaeecaaecbccabcaedcdebdeebbaaddbccabebacecbecedeaadeeacecedabbdcdcbebaedecedbdedaddabaeacecaacbdebcaebecabcbaacabeccabaaaddaedcecbdecaccacbbdaccedcaacbecbddaacaeadecdabccbcdbcdddeeacbaaddeaaadeccaaebbebcaabccdcddbccabebceecbdbdcececdebbaabbbdaaaedbcdaddcabbdcdcabeaeedadeeacbadbebaecadeaeebeedabbbadbaaaeaddbcaaecbacddeceeeaeeddabebeedbddebbacaeedaeddbaceceeeddebdaaacbcedcbcbdebedbdbababeaceaedeecbeadeccbeecaddbebeddeddadbaabaddcddcedaeeaedadabaccdbdcdadcbaacadebedbcaedaedbdbadebabbbbceebedbeecbcdabceedbedaadbecdbacebbeddbcdcdcdcabcceedcbcbabcacedacccbbcbbadbdecbbbcdabacbdedebeaebbaebeceacbbaecaeaaecdbdaaaadbcebcdaadbbabcabcbadbedbadebdcabcaeaeddbeeccecbdadcaaabaddcccddeeadceaebabadccaaebaecacadcecaadccedbbddcdecaabeabadbbadeadedaeabbbeebebddacecdebdecabccedbaedabcedaeeececeedaadddcbeecacddadaadbbcebddceaecbacebadcdddbbbbbcadcddbeabbddbebeaadeabadeeaeeebbeadbabebbdaeaabddaddeabbdaeacbdbbbcdaceaacaacbadddddcabeecbbebcbcbedbceccacbadbaccbcebbeabcdbcccecacbeecceccbeaeccddddaabaabebebedbbebbcdcdabdadcaeacddeedeedadccaeeccacabccbaadbcebcbcecaadccbdeddcedbbcdbbeddbaebcbbdcadeeceaebebecdcecdcbeadabdedebcdadbaadbebebcdbdadabdebecbcaacdceabaabeacebbeadacceabeebeddbcedacbacbcdcdeedccdcbbbcecddacdcbccbebbcceacdaecededbbebaabcdeebaedbcdaecdbbdbcbdcaabbeeacccadbeadacebeeceadbbaeadabacabccebeceeedcbbccbcadbdeeaabbadbdddaeceaecadaeadcdcaceedbbeebbbbeedeebcbcabdeeaeaeeccdbabbbcdaedcbebddebbbeccbddcbddeeebeebecbedbaabacabcebecceaacbceeeadcebbdedadcdcbeddbbedeceececabdaededcbdeabdddcbeeadbeaeedacdebdccddcabcbeeccdbaaecdbbcacdaceacabeebceeddecbabaccccaaaaecebcbbceebdabdbcadddccabcebdcdcecabaccbceddcacdacadababbbccdceadeecabebbacdceacceabcbddcabbeabaacbceddddadaceedcdccccacdbbbaaecbaadaedbbbbcadebedddedeaaccaeebedbeeaaabcaeaebeadebcdcddcbdaeadebebbabaacebeaaebcbbebccbcecdedaabceceacebecacceecacabbbedeadebddaaebadacacdccebbebabbeebeddebcdeecbbaabeeaeabaccabdcadacdaeeeecbcaebdeddcbbecbebddbdedbbcacebddbbebecdbbeebbaaebdddcbaeceacadcbbbedaabaeccbbdaadceddebbbebaeddebababaacadacaabddaaaaceabecabccdeebccdedddaacbdedbbcbabcbaadddceaebdcacbcadbbbaabedceaceadbedbbebeebdcedcceaacbdeebecaaacbacbbabeaddbabbbebdecaabbcacbdbdebedcbcabeecedbebabedaddcdbccdcbbeaeeccddbaaccbaddeccdaeaccdadebadcceecbddbcbedbdbecabaccacdddcecabcebdccdcabbdaacadbaaabecebeabddaeaedcddebeeeaccecdeaacebaddbaddbcddcbcdcdbdededddbecbbaaacedaadccaadbbaaddcaaaaccabbbedeeddcccdcdeddebdddbebcadaabcbbddeebdbccdcddaaecbaacbebdabddcbdeaeabbeedcacaabcdacbeddbbbdcebeabdbaceadcddedbaabcedebcebacbeddbabbaceaedacdebacededbbcdeddaabcaccebeccedbaeaccbcbaecdcabeecaedcdbeaecdeacddebdeeeddceaaacaebbebdbbbaadcceacaecdbbaeaeddcabbbeaddcbdbaabeecbbcdecdcadabeabcdbdecbcddedaebbdadcacabedecdbeecabcebdeaceaeeabaebecbecdacdeddadecedddeeecbaebabebeedbcbeaacceabdbcdeddebcacbeebddcdadddbcadeaddacdcbdcabbeaedeacbbaedabaaebdaaddecebedbcbdbcddcdeebcacbdacccbcebdccecebeddacaeccbebdebbcadecbcaeebeabeeabbeabccaeebdeeaaabbbaaacebaedcababcebaaeeceaacacabaabbedbabaaddbbccaddcaeceecacbeaecabaeebbbddccbacaecdeedaebedabebbdacccadbcbaeacbeddcaacdbdecedbacbecebcddcaacacbebddecddaaddeadbdaedbeedcacbabbaceacbadbadbcceeaebedacbcbbbeebeeabbbddadcdcbedaccdcecdaaaabbcbacabcdcbedbccaddeabcdeaececcbedbaaecddcabecacecaaabdbbcdaaddbbaebdabdaaddedeecbdaebebdcbbcbbaecedbebecacdecccddaacaccbabaaebccbdaeacbeebdcdedddbbbcecceaabdcebcabdeedbdeaaaccbacbddcaeebcebeeabecacddebbedabcdcacdcbaddbcecbaaceddbddccdaabaaedcccecbceceaabceaddcecdeccddceebdecbaeecdabbecabeecbedcacbeadecbbaadcdbabcbebcbdedcededdaddeccadcbacccbcecadccaeecbdebacaaddeaaabcdeaadebbcbdacacccdbaeabcdbdacbecbbebbdbbaacabddddbabbcebecbabbadccaaceadccceedaaecdbdeadbadbdcecdddccebeecbbbeebededaabceceecbbbabacacacebbdebababcaacdbabaebbcdcadabebbbdeccbbaabbaacadadecddbbedceceeaaaddaabecdaebacceaebdbbedbbbeadedcedcdbabaddaaadecdabdcaadededdccbbdbbcceeaabbcbdccadbcaacecacaaceebdcadcdcdbaabbedecacdbcebbdcacecbbddeeeabcdddccebededdbeabbaaaccebdedddcadaadaadaedacacabeddcdbdbbbeaabecdeeabdccbedacdbcdeedccacbbcaddccdaeeeedcdbceececddcecadaaadccdd\"",
+      "expectedOutput": "4992"
+    },
+    {
+      "input": "\"cdcbecbebabeeccbdcbcebccbedabbcccedcad\"\n\"a\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"cccbaaebebddaddccedbbbbdeaecaddedebebcddeb\"\n\"aa\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"abcedcecebceeadbdaeeaabdcdaceadcddedbcbeadcbbe\"\n\"cca\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"eacdabbeedccdeecbbcbceedecbecebedceeebbaabbbbedcadcbeadcacebeceacacecbdcabcbceebecaeeeeccaccaebbccedececaabbbdedddbcecadaeccceabbaedebdeedecadeecbccacadcbbccbccbeaecaecbcceabbabeddbeacceddebcbaeaaadcebabbceddeaeaaddebaedbbebadaaaaceecbbeeeccceeddceaabdebcebbdabedbaadcdadcdeaaedcebedccaadbcdcabcbecbdbbdecdcbbbddcaecaecbcbedbddbbedbdcdaebbdbdaecbecccbdeabdbacbccdeecdcadedbaceadeacaabebedaacbeceeeacdbaeabaceccdadbeeaedccadebddacaadaacacebacbadacbebcdebbaaaabacbbbcadaccbcdaaaebbabadacdcdbbeceeabebcababbddbbcaeeadcddadbdecddbadaebbdaeedecaddbcbddecbddccbedeacecdadeedcaebaddecebbeceecbcbabbcebeccbabedaccdbddabcdeacbdccaaeddcacbdbcdadbaadcecccecceacaabbcaaecabaebbbeeeacaceeaeecaebadbcddcccecaaabeccabcdaeddaaeebbacdceecdbbaacaacccebaadbacacaabacbbcdeeabbcdbedceddecbaabdbccdabbbadedeadceabadeaadaeebeecdcbaeeacecbeccaadeaabbeadaaadbdddbabdedbeaceeecdaedebadecdeeadcdeadeeedcbcdddbcbccbeaedaeaeeabbbbedddebaecaddbddbacdcbddebcaabedbcbaaaadabeebbebdecdaeccecaccbeecebbebeddbdcdbdbbceaedaceeedcabcbdacaddadcdaacecbabeedcaebdabaececccdcddecdebdbacdebbbbaebacbedaccdacadebedaececbadeadceacdbeddcdecadbddaebccacddcddbbbeaddbbdbeadbdaccecddddcbacadcbbdadcdedbecaccdbabdbcbabacbcbbcabbcdadcbbcdedadbeceeacdaebecabacdbacabbabebeecbeeecaaacdbabdbdbddbccabceadbdceadbdeadadcbddcbedadaccccebeebcbcbedeaccdcdeddaddaaabeabbcbcabcaeacacaedaeebeababbbdcdcaceebddeeeedabacbecdeabacdcbdaadbbbcbdeacbabaccbddedaaaebecbccaccaebbadcccbeacdeecdbcbdaebedbceabeceddcbebdeeedecacbaedbbcabcbdeecccdceeacbbabdadebdecadbdeeacebbedeeacabdbeeadbbcacbaccaaaaedaadcdeeaebeebdccacadaebbcbbaabcccbbaaabedbdedbebdecbdcbaaebbaebddecacddedeedbdceabbaacebacaeabeadedaebbeeacddedaaeebccaddecdaecaeeddabccdcaeedadededcabdaabcddccbdcbbdabcadccabecadeacbecaeaabbbecbdcbcaedaedeceddabbeddaecebaabaaeaaecabbddddacaabeadccddeeccabbeededdaadaececaccdbaebbeaeddeedacecddecbeeceeaebbeecdbdaccaeecabdcedaededabdbaeadcadcebdcacdbebebabaeaedeaedeaeeaebcadeddceeeebbcaddedaebabeaccdaeaadaabaebbbedcaadabdcdddbddceccddaeecbeacccedbeecbabbdeedbbcbeebebddcbbcebadbdbaddcbcdceeaebeeaacebededebbecdeaeccdbbabdbbabecbeecbaacbacbbceeeedaeabbdcaaebecdabbeaeaadecbadebaceddcadaeedbdcdaeadbeacbbecaadbbaaedcbeadadccdbbaaeddebaabecccecccbbcdddbbdbeccbedacdaccdacbaaeebbcbadaebbededeadccdedddcdcbbdaebebaeaedaceebbabbdbebebceaceeebcdbbacdedeaecdacdeebebbbddeeebaebaedecbbcbaecebeddeebcbebcdcdecabacdebccedaeacaddebbcacadacebedcabdacaaacacbaceceedbbabeeedcbbceaceebebbbeddcaececdcbadaebbaeddbdaccedbdaededcebdcccbeecebddadaebbdacadaebdbceceebdebdedeeecbccbcabdedb\"\n\"eddd\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"cabcecedeeecaaeeccaadbedabedeedbcbcadbaabcdadccbcabbdedcbcbdadbccddddeeeeacbbcaadcdddeaabbaeeacaebdadaaaceabebacaecceddceebbcacddadcedcecabbececcdcdcbdbaeabdcbbebeeaddbededbcdbeccacbbcdbcccdcbdbcbaecceaaeebbcbcabbaedcddcbeddabbbbeedbacceeeccccdcadeeedaccdcbaacebcdbbbdacceaceeceddeabdbaaeebaeeacedeebbccacacddacadcdddbebdaadcdeebadabbcadcaaedadbdacdababaecbeeeeccaabbaaeceeecceabdcdacbdbbddacaaebdaeeaaeeaeacebdcedbccdeaabdbacceaadcadadebeaabbdcccbdabedcbcbdedbaaebcdcdaaaabdaeababdecebdccabcedbddcaddbddeaeaeedacebceceedcbbdbadaaabdcbdacdbeeacacbecaabaddadcdbcabcdacbababcecdcdbabcaedeabadaadbadbedaccddaebabccbececdaedbbeacebddeacbccccaecbcbbdcdddebaadbcbceaceddaddaedddaebdabebbbaaccdcbeeeadacedadddaeaacecedbeeebceceecccddbbddddeeeacccbaabbabeeaeebcacccbdeebabdaaebcbddedccbddcdcecacaedddcdbcbcddcabdeedbbbaadbecbeadebdaccbeaadabdebdeceebcdbaccddeabedeadcdacdbacbdcbaceaeeecebbdbbbadebbdbbbecbccabaddeadbccbcacdacdedbbadeeceecadaadbbcabeadcddcdcabcebddecceebedbccaadddcecacaabebcadbbedbeddbedadbceaeabdeeedacaadeccddecccdebeacaedbeaaaeeaccdbeccaeeabdbeeeeecddcabcececddebbdacccccedbbdedcbcecbbbcaeaecdaeccbcaadaceecadcabdabadcaccbeabbddaabcaaddddbcaceebeeacaacbdecdadcaaaeeadcedbeecbaedcdbdeecdaaeacbadeaaaecacbdddeaecadbaabbbceaadadeeddcdbdeaccddeabcbaadcbcabdbabbeccacdadecadaaeaaeccacbbaddcddbbaecbabcddcabeadabdcbdbbcabeabeeccbaacabdadcebecbdcabbccacaebcbcabebcbcabaeadeacbbdeecddbccbceeebedaacaeccdccdbadeadaceadbbaaeaebadccecddddbcaecbebeccbceadaeadbddeadbdedabadcacbbcdbaaddecdaeaccacdaacbdbaccadcedacbaebbceadabebeddeabcaaaadebcabcddaddbbebbaabaedbdbcbacceebaccdceddadeebeaceeeaebacbbacbabcaddbbbacaaeebbbaedbcbebbebbacccdceeedcdebabdbddabaddbbebbcabedccccbaededcbcdddaecdeeaeccdbedcbdddddddacbedecccdcddecbcdadcacabcdacbbbabdbceedeeddbabbebadedbaaccddcabccbbaecdcbaeecacbcaeeacddddbcebeceebbddddcbecbceaecbdcbaccaadbddaabcdaceaebdeaabbcaeebceeaeaddebeedcadbecdadbcbbdceaededbebbacaacccddbcbeeddecbceaabacbaeadcebcecdadbcddbdbdbabcaecabdbeabdaccaacdeaeeebeacccdeeceaebacdddbccaceccbeaeebbbdceccabdcadabdadaeaaacadeccbadedbdbcbeaddcebcedccceecdcccaacaacadbdabbbcbdbdecadbcbebdecddaeedccdddabcccaedeabecebbcbddeacecaddaedadaedcaeecdddaebacaaaebaebcbeecebdebcdcbaeceeaecebbbbcbbdcbcaabdacaaeecdaccdeabcdcbdaeceedbbcdcaeebedbacccceeceaaceebedebeddbdcababaabcdccbebbcceaedcdbcdbbeacdeeadbccedcdadedaccbcbebaccbcaeeccebbedcdbbdcdeaabdcbdecdbcbbbdebbadcdbcccddeabcdaacacccebeacaddedabcdcdcedbccdaabccbebdddbbaeadabddbbbeebddabceabbdbdcacbccecebcbaababbbeebbeebeaeedacdecabeabadbdbedbdceadcedeabcdebabbbeaadbcbedaeeeeebdceeedeccaeaabddbbcbdabbaceebbdaeedbcaacbcababedeeeeddccdaaececeedccacceaddbaeeaedcedcaedbabecebebcdcaeddbaadbeeaddaedbcdceddecdecbeeedabedcaebaccbadcbdcbabbabbdbadadcebaceeabaaaeabceceedccdebbbdcdeeaedbecdcbcdcaacbeaadecedaecbdeabccaebacbbacdaeacbcbadebebeebbacdaabcbedcebdbcabcbaacbeeecbbcbdaaaeaacbeeceacebedadccbccdbecbcaaceeddaaabeeaeaeaeecbacbdbdbeeabdbbaecdcbbeabebcedacaddadbadeeceabaadcbadabdaebebecdbbbeaddbdcacecedabceecacdaabbdecedacecbabeebaddccdbdaabcddeebecbdcaddbeaebdccabedbcdceaeddaadebdcaecabaddddabdddadededecaeacbcecbbdcabaddebbecabaccedceddbdbbdabaccbcdeaeddeceaebeedcabccddeaddeadcbadeebceebadebeadcbdcdbbbbaccbebadbaabdddbbcaabdabebbccdacbbeddcdaacbaaaecedeeeccedbcebbebaddeaeebcaaecadebaacddbaceeedbcccdceeacddabbaebbedcdbadbbeceebbbccddebceecdbdeaebeaaaaeccacdaaaebddccccaebadaccddecaeeadbbbcbcdccaadebbbdaedcbdbaaddccdeebaeebebececbabdabdeabbabaacccdabcaaabedbeeeaeddebacddedcdddcdaadedddabdacbbadcdbaaaceaadecdbbaeecbdabbdadcbabbebeeadebdcababdcebacdeddebceceaeebaeacaabaddbbbabebdcdacdbadecaeedbedbdbedbeddbdaceabbaedbdebdeaaeebacccccdadbeebadaeabceadbcdcdccbbddcccdacaecdaacbebadcdeceeeebcecebaaadbdccccadcabcaddcbeccdbceddedcbdbdededcddaaeabdeecebceccceddbedbddddbccaaadaecadbadccaabeaddadcdbcedebaccecbedecdaeaecdeeccaddbaccacecebddcaecdddcdabedbadbdebaaceabbedbbcdbdababbcccdcbdedbdedadddbadabcaadacaaaeacababdaabeeddbeddaecceabeeecaebaddbedeccbaeeaedccbbdebbacabbbbeecbacdccdaccdcdcadedbbcecacbbbbcebdebaedeaabbadbaeedeaddcdadddacdeddccebcbcaeedaeeabddaebedceadbacadbedbcdccdaeebeabddbcadeeadeaebadabdabbbcacacdeebdecaccbceeeadaebdcdeadbbbeccdeebadaadaddcabadabebeecccadeedacaeeaecbdaebcbdbbdecbceccdbaacaaedeacadeeceaeedeabcecdaaabaaeabaedcebbadcdccdddceceebeeebceddebcaaeedabbacdbbedceacabccebbeedbcdaabcecdcdddccebbbebeaaedaadaedbbbeedeecdbaaaeeddacdabadadbadbaabdedbdabdebacdbccaeedeccbdbcbdbbeeabbedaebbcabdecacddccddcaccdedecdaacdadbecdaacdedbeadadcaedcaaeabaaeececcdccccbbabeccbabcededeeadecbcbbcbcbdccbbdaaeedddcecdeccaeaadcdbbeacabdebeeccaecbcebaeedbcdebdeebcddcdbcaaecedbbdecaaedaedabccdabdeaedcbcbdabaeabbbeeccdcaccbdbbdaeceecabaaeadcbabeebdabaeaceeccceacbadeceaabbeabdcaacddddbdeeacaceeccdedbdcadbeadaccdaadbbeedadcdebcadbdddceddccdeeeedabebeddbcccadecececccabdbbadabeacecaabdcecbbeebaebbebddbcaacdaacadeebcadcebebcebdebcebceeebbbccebbeecbdabecdacbdecedcedebddbcbeebdddccbaecdcdaececcdadbabecaacdcabacaadaeaabbcdeccbadacbabceebabbbeddeeaedbdeaddbcabbbebeeaabcbbbdaabacbcdadcbdcaccddcdbedeeddbcedcddcceeccabebcbcbebabbeddedaaadbbdea\"\n\"cbaddc\"",
+      "expectedOutput": "0"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Maintain two pointers: i and j. We need to perform a similar operation: while t[0:i] + t[j:n] is not a subsequence of the string s, increase j.",
+    "We can check the condition greedily. Create the array leftmost[i] which denotes minimum index k, such that in prefix s[0:k] exists subsequence t[0:i]. Similarly, we define rightmost[i].",
+    "If leftmost[i] < rightmost[j] then t[0:i] + t[j:n] is the subsequence of s."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/subsequence-with-the-minimum-score/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.426Z",
+    "sourceUpdatedAt": null
+  }
+}

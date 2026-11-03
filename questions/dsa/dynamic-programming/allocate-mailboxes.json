@@ -1,0 +1,160 @@
+{
+  "id": "1478",
+  "slug": "allocate-mailboxes",
+  "title": "Allocate Mailboxes",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "statement": "Given the array `houses` where `houses[i]` is the location of the `i^(th)` house along a street and an integer `k`, allocate `k` mailboxes in the street.\n\nReturn _the **minimum** total distance between each house and its nearest mailbox_.\n\nThe test cases are generated so that the answer fits in a 32-bit integer.\n\n**Example 1:**\n\n![](./assets/allocate-mailboxes-1.png)\n```\nInput: houses = [1,4,8,10,20], k = 3\nOutput: 5\nExplanation: Allocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5\n```\n\n**Example 2:**\n\n![](./assets/allocate-mailboxes-2.png)\n```\nInput: houses = [2,3,5,12,18], k = 2\nOutput: 9\nExplanation: Allocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9.\n```\n\n**Constraints:**\n\n*   `1 <= k <= houses.length <= 100`\n*   `1 <= houses[i] <= 10^(4)`\n*   All the integers of `houses` are **unique**.",
+  "constraints": [
+    "1 <= k <= houses.length <= 100",
+    "1 <= houses[i] <= 104",
+    "All the integers of houses are unique."
+  ],
+  "examples": [
+    {
+      "input": "houses = [1,4,8,10,20], k = 3",
+      "output": "5",
+      "explanation": "Allocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5"
+    },
+    {
+      "input": "houses = [2,3,5,12,18], k = 2",
+      "output": "9",
+      "explanation": "Allocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minDistance(vector<int>& houses, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDistance(int[] houses, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minDistance(self, houses: list[int], k: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def minDistance(self, houses, k):\n        \"\"\"\n        :type houses: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} houses\n * @param {number} k\n * @return {number}\n */\nvar minDistance = function(houses, k) {\n    \n};",
+    "typescript": "function minDistance(houses: number[], k: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinDistance(int[] houses, int k) {\n        \n    }\n}",
+    "c": "int minDistance(int* houses, int housesSize, int k) {\n    \n}",
+    "golang": "func minDistance(houses []int, k int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minDistance(houses: IntArray, k: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDistance(_ houses: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_distance(houses: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} houses\n# @param {Integer} k\n# @return {Integer}\ndef min_distance(houses, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $houses\n     * @param Integer $k\n     * @return Integer\n     */\n    function minDistance($houses, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDistance(List<int> houses, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minDistance(houses: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec min_distance(houses :: [integer], k :: integer) :: integer\n  def min_distance(houses, k) do\n    \n  end\nend",
+    "erlang": "-spec min_distance(Houses :: [integer()], K :: integer()) -> integer().\nmin_distance(Houses, K) ->\n  .",
+    "racket": "(define/contract (min-distance houses k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[14,2,17,1]\n2",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[9,31,2,13,28]\n3",
+      "expectedOutput": "7"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[417]\n1",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[1,10000]\n2",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[20,2,7]\n1",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "[14,2,17,1]\n2",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[9,31,2,13,28]\n3",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "[10000,3,500,27,6800,1,431]\n1",
+      "expectedOutput": "17269"
+    },
+    {
+      "input": "[81,3,19,47,20,100,62,7]\n7",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[232,513,289,316,125,434,22,560,579,435,397]\n2",
+      "expectedOutput": "844"
+    },
+    {
+      "input": "[441,34,31,2,13,27,404,12,431,399,381,28,374]\n3",
+      "expectedOutput": "124"
+    },
+    {
+      "input": "[8001,977,8539,15,9130,1014,9593,8061,33,24,9596,32,23,1058,8228,29,1093]\n5",
+      "expectedOutput": "885"
+    },
+    {
+      "input": "[835,338,658,699,384,279,254,979,713,716]\n4",
+      "expectedOutput": "261"
+    },
+    {
+      "input": "[129,1989,44,1864,1846,1937,1920,1886,2025,1881,5,1847,2089,149,2016,2099]\n7",
+      "expectedOutput": "145"
+    },
+    {
+      "input": "[7743,5805,852,3293,9089,1855,8393,2407,90,5448,304,8139,5950,209,8198,9260,4709,1570]\n4",
+      "expectedOutput": "7392"
+    },
+    {
+      "input": "[1308,65,87,9598,1184,1379,1372,1079,9665,1157,5,4,9785,19,1077,73,9316,1160,58]\n6",
+      "expectedOutput": "484"
+    },
+    {
+      "input": "[1300,4727,3406,2664,1443,5569,1465,3164,1177,2697,9961,8151,9306,207,4548,4222,9288,394,9829,4601,3771,326,4786]\n3",
+      "expectedOutput": "13636"
+    },
+    {
+      "input": "[877,9,792,65,9452,813,8751,688,8633,7681,786,148,8264,628,646,103,633,7589,3,7059,671,9620,8745,642,72,8137,869,843,749]\n8",
+      "expectedOutput": "1115"
+    },
+    {
+      "input": "[131,1849,2474,1261,767,171,2983,150,94,78,817,730,736,169,210,1194,868,1846,2863,144,2296,607,137,1953,1385,2113,486,628,681,1087,493,857,1319,603]\n13",
+      "expectedOutput": "773"
+    },
+    {
+      "input": "[9670,106,8839,53,74,54,105,9608,62,2479,2426,13,2500,110,31,115,2403,59,2298,2400,9503,2178,83,2042,92,2256,71,2334,12,2255,2018,11,8045,63,2062,2012,2296,2146,9871]\n19",
+      "expectedOutput": "155"
+    },
+    {
+      "input": "[1521,2844,9491,166,1563,1845,1748,3599,8470,1586,6016,6949,9058,1002,6394,5822,7815,7013,8930,6403,6612,3162,8724,3085,2626,8783,4845,5775,6292,7019,7596,1711,4310,3563,8366,3571,7759,9611,4774,7741,9596,74,5284,5905,3184,733,5634,8249,1941,1310,5151,8915,3369,991,5965,5078,182,4361,4816,7319,5498,4581,5171,6134,2665,2459,424,3993,8081,8536,3836,4024,2693,9516,6245,2605,4777,9440,9821,1684,8188,7504,2706,7753,7548,8893,417,2198,8449,364,4186,6273,7923,4763,8676,2318,8302,8937,3978,7929]\n17",
+      "expectedOutput": "10298"
+    },
+    {
+      "input": "[54,7346,9989,9681,975,850,33,42,1011,848,1197,1072,9465,158,1105,1024,84,1252,74,819,19,1253,894,70,1099,1264,1037,884,1100,1054,9570,163,7024,45,111,979,7679,832,930,106,7113,173,9787,971,78,7117,1216,9477,73,7417,89,1257,32,932,1124,1159,76,836,66,48,9735,7486,109,65,1038,39,67,11,136,13,1236,1240,9063,7348,1134,9707,152,168,8092,875,8519,1118,954,931,866,1289,1192,28,8943,141,178,1157,8268,159,972,132,38]\n31",
+      "expectedOutput": "641"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "If k =1, the minimum distance is obtained allocating the mailbox in the median of the array houses.",
+    "Generalize this idea, using dynamic programming allocating k mailboxes."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/allocate-mailboxes/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.001Z",
+    "sourceUpdatedAt": null
+  }
+}

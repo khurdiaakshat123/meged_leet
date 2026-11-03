@@ -1,0 +1,168 @@
+{
+  "id": "3530",
+  "slug": "maximum-profit-from-valid-topological-order-in-dag",
+  "title": "Maximum Profit from Valid Topological Order in DAG",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Graph Theory",
+    "Topological Sort",
+    "Bitmask"
+  ],
+  "statement": "You are given a **Directed Acyclic Graph (DAG)** with `n` nodes labeled from `0` to `n - 1`, represented by a 2D array `edges`, where `edges[i] = [u_(i), v_(i)]` indicates a directed edge from node `u_(i)` to `v_(i)`. Each node has an associated **score** given in an array `score`, where `score[i]` represents the score of node `i`.\n\nYou must process the nodes in a **valid topological order**. Each node is assigned a **1-based position** in the processing order.\n\nThe **profit** is calculated by summing up the product of each node's score and its position in the ordering.\n\nReturn the **maximum** possible profit achievable with an optimal topological order.\n\nA **topological order** of a DAG is a linear ordering of its nodes such that for every directed edge `u → v`, node `u` comes before `v` in the ordering.\n\n**Example 1:**\n\n**Input:** n = 2, edges = \\[\\[0,1\\]\\], score = \\[2,3\\]\n\n**Output:** 8\n\n**Explanation:**\n\n![](./assets/maximum-profit-from-valid-topological-order-in-dag-1.png)\n\nNode 1 depends on node 0, so a valid order is `[0, 1]`.\n\nNode\n\nProcessing Order\n\nScore\n\nMultiplier\n\nProfit Calculation\n\n0\n\n1st\n\n2\n\n1\n\n2 × 1 = 2\n\n1\n\n2nd\n\n3\n\n2\n\n3 × 2 = 6\n\nThe maximum total profit achievable over all valid topological orders is `2 + 6 = 8`.\n\n**Example 2:**\n\n**Input:** n = 3, edges = \\[\\[0,1\\],\\[0,2\\]\\], score = \\[1,6,3\\]\n\n**Output:** 25\n\n**Explanation:**\n\n![](./assets/maximum-profit-from-valid-topological-order-in-dag-2.png)\n\nNodes 1 and 2 depend on node 0, so the most optimal valid order is `[0, 2, 1]`.\n\nNode\n\nProcessing Order\n\nScore\n\nMultiplier\n\nProfit Calculation\n\n0\n\n1st\n\n1\n\n1\n\n1 × 1 = 1\n\n2\n\n2nd\n\n3\n\n2\n\n3 × 2 = 6\n\n1\n\n3rd\n\n6\n\n3\n\n6 × 3 = 18\n\nThe maximum total profit achievable over all valid topological orders is `1 + 6 + 18 = 25`.\n\n**Constraints:**\n\n*   `1 <= n == score.length <= 22`\n*   `1 <= score[i] <= 10^(5)`\n*   `0 <= edges.length <= n * (n - 1) / 2`\n*   `edges[i] == [u_(i), v_(i)]` denotes a directed edge from `u_(i)` to `v_(i)`.\n*   `0 <= u_(i), v_(i) < n`\n*   `u_(i) != v_(i)`\n*   The input graph is **guaranteed** to be a **DAG**.\n*   There are no duplicate edges.",
+  "constraints": [
+    "1 <= n == score.length <= 22",
+    "1 <= score[i] <= 105",
+    "0 <= edges.length <= n * (n - 1) / 2",
+    "edges[i] == [ui, vi] denotes a directed edge from ui to vi.",
+    "0 <= ui, vi < n",
+    "ui != vi",
+    "The input graph is guaranteed to be a DAG.",
+    "There are no duplicate edges."
+  ],
+  "examples": [
+    {
+      "input": "n = 2, edges = [[0,1]], score = [2,3]",
+      "output": "8",
+      "explanation": null
+    },
+    {
+      "input": "n = 3, edges = [[0,1],[0,2]], score = [1,6,3]",
+      "output": "25",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxProfit(int n, vector<vector<int>>& edges, vector<int>& score) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProfit(int n, int[][] edges, int[] score) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxProfit(self, n: int, edges: List[List[int]], score: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxProfit(self, n, edges, score):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type score: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[]} score\n * @return {number}\n */\nvar maxProfit = function(n, edges, score) {\n    \n};",
+    "typescript": "function maxProfit(n: number, edges: number[][], score: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxProfit(int n, int[][] edges, int[] score) {\n        \n    }\n}",
+    "c": "int maxProfit(int n, int** edges, int edgesSize, int* edgesColSize, int* score, int scoreSize) {\n    \n}",
+    "golang": "func maxProfit(n int, edges [][]int, score []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxProfit(n: Int, edges: Array<IntArray>, score: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProfit(_ n: Int, _ edges: [[Int]], _ score: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_profit(n: i32, edges: Vec<Vec<i32>>, score: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[]} score\n# @return {Integer}\ndef max_profit(n, edges, score)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[] $score\n     * @return Integer\n     */\n    function maxProfit($n, $edges, $score) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProfit(int n, List<List<int>> edges, List<int> score) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxProfit(n: Int, edges: Array[Array[Int]], score: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_profit(n :: integer, edges :: [[integer]], score :: [integer]) :: integer\n  def max_profit(n, edges, score) do\n    \n  end\nend",
+    "erlang": "-spec max_profit(N :: integer(), Edges :: [[integer()]], Score :: [integer()]) -> integer().\nmax_profit(N, Edges, Score) ->\n  .",
+    "racket": "(define/contract (max-profit n edges score)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "2\n[[0,1]]\n[2,3]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "4\n[[0,1],[0,2]]\n[100,1,1,50]",
+      "expectedOutput": "305"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "2\n[[0,1]]\n[2,3]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "3\n[[0,1],[0,2]]\n[1,6,3]",
+      "expectedOutput": "25"
+    },
+    {
+      "input": "1\n[]\n[100000]",
+      "expectedOutput": "100000"
+    },
+    {
+      "input": "3\n[]\n[3,1,2]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "4\n[[0,1],[0,2]]\n[100,1,1,50]",
+      "expectedOutput": "305"
+    },
+    {
+      "input": "2\n[[1,0]]\n[2,3]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "4\n[[0,1],[0,2],[1,3],[2,3]]\n[4,9,1,7]",
+      "expectedOutput": "61"
+    },
+    {
+      "input": "5\n[]\n[68273,2929,70960,89588,90087]",
+      "expectedOutput": "1161142"
+    },
+    {
+      "input": "6\n[[0,4],[2,1],[3,1],[0,5]]\n[68506,57351,81785,11798,89967,43660]",
+      "expectedOutput": "1433487"
+    },
+    {
+      "input": "7\n[[6,5],[1,2],[2,4],[1,5],[1,0],[1,3],[6,4],[0,4],[5,0]]\n[69049,84336,40376,63621,23019,90456,75892]",
+      "expectedOutput": "1687226"
+    },
+    {
+      "input": "8\n[[1,3],[1,2],[7,5],[6,4],[6,3],[4,5]]\n[69436,75040,25085,637,89486,38166,6929,73835]",
+      "expectedOutput": "1988001"
+    },
+    {
+      "input": "9\n[[5,6]]\n[69514,93181,62026,8040,22779,87709,93137,57066,26915]",
+      "expectedOutput": "3287509"
+    },
+    {
+      "input": "6\n[[1,5],[3,0],[3,4],[2,0],[1,3],[5,0],[2,1],[0,4],[2,5],[1,0],[2,3],[5,4]]\n[69669,29462,35910,22847,89365,86793]",
+      "expectedOutput": "1395082"
+    },
+    {
+      "input": "7\n[]\n[70444,10870,5326,96879,22298,82215,27626]",
+      "expectedOutput": "1728127"
+    },
+    {
+      "input": "11\n[[9,1],[3,7],[4,9],[10,9],[4,6],[4,10],[5,7],[5,8],[0,2],[6,7]]\n[71839,37403,70276,30138,21576,73974,79359,53984,79206,24819,19975]",
+      "expectedOutput": "4095356"
+    },
+    {
+      "input": "13\n[[11,12],[2,9],[12,1],[7,10],[2,1],[3,5],[0,7],[6,11],[6,0],[12,4],[11,10],[6,7],[0,12],[6,8],[2,5],[12,10],[12,5]]\n[72071,91826,81101,52348,21456,22600,37981,3676,84435,59288,92211,19940,15407]",
+      "expectedOutput": "5555513"
+    },
+    {
+      "input": "15\n[[9,12],[3,0],[5,4],[2,10],[0,6],[6,10],[4,14],[14,12],[0,8],[14,10]]\n[72227,28107,54984,67155,88043,21685,10396,70137,87921,82268,73701,93865,6152,81539,19923]",
+      "expectedOutput": "7916072"
+    },
+    {
+      "input": "16\n[[0,8],[7,8],[8,9],[8,11],[7,10],[1,14],[14,0],[5,11],[0,6],[15,2],[14,6],[7,11],[12,8],[1,11],[1,3],[15,11],[12,0],[0,7],[0,2],[13,7],[5,7],[14,4],[15,14],[10,4],[8,6],[6,10],[15,0],[15,8],[13,6],[12,3],[12,6],[15,6],[5,14],[4,9],[14,11],[13,3],[0,3],[3,4],[5,2],[3,2],[2,4],[14,7],[7,9],[15,5],[12,7],[0,10],[13,0],[5,10],[13,4],[14,2],[8,10],[2,9],[3,11],[5,0],[13,9],[7,6],[1,4],[5,6],[3,6],[13,14],[12,1],[15,13],[13,10],[1,10],[1,7],[2,6],[1,5],[8,2],[6,11],[4,11],[7,4]]\n[72459,82529,65809,89365,87922,70311,69018,19829,93150,16737,45936,4752,92268,52629,56919,35532]",
+      "expectedOutput": "7561672"
+    },
+    {
+      "input": "22\n[]\n[73002,9515,24401,41188,20975,17106,72470,2443,5351,97165,81152,63489,59874,85174,76576,88065,82185,79130,11382,64828,37395,20331]",
+      "expectedOutput": "17041210"
+    },
+    {
+      "input": "21\n[[18,12],[18,11],[4,20],[13,5],[8,7]]\n[93455,20174,29151,36466,23921,34994,22194,52672,27239,96750,11385,1,1,36226,78417,30818,14,50000,100000,55685,25757]",
+      "expectedOutput": "11743866"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use bitmask dynamic programming.",
+    "States are <code>mask</code> = (bits such that if a bit is set, it means the corresponding node is removed).",
+    "Try maintaining the <code>degrees</code> across function calls."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-profit-from-valid-topological-order-in-dag/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.483Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "3387",
+  "slug": "maximize-amount-after-two-days-of-conversions",
+  "title": "Maximize Amount After Two Days of Conversions",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph Theory"
+  ],
+  "statement": "You are given a string `initialCurrency`, and you start with `1.0` of `initialCurrency`.\n\nYou are also given four arrays with currency pairs (strings) and rates (real numbers):\n\n*   `pairs1[i] = [startCurrency_(i), targetCurrency_(i)]` denotes that you can convert from `startCurrency_(i)` to `targetCurrency_(i)` at a rate of `rates1[i]` on **day 1**.\n*   `pairs2[i] = [startCurrency_(i), targetCurrency_(i)]` denotes that you can convert from `startCurrency_(i)` to `targetCurrency_(i)` at a rate of `rates2[i]` on **day 2**.\n*   Also, each `targetCurrency` can be converted back to its corresponding `startCurrency` at a rate of `1 / rate`.\n\nYou can perform **any** number of conversions, **including zero**, using `rates1` on day 1, **followed** by any number of additional conversions, **including zero**, using `rates2` on day 2.\n\nReturn the **maximum** amount of `initialCurrency` you can have after performing any number of conversions on both days **in order**.\n\n**Note:** Conversion rates are valid, and there will be no contradictions in the rates for either day. The rates for the days are independent of each other.\n\n**Example 1:**\n\n**Input:** initialCurrency = \"EUR\", pairs1 = \\[\\[\"EUR\",\"USD\"\\],\\[\"USD\",\"JPY\"\\]\\], rates1 = \\[2.0,3.0\\], pairs2 = \\[\\[\"JPY\",\"USD\"\\],\\[\"USD\",\"CHF\"\\],\\[\"CHF\",\"EUR\"\\]\\], rates2 = \\[4.0,5.0,6.0\\]\n\n**Output:** 720.00000\n\n**Explanation:**\n\nTo get the maximum amount of **EUR**, starting with 1.0 **EUR**:\n\n*   On Day 1:\n    *   Convert **EUR** to **USD** to get 2.0 **USD**.\n    *   Convert **USD** to **JPY** to get 6.0 **JPY**.\n*   On Day 2:\n    *   Convert **JPY** to **USD** to get 24.0 **USD**.\n    *   Convert **USD** to **CHF** to get 120.0 **CHF**.\n    *   Finally, convert **CHF** to **EUR** to get 720.0 **EUR**.\n\n**Example 2:**\n\n**Input:** initialCurrency = \"NGN\", pairs1 = \\[\\[\"NGN\",\"EUR\"\\]\\], rates1 = \\[9.0\\], pairs2 = \\[\\[\"NGN\",\"EUR\"\\]\\], rates2 = \\[6.0\\]\n\n**Output:** 1.50000\n\n**Explanation:**\n\nConverting **NGN** to **EUR** on day 1 and **EUR** to **NGN** using the inverse rate on day 2 gives the maximum amount.\n\n**Example 3:**\n\n**Input:** initialCurrency = \"USD\", pairs1 = \\[\\[\"USD\",\"EUR\"\\]\\], rates1 = \\[1.0\\], pairs2 = \\[\\[\"EUR\",\"JPY\"\\]\\], rates2 = \\[10.0\\]\n\n**Output:** 1.00000\n\n**Explanation:**\n\nIn this example, there is no need to make any conversions on either day.\n\n**Constraints:**\n\n*   `1 <= initialCurrency.length <= 3`\n*   `initialCurrency` consists only of uppercase English letters.\n*   `1 <= n == pairs1.length <= 10`\n*   `1 <= m == pairs2.length <= 10`\n*   `pairs1[i] == [startCurrency_(i), targetCurrency_(i)]`\n*   `pairs2[i] == [startCurrency_(i), targetCurrency_(i)]`\n*   `1 <= startCurrency_(i).length, targetCurrency_(i).length <= 3`\n*   `startCurrency_(i)` and `targetCurrency_(i)` consist only of uppercase English letters.\n*   `rates1.length == n`\n*   `rates2.length == m`\n*   `1.0 <= rates1[i], rates2[i] <= 10.0`\n*   The input is generated such that there are no contradictions or cycles in the conversion graphs for either day.\n*   The input is generated such that the output is **at most** `5 * 10^(10)`.",
+  "constraints": [
+    "1 <= initialCurrency.length <= 3",
+    "initialCurrency consists only of uppercase English letters.",
+    "1 <= n == pairs1.length <= 10",
+    "1 <= m == pairs2.length <= 10",
+    "pairs1[i] == [startCurrencyi, targetCurrencyi]",
+    "pairs2[i] == [startCurrencyi, targetCurrencyi]",
+    "1 <= startCurrencyi.length, targetCurrencyi.length <= 3",
+    "startCurrencyi and targetCurrencyi consist only of uppercase English letters.",
+    "rates1.length == n",
+    "rates2.length == m",
+    "1.0 <= rates1[i], rates2[i] <= 10.0",
+    "The input is generated such that there are no contradictions or cycles in the conversion graphs for either day.",
+    "The input is generated such that the output is at most 5 * 1010."
+  ],
+  "examples": [
+    {
+      "input": "initialCurrency = \"EUR\", pairs1 = [[\"EUR\",\"USD\"],[\"USD\",\"JPY\"]], rates1 = [2.0,3.0], pairs2 = [[\"JPY\",\"USD\"],[\"USD\",\"CHF\"],[\"CHF\",\"EUR\"]], rates2 = [4.0,5.0,6.0]",
+      "output": "720.00000",
+      "explanation": null
+    },
+    {
+      "input": "initialCurrency = \"NGN\", pairs1 = [[\"NGN\",\"EUR\"]], rates1 = [9.0], pairs2 = [[\"NGN\",\"EUR\"]], rates2 = [6.0]",
+      "output": "1.50000",
+      "explanation": null
+    },
+    {
+      "input": "initialCurrency = \"USD\", pairs1 = [[\"USD\",\"EUR\"]], rates1 = [1.0], pairs2 = [[\"EUR\",\"JPY\"]], rates2 = [10.0]",
+      "output": "1.00000",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    double maxAmount(string initialCurrency, vector<vector<string>>& pairs1, vector<double>& rates1, vector<vector<string>>& pairs2, vector<double>& rates2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double maxAmount(String initialCurrency, List<List<String>> pairs1, double[] rates1, List<List<String>> pairs2, double[] rates2) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxAmount(self, initialCurrency: str, pairs1: List[List[str]], rates1: List[float], pairs2: List[List[str]], rates2: List[float]) -> float:\n        ",
+    "python": "class Solution(object):\n    def maxAmount(self, initialCurrency, pairs1, rates1, pairs2, rates2):\n        \"\"\"\n        :type initialCurrency: str\n        :type pairs1: List[List[str]]\n        :type rates1: List[float]\n        :type pairs2: List[List[str]]\n        :type rates2: List[float]\n        :rtype: float\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} initialCurrency\n * @param {string[][]} pairs1\n * @param {number[]} rates1\n * @param {string[][]} pairs2\n * @param {number[]} rates2\n * @return {number}\n */\nvar maxAmount = function(initialCurrency, pairs1, rates1, pairs2, rates2) {\n    \n};",
+    "typescript": "function maxAmount(initialCurrency: string, pairs1: string[][], rates1: number[], pairs2: string[][], rates2: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public double MaxAmount(string initialCurrency, IList<IList<string>> pairs1, double[] rates1, IList<IList<string>> pairs2, double[] rates2) {\n        \n    }\n}",
+    "c": "double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pairs1ColSize, double* rates1, int rates1Size, char*** pairs2, int pairs2Size, int* pairs2ColSize, double* rates2, int rates2Size) {\n    \n}",
+    "golang": "func maxAmount(initialCurrency string, pairs1 [][]string, rates1 []float64, pairs2 [][]string, rates2 []float64) float64 {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxAmount(initialCurrency: String, pairs1: List<List<String>>, rates1: DoubleArray, pairs2: List<List<String>>, rates2: DoubleArray): Double {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxAmount(_ initialCurrency: String, _ pairs1: [[String]], _ rates1: [Double], _ pairs2: [[String]], _ rates2: [Double]) -> Double {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_amount(initial_currency: String, pairs1: Vec<Vec<String>>, rates1: Vec<f64>, pairs2: Vec<Vec<String>>, rates2: Vec<f64>) -> f64 {\n        \n    }\n}",
+    "ruby": "# @param {String} initial_currency\n# @param {String[][]} pairs1\n# @param {Float[]} rates1\n# @param {String[][]} pairs2\n# @param {Float[]} rates2\n# @return {Float}\ndef max_amount(initial_currency, pairs1, rates1, pairs2, rates2)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $initialCurrency\n     * @param String[][] $pairs1\n     * @param Float[] $rates1\n     * @param String[][] $pairs2\n     * @param Float[] $rates2\n     * @return Float\n     */\n    function maxAmount($initialCurrency, $pairs1, $rates1, $pairs2, $rates2) {\n        \n    }\n}",
+    "dart": "class Solution {\n  double maxAmount(String initialCurrency, List<List<String>> pairs1, List<double> rates1, List<List<String>> pairs2, List<double> rates2) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxAmount(initialCurrency: String, pairs1: List[List[String]], rates1: Array[Double], pairs2: List[List[String]], rates2: Array[Double]): Double = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_amount(initial_currency :: String.t, pairs1 :: [[String.t]], rates1 :: [float], pairs2 :: [[String.t]], rates2 :: [float]) :: float\n  def max_amount(initial_currency, pairs1, rates1, pairs2, rates2) do\n    \n  end\nend",
+    "erlang": "-spec max_amount(InitialCurrency :: unicode:unicode_binary(), Pairs1 :: [[unicode:unicode_binary()]], Rates1 :: [float()], Pairs2 :: [[unicode:unicode_binary()]], Rates2 :: [float()]) -> float().\nmax_amount(InitialCurrency, Pairs1, Rates1, Pairs2, Rates2) ->\n  .",
+    "racket": "(define/contract (max-amount initialCurrency pairs1 rates1 pairs2 rates2)\n  (-> string? (listof (listof string?)) (listof flonum?) (listof (listof string?)) (listof flonum?) flonum?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"R\"\n[[\"R\",\"Q\"]]\n[2.0]\n[[\"OQ\",\"R\"],[\"Q\",\"OQ\"]]\n[4.0,3.0]",
+      "expectedOutput": "24.0"
+    },
+    {
+      "input": "\"OE\"\n[[\"EG\",\"V\"],[\"EG\",\"OE\"]]\n[2.0,4.0]\n[[\"V\",\"SP\"],[\"SP\",\"OE\"]]\n[5.0,2.0]",
+      "expectedOutput": "5.0"
+    },
+    {
+      "input": "\"WXS\"\n[[\"B\",\"GLE\"],[\"WXS\",\"B\"]]\n[3.0,7.0]\n[[\"MGW\",\"A\"],[\"A\",\"BB\"]]\n[2.0,5.0]",
+      "expectedOutput": "1.0"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"OXR\"\n[[\"OXR\",\"AY\"]]\n[1.0]\n[[\"OXR\",\"AY\"]]\n[1.0]",
+      "expectedOutput": "1.0"
+    },
+    {
+      "input": "\"SW\"\n[[\"SW\",\"TF\"]]\n[10.0]\n[[\"SW\",\"TF\"]]\n[1.0]",
+      "expectedOutput": "10.0"
+    },
+    {
+      "input": "\"R\"\n[[\"R\",\"Q\"]]\n[2.0]\n[[\"OQ\",\"R\"],[\"Q\",\"OQ\"]]\n[4.0,3.0]",
+      "expectedOutput": "24.0"
+    },
+    {
+      "input": "\"OE\"\n[[\"EG\",\"V\"],[\"EG\",\"OE\"]]\n[2.0,4.0]\n[[\"V\",\"SP\"],[\"SP\",\"OE\"]]\n[5.0,2.0]",
+      "expectedOutput": "5.0"
+    },
+    {
+      "input": "\"WXS\"\n[[\"B\",\"GLE\"],[\"WXS\",\"B\"]]\n[3.0,7.0]\n[[\"MGW\",\"A\"],[\"A\",\"BB\"]]\n[2.0,5.0]",
+      "expectedOutput": "1.0"
+    },
+    {
+      "input": "\"HH\"\n[[\"FN\",\"TV\"],[\"HH\",\"LLC\"]]\n[9.0,5.0]\n[[\"LLC\",\"PN\"],[\"PN\",\"HH\"],[\"J\",\"Y\"]]\n[2.0,3.0,10.0]",
+      "expectedOutput": "30.0"
+    },
+    {
+      "input": "\"DO\"\n[[\"BCD\",\"DO\"],[\"BCD\",\"AP\"]]\n[2.0,7.0]\n[[\"CTZ\",\"MWH\"],[\"JA\",\"CTZ\"],[\"DO\",\"AP\"]]\n[5.0,4.0,9.0]",
+      "expectedOutput": "1.0"
+    },
+    {
+      "input": "\"O\"\n[[\"C\",\"FG\"],[\"D\",\"C\"],[\"O\",\"D\"]]\n[1.6,2.5,1.25]\n[[\"FG\",\"RO\"],[\"RO\",\"SQA\"],[\"SQA\",\"O\"]]\n[3.75,1.2,2.4]",
+      "expectedOutput": "53.99999999999999"
+    },
+    {
+      "input": "\"LX\"\n[[\"LX\",\"IYT\"],[\"LX\",\"RSO\"],[\"LX\",\"WYA\"]]\n[2.0,4.0,8.0]\n[[\"LX\",\"RSO\"],[\"LX\",\"IYT\"],[\"LX\",\"WYA\"]]\n[1.1,1.5,7.0]",
+      "expectedOutput": "3.6363636363636362"
+    },
+    {
+      "input": "\"UM\"\n[[\"UM\",\"TL\"],[\"EES\",\"TL\"],[\"EES\",\"X\"]]\n[2.3,3.4,1.7]\n[[\"IS\",\"UM\"],[\"WJZ\",\"I\"],[\"X\",\"WJZ\"],[\"I\",\"IS\"]]\n[1.2,1.3,4.1,2.9]",
+      "expectedOutput": "21.330659999999998"
+    },
+    {
+      "input": "\"CY\"\n[[\"QA\",\"M\"],[\"CY\",\"CWF\"],[\"CWF\",\"U\"],[\"KT\",\"QA\"]]\n[10.0,1.3,2.7,10.0]\n[[\"U\",\"BLY\"],[\"H\",\"IDB\"],[\"BLY\",\"CY\"]]\n[3.3,10.0,1.9]",
+      "expectedOutput": "22.0077"
+    },
+    {
+      "input": "\"EOR\"\n[[\"IRT\",\"QEY\"],[\"VJ\",\"IRT\"],[\"S\",\"VJ\"],[\"QEY\",\"TQ\"]]\n[3.1,2.3,1.7,4.9]\n[[\"EOR\",\"S\"],[\"IRT\",\"QEY\"],[\"S\",\"BT\"],[\"BT\",\"VJ\"]]\n[2.7,5.3,1.9,3.7]",
+      "expectedOutput": "1.0"
+    },
+    {
+      "input": "\"Z\"\n[[\"Z\",\"ZZ\"],[\"EL\",\"KZ\"],[\"ZZZ\",\"EL\"],[\"ZZ\",\"ZZZ\"],[\"KZ\",\"F\"]]\n[1.1,4.4,3.3,2.2,5.5]\n[[\"ZZZ\",\"RDQ\"],[\"RDQ\",\"Z\"],[\"OFS\",\"Z\"],[\"EL\",\"OFS\"]]\n[4.1,1.3,2.9,1.7]",
+      "expectedOutput": "39.370979999999996"
+    },
+    {
+      "input": "\"WY\"\n[[\"WY\",\"AGT\"],[\"WY\",\"TS\"],[\"WY\",\"US\"],[\"WY\",\"GG\"]]\n[6.0,4.0,3.0,9.0]\n[[\"OBQ\",\"TKX\"],[\"WY\",\"AGT\"],[\"WY\",\"GG\"],[\"WY\",\"TS\"],[\"WY\",\"US\"]]\n[7.0,3.0,4.5,2.0,1.5]",
+      "expectedOutput": "2.0"
+    },
+    {
+      "input": "\"IBW\"\n[[\"IBW\",\"KWS\"],[\"IBW\",\"G\"],[\"CL\",\"IBW\"],[\"SJ\",\"IBW\"],[\"WJM\",\"IBW\"]]\n[1.78,7.61,2.36,8.12,1.66]\n[[\"CL\",\"IBW\"],[\"SJ\",\"WJM\"],[\"G\",\"WJM\"],[\"G\",\"IBW\"],[\"KWS\",\"CL\"]]\n[4.03,1.03,3.97,8.28,7.63]",
+      "expectedOutput": "63.010799999999996"
+    },
+    {
+      "input": "\"OKP\"\n[[\"JNB\",\"FDF\"],[\"N\",\"WET\"],[\"WET\",\"FDF\"],[\"EF\",\"JNB\"],[\"EF\",\"LRI\"],[\"N\",\"OKP\"]]\n[6.5,2.03,6.05,4.68,7.65,2.59]\n[[\"JNB\",\"WET\"],[\"OKP\",\"WET\"],[\"EF\",\"FDF\"],[\"LRI\",\"JNB\"],[\"N\",\"FDF\"]]\n[1.47,7.0,8.74,8.7,8.91]",
+      "expectedOutput": "2.1786748560690867"
+    },
+    {
+      "input": "\"HG\"\n[[\"T\",\"K\"],[\"YP\",\"PUZ\"],[\"YP\",\"NLU\"],[\"T\",\"QVO\"],[\"K\",\"HSA\"],[\"PUZ\",\"HG\"]]\n[9.36,6.17,7.12,9.7,1.29,4.11]\n[[\"SF\",\"HG\"],[\"EQN\",\"PUZ\"],[\"YP\",\"SF\"],[\"ZH\",\"HG\"],[\"ZH\",\"NLU\"],[\"HG\",\"EQN\"]]\n[6.7,3.4,8.78,5.04,9.1,8.9]",
+      "expectedOutput": "2.319756138918793"
+    },
+    {
+      "input": "\"YIP\"\n[[\"QD\",\"BQL\"],[\"BQL\",\"YIP\"],[\"QPN\",\"IU\"],[\"YIP\",\"SVL\"],[\"BQ\",\"SVL\"],[\"BQL\",\"QPN\"],[\"SVL\",\"IUL\"]]\n[6.48,7.44,5.52,4.82,2.33,9.45,6.97]\n[[\"YIP\",\"BQ\"],[\"YIP\",\"QD\"],[\"IUL\",\"SVL\"],[\"BQ\",\"SVL\"],[\"BQL\",\"QPN\"],[\"IUL\",\"BQL\"]]\n[3.54,1.79,9.46,8.63,3.91,4.26]",
+      "expectedOutput": "10.402959195029819"
+    },
+    {
+      "input": "\"LGH\"\n[[\"W\",\"VB\"],[\"UU\",\"CK\"],[\"JGX\",\"QU\"],[\"CK\",\"W\"],[\"DJ\",\"VST\"],[\"QU\",\"UU\"],[\"VB\",\"DJ\"],[\"KJZ\",\"JGX\"],[\"LGH\",\"JW\"],[\"JW\",\"KJZ\"]]\n[10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0]\n[[\"PSV\",\"UDD\"],[\"CYV\",\"UN\"],[\"UDD\",\"LGH\"],[\"VST\",\"GVS\"],[\"VT\",\"GVB\"],[\"GVB\",\"HT\"],[\"WAF\",\"VT\"],[\"HT\",\"CYV\"],[\"UN\",\"PSV\"],[\"GVS\",\"WAF\"]]\n[1.0,1.0,1.0,1.0,1.0,5.0,1.0,1.0,1.0,1.0]",
+      "expectedOutput": "50000000000.0"
+    },
+    {
+      "input": "\"QSD\"\n[[\"TI\",\"YFB\"],[\"XG\",\"CAZ\"],[\"TI\",\"QSD\"],[\"QSD\",\"XY\"],[\"FQV\",\"YFB\"],[\"QTG\",\"TT\"],[\"ZUY\",\"XY\"],[\"QTG\",\"XG\"],[\"ZUY\",\"TT\"],[\"SMI\",\"FQV\"]]\n[9.8,2.17,5.45,4.31,4.83,4.0,8.36,6.38,1.6,4.76]\n[[\"ZUY\",\"FQV\"],[\"EIH\",\"XY\"],[\"QSD\",\"TI\"],[\"SMI\",\"XG\"],[\"CAZ\",\"SMI\"],[\"XY\",\"TI\"],[\"QSD\",\"FQV\"],[\"TI\",\"SMI\"],[\"FQV\",\"QTG\"]]\n[8.46,6.2,1.06,3.92,7.2,8.13,5.22,2.82,5.46]",
+      "expectedOutput": "33.05688679245283"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Choose an intermediate currency. Convert from <code>initialCurrency</code> to this currency on day 1, and from that currency back to <code>initialCurrency</code> on day 2.",
+    "Use a DFS/BFS to calculate the direct conversion rate between any two currencies."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:21.229Z",
+    "sourceUpdatedAt": null
+  }
+}

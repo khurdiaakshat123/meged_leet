@@ -1,0 +1,156 @@
+{
+  "id": "804",
+  "slug": "unique-morse-code-words",
+  "title": "Unique Morse Code Words",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "statement": "International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:\n\n*   `'a'` maps to `\".-\"`,\n*   `'b'` maps to `\"-...\"`,\n*   `'c'` maps to `\"-.-.\"`, and so on.\n\nFor convenience, the full table for the `26` letters of the English alphabet is given below:\n\n```\n[\".-\",\"-...\",\"-.-.\",\"-..\",\".\",\"..-.\",\"--.\",\"....\",\"..\",\".---\",\"-.-\",\".-..\",\"--\",\"-.\",\"---\",\".--.\",\"--.-\",\".-.\",\"...\",\"-\",\"..-\",\"...-\",\".--\",\"-..-\",\"-.--\",\"--..\"]\n```\n\nGiven an array of strings `words` where each word can be written as a concatenation of the Morse code of each letter.\n\n*   For example, `\"cab\"` can be written as `\"-.-..--...\"`, which is the concatenation of `\"-.-.\"`, `\".-\"`, and `\"-...\"`. We will call such a concatenation the **transformation** of a word.\n\nReturn _the number of different **transformations** among all words we have_.\n\n**Example 1:**\n\n```\nInput: words = [\"gin\",\"zen\",\"gig\",\"msg\"]\nOutput: 2\nExplanation: The transformation of each word is:\n\"gin\" -> \"--...-.\"\n\"zen\" -> \"--...-.\"\n\"gig\" -> \"--...--.\"\n\"msg\" -> \"--...--.\"\nThere are 2 different transformations: \"--...-.\" and \"--...--.\".\n```\n\n**Example 2:**\n\n```\nInput: words = [\"a\"]\nOutput: 1\n```\n\n**Constraints:**\n\n*   `1 <= words.length <= 100`\n*   `1 <= words[i].length <= 12`\n*   `words[i]` consists of lowercase English letters.",
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 12",
+    "words[i] consists of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "words = [\"gin\",\"zen\",\"gig\",\"msg\"]",
+      "output": "2",
+      "explanation": "The transformation of each word is:\n\"gin\" -> \"--...-.\"\n\"zen\" -> \"--...-.\"\n\"gig\" -> \"--...--.\"\n\"msg\" -> \"--...--.\"\nThere are 2 different transformations: \"--...-.\" and \"--...--.\"."
+    },
+    {
+      "input": "words = [\"a\"]",
+      "output": "1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int uniqueMorseRepresentations(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniqueMorseRepresentations(String[] words) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def uniqueMorseRepresentations(self, words: list[str]) -> int:\n        ",
+    "python": "class Solution(object):\n    def uniqueMorseRepresentations(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar uniqueMorseRepresentations = function(words) {\n    \n};",
+    "typescript": "function uniqueMorseRepresentations(words: string[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int UniqueMorseRepresentations(string[] words) {\n        \n    }\n}",
+    "c": "int uniqueMorseRepresentations(char** words, int wordsSize) {\n    \n}",
+    "golang": "func uniqueMorseRepresentations(words []string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun uniqueMorseRepresentations(words: Array<String>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniqueMorseRepresentations(_ words: [String]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_morse_representations(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef unique_morse_representations(words)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function uniqueMorseRepresentations($words) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniqueMorseRepresentations(List<String> words) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def uniqueMorseRepresentations(words: Array[String]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec unique_morse_representations(words :: [String.t]) :: integer\n  def unique_morse_representations(words) do\n    \n  end\nend",
+    "erlang": "-spec unique_morse_representations(Words :: [unicode:unicode_binary()]) -> integer().\nunique_morse_representations(Words) ->\n  .",
+    "racket": "(define/contract (unique-morse-representations words)\n  (-> (listof string?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"gin\",\"zen\",\"gig\",\"msg\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"a\"]",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"gin\",\"zen\",\"gig\",\"msg\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"a\"]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"e\",\"i\",\"ee\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"t\",\"tt\",\"m\"]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"a\",\"et\"]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"s\",\"eee\",\"ie\",\"ei\"]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"z\",\"g\",\"x\",\"y\"]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[\"ppux\",\"expp\",\"ufkh\",\"jnfz\",\"ywaq\",\"oevi\",\"dmra\",\"sums\",\"hchk\",\"xlcc\",\"mtxu\",\"bbsl\",\"rjnd\"]",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "[\"prmyuu\",\"ezhqdu\",\"uicimu\",\"jqxavv\",\"yysrev\",\"ognjnv\",\"doibww\",\"sxdtfw\",\"hfzlnw\",\"xnudwx\",\"mvpvfx\",\"bdkmox\",\"rlfexx\",\"guawgy\",\"vcvopy\",\"kkrgyy\",\"asmyhz\",\"pahqqz\",\"eichzz\"]",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "[\"pud\",\"ecz\",\"uku\",\"jsp\",\"yak\",\"ojf\",\"dra\",\"szv\",\"hhq\",\"xpm\",\"mxh\"]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[\"pwvac\",\"eeqsl\",\"umlku\",\"jvhbd\",\"ydctm\",\"olxlv\",\"dtsde\",\"sbnvn\",\"hjinw\",\"xsdff\",\"maywo\",\"biuox\",\"rqpgg\",\"gykyp\",\"vgfqy\",\"kpaih\",\"axvaq\"]",
+      "expectedOutput": "17"
+    },
+    {
+      "input": "[\"pynb\",\"ehit\",\"updl\",\"jxyc\",\"yfuu\",\"onpm\",\"dvke\",\"sefw\",\"hmao\",\"xuvg\",\"mcqx\",\"bklp\",\"rshh\",\"gbcz\"]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[\"pbfclu\",\"ejauuu\",\"urvmdu\",\"jzqdmv\",\"yhlvvv\",\"oqgnev\",\"dycfnv\",\"sgxxww\",\"hospfw\",\"xwnhow\",\"meiyxx\",\"bndqgx\",\"rvyipx\",\"gdtayy\",\"vlpshy\",\"ktkkqy\",\"acfcyy\",\"pkathz\"]",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "[\"pdxdc\",\"elsvl\",\"utnmu\",\"jcied\",\"ykdwm\",\"osyov\",\"datge\",\"sipyn\",\"hqkqw\",\"xzfif\",\"mhazo\",\"bpvrx\",\"rxqjg\",\"gflbp\",\"vogty\",\"kwclh\"]",
+      "expectedOutput": "16"
+    },
+    {
+      "input": "[\"pfoeuh\",\"eokwdh\",\"uwfnmh\",\"jeafvh\",\"ymvxei\",\"ouqpni\",\"dclhwi\",\"slgzej\",\"htbrnj\",\"xbxiwj\",\"mjsafk\",\"brnsok\",\"raikxk\",\"gidcgk\",\"vqyupl\",\"kytmyl\",\"agodhl\",\"pokvqm\",\"exfnzm\",\"ufafim\",\"jnvxrm\",\"yvqpan\",\"ndlhjn\",\"dmgzsn\",\"subqbo\",\"hcxiko\",\"xksato\"]",
+      "expectedOutput": "27"
+    },
+    {
+      "input": "[\"pigflanq\",\"eqbxuapl\",\"uywodbrf\",\"jgsgmbtz\",\"yonyvbvu\",\"oxiqebxo\",\"dfdinczi\",\"snyawcbd\",\"hvtsfcdx\",\"xdojodfs\",\"mmjbxdhm\",\"buftgdjg\",\"rcalpelb\",\"gkvdyeov\",\"vsqvheqp\",\"kalnqesk\",\"ajgeyfue\",\"prbwhfwy\",\"ezxoqfyt\",\"uhsgzgan\",\"jpnyigci\",\"yyiqrgec\",\"ogdiaggw\",\"doyzjhir\",\"swtrshkl\",\"heojbhmf\",\"xmkbkioa\",\"mvfttiqu\",\"bdalcisp\",\"rlvdljuj\",\"gtqvujwd\",\"vblmdjyy\",\"kkgemjas\",\"asbwvkcm\",\"paxoekeh\",\"eisgnkgb\",\"uqnywliw\",\"jyiqflkq\",\"yhdholmk\"]",
+      "expectedOutput": "39"
+    },
+    {
+      "input": "[\"pkygctz\",\"estylub\",\"uaopuud\",\"jjjhduf\",\"yrfzmvh\",\"ozarvvj\",\"dhvjevl\",\"spqbnvn\",\"hyltwwp\",\"xggkfwr\",\"mobcowt\",\"bwwuxxv\",\"resmgxx\",\"gmnepxz\",\"vviwyyb\",\"lddohyd\",\"alyfqyf\",\"pttxzyh\",\"ebopizj\",\"ukjhrzl\",\"jsfzazn\",\"yaarjap\",\"oivjsar\"]",
+      "expectedOutput": "23"
+    },
+    {
+      "input": "[\"pmqhunkm\",\"evlydnmg\",\"udgqmnob\",\"jlbivoqv\",\"ytwaeosp\",\"obrsnouk\",\"dknkvpwe\",\"ssicepyy\",\"iadtnpat\",\"xiylwqcn\",\"mqtdfqei\",\"byovoqgc\",\"rhjnxqiw\",\"gpefgrkr\",\"vxaxprml\",\"lfvpyrof\",\"anqghsqa\",\"pwlyqssu\",\"eegqzsup\",\"umbiiswj\",\"juwartyd\",\"ycssatay\",\"oknkjtcs\",\"dtibsuem\",\"sbdtbugh\",\"hjylkuib\",\"xrtdtvkv\",\"mzovcvmq\",\"bijnlvok\",\"rqffuvqf\",\"gyawdwsz\",\"vgvomwut\",\"koqgvwwo\",\"awlydxyi\"]",
+      "expectedOutput": "34"
+    },
+    {
+      "input": "[\"ginbcfhjlpqv\",\"zenbcfhjlpqv\",\"gigbcfhjlpqv\",\"msgbcfhjlpqv\",\"abcbcfhjlpqv\",\"xyzbcfhjlpqv\",\"dmelnihctkxb\",\"suadwijwzydt\",\"icvufjlrfljl\",\"xkqmojnllzpd\",\"mtlexjpfrnvv\",\"bbgwgkraxabn\",\"rjbopktucoif\",\"grwgykvoibox\",\"vzryhkxjopup\",\"linpplzdudah\",\"aqihylbyaqgz\",\"pydzhldsgems\",\"egyrqmfmmrsk\",\"uotjzmhhsfyc\",\"jwobimjbyteu\",\"yfjtrnlvegkm\",\"onelannqkuqe\",\"dvacjnpkphww\",\"sdvusnrfvvco\",\"hlqmbotzbjig\",\"xulekovthwoy\",\"mcgwtoxonkvq\",\"bkbocpzitxbi\",\"rswglpbczlha\",\"garxupdxfzns\",\"vinpdpfrlmtk\",\"krihmqhmrazc\",\"azdzvqjgxofu\",\"phyreqlacblm\",\"eptjnrnvipre\",\"uxobwrppocxw\",\"jfjsfrrjuqdo\",\"yofkosteaejg\",\"nwacxsvygrpy\",\"devugsxtmfvq\",\"smqmpsznssci\",\"hulextbhygia\",\"xdgwgtdceuos\",\"mlbnptfwjhuk\",\"btwfyuhqpvad\",\"qbsxhuklvigv\",\"gjnpqumfbwmn\",\"vrihzvozhksf\",\"kadzivqunxyx\",\"aiyrrvsotlep\",\"pqtjavujzykh\",\"eyoajwwdfmqz\",\"tgjsswyxlawr\",\"jpfkbwasrncj\",\"yxackxcmwbib\",\"nfvutxegcopt\",\"dnqmcxgbicvl\",\"svlelxivoqbd\",\"hdgvuykqudhv\",\"wmbndymkarnn\",\"muwfmyoegetf\",\"bcsxvzqzmszx\",\"qknpezstsgfp\",\"gsihnzunytlh\",\"vbdzwawiehrz\",\"kjyqfaycjuxr\",\"zrtioaaxpidj\",\"pzoawacrvwjb\",\"ehksfbelbjpt\",\"tpfkobgghxwl\",\"jyacxbianlcd\",\"ygvugckutyiw\",\"noqlpcmpzmoo\",\"cwldycojfzug\",\"segvhdqelnay\",\"hnbnqdsyrbgq\",\"wvxfzduswomi\",\"mdsxidwnccsa\",\"blnpreyhipys\",\"qtigaeabodek\",\"fbdyjecwurkc\",\"vkyqsfeqaequ\",\"kstibfgkgswm\",\"zaoakfifmfce\",\"pikstfkzstjw\",\"eqfkcgmuyhpo\",\"tzaclgooeuvg\",\"jhvtugqijiby\",\"ypqldhsdpvhq\",\"nxldmhuxvjni\",\"cfgvvhwrbxta\",\"snbneiymhkzs\",\"hwxfniagnyfk\",\"wesxwicbtllc\",\"mmnoeievzzru\",\"buignjgpfnxm\",\"qcdywjiklade\",\"fkyqfjkeqojw\",\"vttiokmywbqp\"]",
+      "expectedOutput": "98"
+    },
+    {
+      "input": "[\"ginprzjcaghx\",\"zenprzjcaghx\",\"ginpurjutrfk\",\"zenpurjutrfk\",\"ginpwjklnddx\",\"zenpwjklnddx\",\"ginpyblcgobk\",\"zenpyblcgobk\",\"ginpbtmuazzy\",\"zenpbtmuazzy\",\"ginpdknltkxl\",\"zenpdknltkxl\",\"ginpfcocmvuy\",\"zenpfcocmvuy\",\"ginpiupughsl\",\"zenpiupughsl\",\"ginpkmqlzsqz\",\"zenpkmqlzsqz\",\"ginpmerctdom\",\"zenpmerctdom\",\"ginppvsumomz\",\"zenppvsumomz\",\"ginprntlgzjm\",\"zenprntlgzjm\",\"ginptfuczlha\",\"zenptfuczlha\",\"ginpwxvuswfn\",\"zenpwxvuswfn\",\"ginpypwlmhda\",\"zenpypwlmhda\",\"ginpbgxcfsbn\",\"zenpbgxcfsbn\",\"ginpdyyuzeza\",\"zenpdyyuzeza\",\"ginpfqzlspwo\",\"zenpfqzlspwo\",\"ginpiiacmaub\",\"zenpiiacmaub\",\"ginpkabuflso\",\"zenpkabuflso\",\"ginpmrclzwqb\",\"zenpmrclzwqb\",\"ginppjdcsiop\",\"zenppjdcsiop\",\"ginprbeultlc\",\"zenprbeultlc\",\"ginpttflfejp\",\"zenpttflfejp\",\"ginpwlgcyphc\",\"zenpwlgcyphc\",\"ginpychusafp\",\"zenpychusafp\",\"ginpbuillmdd\",\"zenpbuillmdd\",\"ginpdmjcfxbq\",\"zenpdmjcfxbq\",\"ginqfejuyiyd\",\"zenqfejuyiyd\",\"ginqiwklstwq\",\"zenqiwklstwq\",\"ginqknlcleue\",\"zenqknlcleue\",\"ginqmfmueqsr\",\"zenqmfmueqsr\",\"ginqpxnlybqe\",\"zenqpxnlybqe\",\"ginqrpocrmor\",\"zenqrpocrmor\",\"ginqthpulxle\",\"zenqthpulxle\",\"ginqwyqleijs\",\"zenqwyqleijs\",\"ginqyqrcyuhf\",\"zenqyqrcyuhf\",\"ginqaisurffs\",\"zenqaisurffs\",\"ginqdatlkqdf\",\"zenqdatlkqdf\",\"ginqfsucebat\",\"zenqfsucebat\",\"ginqikvuxmyg\",\"zenqikvuxmyg\",\"ginqkbwlrywt\",\"zenqkbwlrywt\",\"ginqmtxckjug\",\"zenqmtxckjug\",\"ginqplyteusu\",\"zenqplyteusu\",\"ginqrdzlxfqh\",\"zenqrdzlxfqh\",\"ginqtvacrrnu\",\"zenqtvacrrnu\",\"ginqwmbtkclh\",\"zenqwmbtkclh\",\"ginqyecldnju\",\"zenqyecldnju\",\"qawdcxyhictl\"]",
+      "expectedOutput": "49"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/unique-morse-code-words/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.398Z",
+    "sourceUpdatedAt": null
+  }
+}

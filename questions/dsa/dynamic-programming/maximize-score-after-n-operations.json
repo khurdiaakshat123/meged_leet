@@ -1,0 +1,168 @@
+{
+  "id": "1799",
+  "slug": "maximize-score-after-n-operations",
+  "title": "Maximize Score After N Operations",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Number Theory",
+    "Bitmask"
+  ],
+  "statement": "You are given `nums`, an array of positive integers of size `2 * n`. You must perform `n` operations on this array.\n\nIn the `i^(th)` operation **(1-indexed)**, you will:\n\n*   Choose two elements, `x` and `y`.\n*   Receive a score of `i * gcd(x, y)`.\n*   Remove `x` and `y` from `nums`.\n\nReturn _the maximum score you can receive after performing_ `n` _operations._\n\nThe function `gcd(x, y)` is the greatest common divisor of `x` and `y`.\n\n**Example 1:**\n\n```\nInput: nums = [1,2]\nOutput: 1\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 2)) = 1\n```\n\n**Example 2:**\n\n```\nInput: nums = [3,4,6,8]\nOutput: 11\nExplanation: The optimal choice of operations is:\n(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11\n```\n\n**Example 3:**\n\n```\nInput: nums = [1,2,3,4,5,6]\nOutput: 14\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14\n```\n\n**Constraints:**\n\n*   `1 <= n <= 7`\n*   `nums.length == 2 * n`\n*   `1 <= nums[i] <= 10^(6)`",
+  "constraints": [
+    "1 <= n <= 7",
+    "nums.length == 2 * n",
+    "1 <= nums[i] <= 106"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2]",
+      "output": "1",
+      "explanation": " The optimal choice of operations is:\n(1 * gcd(1, 2)) = 1"
+    },
+    {
+      "input": "nums = [3,4,6,8]",
+      "output": "11",
+      "explanation": " The optimal choice of operations is:\n(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11"
+    },
+    {
+      "input": "nums = [1,2,3,4,5,6]",
+      "output": "14",
+      "explanation": " The optimal choice of operations is:\n(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxScore(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "typescript": "function maxScore(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxScore(int[] nums) {\n        \n    }\n}",
+    "c": "int maxScore(int* nums, int numsSize) {\n    \n}",
+    "golang": "func maxScore(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_score(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxScore($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer]) :: integer\n  def max_score(nums) do\n    \n  end\nend",
+    "erlang": "-spec max_score(Nums :: [integer()]) -> integer().\nmax_score(Nums) ->\n  .",
+    "racket": "(define/contract (max-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1,2]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[3,4,6,8]",
+      "expectedOutput": "11"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1,2]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[3,4,6,8]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[1000000,1000000]",
+      "expectedOutput": "1000000"
+    },
+    {
+      "input": "[5,7,11,13]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[6,3,4,8]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[12,18,15,25]",
+      "expectedOutput": "17"
+    },
+    {
+      "input": "[2,4,999983,999983]",
+      "expectedOutput": "1999968"
+    },
+    {
+      "input": "[1,2,3,4,5,6]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[15246,261690,41580,5390,20790,660]",
+      "expectedOutput": "63184"
+    },
+    {
+      "input": "[22330,314160,28980,157080,44330,20790,18480,66066]",
+      "expectedOutput": "635892"
+    },
+    {
+      "input": "[999900,666600,500000,750000,510510,255255]",
+      "expectedOutput": "1760410"
+    },
+    {
+      "input": "[17,34,51,77,121,143,286,1000000]",
+      "expectedOutput": "647"
+    },
+    {
+      "input": "[27390,124740,155925,21210,32890,431970,28560,96096]",
+      "expectedOutput": "136052"
+    },
+    {
+      "input": "[42,210,126,294,462,630]",
+      "expectedOutput": "756"
+    },
+    {
+      "input": "[360360,80190,21420,17160,95634,39270,71940,90090,6930,30800]",
+      "expectedOutput": "470318"
+    },
+    {
+      "input": "[47740,111342,81840,265650,230230,266805,89760,21630,2772,59430,137060,154770]",
+      "expectedOutput": "147016"
+    },
+    {
+      "input": "[1000000,750000,999900,666600,982800,655200,510510,255255,999983,999979]",
+      "expectedOutput": "4242666"
+    },
+    {
+      "input": "[672210,99330,27720,20328,44880,17556,73150,21630,304920,87120,8580,154770]",
+      "expectedOutput": "316006"
+    },
+    {
+      "input": "[999983,999983,510510,255255,720720,360360,83160,55440,999900,666600,982800,655200,1000000,750000]",
+      "expectedOutput": "13432426"
+    },
+    {
+      "input": "[22260,381150,6930,201630,26334,258830,326865,57288,44220,37590,56210,69300,314160,36960]",
+      "expectedOutput": "367831"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Find every way to split the array until n groups of 2. Brute force recursion is acceptable.",
+    "Calculate the gcd of every pair and greedily multiply the largest gcds."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximize-score-after-n-operations/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:21.332Z",
+    "sourceUpdatedAt": null
+  }
+}

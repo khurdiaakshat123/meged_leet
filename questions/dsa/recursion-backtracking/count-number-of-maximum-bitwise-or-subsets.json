@@ -1,0 +1,156 @@
+{
+  "id": "2044",
+  "slug": "count-number-of-maximum-bitwise-or-subsets",
+  "title": "Count Number of Maximum Bitwise-OR Subsets",
+  "category": "dsa",
+  "subcategory": "recursion-backtracking",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "statement": "Given an integer array `nums`, find the **maximum** possible **bitwise OR** of a subset of `nums` and return _the **number of different non-empty subsets** with the maximum bitwise OR_.\n\nAn array `a` is a **subset** of an array `b` if `a` can be obtained from `b` by deleting some (possibly zero) elements of `b`. Two subsets are considered **different** if the indices of the elements chosen are different.\n\nThe bitwise OR of an array `a` is equal to `a[0] **OR** a[1] **OR** ... **OR** a[a.length - 1]` (**0-indexed**).\n\n**Example 1:**\n\n```\nInput: nums = [3,1]\nOutput: 2\nExplanation: The maximum possible bitwise OR of a subset is 3. There are 2 subsets with a bitwise OR of 3:\n- [3]\n- [3,1]\n```\n\n**Example 2:**\n\n```\nInput: nums = [2,2,2]\nOutput: 7\nExplanation: All non-empty subsets of [2,2,2] have a bitwise OR of 2. There are 23 - 1 = 7 total subsets.\n```\n\n**Example 3:**\n\n```\nInput: nums = [3,2,1,5]\nOutput: 6\nExplanation: The maximum possible bitwise OR of a subset is 7. There are 6 subsets with a bitwise OR of 7:\n- [3,5]\n- [3,1,5]\n- [3,2,5]\n- [3,2,1,5]\n- [2,5]\n- [2,1,5]\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 16`\n*   `1 <= nums[i] <= 10^(5)`",
+  "constraints": [
+    "1 <= nums.length <= 16",
+    "1 <= nums[i] <= 105"
+  ],
+  "examples": [
+    {
+      "input": "nums = [3,1]",
+      "output": "2",
+      "explanation": "The maximum possible bitwise OR of a subset is 3. There are 2 subsets with a bitwise OR of 3:\n- [3]\n- [3,1]"
+    },
+    {
+      "input": "nums = [2,2,2]",
+      "output": "7",
+      "explanation": "All non-empty subsets of [2,2,2] have a bitwise OR of 2. There are 23 - 1 = 7 total subsets."
+    },
+    {
+      "input": "nums = [3,2,1,5]",
+      "output": "6",
+      "explanation": "The maximum possible bitwise OR of a subset is 7. There are 6 subsets with a bitwise OR of 7:\n- [3,5]\n- [3,1,5]\n- [3,2,5]\n- [3,2,1,5]\n- [2,5]\n- [2,1,5]"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countMaxOrSubsets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countMaxOrSubsets(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countMaxOrSubsets(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def countMaxOrSubsets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countMaxOrSubsets = function(nums) {\n    \n};",
+    "typescript": "function countMaxOrSubsets(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int CountMaxOrSubsets(int[] nums) {\n        \n    }\n}",
+    "c": "int countMaxOrSubsets(int* nums, int numsSize) {\n    \n}",
+    "golang": "func countMaxOrSubsets(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countMaxOrSubsets(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countMaxOrSubsets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_max_or_subsets(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_max_or_subsets(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countMaxOrSubsets($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countMaxOrSubsets(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def countMaxOrSubsets(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec count_max_or_subsets(nums :: [integer]) :: integer\n  def count_max_or_subsets(nums) do\n    \n  end\nend",
+    "erlang": "-spec count_max_or_subsets(Nums :: [integer()]) -> integer().\ncount_max_or_subsets(Nums) ->\n  .",
+    "racket": "(define/contract (count-max-or-subsets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[39]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[100000,50000]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[47944,74236,97443]",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[53954,53426,46328,7961]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[5,12,19,26,33]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[1,53939,50084,1,81883,88641]",
+      "expectedOutput": "16"
+    },
+    {
+      "input": "[97132,26669,95212,33747,97998,32753,34640]",
+      "expectedOutput": "59"
+    },
+    {
+      "input": "[50000,100000,1,1,100000,1,100000,100000]",
+      "expectedOutput": "105"
+    },
+    {
+      "input": "[7400,19546,33122,55459,65278,75854,75915,88252,90728]",
+      "expectedOutput": "115"
+    },
+    {
+      "input": "[85336,83839,78332,70598,47438,46099,36921,35250,4233,2139]",
+      "expectedOutput": "482"
+    },
+    {
+      "input": "[11,18,25,32,39,46,53,60,67,74,81,88]",
+      "expectedOutput": "3464"
+    },
+    {
+      "input": "[1,49851,38856,1,9780,61727,1,82184,40994,1,70317,20726,1,16771]",
+      "expectedOutput": "6171"
+    },
+    {
+      "input": "[56754,37441,16911,94016,55277,862,34236,16732,93821,90166,15875,97811,98532,56141,4063,80415]",
+      "expectedOutput": "60136"
+    },
+    {
+      "input": "[1,1,100000,50000,100000,100000,50000,100000,100000,100000,100000,1,100000,100000,100000,100000]",
+      "expectedOutput": "42987"
+    },
+    {
+      "input": "[1890,9139,11532,12510,24267,38892,39871,42158,44872,47441,67272,78171,82356,86489,94683,99933]",
+      "expectedOutput": "56722"
+    },
+    {
+      "input": "[99606,81739,79064,65602,57321,56815,51473,50238,44527,30823,21120,20369,20051,13020,9751,6966]",
+      "expectedOutput": "57896"
+    },
+    {
+      "input": "[17,24,31,38,45,52,59,66,73,80,87,94,101,108,115,122]",
+      "expectedOutput": "64251"
+    },
+    {
+      "input": "[1,4540,9609,1,89295,22192,1,44292,38480,1,63347,48999,1,20382,47952,1]",
+      "expectedOutput": "29184"
+    },
+    {
+      "input": "[55107,94643,11795,19958,66237,21462,5912,49775,33026,44600,8872,65122,71551,72494,12323,73974]",
+      "expectedOutput": "56944"
+    },
+    {
+      "input": "[50000,1,50000,50000,50000,50000,100000,100000,1,50000,50000,50000,50000,100000,100000,50000]",
+      "expectedOutput": "46035"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Can we enumerate all possible subsets?",
+    "The maximum bitwise-OR is the bitwise-OR of the whole array."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.323Z",
+    "sourceUpdatedAt": null
+  }
+}

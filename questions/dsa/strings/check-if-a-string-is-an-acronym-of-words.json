@@ -1,0 +1,155 @@
+{
+  "id": "2828",
+  "slug": "check-if-a-string-is-an-acronym-of-words",
+  "title": "Check if a String Is an Acronym of Words",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String"
+  ],
+  "statement": "Given an array of strings `words` and a string `s`, determine if `s` is an **acronym** of words.\n\nThe string `s` is considered an acronym of `words` if it can be formed by concatenating the **first** character of each string in `words` **in order**. For example, `\"ab\"` can be formed from `[\"apple\", \"banana\"]`, but it can't be formed from `[\"bear\", \"aardvark\"]`.\n\nReturn `true` _if_ `s` _is an acronym of_ `words`_, and_ `false` _otherwise._\n\n**Example 1:**\n\n```\nInput: words = [\"alice\",\"bob\",\"charlie\"], s = \"abc\"\nOutput: true\nExplanation: The first character in the words \"alice\", \"bob\", and \"charlie\" are 'a', 'b', and 'c', respectively. Hence, s = \"abc\" is the acronym.\n```\n\n**Example 2:**\n\n```\nInput: words = [\"an\",\"apple\"], s = \"a\"\nOutput: false\nExplanation: The first character in the words \"an\" and \"apple\" are 'a' and 'a', respectively. \nThe acronym formed by concatenating these characters is \"aa\". \nHence, s = \"a\" is not the acronym.\n```\n\n**Example 3:**\n\n```\nInput: words = [\"never\",\"gonna\",\"give\",\"up\",\"on\",\"you\"], s = \"ngguoy\"\nOutput: true\nExplanation: By concatenating the first character of the words in the array, we get the string \"ngguoy\". \nHence, s = \"ngguoy\" is the acronym.\n```\n\n**Constraints:**\n\n*   `1 <= words.length <= 100`\n*   `1 <= words[i].length <= 10`\n*   `1 <= s.length <= 100`\n*   `words[i]` and `s` consist of lowercase English letters.",
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 10",
+    "1 <= s.length <= 100",
+    "words[i] and s consist of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "words = [\"alice\",\"bob\",\"charlie\"], s = \"abc\"",
+      "output": "true",
+      "explanation": "The first character in the words \"alice\", \"bob\", and \"charlie\" are 'a', 'b', and 'c', respectively. Hence, s = \"abc\" is the acronym."
+    },
+    {
+      "input": "words = [\"an\",\"apple\"], s = \"a\"",
+      "output": "false",
+      "explanation": "The first character in the words \"an\" and \"apple\" are 'a' and 'a', respectively. \nThe acronym formed by concatenating these characters is \"aa\". \nHence, s = \"a\" is not the acronym."
+    },
+    {
+      "input": "words = [\"never\",\"gonna\",\"give\",\"up\",\"on\",\"you\"], s = \"ngguoy\"",
+      "output": "true",
+      "explanation": "By concatenating the first character of the words in the array, we get the string \"ngguoy\". \nHence, s = \"ngguoy\" is the acronym."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool isAcronym(vector<string>& words, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isAcronym(List<String> words, String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def isAcronym(self, words: List[str], s: str) -> bool:\n        ",
+    "python": "class Solution(object):\n    def isAcronym(self, words, s):\n        \"\"\"\n        :type words: List[str]\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} s\n * @return {boolean}\n */\nvar isAcronym = function(words, s) {\n    \n};",
+    "typescript": "function isAcronym(words: string[], s: string): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool IsAcronym(IList<string> words, string s) {\n        \n    }\n}",
+    "c": "bool isAcronym(char** words, int wordsSize, char* s) {\n    \n}",
+    "golang": "func isAcronym(words []string, s string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun isAcronym(words: List<String>, s: String): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isAcronym(_ words: [String], _ s: String) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_acronym(words: Vec<String>, s: String) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String[]} words\n# @param {String} s\n# @return {Boolean}\ndef is_acronym(words, s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $s\n     * @return Boolean\n     */\n    function isAcronym($words, $s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isAcronym(List<String> words, String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def isAcronym(words: List[String], s: String): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec is_acronym(words :: [String.t], s :: String.t) :: boolean\n  def is_acronym(words, s) do\n    \n  end\nend",
+    "erlang": "-spec is_acronym(Words :: [unicode:unicode_binary()], S :: unicode:unicode_binary()) -> boolean().\nis_acronym(Words, S) ->\n  .",
+    "racket": "(define/contract (is-acronym words s)\n  (-> (listof string?) string? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"dxsxf\"]\n\"d\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"jxoh\",\"lls\"]\n\"ref\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"e\",\"xcm\",\"p\"]\n\"exp\"",
+      "expectedOutput": "true"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"lxigngij\",\"rbxkd\",\"upjbhmigr\",\"ezvcidhoy\",\"efogfet\"]\n\"mtof\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"rzfgfhzhkl\",\"xtp\",\"rroystmm\",\"p\",\"snw\",\"zrk\",\"kzo\"]\n\"rxrpszk\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"zgmvp\",\"vnhydwurs\",\"gy\",\"u\",\"exowecm\",\"hs\",\"ml\",\"rns\",\"yqihxbd\",\"bbb\"]\n\"ft\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"ytgcxenq\",\"fxu\",\"cujnzs\",\"g\",\"mjfngy\",\"pnit\",\"jxssqjirn\",\"g\",\"hniadoi\",\"raatiqurjx\",\"xzjf\",\"orygnvyazc\",\"ydetkdgzrl\"]\n\"yfcgmpjghrxoy\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"affs\",\"b\",\"cupvv\",\"kfuezjai\",\"l\",\"yyxfl\",\"zfjwvvtwd\",\"sxrcfxab\",\"m\",\"yyalrkb\",\"lnqfg\",\"yrv\",\"rixzrt\",\"ydrunfllf\",\"rmkostf\",\"ypm\"]\n\"x\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"mxismwq\",\"ww\",\"ivypfeg\",\"aehmp\",\"yujwe\",\"pzvz\",\"imxmuxz\",\"hb\",\"xvjk\",\"rlsu\",\"bqvqketey\",\"khvyrxlovv\",\"hgy\",\"zmyp\",\"bz\",\"upr\",\"mkqjra\",\"eyfvnn\",\"bonfjbq\"]\n\"mwiaypihxrbkhzbumeb\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"graiqouw\",\"akl\",\"ajqr\",\"x\",\"bzxrhjo\",\"yvryh\",\"jv\",\"rqv\",\"kjukauobmq\",\"ih\",\"hnhllsn\",\"ws\",\"kxo\",\"tld\",\"jvup\",\"hzoishap\",\"iuquzmfb\",\"lyze\",\"gbse\",\"fwexrop\",\"vzeaqq\",\"vpi\",\"uf\"]\n\"fklbgaskdwmklizdbef\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"kk\",\"bqbmot\",\"pbpof\",\"lwhaccf\",\"hferdsejbh\",\"mkddpjjyaz\",\"lblubs\",\"ibhjao\",\"sekykjefj\",\"zcpgd\",\"lbtmcglv\",\"lunqmgltcv\",\"qq\",\"t\",\"yonyvqm\",\"bvb\",\"q\",\"yycqjlpytl\",\"fzywo\",\"wc\",\"tpjfosqvxe\",\"aojxgw\",\"duixkegsu\",\"erlvo\",\"pzlhzgsk\",\"elhi\",\"su\"]\n\"kbplhmliszllqtybqyfwtadepes\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"a\",\"c\",\"xmdqbvh\",\"slzap\",\"wwgn\",\"px\",\"gcih\",\"dx\",\"gphzj\",\"ifnv\",\"qawu\",\"xp\",\"wxvklhxym\",\"dqnmcgscg\",\"dne\",\"qzgwbux\",\"ykfk\",\"aog\",\"wfzkwmjmh\",\"gkzqbbvtem\",\"dvs\",\"uacalps\",\"gqfqywmznw\",\"hyfp\",\"s\",\"ibaolcbcmz\",\"lyxawmxl\",\"zxcq\",\"bavwfa\",\"fixffht\",\"nbxsu\",\"gepcalz\"]\n\"uvgddtcuzxzoutfee\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"jiysihulcm\",\"gjqpegq\",\"mde\",\"mte\",\"qcxqggnvae\",\"dc\",\"fffzhaqgd\",\"wmzxvr\",\"eyeelqdgq\",\"htpzx\",\"iysayzo\",\"srnny\",\"nnwnzxkj\",\"joymj\",\"pw\",\"gegheebqa\",\"ecggmzxfn\",\"wgpaxwrte\",\"cl\",\"dalfymup\",\"yezuqr\",\"jqnshlgr\",\"nhvovww\",\"ug\",\"uboaui\",\"gxcvwvpcl\",\"fs\",\"bwtlydat\",\"oxcja\",\"zskyaipsf\",\"d\",\"uzevi\",\"flqi\",\"rh\",\"q\",\"xuwjxj\",\"lwkzdx\"]\n\"jgmmqdfwehisnjpgewcdyjnuugfbozdufrqxl\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"ixhomdioev\",\"cagfnrhlft\",\"qludk\",\"wgjqwukay\",\"vtykgp\",\"szqztun\",\"ye\",\"sefgg\",\"gdeojb\",\"lvg\",\"v\",\"khksnzev\",\"rs\",\"azeycqjtqf\",\"sh\",\"oi\",\"xj\",\"mripaflfrb\",\"wypyyi\",\"s\",\"wkcp\",\"e\",\"oapemta\",\"hzdwnkj\",\"k\",\"va\",\"ineayfuxa\",\"fupscuphk\",\"cnena\",\"j\",\"ylbonz\",\"vtcqtykdns\",\"vo\",\"jahkzashoo\",\"gaaajjma\",\"anfrn\",\"chlwbizhhf\",\"ubufhq\",\"oahupjqgl\",\"qunscxpjil\",\"efhu\",\"o\"]\n\"kgqugtjzujsdtpckvughpzqaiy\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"o\",\"vodsbmf\",\"xxmbgeblnc\",\"ir\",\"rxhogym\",\"sbuyguahbc\",\"yxzuriqaqe\",\"sypjdvufl\",\"fssmt\",\"vegatmbd\",\"pghldwm\",\"wrjkofntvj\",\"jkutuf\",\"xqkoixo\",\"okbogrnzou\",\"upnfjkuga\",\"vbodeokacn\",\"xyjzfb\",\"ququrqfbw\",\"otmp\",\"bjs\",\"ag\",\"ebjuviri\",\"jdhr\",\"wx\",\"s\",\"bexxzusdv\",\"laaxmbfes\",\"cvzhneato\",\"ehyrw\",\"lawammfwrp\",\"ibzual\",\"krycdhz\",\"awhhdizja\",\"lt\",\"bwwawxpgge\",\"eu\",\"mskqkirg\",\"ieja\",\"mblr\",\"rn\",\"qnp\",\"vfpywnv\",\"vkopwk\",\"pxcpmhn\",\"cvmlyydff\",\"zpr\"]\n\"ovxirsysfvpwjxouvxqobaejwsblcelikalbemimrqvvpcz\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"zmnl\",\"eetw\",\"hzjzubw\",\"qovlgldnm\",\"riutcefpv\",\"uqxm\",\"zvcydjtwp\",\"ncok\",\"co\",\"jzbxtpjcw\",\"nkydxggf\",\"ykasy\",\"yzftylnzcs\",\"djvsvqnid\",\"mc\",\"ufglippb\",\"wbilbjs\",\"fgvzwfy\",\"dvso\",\"jalfcnuya\",\"umsjcpf\",\"hqsg\",\"nolbz\",\"xablce\",\"rfkhemsct\",\"lmeqdxchje\",\"cuwjpkbej\",\"sa\",\"zhdizz\",\"npdokzbzjz\",\"qgvdvun\",\"qp\",\"wo\",\"lxvjnx\",\"mitoficcd\",\"vdytzx\",\"qksuhx\",\"qdk\",\"ufoi\",\"azp\",\"zasxaiaxdf\",\"tcwocwqhf\",\"fyfd\",\"aey\",\"nseewwxek\",\"wio\",\"q\",\"vpym\",\"qwxjgxt\",\"bg\",\"lnpzheck\",\"xzsyolo\",\"xivrep\"]\n\"pugbymsbtbpesjjimzizzhvnmxdzphkqkxaonyjwkqrjlkamht\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"jtdiy\",\"zafnjvvts\",\"ykivj\",\"c\",\"j\",\"ivccgctkeg\",\"vn\",\"eaytaj\",\"yiu\",\"sowjgwkv\",\"oscdadb\",\"nkhvqncwy\",\"lyrsfxm\",\"u\",\"ij\",\"czjpzdn\",\"xyvnghpfpj\",\"kqkjjeo\",\"wtaexrmrak\",\"yiodocxvhr\",\"dxdckor\",\"utjvroagz\",\"nyhghmj\",\"stezmke\",\"wbnafum\",\"nkcqavybyt\",\"yeuici\",\"nloapegy\",\"qhd\",\"dzx\",\"xadzkyxgqn\",\"bt\",\"uud\",\"eo\",\"mviymevqpv\",\"pdsu\",\"achtyrou\",\"raigflid\",\"rrakusptbi\",\"kigozun\",\"bbpohprt\",\"oddbb\",\"urdycg\",\"ixpa\",\"cxbinfgqa\",\"vbfea\",\"vmkmzy\",\"taznxytrak\",\"fnp\",\"ngilvpfad\",\"wdxlsula\",\"fukmqlxkw\",\"viapbaq\",\"zjji\",\"c\",\"yiahx\",\"zyr\",\"g\",\"kgo\"]\n\"jzycjiveysonluicxkwydunswnynqdxbuemparrkbouicvvtfnwfvzcyzgk\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"bfl\",\"fzfclgovj\",\"o\",\"vwqrbggl\",\"dcuhoqk\",\"awthbtiyb\",\"peqhhcgh\",\"lgbne\",\"sw\",\"dpda\",\"ortnt\",\"fcqd\",\"gtsifw\",\"au\",\"qmtorlyeen\",\"iublsivqxm\",\"nhgiyb\",\"sbi\",\"s\",\"tfi\",\"raeedh\",\"xvk\",\"vyxxiok\",\"vz\",\"guxnozkpu\",\"urjnixemw\",\"qia\",\"isffygg\",\"yzavmtnn\",\"pdboohjb\",\"zrq\",\"ewymmrsao\",\"viwlp\",\"nszrr\",\"fkalzjeql\",\"hum\",\"ntyfzehj\",\"vt\",\"vfbtnkwfnm\",\"et\",\"uiqbrfbbu\",\"zqhehfv\",\"vhgxeriby\",\"wfato\",\"rawe\",\"x\",\"od\",\"lg\",\"q\",\"mwjuegvvz\",\"qw\",\"hbo\",\"a\",\"mll\",\"tcf\",\"v\",\"tydle\",\"r\",\"yvlpslrmoi\",\"klfotjxyv\",\"hbq\",\"wldwbgwbes\",\"avaalsaizm\",\"t\",\"nmu\",\"xynmesefc\"]\n\"iatutzipeswgnxltujtmtbexfjjygznmdtqxjocqqeqf\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[\"wbqsbgr\",\"xmi\",\"vggo\",\"bygdkekh\",\"ezscuoxte\",\"pted\",\"nifrz\",\"ujmiyqh\",\"mmsmbiqxm\",\"cho\",\"saed\",\"duucz\",\"ng\",\"jfmasrbnqi\",\"oac\",\"x\",\"wutrhprpun\",\"jqsvl\",\"rymo\",\"llowtl\",\"nshhq\",\"hhh\",\"zuduumex\",\"yu\",\"afsdcrgkyh\",\"hicmunlch\",\"dmllhzof\",\"omyiufxhjg\",\"yh\",\"xdlwyip\",\"tat\",\"hpp\",\"xkmq\",\"dywzwdy\",\"leooelmyix\",\"bld\",\"ijrmktpmq\",\"zviarq\",\"tjqexg\",\"piuydh\",\"vv\",\"eb\",\"iw\",\"pkconabls\",\"i\",\"yjdrnvr\",\"jj\",\"swegnny\",\"jfkf\",\"ubeipjs\"]\n\"wxvbepnumcsdnjoxwjrlnhzyahdoyxthxdlbiztpveipiyjsju\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[\"cqpalmeteb\",\"obfqujd\",\"ofy\",\"lbhrn\",\"kuavun\",\"mknemhufwm\",\"lfzylujn\",\"sbjrzhjfwf\",\"cpjate\",\"b\",\"anbohueguq\",\"umrztn\",\"n\",\"lmbtvgix\",\"q\",\"dflmrbn\",\"fnwq\",\"qnomjjcb\",\"i\",\"udavdj\",\"kyg\",\"logj\",\"mq\",\"rfovfez\",\"xpp\",\"taqxphrrfd\",\"tcbfodpxko\",\"nrp\",\"vglr\",\"yqzjhz\",\"wncoai\",\"lj\",\"enlxpsak\",\"ik\",\"jbtu\",\"q\",\"vjujwwpx\",\"vfnhdcub\",\"frzq\",\"hi\",\"fg\",\"rhqvfzhdn\",\"ze\",\"bxxezrhcc\",\"alue\",\"bmkhblazcz\",\"sqff\",\"cdn\",\"fznamqk\",\"bk\",\"x\",\"adfctcnna\",\"ddvvuthv\",\"hdtgqbgpmu\",\"pxdajszyb\",\"irwh\",\"rmsuievnb\",\"irnodk\",\"clx\",\"pbmtwdd\",\"mxjbykhx\",\"lbietagm\",\"wnsq\",\"rbie\",\"x\",\"udis\",\"rlwcdfr\",\"uvjkzulb\",\"dfhpj\",\"ksjcjd\",\"nszo\",\"vwlrhslmav\",\"xciujdu\",\"z\",\"fa\",\"smxfr\",\"uyscgybu\",\"clyjeutv\",\"jlvudv\",\"fayrq\",\"dajzymilz\",\"uqbbirse\",\"ifd\",\"vyjyckknb\",\"epnu\",\"kytsj\",\"mrsfhugsz\",\"ekxsxn\",\"sjtuftg\",\"x\",\"x\",\"ilajuekuof\",\"eydddfzst\",\"aaykdaproh\",\"u\",\"nvgkas\",\"eqawit\",\"uc\",\"appbz\",\"ov\"]\n\"ogizvmdgodkdyhxcdhrzcqazmodvlofjtkhkbfmvczzuq\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "<div class=\"_1l1MA\">Concatenate the first characters of the strings in <code>words</code>, and compare the resulting concatenation to <code>s</code>.</div>"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/check-if-a-string-is-an-acronym-of-words/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.061Z",
+    "sourceUpdatedAt": null
+  }
+}

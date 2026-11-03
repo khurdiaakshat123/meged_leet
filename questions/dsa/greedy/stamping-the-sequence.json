@@ -1,0 +1,160 @@
+{
+  "id": "936",
+  "slug": "stamping-the-sequence",
+  "title": "Stamping The Sequence",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Queue"
+  ],
+  "statement": "You are given two strings `stamp` and `target`. Initially, there is a string `s` of length `target.length` with all `s[i] == '?'`.\n\nIn one turn, you can place `stamp` over `s` and replace every letter in the `s` with the corresponding letter from `stamp`.\n\n*   For example, if `stamp = \"abc\"` and `target = \"abcba\"`, then `s` is `\"?????\"` initially. In one turn you can:\n    \n    *   place `stamp` at index `0` of `s` to obtain `\"abc??\"`,\n    *   place `stamp` at index `1` of `s` to obtain `\"?abc?\"`, or\n    *   place `stamp` at index `2` of `s` to obtain `\"??abc\"`.\n    \n    Note that `stamp` must be fully contained in the boundaries of `s` in order to stamp (i.e., you cannot place `stamp` at index `3` of `s`).\n\nWe want to convert `s` to `target` using **at most** `10 * target.length` turns.\n\nReturn _an array of the index of the left-most letter being stamped at each turn_. If we cannot obtain `target` from `s` within `10 * target.length` turns, return an empty array.\n\n**Example 1:**\n\n```\nInput: stamp = \"abc\", target = \"ababc\"\nOutput: [0,2]\nExplanation: Initially s = \"?????\".\n- Place stamp at index 0 to get \"abc??\".\n- Place stamp at index 2 to get \"ababc\".\n[1,0,2] would also be accepted as an answer, as well as some other answers.\n```\n\n**Example 2:**\n\n```\nInput: stamp = \"abca\", target = \"aabcaca\"\nOutput: [3,0,1]\nExplanation: Initially s = \"???????\".\n- Place stamp at index 3 to get \"???abca\".\n- Place stamp at index 0 to get \"abcabca\".\n- Place stamp at index 1 to get \"aabcaca\".\n```\n\n**Constraints:**\n\n*   `1 <= stamp.length <= target.length <= 1000`\n*   `stamp` and `target` consist of lowercase English letters.",
+  "constraints": [
+    "1 <= stamp.length <= target.length <= 1000",
+    "stamp and target consist of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "stamp = \"abc\", target = \"ababc\"",
+      "output": "[0,2]",
+      "explanation": "Initially s = \"?????\".\n- Place stamp at index 0 to get \"abc??\".\n- Place stamp at index 2 to get \"ababc\".\n[1,0,2] would also be accepted as an answer, as well as some other answers."
+    },
+    {
+      "input": "stamp = \"abca\", target = \"aabcaca\"",
+      "output": "[3,0,1]",
+      "explanation": "Initially s = \"???????\".\n- Place stamp at index 3 to get \"???abca\".\n- Place stamp at index 0 to get \"abcabca\".\n- Place stamp at index 1 to get \"aabcaca\"."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> movesToStamp(string stamp, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] movesToStamp(String stamp, String target) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def movesToStamp(self, stamp: str, target: str) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def movesToStamp(self, stamp, target):\n        \"\"\"\n        :type stamp: str\n        :type target: str\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} stamp\n * @param {string} target\n * @return {number[]}\n */\nvar movesToStamp = function(stamp, target) {\n    \n};",
+    "typescript": "function movesToStamp(stamp: string, target: string): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public int[] MovesToStamp(string stamp, string target) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* movesToStamp(char* stamp, char* target, int* returnSize) {\n    \n}",
+    "golang": "func movesToStamp(stamp string, target string) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun movesToStamp(stamp: String, target: String): IntArray {\n        \n    }\n}",
+    "swift": "class Solution {\n    func movesToStamp(_ stamp: String, _ target: String) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn moves_to_stamp(stamp: String, target: String) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {String} stamp\n# @param {String} target\n# @return {Integer[]}\ndef moves_to_stamp(stamp, target)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $stamp\n     * @param String $target\n     * @return Integer[]\n     */\n    function movesToStamp($stamp, $target) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> movesToStamp(String stamp, String target) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def movesToStamp(stamp: String, target: String): Array[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec moves_to_stamp(stamp :: String.t, target :: String.t) :: [integer]\n  def moves_to_stamp(stamp, target) do\n    \n  end\nend",
+    "erlang": "-spec moves_to_stamp(Stamp :: unicode:unicode_binary(), Target :: unicode:unicode_binary()) -> [integer()].\nmoves_to_stamp(Stamp, Target) ->\n  .",
+    "racket": "(define/contract (moves-to-stamp stamp target)\n  (-> string? string? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"mxm\"\n\"mxxxm\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ltl\"\n\"ltltl\"",
+      "expectedOutput": "[2,0]"
+    },
+    {
+      "input": "\"cj\"\n\"ccjj\"",
+      "expectedOutput": "[2,0,1]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"u\"\n\"u\"",
+      "expectedOutput": "[0]"
+    },
+    {
+      "input": "\"pv\"\n\"pp\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ai\"\n\"aiai\"",
+      "expectedOutput": "[2,0]"
+    },
+    {
+      "input": "\"mxm\"\n\"mxxxm\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"ltl\"\n\"ltltl\"",
+      "expectedOutput": "[2,0]"
+    },
+    {
+      "input": "\"ouz\"\n\"ouzzuo\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"cj\"\n\"ccjj\"",
+      "expectedOutput": "[2,0,1]"
+    },
+    {
+      "input": "\"ojjj\"\n\"jjjojjoojjjjojojjojjjojjjjojoojjjojjjjjjjjoojjjjj\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"qvsi\"\n\"qvsiqqvsiqvqqvsivsiiqvqvsi\"",
+      "expectedOutput": "[16,9,20,15,11,4,22,12,5,0]"
+    },
+    {
+      "input": "\"ahmchm\"\n\"adhmahmchmhmchmhmchm\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"hgh\"\n\"hghghhghghhhghhghhhghhhghhhghghghghghhghghhhghhhghhhghghhhghghghhghhgh\"",
+      "expectedOutput": "[54,48,44,40,23,19,15,8,67,64,61,59,57,53,51,47,43,39,37,34,32,30,28,26,22,18,14,11,7,5,2,0]"
+    },
+    {
+      "input": "\"zjz\"\n\"zjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjz\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"shsbbrjhs\"\n\"shssshsbbrjhsbbrshsshsbshsbbrjhsrjhsshsbbrjhsbbrjhs\"",
+      "expectedOutput": "[10,16,18,0,42,27,19,3,36,23,4]"
+    },
+    {
+      "input": "\"uq\"\n\"uuqquuuquququququuquuuquuquququuuquuququuququuquququqquuuquuu\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"niizpisikszzzszkkpszpizz\"\n\"niizpisikszzzniizpisikszzzszkkpszpizzizzzpisikszniniizpisikszzzniizpisikszzzszkkpszpizzzszkkpszpizzizpisikszzzszkkpszpizzniizpisikszzzszkkpszpizzsikszzzszkkpszpizzniizpiniizpisikszzzszkkpszpiniizpisikszzniniizpisikszzzszkkpszpizzikszzzszkkpszpizzzzszniizpisikszzzszkkpszpizzniizpisikszzzszkkpszpizzzpisniizpisiksniizpisikszzzszkkpszpizzpszpizzzpisiksniiniizpisikszzzszkkpszpizzkpszpizzzniizpisikszniizpisikszzzszkkpszpizzikszzzszkkpszpizzszzzszkkpszpizzzzszkkpszpizzzniizpisikszzzszkkpszpizzpszpizz\"",
+      "expectedOutput": "[454,163,442,430,169,37,429,362,340,320,295,235,223,191,97,48,17,474,414,386,361,350,319,302,275,222,203,139,75,50,16,0,467,397,353,312,274,250,205,121,63,13]"
+    },
+    {
+      "input": "\"fbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebb\"\n\"nbeefnnenfbeefnnenfebnnbenfnbnnnfenfbebeeefbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbnnbenfnbnnnffbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbfbeefnnenfebnnbefbeefnnenfebnnbenfnbfbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbefbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbbebeeeefnfbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbebbnfbeefnnffbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbebbnnbefbeefnnenfebnnbenfnbnnnfenfbebeeeefnebffebbenfbebeeeefnebffebbbffebbnfnbnnnfenfbebeeeefnebffebb\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"eue\"\n\"eueuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuue\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"hrh\"\n\"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\"",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "\"sqssxseqsqsqesessxsqssxesexxxsqqeqxexsxqexesseqqqeeqxsxssxesqeeexeqqseseqeqxqsqqxeseseeqeseqxqqqeeqxsqssxsxxsesqsseqexssqqexqxsxqeqxqexeeeeqsxsxqqqxeqxesqxqqxessxqqxxxqseqqssesqeeexxqsxxeesxxsxeqeeqeqxxessexqsssqqxexqxxssqessssqseeeqsqqsxqsxesxxessxqseqqsxqxsssqssesqsexesesxeesqesxqqexxssxsxxexqexexxeesqqssxesxessex\"\n\"sqssqssxseqsqsqesessxsqssxesexxxsqqeqxexsxqexesseqqqeeqxsxssxesqeeexeqqseseqeqxqsqqxeseseeqeseqxqqqeeqxsqssxsxxsesqsseqexssqqexqxsxqeqxqexeeeeqsxsxqsqssxseqsqsqesessxsqssxesexxxsqqeqxexsxqexesseqqqeeqxsxssxesqeeexeqqseseqeqxqsqqxeseseeqeseqxqqqeeqxsqssxsxxsesqsseqexssqqexqxsxqeqxqexeeeeqsxsxqqqxeqxesqxqqxessxqqxxxqseqqssesqeeexxqsxxeesxxsxeqeeqeqxxessexqsssqqxexqxxssqessssqseeeqsqqsxqsxesxxessxqseqqsxqxsssqssesqsexesesxeesqesxqqexxssxsxxexqexexxeesqqssxesxessexqseeeqsqqsxqsxesxxessxqseqqsxqxsssqssesqsexesesxeesqesxqqexxssxsxxexqexexxeesqqssxesxessexxesqxqqxessqssxseqsqsqesessxsqssxesexxxsqqeqxexsxqexesseqqqeeqxsxssxesqssxseqsqsqesessxsqssxesexxxsqqeqxexsxqexesseqqqeeqxsxssxesqeeexeqqseseqeqxqsqqxeseseeqeseqxqqqeeqxsqssxsxxsesqsseqexssqqexqxsxqeqxqexeeeeqsxsxqqqxeqxesqxqqxessxqqxxxqseqqssesqeeexxqsxxeesxxsxeqeeqeqxxessexqsssqqxexqxxssqessssqseeeqsqqsxqsxesxxessxqseqqsxqxsssqssesqsexesesxeesqesxqqexxssxsxxexqexexxeesqqssxesxessexsssqssesqsexesesxeesqesxqqexxssxsxxexqexexxeesqqssxesxessex\"",
+      "expectedOutput": "[405,239,0,2,683,565,238,3,624,148]"
+    },
+    {
+      "input": "\"sddgddsgdsgdgdddggsddssdsggssdsdsgdddgggggdsddsgdgdsggsgsdggggdsssdsssdggsdssgddggsddgsgsgsggsssssdgdggddgddsdsdsddddggsggsssgsdgsgddggsdgsssdggddssggsgsdddsddsdgggdgdgsdddsgsgsdggdgddgggssgsgggdddsgdgsggdddssssgssgsddsgdsdssdsssgdsssddsddssssgdgssgsgdgdsgdggssgddggsgdsgsdgdgssdsddsdssddssdgssgdgggssdsdsddgddsgsssddgdgdssddgsgddgdssggdggsgsggddsgsgdgssdsggdsggsdddsdgggssdggdgsdsgsddgssddgggggsgdggdggddsgdsgdggdssgdsdsdsggggggddsgsdggddggsddgsgdsgdsssddgddddds\"\n\"sddgddsgdsgssddgddssdsddgddsgdsgdgdddggsddssdsggssdsddgddsgsddgddssddgddsgdsgdgddsddgddsgdsgdgdddggsddssdsggssdsdsgdddgggggdsddsgdgdsggsgsdggggdsssdsssdggsdssgddggsddsddgddsgdsgdgdddggsddssdsggssdsdsgdddgggggdsddsgdgdsggsgsdggggdsssdsssdggsdssgddggsddgsgsgsggsssssdgdggddgddsdsdsddddggsggsssgsdgsgddggsdgsssdggddssggsgsdddsddsdgggdgdgsdddsgsgsdggdgddgggssgsgggdddsgdgsggdddssssgssgsddsgdsdssdsssgdsssddsddssssgdgssgsgdgdsgdggssgddggsgdsgsdgdgssdsddsdssddssdgssgdgggssdsdsddgddsgsssddgdgdssddgsgddgdssggdggsgsggddsgsgdgssdsggdsggsdddsdgggssdggdgsdsgsddgssddgggggsgdggdggddsgdsgdggdssgdsdsdsggggggddsgsdggddggsddgsgdsgdsssddgdddddsdsgsgdgssdsggdsggsdddsdgggssdggdgsdsgsddgssddgggggsgdggdggddsgdsgdggdssgdsdsdsggggggddsgsdggddggsddgsgdsgdsssddgdddddsssgdgssgsgdgdsgdggssgddggsgdsgsdgdgssdsddsdssddssdgssgdgggssdsdsddgddsgsssddgdgdssddgsgddgdssggdggsgsggddsgsgdgssdsggdsggsdddsdgggssdggdgsdsgsddgssddgggggsgdggdggddsgdsgdggdssgdsdsdsggggggddsgsdggddggsddgsgdsgdsssddgdddddsddds\"",
+      "expectedOutput": "[0,11,12,19,21,51,510,59,65,506,66,284,168,81,166]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/stamping-the-sequence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.203Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "3276",
+  "slug": "select-cells-in-grid-with-maximum-score",
+  "title": "Select Cells in Grid With Maximum Score",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Matrix",
+    "Bitmask"
+  ],
+  "statement": "You are given a 2D matrix `grid` consisting of positive integers.\n\nYou have to select _one or more_ cells from the matrix such that the following conditions are satisfied:\n\n*   No two selected cells are in the **same** row of the matrix.\n*   The values in the set of selected cells are **unique**.\n\nYour score will be the **sum** of the values of the selected cells.\n\nReturn the **maximum** score you can achieve.\n\n**Example 1:**\n\n**Input:** grid = \\[\\[1,2,3\\],\\[4,3,2\\],\\[1,1,1\\]\\]\n\n**Output:** 8\n\n**Explanation:**\n\n![](./assets/select-cells-in-grid-with-maximum-score-1.png)\n\nWe can select the cells with values 1, 3, and 4 that are colored above.\n\n**Example 2:**\n\n**Input:** grid = \\[\\[8,7,6\\],\\[8,3,2\\]\\]\n\n**Output:** 15\n\n**Explanation:**\n\n![](./assets/select-cells-in-grid-with-maximum-score-2.png)\n\nWe can select the cells with values 7 and 8 that are colored above.\n\n**Constraints:**\n\n*   `1 <= grid.length, grid[i].length <= 10`\n*   `1 <= grid[i][j] <= 100`",
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 10",
+    "1 <= grid[i][j] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "grid = [[1,2,3],[4,3,2],[1,1,1]]",
+      "output": "8",
+      "explanation": null
+    },
+    {
+      "input": "grid = [[8,7,6],[8,3,2]]",
+      "output": "15",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(List<List<Integer>> grid) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxScore(self, grid: List[List[int]]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxScore(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxScore = function(grid) {\n    \n};",
+    "typescript": "function maxScore(grid: number[][]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxScore(IList<IList<int>> grid) {\n        \n    }\n}",
+    "c": "int maxScore(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "golang": "func maxScore(grid [][]int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxScore(grid: List<List<Int>>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_score(grid)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxScore($grid) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<List<int>> grid) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxScore(grid: List[List[Int]]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_score(grid :: [[integer]]) :: integer\n  def max_score(grid) do\n    \n  end\nend",
+    "erlang": "-spec max_score(Grid :: [[integer()]]) -> integer().\nmax_score(Grid) ->\n  .",
+    "racket": "(define/contract (max-score grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[[1,2,3],[4,3,2],[1,1,1]]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[[8,7,6],[8,3,2]]",
+      "expectedOutput": "15"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[[1,2,3],[4,3,2],[1,1,1]]",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "[[8,7,6],[8,3,2]]",
+      "expectedOutput": "15"
+    },
+    {
+      "input": "[[100]]",
+      "expectedOutput": "100"
+    },
+    {
+      "input": "[[5,5],[5,5]]",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[[8,7],[8,1]]",
+      "expectedOutput": "15"
+    },
+    {
+      "input": "[[2],[2]]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[[100,99]]",
+      "expectedOutput": "100"
+    },
+    {
+      "input": "[[1,8,4,1],[6,4,10,9],[7,1,1,12]]",
+      "expectedOutput": "30"
+    },
+    {
+      "input": "[[4,85,70],[10,83,79],[69,56,57],[18,98,34]]",
+      "expectedOutput": "335"
+    },
+    {
+      "input": "[[5,7,10],[7,10,6],[6,5,9]]",
+      "expectedOutput": "26"
+    },
+    {
+      "input": "[[4,57,18,40],[16,77,14,89],[64,64,61,82],[15,41,20,52]]",
+      "expectedOutput": "280"
+    },
+    {
+      "input": "[[81,83,86],[93,84,86],[95,88,94],[100,87,99]]",
+      "expectedOutput": "374"
+    },
+    {
+      "input": "[[1,3,1,5],[5,2,3,1],[5,2,1,4]]",
+      "expectedOutput": "12"
+    },
+    {
+      "input": "[[5,66,40,84],[16,74,31,88],[75,33,5,4],[88,83,94,12]]",
+      "expectedOutput": "341"
+    },
+    {
+      "input": "[[5,2,14,99,83,73,4],[55,78,56,87,78,78,64],[85,98,21,11,26,40,95],[93,79,20,84,76,17,1],[40,10,17,80,50,71,61]]",
+      "expectedOutput": "457"
+    },
+    {
+      "input": "[[76,84,79,79,89,79],[85,76,89,90,85,90],[86,81,79,88,77,79],[76,87,77,80,88,85],[84,82,88,85,80,88],[87,87,80,81,91,81],[81,76,79,86,80,89],[79,79,78,90,84,85]]",
+      "expectedOutput": "700"
+    },
+    {
+      "input": "[[5,11,35,43,82],[70,21,54,89,25],[31,99,51,6,59],[57,4,29,84,4],[25,68,83,6,25],[6,36,22,12,51],[22,66,6,99,38]]",
+      "expectedOutput": "554"
+    },
+    {
+      "input": "[[1,5,13,9,3,4,2,7],[16,7,4,7,8,17,1,9],[6,6,8,14,11,14,3,4],[9,17,10,13,13,13,7,17],[17,4,3,13,4,10,7,14],[2,17,12,12,17,16,12,9]]",
+      "expectedOutput": "83"
+    },
+    {
+      "input": "[[5,84,83,73,16,69,66,87,96,71],[94,47,32,67,42,30,27,41,23,14],[77,18,20,63,19,60,15,36,60,45],[93,91,76,84,56,25,32,52,81,69],[51,29,4,4,62,90,7,97,79,85],[58,66,93,84,6,5,1,100,56,52],[76,7,60,61,68,7,3,28,92,21],[71,72,25,14,32,69,48,66,61,99],[73,54,96,48,60,13,3,76,16,83],[89,38,14,64,87,35,92,36,3,11]]",
+      "expectedOutput": "924"
+    },
+    {
+      "input": "[[82,88,99,99,83,84,85,88,81,81],[94,92,84,88,96,82,84,91,81,90],[99,92,85,82,98,85,95,100,90,83],[89,97,91,90,99,96,90,89,84,92],[99,93,88,88,85,98,89,89,92,100],[95,97,85,91,97,91,96,88,88,88],[93,89,92,91,93,81,88,94,92,85],[96,97,88,83,99,82,86,96,94,100],[86,81,95,86,99,96,92,84,96,98]]",
+      "expectedOutput": "864"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Sort all the cells in the grid by their values and keep track of their original positions.",
+    "Try dynamic programming with the following states: the current cell that we might select and a bitmask representing all the rows from which we have already selected a cell so far."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/select-cells-in-grid-with-maximum-score/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.211Z",
+    "sourceUpdatedAt": null
+  }
+}

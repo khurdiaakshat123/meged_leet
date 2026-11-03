@@ -1,0 +1,151 @@
+{
+  "id": "3899",
+  "slug": "angles-of-a-triangle",
+  "title": "Angles of a Triangle",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "statement": "You are given a positive integer array `sides` of length 3.\n\nDetermine if there exists a triangle with **positive** area whose three side lengths are given by the elements of `sides`.\n\nIf such a triangle exists, return an array of three floating-point numbers representing its internal angles (in **degrees**), **sorted** in **non-decreasing** order. Otherwise, return an empty array.\n\nAnswers within `10^(-5)` of the actual answer will be accepted.\n\n**Example 1:**\n\n**Input:** sides = \\[3,4,5\\]\n\n**Output:** \\[36.86990,53.13010,90.00000\\]\n\n**Explanation:**\n\nYou can form a right-angled triangle with side lengths 3, 4, and 5. The internal angles of this triangle are approximately 36.869897646, 53.130102354, and 90 degrees respectively.\n\n**Example 2:**\n\n**Input:** sides = \\[2,4,2\\]\n\n**Output:** \\[\\]\n\n**Explanation:**\n\nYou cannot form a triangle with positive area using side lengths 2, 4, and 2.\n\n**Constraints:**\n\n*   `sides.length == 3`\n*   `1 <= sides[i] <= 1000`",
+  "constraints": [
+    "sides.length == 3",
+    "1 <= sides[i] <= 1000"
+  ],
+  "examples": [
+    {
+      "input": "sides = [3,4,5]",
+      "output": "[36.86990,53.13010,90.00000]",
+      "explanation": null
+    },
+    {
+      "input": "sides = [2,4,2]",
+      "output": "[]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<double> internalAngles(vector<int>& sides) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double[] internalAngles(int[] sides) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def internalAngles(self, sides: list[int]) -> list[float]:\n        ",
+    "python": "class Solution(object):\n    def internalAngles(self, sides):\n        \"\"\"\n        :type sides: List[int]\n        :rtype: List[float]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} sides\n * @return {number[]}\n */\nvar internalAngles = function(sides) {\n    \n};",
+    "typescript": "function internalAngles(sides: number[]): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public double[] InternalAngles(int[] sides) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\ndouble* internalAngles(int* sides, int sidesSize, int* returnSize) {\n    \n}",
+    "golang": "func internalAngles(sides []int) []float64 {\n    \n}",
+    "kotlin": "class Solution {\n    fun internalAngles(sides: IntArray): DoubleArray {\n        \n    }\n}",
+    "swift": "class Solution {\n    func internalAngles(_ sides: [Int]) -> [Double] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn internal_angles(sides: Vec<i32>) -> Vec<f64> {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} sides\n# @return {Float[]}\ndef internal_angles(sides)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $sides\n     * @return Float[]\n     */\n    function internalAngles($sides) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<double> internalAngles(List<int> sides) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def internalAngles(sides: Array[Int]): Array[Double] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec internal_angles(sides :: [integer]) :: [float]\n  def internal_angles(sides) do\n    \n  end\nend",
+    "erlang": "-spec internal_angles(Sides :: [integer()]) -> [float()].\ninternal_angles(Sides) ->\n  .",
+    "racket": "(define/contract (internal-angles sides)\n  (-> (listof exact-integer?) (listof flonum?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[934,275,867]",
+      "expectedOutput": "[17.044605571920293,67.53530509003326,95.42008933804644]"
+    },
+    {
+      "input": "[534,213,336]",
+      "expectedOutput": "[10.63586062028192,16.92664887824673,152.43749050147133]"
+    },
+    {
+      "input": "[724,330,388]",
+      "expectedOutput": "[]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[853,499,699]",
+      "expectedOutput": "[35.79833567495881,55.02244222974442,89.17922209529675]"
+    },
+    {
+      "input": "[114,412,42]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[432,558,920]",
+      "expectedOutput": "[18.93868357693427,24.78524501905146,136.27607140401426]"
+    },
+    {
+      "input": "[676,661,152]",
+      "expectedOutput": "[12.992657459222235,77.87674663249389,89.13059590828387]"
+    },
+    {
+      "input": "[145,237,276]",
+      "expectedOutput": "[31.688756958272666,59.159915185141784,89.15132785658554]"
+    },
+    {
+      "input": "[612,294,743]",
+      "expectedOutput": "[22.508001551185306,52.832704976455105,104.65929347235958]"
+    },
+    {
+      "input": "[304,933,785]",
+      "expectedOutput": "[17.849918098397428,52.32773106923398,109.82235083236858]"
+    },
+    {
+      "input": "[832,579,816]",
+      "expectedOutput": "[41.1235815834967,67.95560666297867,70.92081175352463]"
+    },
+    {
+      "input": "[193,892,912]",
+      "expectedOutput": "[12.217398347541797,77.97713130850074,89.80547034395745]"
+    },
+    {
+      "input": "[432,427,80]",
+      "expectedOutput": "[10.666803219179807,81.09881016469416,88.23438661612605]"
+    },
+    {
+      "input": "[311,819,557]",
+      "expectedOutput": "[14.251104168295381,26.16088529182474,139.5880105398799]"
+    },
+    {
+      "input": "[302,965,690]",
+      "expectedOutput": "[8.77260380316659,20.392999452080637,150.83439674475278]"
+    },
+    {
+      "input": "[930,206,945]",
+      "expectedOutput": "[12.582039806017221,79.5584515381938,87.85950865578897]"
+    },
+    {
+      "input": "[195,394,35]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[578,444,733]",
+      "expectedOutput": "[37.27833231450144,52.04416801809944,90.67749966739913]"
+    },
+    {
+      "input": "[454,133,116]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[951,456,697]",
+      "expectedOutput": "[26.897767864650117,43.748751642539254,109.35348049281063]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Sort the sides first, then check the triangle inequality: after sorting, it is enough to verify <code>a + b > c</code>.",
+    "If valid, use the law of cosines to compute each angle in radians, then convert to degrees.",
+    "Sort the three angles before returning; if the triangle is invalid, return an empty array."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/angles-of-a-triangle/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.096Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "664",
+  "slug": "strange-printer",
+  "title": "Strange Printer",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "statement": "There is a strange printer with the following two special properties:\n\n*   The printer can only print a sequence of **the same character** each time.\n*   At each turn, the printer can print new characters starting from and ending at any place and will cover the original existing characters.\n\nGiven a string `s`, return _the minimum number of turns the printer needed to print it_.\n\n**Example 1:**\n\n```\nInput: s = \"aaabbb\"\nOutput: 2\nExplanation: Print \"aaa\" first and then print \"bbb\".\n```\n\n**Example 2:**\n\n```\nInput: s = \"aba\"\nOutput: 2\nExplanation: Print \"aaa\" first and then print \"b\" from the second place of the string, which will cover the existing character 'a'.\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s` consists of lowercase English letters.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "s = \"aaabbb\"",
+      "output": "2",
+      "explanation": "Print \"aaa\" first and then print \"bbb\"."
+    },
+    {
+      "input": "s = \"aba\"",
+      "output": "2",
+      "explanation": "Print \"aaa\" first and then print \"b\" from the second place of the string, which will cover the existing character 'a'."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int strangePrinter(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int strangePrinter(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def strangePrinter(self, s: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def strangePrinter(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar strangePrinter = function(s) {\n    \n};",
+    "typescript": "function strangePrinter(s: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int StrangePrinter(string s) {\n        \n    }\n}",
+    "c": "int strangePrinter(char* s) {\n    \n}",
+    "golang": "func strangePrinter(s string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun strangePrinter(s: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func strangePrinter(_ s: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn strange_printer(s: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef strange_printer(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function strangePrinter($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int strangePrinter(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def strangePrinter(s: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec strange_printer(s :: String.t) :: integer\n  def strange_printer(s) do\n    \n  end\nend",
+    "erlang": "-spec strange_printer(S :: unicode:unicode_binary()) -> integer().\nstrange_printer(S) ->\n  .",
+    "racket": "(define/contract (strange-printer s)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"aaabbb\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"aba\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"aaabbb\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"aba\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"a\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"abcdefg\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"abcba\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"abacaba\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"aabbaa\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"abcbacabcba\"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"cbcccadadcacd\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"edecgcgcecgcgcede\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"pqcqyquxvtzaxlgmcal\"",
+      "expectedOutput": "15"
+    },
+    {
+      "input": "\"aaabbbbccaaadd\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"abcabcabacbcacba\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"mississippi\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"daedddcceeedebabdadadde\"",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "\"qcovhjymjbglufkvwcyxlerqscqnv\"",
+      "expectedOutput": "24"
+    },
+    {
+      "input": "\"ebgacgaeafbebabfafafbabebfaeagcagbe\"",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "\"cbddcddbbaadcadcaaccdbdddddabbccbcaddac\"",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "\"qjpyhpfxfqnsbcfidvonwrvbklvgxesldpuryomidjsvfhndqrasqhdyexkxcjnamnycvapojbodphaospsihtdfiwkdymcodpjw\"",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "\"edbgcebcbabeacedadbdcgbfaeadfcfgfdfdeagbdbebdgfcacfgdbebdbgaedfdfgfcfdaeafbgcdbdadecaebabcbecgbde\"",
+      "expectedOutput": "49"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/strange-printer/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.289Z",
+    "sourceUpdatedAt": null
+  }
+}

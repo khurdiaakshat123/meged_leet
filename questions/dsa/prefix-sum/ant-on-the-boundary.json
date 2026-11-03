@@ -1,0 +1,150 @@
+{
+  "id": "3028",
+  "slug": "ant-on-the-boundary",
+  "title": "Ant on the Boundary",
+  "category": "dsa",
+  "subcategory": "prefix-sum",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Simulation",
+    "Prefix Sum"
+  ],
+  "statement": "An ant is on a boundary. It sometimes goes **left** and sometimes **right**.\n\nYou are given an array of **non-zero** integers `nums`. The ant starts reading `nums` from the first element of it to its end. At each step, it moves according to the value of the current element:\n\n*   If `nums[i] < 0`, it moves **left** by `-nums[i]` units.\n*   If `nums[i] > 0`, it moves **right** by `nums[i]` units.\n\nReturn _the number of times the ant **returns** to the boundary._\n\n**Notes:**\n\n*   There is an infinite space on both sides of the boundary.\n*   We check whether the ant is on the boundary only after it has moved `|nums[i]|` units. In other words, if the ant crosses the boundary during its movement, it does not count.\n\n**Example 1:**\n\n```\nInput: nums = [2,3,-5]\nOutput: 1\nExplanation: After the first step, the ant is 2 steps to the right of the boundary.\nAfter the second step, the ant is 5 steps to the right of the boundary.\nAfter the third step, the ant is on the boundary.\nSo the answer is 1.\n```\n\n**Example 2:**\n\n```\nInput: nums = [3,2,-3,-4]\nOutput: 0\nExplanation: After the first step, the ant is 3 steps to the right of the boundary.\nAfter the second step, the ant is 5 steps to the right of the boundary.\nAfter the third step, the ant is 2 steps to the right of the boundary.\nAfter the fourth step, the ant is 2 steps to the left of the boundary.\nThe ant never returned to the boundary, so the answer is 0.\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `-10 <= nums[i] <= 10`\n*   `nums[i] != 0`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "-10 <= nums[i] <= 10",
+    "nums[i] != 0"
+  ],
+  "examples": [
+    {
+      "input": "nums = [2,3,-5]",
+      "output": "1",
+      "explanation": "After the first step, the ant is 2 steps to the right of the boundary.\nAfter the second step, the ant is 5 steps to the right of the boundary.\nAfter the third step, the ant is on the boundary.\nSo the answer is 1."
+    },
+    {
+      "input": "nums = [3,2,-3,-4]",
+      "output": "0",
+      "explanation": "After the first step, the ant is 3 steps to the right of the boundary.\nAfter the second step, the ant is 5 steps to the right of the boundary.\nAfter the third step, the ant is 2 steps to the right of the boundary.\nAfter the fourth step, the ant is 2 steps to the left of the boundary.\nThe ant never returned to the boundary, so the answer is 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int returnToBoundaryCount(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int returnToBoundaryCount(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def returnToBoundaryCount(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def returnToBoundaryCount(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar returnToBoundaryCount = function(nums) {\n    \n};",
+    "typescript": "function returnToBoundaryCount(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int ReturnToBoundaryCount(int[] nums) {\n        \n    }\n}",
+    "c": "int returnToBoundaryCount(int* nums, int numsSize) {\n    \n}",
+    "golang": "func returnToBoundaryCount(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun returnToBoundaryCount(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func returnToBoundaryCount(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn return_to_boundary_count(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef return_to_boundary_count(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function returnToBoundaryCount($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int returnToBoundaryCount(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def returnToBoundaryCount(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec return_to_boundary_count(nums :: [integer]) :: integer\n  def return_to_boundary_count(nums) do\n    \n  end\nend",
+    "erlang": "-spec return_to_boundary_count(Nums :: [integer()]) -> integer().\nreturn_to_boundary_count(Nums) ->\n  .",
+    "racket": "(define/contract (return-to-boundary-count nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[4]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[10,10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-6,-2,8]",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[8,3,-3,-7]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-6,-10,7,3,-1]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,-9,-8,-7,-6,-5,-4]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,1,9,-10,8,-10,-10,-2,-7]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[2,-10,5,1,-6,1,1,-6,7,3,-9,8]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,8,-10,1,3,1,1,10,-10,-10,-1,5,1,1,1,1]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,-9,-9,-8,-7,-4,-3,1,1,1,1,1,2,3,3,4,5,5,6,7,7,10,10,10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[10,10,10,9,8,8,8,7,6,4,4,3,3,2,2,1,1,1,1,1,1,-1,-2,-2,-3,-3,-5,-6,-7,-8,-8,-8,-9,-9,-10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[-10,-10,-10,-9,-9,-9,-8,-8,-8,-7,-7,-7,-6,-6,-6,-5,-5,-5,-4,-4,-4,-3,-3,-3,-2,-2,-2,-1,-1,-1,1,1,1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,9,10,10,10,-10,-10,-10,-9,-9,-9,-8,-8,-8,-7,-7,-7]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,7,-10,-10,7,9,-10,-8,1,-10,9,-5,-10,4,2,-10,4,3,-10,9,7,-10,-2,6,-10,7,8,-10,-6,3,-10,-7,1,-10,-6,2,-10,4,10,-10,10,4,-10,9,5,-10,8,-2,-10,-7,5,-10,-7,-7,-10,5,5,-10,3,6,-10,-10,-9,-10,-7,-4,-10,-5,-2,-10,-2,-4,-10,3,-10,-10,5,4,-10,-10,-9,-10,10,-8,-10,3,-2,-10,9,7,-10,3,-7,-10,-10,-4,-10,-2,-4,-10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[8,6,-9,4,3,-6,-4,9,9,3,-7,-8,-9,10,-4,-2,6,-7,1,7,-10,-4,-10,1,-2,8,-7,-7,10,9,2,1,-5,5,-10,-1,4,-3,9,-9,-7,9,5,3,10,9,1,6,9,-9,10,10,6,3,-4,-9,-7,-3,9,-8,-9,8,-8,3,-3,-2,1,-4,-7,-3,-6,-2,9,5,-1,3,-2,-9,-7,-3,3,5,4,-3,-1,-1,-10,3,-4,-7,5,1,-2,5,-5,-5,-9,3,-2,-9]",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[-10,6,-10,-10,-9,10,10,1,10,-10,10,-10,10,10,-10,10,-10,-10,1,4,10,1,10,-2,1,10,1,-10,-10,-10,1,-10,1,-10,10,-10,10,10,10,10,10,1,10,-10,-1,10,-4,-10,10,-10,-10,10,10,-10,-5,3,9,-4,1,1,1,4,-10,-10,10,-10,-6,-10,10,-10,-10,-10,-10,-10,-10,10,10,10,10,10,1,-10,1,4,10,10,10,-10,-10,3,1,10,1,-6,-10,-10,-10,-10,6,-10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,-10,-10,-10,-10,-10,-9,-9,-9,-9,-9,-9,-8,-8,-8,-8,-7,-7,-7,-6,-6,-6,-6,-6,-6,-5,-5,-5,-5,-5,-5,-4,-4,-4,-3,-3,-3,-3,-3,-3,-3,-2,-2,-2,-1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,7,7,8,8,8,8,8,9,9,9,9,9,10,10,10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[10,9,9,9,9,9,9,8,8,8,8,8,8,8,7,7,7,7,7,6,6,6,6,6,6,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,-1,-1,-1,-1,-1,-2,-2,-2,-2,-2,-3,-3,-3,-3,-3,-4,-5,-6,-6,-6,-6,-6,-6,-7,-7,-7,-7,-7,-8,-8,-8,-8,-9,-9,-9,-9,-10,-10,-10,-10,-10,-10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10,7,3,-1,-5,-9,8,4,1,-4,-8,9,5,1,-3,-7,10,6,2,-2,-6,-10]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-10,-10,-10,-10,-10,-9,-9,-9,-9,-9,-8,-8,-8,-8,-8,-7,-7,-7,-7,-7,-6,-6,-6,-6,-6,-5,-5,-5,-5,-5,-4,-4,-4,-4,-4,-3,-3,-3,-3,-3,-2,-2,-2,-2,-2,-1,-1,-1,-1,-1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8,9,9,9,9,9]",
+      "expectedOutput": "0"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Define a variable and add <code>nums[i]</code> to it in each step."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/ant-on-the-boundary/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.107Z",
+    "sourceUpdatedAt": null
+  }
+}

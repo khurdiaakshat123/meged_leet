@@ -1,0 +1,143 @@
+{
+  "id": "225",
+  "slug": "implement-stack-using-queues",
+  "title": "Implement Stack using Queues",
+  "category": "dsa",
+  "subcategory": "stacks-queues",
+  "difficulty": "Easy",
+  "tags": [
+    "Stack",
+    "Design",
+    "Queue"
+  ],
+  "statement": "Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (`push`, `top`, `pop`, and `empty`).\n\nImplement the `MyStack` class:\n\n*   `void push(int x)` Pushes element x to the top of the stack.\n*   `int pop()` Removes the element on the top of the stack and returns it.\n*   `int top()` Returns the element on the top of the stack.\n*   `boolean empty()` Returns `true` if the stack is empty, `false` otherwise.\n\n**Notes:**\n\n*   You must use **only** standard operations of a queue, which means that only `push to back`, `peek/pop from front`, `size` and `is empty` operations are valid.\n*   Depending on your language, the queue may not be supported natively. You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue's standard operations.\n\n**Example 1:**\n\n```\nInput\n[\"MyStack\", \"push\", \"push\", \"top\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]\nOutput\n[null, null, null, 2, 2, false]\n\nExplanation\nMyStack myStack = new MyStack();\nmyStack.push(1);\nmyStack.push(2);\nmyStack.top(); // return 2\nmyStack.pop(); // return 2\nmyStack.empty(); // return False\n```\n\n**Constraints:**\n\n*   `1 <= x <= 9`\n*   At most `100` calls will be made to `push`, `pop`, `top`, and `empty`.\n*   All the calls to `pop` and `top` are valid.\n\n**Follow-up:** Can you implement the stack using only one queue?",
+  "constraints": [
+    "1 <= x <= 9",
+    "At most 100 calls will be made to push, pop, top, and empty.",
+    "All the calls to pop and top are valid."
+  ],
+  "examples": [
+    {
+      "input": "[\"MyStack\", \"push\", \"push\", \"top\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]",
+      "output": "[null, null, null, 2, 2, false]",
+      "explanation": "MyStack myStack = new MyStack();\nmyStack.push(1);\nmyStack.push(2);\nmyStack.top(); // return 2\nmyStack.pop(); // return 2\nmyStack.empty(); // return False"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class MyStack {\npublic:\n    MyStack() {\n        \n    }\n    \n    void push(int x) {\n        \n    }\n    \n    int pop() {\n        \n    }\n    \n    int top() {\n        \n    }\n    \n    bool empty() {\n        \n    }\n};\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * MyStack* obj = new MyStack();\n * obj->push(x);\n * int param_2 = obj->pop();\n * int param_3 = obj->top();\n * bool param_4 = obj->empty();\n */",
+    "java": "class MyStack {\n\n    public MyStack() {\n        \n    }\n    \n    public void push(int x) {\n        \n    }\n    \n    public int pop() {\n        \n    }\n    \n    public int top() {\n        \n    }\n    \n    public boolean empty() {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * MyStack obj = new MyStack();\n * obj.push(x);\n * int param_2 = obj.pop();\n * int param_3 = obj.top();\n * boolean param_4 = obj.empty();\n */",
+    "python3": "class MyStack:\n\n    def __init__(self):\n        \n\n    def push(self, x: int) -> None:\n        \n\n    def pop(self) -> int:\n        \n\n    def top(self) -> int:\n        \n\n    def empty(self) -> bool:\n        \n\n\n# Your MyStack object will be instantiated and called as such:\n# obj = MyStack()\n# obj.push(x)\n# param_2 = obj.pop()\n# param_3 = obj.top()\n# param_4 = obj.empty()",
+    "python": "class MyStack(object):\n\n    def __init__(self):\n        \n\n    def push(self, x):\n        \"\"\"\n        :type x: int\n        :rtype: None\n        \"\"\"\n        \n\n    def pop(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        \n\n    def top(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        \n\n    def empty(self):\n        \"\"\"\n        :rtype: bool\n        \"\"\"\n        \n\n\n# Your MyStack object will be instantiated and called as such:\n# obj = MyStack()\n# obj.push(x)\n# param_2 = obj.pop()\n# param_3 = obj.top()\n# param_4 = obj.empty()",
+    "javascript": "\nvar MyStack = function() {\n    \n};\n\n/** \n * @param {number} x\n * @return {void}\n */\nMyStack.prototype.push = function(x) {\n    \n};\n\n/**\n * @return {number}\n */\nMyStack.prototype.pop = function() {\n    \n};\n\n/**\n * @return {number}\n */\nMyStack.prototype.top = function() {\n    \n};\n\n/**\n * @return {boolean}\n */\nMyStack.prototype.empty = function() {\n    \n};\n\n/** \n * Your MyStack object will be instantiated and called as such:\n * var obj = new MyStack()\n * obj.push(x)\n * var param_2 = obj.pop()\n * var param_3 = obj.top()\n * var param_4 = obj.empty()\n */",
+    "typescript": "class MyStack {\n    constructor() {\n        \n    }\n\n    push(x: number): void {\n        \n    }\n\n    pop(): number {\n        \n    }\n\n    top(): number {\n        \n    }\n\n    empty(): boolean {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * var obj = new MyStack()\n * obj.push(x)\n * var param_2 = obj.pop()\n * var param_3 = obj.top()\n * var param_4 = obj.empty()\n */",
+    "csharp": "public class MyStack {\n\n    public MyStack() {\n        \n    }\n    \n    public void Push(int x) {\n        \n    }\n    \n    public int Pop() {\n        \n    }\n    \n    public int Top() {\n        \n    }\n    \n    public bool Empty() {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * MyStack obj = new MyStack();\n * obj.Push(x);\n * int param_2 = obj.Pop();\n * int param_3 = obj.Top();\n * bool param_4 = obj.Empty();\n */",
+    "c": "\n\n\ntypedef struct {\n    \n} MyStack;\n\n\nMyStack* myStackCreate() {\n    \n}\n\nvoid myStackPush(MyStack* obj, int x) {\n    \n}\n\nint myStackPop(MyStack* obj) {\n    \n}\n\nint myStackTop(MyStack* obj) {\n    \n}\n\nbool myStackEmpty(MyStack* obj) {\n    \n}\n\nvoid myStackFree(MyStack* obj) {\n    \n}\n\n/**\n * Your MyStack struct will be instantiated and called as such:\n * MyStack* obj = myStackCreate();\n * myStackPush(obj, x);\n \n * int param_2 = myStackPop(obj);\n \n * int param_3 = myStackTop(obj);\n \n * bool param_4 = myStackEmpty(obj);\n \n * myStackFree(obj);\n*/",
+    "golang": "type MyStack struct {\n    \n}\n\n\nfunc Constructor() MyStack {\n    \n}\n\n\nfunc (this *MyStack) Push(x int)  {\n    \n}\n\n\nfunc (this *MyStack) Pop() int {\n    \n}\n\n\nfunc (this *MyStack) Top() int {\n    \n}\n\n\nfunc (this *MyStack) Empty() bool {\n    \n}\n\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * obj := Constructor();\n * obj.Push(x);\n * param_2 := obj.Pop();\n * param_3 := obj.Top();\n * param_4 := obj.Empty();\n */",
+    "kotlin": "class MyStack() {\n\n    fun push(x: Int) {\n        \n    }\n\n    fun pop(): Int {\n        \n    }\n\n    fun top(): Int {\n        \n    }\n\n    fun empty(): Boolean {\n        \n    }\n\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * var obj = MyStack()\n * obj.push(x)\n * var param_2 = obj.pop()\n * var param_3 = obj.top()\n * var param_4 = obj.empty()\n */",
+    "swift": "\nclass MyStack {\n\n    init() {\n        \n    }\n    \n    func push(_ x: Int) {\n        \n    }\n    \n    func pop() -> Int {\n        \n    }\n    \n    func top() -> Int {\n        \n    }\n    \n    func empty() -> Bool {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * let obj = MyStack()\n * obj.push(x)\n * let ret_2: Int = obj.pop()\n * let ret_3: Int = obj.top()\n * let ret_4: Bool = obj.empty()\n */",
+    "rust": "struct MyStack {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl MyStack {\n\n    fn new() -> Self {\n        \n    }\n    \n    fn push(&self, x: i32) {\n        \n    }\n    \n    fn pop(&self) -> i32 {\n        \n    }\n    \n    fn top(&self) -> i32 {\n        \n    }\n    \n    fn empty(&self) -> bool {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * let obj = MyStack::new();\n * obj.push(x);\n * let ret_2: i32 = obj.pop();\n * let ret_3: i32 = obj.top();\n * let ret_4: bool = obj.empty();\n */",
+    "ruby": "class MyStack\n    def initialize()\n        \n    end\n\n\n=begin\n    :type x: Integer\n    :rtype: Void\n=end\n    def push(x)\n        \n    end\n\n\n=begin\n    :rtype: Integer\n=end\n    def pop()\n        \n    end\n\n\n=begin\n    :rtype: Integer\n=end\n    def top()\n        \n    end\n\n\n=begin\n    :rtype: Boolean\n=end\n    def empty()\n        \n    end\n\n\nend\n\n# Your MyStack object will be instantiated and called as such:\n# obj = MyStack.new()\n# obj.push(x)\n# param_2 = obj.pop()\n# param_3 = obj.top()\n# param_4 = obj.empty()",
+    "php": "class MyStack {\n    /**\n     */\n    function __construct() {\n        \n    }\n  \n    /**\n     * @param Integer $x\n     * @return NULL\n     */\n    function push($x) {\n        \n    }\n  \n    /**\n     * @return Integer\n     */\n    function pop() {\n        \n    }\n  \n    /**\n     * @return Integer\n     */\n    function top() {\n        \n    }\n  \n    /**\n     * @return Boolean\n     */\n    function empty() {\n        \n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * $obj = MyStack();\n * $obj->push($x);\n * $ret_2 = $obj->pop();\n * $ret_3 = $obj->top();\n * $ret_4 = $obj->empty();\n */",
+    "dart": "class MyStack {\n\n  MyStack() {\n    \n  }\n  \n  void push(int x) {\n    \n  }\n  \n  int pop() {\n    \n  }\n  \n  int top() {\n    \n  }\n  \n  bool empty() {\n    \n  }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * MyStack obj = MyStack();\n * obj.push(x);\n * int param2 = obj.pop();\n * int param3 = obj.top();\n * bool param4 = obj.empty();\n */",
+    "scala": "class MyStack() {\n\n    def push(x: Int): Unit = {\n        \n    }\n\n    def pop(): Int = {\n        \n    }\n\n    def top(): Int = {\n        \n    }\n\n    def empty(): Boolean = {\n        \n    }\n\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * val obj = new MyStack()\n * obj.push(x)\n * val param_2 = obj.pop()\n * val param_3 = obj.top()\n * val param_4 = obj.empty()\n */",
+    "elixir": "defmodule MyStack do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec push(x :: integer) :: any\n  def push(x) do\n    \n  end\n\n  @spec pop() :: integer\n  def pop() do\n    \n  end\n\n  @spec top() :: integer\n  def top() do\n    \n  end\n\n  @spec empty() :: boolean\n  def empty() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MyStack.init_()\n# MyStack.push(x)\n# param_2 = MyStack.pop()\n# param_3 = MyStack.top()\n# param_4 = MyStack.empty()\n\n# MyStack.init_ will be called before every test case, in which you can do some necessary initializations.",
+    "erlang": "-spec my_stack_init_() -> any().\nmy_stack_init_() ->\n  .\n\n-spec my_stack_push(X :: integer()) -> any().\nmy_stack_push(X) ->\n  .\n\n-spec my_stack_pop() -> integer().\nmy_stack_pop() ->\n  .\n\n-spec my_stack_top() -> integer().\nmy_stack_top() ->\n  .\n\n-spec my_stack_empty() -> boolean().\nmy_stack_empty() ->\n  .\n\n\n%% Your functions will be called as such:\n%% my_stack_init_(),\n%% my_stack_push(X),\n%% Param_2 = my_stack_pop(),\n%% Param_3 = my_stack_top(),\n%% Param_4 = my_stack_empty(),\n\n%% my_stack_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "racket": "(define my-stack%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; push : exact-integer? -> void?\n    (define/public (push x)\n      )\n    ; pop : -> exact-integer?\n    (define/public (pop)\n      )\n    ; top : -> exact-integer?\n    (define/public (top)\n      )\n    ; empty : -> boolean?\n    (define/public (empty)\n      )))\n\n;; Your my-stack% object will be instantiated and called as such:\n;; (define obj (new my-stack%))\n;; (send obj push x)\n;; (define param_2 (send obj pop))\n;; (define param_3 (send obj top))\n;; (define param_4 (send obj empty))"
+  },
+  "publicTests": [
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"pop\",\"push\",\"pop\"]\n[[],[2],[],[],[9],[]]",
+      "expectedOutput": "[null,null,2,2,null,9]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"pop\",\"push\",\"empty\",\"pop\",\"push\"]\n[[],[2],[],[7],[],[],[1]]",
+      "expectedOutput": "[null,null,2,null,false,7,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"pop\",\"push\",\"empty\",\"empty\",\"empty\"]\n[[],[3],[],[],[8],[],[],[]]",
+      "expectedOutput": "[null,null,3,3,null,false,false,false]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"MyStack\",\"push\",\"empty\",\"pop\",\"push\",\"empty\",\"pop\",\"push\",\"empty\",\"push\"]\n[[],[8],[],[],[9],[],[],[4],[],[9]]",
+      "expectedOutput": "[null,null,false,8,null,false,9,null,false,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"empty\",\"push\",\"pop\",\"top\",\"top\",\"pop\",\"empty\",\"empty\",\"push\",\"top\"]\n[[],[7],[],[4],[],[],[],[],[],[],[2],[]]",
+      "expectedOutput": "[null,null,false,null,4,7,7,7,true,true,null,2]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"pop\",\"pop\",\"push\",\"top\",\"push\",\"empty\",\"top\",\"empty\",\"empty\",\"push\",\"pop\",\"top\"]\n[[],[3],[9],[],[],[4],[],[6],[],[],[],[],[6],[],[]]",
+      "expectedOutput": "[null,null,null,9,3,null,4,null,false,6,false,false,null,6,6]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"empty\",\"push\",\"empty\",\"pop\",\"push\",\"push\",\"push\",\"push\",\"top\",\"push\",\"push\",\"push\",\"empty\",\"empty\",\"pop\"]\n[[],[1],[2],[],[8],[],[],[5],[3],[7],[1],[],[8],[6],[5],[],[],[]]",
+      "expectedOutput": "[null,null,null,false,null,false,8,null,null,null,null,1,null,null,null,false,false,5]"
+    },
+    {
+      "input": "[\"MyStack\",\"empty\",\"empty\",\"push\",\"pop\",\"empty\",\"empty\",\"push\",\"push\",\"empty\",\"top\",\"empty\",\"empty\",\"top\",\"pop\",\"push\",\"push\",\"pop\",\"empty\",\"top\",\"push\"]\n[[],[],[],[8],[],[],[],[6],[6],[],[],[],[],[],[],[3],[2],[],[],[],[8]]",
+      "expectedOutput": "[null,true,true,null,8,true,true,null,null,false,6,false,false,6,6,null,null,2,false,3,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"empty\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"push\",\"pop\",\"top\",\"empty\",\"top\",\"push\",\"push\",\"pop\",\"pop\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"top\"]\n[[],[2],[],[],[],[],[],[],[4],[9],[],[],[],[],[2],[5],[],[],[],[],[],[],[6],[]]",
+      "expectedOutput": "[null,null,2,false,2,false,2,true,null,null,9,4,false,4,null,null,5,2,4,false,4,true,null,6]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"top\",\"top\",\"top\",\"empty\",\"push\",\"empty\",\"push\",\"pop\",\"top\",\"push\",\"empty\",\"pop\",\"pop\",\"empty\",\"top\",\"pop\",\"push\",\"push\",\"push\",\"top\",\"top\",\"empty\",\"push\",\"pop\",\"top\"]\n[[],[4],[],[],[],[],[],[5],[],[1],[],[],[6],[],[],[],[],[],[],[8],[5],[7],[],[],[],[9],[],[]]",
+      "expectedOutput": "[null,null,4,4,4,4,false,null,false,null,1,5,null,false,6,5,false,4,4,null,null,null,7,7,false,null,9,7]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"pop\",\"push\",\"pop\",\"push\",\"empty\",\"push\",\"pop\",\"push\",\"push\",\"pop\",\"push\",\"pop\",\"push\",\"top\",\"pop\",\"push\",\"empty\",\"empty\",\"pop\",\"pop\",\"top\",\"top\",\"top\",\"pop\",\"empty\",\"empty\",\"push\",\"empty\",\"empty\",\"top\"]\n[[],[8],[],[2],[],[8],[],[6],[],[7],[9],[],[8],[],[1],[],[],[2],[],[],[],[],[],[],[],[],[],[],[9],[],[],[]]",
+      "expectedOutput": "[null,null,8,null,2,null,false,null,6,null,null,9,null,8,null,1,1,null,false,false,2,7,8,8,8,8,true,true,null,false,false,9]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"empty\",\"pop\",\"push\",\"top\",\"push\",\"push\",\"pop\",\"pop\",\"empty\",\"empty\",\"pop\",\"push\",\"empty\",\"push\",\"empty\",\"push\",\"empty\",\"top\",\"top\",\"empty\",\"push\",\"empty\",\"pop\",\"pop\",\"empty\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"top\",\"pop\",\"top\",\"push\",\"push\"]\n[[],[7],[],[],[7],[],[8],[7],[],[],[],[],[],[7],[],[9],[],[9],[],[],[],[],[3],[],[],[],[],[],[],[],[],[3],[],[],[],[8],[1]]",
+      "expectedOutput": "[null,null,false,7,null,7,null,null,7,8,false,false,7,null,false,null,false,null,false,9,9,false,null,false,3,9,false,9,false,9,false,null,3,3,7,null,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"empty\",\"push\",\"push\",\"top\",\"top\",\"push\",\"pop\",\"empty\",\"top\",\"push\",\"pop\",\"push\",\"top\",\"pop\",\"push\",\"push\",\"push\",\"top\",\"pop\",\"empty\",\"empty\",\"push\",\"top\",\"push\",\"pop\",\"top\",\"push\",\"top\",\"top\",\"pop\",\"top\",\"pop\",\"top\",\"pop\",\"push\",\"empty\",\"pop\",\"top\",\"pop\",\"pop\",\"push\"]\n[[],[],[6],[9],[],[],[7],[],[],[],[1],[],[6],[],[],[1],[4],[1],[],[],[],[],[1],[],[4],[],[],[2],[],[],[],[],[],[],[],[2],[],[],[],[],[],[6]]",
+      "expectedOutput": "[null,true,null,null,9,9,null,7,false,9,null,1,null,6,6,null,null,null,1,1,false,false,null,1,null,4,1,null,2,2,2,1,1,4,4,null,false,2,1,1,9,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"push\",\"push\",\"push\",\"push\",\"empty\",\"pop\",\"push\",\"push\",\"empty\",\"push\",\"top\",\"pop\",\"empty\",\"empty\",\"pop\",\"pop\",\"push\",\"empty\",\"top\",\"top\",\"top\",\"push\",\"push\",\"top\",\"push\",\"empty\",\"push\",\"top\",\"top\",\"push\",\"push\",\"pop\",\"pop\",\"pop\",\"pop\",\"top\",\"empty\",\"top\",\"pop\",\"push\",\"empty\",\"push\",\"top\",\"pop\"]\n[[],[3],[],[7],[8],[7],[6],[],[],[4],[6],[],[1],[],[],[],[],[],[],[6],[],[],[],[],[6],[7],[],[7],[],[3],[],[],[9],[2],[],[],[],[],[],[],[],[],[1],[],[9],[],[]]",
+      "expectedOutput": "[null,null,3,null,null,null,null,false,6,null,null,false,null,1,1,false,false,6,4,null,false,6,6,6,null,null,7,null,false,null,3,3,null,null,2,9,3,7,7,false,7,7,null,false,null,9,9]"
+    },
+    {
+      "input": "[\"MyStack\",\"empty\",\"push\",\"pop\",\"push\",\"pop\",\"push\",\"push\",\"push\",\"pop\",\"empty\",\"push\",\"top\",\"top\",\"pop\",\"top\",\"push\",\"push\",\"pop\",\"push\",\"empty\",\"push\",\"pop\",\"top\",\"pop\",\"pop\",\"empty\",\"top\",\"empty\",\"top\",\"top\",\"empty\",\"push\",\"empty\",\"empty\",\"push\",\"top\",\"push\",\"empty\",\"push\",\"push\",\"pop\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"empty\",\"pop\",\"empty\",\"push\",\"empty\"]\n[[],[],[2],[],[1],[],[4],[2],[2],[],[],[3],[],[],[],[],[6],[1],[],[2],[],[2],[],[],[],[],[],[],[],[],[],[],[4],[],[],[5],[],[2],[],[1],[8],[],[],[],[],[],[4],[],[],[],[4],[]]",
+      "expectedOutput": "[null,true,null,2,null,1,null,null,null,2,false,null,3,3,3,2,null,null,1,null,false,null,2,2,2,6,false,2,false,2,2,false,null,false,false,null,5,null,false,null,null,8,1,false,1,false,null,false,4,false,null,false]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"pop\",\"push\",\"top\",\"pop\",\"push\",\"empty\",\"pop\",\"push\",\"top\",\"push\",\"push\",\"push\",\"top\",\"empty\",\"top\",\"pop\",\"empty\",\"empty\",\"top\",\"top\",\"pop\",\"empty\",\"empty\",\"top\",\"push\",\"top\",\"push\",\"pop\",\"empty\",\"push\",\"top\",\"top\",\"push\",\"empty\",\"push\",\"top\",\"empty\",\"push\",\"pop\",\"pop\",\"top\",\"pop\",\"empty\",\"empty\",\"empty\",\"top\",\"top\",\"top\",\"empty\",\"push\",\"pop\",\"top\",\"push\",\"pop\",\"pop\",\"top\"]\n[[],[4],[],[2],[],[],[9],[],[],[1],[],[9],[4],[8],[],[],[],[],[],[],[],[],[],[],[],[],[4],[],[8],[],[],[6],[],[],[5],[],[8],[],[],[9],[],[],[],[],[],[],[],[],[],[],[],[4],[],[],[8],[],[],[]]",
+      "expectedOutput": "[null,null,4,null,2,2,null,false,9,null,1,null,null,null,8,false,8,8,false,false,4,4,4,false,false,9,null,4,null,8,false,null,6,6,null,false,null,8,false,null,9,8,5,5,false,false,false,6,6,6,false,null,4,6,null,8,6,4]"
+    },
+    {
+      "input": "[\"MyStack\",\"empty\",\"push\",\"empty\",\"top\",\"empty\",\"top\",\"pop\",\"empty\",\"empty\",\"push\",\"empty\",\"push\",\"pop\",\"empty\",\"pop\",\"empty\",\"push\",\"top\",\"empty\",\"top\",\"pop\",\"push\",\"pop\",\"push\",\"pop\",\"push\",\"top\",\"push\",\"push\",\"empty\",\"push\",\"pop\",\"pop\",\"pop\",\"pop\",\"push\",\"empty\",\"empty\",\"push\",\"top\",\"top\",\"empty\",\"empty\",\"top\",\"push\",\"top\",\"top\",\"top\",\"pop\",\"top\",\"push\",\"top\",\"empty\",\"top\",\"push\",\"pop\",\"pop\",\"top\",\"pop\",\"push\",\"pop\",\"pop\",\"push\"]\n[[],[],[6],[],[],[],[],[],[],[],[7],[],[5],[],[],[],[],[9],[],[],[],[],[1],[],[7],[],[4],[],[4],[2],[],[8],[],[],[],[],[2],[],[],[3],[],[],[],[],[],[4],[],[],[],[],[],[1],[],[],[],[3],[],[],[],[],[7],[],[],[2]]",
+      "expectedOutput": "[null,true,null,false,6,false,6,6,true,true,null,false,null,5,false,7,true,null,9,false,9,9,null,1,null,7,null,4,null,null,false,null,8,2,4,4,null,false,false,null,3,3,false,false,3,null,4,4,4,4,3,null,1,false,1,null,3,1,3,3,null,7,2,null]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"pop\",\"push\",\"top\",\"pop\",\"empty\",\"push\",\"empty\",\"pop\",\"empty\",\"empty\",\"push\",\"pop\",\"push\",\"top\",\"push\",\"top\",\"empty\",\"pop\",\"empty\",\"empty\",\"pop\",\"push\",\"push\",\"push\",\"empty\",\"pop\",\"pop\",\"pop\",\"push\",\"push\",\"push\",\"empty\",\"empty\",\"pop\",\"pop\",\"pop\",\"push\",\"push\",\"empty\",\"pop\",\"pop\",\"empty\",\"push\",\"empty\",\"push\",\"top\",\"empty\",\"empty\",\"push\",\"push\",\"pop\",\"pop\",\"top\",\"top\",\"empty\",\"empty\",\"push\",\"push\",\"empty\",\"pop\",\"empty\",\"empty\",\"empty\",\"push\",\"empty\",\"empty\",\"push\",\"pop\",\"top\"]\n[[],[5],[],[4],[],[],[],[6],[],[],[],[],[4],[],[3],[],[3],[],[],[],[],[],[],[7],[4],[5],[],[],[],[],[3],[6],[8],[],[],[],[],[],[8],[7],[],[],[],[],[4],[],[3],[],[],[],[7],[7],[],[],[],[],[],[],[5],[5],[],[],[],[],[],[5],[],[],[5],[],[]]",
+      "expectedOutput": "[null,null,5,null,4,4,true,null,false,6,true,true,null,4,null,3,null,3,false,3,false,false,3,null,null,null,false,5,4,7,null,null,null,false,false,8,6,3,null,null,false,7,8,true,null,false,null,3,false,false,null,null,7,7,3,3,false,false,null,null,false,5,false,false,false,null,false,false,null,5,5]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"pop\",\"empty\",\"push\",\"push\",\"top\",\"empty\",\"empty\",\"pop\",\"push\",\"empty\",\"empty\",\"top\",\"pop\",\"push\",\"empty\",\"push\",\"top\",\"top\",\"pop\",\"top\",\"push\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"pop\",\"top\",\"pop\",\"top\",\"pop\",\"push\",\"push\",\"empty\",\"empty\",\"push\",\"pop\",\"push\",\"pop\",\"top\",\"empty\",\"push\",\"top\",\"empty\",\"top\",\"push\",\"push\",\"pop\"]\n[[],[3],[],[],[],[8],[7],[],[],[],[],[2],[],[],[],[],[6],[],[8],[],[],[],[],[9],[],[],[],[],[8],[],[],[],[],[],[6],[7],[],[],[3],[],[5],[],[],[],[6],[],[],[],[9],[1],[]]",
+      "expectedOutput": "[null,null,3,3,true,null,null,7,false,false,7,null,false,false,2,2,null,false,null,8,8,8,6,null,9,false,9,false,null,8,6,6,8,8,null,null,false,false,null,3,null,5,7,false,null,6,false,6,null,null,1]"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\",\"empty\",\"top\",\"push\",\"push\",\"empty\",\"push\",\"top\",\"push\",\"pop\",\"pop\",\"pop\",\"empty\",\"empty\",\"pop\",\"empty\",\"pop\",\"push\",\"push\",\"top\",\"push\",\"push\",\"empty\",\"push\",\"empty\",\"top\",\"push\",\"top\",\"push\",\"push\",\"push\",\"empty\",\"top\",\"top\",\"top\",\"push\",\"top\",\"empty\",\"push\",\"top\",\"push\",\"top\",\"top\",\"empty\",\"push\",\"push\",\"pop\",\"top\",\"top\",\"push\",\"pop\",\"top\",\"push\",\"push\",\"top\",\"empty\",\"empty\",\"top\",\"top\",\"push\",\"top\",\"empty\",\"pop\",\"empty\",\"push\",\"top\",\"top\",\"push\",\"push\",\"push\",\"top\",\"empty\",\"push\",\"top\",\"empty\",\"pop\",\"top\",\"empty\",\"push\",\"top\",\"push\",\"push\",\"pop\",\"top\",\"top\",\"top\",\"empty\",\"top\",\"empty\",\"empty\",\"top\",\"empty\",\"top\",\"pop\",\"pop\",\"top\",\"top\",\"push\",\"top\"]\n[[],[6],[],[],[],[1],[9],[],[4],[],[8],[],[],[],[],[],[],[],[],[9],[9],[],[7],[5],[],[7],[],[],[9],[],[3],[6],[1],[],[],[],[],[8],[],[],[5],[],[9],[],[],[],[9],[1],[],[],[],[3],[],[],[2],[4],[],[],[],[],[],[2],[],[],[],[],[9],[],[],[6],[8],[9],[],[],[1],[],[],[],[],[],[7],[],[3],[3],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[2],[]]",
+      "expectedOutput": "[null,null,6,false,6,null,null,false,null,4,null,8,4,9,false,false,1,false,6,null,null,9,null,null,false,null,false,7,null,9,null,null,null,false,1,1,1,null,8,false,null,5,null,9,9,false,null,null,1,9,9,null,3,9,null,null,4,false,false,4,4,null,2,false,2,false,null,9,9,null,null,null,9,false,null,1,false,1,9,false,null,7,null,null,3,3,3,3,false,3,false,false,3,false,3,3,7,9,9,null,2]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/implement-stack-using-queues/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.470Z",
+    "sourceUpdatedAt": null
+  }
+}

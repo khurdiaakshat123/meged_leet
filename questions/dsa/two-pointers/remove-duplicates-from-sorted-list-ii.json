@@ -1,0 +1,147 @@
+{
+  "id": "82",
+  "slug": "remove-duplicates-from-sorted-list-ii",
+  "title": "Remove Duplicates from Sorted List II",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "statement": "You are given the `head` of a **sorted** linked list.\n\nDelete all nodes that have **duplicate** numbers, leaving only **distinct** numbers from the original list.\n\nReturn the linked list **sorted** as well.\n\n**Example 1:**\n\n![](./assets/remove-duplicates-from-sorted-list-ii-1.jpg)\n```\nInput: head = [1,2,3,3,4,4,5]\nOutput: [1,2,5]\n```\n\n**Example 2:**\n\n![](./assets/remove-duplicates-from-sorted-list-ii-2.jpg)\n```\nInput: head = [1,1,1,2,3]\nOutput: [2,3]\n```\n\n**Constraints:**\n\n*   The number of nodes in the list is in the range `[0, 300]`.\n*   `-100 <= Node.val <= 100`\n*   The list is guaranteed to be **sorted** in ascending order.",
+  "constraints": [
+    "The number of nodes in the list is in the range [0, 300].",
+    "-100 <= Node.val <= 100",
+    "The list is guaranteed to be sorted in ascending order."
+  ],
+  "examples": [
+    {
+      "input": "head = [1,2,3,3,4,4,5]",
+      "output": "[1,2,5]",
+      "explanation": null
+    },
+    {
+      "input": "head = [1,1,1,2,3]",
+      "output": "[2,3]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* deleteDuplicates(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        \n    }\n}",
+    "python3": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def deleteDuplicates(self, head: ListNode | None) -> ListNode | None:\n        ",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def deleteDuplicates(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n    \n};",
+    "typescript": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     val: number\n *     next: ListNode | null\n *     constructor(val?: number, next?: ListNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.next = (next===undefined ? null : next)\n *     }\n * }\n */\n\nfunction deleteDuplicates(head: ListNode | null): ListNode | null {\n    \n};",
+    "csharp": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public int val;\n *     public ListNode next;\n *     public ListNode(int val=0, ListNode next=null) {\n *         this.val = val;\n *         this.next = next;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode DeleteDuplicates(ListNode head) {\n        \n    }\n}",
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteDuplicates(struct ListNode* head) {\n    \n}",
+    "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc deleteDuplicates(head *ListNode) *ListNode {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var li = ListNode(5)\n * var v = li.`val`\n * Definition for singly-linked list.\n * class ListNode(var `val`: Int) {\n *     var next: ListNode? = null\n * }\n */\nclass Solution {\n    fun deleteDuplicates(head: ListNode?): ListNode? {\n        \n    }\n}",
+    "swift": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public var val: Int\n *     public var next: ListNode?\n *     public init() { self.val = 0; self.next = nil; }\n *     public init(_ val: Int) { self.val = val; self.next = nil; }\n *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }\n * }\n */\nclass Solution {\n    func deleteDuplicates(_ head: ListNode?) -> ListNode? {\n        \n    }\n}",
+    "rust": "// Definition for singly-linked list.\n// #[derive(PartialEq, Eq, Clone, Debug)]\n// pub struct ListNode {\n//   pub val: i32,\n//   pub next: Option<Box<ListNode>>\n// }\n// \n// impl ListNode {\n//   #[inline]\n//   fn new(val: i32) -> Self {\n//     ListNode {\n//       next: None,\n//       val\n//     }\n//   }\n// }\nimpl Solution {\n    pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {\n        \n    }\n}",
+    "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val = 0, _next = nil)\n#         @val = val\n#         @next = _next\n#     end\n# end\n# @param {ListNode} head\n# @return {ListNode}\ndef delete_duplicates(head)\n    \nend",
+    "php": "/**\n * Definition for a singly-linked list.\n * class ListNode {\n *     public $val = 0;\n *     public $next = null;\n *     function __construct($val = 0, $next = null) {\n *         $this->val = $val;\n *         $this->next = $next;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param ListNode $head\n     * @return ListNode\n     */\n    function deleteDuplicates($head) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *   int val;\n *   ListNode? next;\n *   ListNode([this.val = 0, this.next]);\n * }\n */\nclass Solution {\n  ListNode? deleteDuplicates(ListNode? head) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(_x: Int = 0, _next: ListNode = null) {\n *   var next: ListNode = _next\n *   var x: Int = _x\n * }\n */\nobject Solution {\n    def deleteDuplicates(head: ListNode): ListNode = {\n        \n    }\n}",
+    "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec delete_duplicates(head :: ListNode.t | nil) :: ListNode.t | nil\n  def delete_duplicates(head) do\n    \n  end\nend",
+    "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec delete_duplicates(Head :: #list_node{} | null) -> #list_node{} | null.\ndelete_duplicates(Head) ->\n  .",
+    "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (delete-duplicates head)\n  (-> (or/c list-node? #f) (or/c list-node? #f))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[17]",
+      "expectedOutput": "[17]"
+    },
+    {
+      "input": "[-96,-10]",
+      "expectedOutput": "[-96,-10]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[-71,13,53]",
+      "expectedOutput": "[-71,13,53]"
+    },
+    {
+      "input": "[-71,-55,-44,-11,83]",
+      "expectedOutput": "[-71,-55,-44,-11,83]"
+    },
+    {
+      "input": "[-12,17,17,20,41,63,72]",
+      "expectedOutput": "[-12,20,41,63,72]"
+    },
+    {
+      "input": "[-83,-56,-52,-46,-43,-38,-12,16,83]",
+      "expectedOutput": "[-83,-56,-52,-46,-43,-38,-12,16,83]"
+    },
+    {
+      "input": "[-93,-87,-69,-50,-49,-48,-25,-21,-8,5,62]",
+      "expectedOutput": "[-93,-87,-69,-50,-49,-48,-25,-21,-8,5,62]"
+    },
+    {
+      "input": "[-97,-89,-68,-65,-56,-44,-26,14,20,49,53,58,71,93]",
+      "expectedOutput": "[-97,-89,-68,-65,-56,-44,-26,14,20,49,53,58,71,93]"
+    },
+    {
+      "input": "[-96,-86,-85,-81,-77,-55,-52,-20,-3,0,28,34,38,38,45,67,83]",
+      "expectedOutput": "[-96,-86,-85,-81,-77,-55,-52,-20,-3,0,28,34,45,67,83]"
+    },
+    {
+      "input": "[-97,-85,-77,-52,-35,-27,-11,-8,7,32,39,41,43,52,57,80,91,92,97,98]",
+      "expectedOutput": "[-97,-85,-77,-52,-35,-27,-11,-8,7,32,39,41,43,52,57,80,91,92,97,98]"
+    },
+    {
+      "input": "[-100,-92,-73,-65,-63,-61,-50,-34,-32,-30,-29,-26,-13,-3,-1,4,29,41,42,51,55,79,95]",
+      "expectedOutput": "[-100,-92,-73,-65,-63,-61,-50,-34,-32,-30,-29,-26,-13,-3,-1,4,29,41,42,51,55,79,95]"
+    },
+    {
+      "input": "[-85,-82,-81,-72,-62,-61,-60,-54,-42,-25,-24,-22,-8,-3,-1,4,6,17,22,28,45,56,80,84,93,98]",
+      "expectedOutput": "[-85,-82,-81,-72,-62,-61,-60,-54,-42,-25,-24,-22,-8,-3,-1,4,6,17,22,28,45,56,80,84,93,98]"
+    },
+    {
+      "input": "[-100,-94,-87,-85,-84,-83,-77,-74,-74,-58,-53,-48,-34,-30,-27,-27,-21,-5,6,8,17,25,32,32,33,47,49,78,79]",
+      "expectedOutput": "[-100,-94,-87,-85,-84,-83,-77,-58,-53,-48,-34,-30,-21,-5,6,8,17,25,33,47,49,78,79]"
+    },
+    {
+      "input": "[-98,-92,-91,-86,-74,-73,-71,-63,-57,-52,-49,-45,-40,-37,-35,-13,-9,-6,0,1,7,17,31,35,44,44,50,57,59,64,66,80,99]",
+      "expectedOutput": "[-98,-92,-91,-86,-74,-73,-71,-63,-57,-52,-49,-45,-40,-37,-35,-13,-9,-6,0,1,7,17,31,35,50,57,59,64,66,80,99]"
+    },
+    {
+      "input": "[-100,-97,-95,-90,-79,-77,-75,-73,-65,-64,-60,-58,-57,-56,-52,-31,-29,-26,-23,-18,-17,-16,-15,-11,-2,15,29,35,42,50,55,57,59,65,81,81,82]",
+      "expectedOutput": "[-100,-97,-95,-90,-79,-77,-75,-73,-65,-64,-60,-58,-57,-56,-52,-31,-29,-26,-23,-18,-17,-16,-15,-11,-2,15,29,35,42,50,55,57,59,65,82]"
+    },
+    {
+      "input": "[-99,-98,-74,-73,-72,-68,-68,-66,-65,-62,-60,-48,-31,-27,-25,-25,-20,-20,-4,-2,11,15,17,21,25,26,31,36,38,47,48,52,55,61,63,67,69,71,75,79,85]",
+      "expectedOutput": "[-99,-98,-74,-73,-72,-66,-65,-62,-60,-48,-31,-27,-4,-2,11,15,17,21,25,26,31,36,38,47,48,52,55,61,63,67,69,71,75,79,85]"
+    },
+    {
+      "input": "[-97,-95,-92,-90,-85,-83,-83,-78,-69,-47,-44,-42,-40,-32,-24,-23,-20,-18,-7,-7,0,0,2,4,18,18,21,31,40,42,43,46,52,54,56,56,58,61,63,67,82,89,95,98,98]",
+      "expectedOutput": "[-97,-95,-92,-90,-85,-78,-69,-47,-44,-42,-40,-32,-24,-23,-20,-18,2,4,21,31,40,42,43,46,52,54,58,61,63,67,82,89,95]"
+    },
+    {
+      "input": "[-99,-97,-94,-93,-93,-90,-90,-88,-87,-87,-86,-85,-84,-82,-78,-75,-75,-74,-73,-73,-70,-69,-69,-67,-67,-64,-64,-59,-57,-56,-56,-55,-54,-51,-50,-50,-50,-48,-48,-48,-44,-43,-38,-37,-37,-36,-36,-35,-35,-34,-27,-26,-25,-25,-24,-22,-21,-17,-14,-14,-13,-13,-11,-11,-10,-7,-5,-5,-4,-4,-3,-2,-1,2,3,4,11,14,14,15,16,17,17,20,20,20,21,21,22,23,23,25,29,30,30,31,32,34,34,35,36,38,38,39,39,41,41,41,42,43,45,45,45,47,48,48,50,51,51,53,55,56,57,59,59,59,61,61,62,64,65,65,66,67,69,70,71,72,75,84,84,88,89,90,92,93,98,98,99,99]",
+      "expectedOutput": "[-99,-97,-94,-88,-86,-85,-84,-82,-78,-74,-70,-59,-57,-55,-54,-51,-44,-43,-38,-34,-27,-26,-24,-22,-21,-17,-10,-7,-3,-2,-1,2,3,4,11,15,16,22,25,29,31,32,35,36,42,43,47,50,53,55,56,57,62,64,66,67,69,70,71,72,75,88,89,90,92,93]"
+    },
+    {
+      "input": "[-100,-100,-100,-100,-99,-98,-98,-96,-95,-94,-93,-93,-92,-92,-92,-92,-91,-91,-89,-88,-86,-85,-84,-84,-83,-83,-83,-83,-83,-82,-81,-80,-78,-78,-77,-76,-75,-75,-75,-75,-74,-73,-73,-73,-72,-72,-71,-70,-70,-70,-70,-70,-70,-70,-69,-67,-67,-67,-65,-65,-63,-62,-61,-61,-61,-58,-56,-56,-55,-54,-54,-53,-52,-52,-52,-52,-51,-51,-50,-50,-49,-49,-48,-48,-47,-46,-46,-46,-46,-45,-45,-44,-42,-42,-42,-42,-40,-40,-40,-40,-39,-39,-39,-39,-39,-39,-38,-38,-36,-36,-35,-35,-34,-32,-31,-30,-30,-29,-29,-28,-28,-28,-27,-26,-26,-25,-24,-24,-23,-23,-23,-22,-20,-19,-18,-18,-16,-16,-16,-16,-15,-14,-14,-14,-14,-13,-13,-13,-10,-10,-9,-8,-7,-7,-7,-7,-7,-7,-6,-3,-3,-2,-1,0,2,3,7,7,7,8,10,10,11,11,11,12,13,13,13,13,13,15,17,17,20,21,23,23,24,24,24,25,26,26,27,27,27,27,28,28,28,28,29,29,29,29,31,31,32,32,32,32,32,34,34,34,35,37,37,37,38,39,40,42,42,42,43,44,45,46,49,51,52,52,52,54,55,55,56,56,58,58,58,58,59,59,60,60,61,61,62,62,63,63,64,66,67,67,67,67,68,68,68,69,73,75,75,75,76,76,76,77,78,78,78,82,82,85,86,86,87,88,88,91,91,91,92,92,92,92,93,95,95,95,96,98,99,99,99,100]",
+      "expectedOutput": "[-99,-96,-95,-94,-89,-88,-86,-85,-82,-81,-80,-77,-76,-74,-71,-69,-63,-62,-58,-55,-53,-47,-44,-34,-32,-31,-27,-25,-22,-20,-19,-15,-9,-8,-6,-2,-1,0,2,3,8,12,15,20,21,25,35,38,39,40,43,44,45,46,49,51,54,64,66,69,73,77,85,87,93,96,98,100]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.517Z",
+    "sourceUpdatedAt": null
+  }
+}

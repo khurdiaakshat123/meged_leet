@@ -1,0 +1,151 @@
+{
+  "id": "3783",
+  "slug": "mirror-distance-of-an-integer",
+  "title": "Mirror Distance of an Integer",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math"
+  ],
+  "statement": "You are given an integer `n`.\n\nDefine its **mirror distance** as: `abs(n - reverse(n))`​​​​​​​ where `reverse(n)` is the integer formed by reversing the digits of `n`.\n\nReturn an integer denoting the mirror distance of `n`​​​​​​​.\n\n`abs(x)` denotes the absolute value of `x`.\n\n**Example 1:**\n\n**Input:** n = 25\n\n**Output:** 27\n\n**Explanation:**\n\n*   `reverse(25) = 52`.\n*   Thus, the answer is `abs(25 - 52) = 27`.\n\n**Example 2:**\n\n**Input:** n = 10\n\n**Output:** 9\n\n**Explanation:**\n\n*   `reverse(10) = 01` which is 1.\n*   Thus, the answer is `abs(10 - 1) = 9`.\n\n**Example 3:**\n\n**Input:** n = 7\n\n**Output:** 0\n\n**Explanation:**\n\n*   `reverse(7) = 7`.\n*   Thus, the answer is `abs(7 - 7) = 0`.\n\n**Constraints:**\n\n*   `1 <= n <= 10^(9)`",
+  "constraints": [
+    "1 <= n <= 109"
+  ],
+  "examples": [
+    {
+      "input": "n = 25",
+      "output": "27",
+      "explanation": "reverse(25) = 52.\n\tThus, the answer is abs(25 - 52) = 27."
+    },
+    {
+      "input": "n = 10",
+      "output": "9",
+      "explanation": "reverse(10) = 01 which is 1.\n\tThus, the answer is abs(10 - 1) = 9."
+    },
+    {
+      "input": "n = 7",
+      "output": "0",
+      "explanation": "reverse(7) = 7.\n\tThus, the answer is abs(7 - 7) = 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int mirrorDistance(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mirrorDistance(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def mirrorDistance(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def mirrorDistance(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar mirrorDistance = function(n) {\n    \n};",
+    "typescript": "function mirrorDistance(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MirrorDistance(int n) {\n        \n    }\n}",
+    "c": "int mirrorDistance(int n) {\n    \n}",
+    "golang": "func mirrorDistance(n int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun mirrorDistance(n: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mirrorDistance(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn mirror_distance(n: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef mirror_distance(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function mirrorDistance($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int mirrorDistance(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def mirrorDistance(n: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec mirror_distance(n :: integer) :: integer\n  def mirror_distance(n) do\n    \n  end\nend",
+    "erlang": "-spec mirror_distance(N :: integer()) -> integer().\nmirror_distance(N) ->\n  .",
+    "racket": "(define/contract (mirror-distance n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "2",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "1000000000",
+      "expectedOutput": "999999999"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "999999999",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "242553085",
+      "expectedOutput": "337802157"
+    },
+    {
+      "input": "749565048",
+      "expectedOutput": "91000899"
+    },
+    {
+      "input": "969039225",
+      "expectedOutput": "446108256"
+    },
+    {
+      "input": "680980669",
+      "expectedOutput": "285108417"
+    },
+    {
+      "input": "103316029",
+      "expectedOutput": "817297272"
+    },
+    {
+      "input": "265748767",
+      "expectedOutput": "502098795"
+    },
+    {
+      "input": "801564297",
+      "expectedOutput": "9099189"
+    },
+    {
+      "input": "792629818",
+      "expectedOutput": "26296479"
+    },
+    {
+      "input": "515011832",
+      "expectedOutput": "276901317"
+    },
+    {
+      "input": "604501199",
+      "expectedOutput": "386604207"
+    },
+    {
+      "input": "128895283",
+      "expectedOutput": "253703538"
+    },
+    {
+      "input": "664483392",
+      "expectedOutput": "371098926"
+    },
+    {
+      "input": "493018820",
+      "expectedOutput": "464208426"
+    },
+    {
+      "input": "920075393",
+      "expectedOutput": "526505364"
+    },
+    {
+      "input": "504746453",
+      "expectedOutput": "150099048"
+    },
+    {
+      "input": "762445034",
+      "expectedOutput": "331900767"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Simulate as described"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/mirror-distance-of-an-integer/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.372Z",
+    "sourceUpdatedAt": null
+  }
+}

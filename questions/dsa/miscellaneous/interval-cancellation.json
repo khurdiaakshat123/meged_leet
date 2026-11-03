@@ -1,0 +1,146 @@
+{
+  "id": "2725",
+  "slug": "interval-cancellation",
+  "title": "Interval Cancellation",
+  "category": "dsa",
+  "subcategory": "miscellaneous",
+  "difficulty": "Easy",
+  "tags": [],
+  "statement": "Given a function `fn`, an array of arguments `args`, and an interval time `t`, return a cancel function `cancelFn`.\n\nAfter a delay of `cancelTimeMs`, the returned cancel function `cancelFn` will be invoked.\n\n```\nsetTimeout(cancelFn, cancelTimeMs)\n```\n\nThe function `fn` should be called with `args` immediately and then called again every `t` milliseconds until `cancelFn` is called at `cancelTimeMs` ms.\n\n**Example 1:**\n\n```\nInput: fn = (x) => x * 2, args = [4], t = 35\nOutput: \n[\n   {\"time\": 0, \"returned\": 8},\n   {\"time\": 35, \"returned\": 8},\n   {\"time\": 70, \"returned\": 8},\n   {\"time\": 105, \"returned\": 8},\n   {\"time\": 140, \"returned\": 8},\n   {\"time\": 175, \"returned\": 8}\n]\nExplanation: \nconst cancelTimeMs = 190;\nconst cancelFn = cancellable((x) => x * 2, [4], 35);\nsetTimeout(cancelFn, cancelTimeMs);\n\nEvery 35ms, fn(4) is called. Until t=190ms, then it is cancelled.\n1st fn call is at 0ms. fn(4) returns 8.\n2nd fn call is at 35ms. fn(4) returns 8.\n3rd fn call is at 70ms. fn(4) returns 8.\n4th fn call is at 105ms. fn(4) returns 8.\n5th fn call is at 140ms. fn(4) returns 8.\n6th fn call is at 175ms. fn(4) returns 8.\nCancelled at 190ms\n```\n\n**Example 2:**\n\n```\nInput: fn = (x1, x2) => (x1 * x2), args = [2, 5], t = 30\nOutput: \n[\n   {\"time\": 0, \"returned\": 10},\n   {\"time\": 30, \"returned\": 10},\n   {\"time\": 60, \"returned\": 10},\n   {\"time\": 90, \"returned\": 10},\n   {\"time\": 120, \"returned\": 10},\n   {\"time\": 150, \"returned\": 10}\n]\nExplanation: \nconst cancelTimeMs = 165; \nconst cancelFn = cancellable((x1, x2) => (x1 * x2), [2, 5], 30) \nsetTimeout(cancelFn, cancelTimeMs)\n\nEvery 30ms, fn(2, 5) is called. Until t=165ms, then it is cancelled.\n1st fn call is at 0ms \n2nd fn call is at 30ms \n3rd fn call is at 60ms \n4th fn call is at 90ms \n5th fn call is at 120ms \n6th fn call is at 150ms\nCancelled at 165ms\n```\n\n**Example 3:**\n\n```\nInput: fn = (x1, x2, x3) => (x1 + x2 + x3), args = [5, 1, 3], t = 50\nOutput: \n[\n   {\"time\": 0, \"returned\": 9},\n   {\"time\": 50, \"returned\": 9},\n   {\"time\": 100, \"returned\": 9},\n   {\"time\": 150, \"returned\": 9}\n]\nExplanation: \nconst cancelTimeMs = 180;\nconst cancelFn = cancellable((x1, x2, x3) => (x1 + x2 + x3), [5, 1, 3], 50)\nsetTimeout(cancelFn, cancelTimeMs)\n\nEvery 50ms, fn(5, 1, 3) is called. Until t=180ms, then it is cancelled. \n1st fn call is at 0ms\n2nd fn call is at 50ms\n3rd fn call is at 100ms\n4th fn call is at 150ms\nCancelled at 180ms\n```\n\n**Constraints:**\n\n*   `fn` is a function\n*   `args` is a valid JSON array\n*   `1 <= args.length <= 10`\n*   `30 <= t <= 100`\n*   `10 <= cancelTimeMs <= 500`",
+  "constraints": [
+    "fn is a function",
+    "args is a valid JSON array",
+    "1 <= args.length <= 10",
+    "30 <= t <= 100",
+    "10 <= cancelTimeMs <= 500"
+  ],
+  "examples": [
+    {
+      "input": "fn = (x) => x * 2, args = [4], t = 35",
+      "output": "[\n   {\"time\": 0, \"returned\": 8},\n   {\"time\": 35, \"returned\": 8},\n   {\"time\": 70, \"returned\": 8},\n   {\"time\": 105, \"returned\": 8},\n   {\"time\": 140, \"returned\": 8},\n   {\"time\": 175, \"returned\": 8}\n]",
+      "explanation": "const cancelTimeMs = 190;\nconst cancelFn = cancellable((x) => x * 2, [4], 35);\nsetTimeout(cancelFn, cancelTimeMs);\n\nEvery 35ms, fn(4) is called. Until t=190ms, then it is cancelled.\n1st fn call is at 0ms. fn(4) returns 8.\n2nd fn call is at 35ms. fn(4) returns 8.\n3rd fn call is at 70ms. fn(4) returns 8.\n4th fn call is at 105ms. fn(4) returns 8.\n5th fn call is at 140ms. fn(4) returns 8.\n6th fn call is at 175ms. fn(4) returns 8.\nCancelled at 190ms"
+    },
+    {
+      "input": "fn = (x1, x2) => (x1 * x2), args = [2, 5], t = 30",
+      "output": "[\n   {\"time\": 0, \"returned\": 10},\n   {\"time\": 30, \"returned\": 10},\n   {\"time\": 60, \"returned\": 10},\n   {\"time\": 90, \"returned\": 10},\n   {\"time\": 120, \"returned\": 10},\n   {\"time\": 150, \"returned\": 10}\n]",
+      "explanation": "const cancelTimeMs = 165; \nconst cancelFn = cancellable((x1, x2) => (x1 * x2), [2, 5], 30) \nsetTimeout(cancelFn, cancelTimeMs)\n\nEvery 30ms, fn(2, 5) is called. Until t=165ms, then it is cancelled.\n1st fn call is at 0ms \n2nd fn call is at 30ms \n3rd fn call is at 60ms \n4th fn call is at 90ms \n5th fn call is at 120ms \n6th fn call is at 150ms\nCancelled at 165ms"
+    },
+    {
+      "input": "fn = (x1, x2, x3) => (x1 + x2 + x3), args = [5, 1, 3], t = 50",
+      "output": "[\n   {\"time\": 0, \"returned\": 9},\n   {\"time\": 50, \"returned\": 9},\n   {\"time\": 100, \"returned\": 9},\n   {\"time\": 150, \"returned\": 9}\n]",
+      "explanation": "const cancelTimeMs = 180;\nconst cancelFn = cancellable((x1, x2, x3) => (x1 + x2 + x3), [5, 1, 3], 50)\nsetTimeout(cancelFn, cancelTimeMs)\n\nEvery 50ms, fn(5, 1, 3) is called. Until t=180ms, then it is cancelled. \n1st fn call is at 0ms\n2nd fn call is at 50ms\n3rd fn call is at 100ms\n4th fn call is at 150ms\nCancelled at 180ms"
+    }
+  ],
+  "starterCode": {
+    "javascript": "/**\n * @param {Function} fn\n * @param {Array} args\n * @param {number} t\n * @return {Function}\n */\nvar cancellable = function(fn, args, t) {\n    \n};\n\n/**\n *  const result = [];\n *\n *  const fn = (x) => x * 2;\n *  const args = [4], t = 35, cancelTimeMs = 190;\n *\n *  const start = performance.now();\n *\n *  const log = (...argsArr) => {\n *      const diff = Math.floor(performance.now() - start);\n *      result.push({\"time\": diff, \"returned\": fn(...argsArr)});\n *  }\n *       \n *  const cancel = cancellable(log, args, t);\n *\n *  setTimeout(cancel, cancelTimeMs);\n *   \n *  setTimeout(() => {\n *      console.log(result); // [\n *                           //     {\"time\":0,\"returned\":8},\n *                           //     {\"time\":35,\"returned\":8},\n *                           //     {\"time\":70,\"returned\":8},\n *                           //     {\"time\":105,\"returned\":8},\n *                           //     {\"time\":140,\"returned\":8},\n *                           //     {\"time\":175,\"returned\":8}\n *                           // ]\n *  }, cancelTimeMs + t + 15)    \n */",
+    "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\ntype Fn = (...args: JSONValue[]) => void\n\nfunction cancellable(fn: Fn, args: JSONValue[], t: number): Function {\n    \n};\n\n/**\n *  const result = [];\n *\n *  const fn = (x) => x * 2;\n *  const args = [4], t = 35, cancelTimeMs = 190;\n *\n *  const start = performance.now();\n *\n *  const log = (...argsArr) => {\n *      const diff = Math.floor(performance.now() - start);\n *      result.push({\"time\": diff, \"returned\": fn(...argsArr)});\n *  }\n *       \n *  const cancel = cancellable(log, args, t);\n *\n *  setTimeout(cancel, cancelTimeMs);\n *   \n *  setTimeout(() => {\n *      console.log(result); // [\n *                           //     {\"time\":0,\"returned\":8},\n *                           //     {\"time\":35,\"returned\":8},\n *                           //     {\"time\":70,\"returned\":8},\n *                           //     {\"time\":105,\"returned\":8},\n *                           //     {\"time\":140,\"returned\":8},\n *                           //     {\"time\":175,\"returned\":8}\n *                           // ]\n *  }, cancelTimeMs + t + 15)    \n */"
+  },
+  "publicTests": [
+    {
+      "input": "(x) => x * 2\n[-78]\n30\n10",
+      "expectedOutput": "[{\"time\":0,\"returned\":-156}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[89,-99]\n37\n33",
+      "expectedOutput": "[{\"time\":0,\"returned\":-10}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-41,-91]\n44\n56",
+      "expectedOutput": "[{\"time\":0,\"returned\":3731},{\"time\":44,\"returned\":3731}]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "(x) => x * 2\n[-78]\n30\n10",
+      "expectedOutput": "[{\"time\":0,\"returned\":-156}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[89,-99]\n37\n33",
+      "expectedOutput": "[{\"time\":0,\"returned\":-10}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-41,-91]\n44\n56",
+      "expectedOutput": "[{\"time\":0,\"returned\":3731},{\"time\":44,\"returned\":3731}]"
+    },
+    {
+      "input": "(x) => x - 7\n[-21]\n51\n79",
+      "expectedOutput": "[{\"time\":0,\"returned\":-28},{\"time\":51,\"returned\":-28}]"
+    },
+    {
+      "input": "(x) => x * 2\n[-59]\n58\n102",
+      "expectedOutput": "[{\"time\":0,\"returned\":-118},{\"time\":58,\"returned\":-118}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[3,100]\n65\n125",
+      "expectedOutput": "[{\"time\":0,\"returned\":103},{\"time\":65,\"returned\":103}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[14,-7]\n72\n148",
+      "expectedOutput": "[{\"time\":0,\"returned\":-98},{\"time\":72,\"returned\":-98},{\"time\":144,\"returned\":-98}]"
+    },
+    {
+      "input": "(x) => x - 7\n[-37]\n79\n171",
+      "expectedOutput": "[{\"time\":0,\"returned\":-44},{\"time\":79,\"returned\":-44},{\"time\":158,\"returned\":-44}]"
+    },
+    {
+      "input": "(x) => x * 2\n[22]\n86\n194",
+      "expectedOutput": "[{\"time\":0,\"returned\":44},{\"time\":86,\"returned\":44},{\"time\":172,\"returned\":44}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[-4,20]\n93\n217",
+      "expectedOutput": "[{\"time\":0,\"returned\":16},{\"time\":93,\"returned\":16},{\"time\":186,\"returned\":16}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-23,22]\n100\n240",
+      "expectedOutput": "[{\"time\":0,\"returned\":-506},{\"time\":100,\"returned\":-506},{\"time\":200,\"returned\":-506}]"
+    },
+    {
+      "input": "(x) => x - 7\n[-81]\n36\n263",
+      "expectedOutput": "[{\"time\":0,\"returned\":-88},{\"time\":36,\"returned\":-88},{\"time\":72,\"returned\":-88},{\"time\":108,\"returned\":-88},{\"time\":144,\"returned\":-88},{\"time\":180,\"returned\":-88},{\"time\":216,\"returned\":-88},{\"time\":252,\"returned\":-88}]"
+    },
+    {
+      "input": "(x) => x * 2\n[-78]\n43\n286",
+      "expectedOutput": "[{\"time\":0,\"returned\":-156},{\"time\":43,\"returned\":-156},{\"time\":86,\"returned\":-156},{\"time\":129,\"returned\":-156},{\"time\":172,\"returned\":-156},{\"time\":215,\"returned\":-156},{\"time\":258,\"returned\":-156}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[31,37]\n50\n309",
+      "expectedOutput": "[{\"time\":0,\"returned\":68},{\"time\":50,\"returned\":68},{\"time\":100,\"returned\":68},{\"time\":150,\"returned\":68},{\"time\":200,\"returned\":68},{\"time\":250,\"returned\":68},{\"time\":300,\"returned\":68}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-95,92]\n57\n332",
+      "expectedOutput": "[{\"time\":0,\"returned\":-8740},{\"time\":57,\"returned\":-8740},{\"time\":114,\"returned\":-8740},{\"time\":171,\"returned\":-8740},{\"time\":228,\"returned\":-8740},{\"time\":285,\"returned\":-8740}]"
+    },
+    {
+      "input": "(x) => x - 7\n[25]\n64\n355",
+      "expectedOutput": "[{\"time\":0,\"returned\":18},{\"time\":64,\"returned\":18},{\"time\":128,\"returned\":18},{\"time\":192,\"returned\":18},{\"time\":256,\"returned\":18},{\"time\":320,\"returned\":18}]"
+    },
+    {
+      "input": "(x) => x * 2\n[27]\n71\n378",
+      "expectedOutput": "[{\"time\":0,\"returned\":54},{\"time\":71,\"returned\":54},{\"time\":142,\"returned\":54},{\"time\":213,\"returned\":54},{\"time\":284,\"returned\":54},{\"time\":355,\"returned\":54}]"
+    },
+    {
+      "input": "(a,b) => a + b\n[-51,63]\n78\n401",
+      "expectedOutput": "[{\"time\":0,\"returned\":12},{\"time\":78,\"returned\":12},{\"time\":156,\"returned\":12},{\"time\":234,\"returned\":12},{\"time\":312,\"returned\":12},{\"time\":390,\"returned\":12}]"
+    },
+    {
+      "input": "(a,b) => a * b\n[-88,85]\n85\n424",
+      "expectedOutput": "[{\"time\":0,\"returned\":-7480},{\"time\":85,\"returned\":-7480},{\"time\":170,\"returned\":-7480},{\"time\":255,\"returned\":-7480},{\"time\":340,\"returned\":-7480}]"
+    },
+    {
+      "input": "(x) => x - 7\n[70]\n92\n447",
+      "expectedOutput": "[{\"time\":0,\"returned\":63},{\"time\":92,\"returned\":63},{\"time\":184,\"returned\":63},{\"time\":276,\"returned\":63},{\"time\":368,\"returned\":63}]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/interval-cancellation/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.590Z",
+    "sourceUpdatedAt": null
+  }
+}

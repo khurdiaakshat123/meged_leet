@@ -1,0 +1,274 @@
+{
+  "generatedAt": "2026-11-03T06:01:21.841326+00:00",
+  "totals": {
+    "questions": 3269,
+    "testCases": 60084,
+    "publicTests": 8684,
+    "examples": 7820,
+    "assets": 1454
+  },
+  "topicStats": {
+    "database/aggregation": {
+      "questions": 6,
+      "testCases": 16,
+      "publicTests": 8,
+      "examples": 8
+    },
+    "database/date-time": {
+      "questions": 1,
+      "testCases": 2,
+      "publicTests": 1,
+      "examples": 1
+    },
+    "database/joins": {
+      "questions": 2,
+      "testCases": 4,
+      "publicTests": 2,
+      "examples": 2
+    },
+    "database/null-handling": {
+      "questions": 9,
+      "testCases": 22,
+      "publicTests": 11,
+      "examples": 11,
+      "assets": 2
+    },
+    "database/select-filtering": {
+      "questions": 80,
+      "testCases": 162,
+      "publicTests": 81,
+      "examples": 81
+    },
+    "database/set-operations": {
+      "questions": 2,
+      "testCases": 4,
+      "publicTests": 2,
+      "examples": 2
+    },
+    "database/string-functions": {
+      "questions": 4,
+      "testCases": 8,
+      "publicTests": 4,
+      "examples": 4
+    },
+    "database/window-functions": {
+      "questions": 1,
+      "testCases": 2,
+      "publicTests": 1,
+      "examples": 1
+    },
+    "dsa/advanced-data-structures": {
+      "questions": 25,
+      "testCases": 500,
+      "publicTests": 75,
+      "examples": 56,
+      "assets": 15
+    },
+    "dsa/arrays": {
+      "questions": 80,
+      "testCases": 1600,
+      "publicTests": 227,
+      "examples": 201,
+      "assets": 37
+    },
+    "dsa/binary-search": {
+      "questions": 129,
+      "testCases": 2580,
+      "publicTests": 385,
+      "examples": 308,
+      "assets": 31
+    },
+    "dsa/bit-manipulation": {
+      "questions": 92,
+      "testCases": 1840,
+      "publicTests": 242,
+      "examples": 218,
+      "assets": 4
+    },
+    "dsa/design": {
+      "assets": 1,
+      "questions": 6,
+      "testCases": 120,
+      "publicTests": 18,
+      "examples": 7
+    },
+    "dsa/divide-and-conquer": {
+      "assets": 5,
+      "questions": 34,
+      "testCases": 671,
+      "publicTests": 68,
+      "examples": 84
+    },
+    "dsa/dynamic-programming": {
+      "questions": 594,
+      "testCases": 11839,
+      "publicTests": 1189,
+      "examples": 1496,
+      "assets": 279
+    },
+    "dsa/graphs": {
+      "questions": 335,
+      "testCases": 6700,
+      "publicTests": 996,
+      "examples": 820,
+      "assets": 508
+    },
+    "dsa/greedy": {
+      "questions": 368,
+      "testCases": 7360,
+      "publicTests": 1094,
+      "examples": 919,
+      "assets": 76
+    },
+    "dsa/hashing": {
+      "questions": 239,
+      "testCases": 4780,
+      "publicTests": 494,
+      "examples": 576,
+      "assets": 70
+    },
+    "dsa/heaps": {
+      "assets": 12,
+      "questions": 82,
+      "testCases": 1640,
+      "publicTests": 246,
+      "examples": 164
+    },
+    "dsa/linked-lists": {
+      "questions": 26,
+      "testCases": 442,
+      "publicTests": 78,
+      "examples": 48,
+      "assets": 40
+    },
+    "dsa/mathematics": {
+      "questions": 171,
+      "testCases": 2907,
+      "publicTests": 513,
+      "examples": 420,
+      "assets": 58
+    },
+    "dsa/miscellaneous": {
+      "questions": 79,
+      "testCases": 1566,
+      "publicTests": 237,
+      "examples": 181,
+      "assets": 13
+    },
+    "dsa/prefix-sum": {
+      "questions": 91,
+      "testCases": 1547,
+      "publicTests": 273,
+      "examples": 222,
+      "assets": 29
+    },
+    "dsa/recursion-backtracking": {
+      "questions": 86,
+      "testCases": 1425,
+      "publicTests": 258,
+      "examples": 216,
+      "assets": 43
+    },
+    "dsa/simulation": {
+      "questions": 149,
+      "testCases": 2521,
+      "publicTests": 447,
+      "examples": 360,
+      "assets": 77
+    },
+    "dsa/sliding-window": {
+      "questions": 107,
+      "testCases": 1819,
+      "publicTests": 321,
+      "examples": 266,
+      "assets": 19
+    },
+    "dsa/sorting": {
+      "questions": 102,
+      "testCases": 1734,
+      "publicTests": 306,
+      "examples": 252,
+      "assets": 36
+    },
+    "dsa/stacks-queues": {
+      "questions": 75,
+      "testCases": 1275,
+      "publicTests": 225,
+      "examples": 179,
+      "assets": 16
+    },
+    "dsa/strings": {
+      "questions": 94,
+      "testCases": 1598,
+      "publicTests": 282,
+      "examples": 239,
+      "assets": 7
+    },
+    "dsa/trees": {
+      "questions": 22,
+      "testCases": 374,
+      "publicTests": 66,
+      "examples": 49,
+      "assets": 34
+    },
+    "dsa/tries": {
+      "questions": 32,
+      "testCases": 544,
+      "publicTests": 96,
+      "examples": 65,
+      "assets": 2
+    },
+    "dsa/two-pointers": {
+      "questions": 146,
+      "testCases": 2482,
+      "publicTests": 438,
+      "examples": 364,
+      "assets": 40
+    }
+  },
+  "validation": {
+    "schemaAndContentIssues": [
+      {
+        "path": "questions/dsa/prefix-sum/assets/equal-sum-grid-partition-i-1.png",
+        "error": "Source file contains an XML AuthenticationFailed response rather than a PNG image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      },
+      {
+        "path": "questions/dsa/mathematics/assets/manhattan-distances-of-all-arrangements-of-pieces-1.png",
+        "error": "Source file contains diagrams.net (mxfile) XML rather than a PNG image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      },
+      {
+        "path": "questions/dsa/linked-lists/assets/design-skiplist-2.gif",
+        "error": "Source file contains an HTML webpage rather than a GIF image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      }
+    ],
+    "issueCount": 3,
+    "byteIntegrityVerifiedFiles": 4723,
+    "allSourceQuestionPathsCovered": true,
+    "uniqueIds": 3269,
+    "uniqueSlugs": 3269,
+    "localImageReferencesChecked": 1454,
+    "imageDecodeErrors": [
+      {
+        "path": "questions/dsa/prefix-sum/assets/equal-sum-grid-partition-i-1.png",
+        "error": "Source file contains an XML AuthenticationFailed response rather than a PNG image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      },
+      {
+        "path": "questions/dsa/mathematics/assets/manhattan-distances-of-all-arrangements-of-pieces-1.png",
+        "error": "Source file contains diagrams.net (mxfile) XML rather than a PNG image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      },
+      {
+        "path": "questions/dsa/linked-lists/assets/design-skiplist-2.gif",
+        "error": "Source file contains an HTML webpage rather than a GIF image.",
+        "sourceComparison": "No valid image at the same path in any of the four archives. Assigned source retained unchanged."
+      }
+    ],
+    "jsonSchemaErrors": 0,
+    "missingReferencedImages": 0
+  },
+  "limits": "Preserves the supplied tests exactly. Schema, image, and integrity checks do not independently prove every expected answer correct."
+}

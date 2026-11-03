@@ -1,0 +1,161 @@
+{
+  "id": "213",
+  "slug": "house-robber-ii",
+  "title": "House Robber II",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "statement": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are **arranged in a circle.** That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and **it will automatically contact the police if two adjacent houses were broken into on the same night**.\n\nGiven an integer array `nums` representing the amount of money of each house, return _the maximum amount of money you can rob tonight **without alerting the police**_.\n\n**Example 1:**\n\n```\nInput: nums = [2,3,2]\nOutput: 3\nExplanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.\n```\n\n**Example 2:**\n\n```\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4.\n```\n\n**Example 3:**\n\n```\nInput: nums = [1,2,3]\nOutput: 3\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `0 <= nums[i] <= 1000`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 1000"
+  ],
+  "examples": [
+    {
+      "input": "nums = [2,3,2]",
+      "output": "3",
+      "explanation": "You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses."
+    },
+    {
+      "input": "nums = [1,2,3,1]",
+      "output": "4",
+      "explanation": "Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4."
+    },
+    {
+      "input": "nums = [1,2,3]",
+      "output": "3",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int rob(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rob(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def rob(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def rob(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar rob = function(nums) {\n    \n};",
+    "typescript": "function rob(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int Rob(int[] nums) {\n        \n    }\n}",
+    "c": "int rob(int* nums, int numsSize) {\n    \n}",
+    "golang": "func rob(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun rob(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rob(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rob(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef rob(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function rob($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rob(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def rob(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec rob(nums :: [integer]) :: integer\n  def rob(nums) do\n    \n  end\nend",
+    "erlang": "-spec rob(Nums :: [integer()]) -> integer().\nrob(Nums) ->\n  .",
+    "racket": "(define/contract (rob nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1000]",
+      "expectedOutput": "1000"
+    },
+    {
+      "input": "[2,3,2]",
+      "expectedOutput": "3"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1000]",
+      "expectedOutput": "1000"
+    },
+    {
+      "input": "[0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[11,7]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[2,3,2]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[1,2,3,1]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[90,1,13,2,3]",
+      "expectedOutput": "103"
+    },
+    {
+      "input": "[3,2,13,1,90]",
+      "expectedOutput": "103"
+    },
+    {
+      "input": "[431,903,228,287,617,721,155,465,391,478,20]",
+      "expectedOutput": "2854"
+    },
+    {
+      "input": "[433,447,336,509,616,206,742,962,444,823,743,307,837,360,225,757,663,48]",
+      "expectedOutput": "5039"
+    },
+    {
+      "input": "[28,40,45,90,66,0,117,126,75,80,0,90,95,140,189]",
+      "expectedOutput": "620"
+    },
+    {
+      "input": "[1000,27,43,56,2,57,41,47,48,34,38,6,1000]",
+      "expectedOutput": "1226"
+    },
+    {
+      "input": "[4,83,83,7,19,91,5,91,2,47,47,3,61,8,61,1]",
+      "expectedOutput": "441"
+    },
+    {
+      "input": "[889,870,849,939,989,826,907,856,945,932,852,844,819,964,906,935,913,907,984]",
+      "expectedOutput": "8237"
+    },
+    {
+      "input": "[0,37,0,28,0,51,0,16,74,93]",
+      "expectedOutput": "225"
+    },
+    {
+      "input": "[448,894,355,916,942,620,121,776,775,6,985,330,957,529,902,469,483,626,710,714,549,409,17]",
+      "expectedOutput": "7809"
+    },
+    {
+      "input": "[452,801,202,286,606,96,431,0,862,581,522,178,726,47,184,129,14,779,0,582,460,37,720,189,403,354,809,873,541,0,639,425]",
+      "expectedOutput": "8605"
+    },
+    {
+      "input": "[33,25,22,37,44,43,1,32,67,68,18,21,43,56,41,68,69,64,36,66,44,30,54,45,7,0,29,35,29,50,12,26,52,57,52,9,63,70,59]",
+      "expectedOutput": "866"
+    },
+    {
+      "input": "[1000,183,356,168,293,242,28,242,373,387,108,387,159,180,188,370,290,341,385,112,90,302,317,306,20,997]",
+      "expectedOutput": "4276"
+    },
+    {
+      "input": "[457,70,788,805,937,565,466,764,985,385,874,766,401,373,381,655,158,992,876,997,135,917,103,193,46,540,199,612,880,619,865,597,422,627,892,515,714,535,990,226,484,63,118,617,928,656,776,83,376,702,954,120,702,764,695,379,531,832,484,867,600,864,898,155,818,134,228,745,880,160,42,981,502,200,860,157,605,616,423,698,25,605,250,558,585,55,423,238,594,561,826,45,114,844,270,502,573,112,228,24]",
+      "expectedOutput": "31354"
+    },
+    {
+      "input": "[460,615,897,26,936,51,52,260,36,730,597,875,263,83,751,452,77,82,667,317,282,294,124,624,751,190,796,214,739,323,390,528,202,265,276,51,853,467,380,105,879,401,476,956,551,650,158,535,163,826,107,279,4,454,451,846,322,219,317,738,482,215,895,87,765,84,589,120,520,185,90,71,616,192,450,554,396,748,471,665,598,79,5,331,924,703,987,658,233,617,267,310,553,616,596,180,351]",
+      "expectedOutput": "26026"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Since House[1] and House[n] are adjacent, they cannot be robbed together. Therefore, the problem becomes to rob either House[1]-House[n-1] or House[2]-House[n], depending on which choice offers more money. Now the problem has degenerated to the <a href =\"https://leetcode.com/problems/house-robber/description/\">House Robber</a>, which is already been solved."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/house-robber-ii/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.384Z",
+    "sourceUpdatedAt": null
+  }
+}

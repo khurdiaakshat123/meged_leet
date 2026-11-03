@@ -1,0 +1,154 @@
+{
+  "id": "709",
+  "slug": "to-lower-case",
+  "title": "To Lower Case",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "Given a string `s`, return _the string after replacing every uppercase letter with the same lowercase letter_.\n\n**Example 1:**\n\n```\nInput: s = \"Hello\"\nOutput: \"hello\"\n```\n\n**Example 2:**\n\n```\nInput: s = \"here\"\nOutput: \"here\"\n```\n\n**Example 3:**\n\n```\nInput: s = \"LOVELY\"\nOutput: \"lovely\"\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s` consists of printable ASCII characters.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of printable ASCII characters."
+  ],
+  "examples": [
+    {
+      "input": "s = \"Hello\"",
+      "output": "\"hello\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"here\"",
+      "output": "\"here\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"LOVELY\"",
+      "output": "\"lovely\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string toLowerCase(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String toLowerCase(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def toLowerCase(self, s: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def toLowerCase(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar toLowerCase = function(s) {\n    \n};",
+    "typescript": "function toLowerCase(s: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ToLowerCase(string s) {\n        \n    }\n}",
+    "c": "char* toLowerCase(char* s) {\n    \n}",
+    "golang": "func toLowerCase(s string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun toLowerCase(s: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func toLowerCase(_ s: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn to_lower_case(s: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef to_lower_case(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function toLowerCase($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String toLowerCase(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def toLowerCase(s: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec to_lower_case(s :: String.t) :: String.t\n  def to_lower_case(s) do\n    \n  end\nend",
+    "erlang": "-spec to_lower_case(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nto_lower_case(S) ->\n  .",
+    "racket": "(define/contract (to-lower-case s)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"~\"",
+      "expectedOutput": "\"~\""
+    },
+    {
+      "input": "\"FW\"",
+      "expectedOutput": "\"fw\""
+    },
+    {
+      "input": "\"?RP\"",
+      "expectedOutput": "\"?rp\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"i02<Y\"",
+      "expectedOutput": "\"i02<y\""
+    },
+    {
+      "input": "\"@ljX6e>\"",
+      "expectedOutput": "\"@ljx6e>\""
+    },
+    {
+      "input": "\"]'*G+a\\\\t|/\"",
+      "expectedOutput": "\"]'*g+a\\\\t|/\""
+    },
+    {
+      "input": "\"H.|ol)rsU`-w=\"",
+      "expectedOutput": "\"h.|ol)rsu`-w=\""
+    },
+    {
+      "input": "\"Zk5V=U];FvM^b61t\"",
+      "expectedOutput": "\"zk5v=u];fvm^b61t\""
+    },
+    {
+      "input": "\"i}6.6py;<ecv\\\\;aMtA`\"",
+      "expectedOutput": "\"i}6.6py;<ecv\\\\;amta`\""
+    },
+    {
+      "input": "\"EEL#0qZ=D>6`p%5^E;?8@HT\"",
+      "expectedOutput": "\"eel#0qz=d>6`p%5^e;?8@ht\""
+    },
+    {
+      "input": "\"ZfZ*L9!Lxqs,lNCXC;/oc((m:0Z\"",
+      "expectedOutput": "\"zfz*l9!lxqs,lncxc;/oc((m:0z\""
+    },
+    {
+      "input": "\"dv#/))W`epn ;]B',`B}$!+|qRih:u\\\\S\"",
+      "expectedOutput": "\"dv#/))w`epn ;]b',`b}$!+|qrih:u\\\\s\""
+    },
+    {
+      "input": "\";.6g\\\"f*LM^H?IEy6jq27I>'y\\\\DHS>_H1PDygZ\"",
+      "expectedOutput": "\";.6g\\\"f*lm^h?iey6jq27i>'y\\\\dhs>_h1pdygz\""
+    },
+    {
+      "input": "\"RL6v5rP3_q;Fi9q3+0cxZr)2@']e07}QB48f.QcB#O\"",
+      "expectedOutput": "\"rl6v5rp3_q;fi9q3+0cxzr)2@']e07}qb48f.qcb#o\""
+    },
+    {
+      "input": "\"FsH&af6BIGD2];r,nglH7b9m`G=?v9a'0}z_VK:{m'^QTRz\"",
+      "expectedOutput": "\"fsh&af6bigd2];r,nglh7b9m`g=?v9a'0}z_vk:{m'^qtrz\""
+    },
+    {
+      "input": "\"6RF0J.fN6z0j$K)0rw~j2('&m W po%,J(>(JiRTH;_8v!da6)g+w\"",
+      "expectedOutput": "\"6rf0j.fn6z0j$k)0rw~j2('&m w po%,j(>(jirth;_8v!da6)g+w\""
+    },
+    {
+      "input": "\"Etnpl{;3?VoL?)rxi*7MWg??ia%cMj'4;.#6b:O.S;Gx#\\\\q!}*GqbM)}_0a\"",
+      "expectedOutput": "\"etnpl{;3?vol?)rxi*7mwg??ia%cmj'4;.#6b:o.s;gx#\\\\q!}*gqbm)}_0a\""
+    },
+    {
+      "input": "\"$#<pdN^qv;IYj oU/@Q?fI.v/7[!$9sN.u%|AHu]ssWRK1i`NUzAk(#q^AF1{JDoPv\"",
+      "expectedOutput": "\"$#<pdn^qv;iyj ou/@q?fi.v/7[!$9sn.u%|ahu]sswrk1i`nuzak(#q^af1{jdopv\""
+    },
+    {
+      "input": "\"37c$Q;;wNnqkgq&Cas>]Li<Whb2{Qh*w4C|yHeD\\\\y9x$Ze):L>\"",
+      "expectedOutput": "\"37c$q;;wnnqkgq&cas>]li<whb2{qh*w4c|yhed\\\\y9x$ze):l>\""
+    },
+    {
+      "input": "\"g,TWK'[<?$Ix82X(]f;Ob@2X^//'~Yz5 6i]L3Yac\\\"8a#JE(envd[oJVBj?S^fTT2|ZQu-D#98]d;/*|2E.&<{@G1WAhlq8h3QMl\"",
+      "expectedOutput": "\"g,twk'[<?$ix82x(]f;ob@2x^//'~yz5 6i]l3yac\\\"8a#je(envd[ojvbj?s^ftt2|zqu-d#98]d;/*|2e.&<{@g1wahlq8h3qml\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Most languages support lowercase conversion for a string data type. However, that is certainly not the purpose of the problem. Think about how the implementation of the lowercase function call can be done easily.",
+    "<b>Think ASCII!</b>",
+    "Think about the different capital letters and their ASCII codes and how that relates to their lowercase counterparts. Does there seem to be any pattern there? Any mathematical relationship that we can use?"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/to-lower-case/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.078Z",
+    "sourceUpdatedAt": null
+  }
+}

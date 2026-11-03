@@ -1,0 +1,148 @@
+{
+  "id": "31",
+  "slug": "next-permutation",
+  "title": "Next Permutation",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "statement": "A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.\n\n*   For example, for `arr = [1,2,3]`, the following are all the permutations of `arr`: `[1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1]`.\n\nThe **next permutation** of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the **next permutation** of that array is the permutation that follows it in the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).\n\n*   For example, the next permutation of `arr = [1,2,3]` is `[1,3,2]`.\n*   Similarly, the next permutation of `arr = [2,3,1]` is `[3,1,2]`.\n*   While the next permutation of `arr = [3,2,1]` is `[1,2,3]` because `[3,2,1]` does not have a lexicographical larger rearrangement.\n\nGiven an array of integers `nums`, _find the next permutation of_ `nums`.\n\nThe replacement must be **[in place](http://en.wikipedia.org/wiki/In-place_algorithm)** and use only constant extra memory.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3]\nOutput: [1,3,2]\n```\n\n**Example 2:**\n\n```\nInput: nums = [3,2,1]\nOutput: [1,2,3]\n```\n\n**Example 3:**\n\n```\nInput: nums = [1,1,5]\nOutput: [1,5,1]\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `0 <= nums[i] <= 100`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,3]",
+      "output": "[1,3,2]",
+      "explanation": null
+    },
+    {
+      "input": "nums = [3,2,1]",
+      "output": "[1,2,3]",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,1,5]",
+      "output": "[1,5,1]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    void nextPermutation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void nextPermutation(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def nextPermutation(self, nums: list[int]) -> None:\n        \"\"\"\n        Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "python": "class Solution(object):\n    def nextPermutation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: None Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar nextPermutation = function(nums) {\n    \n};",
+    "typescript": "/**\n Do not return anything, modify nums in-place instead.\n */\nfunction nextPermutation(nums: number[]): void {\n    \n};",
+    "csharp": "public class Solution {\n    public void NextPermutation(int[] nums) {\n        \n    }\n}",
+    "c": "void nextPermutation(int* nums, int numsSize) {\n    \n}",
+    "golang": "func nextPermutation(nums []int)  {\n    \n}",
+    "kotlin": "class Solution {\n    fun nextPermutation(nums: IntArray): Unit {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nextPermutation(_ nums: inout [Int]) {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn next_permutation(nums: &mut Vec<i32>) {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef next_permutation(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return NULL\n     */\n    function nextPermutation(&$nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  void nextPermutation(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def nextPermutation(nums: Array[Int]): Unit = {\n        \n    }\n}"
+  },
+  "publicTests": [
+    {
+      "input": "[40]",
+      "expectedOutput": "[40]"
+    },
+    {
+      "input": "[19,23]",
+      "expectedOutput": "[23,19]"
+    },
+    {
+      "input": "[11,4,75]",
+      "expectedOutput": "[11,75,4]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[68,65,99,45]",
+      "expectedOutput": "[68,99,45,65]"
+    },
+    {
+      "input": "[19,36,95,45,71,51]",
+      "expectedOutput": "[19,36,95,51,45,71]"
+    },
+    {
+      "input": "[51,9,42,15,62,27,8,14]",
+      "expectedOutput": "[51,9,42,15,62,27,14,8]"
+    },
+    {
+      "input": "[65,44,7,46,9,79,10,89,26,16]",
+      "expectedOutput": "[65,44,7,46,9,79,16,10,26,89]"
+    },
+    {
+      "input": "[77,6,21,59,56,79,73,27,22,31,51,53]",
+      "expectedOutput": "[77,6,21,59,56,79,73,27,22,31,53,51]"
+    },
+    {
+      "input": "[76,69,39,76,33,67,80,18,40,24,25,21,33,47,5]",
+      "expectedOutput": "[76,69,39,76,33,67,80,18,40,24,25,21,47,5,33]"
+    },
+    {
+      "input": "[40,28,46,19,28,70,16,29,29,61,67,7,51,30,95,99,54,20]",
+      "expectedOutput": "[40,28,46,19,28,70,16,29,29,61,67,7,51,30,99,20,54,95]"
+    },
+    {
+      "input": "[3,73,36,31,82,18,87,71,99,36,61,36,37,100,98,42,43,58,26,53,80]",
+      "expectedOutput": "[3,73,36,31,82,18,87,71,99,36,61,36,37,100,98,42,43,58,26,80,53]"
+    },
+    {
+      "input": "[59,40,9,68,88,61,7,92,63,92,11,31,3,95,15,82,48,32,22,51,71,20,35,31]",
+      "expectedOutput": "[59,40,9,68,88,61,7,92,63,92,11,31,3,95,15,82,48,32,22,51,71,31,20,35]"
+    },
+    {
+      "input": "[3,90,99,30,37,29,60,43,99,26,3,90,56,93,72,54,41,29,96,90,12,99,65,10,4,79,31]",
+      "expectedOutput": "[3,90,99,30,37,29,60,43,99,26,3,90,56,93,72,54,41,29,96,90,12,99,65,10,31,4,79]"
+    },
+    {
+      "input": "[71,5,32,63,67,63,20,21,14,27,32,47,98,0,10,25,75,92,3,74,35,85,98,5,16,27,30,2,60,17]",
+      "expectedOutput": "[71,5,32,63,67,63,20,21,14,27,32,47,98,0,10,25,75,92,3,74,35,85,98,5,16,27,30,17,2,60]"
+    },
+    {
+      "input": "[85,94,32,69,21,97,54,51,62,99,11,26,33,68,7,86,60,66,70,54,31,3,89,100,61,76,98,57,3,66,42,95,26,88]",
+      "expectedOutput": "[85,94,32,69,21,97,54,51,62,99,11,26,33,68,7,86,60,66,70,54,31,3,89,100,61,76,98,57,3,66,42,95,88,26]"
+    },
+    {
+      "input": "[0,96,61,59,41,34,68,74,30,90,72,0,48,50,2,23,42,63,2,33,42,37,53,91,35,99,2,36,24,97,74,24,31,91,96,28,25,11]",
+      "expectedOutput": "[0,96,61,59,41,34,68,74,30,90,72,0,48,50,2,23,42,63,2,33,42,37,53,91,35,99,2,36,24,97,74,24,31,96,11,25,28,91]"
+    },
+    {
+      "input": "[14,90,43,65,6,48,2,0,81,98,48,87,76,27,37,72,64,96,4,44,78,86,50,2,77,96,20,65,97,30,95,16,87,44,41,32,58,19,74,100,98,27]",
+      "expectedOutput": "[14,90,43,65,6,48,2,0,81,98,48,87,76,27,37,72,64,96,4,44,78,86,50,2,77,96,20,65,97,30,95,16,87,44,41,32,58,19,98,27,74,100]"
+    },
+    {
+      "input": "[8,88,55,37,24,81,42,95,83,1,91,7,100,63,92,56,23,17,10,74,79,2,29,42,36,14,8,99,34,36,32,23,4,60,28,82,27,11,55,31,52,76,43,5,5,45]",
+      "expectedOutput": "[8,88,55,37,24,81,42,95,83,1,91,7,100,63,92,56,23,17,10,74,79,2,29,42,36,14,8,99,34,36,32,23,4,60,28,82,27,11,55,31,52,76,43,5,45,5]"
+    },
+    {
+      "input": "[21,51,40,96,24,52,5,10,43,14,17,79,35,89,23,47,40,76,15,35,97,30,35,41,70,54,66,56,30,53,3,91,8,27,43,90,86,1,45,76,47,50,81,51,63,74,36,74,76,99]",
+      "expectedOutput": "[21,51,40,96,24,52,5,10,43,14,17,79,35,89,23,47,40,76,15,35,97,30,35,41,70,54,66,56,30,53,3,91,8,27,43,90,86,1,45,76,47,50,81,51,63,74,36,74,99,76]"
+    },
+    {
+      "input": "[7,88,40,67,38,25,54,36,44,67,64,97,0,42,77,59,79,79,22,46,80,32,56,88,81,2,64,72,43,62,12,83,16,59,40,74,88,6,11,45,43,27,35,50,38,37,14,69,11,51,86,55,37,83,32,94,15,75,91,28,11,69,61,28,87,81,16,25,77,64,40,67,87,77,19,58,83,89,72,57,36,9,64,71,47,56,82,85,88,34,31,11,0,58,73,51,83,13,34,80]",
+      "expectedOutput": "[7,88,40,67,38,25,54,36,44,67,64,97,0,42,77,59,79,79,22,46,80,32,56,88,81,2,64,72,43,62,12,83,16,59,40,74,88,6,11,45,43,27,35,50,38,37,14,69,11,51,86,55,37,83,32,94,15,75,91,28,11,69,61,28,87,81,16,25,77,64,40,67,87,77,19,58,83,89,72,57,36,9,64,71,47,56,82,85,88,34,31,11,0,58,73,51,83,13,80,34]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/next-permutation/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.663Z",
+    "sourceUpdatedAt": null
+  }
+}

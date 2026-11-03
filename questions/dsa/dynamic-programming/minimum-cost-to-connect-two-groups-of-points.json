@@ -1,0 +1,173 @@
+{
+  "id": "1595",
+  "slug": "minimum-cost-to-connect-two-groups-of-points",
+  "title": "Minimum Cost to Connect Two Groups of Points",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Matrix",
+    "Bitmask",
+    "Bipartite Graph",
+    "Successive Shortest Path Algorithm",
+    "Matching (Graph)",
+    "Minimum-Cost Flow",
+    "Flow Network"
+  ],
+  "statement": "You are given two groups of points where the first group has `size_(1)` points, the second group has `size_(2)` points, and `size_(1) >= size_(2)`.\n\nThe `cost` of the connection between any two points are given in an `size_(1) x size_(2)` matrix where `cost[i][j]` is the cost of connecting point `i` of the first group and point `j` of the second group. The groups are connected if **each point in both groups is connected to one or more points in the opposite group**. In other words, each point in the first group must be connected to at least one point in the second group, and each point in the second group must be connected to at least one point in the first group.\n\nReturn _the minimum cost it takes to connect the two groups_.\n\n**Example 1:**\n\n![](./assets/minimum-cost-to-connect-two-groups-of-points-1.jpg)\n```\nInput: cost = [[15, 96], [36, 2]]\nOutput: 17\nExplanation: The optimal way of connecting the groups is:\n1--A\n2--B\nThis results in a total cost of 17.\n```\n\n**Example 2:**\n\n![](./assets/minimum-cost-to-connect-two-groups-of-points-2.jpg)\n```\nInput: cost = [[1, 3, 5], [4, 1, 1], [1, 5, 3]]\nOutput: 4\nExplanation: The optimal way of connecting the groups is:\n1--A\n2--B\n2--C\n3--A\nThis results in a total cost of 4.\nNote that there are multiple points connected to point 2 in the first group and point A in the second group. This does not matter as there is no limit to the number of points that can be connected. We only care about the minimum total cost.\n```\n\n**Example 3:**\n\n```\nInput: cost = [[2, 5, 1], [3, 4, 7], [8, 1, 2], [6, 2, 4], [3, 8, 8]]\nOutput: 10\n```\n\n**Constraints:**\n\n*   `size_(1) == cost.length`\n*   `size_(2) == cost[i].length`\n*   `1 <= size_(1), size_(2) <= 12`\n*   `size_(1) >= size_(2)`\n*   `0 <= cost[i][j] <= 100`",
+  "constraints": [
+    "size1 == cost.length",
+    "size2 == cost[i].length",
+    "1 <= size1, size2 <= 12",
+    "size1 >= size2",
+    "0 <= cost[i][j] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "cost = [[15, 96], [36, 2]]",
+      "output": "17",
+      "explanation": ": The optimal way of connecting the groups is:\n1--A\n2--B\nThis results in a total cost of 17."
+    },
+    {
+      "input": "cost = [[1, 3, 5], [4, 1, 1], [1, 5, 3]]",
+      "output": "4",
+      "explanation": ": The optimal way of connecting the groups is:\n1--A\n2--B\n2--C\n3--A\nThis results in a total cost of 4.\nNote that there are multiple points connected to point 2 in the first group and point A in the second group. This does not matter as there is no limit to the number of points that can be connected. We only care about the minimum total cost."
+    },
+    {
+      "input": "cost = [[2, 5, 1], [3, 4, 7], [8, 1, 2], [6, 2, 4], [3, 8, 8]]",
+      "output": "10",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int connectTwoGroups(vector<vector<int>>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int connectTwoGroups(List<List<Integer>> cost) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def connectTwoGroups(self, cost: list[list[int]]) -> int:\n        ",
+    "python": "class Solution(object):\n    def connectTwoGroups(self, cost):\n        \"\"\"\n        :type cost: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[][]} cost\n * @return {number}\n */\nvar connectTwoGroups = function(cost) {\n    \n};",
+    "typescript": "function connectTwoGroups(cost: number[][]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int ConnectTwoGroups(IList<IList<int>> cost) {\n        \n    }\n}",
+    "c": "int connectTwoGroups(int** cost, int costSize, int* costColSize) {\n    \n}",
+    "golang": "func connectTwoGroups(cost [][]int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun connectTwoGroups(cost: List<List<Int>>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func connectTwoGroups(_ cost: [[Int]]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn connect_two_groups(cost: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[][]} cost\n# @return {Integer}\ndef connect_two_groups(cost)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $cost\n     * @return Integer\n     */\n    function connectTwoGroups($cost) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int connectTwoGroups(List<List<int>> cost) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def connectTwoGroups(cost: List[List[Int]]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec connect_two_groups(cost :: [[integer]]) :: integer\n  def connect_two_groups(cost) do\n    \n  end\nend",
+    "erlang": "-spec connect_two_groups(Cost :: [[integer()]]) -> integer().\nconnect_two_groups(Cost) ->\n  .",
+    "racket": "(define/contract (connect-two-groups cost)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[[15,96],[36,2]]",
+      "expectedOutput": "17"
+    },
+    {
+      "input": "[[1,10],[1,9],[1,8]]",
+      "expectedOutput": "10"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[[15,96],[36,2]]",
+      "expectedOutput": "17"
+    },
+    {
+      "input": "[[1,3,5],[4,1,1],[1,5,3]]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[[0]]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[[3],[7],[2]]",
+      "expectedOutput": "12"
+    },
+    {
+      "input": "[[1,10],[1,9],[1,8]]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[[0,2],[0,3]]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[[100,1],[1,100]]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[[2,5,1],[3,4,7],[8,1,2],[6,2,4],[3,8,8]]",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[[56,42,45],[30,41,73],[41,70,9],[83,93,60]]",
+      "expectedOutput": "141"
+    },
+    {
+      "input": "[[56,69,3],[82,75,20],[45,52,21],[63,28,18],[57,88,69]]",
+      "expectedOutput": "129"
+    },
+    {
+      "input": "[[56,23,14,3],[75,69,3,1],[27,98,100,29],[43,59,6,50],[53,92,6,91]]",
+      "expectedOutput": "63"
+    },
+    {
+      "input": "[[57,59,89],[18,41,68],[76,69,30],[20,82,3],[34,40,98],[37,14,99]]",
+      "expectedOutput": "156"
+    },
+    {
+      "input": "[[57,78,25,26],[75,17,62,52],[32,32,72,40],[29,30,43,30],[45,1,86,22],[5,42,71,50]]",
+      "expectedOutput": "110"
+    },
+    {
+      "input": "[[57,32,36],[48,74,66],[21,1,37],[67,44,51],[15,1,81],[9,37,10],[65,54,20]]",
+      "expectedOutput": "155"
+    },
+    {
+      "input": "[[57,68,10,63,41],[65,94,68,41,90],[26,25,6,82,72],[96,99,16,84,9],[97,5,41,21,41]]",
+      "expectedOutput": "91"
+    },
+    {
+      "input": "[[58,96,69,15,74,11],[97,50,53,70,61,84],[74,14,92,49,12,38],[2,51,64,93,80,22],[5,72,70,77,6,84],[82,79,97,12,28,42]]",
+      "expectedOutput": "98"
+    },
+    {
+      "input": "[[58,31,43,30,40,10,69],[16,57,94,43,58,65,96],[83,35,74,44,21,5,41],[18,48,51,53,48,10,84],[30,31,16,41,82,55,88],[10,94,46,45,77,39,78],[41,73,30,99,71,88,68]]",
+      "expectedOutput": "189"
+    },
+    {
+      "input": "[[58,50,80,37,74,60,55],[0,58,4,33,95,60,86],[28,28,4,47,82,83,79],[30,82,65,77,36,30,37],[92,54,34,72,75,76,67],[96,65,10,24,5,86,56],[54,85,51,99,50,36,27],[54,45,19,51,63,23,70]]",
+      "expectedOutput": "176"
+    },
+    {
+      "input": "[[58,4,91,60,74,9,14,50,64,40,6,6],[46,57,66,8,97,56,61,15,94,69,84,8],[47,2,90,98,78,25,87,66,53,40,6,49],[80,5,64,94,25,90,90,19,14,98,88,81],[7,67,61,36,82,32,99,17,59,37,30,94],[45,98,73,80,84,71,35,90,41,82,69,80],[71,6,52,18,20,13,66,57,84,19,97,24],[20,4,69,36,72,95,96,11,72,8,3,36],[15,15,52,5,32,76,90,42,98,40,80,75],[51,25,3,23,21,8,29,9,73,7,2,17],[36,28,85,50,60,92,55,65,17,94,55,81],[56,47,33,1,60,95,31,73,78,31,97,4]]",
+      "expectedOutput": "131"
+    },
+    {
+      "input": "[[1,53,42,32,83,51,83,68,86,92,65,52],[1,43,82,53,48,37,96,31,72,76,65,43],[1,72,55,53,32,100,62,83,33,43,94,94],[1,39,57,91,95,64,42,83,41,34,84,71],[1,77,39,87,98,49,92,79,96,42,98,30],[1,53,84,92,77,66,71,92,40,59,94,54],[1,43,34,89,67,31,93,35,77,72,92,90],[1,2,3,4,5,6,7,8,9,10,11,12],[1,88,44,76,40,36,63,31,84,52,87,45],[1,57,42,94,61,41,33,94,68,76,64,46],[1,72,92,96,66,68,58,38,63,78,31,68],[1,54,74,87,48,81,82,79,89,44,71,66]]",
+      "expectedOutput": "88"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Each point on the left would either be connected to exactly point already connected to some left node, or a subset of the nodes on the right which are not connected to any node",
+    "Use dynamic programming with bitmasking, where the state will be (number of points assigned in first group, bitmask of points assigned in second group)."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:23.600Z",
+    "sourceUpdatedAt": null
+  }
+}

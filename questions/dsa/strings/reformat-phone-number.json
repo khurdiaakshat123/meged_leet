@@ -1,0 +1,154 @@
+{
+  "id": "1694",
+  "slug": "reformat-phone-number",
+  "title": "Reformat Phone Number",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "You are given a phone number as a string `number`. `number` consists of digits, spaces `' '`, and/or dashes `'-'`.\n\nYou would like to reformat the phone number in a certain manner. Firstly, **remove** all spaces and dashes. Then, **group** the digits from left to right into blocks of length 3 **until** there are 4 or fewer digits. The final digits are then grouped as follows:\n\n*   2 digits: A single block of length 2.\n*   3 digits: A single block of length 3.\n*   4 digits: Two blocks of length 2 each.\n\nThe blocks are then joined by dashes. Notice that the reformatting process should **never** produce any blocks of length 1 and produce **at most** two blocks of length 2.\n\nReturn _the phone number after formatting._\n\n**Example 1:**\n\n```\nInput: number = \"1-23-45 6\"\nOutput: \"123-456\"\nExplanation: The digits are \"123456\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 3 digits remaining, so put them in a single block of length 3. The 2nd block is \"456\".\nJoining the blocks gives \"123-456\".\n```\n\n**Example 2:**\n\n```\nInput: number = \"123 4-567\"\nOutput: \"123-45-67\"\nExplanation: The digits are \"1234567\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 4 digits left, so split them into two blocks of length 2. The blocks are \"45\" and \"67\".\nJoining the blocks gives \"123-45-67\".\n```\n\n**Example 3:**\n\n```\nInput: number = \"123 4-5678\"\nOutput: \"123-456-78\"\nExplanation: The digits are \"12345678\".\nStep 1: The 1st block is \"123\".\nStep 2: The 2nd block is \"456\".\nStep 3: There are 2 digits left, so put them in a single block of length 2. The 3rd block is \"78\".\nJoining the blocks gives \"123-456-78\".\n```\n\n**Constraints:**\n\n*   `2 <= number.length <= 100`\n*   `number` consists of digits and the characters `'-'` and `' '`.\n*   There are at least **two** digits in `number`.",
+  "constraints": [
+    "2 <= number.length <= 100",
+    "number consists of digits and the characters '-' and ' '.",
+    "There are at least two digits in number."
+  ],
+  "examples": [
+    {
+      "input": "number = \"1-23-45 6\"",
+      "output": "\"123-456\"",
+      "explanation": "The digits are \"123456\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 3 digits remaining, so put them in a single block of length 3. The 2nd block is \"456\".\nJoining the blocks gives \"123-456\"."
+    },
+    {
+      "input": "number = \"123 4-567\"",
+      "output": "\"123-45-67\"",
+      "explanation": "The digits are \"1234567\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 4 digits left, so split them into two blocks of length 2. The blocks are \"45\" and \"67\".\nJoining the blocks gives \"123-45-67\"."
+    },
+    {
+      "input": "number = \"123 4-5678\"",
+      "output": "\"123-456-78\"",
+      "explanation": "The digits are \"12345678\".\nStep 1: The 1st block is \"123\".\nStep 2: The 2nd block is \"456\".\nStep 3: There are 2 digits left, so put them in a single block of length 2. The 3rd block is \"78\".\nJoining the blocks gives \"123-456-78\"."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string reformatNumber(string number) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reformatNumber(String number) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def reformatNumber(self, number: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def reformatNumber(self, number):\n        \"\"\"\n        :type number: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} number\n * @return {string}\n */\nvar reformatNumber = function(number) {\n    \n};",
+    "typescript": "function reformatNumber(number: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ReformatNumber(string number) {\n        \n    }\n}",
+    "c": "char* reformatNumber(char* number) {\n    \n}",
+    "golang": "func reformatNumber(number string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun reformatNumber(number: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reformatNumber(_ number: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reformat_number(number: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} number\n# @return {String}\ndef reformat_number(number)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $number\n     * @return String\n     */\n    function reformatNumber($number) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reformatNumber(String number) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def reformatNumber(number: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec reformat_number(number :: String.t) :: String.t\n  def reformat_number(number) do\n    \n  end\nend",
+    "erlang": "-spec reformat_number(Number :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreformat_number(Number) ->\n  .",
+    "racket": "(define/contract (reformat-number number)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"0 4\"",
+      "expectedOutput": "\"04\""
+    },
+    {
+      "input": "\"9 4-6\"",
+      "expectedOutput": "\"946\""
+    },
+    {
+      "input": "\"9-816\"",
+      "expectedOutput": "\"98-16\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"50514 0\"",
+      "expectedOutput": "\"505-140\""
+    },
+    {
+      "input": "\"4 38-61-1-13\"",
+      "expectedOutput": "\"438-611-13\""
+    },
+    {
+      "input": "\"3-2000-4-5-1 9 0 5\"",
+      "expectedOutput": "\"320-004-519-05\""
+    },
+    {
+      "input": "\"8 38 29 2 56 7 5 8 6-1-8\"",
+      "expectedOutput": "\"838-292-567-586-18\""
+    },
+    {
+      "input": "\"1 180 8-70 59-3-7-82 6-7 3-3\"",
+      "expectedOutput": "\"118-087-059-378-267-33\""
+    },
+    {
+      "input": "\"63-8 5 0 1-2045 6-2 54-6 47 815\"",
+      "expectedOutput": "\"638-501-204-562-546-478-15\""
+    },
+    {
+      "input": "\"010 20-8-4 2 3-1 6 57 7 85 1-76 0-4 9-0 9\"",
+      "expectedOutput": "\"010-208-423-165-778-517-604-909\""
+    },
+    {
+      "input": "\"08-4 53-5-0 0 7-2-9 12 2-70-47 9 523-05-5 8 79\"",
+      "expectedOutput": "\"084-535-007-291-227-047-952-305-58-79\""
+    },
+    {
+      "input": "\"6 563-44-2885 5-4 53-81 4 11 38-4-2 4 1-7 2-7-9-1 9-2-9\"",
+      "expectedOutput": "\"656-344-288-554-538-141-138-424-172-791-929\""
+    },
+    {
+      "input": "\"2 1 7 884-29 2 7-9 6-1 8 60-4-5-2-4-0 0 21 5-79-10 6-46-6-5627 1\"",
+      "expectedOutput": "\"217-884-292-796-186-045-240-021-579-106-466-562-71\""
+    },
+    {
+      "input": "\"262-0-83 7 3-9-7-568-3-467-2-8-02-1 5-55 0195-3 42 1 2-8-1-4-5-4-5 2-4 2\"",
+      "expectedOutput": "\"262-083-739-756-834-672-802-155-501-953-421-281-454-52-42\""
+    },
+    {
+      "input": "\"1003-286-3-1-3296 71-1 98 1-944-4-7-5 9 30-83 00-1 1 3-769 71-7-3-9-6-2 2-2-9\"",
+      "expectedOutput": "\"100-328-631-329-671-198-194-447-593-083-001-137-697-173-962-229\""
+    },
+    {
+      "input": "\"0 25-3-2 82741 46-39 7-7-940-0 8-3-5 9 77 4 4 94 71-4 2 09-7 6-8-37 4 75 1-2-0963 49 8-1\"",
+      "expectedOutput": "\"025-328-274-146-397-794-008-359-774-494-714-209-768-374-751-209-634-981\""
+    },
+    {
+      "input": "\"6-7 67 80 420 8 0365 3-0-682-1 72 3 3 642 4 2 0-60-8 928-8-53-5 0-4 0-0404088-70-5 78-4-6 9-13\"",
+      "expectedOutput": "\"676-780-420-803-653-068-217-233-642-420-608-928-853-504-004-040-887-057-846-913\""
+    },
+    {
+      "input": "\"7-4 8 1-4-1-1 0 8 6-89-1-4 5-75-36-4 22766-1-9 1 96-9-216 0-833 5 5 6 5 5144-97 2 1-6-1 4523336 1 3-\"",
+      "expectedOutput": "\"748-141-108-689-145-753-642-276-619-196-921-608-335-565-514-497-216-145-233-36-13\""
+    },
+    {
+      "input": "\"5 675-0-0-8-34 1-46 2 29-9 3 9 5-49 1-7 9 1-2 180-72 53 6-58 3\"",
+      "expectedOutput": "\"567-500-834-146-229-939-549-179-121-807-253-65-83\""
+    },
+    {
+      "input": "\"87-318-95 7 6 2-23-2-60 6-9-6-0 6-7 90 6 05-748 515 4-4-4 1-9-30 7 2 4149 7 2763-36 937-4-61-2-32 9-\"",
+      "expectedOutput": "\"873-189-576-223-260-696-067-906-057-485-154-441-930-724-149-727-633-693-746-123-29\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Discard all the spaces and dashes.",
+    "Use a while loop. While the string still has digits, check its length and see which rule to apply."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/reformat-phone-number/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.403Z",
+    "sourceUpdatedAt": null
+  }
+}

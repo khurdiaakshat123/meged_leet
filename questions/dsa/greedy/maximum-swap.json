@@ -1,0 +1,157 @@
+{
+  "id": "670",
+  "slug": "maximum-swap",
+  "title": "Maximum Swap",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Greedy"
+  ],
+  "statement": "You are given an integer `num`. You can swap two digits at most once to get the maximum valued number.\n\nReturn _the maximum valued number you can get_.\n\n**Example 1:**\n\n```\nInput: num = 2736\nOutput: 7236\nExplanation: Swap the number 2 and the number 7.\n```\n\n**Example 2:**\n\n```\nInput: num = 9973\nOutput: 9973\nExplanation: No swap.\n```\n\n**Constraints:**\n\n*   `0 <= num <= 10^(8)`",
+  "constraints": [
+    "0 <= num <= 108"
+  ],
+  "examples": [
+    {
+      "input": "num = 2736",
+      "output": "7236",
+      "explanation": "Swap the number 2 and the number 7."
+    },
+    {
+      "input": "num = 9973",
+      "output": "9973",
+      "explanation": "No swap."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maximumSwap(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumSwap(int num) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maximumSwap(self, num: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def maximumSwap(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar maximumSwap = function(num) {\n    \n};",
+    "typescript": "function maximumSwap(num: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaximumSwap(int num) {\n        \n    }\n}",
+    "c": "int maximumSwap(int num) {\n    \n}",
+    "golang": "func maximumSwap(num int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maximumSwap(num: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumSwap(_ num: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_swap(num: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer}\ndef maximum_swap(num)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer\n     */\n    function maximumSwap($num) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumSwap(int num) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maximumSwap(num: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec maximum_swap(num :: integer) :: integer\n  def maximum_swap(num) do\n    \n  end\nend",
+    "erlang": "-spec maximum_swap(Num :: integer()) -> integer().\nmaximum_swap(Num) ->\n  .",
+    "racket": "(define/contract (maximum-swap num)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "12",
+      "expectedOutput": "21"
+    },
+    {
+      "input": "4991",
+      "expectedOutput": "9941"
+    },
+    {
+      "input": "606",
+      "expectedOutput": "660"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "8",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "12",
+      "expectedOutput": "21"
+    },
+    {
+      "input": "542",
+      "expectedOutput": "542"
+    },
+    {
+      "input": "4991",
+      "expectedOutput": "9941"
+    },
+    {
+      "input": "606",
+      "expectedOutput": "660"
+    },
+    {
+      "input": "51170",
+      "expectedOutput": "71150"
+    },
+    {
+      "input": "5555",
+      "expectedOutput": "5555"
+    },
+    {
+      "input": "629042",
+      "expectedOutput": "926042"
+    },
+    {
+      "input": "322564",
+      "expectedOutput": "622534"
+    },
+    {
+      "input": "673980",
+      "expectedOutput": "973680"
+    },
+    {
+      "input": "821046",
+      "expectedOutput": "861042"
+    },
+    {
+      "input": "66979",
+      "expectedOutput": "96976"
+    },
+    {
+      "input": "39866",
+      "expectedOutput": "93866"
+    },
+    {
+      "input": "112318",
+      "expectedOutput": "812311"
+    },
+    {
+      "input": "20600307",
+      "expectedOutput": "70600302"
+    },
+    {
+      "input": "66309977",
+      "expectedOutput": "96309677"
+    },
+    {
+      "input": "1938863",
+      "expectedOutput": "9138863"
+    },
+    {
+      "input": "2689310",
+      "expectedOutput": "9682310"
+    },
+    {
+      "input": "100000000",
+      "expectedOutput": "100000000"
+    },
+    {
+      "input": "99176328",
+      "expectedOutput": "99876321"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-swap/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.787Z",
+    "sourceUpdatedAt": null
+  }
+}

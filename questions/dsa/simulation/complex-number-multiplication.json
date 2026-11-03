@@ -1,0 +1,146 @@
+{
+  "id": "537",
+  "slug": "complex-number-multiplication",
+  "title": "Complex Number Multiplication",
+  "category": "dsa",
+  "subcategory": "simulation",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "String",
+    "Simulation"
+  ],
+  "statement": "A [complex number](https://en.wikipedia.org/wiki/Complex_number) can be represented as a string on the form `\"**real**+**imaginary**i\"` where:\n\n*   `real` is the real part and is an integer in the range `[-100, 100]`.\n*   `imaginary` is the imaginary part and is an integer in the range `[-100, 100]`.\n*   `i^(2) == -1`.\n\nGiven two complex numbers `num1` and `num2` as strings, return _a string of the complex number that represents their multiplications_.\n\n**Example 1:**\n\n```\nInput: num1 = \"1+1i\", num2 = \"1+1i\"\nOutput: \"0+2i\"\nExplanation: (1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i.\n```\n\n**Example 2:**\n\n```\nInput: num1 = \"1+-1i\", num2 = \"1+-1i\"\nOutput: \"0+-2i\"\nExplanation: (1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i.\n```\n\n**Constraints:**\n\n*   `num1` and `num2` are valid complex numbers.",
+  "constraints": [
+    "num1 and num2 are valid complex numbers."
+  ],
+  "examples": [
+    {
+      "input": "num1 = \"1+1i\", num2 = \"1+1i\"",
+      "output": "\"0+2i\"",
+      "explanation": "(1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i."
+    },
+    {
+      "input": "num1 = \"1+-1i\", num2 = \"1+-1i\"",
+      "output": "\"0+-2i\"",
+      "explanation": "(1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string complexNumberMultiply(string num1, string num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String complexNumberMultiply(String num1, String num2) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def complexNumberMultiply(self, num1: str, num2: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def complexNumberMultiply(self, num1, num2):\n        \"\"\"\n        :type num1: str\n        :type num2: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} num1\n * @param {string} num2\n * @return {string}\n */\nvar complexNumberMultiply = function(num1, num2) {\n    \n};",
+    "typescript": "function complexNumberMultiply(num1: string, num2: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ComplexNumberMultiply(string num1, string num2) {\n        \n    }\n}",
+    "c": "char* complexNumberMultiply(char* num1, char* num2) {\n    \n}",
+    "golang": "func complexNumberMultiply(num1 string, num2 string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun complexNumberMultiply(num1: String, num2: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func complexNumberMultiply(_ num1: String, _ num2: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn complex_number_multiply(num1: String, num2: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} num1\n# @param {String} num2\n# @return {String}\ndef complex_number_multiply(num1, num2)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $num1\n     * @param String $num2\n     * @return String\n     */\n    function complexNumberMultiply($num1, $num2) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String complexNumberMultiply(String num1, String num2) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def complexNumberMultiply(num1: String, num2: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec complex_number_multiply(num1 :: String.t, num2 :: String.t) :: String.t\n  def complex_number_multiply(num1, num2) do\n    \n  end\nend",
+    "erlang": "-spec complex_number_multiply(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncomplex_number_multiply(Num1, Num2) ->\n  .",
+    "racket": "(define/contract (complex-number-multiply num1 num2)\n  (-> string? string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"-54+25i\"\n\"-46+48i\"",
+      "expectedOutput": "\"1284+-3742i\""
+    },
+    {
+      "input": "\"-67+86i\"\n\"12+53i\"",
+      "expectedOutput": "\"-5362+-2519i\""
+    },
+    {
+      "input": "\"2+-19i\"\n\"99+-80i\"",
+      "expectedOutput": "\"-1322+-2041i\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"80+71i\"\n\"-29+21i\"",
+      "expectedOutput": "\"-3811+-379i\""
+    },
+    {
+      "input": "\"78+71i\"\n\"-6+-16i\"",
+      "expectedOutput": "\"668+-1674i\""
+    },
+    {
+      "input": "\"37+77i\"\n\"-33+60i\"",
+      "expectedOutput": "\"-5841+-321i\""
+    },
+    {
+      "input": "\"72+-72i\"\n\"58+-28i\"",
+      "expectedOutput": "\"2160+-6192i\""
+    },
+    {
+      "input": "\"55+67i\"\n\"14+-47i\"",
+      "expectedOutput": "\"3919+-1647i\""
+    },
+    {
+      "input": "\"97+88i\"\n\"10+8i\"",
+      "expectedOutput": "\"266+1656i\""
+    },
+    {
+      "input": "\"100+-95i\"\n\"-37+66i\"",
+      "expectedOutput": "\"2570+10115i\""
+    },
+    {
+      "input": "\"-77+91i\"\n\"69+9i\"",
+      "expectedOutput": "\"-6132+5586i\""
+    },
+    {
+      "input": "\"-5+-55i\"\n\"76+63i\"",
+      "expectedOutput": "\"3085+-4495i\""
+    },
+    {
+      "input": "\"-74+36i\"\n\"87+88i\"",
+      "expectedOutput": "\"-9606+-3380i\""
+    },
+    {
+      "input": "\"18+-23i\"\n\"-62+-74i\"",
+      "expectedOutput": "\"-2818+94i\""
+    },
+    {
+      "input": "\"-39+0i\"\n\"97+-90i\"",
+      "expectedOutput": "\"-3783+3510i\""
+    },
+    {
+      "input": "\"12+35i\"\n\"-40+-8i\"",
+      "expectedOutput": "\"-200+-1496i\""
+    },
+    {
+      "input": "\"45+33i\"\n\"77+71i\"",
+      "expectedOutput": "\"1122+5736i\""
+    },
+    {
+      "input": "\"-64+23i\"\n\"50+10i\"",
+      "expectedOutput": "\"-3430+510i\""
+    },
+    {
+      "input": "\"-5+59i\"\n\"-96+20i\"",
+      "expectedOutput": "\"-700+-5764i\""
+    },
+    {
+      "input": "\"24+-93i\"\n\"74+-51i\"",
+      "expectedOutput": "\"-2967+-8106i\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/complex-number-multiplication/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.604Z",
+    "sourceUpdatedAt": null
+  }
+}

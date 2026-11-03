@@ -1,0 +1,150 @@
+{
+  "id": "1360",
+  "slug": "number-of-days-between-two-dates",
+  "title": "Number of Days Between Two Dates",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "String"
+  ],
+  "statement": "Write a program to count the number of days between two dates.\n\nThe two dates are given as strings, their format is `YYYY-MM-DD` as shown in the examples.\n\n**Example 1:**\n\n```\nInput: date1 = \"2019-06-29\", date2 = \"2019-06-30\"\nOutput: 1\n```\n\n**Example 2:**\n\n```\nInput: date1 = \"2020-01-15\", date2 = \"2019-12-31\"\nOutput: 15\n```\n\n**Constraints:**\n\n*   The given dates are valid dates between the years `1971` and `2100`.",
+  "constraints": [
+    "The given dates are valid dates between the years 1971 and 2100."
+  ],
+  "examples": [
+    {
+      "input": "date1 = \"2019-06-29\", date2 = \"2019-06-30\"",
+      "output": "1",
+      "explanation": null
+    },
+    {
+      "input": "date1 = \"2020-01-15\", date2 = \"2019-12-31\"",
+      "output": "15",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int daysBetweenDates(string date1, string date2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int daysBetweenDates(String date1, String date2) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def daysBetweenDates(self, date1: str, date2: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def daysBetweenDates(self, date1, date2):\n        \"\"\"\n        :type date1: str\n        :type date2: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} date1\n * @param {string} date2\n * @return {number}\n */\nvar daysBetweenDates = function(date1, date2) {\n    \n};",
+    "typescript": "function daysBetweenDates(date1: string, date2: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int DaysBetweenDates(string date1, string date2) {\n        \n    }\n}",
+    "c": "int daysBetweenDates(char* date1, char* date2) {\n    \n}",
+    "golang": "func daysBetweenDates(date1 string, date2 string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun daysBetweenDates(date1: String, date2: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func daysBetweenDates(_ date1: String, _ date2: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn days_between_dates(date1: String, date2: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} date1\n# @param {String} date2\n# @return {Integer}\ndef days_between_dates(date1, date2)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $date1\n     * @param String $date2\n     * @return Integer\n     */\n    function daysBetweenDates($date1, $date2) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int daysBetweenDates(String date1, String date2) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def daysBetweenDates(date1: String, date2: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec days_between_dates(date1 :: String.t, date2 :: String.t) :: integer\n  def days_between_dates(date1, date2) do\n    \n  end\nend",
+    "erlang": "-spec days_between_dates(Date1 :: unicode:unicode_binary(), Date2 :: unicode:unicode_binary()) -> integer().\ndays_between_dates(Date1, Date2) ->\n  .",
+    "racket": "(define/contract (days-between-dates date1 date2)\n  (-> string? string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"2081-05-05\"\n\"2049-01-14\"",
+      "expectedOutput": "11799"
+    },
+    {
+      "input": "\"2030-02-26\"\n\"1985-09-23\"",
+      "expectedOutput": "16227"
+    },
+    {
+      "input": "\"2077-02-17\"\n\"1978-07-27\"",
+      "expectedOutput": "36000"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"2012-04-24\"\n\"2057-01-06\"",
+      "expectedOutput": "16328"
+    },
+    {
+      "input": "\"1977-04-19\"\n\"2095-09-05\"",
+      "expectedOutput": "43238"
+    },
+    {
+      "input": "\"2067-08-15\"\n\"2031-06-03\"",
+      "expectedOutput": "13222"
+    },
+    {
+      "input": "\"1984-03-15\"\n\"2063-09-17\"",
+      "expectedOutput": "29040"
+    },
+    {
+      "input": "\"1982-01-01\"\n\"1983-12-02\"",
+      "expectedOutput": "700"
+    },
+    {
+      "input": "\"2044-08-16\"\n\"2050-06-09\"",
+      "expectedOutput": "2123"
+    },
+    {
+      "input": "\"2081-10-11\"\n\"1998-02-23\"",
+      "expectedOutput": "30546"
+    },
+    {
+      "input": "\"2010-11-12\"\n\"1992-12-01\"",
+      "expectedOutput": "6555"
+    },
+    {
+      "input": "\"2016-05-06\"\n\"1977-06-07\"",
+      "expectedOutput": "14213"
+    },
+    {
+      "input": "\"2002-09-28\"\n\"1991-09-19\"",
+      "expectedOutput": "4027"
+    },
+    {
+      "input": "\"2092-05-03\"\n\"2020-05-17\"",
+      "expectedOutput": "26284"
+    },
+    {
+      "input": "\"2041-10-04\"\n\"2022-09-13\"",
+      "expectedOutput": "6961"
+    },
+    {
+      "input": "\"2006-11-14\"\n\"2086-02-01\"",
+      "expectedOutput": "28934"
+    },
+    {
+      "input": "\"2004-03-01\"\n\"1980-03-12\"",
+      "expectedOutput": "8755"
+    },
+    {
+      "input": "\"1983-08-08\"\n\"2000-04-20\"",
+      "expectedOutput": "6100"
+    },
+    {
+      "input": "\"1995-05-15\"\n\"2022-02-20\"",
+      "expectedOutput": "9778"
+    },
+    {
+      "input": "\"2066-11-09\"\n\"2093-07-10\"",
+      "expectedOutput": "9740"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Create a function f(date) that counts the number of days from 1900-01-01 to date. How can we calculate the answer ?",
+    "The answer is just |f(date1) - f(date2)|.",
+    "How to construct f(date) ?",
+    "For each year from 1900 to year - 1 sum up 365 or 366 in case of leap years. Then sum up for each month the number of days, consider the case when the current year is leap, finally sum up the days."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/number-of-days-between-two-dates/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.812Z",
+    "sourceUpdatedAt": null
+  }
+}

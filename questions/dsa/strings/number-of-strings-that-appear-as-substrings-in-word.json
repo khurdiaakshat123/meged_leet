@@ -1,0 +1,156 @@
+{
+  "id": "1967",
+  "slug": "number-of-strings-that-appear-as-substrings-in-word",
+  "title": "Number of Strings That Appear as Substrings in Word",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String"
+  ],
+  "statement": "Given an array of strings `patterns` and a string `word`, return _the **number** of strings in_ `patterns` _that exist as a **substring** in_ `word`.\n\nA **substring** is a contiguous sequence of characters within a string.\n\n**Example 1:**\n\n```\nInput: patterns = [\"a\",\"abc\",\"bc\",\"d\"], word = \"abc\"\nOutput: 3\nExplanation:\n- \"a\" appears as a substring in \"abc\".\n- \"abc\" appears as a substring in \"abc\".\n- \"bc\" appears as a substring in \"abc\".\n- \"d\" does not appear as a substring in \"abc\".\n3 of the strings in patterns appear as a substring in word.\n```\n\n**Example 2:**\n\n```\nInput: patterns = [\"a\",\"b\",\"c\"], word = \"aaaaabbbbb\"\nOutput: 2\nExplanation:\n- \"a\" appears as a substring in \"aaaaabbbbb\".\n- \"b\" appears as a substring in \"aaaaabbbbb\".\n- \"c\" does not appear as a substring in \"aaaaabbbbb\".\n2 of the strings in patterns appear as a substring in word.\n```\n\n**Example 3:**\n\n```\nInput: patterns = [\"a\",\"a\",\"a\"], word = \"ab\"\nOutput: 3\nExplanation: Each of the patterns appears as a substring in word \"ab\".\n```\n\n**Constraints:**\n\n*   `1 <= patterns.length <= 100`\n*   `1 <= patterns[i].length <= 100`\n*   `1 <= word.length <= 100`\n*   `patterns[i]` and `word` consist of lowercase English letters.",
+  "constraints": [
+    "1 <= patterns.length <= 100",
+    "1 <= patterns[i].length <= 100",
+    "1 <= word.length <= 100",
+    "patterns[i] and word consist of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "patterns = [\"a\",\"abc\",\"bc\",\"d\"], word = \"abc\"",
+      "output": "3",
+      "explanation": "- \"a\" appears as a substring in \"abc\".\n- \"abc\" appears as a substring in \"abc\".\n- \"bc\" appears as a substring in \"abc\".\n- \"d\" does not appear as a substring in \"abc\".\n3 of the strings in patterns appear as a substring in word."
+    },
+    {
+      "input": "patterns = [\"a\",\"b\",\"c\"], word = \"aaaaabbbbb\"",
+      "output": "2",
+      "explanation": "- \"a\" appears as a substring in \"aaaaabbbbb\".\n- \"b\" appears as a substring in \"aaaaabbbbb\".\n- \"c\" does not appear as a substring in \"aaaaabbbbb\".\n2 of the strings in patterns appear as a substring in word."
+    },
+    {
+      "input": "patterns = [\"a\",\"a\",\"a\"], word = \"ab\"",
+      "output": "3",
+      "explanation": "Each of the patterns appears as a substring in word \"ab\"."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int numOfStrings(vector<string>& patterns, string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfStrings(String[] patterns, String word) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def numOfStrings(self, patterns: list[str], word: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def numOfStrings(self, patterns, word):\n        \"\"\"\n        :type patterns: List[str]\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string[]} patterns\n * @param {string} word\n * @return {number}\n */\nvar numOfStrings = function(patterns, word) {\n    \n};",
+    "typescript": "function numOfStrings(patterns: string[], word: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int NumOfStrings(string[] patterns, string word) {\n        \n    }\n}",
+    "c": "int numOfStrings(char** patterns, int patternsSize, char* word) {\n    \n}",
+    "golang": "func numOfStrings(patterns []string, word string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun numOfStrings(patterns: Array<String>, word: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfStrings(_ patterns: [String], _ word: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_strings(patterns: Vec<String>, word: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String[]} patterns\n# @param {String} word\n# @return {Integer}\ndef num_of_strings(patterns, word)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $patterns\n     * @param String $word\n     * @return Integer\n     */\n    function numOfStrings($patterns, $word) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfStrings(List<String> patterns, String word) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def numOfStrings(patterns: Array[String], word: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec num_of_strings(patterns :: [String.t], word :: String.t) :: integer\n  def num_of_strings(patterns, word) do\n    \n  end\nend",
+    "erlang": "-spec num_of_strings(Patterns :: [unicode:unicode_binary()], Word :: unicode:unicode_binary()) -> integer().\nnum_of_strings(Patterns, Word) ->\n  .",
+    "racket": "(define/contract (num-of-strings patterns word)\n  (-> (listof string?) string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[\"b\"]\n\"aeb\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"facefabcaddafdeedfcfbad\",\"cddebbcadcfdefeafdee\"]\n\"fcddfbefdeadbbbabbeaecdafaccdcadadcdecbfacefabcaddafdeedfcfbadebfbe\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[\"dffddfbbacdfc\",\"ab\",\"ccacfcf\"]\n\"faddabaedcdcbcdfeddaddffddfbbacdfc\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"a\",\"caafaeccaadeaaeefeca\",\"eebc\",\"abffdef\",\"b\"]\n\"cadabb\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"bdfbbdacbacfacdfafadeccaeaafbaefbfec\",\"eaefdcaaa\",\"dabbccceedacfdb\",\"bacefeadab\",\"cfacdfafadec\",\"adbdabfb\",\"babfcdaefadee\"]\n\"debbdfbbdacbacfacdfafadeccaeaafbaefbfec\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[\"dfbdaaee\",\"efafedbababbaa\",\"aadcadbf\",\"fdcdbbbfdeaba\",\"ae\",\"ebccbdc\",\"fe\",\"bdfabafbebecfebede\",\"acebfdfbdaaeefed\",\"aebeeff\"]\n\"deacebfdfbdaaeefedeadcccfba\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[\"daacdcebdebbaadebfafaf\",\"beefdcafbafccffc\",\"fdfefde\",\"defddfdebdaccfccd\",\"a\",\"ddcbebb\",\"fdacbdedabd\",\"bcefde\",\"e\",\"d\",\"cebcbcceacbdfaef\",\"fafaeae\",\"dceb\"]\n\"cbacdaacdcebdebbaadebfafaf\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[\"c\",\"acee\",\"abfcc\",\"d\",\"c\",\"adefcecacaffcdecbd\",\"ecacecccbeedcefd\",\"fdeecbfebbb\",\"c\",\"bbdcffdebf\",\"ecfffbbeff\",\"dbcfbceffefd\",\"c\",\"eccbcacdda\",\"dbcdecccf\",\"ebdaabedcdfced\"]\n\"c\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[\"fc\",\"bfdfffea\",\"eacdaa\",\"acfcaeadeadbfee\",\"f\",\"adacecfdcbebfdd\",\"edaf\",\"bbebeedbcfddaed\",\"cff\",\"effffeaffaada\",\"efbcbfad\",\"eecfdbdaecffecfdcf\",\"ffc\",\"befef\",\"ffbabccef\",\"dedfcdbafda\",\"cd\",\"abffccecfdebcfacdbba\",\"abaacefeebc\"]\n\"cffcde\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[\"eeacc\",\"abfeebceedea\",\"debcfbfbdbdffcbbfecf\",\"bbafeedcfabbcdedceb\",\"aeaff\",\"ccb\",\"e\",\"baaedadeebab\",\"ffefbdedceedeeaccebb\",\"eedcddbdcefaaadb\",\"cbefecccacbcdcff\",\"ffbd\",\"e\",\"abbcfdc\",\"aacfccafaddeecfafedf\",\"feeafafeaacda\",\"edceedeeaccebbaffecddbbefaacbdeeffefca\",\"febfdeb\",\"eedaedffeddacae\",\"c\",\"baffec\",\"ebfcaeafabb\",\"c\"]\n\"bcdaefcaeaffefbdedceedeeaccebbaffecddbbefaacbdeeffefcaaacdbbe\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "[\"d\",\"ccbffbcccebcddfec\",\"bfdadbebcc\",\"bdbabfed\",\"aaddbdadf\",\"fdb\",\"cdddade\",\"cbcfecedffecb\",\"cdd\",\"cbbcbef\",\"ddffbceefdbeedaa\",\"cfebfcffeadcdcf\",\"f\",\"dffcedbebadfc\",\"cbbedffcd\",\"eb\",\"beaadfbdcdaaaedaad\",\"f\",\"eecfabbaadefabda\",\"edbdfeaeccf\",\"fbdcd\",\"ecdfefa\",\"f\",\"bfbdcfcaaabafacbae\",\"ddb\",\"bebdbfddcccecdaff\",\"cce\"]\n\"ecdafafebaefbbeaadfbdcdaaaedaadaaddbdadfbcccdd\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "[\"feff\",\"fcddeadabbbfceaa\",\"edc\",\"eeccdbdaf\",\"bfdcb\",\"bcecdcba\",\"f\",\"bdaecaeabcfbdbcbf\",\"cbbe\",\"cdbabbfcf\",\"ffbebfa\",\"fcccdecbbdcdbbfdade\",\"a\",\"df\",\"c\",\"ebaba\",\"faebfdcbbefa\",\"effcecffebec\",\"f\",\"fcccfccf\",\"cb\",\"ea\",\"bcefcbaadae\",\"cfddaca\",\"c\",\"ecaaeebcddcebbfca\",\"dfacccdaabfddee\",\"ceeacbcbacfcedeba\",\"feffa\",\"bcbbaefcbfbaaad\",\"fceddc\",\"abadfedac\"]\n\"cbfeffaebfdcbbefa\"",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[\"facbcaa\",\"aeeeedfeaefbdfa\",\"bfcacedfddeefbadcad\",\"fbfaeadcec\",\"caaadebeadbdeebdbaadeaef\",\"ee\",\"cbedffcec\",\"aedacef\",\"fabcaeafacbbaacbbbebcbdddfacbcaaadebeadbdeebdbaadeaeff\",\"faccdbbbdeafbdb\",\"ebdaaca\",\"bdaaac\",\"ddfbcbeddebafeaabfabcaeafacbbaacbbbebcbdddfacbcaaadebeadbdeebdbaadeae\",\"dddbbd\",\"ceebfcaabcadeddfffe\",\"ef\",\"acbcaaadebeadbde\",\"ccfceafeabccfcbdf\",\"fafebcecccbcefbbfbcd\",\"bdbadfffbeafeafd\",\"abc\",\"ddbadbecacdbbb\",\"dbfcdaeaffcbb\",\"afabbfbcadc\",\"aeefddfbcbeddebafeaabfabcaeafacbbaacbbbebcbdddfacbcaaadebeadbdeebdbaade\",\"b\",\"cbfdefb\",\"acfbcbebfbebc\",\"eaeff\",\"adfbcbbbdcfeafdff\",\"dddcadd\",\"daafae\",\"bcbdddfacbcaaadebeadbde\",\"ccec\",\"fbdbdaacaabafcebcc\",\"ccbbbbdd\",\"ddaeefddfbcbeddebafeaabfabcaeafacbbaacbbbebcbddd\"]\n\"cdfdedfddaeefddfbcbeddebafeaabfabcaeafacbbaacbbbebcbdddfacbcaaadebeadbdeebdbaadeaeffe\"",
+      "expectedOutput": "13"
+    },
+    {
+      "input": "[\"a\",\"bcb\",\"dabcbccbdedbcfcbaf\",\"ffab\",\"a\",\"dadbffeabacfdcacbbc\",\"beaebedcdbabdca\",\"cedfedafaed\",\"a\",\"c\",\"cabfaadce\",\"dfdbfa\",\"a\",\"aedff\",\"bbbccedcccfbbcef\",\"dfadfbfdcfcffffbda\",\"a\",\"faeacaadafbfceefff\",\"bbdffcafad\",\"fdaffdaedf\",\"a\",\"bcfddaefdfccca\",\"cfbcefcb\",\"cafedcecacfeac\",\"a\",\"dbdefdedecbaecdaabbf\",\"bdd\",\"fccfabfabaeb\",\"a\",\"deef\",\"aadcfbfbdbbafdb\",\"cbddfcfcbfce\",\"a\",\"aceceaebdaafa\",\"abaadebefffb\",\"bfcbbef\",\"a\",\"cbdead\",\"abfbdcaeb\",\"eadfdcffcdf\",\"a\",\"dbbbccddecafbcf\"]\n\"a\"",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[\"edabaecccfccaccf\",\"ebaedff\",\"bbd\",\"caabdefcf\",\"baecc\",\"bbcdf\",\"dcedcfdbccedafccd\",\"affdedecdb\",\"cca\",\"addaddffeacdefba\",\"efeadccbbbafcd\",\"fecdeaafcccddaedf\",\"cf\",\"edfdabbcaaabeedefafb\",\"dedffacfccdddbaf\",\"cdaca\",\"ccdecedabaecccfccacc\",\"fffacbbebaeabef\",\"dcfbedbcdcfbdbed\",\"aecafeeebcebacadcea\",\"cc\",\"aadfdefccbaecadbbcf\",\"eeebcafcfdacffceaedb\",\"cdddcfeebbc\",\"ae\",\"fcaddcaebcaadbcb\",\"cfbaecf\",\"fcddeacfbbacaabeba\",\"dccdecedabaecccfccac\",\"afdbcafedceeccabd\",\"eebbafbaecddeddfece\",\"dadaaaebcefddedf\",\"c\",\"cffbebfecbdf\",\"fcfabcd\",\"eafdccffff\",\"dabaecccfcca\",\"bddf\",\"dedddeafdfdfcdde\",\"daaaab\",\"abaecccfcc\",\"bffbcea\",\"eebaefcebfddeac\",\"fcc\",\"aecccfcca\",\"aeaabda\",\"beaeeeafafbbcbe\"]\n\"eedabbdccdecedabaecccfccaccfc\"",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[\"cfee\",\"cab\",\"bccbbfccefdabdf\",\"faccaeddafdccdeac\",\"ffafccdbefffdcfeeac\",\"eaa\",\"bcbcfcccafeccfecfabe\",\"ebebf\",\"cdbefffdcfeea\",\"bffbddcbffeccefdabf\",\"afbebfcfaedfc\",\"e\",\"daaefdbdbcffafcc\",\"eb\",\"d\",\"fafebddfecbffbadbe\",\"dbdbcffafcc\",\"ebbbfbbd\",\"dfbfc\",\"acbaeafecdddebef\",\"daaefdbdbcffafccdbefffdcfeeacf\",\"abdab\",\"c\",\"bcebabdaadbca\",\"efffdcfee\",\"dcfebdaeedcffac\",\"bafffceccfbeeacaafa\",\"affbfddeeb\",\"bcffafccdb\",\"f\",\"fcbbedb\",\"bffeaeddb\",\"fafcc\",\"eceb\",\"ddefa\",\"fbddfdcccbaaefeaaff\",\"afccdbefff\",\"caedfddeffeac\",\"cecabdeeddddaeddb\",\"fedadbdefbe\",\"ee\",\"fedf\",\"abffdbcebefbdbaaeccb\",\"baebcaedeffcbdb\",\"cffedee\",\"edebeec\",\"daacfdbeaeed\",\"ddbffacdbeaaebabdfed\",\"dbefffdcfee\",\"eeccbcfcbdaeb\",\"bcbedaabf\",\"ac\",\"f\"]\n\"bdaaefdbdbcffafccdbefffdcfeeacffedeea\"",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "[\"dabcbd\",\"cdaacb\",\"eefefcac\",\"bf\",\"dfaffbeaacceadecfbdbcedabbffebef\",\"cffaeaafcefabcdafaae\",\"adfabeefc\",\"cbecafbb\",\"affbeaacceadecfbdbcedabb\",\"bcafeedabdabbebea\",\"bfebfdfedcebe\",\"bfaeaf\",\"bdcdfaffbeaaccead\",\"feeadcea\",\"ebdfceffcaedaebbccfe\",\"eeafcefcdacebdebdfc\",\"ececaeaffcddaceebffcbbdcdfaf\",\"d\",\"dffefebfafadadf\",\"cda\",\"bfcbed\",\"c\",\"dadaacaab\",\"fdcbbebafabbf\",\"adcdcbadabcbdcececaeaffcddaceebffcbbdcdfaffbeaacceadecfbdbcedabb\",\"b\",\"defcabbffaaeeadc\",\"baddedacbfbcedaeadf\",\"eaffcddaceebffcbbdcdfaffbeaacceadecfbdb\",\"aabdfcebda\",\"dadeeededfcda\",\"acbabdbff\",\"bcadcdcbadabcbdcececaeaffcddaceebffcbbdcdfaffbeaacceadecf\",\"daabbabbffe\",\"acbf\",\"decbdccead\",\"eadecfbdbce\",\"dbcb\",\"caaffeb\",\"af\",\"ceadecfbdbcedabbffebefdb\",\"ebdbfabbfbcabfe\",\"ffeeececabaeabbcd\",\"efddbc\",\"bcadcdcbadabcbdcececaeaffcddaceebffcbbdcdf\",\"edebf\",\"beaafefdcffb\",\"cedddbabafeebb\",\"bedcabebcadcdcbadabcbdcececaeaffcddaceebffcbbdcdfaff\",\"afaccfceceecfdebefe\",\"bdbf\",\"edbcbacfcada\",\"affbeaacceadecfbdbcedabbffeb\",\"bcbc\",\"edfcdacfbdb\",\"acbdddeaeaffbacab\",\"bbdcdfaffbeaacceade\",\"bdbdbcaefbbebcbb\",\"accbbafcebddcccfceb\"]\n\"dabfcbedcabebcadcdcbadabcbdcececaeaffcddaceebffcbbdcdfaffbeaacceadecfbdbcedabbffebefdbb\"",
+      "expectedOutput": "20"
+    },
+    {
+      "input": "[\"bbaddfccea\",\"ecdfdac\",\"befbdbecddfdcaff\",\"dfdeffbde\",\"bddf\",\"bbaaaadff\",\"efbdbec\",\"ecef\",\"eacfbbaceabddf\",\"debbbffaafef\",\"ecdfafc\",\"edfa\",\"eeccebcdeedcddeabbfcfeebc\",\"aafeabcb\",\"fedfefaecbedaaebf\",\"aadbfcdebda\",\"aeeccebcdee\",\"af\",\"fabebcffecafaabff\",\"dcbdffccbfeeeafbaea\",\"fcfeebcabedbbacbaadbfebbadd\",\"ccfabecacbea\",\"bfab\",\"dcadeedd\",\"fc\",\"eaddfefba\",\"dcb\",\"bcbeafedcec\",\"ccebcdeedcddeabbfcfeebcabedbbacbaadbfebbad\",\"ae\",\"dcddac\",\"ecadd\",\"eeccebcdeedcddeabbfcfeebcabedbbacbaadbfebbaddfcceac\",\"ebcbfefea\",\"bbaefaefeecddace\",\"ccefbeccbba\",\"cdeedcddeabbfcfeebcabedbbacbaadbfebbaddfcceacfbbaceabddfba\",\"cedadbcacbcfcefd\",\"dbedccddaddfffaadfc\",\"dae\",\"ceabd\",\"bdabedbedcaacee\",\"fcbceccceefbceef\",\"ee\",\"abbfcfeebcabedbbacbaadbfebbaddfcceacfbbaceabddfba\",\"dbfcbaabdbbeddfcdcdf\",\"ddfeb\",\"eadbbaaeedeacdd\",\"dfcceacf\",\"bebfdebfdfdfeded\",\"e\",\"dccbdea\",\"bddfba\",\"ffbeeaefafaa\",\"dabafcbaeffc\",\"bcf\",\"aeeccebcdeedcddeabbfcfeebcabedbbacbaadbfebbaddfcceacfbb\",\"aae\",\"cefcd\",\"fbadfdaae\",\"eabddfba\",\"fbedaadf\",\"afbabffbbbaeff\",\"fd\",\"bfebba\",\"abeabbefaeadacacabe\"]\n\"aeeccebcdeedcddeabbfcfeebcabedbbacbaadbfebbaddfcceacfbbaceabddfbaffb\"",
+      "expectedOutput": "21"
+    },
+    {
+      "input": "[\"f\",\"bbfdecfcdec\",\"faf\",\"bffacbdeaf\",\"dcfedeacbedaeafefbddfeefdacdcaeabdaefdaeeddceaeaadbfedaeecbcaacfddabbdddffcb\",\"bddfabccaaadebdaeebb\",\"edaccefedfafccc\",\"abadecbaeaaeaaeecaac\",\"bfc\",\"eaffbfe\",\"dceeafafaeabdfcdbdb\",\"bfaabdfea\",\"aeafefbddfeefdacdcaeabdaefdaeeddceaeaadbfedaeecbcaacfddab\",\"dceebfbbed\",\"cabfefaaafffdecaddac\",\"bafefeebbf\",\"fdbfcadd\",\"efdabfb\",\"bbfcf\",\"dbbabbcbfdbaacadbed\",\"eefdacdcaeabdaefdaeeddceaeaadbfedaeecbcaacfddabbdddff\",\"ccd\",\"efebeafcfcebddebaeb\",\"bcdbbddfdeeea\",\"eaadbfedaeecbcaacfddabbdddffcb\",\"ffcdcfcebafcbbde\",\"cdebfdc\",\"decbceebccb\",\"acdcaeabdaefdaeeddceaeaadbfe\",\"adabaeee\",\"baecabacafaccabcced\",\"eccbdebb\",\"bcaacfddabbdddff\",\"cdaedef\",\"aafaeeceeedbdababb\",\"ecdfaccd\",\"dbfedaeecbcaacfddabbdddffcba\",\"feacffcfbabadafecae\",\"ceaccbdfdbdcea\",\"aab\",\"caeabdaefdaeeddceaeaadbfedaeecbcaacfddabbdddffcb\",\"eeacfc\",\"a\",\"caefccbdcffc\",\"bdddffc\",\"daedaffcfcebeab\",\"bbbdecfebadcbcabcbaf\",\"bdedffecbbbccb\",\"aeaadbfedaeecbcaacfd\",\"deabeffaafdf\"]\n\"adcfedeacbedaeafefbddfeefdacdcaeabdaefdaeeddceaeaadbfedaeecbcaacfddabbdddffcbaefdbfcadda\"",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[\"eabfebacedcd\",\"dfcdbcdaacbf\",\"cebfcbdaadebebabd\",\"fbfcceaae\",\"faccdabdbadfdeebeaabbfddcffc\",\"afbfccfddfe\",\"cbebdcdfaacdebb\",\"dfcbedfdebedfec\",\"dcdffaecfaccdabdbadfdeebeaabbfddcffcaebdddeaabaeadeaacabdadadbd\",\"fddcccafaf\",\"dbdddfcab\",\"dcdcecadd\",\"cfdfe\",\"fdbea\",\"adfaeceadaebeafce\",\"ffb\",\"dfdeebeaabbfddcffcaebdddeaabaeadeaacabdadadbdf\",\"bdbaccebafbcb\",\"cacfebcbedfae\",\"bddcff\",\"bdbadfdeebeaabbfddcffcaebdddeaabaeadeaacabdadadbd\",\"fabaeb\",\"acbfbfaccc\",\"ffc\",\"deebeaabbfddcffc\",\"ebccadc\",\"acbc\",\"dedcc\",\"dfcebdcfdf\",\"bacaaac\",\"fdffbebcbcbafe\",\"cdebceebafa\",\"dffaecfaccdabdbadfdeebeaabbfddcffcaeb\",\"fcfcd\",\"ababadaecbadfdbebdbd\",\"cbcfcabb\",\"d\",\"fbfdc\",\"cbdfdbbcbbaf\",\"fc\",\"bfddcffcaebd\",\"cfeef\",\"cfdf\",\"fdddabceaacafdeaeda\",\"e\",\"ebeedeabae\",\"accbeef\",\"cceaadbacdefdcf\",\"deaacabdadadbdfcebdcf\",\"ac\",\"daafffca\",\"abdb\",\"deaacabd\",\"dc\",\"eefeabbacaebcde\",\"acfbbfdbceedf\",\"eaacabdadadb\",\"eaaacaafaecd\",\"dbadcbdedb\",\"fdabbcefcaedaabb\",\"dcdffaecfaccdabdbadfdeebeaabbfddcffcaebd\",\"fbceedf\",\"dbe\",\"cdefedfbacd\",\"cffcae\",\"db\",\"ddcfdbcafdffb\",\"a\",\"aebdddeaabaeadeaacabdadadbdfcebdcfdf\",\"ceccbeecfeadfddc\",\"eecacfbecfa\",\"debfdfaffabcabebeccb\",\"bfebeabfebace\",\"eaaedeaf\",\"ddabfdbfdc\",\"fcbeeaadedafeba\",\"deaabaeadeaacabda\",\"adebfbcbf\",\"bdcdfffcbebcaecbbea\",\"beda\",\"f\",\"ccffdcbdbfcef\",\"fdeba\",\"fe\",\"dfe\",\"babd\",\"fadefdcebfbebcbb\",\"aeaffbfbbafeacb\",\"aabaeadeaacabdadadbd\",\"efebcfbfabfcdddaebda\",\"eaaafaccbf\",\"bebdacbe\",\"ebeaabbfddcffcaebdddeaabaeadeaaca\",\"bdfedebbcceeba\",\"ddaddcbfedaefc\",\"ffddaffebbddaf\",\"aebdddeaabaeadeaacabdadadbdfcebdcfdf\",\"ffdfdfef\",\"efeddffdaefccdfa\",\"fdadebed\"]\n\"bfebeabfebacedcdffaecfaccdabdbadfdeebeaabbfddcffcaebdddeaabaeadeaacabdadadbdfcebdcfdfe\"",
+      "expectedOutput": "34"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Deal with each of the patterns individually.",
+    "Use the built-in function in the language you are using to find if the pattern exists as a substring in <code>word</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:26.086Z",
+    "sourceUpdatedAt": null
+  }
+}

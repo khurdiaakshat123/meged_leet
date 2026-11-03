@@ -1,0 +1,149 @@
+{
+  "id": "1784",
+  "slug": "check-if-binary-string-has-at-most-one-segment-of-ones",
+  "title": "Check if Binary String Has at Most One Segment of Ones",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "Given a binary string `s` **​​​​​without leading zeros**, return `true`​​​ _if_ `s` _contains **at most one contiguous segment of ones**_. Otherwise, return `false`.\n\n**Example 1:**\n\n```\nInput: s = \"1001\"\nOutput: false\nExplanation: The string has two segments of size 1.\n```\n\n**Example 2:**\n\n```\nInput: s = \"110\"\nOutput: true\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s[i]`​​​​ is either `'0'` or `'1'`.\n*   `s[0]` is `'1'`.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s[i]​​​​ is either '0' or '1'.",
+    "s[0] is '1'."
+  ],
+  "examples": [
+    {
+      "input": "s = \"1001\"",
+      "output": "false",
+      "explanation": "The string has two segments of size 1."
+    },
+    {
+      "input": "s = \"110\"",
+      "output": "true",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool checkOnesSegment(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkOnesSegment(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def checkOnesSegment(self, s: str) -> bool:\n        ",
+    "python": "class Solution(object):\n    def checkOnesSegment(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkOnesSegment = function(s) {\n    \n};",
+    "typescript": "function checkOnesSegment(s: string): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool CheckOnesSegment(string s) {\n        \n    }\n}",
+    "c": "bool checkOnesSegment(char* s) {\n    \n}",
+    "golang": "func checkOnesSegment(s string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun checkOnesSegment(s: String): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkOnesSegment(_ s: String) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_ones_segment(s: String) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef check_ones_segment(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function checkOnesSegment($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkOnesSegment(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def checkOnesSegment(s: String): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec check_ones_segment(s :: String.t) :: boolean\n  def check_ones_segment(s) do\n    \n  end\nend",
+    "erlang": "-spec check_ones_segment(S :: unicode:unicode_binary()) -> boolean().\ncheck_ones_segment(S) ->\n  .",
+    "racket": "(define/contract (check-ones-segment s)\n  (-> string? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"1\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"11\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"100\"",
+      "expectedOutput": "true"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"11011\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"1110000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"1000001000\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"1111110000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"1000111011111110\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"1111111110000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"10011111001010011001100\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"111111111111100000000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"11011100111010101111110101100010\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"1111111111111111110000000000000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"110000010100100001011100110001111100011000\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"11111111111111111111111000000000000000000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"10101011011011100000011011001101000000011011001001101\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"11111111111111111111111111111000000000000000000000000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"110101001010101000100110000010010110000001011110111101011110111111\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"11111111111111111111111110000000000000000000000000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"1111111001010011000101101001001101001010010111110100011101011000001110101100000110111110011000011001\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "It's guaranteed to have at least one segment",
+    "The string size is small so you can count all segments of ones with no that have no adjacent ones."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.115Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "3264",
+  "slug": "final-array-state-after-k-multiplication-operations-i",
+  "title": "Final Array State After K Multiplication Operations I",
+  "category": "dsa",
+  "subcategory": "heaps",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ],
+  "statement": "You are given an integer array `nums`, an integer `k`, and an integer `multiplier`.\n\nYou need to perform `k` operations on `nums`. In each operation:\n\n*   Find the **minimum** value `x` in `nums`. If there are multiple occurrences of the minimum value, select the one that appears **first**.\n*   Replace the selected minimum value `x` with `x * multiplier`.\n\nReturn an integer array denoting the _final state_ of `nums` after performing all `k` operations.\n\n**Example 1:**\n\n**Input:** nums = \\[2,1,3,5,6\\], k = 5, multiplier = 2\n\n**Output:** \\[8,4,6,5,6\\]\n\n**Explanation:**\n\nOperation\n\nResult\n\nAfter operation 1\n\n\\[2, 2, 3, 5, 6\\]\n\nAfter operation 2\n\n\\[4, 2, 3, 5, 6\\]\n\nAfter operation 3\n\n\\[4, 4, 3, 5, 6\\]\n\nAfter operation 4\n\n\\[4, 4, 6, 5, 6\\]\n\nAfter operation 5\n\n\\[8, 4, 6, 5, 6\\]\n\n**Example 2:**\n\n**Input:** nums = \\[1,2\\], k = 3, multiplier = 4\n\n**Output:** \\[16,8\\]\n\n**Explanation:**\n\nOperation\n\nResult\n\nAfter operation 1\n\n\\[4, 2\\]\n\nAfter operation 2\n\n\\[4, 8\\]\n\nAfter operation 3\n\n\\[16, 8\\]\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `1 <= nums[i] <= 100`\n*   `1 <= k <= 10`\n*   `1 <= multiplier <= 5`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "1 <= k <= 10",
+    "1 <= multiplier <= 5"
+  ],
+  "examples": [
+    {
+      "input": "nums = [2,1,3,5,6], k = 5, multiplier = 2",
+      "output": "[8,4,6,5,6]",
+      "explanation": "Operation\n\t\t\tResult\n\t\t\n\t\t\n\t\t\tAfter operation 1\n\t\t\t[2, 2, 3, 5, 6]\n\t\t\n\t\t\n\t\t\tAfter operation 2\n\t\t\t[4, 2, 3, 5, 6]\n\t\t\n\t\t\n\t\t\tAfter operation 3\n\t\t\t[4, 4, 3, 5, 6]\n\t\t\n\t\t\n\t\t\tAfter operation 4\n\t\t\t[4, 4, 6, 5, 6]\n\t\t\n\t\t\n\t\t\tAfter operation 5\n\t\t\t[8, 4, 6, 5, 6]"
+    },
+    {
+      "input": "nums = [1,2], k = 3, multiplier = 4",
+      "output": "[16,8]",
+      "explanation": "Operation\n\t\t\tResult\n\t\t\n\t\t\n\t\t\tAfter operation 1\n\t\t\t[4, 2]\n\t\t\n\t\t\n\t\t\tAfter operation 2\n\t\t\t[4, 8]\n\t\t\n\t\t\n\t\t\tAfter operation 3\n\t\t\t[16, 8]"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getFinalState(vector<int>& nums, int k, int multiplier) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getFinalState(int[] nums, int k, int multiplier) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:\n        ",
+    "python": "class Solution(object):\n    def getFinalState(self, nums, k, multiplier):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type multiplier: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} multiplier\n * @return {number[]}\n */\nvar getFinalState = function(nums, k, multiplier) {\n    \n};",
+    "typescript": "function getFinalState(nums: number[], k: number, multiplier: number): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public int[] GetFinalState(int[] nums, int k, int multiplier) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getFinalState(int* nums, int numsSize, int k, int multiplier, int* returnSize) {\n    \n}",
+    "golang": "func getFinalState(nums []int, k int, multiplier int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun getFinalState(nums: IntArray, k: Int, multiplier: Int): IntArray {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getFinalState(_ nums: [Int], _ k: Int, _ multiplier: Int) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_final_state(nums: Vec<i32>, k: i32, multiplier: i32) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer} multiplier\n# @return {Integer[]}\ndef get_final_state(nums, k, multiplier)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer $multiplier\n     * @return Integer[]\n     */\n    function getFinalState($nums, $k, $multiplier) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getFinalState(List<int> nums, int k, int multiplier) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def getFinalState(nums: Array[Int], k: Int, multiplier: Int): Array[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec get_final_state(nums :: [integer], k :: integer, multiplier :: integer) :: [integer]\n  def get_final_state(nums, k, multiplier) do\n    \n  end\nend",
+    "erlang": "-spec get_final_state(Nums :: [integer()], K :: integer(), Multiplier :: integer()) -> [integer()].\nget_final_state(Nums, K, Multiplier) ->\n  .",
+    "racket": "(define/contract (get-final-state nums k multiplier)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[2,1,3,5,6]\n5\n2",
+      "expectedOutput": "[8,4,6,5,6]"
+    },
+    {
+      "input": "[2,1,1]\n1\n3",
+      "expectedOutput": "[2,3,1]"
+    },
+    {
+      "input": "[9,1,7,3]\n2\n3",
+      "expectedOutput": "[9,9,7,3]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[2,1,3,5,6]\n5\n2",
+      "expectedOutput": "[8,4,6,5,6]"
+    },
+    {
+      "input": "[1,2]\n3\n4",
+      "expectedOutput": "[16,8]"
+    },
+    {
+      "input": "[2,1,1]\n1\n3",
+      "expectedOutput": "[2,3,1]"
+    },
+    {
+      "input": "[100]\n10\n5",
+      "expectedOutput": "[976562500]"
+    },
+    {
+      "input": "[7,2,9,2]\n7\n1",
+      "expectedOutput": "[7,2,9,2]"
+    },
+    {
+      "input": "[1,2,2,5]\n4\n2",
+      "expectedOutput": "[4,4,4,5]"
+    },
+    {
+      "input": "[9,1,7,3]\n2\n3",
+      "expectedOutput": "[9,9,7,3]"
+    },
+    {
+      "input": "[74,90,45,18,64,93,15,13,22,35,39,28,90]\n5\n2",
+      "expectedOutput": "[74,90,45,36,64,93,30,52,44,35,39,28,90]"
+    },
+    {
+      "input": "[74,99,14,22,31,68,58,5,73,41,84,97,87,63,35,13,93,87,56]\n10\n5",
+      "expectedOutput": "[74,99,70,110,155,68,290,125,73,205,84,97,87,63,175,65,93,87,280]"
+    },
+    {
+      "input": "[74,8,82,26,97,43,1,97,24,46,30]\n3\n4",
+      "expectedOutput": "[74,32,82,26,97,43,16,97,24,46,30]"
+    },
+    {
+      "input": "[74,17,51,30,64,17,44,88,75,52,75,34,83,54,81,6,24]\n8\n3",
+      "expectedOutput": "[74,51,51,90,64,51,132,88,75,52,75,102,83,54,81,54,72]"
+    },
+    {
+      "input": "[74,26,19,33,31,92,87,80,25,58,21,2,80,49]\n9\n1",
+      "expectedOutput": "[74,26,19,33,31,92,87,80,25,58,21,2,80,49]"
+    },
+    {
+      "input": "[74,35,88,37,97,67,30,71,76,64,66,71,78,44,26,99,54,93]\n7\n5",
+      "expectedOutput": "[74,175,88,185,97,67,150,71,76,320,66,71,78,220,130,99,270,93]"
+    },
+    {
+      "input": "[74,44,56,41,64,42,73,63,27,69,11,39,76,39,49,46]\n6\n2",
+      "expectedOutput": "[74,44,56,82,64,42,73,63,54,69,44,78,76,78,49,46]"
+    },
+    {
+      "input": "[75,71,15,93,97,89,77,46,39,50,47,98,43,72,69,98,84,15,23,48,5,76,46,36,16,66,30]\n5\n3",
+      "expectedOutput": "[75,71,45,93,97,89,77,46,39,50,47,98,43,72,69,98,84,45,23,48,45,76,46,36,48,66,30]"
+    },
+    {
+      "input": "[75,80,83,96,64,63,20,37,90,56,92,66,41,67,92,45,100,17,53,37,75,33,13,43,27,11,90,73,59,98,43,76,41,68,18,52,92,92,87]\n10\n5",
+      "expectedOutput": "[75,80,83,96,64,63,100,185,90,56,92,66,205,67,92,45,100,85,53,185,75,165,65,43,135,55,90,73,59,98,43,76,41,68,90,52,92,92,87]"
+    },
+    {
+      "input": "[75,90,52,100,30,38,63,29,41,61,37,35,39,62,15,92,15,18,83,26,44,89,80]\n8\n4",
+      "expectedOutput": "[75,90,52,100,120,38,63,116,41,61,148,140,39,62,60,92,60,72,83,104,44,89,80]"
+    },
+    {
+      "input": "[75,99,20,4,97,13,6,20,92,67,83,3,36,57,37,38,30,20,13,14,13,45,47,57,51,99,10,27,21,21,61,7,34,89]\n7\n2",
+      "expectedOutput": "[75,99,20,16,97,13,12,20,92,67,83,12,36,57,37,38,30,20,13,14,13,45,47,57,51,99,20,27,21,21,61,14,34,89]"
+    },
+    {
+      "input": "[76,53,84,67,30,84,39,78,57,65,54,68,97,75,26,31,91,46,21,22,88,2,87,79,50,50,29,31,98,71,60,71,72,20,73,6,19,54,94,15,31,25,99,69,71,20,28,3,84,33,9,40,88,94,77,7,56,7,73,97,69,48,21,60,90,43,51,28,77,25,1,18,55,29,15,54,97,91,26,4,3,42,85,39,52,24,80,33,89,72,59,82,69,26,38,12,45,81,65,85]\n10\n5",
+      "expectedOutput": "[76,53,84,67,30,84,39,78,57,65,54,68,97,75,26,31,91,46,21,22,88,10,87,79,50,50,29,31,98,71,60,71,72,20,73,30,19,54,94,15,31,25,99,69,71,20,28,15,84,33,45,40,88,94,77,35,56,35,73,97,69,48,21,60,90,43,51,28,77,25,25,18,55,29,15,54,97,91,26,20,15,42,85,39,52,24,80,33,89,72,59,82,69,26,38,12,45,81,65,85]"
+    },
+    {
+      "input": "[76,62,52,70,97,59,82,70,8,70,99,36,95,70,48,77,6,47,50,11,57,58,54,86,62,94,89,8,79,32,18,86,68,80,13,98,5,36,84,29,4,14,55,25,31,20,68,77,14,68,28,26,93,73,57,48,52,64,3,62,33,4,21,75,22,9,23,51,54,92,69,70,90,96,42,10,44,77,27,87,79,50,97,2,91,18,56,6,50,39,16,86,76,6,93,7,58]\n9\n4",
+      "expectedOutput": "[76,62,52,70,97,59,82,70,8,70,99,36,95,70,48,77,24,47,50,11,57,58,54,86,62,94,89,8,79,32,18,86,68,80,13,98,20,36,84,29,16,14,55,25,31,20,68,77,14,68,28,26,93,73,57,48,52,64,12,62,33,16,21,75,22,9,23,51,54,92,69,70,90,96,42,10,44,77,27,87,79,50,97,8,91,18,56,24,50,39,16,86,76,24,93,28,58]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Maintain sorted pairs <code>(nums[index], index)</code> in a priority queue.",
+    "Simulate the operation <code>k</code> times."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:17.325Z",
+    "sourceUpdatedAt": null
+  }
+}

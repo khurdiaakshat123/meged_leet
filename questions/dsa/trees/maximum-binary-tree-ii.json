@@ -1,0 +1,153 @@
+{
+  "id": "998",
+  "slug": "maximum-binary-tree-ii",
+  "title": "Maximum Binary Tree II",
+  "category": "dsa",
+  "subcategory": "trees",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Binary Tree"
+  ],
+  "statement": "A **maximum tree** is a tree where every node has a value greater than any other value in its subtree.\n\nYou are given the `root` of a maximum binary tree and an integer `val`.\n\nJust as in the [previous problem](https://leetcode.com/problems/maximum-binary-tree/), the given tree was constructed from a list `a` (`root = Construct(a)`) recursively with the following `Construct(a)` routine:\n\n*   If `a` is empty, return `null`.\n*   Otherwise, let `a[i]` be the largest element of `a`. Create a `root` node with the value `a[i]`.\n*   The left child of `root` will be `Construct([a[0], a[1], ..., a[i - 1]])`.\n*   The right child of `root` will be `Construct([a[i + 1], a[i + 2], ..., a[a.length - 1]])`.\n*   Return `root`.\n\nNote that we were not given `a` directly, only a root node `root = Construct(a)`.\n\nSuppose `b` is a copy of `a` with the value `val` appended to it. It is guaranteed that `b` has unique values.\n\nReturn `Construct(b)`.\n\n**Example 1:**\n\n![](./assets/maximum-binary-tree-ii-1.jpg)\n```\nInput: root = [4,1,3,null,null,2], val = 5\nOutput: [5,4,null,1,3,null,null,2]\nExplanation: a = [1,4,2,3], b = [1,4,2,3,5]\n```\n\n**Example 2:**\n\n![](./assets/maximum-binary-tree-ii-2.jpg)\n```\nInput: root = [5,2,4,null,1], val = 3\nOutput: [5,2,4,null,1,null,3]\nExplanation: a = [2,1,5,4], b = [2,1,5,4,3]\n```\n\n**Example 3:**\n\n![](./assets/maximum-binary-tree-ii-3.jpg)\n```\nInput: root = [5,2,3,null,1], val = 4\nOutput: [5,2,4,null,1,3]\nExplanation: a = [2,1,5,3], b = [2,1,5,3,4]\n```\n\n**Constraints:**\n\n*   The number of nodes in the tree is in the range `[1, 100]`.\n*   `1 <= Node.val <= 100`\n*   All the values of the tree are **unique**.\n*   `1 <= val <= 100`",
+  "constraints": [
+    "The number of nodes in the tree is in the range [1, 100].",
+    "1 <= Node.val <= 100",
+    "All the values of the tree are unique.",
+    "1 <= val <= 100"
+  ],
+  "examples": [
+    {
+      "input": "root = [4,1,3,null,null,2], val = 5",
+      "output": "[5,4,null,1,3,null,null,2]",
+      "explanation": "a = [1,4,2,3], b = [1,4,2,3,5]"
+    },
+    {
+      "input": "root = [5,2,4,null,1], val = 3",
+      "output": "[5,2,4,null,1,null,3]",
+      "explanation": "a = [2,1,5,4], b = [2,1,5,4,3]"
+    },
+    {
+      "input": "root = [5,2,3,null,1], val = 4",
+      "output": "[5,2,4,null,1,3]",
+      "explanation": "a = [2,1,5,3], b = [2,1,5,3,4]"
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* insertIntoMaxTree(TreeNode* root, int val) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode insertIntoMaxTree(TreeNode root, int val) {\n        \n    }\n}",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def insertIntoMaxTree(self, root: TreeNode | None, val: int) -> TreeNode | None:\n        ",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def insertIntoMaxTree(self, root, val):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type val: int\n        :rtype: Optional[TreeNode]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} val\n * @return {TreeNode}\n */\nvar insertIntoMaxTree = function(root, val) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction insertIntoMaxTree(root: TreeNode | null, val: number): TreeNode | null {\n    \n};",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public TreeNode InsertIntoMaxTree(TreeNode root, int val) {\n        \n    }\n}",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* insertIntoMaxTree(struct TreeNode* root, int val) {\n    \n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc insertIntoMaxTree(root *TreeNode, val int) *TreeNode {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun insertIntoMaxTree(root: TreeNode?, `val`: Int): TreeNode? {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func insertIntoMaxTree(_ root: TreeNode?, _ val: Int) -> TreeNode? {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn insert_into_max_tree(root: Option<Rc<RefCell<TreeNode>>>, val: i32) -> Option<Rc<RefCell<TreeNode>>> {\n        \n    }\n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @param {Integer} val\n# @return {TreeNode}\ndef insert_into_max_tree(root, val)\n    \nend",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $root\n     * @param Integer $val\n     * @return TreeNode\n     */\n    function insertIntoMaxTree($root, $val) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  TreeNode? insertIntoMaxTree(TreeNode? root, int val) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def insertIntoMaxTree(root: TreeNode, `val`: Int): TreeNode = {\n        \n    }\n}",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec insert_into_max_tree(root :: TreeNode.t | nil, val :: integer) :: TreeNode.t | nil\n  def insert_into_max_tree(root, val) do\n    \n  end\nend",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec insert_into_max_tree(Root :: #tree_node{} | null, Val :: integer()) -> #tree_node{} | null.\ninsert_into_max_tree(Root, Val) ->\n  .",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (insert-into-max-tree root val)\n  (-> (or/c tree-node? #f) exact-integer? (or/c tree-node? #f))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[55]\n86",
+      "expectedOutput": "[86,55]"
+    },
+    {
+      "input": "[72,null,19]\n54",
+      "expectedOutput": "[72,null,54,19]"
+    },
+    {
+      "input": "[89,80,45]\n77",
+      "expectedOutput": "[89,80,77,null,null,45]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[85,null,77,null,61,45,null,14]\n60",
+      "expectedOutput": "[85,null,77,null,61,45,60,14]"
+    },
+    {
+      "input": "[94,69,75,null,25,3,53,18]\n66",
+      "expectedOutput": "[94,69,75,null,25,3,66,18,null,null,null,53]"
+    },
+    {
+      "input": "[83,79,54,9,63,46,33,null,null,null,null,4,38,null,null,null,null,null,29]\n53",
+      "expectedOutput": "[83,79,54,9,63,46,53,null,null,null,null,4,38,33,null,null,null,null,29]"
+    },
+    {
+      "input": "[99,95,88,35,92,46,57,33,null,null,61,null,null,50,null,null,null,null,null,31,27,null,26]\n9",
+      "expectedOutput": "[99,95,88,35,92,46,57,33,null,null,61,null,null,50,9,null,null,null,null,31,27,null,null,null,26]"
+    },
+    {
+      "input": "[94,84,80,81,7,null,53,75,77,null,null,null,30,60,null,43,null,13,null,18,40,null,null,null,null,17,null,null,16]\n85",
+      "expectedOutput": "[94,84,85,81,7,80,null,75,77,null,null,null,53,60,null,43,null,null,30,18,40,null,null,13,null,17,null,null,16]"
+    },
+    {
+      "input": "[90,82,86,null,72,75,63,null,56,57,59,null,null,44,42,null,null,40,null,null,null,38,null,33,15,30,null,4,null,null,11,null,null,null,null,8]\n14",
+      "expectedOutput": "[90,82,86,null,72,75,63,null,56,57,59,null,14,44,42,null,null,40,null,null,null,null,null,38,null,33,15,30,null,4,null,null,11,null,null,null,null,8]"
+    },
+    {
+      "input": "[98,97,86,null,89,82,83,69,87,null,null,35,23,null,51,55,63,null,null,null,20,null,null,52,18,38,null,null,null,null,null,1,null,34,31,null,null,2,33,null,19]\n24",
+      "expectedOutput": "[98,97,86,null,89,82,83,69,87,null,null,35,24,null,51,55,63,null,null,23,null,null,null,52,18,38,null,null,20,null,null,1,null,34,31,null,null,null,null,2,33,null,19]"
+    },
+    {
+      "input": "[98,97,55,96,93,null,35,62,null,91,89,13,null,null,42,null,69,58,85,null,null,16,32,20,57,null,null,76,null,15,null,null,null,null,null,22,null,27,null,14,6,18,1,null,null,null,null,null,null,10]\n56",
+      "expectedOutput": "[98,97,56,96,93,55,null,62,null,91,89,null,35,null,42,null,69,58,85,13,null,16,32,20,57,null,null,76,null,null,null,15,null,null,null,null,null,22,null,27,null,14,6,18,1,null,null,null,null,null,null,10]"
+    },
+    {
+      "input": "[99,91,89,83,75,77,59,72,65,57,null,43,76,30,58,null,64,null,62,48,56,null,null,68,37,null,null,null,44,27,63,null,null,null,null,null,null,51,null,null,null,null,null,null,null,10,41,35,null,null,2,null,32,null,34,null,null,31,null,25]\n87",
+      "expectedOutput": "[99,91,89,83,75,77,87,72,65,57,null,43,76,59,null,null,64,null,62,48,56,null,null,68,37,30,58,27,63,null,null,null,null,null,null,51,null,null,null,null,null,null,44,null,null,10,41,35,null,null,null,null,2,null,32,null,34,null,null,31,null,25]"
+    },
+    {
+      "input": "[99,9,93,null,null,89,91,65,null,84,50,63,null,78,82,37,null,55,52,57,70,60,46,null,null,33,null,39,11,51,null,54,8,null,59,null,30,null,23,null,null,null,null,null,41,null,32,null,1,49,null,null,27,null,null,null,null,15,null,null,null,44,28,null,20,null,null,29]\n18",
+      "expectedOutput": "[99,9,93,null,null,89,91,65,null,84,50,63,null,78,82,37,18,55,52,57,70,60,46,null,null,null,null,33,null,39,11,51,null,54,8,null,59,null,30,null,23,null,null,null,null,null,41,null,32,null,1,49,null,null,27,null,null,null,null,15,null,null,null,44,28,null,20,null,null,29]"
+    },
+    {
+      "input": "[100,89,99,78,68,null,95,null,75,65,null,87,93,2,null,null,36,null,3,79,92,null,null,null,31,null,1,null,76,null,91,null,null,null,null,72,53,86,85,66,59,null,null,56,74,71,7,57,null,26,null,37,null,null,null,33,47,null,null,39,17,null,null,null,null,null,25,null,34,28,14,null,null,null,null,32,null,null,null,null,null,null,16]\n23",
+      "expectedOutput": "[100,89,99,78,68,null,95,null,75,65,null,87,93,2,null,null,36,null,3,79,92,null,null,null,31,null,1,null,76,null,91,null,null,null,null,72,53,86,85,66,59,null,null,56,74,71,23,57,null,26,null,37,null,null,null,33,47,7,null,39,17,null,null,null,null,null,25,null,34,null,null,28,14,null,null,null,null,32,null,null,null,null,null,null,16]"
+    },
+    {
+      "input": "[98,30,96,12,null,93,83,null,null,60,92,62,78,null,25,87,88,null,55,56,29,null,null,33,null,null,85,28,null,null,47,null,null,20,null,72,61,null,10,46,null,null,null,67,null,45,43,null,null,null,37,64,59,null,35,11,null,3,36,53,38,50,null,16,8,null,5,null,null,null,null,2,49,24,null,null,26,null,null,null,null,null,null,null,null,null,48,null,null,null,null,42]\n6",
+      "expectedOutput": "[98,30,96,12,null,93,83,null,null,60,92,62,78,null,25,87,88,null,55,56,29,null,null,33,null,null,85,28,null,null,47,null,6,20,null,72,61,null,10,46,null,null,null,null,null,67,null,45,43,null,null,null,37,64,59,null,35,11,null,3,36,53,38,50,null,16,8,null,5,null,null,null,null,2,49,24,null,null,26,null,null,null,null,null,null,null,null,null,48,null,null,null,null,42]"
+    },
+    {
+      "input": "[100,91,98,28,20,63,96,null,null,null,null,60,53,88,95,41,null,29,null,85,70,94,90,null,null,null,null,null,73,null,56,82,87,89,66,25,null,34,40,77,81,62,71,17,43,5,null,null,null,null,3,null,null,null,75,79,52,null,null,null,38,null,null,9,null,2,null,null,null,65,36,null,27,47,50,null,4,null,null,null,null,64,null,null,35,null,null,null,null,18,null,null,null,46,null,null,16,null,null,14,39]\n42",
+      "expectedOutput": "[100,91,98,28,20,63,96,null,null,null,null,60,53,88,95,41,null,29,null,85,70,94,90,null,null,null,null,null,73,null,56,82,87,89,66,25,null,34,40,77,81,62,71,17,43,5,42,null,null,null,3,null,null,null,75,79,52,null,null,null,38,null,null,9,null,2,null,null,null,null,null,65,36,null,27,47,50,null,4,null,null,null,null,64,null,null,35,null,null,null,null,18,null,null,null,46,null,null,16,null,null,14,39]"
+    },
+    {
+      "input": "[99,97,45,95,70,41,8,92,94,null,null,null,2,null,null,82,65,89,93,null,null,80,42,null,null,86,83,88,68,null,67,null,null,null,66,72,46,87,24,19,38,5,63,26,54,23,32,null,null,76,77,null,null,null,14,18,37,null,null,53,27,null,25,null,null,21,null,null,null,null,61,33,69,7,null,null,null,null,null,null,52,null,13,null,null,null,11,null,16,31,null,60,56,null,null,12,9,null,null,null,null,null,null,10,null,null,null,null,35,null,null,null,null,null,null,null,29]\n4",
+      "expectedOutput": "[99,97,45,95,70,41,8,92,94,null,null,null,2,null,4,82,65,89,93,null,null,null,null,80,42,null,null,86,83,88,68,null,67,null,null,null,66,72,46,87,24,19,38,5,63,26,54,23,32,null,null,76,77,null,null,null,14,18,37,null,null,53,27,null,25,null,null,21,null,null,null,null,61,33,69,7,null,null,null,null,null,null,52,null,13,null,null,null,11,null,16,31,null,60,56,null,null,12,9,null,null,null,null,null,null,10,null,null,null,null,35,null,null,null,null,null,null,null,29]"
+    },
+    {
+      "input": "[100,96,99,91,86,87,93,53,90,74,25,58,67,68,81,null,50,78,89,42,33,13,null,48,56,45,null,null,null,null,null,39,4,69,75,82,80,null,null,null,18,null,null,43,20,null,38,8,null,null,null,null,null,null,65,73,52,null,null,76,64,11,null,null,null,null,12,null,null,null,null,16,60,7,null,null,6,70,37,44,null,null,5,null,null,null,15,17,47,null,null,null,null,null,63,null,27,null,null,null,null,null,null,null,null,32,40,55,41,null,null,null,19,null,null,54,null,24,null,null,null,null,46,null,null,null,30,9,1]\n62",
+      "expectedOutput": "[100,96,99,91,86,87,93,53,90,74,25,58,67,68,81,null,50,78,89,42,33,13,null,48,56,45,null,null,null,null,62,39,4,69,75,82,80,null,null,null,18,null,null,43,20,null,38,8,null,null,null,null,null,null,null,null,65,73,52,null,null,76,64,11,null,null,null,null,12,null,null,null,null,16,60,7,null,null,6,70,37,44,null,null,5,null,null,null,15,17,47,null,null,null,null,null,63,null,27,null,null,null,null,null,null,null,null,32,40,55,41,null,null,null,19,null,null,54,null,24,null,null,null,null,46,null,null,null,30,9,1]"
+    },
+    {
+      "input": "[99,90,92,86,87,91,89,69,84,5,72,60,81,null,56,55,62,76,64,null,null,null,22,15,36,37,66,45,4,46,null,null,48,53,52,null,10,null,null,null,null,null,null,17,34,47,44,null,null,null,null,null,18,null,null,null,null,null,null,null,null,null,null,null,19,null,null,35,null,13,3,null,null,null,28]\n29",
+      "expectedOutput": "[99,90,92,86,87,91,89,69,84,5,72,60,81,null,56,55,62,76,64,null,null,null,22,15,36,37,66,45,29,46,null,null,48,53,52,null,10,null,null,null,null,null,null,17,34,47,44,null,null,4,null,null,18,null,null,null,null,null,null,null,null,null,null,null,19,null,null,35,null,null,null,13,3,null,null,null,28]"
+    },
+    {
+      "input": "[100,91,98,88,18,96,97,62,77,1,null,68,32,94,86,null,28,39,73,null,null,null,66,null,null,90,92,72,80,null,null,19,null,null,64,37,53,71,78,79,89,70,null,48,75,null,12,35,52,null,null,45,9,null,null,63,65,69,42,31,83,null,55,43,null,61,58,null,null,null,null,null,null,null,21,null,null,44,null,2,60,67,null,null,7,null,null,82,null,49,24,38,null,56,59,34,null,20,null,33,3,null,null,47,null,6,51,null,null,41,null,null,null,null,17,36,null,29,null,30,null,4,null,null,null,null,null,null,null,46,8,null,null,null,22,null,40,null,null,null,null,null,25,null,13,null,null,null,null,null,null,null,null,null,null,null,null,null,5]\n27",
+      "expectedOutput": "[100,91,98,88,18,96,97,62,77,1,null,68,32,94,86,null,28,39,73,null,null,null,66,null,null,90,92,72,80,null,null,19,null,null,64,37,53,71,78,79,89,70,null,48,75,null,12,35,52,null,null,45,9,null,null,63,65,69,42,31,83,null,55,43,null,61,58,null,null,null,null,null,null,null,21,null,null,44,null,2,60,67,null,null,7,null,null,82,null,49,24,38,null,56,59,34,27,20,null,33,3,null,null,47,null,6,51,null,null,41,null,null,null,null,17,36,null,29,null,30,null,4,null,null,null,null,null,null,null,null,null,46,8,null,null,null,22,null,40,null,null,null,null,null,25,null,13,null,null,null,null,null,null,null,null,null,null,null,null,null,5]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-binary-tree-ii/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:21.591Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "24",
+  "slug": "swap-nodes-in-pairs",
+  "title": "Swap Nodes in Pairs",
+  "category": "dsa",
+  "subcategory": "recursion-backtracking",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Recursion"
+  ],
+  "statement": "Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)\n\n**Example 1:**\n\n**Input:** head = \\[1,2,3,4\\]\n\n**Output:** \\[2,1,4,3\\]\n\n**Explanation:**\n\n![](./assets/swap-nodes-in-pairs-1.jpg)\n\n**Example 2:**\n\n**Input:** head = \\[\\]\n\n**Output:** \\[\\]\n\n**Example 3:**\n\n**Input:** head = \\[1\\]\n\n**Output:** \\[1\\]\n\n**Example 4:**\n\n**Input:** head = \\[1,2,3\\]\n\n**Output:** \\[2,1,3\\]\n\n**Constraints:**\n\n*   The number of nodes in the list is in the range `[0, 100]`.\n*   `0 <= Node.val <= 100`",
+  "constraints": [
+    "The number of nodes in the list is in the range [0, 100].",
+    "0 <= Node.val <= 100"
+  ],
+  "examples": [
+    {
+      "input": "head = [1,2,3,4]",
+      "output": "[2,1,4,3]",
+      "explanation": null
+    },
+    {
+      "input": "head = []",
+      "output": "[]",
+      "explanation": null
+    },
+    {
+      "input": "head = [1]",
+      "output": "[1]",
+      "explanation": null
+    },
+    {
+      "input": "head = [1,2,3]",
+      "output": "[2,1,3]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* swapPairs(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode swapPairs(ListNode head) {\n        \n    }\n}",
+    "python3": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def swapPairs(self, head: ListNode | None) -> ListNode | None:\n        ",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def swapPairs(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar swapPairs = function(head) {\n    \n};",
+    "typescript": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     val: number\n *     next: ListNode | null\n *     constructor(val?: number, next?: ListNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.next = (next===undefined ? null : next)\n *     }\n * }\n */\n\nfunction swapPairs(head: ListNode | null): ListNode | null {\n    \n};",
+    "csharp": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public int val;\n *     public ListNode next;\n *     public ListNode(int val=0, ListNode next=null) {\n *         this.val = val;\n *         this.next = next;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode SwapPairs(ListNode head) {\n        \n    }\n}",
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* swapPairs(struct ListNode* head) {\n    \n}",
+    "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc swapPairs(head *ListNode) *ListNode {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var li = ListNode(5)\n * var v = li.`val`\n * Definition for singly-linked list.\n * class ListNode(var `val`: Int) {\n *     var next: ListNode? = null\n * }\n */\nclass Solution {\n    fun swapPairs(head: ListNode?): ListNode? {\n        \n    }\n}",
+    "swift": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public var val: Int\n *     public var next: ListNode?\n *     public init() { self.val = 0; self.next = nil; }\n *     public init(_ val: Int) { self.val = val; self.next = nil; }\n *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }\n * }\n */\nclass Solution {\n    func swapPairs(_ head: ListNode?) -> ListNode? {\n        \n    }\n}",
+    "rust": "// Definition for singly-linked list.\n// #[derive(PartialEq, Eq, Clone, Debug)]\n// pub struct ListNode {\n//   pub val: i32,\n//   pub next: Option<Box<ListNode>>\n// }\n// \n// impl ListNode {\n//   #[inline]\n//   fn new(val: i32) -> Self {\n//     ListNode {\n//       next: None,\n//       val\n//     }\n//   }\n// }\nimpl Solution {\n    pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {\n        \n    }\n}",
+    "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val = 0, _next = nil)\n#         @val = val\n#         @next = _next\n#     end\n# end\n# @param {ListNode} head\n# @return {ListNode}\ndef swap_pairs(head)\n    \nend",
+    "php": "/**\n * Definition for a singly-linked list.\n * class ListNode {\n *     public $val = 0;\n *     public $next = null;\n *     function __construct($val = 0, $next = null) {\n *         $this->val = $val;\n *         $this->next = $next;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param ListNode $head\n     * @return ListNode\n     */\n    function swapPairs($head) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *   int val;\n *   ListNode? next;\n *   ListNode([this.val = 0, this.next]);\n * }\n */\nclass Solution {\n  ListNode? swapPairs(ListNode? head) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(_x: Int = 0, _next: ListNode = null) {\n *   var next: ListNode = _next\n *   var x: Int = _x\n * }\n */\nobject Solution {\n    def swapPairs(head: ListNode): ListNode = {\n        \n    }\n}",
+    "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec swap_pairs(head :: ListNode.t | nil) :: ListNode.t | nil\n  def swap_pairs(head) do\n    \n  end\nend",
+    "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec swap_pairs(Head :: #list_node{} | null) -> #list_node{} | null.\nswap_pairs(Head) ->\n  .",
+    "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (swap-pairs head)\n  (-> (or/c list-node? #f) (or/c list-node? #f))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[50,100]",
+      "expectedOutput": "[100,50]"
+    },
+    {
+      "input": "[15,52,98]",
+      "expectedOutput": "[52,15,98]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[91,88,64,43]",
+      "expectedOutput": "[88,91,43,64]"
+    },
+    {
+      "input": "[4,11,18,25,32]",
+      "expectedOutput": "[11,4,25,18,32]"
+    },
+    {
+      "input": "[0,57,60,0,19,37]",
+      "expectedOutput": "[57,0,0,60,37,19]"
+    },
+    {
+      "input": "[32,89,39,92,100,4,73]",
+      "expectedOutput": "[89,32,92,39,4,100,73]"
+    },
+    {
+      "input": "[50,50,100,100,0,100,100,50]",
+      "expectedOutput": "[50,50,100,100,100,0,50,100]"
+    },
+    {
+      "input": "[14,38,40,48,74,79,82,90,92]",
+      "expectedOutput": "[38,14,48,40,79,74,90,82,92]"
+    },
+    {
+      "input": "[74,61,57,50,50,44,31,25,19,4]",
+      "expectedOutput": "[61,74,50,57,44,50,25,31,4,19]"
+    },
+    {
+      "input": "[10,17,24,31,38,45,52,59,66,73,80,87]",
+      "expectedOutput": "[17,10,31,24,45,38,59,52,73,66,87,80]"
+    },
+    {
+      "input": "[0,67,87,0,26,57,0,87,51,0,71,80,0,91]",
+      "expectedOutput": "[67,0,0,87,57,26,87,0,0,51,80,71,91,0]"
+    },
+    {
+      "input": "[33,18,70,17,0,66,76,6,1,31,23,88,26,95,77,59]",
+      "expectedOutput": "[18,33,17,70,66,0,6,76,31,1,88,23,95,26,59,77]"
+    },
+    {
+      "input": "[0,50,0,100,100,50,50,50,0,100,50,50,0,100,50,50,100,0,100,100]",
+      "expectedOutput": "[50,0,100,0,50,100,50,50,100,0,50,50,100,0,50,50,0,100,100,100]"
+    },
+    {
+      "input": "[2,5,7,7,17,20,26,28,33,43,49,50,52,53,54,68,73,76,83,86,86,90,92,99,100]",
+      "expectedOutput": "[5,2,7,7,20,17,28,26,43,33,50,49,53,52,68,54,76,73,86,83,90,86,99,92,100]"
+    },
+    {
+      "input": "[100,99,96,95,94,89,88,88,86,84,75,65,64,63,63,48,45,43,39,36,36,29,29,26,17,17,16,12,11,8,6,4]",
+      "expectedOutput": "[99,100,95,96,89,94,88,88,84,86,65,75,63,64,48,63,43,45,36,39,29,36,26,29,17,17,12,16,8,11,4,6]"
+    },
+    {
+      "input": "[16,23,30,37,44,51,58,65,72,79,86,93,100,6,13,20,27,34,41,48,55,62,69,76,83,90,97,3,10,17,24,31,38,45,52,59,66,73,80,87,94,0,7,14,21]",
+      "expectedOutput": "[23,16,37,30,51,44,65,58,79,72,93,86,6,100,20,13,34,27,48,41,62,55,76,69,90,83,3,97,17,10,31,24,45,38,59,52,73,66,87,80,0,94,14,7,21]"
+    },
+    {
+      "input": "[0,41,30,0,22,76,0,39,26,0,39,27,0,73,75,0,49,8,0,84,78,0,56,34,0,56,51,0,23,63,0,9,0,0,22,52,0,5,97,0,79,66,0,85,77,0,74,74,0,69,35,0,39,48,0,17,59,0,68,91,0,69,67,0,62]",
+      "expectedOutput": "[41,0,0,30,76,22,39,0,0,26,27,39,73,0,0,75,8,49,84,0,0,78,34,56,56,0,0,51,63,23,9,0,0,0,52,22,5,0,0,97,66,79,85,0,0,77,74,74,69,0,0,35,48,39,17,0,0,59,91,68,69,0,0,67,62]"
+    },
+    {
+      "input": "[40,63,83,33,74,13,17,59,32,48,58,93,62,27,76,25,62,64,34,5,43,51,16,73,94,55,4,17,96,72,82,79,6,91,40,55,12,82,17,6,44,12,87,29,41,39,18,26,94,41,83,4,93,81,51,68,61,27,40,44,33,10,11,16,10,12,78,95,11,68,63,13,10,31,28,4,90,9,54,9,29,49,4,69,64,17,14,3,33,72,45,63,40,49,66,52,73,73,54,75]",
+      "expectedOutput": "[63,40,33,83,13,74,59,17,48,32,93,58,27,62,25,76,64,62,5,34,51,43,73,16,55,94,17,4,72,96,79,82,91,6,55,40,82,12,6,17,12,44,29,87,39,41,26,18,41,94,4,83,81,93,68,51,27,61,44,40,10,33,16,11,12,10,95,78,68,11,13,63,31,10,4,28,9,90,9,54,49,29,69,4,17,64,3,14,72,33,63,45,49,40,52,66,73,73,75,54]"
+    },
+    {
+      "input": "[50,50,50,100,0,100,100,50,0,0,100,100,100,50,0,50,0,50,50,100,100,100,100,100,100,100,100,100,50,100,50,100,100,100,0,50,100,50,100,0,0,100,0,0,50,100,50,50,50,0,50,0,100,50,100,50,0,100,0,100,100,0,0,0,100,0,100,50,50,50,0,0,50,0,50,50,0,50,0,100,100,0,100,0,100,0,100,100,0,100,0,100,50,50,0,0,100,0,50,50]",
+      "expectedOutput": "[50,50,100,50,100,0,50,100,0,0,100,100,50,100,50,0,50,0,100,50,100,100,100,100,100,100,100,100,100,50,100,50,100,100,50,0,50,100,0,100,100,0,0,0,100,50,50,50,0,50,0,50,50,100,50,100,100,0,100,0,0,100,0,0,0,100,50,100,50,50,0,0,0,50,50,50,50,0,100,0,0,100,0,100,0,100,100,100,100,0,100,0,50,50,0,0,0,100,50,50]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/swap-nodes-in-pairs/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.800Z",
+    "sourceUpdatedAt": null
+  }
+}

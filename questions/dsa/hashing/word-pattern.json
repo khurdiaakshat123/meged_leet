@@ -1,0 +1,167 @@
+{
+  "id": "290",
+  "slug": "word-pattern",
+  "title": "Word Pattern",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ],
+  "statement": "Given a `pattern` and a string `s`, find if `s` follows the same pattern.\n\nHere **follow** means a full match, such that there is a bijection between a letter in `pattern` and a **non-empty** word in `s`. Specifically:\n\n*   Each letter in `pattern` maps to **exactly** one unique word in `s`.\n*   Each unique word in `s` maps to **exactly** one letter in `pattern`.\n*   No two letters map to the same word, and no two words map to the same letter.\n\n**Example 1:**\n\n**Input:** pattern = \"abba\", s = \"dog cat cat dog\"\n\n**Output:** true\n\n**Explanation:**\n\nThe bijection can be established as:\n\n*   `'a'` maps to `\"dog\"`.\n*   `'b'` maps to `\"cat\"`.\n\n**Example 2:**\n\n**Input:** pattern = \"abba\", s = \"dog cat cat fish\"\n\n**Output:** false\n\n**Example 3:**\n\n**Input:** pattern = \"aaaa\", s = \"dog cat cat dog\"\n\n**Output:** false\n\n**Constraints:**\n\n*   `1 <= pattern.length <= 300`\n*   `pattern` contains only lower-case English letters.\n*   `1 <= s.length <= 3000`\n*   `s` contains only lowercase English letters and spaces `' '`.\n*   `s` **does not contain** any leading or trailing spaces.\n*   All the words in `s` are separated by a **single space**.",
+  "constraints": [
+    "1 <= pattern.length <= 300",
+    "pattern contains only lower-case English letters.",
+    "1 <= s.length <= 3000",
+    "s contains only lowercase English letters and spaces ' '.",
+    "s does not contain any leading or trailing spaces.",
+    "All the words in s are separated by a single space."
+  ],
+  "examples": [
+    {
+      "input": "pattern = \"abba\", s = \"dog cat cat dog\"",
+      "output": "true",
+      "explanation": null
+    },
+    {
+      "input": "pattern = \"abba\", s = \"dog cat cat fish\"",
+      "output": "false",
+      "explanation": null
+    },
+    {
+      "input": "pattern = \"aaaa\", s = \"dog cat cat dog\"",
+      "output": "false",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool wordPattern(string pattern, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean wordPattern(String pattern, String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def wordPattern(self, pattern: str, s: str) -> bool:\n        ",
+    "python": "class Solution(object):\n    def wordPattern(self, pattern, s):\n        \"\"\"\n        :type pattern: str\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} pattern\n * @param {string} s\n * @return {boolean}\n */\nvar wordPattern = function(pattern, s) {\n    \n};",
+    "typescript": "function wordPattern(pattern: string, s: string): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool WordPattern(string pattern, string s) {\n        \n    }\n}",
+    "c": "bool wordPattern(char* pattern, char* s) {\n    \n}",
+    "golang": "func wordPattern(pattern string, s string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun wordPattern(pattern: String, s: String): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func wordPattern(_ pattern: String, _ s: String) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn word_pattern(pattern: String, s: String) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String} pattern\n# @param {String} s\n# @return {Boolean}\ndef word_pattern(pattern, s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $pattern\n     * @param String $s\n     * @return Boolean\n     */\n    function wordPattern($pattern, $s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool wordPattern(String pattern, String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def wordPattern(pattern: String, s: String): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec word_pattern(pattern :: String.t, s :: String.t) :: boolean\n  def word_pattern(pattern, s) do\n    \n  end\nend",
+    "erlang": "-spec word_pattern(Pattern :: unicode:unicode_binary(), S :: unicode:unicode_binary()) -> boolean().\nword_pattern(Pattern, S) ->\n  .",
+    "racket": "(define/contract (word-pattern pattern s)\n  (-> string? string? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"abba\"\n\"dog cat cat dog\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"abba\"\n\"dog cat cat fish\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"ab\"\n\"dog dog\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"abba\"\n\"dog cat cat dog\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"abba\"\n\"dog cat cat fish\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"aaaa\"\n\"dog cat cat dog\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"ab\"\n\"dog dog\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"ab\"\n\"dog cat fish\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"ab\"\n\"dog door\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"ab\"\n\"b a\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"cegfeahbgcdafhdba\"\n\"crfv evwl gamc fkeh evwl ampf hpux bbxa gamc crfv dgoq ampf fkeh hpux dgoq bbxa ampf\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"ecefhfabhiiabcgdjgdj\"\n\"criny evydh evydh fkgyz hpxpj fkgyz amrxo bbasg hpxpj iefkb iefkb amrxo bbasg criny gaotr dgqip junft gaotr dgqip junft\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"chdfeijieajgchfbkdkabga\"\n\"crkfyp hpzgki dgsaqy fkjqaq evavih iehccr jupxua iehccr evavih amuopx jupxua garlsz crkfyp hpzgki fkjqaq bbckhg kjxslj dgsaqy kjxslj amuopx bbckhg garlsz amuopx\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"hkikagejjbddleclfcfahmbgim\"\n\"kjak hpby iejt kjak amwg gatd evdn juso juso bbeb dgvs dgvs lyif evdn crmx lyif fkli crmx fkli amwg hpby mnqa bbeb gatd iejt mnqa\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"bbciacjfgilmkljbecdhhgkdfemaa\"\n\"bbhtj bbhtj crpoa iemle amyyr crpoa juugv fknac gavvu iemle lykwf mntsx kjcbn lykwf juugv bbhtj evffk crpoa dgxjs hpeqm hpeqm gavvu kjcbn dgxjs fknac evffk mntsx amyyr amyyr\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"bkdaegajicaeflfhgddelbkicjmmhfbc\"\n\"kjftoj bbjlkg dgzbty ambqsx evhwlh gaynvz ambqsx juwywa ieodfr crrgbp ambqsx evhwlh fkqsdq lynogs fkqsdq hpgini gaynvz dgzbty dgzbty evhwlh lynogs bbjlkg kjftoj ieodfr crrgbp juwywa mnvjyb mnvjyb hpgini fkqsdq bbjlkg crrgbp\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"adbjecgcamhmiiihbdlblfffcaghjgekked\"\n\"amdi dgct bbld juzq evko crty gaae crty amdi mnxb hpia mnxb ierv ierv ierv hpia bbld dgct lypg bbld lypg fksj fksj fksj crty amdi gaae hpia juzq gaae evko kjhl kjhl evko dgct\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"kifhblmicedjidcekaffaelhacmbbdhblelhcjkgkjgajadgfmgim\"\n\"kjoadju ieyktrt flzzrqs hpppbit bbssygr lywvvru moeqmau ieyktrt cranqpr evrdahs dgjiiys jugflau ieyktrt dgjiiys cranqpr evrdahs kjoadju amkxgxr flzzrqs flzzrqs amkxgxr evrdahs lywvvru hpppbit amkxgxr cranqpr moeqmau bbssygr bbssygr dgjiiys hpppbit bbssygr lywvvru evrdahs lywvvru hpppbit cranqpr jugflau kjoadju gahujzt kjoadju jugflau gahujzt amkxgxr jugflau amkxgxr dgjiiys gahujzt flzzrqs moeqmau gahujzt ieyktrt moeqmau\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"ijelfdimcabdkkbhfgaebggkjkldafjeblkacmlhehhgcbjehacldfidmiacimjfmbg\"\n\"juixmrn ieacuin evtvaym lyynwjo flbqshm dglajpl ieacuin mohinso crdfrgl ammphok bbvkzxl dglajpl kjqsean kjqsean bbvkzxl hpshczm flbqshm gaklkqm ammphok evtvaym bbvkzxl gaklkqm gaklkqm kjqsean juixmrn kjqsean lyynwjo dglajpl ammphok flbqshm juixmrn evtvaym bbvkzxl lyynwjo kjqsean ammphok crdfrgl mohinso lyynwjo hpshczm evtvaym hpshczm hpshczm gaklkqm crdfrgl bbvkzxl juixmrn evtvaym hpshczm ammphok crdfrgl lyynwjo dglajpl flbqshm ieacuin dglajpl mohinso ieacuin ammphok crdfrgl ieacuin mohinso juixmrn flbqshm mohinso bbvkzxl gaklkqm\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"meacbfccagejbbjlaabfhbdikfgmjljlkgheceikdigadhlmgikjfkdghijabffimdeakdlccmelhhm\"\n\"mojaojh evwnbpf amphige crfxsxe bbxcape fleityf crfxsxe crfxsxe amphige gamdlhg evwnbpf jukpnig bbxcape bbxcape jukpnig lybfwah amphige amphige bbxcape fleityf hpuydqg bbxcape dgnskgf iecuvzg kjtkfrh fleityf gamdlhg mojaojh jukpnig lybfwah jukpnig lybfwah kjtkfrh gamdlhg hpuydqg evwnbpf crfxsxe evwnbpf iecuvzg kjtkfrh dgnskgf iecuvzg gamdlhg amphige dgnskgf hpuydqg lybfwah mojaojh gamdlhg iecuvzg kjtkfrh jukpnig fleityf kjtkfrh dgnskgf gamdlhg hpuydqg iecuvzg jukpnig amphige bbxcape fleityf fleityf iecuvzg mojaojh dgnskgf evwnbpf amphige kjtkfrh dgnskgf lybfwah crfxsxe crfxsxe mojaojh evwnbpf lybfwah hpuydqg hpuydqg mojaojh\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"cjmdiihjijjgflgigcdjdlbfdeckceikhadalfelckmejikhghdbaiakaabhdgckbfhkgbmfejbalemmcmbglffhe\"\n\"jungoaa criptpy molspab dgqklyy ieflwra ieflwra hpwqeiz jungoaa ieflwra jungoaa jungoaa gaovmzz flgauqz lydxxra gaovmzz ieflwra gaovmzz criptpy dgqklyy jungoaa dgqklyy lydxxra bbztbgx flgauqz dgqklyy evyfchy criptpy kjvcgia criptpy evyfchy ieflwra kjvcgia hpwqeiz amryjxx dgqklyy amryjxx lydxxra flgauqz evyfchy lydxxra criptpy kjvcgia molspab evyfchy jungoaa ieflwra kjvcgia hpwqeiz gaovmzz hpwqeiz dgqklyy bbztbgx amryjxx ieflwra amryjxx kjvcgia amryjxx amryjxx bbztbgx hpwqeiz dgqklyy gaovmzz criptpy kjvcgia bbztbgx flgauqz hpwqeiz kjvcgia gaovmzz bbztbgx molspab flgauqz evyfchy jungoaa bbztbgx amryjxx lydxxra evyfchy molspab molspab criptpy molspab bbztbgx gaovmzz lydxxra flgauqz flgauqz hpwqeiz evyfchy\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"aiqvfxxoiztqmxsnqkebpqpgougozmdpirxtgsrgfeslgxfbuivwonnwoxshgmuznsmfvcmrwsrdixhtyrrlypwktntzuwkfeukfvhyvckjtlbpdhjsrcsqijteylqkchvvyjvfmmdkklecybgbohngobzdsebpcppnujjdiyquuwkukjqsdmholjfzotfcdlfbbbwhqwnzbhtydyghrfovcpwxhcenxjhimuxltwtqwdrrgevigvzdrclofzmuelleciyixemvknnplptqpmibszwynqgezodjyjkjsucrx\"\n\"amfpzfqzwr iftcmzspd qxgpztufk vvvrkmwpi flurlyrju xalhuextx xalhuextx osqzpbubw iftcmzspd zfcxewxxm trfabuvlu qxgpztufk mozjgjtxh xalhuextx scxfjlvjz ndieysuzb qxgpztufk kjjswrtts ewmvtprha bcnkroqbr piyuhkudq qxgpztufk piyuhkudq gacmchrlp osqzpbubw ugnwtdwno gacmchrlp osqzpbubw zfcxewxxm mozjgjtxh dgeabgrfg piyuhkudq iftcmzspd rmokrcvhf xalhuextx trfabuvlu gacmchrlp scxfjlvjz rmokrcvhf gacmchrlp flurlyrju ewmvtprha scxfjlvjz lzrnoatvn gacmchrlp xalhuextx flurlyrju bcnkroqbr ugnwtdwno iftcmzspd vvvrkmwpi wldmcvwrd osqzpbubw ndieysuzb ndieysuzb wldmcvwrd osqzpbubw xalhuextx scxfjlvjz hplhuqsnj gacmchrlp mozjgjtxh ugnwtdwno zfcxewxxm ndieysuzb scxfjlvjz mozjgjtxh flurlyrju vvvrkmwpi crwfjxqdl mozjgjtxh rmokrcvhf wldmcvwrd scxfjlvjz rmokrcvhf dgeabgrfg iftcmzspd xalhuextx hplhuqsnj trfabuvlu ypucmnxvr rmokrcvhf rmokrcvhf lzrnoatvn ypucmnxvr piyuhkudq wldmcvwrd kjjswrtts trfabuvlu ndieysuzb trfabuvlu zfcxewxxm ugnwtdwno wldmcvwrd kjjswrtts flurlyrju ewmvtprha ugnwtdwno kjjswrtts flurlyrju vvvrkmwpi hplhuqsnj ypucmnxvr vvvrkmwpi crwfjxqdl kjjswrtts jubxeisry trfabuvlu lzrnoatvn bcnkroqbr piyuhkudq dgeabgrfg hplhuqsnj jubxeisry scxfjlvjz rmokrcvhf crwfjxqdl scxfjlvjz qxgpztufk iftcmzspd jubxeisry trfabuvlu ewmvtprha ypucmnxvr lzrnoatvn qxgpztufk kjjswrtts crwfjxqdl hplhuqsnj vvvrkmwpi vvvrkmwpi ypucmnxvr jubxeisry vvvrkmwpi flurlyrju mozjgjtxh mozjgjtxh dgeabgrfg kjjswrtts kjjswrtts lzrnoatvn ewmvtprha crwfjxqdl ypucmnxvr bcnkroqbr gacmchrlp bcnkroqbr osqzpbubw hplhuqsnj ndieysuzb gacmchrlp osqzpbubw bcnkroqbr zfcxewxxm dgeabgrfg scxfjlvjz ewmvtprha bcnkroqbr piyuhkudq crwfjxqdl piyuhkudq piyuhkudq ndieysuzb ugnwtdwno jubxeisry jubxeisry dgeabgrfg iftcmzspd ypucmnxvr qxgpztufk ugnwtdwno ugnwtdwno wldmcvwrd kjjswrtts ugnwtdwno kjjswrtts jubxeisry qxgpztufk scxfjlvjz dgeabgrfg mozjgjtxh hplhuqsnj osqzpbubw lzrnoatvn jubxeisry flurlyrju zfcxewxxm osqzpbubw trfabuvlu flurlyrju crwfjxqdl dgeabgrfg lzrnoatvn flurlyrju bcnkroqbr bcnkroqbr bcnkroqbr wldmcvwrd hplhuqsnj qxgpztufk wldmcvwrd ndieysuzb zfcxewxxm bcnkroqbr hplhuqsnj trfabuvlu ypucmnxvr dgeabgrfg ypucmnxvr gacmchrlp hplhuqsnj rmokrcvhf flurlyrju osqzpbubw vvvrkmwpi crwfjxqdl piyuhkudq wldmcvwrd xalhuextx hplhuqsnj crwfjxqdl ewmvtprha ndieysuzb xalhuextx jubxeisry hplhuqsnj iftcmzspd mozjgjtxh ugnwtdwno xalhuextx lzrnoatvn trfabuvlu wldmcvwrd trfabuvlu qxgpztufk wldmcvwrd dgeabgrfg rmokrcvhf rmokrcvhf gacmchrlp ewmvtprha vvvrkmwpi iftcmzspd gacmchrlp vvvrkmwpi zfcxewxxm dgeabgrfg rmokrcvhf crwfjxqdl lzrnoatvn osqzpbubw flurlyrju zfcxewxxm mozjgjtxh ugnwtdwno ewmvtprha lzrnoatvn lzrnoatvn ewmvtprha crwfjxqdl iftcmzspd ypucmnxvr iftcmzspd xalhuextx ewmvtprha mozjgjtxh vvvrkmwpi kjjswrtts ndieysuzb ndieysuzb piyuhkudq lzrnoatvn piyuhkudq trfabuvlu qxgpztufk piyuhkudq mozjgjtxh iftcmzspd bcnkroqbr scxfjlvjz zfcxewxxm wldmcvwrd ypucmnxvr ndieysuzb qxgpztufk gacmchrlp ewmvtprha zfcxewxxm osqzpbubw dgeabgrfg jubxeisry ypucmnxvr jubxeisry kjjswrtts jubxeisry scxfjlvjz ugnwtdwno crwfjxqdl rmokrcvhf xalhuextx\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"acywyvqdwfojuvbongvokoxvfhfuzcehjjlstnhoxeeglvwjhcgkqxjyyulzkwnucsdqepcobikgqwmhtqcnktyklwnubfrlfvvcpuucrmfdkpmzpekgezedbwpycsbqlqonxrnxpjsqylrshbcvnzmjkifydtumblbrelqxjqzdymfszcmkinjinmsrsywbbfkqpoudjxegihrztwnmiditttvgtloppjzspxehoozkvgbrwtrsenirdiutfbxxhluhuhcfxdteivsmvgqdgrfzdolppmgyghrimjisw\"\n\"amihaxjkuenzfkddb cryxkpkoj ypwuneqgp wlgedmqca ypwuneqgp vvxildpag qxjhakoqi dggscykqd wlgedmqca flximqlus ossrqsnmt judpfzmcw ugpnuupym vvxildpag bcqcsgjmp ossrqsnmt ndkvyjnkz gafedzlwn vvxildpag ossrqsnmt kjlkximeq ossrqsnmt xaozvvqev vvxildpag flximqlus hpnzvilyh flximqlus ugpnuupym zfepfnrik cryxkpkoj ewonuhksy hpnzvilyh judpfzmcw judpfzmcw lzufprmgk sczxkcoux trhsclpwr ndkvyjnkz hpnzvilyh ossrqsnmt xaozvvqev ewonuhksy ewonuhksy gafedzlwn lzufprmgk vvxildpag wlgedmqca judpfzmcw hpnzvilyh cryxkpkoj gafedzlwn kjlkximeq qxjhakoqi xaozvvqev judpfzmcw ypwuneqgp ypwuneqgp ugpnuupym lzufprmgk zfepfnrik kjlkximeq wlgedmqca ndkvyjnkz ugpnuupym cryxkpkoj sczxkcoux dggscykqd qxjhakoqi ewonuhksy piamibooo cryxkpkoj ossrqsnmt bcqcsgjmp ifvunqlab kjlkximeq gafedzlwn qxjhakoqi wlgedmqca mocahanif hpnzvilyh trhsclpwr qxjhakoqi cryxkpkoj ndkvyjnkz kjlkximeq trhsclpwr ypwuneqgp kjlkximeq lzufprmgk wlgedmqca ndkvyjnkz ugpnuupym bcqcsgjmp flximqlus rmrcstosd lzufprmgk flximqlus vvxildpag vvxildpag cryxkpkoj piamibooo ugpnuupym ugpnuupym cryxkpkoj rmrcstosd mocahanif flximqlus dggscykqd kjlkximeq piamibooo mocahanif zfepfnrik piamibooo ewonuhksy kjlkximeq gafedzlwn ewonuhksy zfepfnrik ewonuhksy dggscykqd bcqcsgjmp wlgedmqca piamibooo ypwuneqgp cryxkpkoj sczxkcoux bcqcsgjmp qxjhakoqi lzufprmgk qxjhakoqi ossrqsnmt ndkvyjnkz xaozvvqev rmrcstosd ndkvyjnkz xaozvvqev piamibooo judpfzmcw sczxkcoux qxjhakoqi ypwuneqgp lzufprmgk rmrcstosd sczxkcoux hpnzvilyh bcqcsgjmp cryxkpkoj vvxildpag ndkvyjnkz zfepfnrik mocahanif judpfzmcw kjlkximeq ifvunqlab flximqlus ypwuneqgp dggscykqd trhsclpwr ugpnuupym mocahanif bcqcsgjmp lzufprmgk bcqcsgjmp rmrcstosd ewonuhksy lzufprmgk qxjhakoqi xaozvvqev judpfzmcw qxjhakoqi zfepfnrik dggscykqd ypwuneqgp mocahanif flximqlus sczxkcoux zfepfnrik cryxkpkoj mocahanif kjlkximeq ifvunqlab ndkvyjnkz judpfzmcw ifvunqlab ndkvyjnkz mocahanif sczxkcoux rmrcstosd sczxkcoux ypwuneqgp wlgedmqca bcqcsgjmp bcqcsgjmp flximqlus kjlkximeq qxjhakoqi piamibooo ossrqsnmt ugpnuupym dggscykqd judpfzmcw xaozvvqev ewonuhksy gafedzlwn ifvunqlab hpnzvilyh rmrcstosd zfepfnrik trhsclpwr wlgedmqca ndkvyjnkz mocahanif ifvunqlab dggscykqd ifvunqlab trhsclpwr trhsclpwr trhsclpwr vvxildpag gafedzlwn trhsclpwr lzufprmgk ossrqsnmt piamibooo piamibooo judpfzmcw zfepfnrik sczxkcoux piamibooo xaozvvqev ewonuhksy hpnzvilyh ossrqsnmt ossrqsnmt zfepfnrik kjlkximeq vvxildpag gafedzlwn bcqcsgjmp rmrcstosd wlgedmqca trhsclpwr rmrcstosd sczxkcoux ewonuhksy ndkvyjnkz ifvunqlab rmrcstosd dggscykqd ifvunqlab ugpnuupym trhsclpwr flximqlus bcqcsgjmp xaozvvqev xaozvvqev hpnzvilyh lzufprmgk ugpnuupym hpnzvilyh ugpnuupym hpnzvilyh cryxkpkoj flximqlus xaozvvqev dggscykqd trhsclpwr ewonuhksy ifvunqlab vvxildpag sczxkcoux mocahanif vvxildpag gafedzlwn qxjhakoqi dggscykqd gafedzlwn rmrcstosd flximqlus zfepfnrik dggscykqd ossrqsnmt lzufprmgk piamibooo piamibooo mocahanif gafedzlwn ypwuneqgp gafedzlwn hpnzvilyh rmrcstosd ifvunqlab mocahanif judpfzmcw ifvunqlab sczxkcoux cryxkpkoj\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/word-pattern/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.782Z",
+    "sourceUpdatedAt": null
+  }
+}

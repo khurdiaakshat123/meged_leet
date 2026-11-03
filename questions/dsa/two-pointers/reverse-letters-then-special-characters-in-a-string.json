@@ -1,0 +1,155 @@
+{
+  "id": "3823",
+  "slug": "reverse-letters-then-special-characters-in-a-string",
+  "title": "Reverse Letters Then Special Characters in a String",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Simulation"
+  ],
+  "statement": "You are given a string `s` consisting of lowercase English letters and special characters.\n\nYour task is to perform these **in order**:\n\n*   **Reverse** the **lowercase letters** and place them back into the positions originally occupied by letters.\n*   **Reverse** the **special characters** and place them back into the positions originally occupied by special characters.\n\nReturn the resulting string after performing the reversals.\n\n**Example 1:**\n\n**Input:** s = \")ebc#da@f(\"\n\n**Output:** \"(fad@cb#e)\"\n\n**Explanation:**\n\n*   The letters in the string are `['e', 'b', 'c', 'd', 'a', 'f']`:\n    *   Reversing them gives `['f', 'a', 'd', 'c', 'b', 'e']`\n    *   `s` becomes `\")fad#cb@e(\"`\n*   ​​​​​​​The special characters in the string are `[')', '#', '@', '(']`:\n    *   Reversing them gives `['(', '@', '#', ')']`\n    *   `s` becomes `\"(fad@cb#e)\"`\n\n**Example 2:**\n\n**Input:** s = \"z\"\n\n**Output:** \"z\"\n\n**Explanation:**\n\nThe string contains only one letter, and reversing it does not change the string. There are no special characters.\n\n**Example 3:**\n\n**Input:** s = \"!@#$%^&\\*()\"\n\n**Output:** \")(\\*&^%$#@!\"\n\n**Explanation:**\n\nThe string contains no letters. The string contains all special characters, so reversing the special characters reverses the whole string.\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s` consists only of lowercase English letters and the special characters in `\"!@#$%^&*()\"`.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists only of lowercase English letters and the special characters in \"!@#$%^&*()\"."
+  ],
+  "examples": [
+    {
+      "input": "s = \")ebc#da@f(\"",
+      "output": "\"(fad@cb#e)\"",
+      "explanation": "The letters in the string are ['e', 'b', 'c', 'd', 'a', 'f']:\n\n\t\n\t\tReversing them gives ['f', 'a', 'd', 'c', 'b', 'e']\n\t\ts becomes \")fad#cb@e(\"\n\t\n\t\n\t​​​​​​​The special characters in the string are [')', '#', '@', '(']:\n\t\n\t\tReversing them gives ['(', '@', '#', ')']\n\t\ts becomes \"(fad@cb#e)\""
+    },
+    {
+      "input": "s = \"z\"",
+      "output": "\"z\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"!@#$%^&*()\"",
+      "output": "\")(*&^%$#@!\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string reverseByType(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseByType(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def reverseByType(self, s: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def reverseByType(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reverseByType = function(s) {\n    \n};",
+    "typescript": "function reverseByType(s: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ReverseByType(string s) {\n        \n    }\n}",
+    "c": "char* reverseByType(char* s) {\n    \n}",
+    "golang": "func reverseByType(s string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun reverseByType(s: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reverseByType(_ s: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reverse_by_type(s: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef reverse_by_type(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function reverseByType($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reverseByType(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def reverseByType(s: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec reverse_by_type(s :: String.t) :: String.t\n  def reverse_by_type(s) do\n    \n  end\nend",
+    "erlang": "-spec reverse_by_type(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreverse_by_type(S) ->\n  .",
+    "racket": "(define/contract (reverse-by-type s)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"h\"",
+      "expectedOutput": "\"h\""
+    },
+    {
+      "input": "\"wl\"",
+      "expectedOutput": "\"lw\""
+    },
+    {
+      "input": "\"hzg\"",
+      "expectedOutput": "\"gzh\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"umsb\"",
+      "expectedOutput": "\"bsmu\""
+    },
+    {
+      "input": "\"&$x!@b\"",
+      "expectedOutput": "\"@!b$&x\""
+    },
+    {
+      "input": "\"(%xqa#l$\"",
+      "expectedOutput": "\"$#laq%x(\""
+    },
+    {
+      "input": "\"maplw)*jqc\"",
+      "expectedOutput": "\"cqjwl*)pam\""
+    },
+    {
+      "input": "\"x#pcgasxwaom\"",
+      "expectedOutput": "\"m#oawxsagcpx\""
+    },
+    {
+      "input": "\"#mvl@cma#%k@gv%\"",
+      "expectedOutput": "\"%vgk@amc%#l@vm#\""
+    },
+    {
+      "input": "\"d^j!^mozuaf(rtshg!\"",
+      "expectedOutput": "\"g!h(^strfau!zomjd^\""
+    },
+    {
+      "input": "\"cbhnu(tvozfi%$@o@bdxq\"",
+      "expectedOutput": "\"qxdbo@ifzovt@$%u(nhbc\""
+    },
+    {
+      "input": "\"moi!fqwoknkyvg*qjzjp%vq*\"",
+      "expectedOutput": "\"qvp*jzjqgvyknk%owqfi*om!\""
+    },
+    {
+      "input": "\"y*bqceogw$tet$i!^wxlcqf@s)j\"",
+      "expectedOutput": "\"j)sfqclxw@ite^t!$wgoecq$b*y\""
+    },
+    {
+      "input": "\"fhe%(rgktjsq@d%l%)acwmyojgs$te\"",
+      "expectedOutput": "\"ets$)gjoymwc%a%l@(dqsjtkgre%hf\""
+    },
+    {
+      "input": "\"llq*pb!malyxkt%oi%rbi(rqqucmpw$cya\"",
+      "expectedOutput": "\"ayc$wp(mcuqqri%br%iot!kxylambp*qll\""
+    },
+    {
+      "input": "\"df@nbn%l&(dgxxbtngoxm)a%pyuv@d!&xwtlvr\"",
+      "expectedOutput": "\"rv&ltw!x@%dvuypamxogn)t(bxxg&d%@lnbnfd\""
+    },
+    {
+      "input": "\"@hnwev#mghll&(%^*biwajngxrlnwjskwaamhuigly\"",
+      "expectedOutput": "\"*ylgiu^hmaaw%(&#@ksjwnlrxgnjawibllhgmvewnh\""
+    },
+    {
+      "input": "\"woon@@zcxlzcu)tzdbdn!odjtywbmurxp*gxcs*bc%(spz\"",
+      "expectedOutput": "\"zpsc(%bscxgpx*rumbwy*tjdondbdztuc!zlxc)zn@@oow\""
+    },
+    {
+      "input": "\"(uw$lex^jvejtg^vusftbq)whpekerxtgflgz%nz%wr!ltuu&^\"",
+      "expectedOutput": "\"^uu&tlr!wznzgl%fgtxrek%ephwqbtfsuvgtj)ev^jx^elwu$(\""
+    },
+    {
+      "input": "\"eq&piqr@cyg#dr#mw@smwfx*qvel@sifj!c#qwuyvfjour#q^jkq@o*fut&njso@l^$aw$hutg^dyvaa@!brr$(tr#px!blzn$**\"",
+      "expectedOutput": "\"nz*lbxp*rtr$rb!aa#vydgt(uhwa$losj!n@tufoqkjqru^o$jfv$y^uwq@cjfi&s*@le^vqxf#wmswm#!rdg@*yc@rq#ipqe#@&\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use two pointers from ends, skipping non-letters.",
+    "Use two pointers from ends, skipping letters."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/reverse-letters-then-special-characters-in-a-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.831Z",
+    "sourceUpdatedAt": null
+  }
+}

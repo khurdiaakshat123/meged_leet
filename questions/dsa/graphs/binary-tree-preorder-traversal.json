@@ -1,0 +1,170 @@
+{
+  "id": "144",
+  "slug": "binary-tree-preorder-traversal",
+  "title": "Binary Tree Preorder Traversal",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Easy",
+  "tags": [
+    "Stack",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "statement": "Given the `root` of a binary tree, return _the preorder traversal of its nodes' values_.\n\n**Example 1:**\n\n**Input:** root = \\[1,null,2,3\\]\n\n**Output:** \\[1,2,3\\]\n\n**Explanation:**\n\n![](./assets/binary-tree-preorder-traversal-1.png)\n\n**Example 2:**\n\n**Input:** root = \\[1,2,3,4,5,null,8,null,null,6,7,9\\]\n\n**Output:** \\[1,2,4,5,6,7,3,8,9\\]\n\n**Explanation:**\n\n![](./assets/binary-tree-preorder-traversal-2.png)\n\n**Example 3:**\n\n**Input:** root = \\[\\]\n\n**Output:** \\[\\]\n\n**Example 4:**\n\n**Input:** root = \\[1\\]\n\n**Output:** \\[1\\]\n\n**Constraints:**\n\n*   The number of nodes in the tree is in the range `[0, 100]`.\n*   `-100 <= Node.val <= 100`\n\n**Follow up:** Recursive solution is trivial, could you do it iteratively?",
+  "constraints": [
+    "The number of nodes in the tree is in the range [0, 100].",
+    "-100 <= Node.val <= 100"
+  ],
+  "examples": [
+    {
+      "input": "root = [1,null,2,3]",
+      "output": "[1,2,3]",
+      "explanation": null
+    },
+    {
+      "input": "root = [1,2,3,4,5,null,8,null,null,6,7,9]",
+      "output": "[1,2,4,5,6,7,3,8,9]",
+      "explanation": null
+    },
+    {
+      "input": "root = []",
+      "output": "[]",
+      "explanation": null
+    },
+    {
+      "input": "root = [1]",
+      "output": "[1]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> preorderTraversal(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<Integer> preorderTraversal(TreeNode root) {\n        \n    }\n}",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def preorderTraversal(self, root: TreeNode | None) -> list[int]:\n        ",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def preorderTraversal(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar preorderTraversal = function(root) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction preorderTraversal(root: TreeNode | null): number[] {\n    \n};",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public IList<int> PreorderTraversal(TreeNode root) {\n        \n    }\n}",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* preorderTraversal(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc preorderTraversal(root *TreeNode) []int {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun preorderTraversal(root: TreeNode?): List<Int> {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func preorderTraversal(_ root: TreeNode?) -> [Int] {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @return {Integer[]}\ndef preorder_traversal(root)\n    \nend",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $root\n     * @return Integer[]\n     */\n    function preorderTraversal($root) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  List<int> preorderTraversal(TreeNode? root) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def preorderTraversal(root: TreeNode): List[Int] = {\n        \n    }\n}",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec preorder_traversal(root :: TreeNode.t | nil) :: [integer]\n  def preorder_traversal(root) do\n    \n  end\nend",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec preorder_traversal(Root :: #tree_node{} | null) -> [integer()].\npreorder_traversal(Root) ->\n  .",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (preorder-traversal root)\n  (-> (or/c tree-node? #f) (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[4,-8,12]",
+      "expectedOutput": "[4,-8,12]"
+    },
+    {
+      "input": "[11,9,-7,null,5]",
+      "expectedOutput": "[11,9,5,-7]"
+    },
+    {
+      "input": "[-2,6,13,9,null,7]",
+      "expectedOutput": "[-2,6,9,13,7]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[]",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "[-100]",
+      "expectedOutput": "[-100]"
+    },
+    {
+      "input": "[0,100]",
+      "expectedOutput": "[0,100]"
+    },
+    {
+      "input": "[4,-8,12]",
+      "expectedOutput": "[4,-8,12]"
+    },
+    {
+      "input": "[11,9,-7,null,5]",
+      "expectedOutput": "[11,9,5,-7]"
+    },
+    {
+      "input": "[-2,6,13,9,null,7]",
+      "expectedOutput": "[-2,6,9,13,7]"
+    },
+    {
+      "input": "[0,0,0,0,0,0,0,0]",
+      "expectedOutput": "[0,0,0,0,0,0,0,0]"
+    },
+    {
+      "input": "[-95,32,null,17,null,-12,null,33,null,-82,null,32,null,-72,null,79,null,-51,null,90,null,-91,null,100]",
+      "expectedOutput": "[-95,32,17,-12,33,-82,32,-72,79,-51,90,-91,100]"
+    },
+    {
+      "input": "[-91,-83,-89,-24,63,57,null,null,null,null,59,-84,null,null,-6,null,-65,null,null,-55,84,-39,null,-12,96,null,null,null,null,49,null,-47]",
+      "expectedOutput": "[-91,-83,-24,63,59,-6,-89,57,-84,-65,-55,-39,84,-12,96,49,-47]"
+    },
+    {
+      "input": "[-24,null,21,null,54,null,21,null,62,null,84,null,-31,null,-85,null,-39,null,-98]",
+      "expectedOutput": "[-24,21,54,21,62,84,-31,-85,-39,-98]"
+    },
+    {
+      "input": "[23,null,-35,23,null,null,98,48,null,null,-24,-13,null,null,11,27,null,null,-48,76,null,null,-2,26,null,null,-57,-81,null,null,1,43,null,null,8,-40]",
+      "expectedOutput": "[23,-35,23,98,48,-24,-13,11,27,-48,76,-2,26,-57,-81,1,43,8,-40]"
+    },
+    {
+      "input": "[53,-100,-74,-39,-11,78,88,86,-2,84,-62,18]",
+      "expectedOutput": "[53,-100,-39,86,-2,-11,84,-62,-74,78,18,88]"
+    },
+    {
+      "input": "[-7,17,-85,null,76,-28,-31,null,-24,null,null,null,null,null,-28,null,-49,null,-5,null,15,null,43,null,89,null,7,null,-95,null,79]",
+      "expectedOutput": "[-7,17,76,-24,-28,-49,-5,15,43,89,7,-95,79,-85,-28,-31]"
+    },
+    {
+      "input": "[7,-1,-57,30,-35,-84,null,-30,5,-56,null,66,null,-91,null,-48,null,72,null,null,null,58,79,72,null,null,null,null,null,55,null,null,null,-1]",
+      "expectedOutput": "[7,-1,30,-30,-91,58,79,55,-1,5,-48,72,-35,-56,72,-57,-84,66]"
+    },
+    {
+      "input": "[3,-7,-78,-79,-13,-20,-82,-12,-3,18,-22,-64,95,12,91,null,36,-59,3,null,-13,30,-50,null,-3,19,-93,-70,-94,-93,13]",
+      "expectedOutput": "[3,-7,-79,-12,36,-3,-59,3,-13,18,-13,-22,30,-50,-78,-20,-64,-3,95,19,-93,-82,12,-70,-94,91,-93,13]"
+    },
+    {
+      "input": "[80,-42,51,null,null,38,37,null,null,-65,-20,-13,73,null,null,null,null,16,54,85,8,null,null,null,null,82,-97,null,null,-18,-22,null,null,47,-91,null,null,78,25,-15,18,null,null,null,null,8,-38,null,null,95,-92,46,36,null,null,null,null,-64,0,46,4,null,null,null,null,-89,15,null,null,-15,-27]",
+      "expectedOutput": "[80,-42,51,38,37,-65,-13,73,16,85,8,82,-97,-18,-22,47,-91,78,-15,18,8,-38,95,46,36,-64,46,4,-89,15,-15,-27,0,-92,25,54,-20]"
+    },
+    {
+      "input": "[17,-38,61,-25,-70,null,-72,null,-80,null,null,31,92,null,null,3,-25,-57,-66,null,null,43,16,65,null,-82,null,null,58,null,null,null,null,63,-16,null,null,null,null,-73,-44,null,null,null,64]",
+      "expectedOutput": "[17,-38,-25,-80,-70,61,-72,31,3,-25,43,58,16,92,-57,65,-66,-82,63,-16,-73,-44,64]"
+    },
+    {
+      "input": "[2,-28,null,7,null,-63,null,44,null,99,null,-12,null,-67,null,35,null,37,null,3,null,-72,null,89,null,-79,null,-41,null,-15,null,-48,null,-83,null,75,null,19,null,-96,null,-32,null,-46,null,-44,null,4,null,-82,null,-90,null,2,null,94,null,-23,null,-58,null,-30,null,26,null,88,null,97,null,93,null,-4,null,-28,null,81,null,57]",
+      "expectedOutput": "[2,-28,7,-63,44,99,-12,-67,35,37,3,-72,89,-79,-41,-15,-48,-83,75,19,-96,-32,-46,-44,4,-82,-90,2,94,-23,-58,-30,26,88,97,93,-4,-28,81,57]"
+    },
+    {
+      "input": "[35,-18,57,-6,38,-7,-18,32,86,87,43,-6,95,-96,35,20,-43,-47,-23,-89,-46,-29,-6,81,82,-14,71,-3,-29,-13,56,-70,57,72,-73,83,50,-86,-40,-67,26,84,75,-2,-17,64,-90,20,91,-81,-20,6,-18,-65,60,-41,-87,-14,19,91,-82,49,37,85,-20,69,94,-57,-87,-68,-57,-53,-97,38,95,-89,-66,-63,67,4,-91,-91,-31,87,-38,77,-92,-29,6,6,34,93,-13,-52,-76,-48,3,-24,5,-87]",
+      "expectedOutput": "[35,-18,-6,32,20,-70,85,-20,57,69,94,-43,72,-57,-87,-73,-68,-57,86,-47,83,-53,-97,50,38,95,-23,-86,-89,-66,-40,-63,67,38,87,-89,-67,4,-91,26,-91,-31,-46,84,87,-38,75,77,-92,43,-29,-2,-29,6,-17,6,34,-6,64,93,-13,-90,-52,-76,57,-7,-6,81,20,-48,3,91,-24,5,82,-81,-87,-20,95,-14,6,-18,71,-65,60,-18,-96,-3,-41,-87,-29,-14,19,35,-13,91,-82,56,49,37]"
+    },
+    {
+      "input": "[-58,null,-71,null,-31,null,71,35,null,null,-72,null,87,null,70,31,null,-61,null,-23,null,-73,null,-44,null,54,null,null,17,null,-42,null,53,13,null,null,80,null,90,null,72,null,-25,null,70,40,null,null,-49,null,-81,null,-92,null,-34,-89,null,null,-39,null,-100,8,null,null,82,56,null,-47,null,null,83,-39,null,null,-93,76,null,null,38,-77,null,null,-95,null,93,null,44,-58,null,null,-53,null,3,28,null,-50,null,97,null,null,71,null,-36,null,-36,60,null,null,-4,-60,null,63,null,null,70,null,36,-63,null,-4,null,null,7,null,-78,-42,null,-5,null,null,87,null,79,26,null,-58,null,43,null,null,-51,null,32,null,-69,null,14,null,73,25,null,null,-8,61,null,39,null,-58,null,null,-34,null,3,-5,null,null,48,null,5,null,62,30,null,null,93,null,65,7,null,null,-23,-95,null,-72,null,78,null,17,null,null,-18,78]",
+      "expectedOutput": "[-58,-71,-31,71,35,-72,87,70,31,-61,-23,-73,-44,54,17,-42,53,13,80,90,72,-25,70,40,-49,-81,-92,-34,-89,-39,-100,8,82,56,-47,83,-39,-93,76,38,-77,-95,93,44,-58,-53,3,28,-50,97,71,-36,-36,60,-4,-60,63,70,36,-63,-4,7,-78,-42,-5,87,79,26,-58,43,-51,32,-69,14,73,25,-8,61,39,-58,-34,3,-5,48,5,62,30,93,65,7,-23,-95,-72,78,17,-18,78]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.627Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "3283",
+  "slug": "maximum-number-of-moves-to-kill-all-pawns",
+  "title": "Maximum Number of Moves to Kill All Pawns",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Math",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Game Theory",
+    "Bitmask"
+  ],
+  "statement": "There is a `50 x 50` chessboard with **one** knight and some pawns on it. You are given two integers `kx` and `ky` where `(kx, ky)` denotes the position of the knight, and a 2D array `positions` where `positions[i] = [x_(i), y_(i)]` denotes the position of the pawns on the chessboard.\n\nAlice and Bob play a _turn-based_ game, where Alice goes first. In each player's turn:\n\n*   The player _selects_ a pawn that still exists on the board and captures it with the knight in the **fewest** possible **moves**. **Note** that the player can select **any** pawn, it **might not** be one that can be captured in the **least** number of moves.\n*   In the process of capturing the _selected_ pawn, the knight **may** pass other pawns **without** capturing them. **Only** the _selected_ pawn can be captured in _this_ turn.\n\nAlice is trying to **maximize** the **sum** of the number of moves made by _both_ players until there are no more pawns on the board, whereas Bob tries to **minimize** them.\n\nReturn the **maximum** _total_ number of moves made during the game that Alice can achieve, assuming both players play **optimally**.\n\nNote that in one **move,** a chess knight has eight possible positions it can move to, as illustrated below. Each move is two cells in a cardinal direction, then one cell in an orthogonal direction.\n\n![](./assets/maximum-number-of-moves-to-kill-all-pawns-1.jpg)\n\n**Example 1:**\n\n**Input:** kx = 1, ky = 1, positions = \\[\\[0,0\\]\\]\n\n**Output:** 4\n\n**Explanation:**\n\n![](./assets/maximum-number-of-moves-to-kill-all-pawns-2.gif)\n\nThe knight takes 4 moves to reach the pawn at `(0, 0)`.\n\n**Example 2:**\n\n**Input:** kx = 0, ky = 2, positions = \\[\\[1,1\\],\\[2,2\\],\\[3,3\\]\\]\n\n**Output:** 8\n\n**Explanation:**\n\n**![](./assets/maximum-number-of-moves-to-kill-all-pawns-3.gif)**\n\n*   Alice picks the pawn at `(2, 2)` and captures it in two moves: `(0, 2) -> (1, 4) -> (2, 2)`.\n*   Bob picks the pawn at `(3, 3)` and captures it in two moves: `(2, 2) -> (4, 1) -> (3, 3)`.\n*   Alice picks the pawn at `(1, 1)` and captures it in four moves: `(3, 3) -> (4, 1) -> (2, 2) -> (0, 3) -> (1, 1)`.\n\n**Example 3:**\n\n**Input:** kx = 0, ky = 0, positions = \\[\\[1,2\\],\\[2,4\\]\\]\n\n**Output:** 3\n\n**Explanation:**\n\n*   Alice picks the pawn at `(2, 4)` and captures it in two moves: `(0, 0) -> (1, 2) -> (2, 4)`. Note that the pawn at `(1, 2)` is not captured.\n*   Bob picks the pawn at `(1, 2)` and captures it in one move: `(2, 4) -> (1, 2)`.\n\n**Constraints:**\n\n*   `0 <= kx, ky <= 49`\n*   `1 <= positions.length <= 15`\n*   `positions[i].length == 2`\n*   `0 <= positions[i][0], positions[i][1] <= 49`\n*   All `positions[i]` are unique.\n*   The input is generated such that `positions[i] != [kx, ky]` for all `0 <= i < positions.length`.",
+  "constraints": [
+    "0 <= kx, ky <= 49",
+    "1 <= positions.length <= 15",
+    "positions[i].length == 2",
+    "0 <= positions[i][0], positions[i][1] <= 49",
+    "All positions[i] are unique.",
+    "The input is generated such that positions[i] != [kx, ky] for all 0 <= i < positions.length."
+  ],
+  "examples": [
+    {
+      "input": "kx = 1, ky = 1, positions = [[0,0]]",
+      "output": "4",
+      "explanation": null
+    },
+    {
+      "input": "kx = 0, ky = 2, positions = [[1,1],[2,2],[3,3]]",
+      "output": "8",
+      "explanation": null
+    },
+    {
+      "input": "kx = 0, ky = 0, positions = [[1,2],[2,4]]",
+      "output": "3",
+      "explanation": "Alice picks the pawn at (2, 4) and captures it in two moves: (0, 0) -> (1, 2) -> (2, 4). Note that the pawn at (1, 2) is not captured.\n\tBob picks the pawn at (1, 2) and captures it in one move: (2, 4) -> (1, 2)."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int maxMoves(int kx, int ky, vector<vector<int>>& positions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxMoves(int kx, int ky, int[][] positions) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxMoves(self, kx: int, ky: int, positions: List[List[int]]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxMoves(self, kx, ky, positions):\n        \"\"\"\n        :type kx: int\n        :type ky: int\n        :type positions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} kx\n * @param {number} ky\n * @param {number[][]} positions\n * @return {number}\n */\nvar maxMoves = function(kx, ky, positions) {\n    \n};",
+    "typescript": "function maxMoves(kx: number, ky: number, positions: number[][]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MaxMoves(int kx, int ky, int[][] positions) {\n        \n    }\n}",
+    "c": "int maxMoves(int kx, int ky, int** positions, int positionsSize, int* positionsColSize) {\n    \n}",
+    "golang": "func maxMoves(kx int, ky int, positions [][]int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxMoves(kx: Int, ky: Int, positions: Array<IntArray>): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxMoves(_ kx: Int, _ ky: Int, _ positions: [[Int]]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_moves(kx: i32, ky: i32, positions: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} kx\n# @param {Integer} ky\n# @param {Integer[][]} positions\n# @return {Integer}\ndef max_moves(kx, ky, positions)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $kx\n     * @param Integer $ky\n     * @param Integer[][] $positions\n     * @return Integer\n     */\n    function maxMoves($kx, $ky, $positions) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxMoves(int kx, int ky, List<List<int>> positions) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxMoves(kx: Int, ky: Int, positions: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_moves(kx :: integer, ky :: integer, positions :: [[integer]]) :: integer\n  def max_moves(kx, ky, positions) do\n    \n  end\nend",
+    "erlang": "-spec max_moves(Kx :: integer(), Ky :: integer(), Positions :: [[integer()]]) -> integer().\nmax_moves(Kx, Ky, Positions) ->\n  .",
+    "racket": "(define/contract (max-moves kx ky positions)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "8\n9\n[[9,11],[10,13]]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "11\n15\n[[13,16],[9,20],[17,14]]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "0\n1\n[[0,0],[1,3],[3,2]]",
+      "expectedOutput": "6"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "12\n19\n[[14,20]]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "48\n48\n[[49,49]]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "8\n9\n[[9,11],[10,13]]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "25\n24\n[[0,49],[49,0]]",
+      "expectedOutput": "52"
+    },
+    {
+      "input": "11\n15\n[[13,16],[9,20],[17,14]]",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "0\n1\n[[0,0],[1,3],[3,2]]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "21\n28\n[[20,20],[22,24],[24,18]]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "17\n31\n[[0,0],[49,49],[0,49],[49,0]]",
+      "expectedOutput": "105"
+    },
+    {
+      "input": "24\n26\n[[28,20],[29,26],[24,22],[25,22],[22,21],[23,20]]",
+      "expectedOutput": "18"
+    },
+    {
+      "input": "7\n13\n[[0,17],[49,31],[23,0],[41,49],[0,48]]",
+      "expectedOutput": "98"
+    },
+    {
+      "input": "9\n41\n[[32,0],[4,13],[17,38],[9,40],[40,24],[4,4],[23,6]]",
+      "expectedOutput": "97"
+    },
+    {
+      "input": "37\n23\n[[13,2],[13,8],[13,29],[13,47]]",
+      "expectedOutput": "50"
+    },
+    {
+      "input": "19\n37\n[[3,1],[45,48],[48,49],[46,45],[47,47],[3,3]]",
+      "expectedOutput": "81"
+    },
+    {
+      "input": "38\n6\n[[24,41],[24,28],[23,11],[20,3],[38,28],[23,39],[13,21]]",
+      "expectedOutput": "77"
+    },
+    {
+      "input": "29\n11\n[[9,49],[0,6],[15,49],[49,10],[39,0],[0,12],[2,0],[0,4]]",
+      "expectedOutput": "112"
+    },
+    {
+      "input": "18\n21\n[[18,26],[17,19],[19,20],[18,18],[23,20],[15,19],[15,25],[20,21],[15,26],[20,19]]",
+      "expectedOutput": "32"
+    },
+    {
+      "input": "43\n32\n[[34,9],[24,35],[3,19],[37,14],[40,28],[5,33],[44,7],[27,29],[7,11]]",
+      "expectedOutput": "111"
+    },
+    {
+      "input": "6\n42\n[[7,44],[47,3],[8,40],[1,1],[9,43],[46,48],[4,41],[39,9],[10,39],[23,24]]",
+      "expectedOutput": "149"
+    },
+    {
+      "input": "22\n35\n[[0,35],[0,24],[2,38],[19,7],[17,37],[24,29],[35,13],[17,40],[41,6],[19,3],[39,32],[26,18],[24,41],[17,30],[16,14]]",
+      "expectedOutput": "165"
+    },
+    {
+      "input": "31\n17\n[[1,0],[43,46],[1,2],[6,0],[49,45],[3,45],[4,1],[48,2],[49,0],[2,1],[44,6],[43,4],[2,43],[3,0]]",
+      "expectedOutput": "194"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use BFS to preprocess the minimum number of moves to reach one pawn from the other pawns.",
+    "Consider the knight’s original position as another pawn.",
+    "Use DP with a bitmask to store current pawns that have not been captured."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/maximum-number-of-moves-to-kill-all-pawns/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:22.089Z",
+    "sourceUpdatedAt": null
+  }
+}

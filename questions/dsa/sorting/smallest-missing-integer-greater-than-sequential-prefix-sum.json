@@ -1,0 +1,149 @@
+{
+  "id": "2996",
+  "slug": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+  "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+  "category": "dsa",
+  "subcategory": "sorting",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
+  "statement": "**Note:** The updated title is **\"Smallest Missing Integer Greater Than or Equal to Sequential Prefix Sum\".**\n\nYou are given a **0-indexed** array of integers `nums`.\n\nA prefix `nums[0..i]` is **sequential** if, for all `1 <= j <= i`, `nums[j] = nums[j - 1] + 1`. In particular, the prefix consisting only of `nums[0]` is **sequential**.\n\nReturn _the **smallest** integer_ `x` _missing from_ `nums` _such that_ `x` _is greater than or equal to the sum of the **longest** sequential prefix._\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3,2,5]\nOutput: 6\nExplanation: The longest sequential prefix of nums is [1,2,3] with a sum of 6. 6 is not in the array, therefore 6 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.\n```\n\n**Example 2:**\n\n```\nInput: nums = [3,4,5,1,12,14,13]\nOutput: 15\nExplanation: The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.\n```\n\n**Constraints:**\n\n*   `1 <= nums.length <= 50`\n*   `1 <= nums[i] <= 50`",
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 50"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,3,2,5]",
+      "output": "6",
+      "explanation": "The longest sequential prefix of nums is [1,2,3] with a sum of 6. 6 is not in the array, therefore 6 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix."
+    },
+    {
+      "input": "nums = [3,4,5,1,12,14,13]",
+      "output": "15",
+      "explanation": "The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int missingInteger(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int missingInteger(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def missingInteger(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def missingInteger(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar missingInteger = function(nums) {\n    \n};",
+    "typescript": "function missingInteger(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MissingInteger(int[] nums) {\n        \n    }\n}",
+    "c": "int missingInteger(int* nums, int numsSize) {\n    \n}",
+    "golang": "func missingInteger(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun missingInteger(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func missingInteger(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn missing_integer(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef missing_integer(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function missingInteger($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int missingInteger(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def missingInteger(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec missing_integer(nums :: [integer]) :: integer\n  def missing_integer(nums) do\n    \n  end\nend",
+    "erlang": "-spec missing_integer(Nums :: [integer()]) -> integer().\nmissing_integer(Nums) ->\n  .",
+    "racket": "(define/contract (missing-integer nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[46]",
+      "expectedOutput": "47"
+    },
+    {
+      "input": "[18,42]",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "[25,26,27]",
+      "expectedOutput": "78"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[19,5,42,23,36]",
+      "expectedOutput": "20"
+    },
+    {
+      "input": "[43,44,45,46,47,48,49]",
+      "expectedOutput": "322"
+    },
+    {
+      "input": "[21,49,29,40,36,24,23,21,10,3]",
+      "expectedOutput": "22"
+    },
+    {
+      "input": "[39,40,41,42,43,44,45,46,22,15,37,4,42]",
+      "expectedOutput": "340"
+    },
+    {
+      "input": "[27,10,11,44,44,35,36,44,12,48,50,49,25,34,47,10]",
+      "expectedOutput": "28"
+    },
+    {
+      "input": "[33,34,35,36,37,38,39,40,12,48,28,37,30,29,30,8,26,37,33]",
+      "expectedOutput": "292"
+    },
+    {
+      "input": "[1,19,19,11,10,4,22,36,50,9,43,5,1,36,17,37,10,8,28,38,17,44,45]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[27,28,29,30,31,32,33,34,23,46,4,36,12,37,18,46,42,34,13,26,44,5,1,16,2,32,29]",
+      "expectedOutput": "244"
+    },
+    {
+      "input": "[32,31,16,2,1,22,22,43,16,24,2,3,41,43,22,44,37,7,15,37,37,30,45,6,8,31,6,49,6,37,29,20]",
+      "expectedOutput": "33"
+    },
+    {
+      "input": "[6,7,8,9,10,11,12,13,28,24,23,27,41,9,50,15,8,33,10,12,28,5,33,26,13,3,18,12,8,19,35,15,35,10,46,19,4]",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "[37,23,19,3,39,25,46,47,41,23,1,41,42,5,28,47,7,5,18,11,28,45,43,46,24,40,4,14,33,6,2,35,28,28,21,30,25,46,29,24,28,42]",
+      "expectedOutput": "38"
+    },
+    {
+      "input": "[34,35,36,37,38,39,40,41,9,40,20,32,16,24,17,16,44,18,50,35,27,29,39,24,27,38,42,45,49,38,11,13,28,12,3,9,3,26,46,8,30,9,47,43,19,13,12]",
+      "expectedOutput": "300"
+    },
+    {
+      "input": "[47,45,19,25,31,14,50,46,25,18,46,7,12,29,3,36,31,37,32,2,28,18,33,2,11,28,16,2,22,29,31,4,22,30,4,38,46,36,9,48,46,41,38,47,5,46,32,7,38,31]",
+      "expectedOutput": "49"
+    },
+    {
+      "input": "[50,50,50,50,50,50,50,50,45,30,49,41,17,10,6,28,7,42,37,10,44,50,31,9,50,22,7,46,46,45,12,37,46,37,3,44,35,4,48,34,6,27,43,35,43,19,23,45,35,47]",
+      "expectedOutput": "51"
+    },
+    {
+      "input": "[40,31,26,22,39,27,36,22,37,27,37,33,42,38,28,15,42,49,32,19,4,6,32,9,50,15,13,5,33,25,4,18,3,4,47,19,13,38,26,32,13,17,35,46,19,2,3,25,30,15]",
+      "expectedOutput": "41"
+    },
+    {
+      "input": "[25,26,27,28,29,30,31,32,36,10,34,50,38,14,32,46,18,34,47,13,14,30,20,12,38]",
+      "expectedOutput": "228"
+    },
+    {
+      "input": "[27,47,39,8,42,6,45,31,14,29,5,21,40,41,32,8,35,29,16,6,22,3,4,34,42,24,5,7,34,34,30,41,50,43,38,21,36,2,22,10,24,50,31,41,18,46,27,5,8,35]",
+      "expectedOutput": "28"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "To find the longest sequential prefix, iterate from left to right. For a fixed <code>i</code>, if <code>nums[i] != nums[i - 1] + 1</code> then the longest sequential prefix ends at <code>i - 1</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:29.760Z",
+    "sourceUpdatedAt": null
+  }
+}

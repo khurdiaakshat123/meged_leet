@@ -1,0 +1,164 @@
+{
+  "id": "2103",
+  "slug": "rings-and-rods",
+  "title": "Rings and Rods",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ],
+  "statement": "There are `n` rings and each ring is either red, green, or blue. The rings are distributed **across ten rods** labeled from `0` to `9`.\n\nYou are given a string `rings` of length `2n` that describes the `n` rings that are placed onto the rods. Every two characters in `rings` forms a **color-position pair** that is used to describe each ring where:\n\n*   The **first** character of the `i^(th)` pair denotes the `i^(th)` ring's **color** (`'R'`, `'G'`, `'B'`).\n*   The **second** character of the `i^(th)` pair denotes the **rod** that the `i^(th)` ring is placed on (`'0'` to `'9'`).\n\nFor example, `\"R3G2B1\"` describes `n == 3` rings: a red ring placed onto the rod labeled 3, a green ring placed onto the rod labeled 2, and a blue ring placed onto the rod labeled 1.\n\nReturn _the number of rods that have **all three colors** of rings on them._\n\n**Example 1:**\n\n![](./assets/rings-and-rods-1.png)\n```\nInput: rings = \"B0B6G0R6R0R6G9\"\nOutput: 1\nExplanation: \n- The rod labeled 0 holds 3 rings with all colors: red, green, and blue.\n- The rod labeled 6 holds 3 rings, but it only has red and blue.\n- The rod labeled 9 holds only a green ring.\nThus, the number of rods with all three colors is 1.\n```\n\n**Example 2:**\n\n![](./assets/rings-and-rods-2.png)\n```\nInput: rings = \"B0R0G0R9R0B0G0\"\nOutput: 1\nExplanation: \n- The rod labeled 0 holds 6 rings with all colors: red, green, and blue.\n- The rod labeled 9 holds only a red ring.\nThus, the number of rods with all three colors is 1.\n```\n\n**Example 3:**\n\n```\nInput: rings = \"G4\"\nOutput: 0\nExplanation: \nOnly one ring is given. Thus, no rods have all three colors.\n```\n\n**Constraints:**\n\n*   `rings.length == 2 * n`\n*   `1 <= n <= 100`\n*   `rings[i]` where `i` is **even** is either `'R'`, `'G'`, or `'B'` (**0-indexed**).\n*   `rings[i]` where `i` is **odd** is a digit from `'0'` to `'9'` (**0-indexed**).",
+  "constraints": [
+    "rings.length == 2 * n",
+    "1 <= n <= 100",
+    "rings[i] where i is even is either 'R', 'G', or 'B' (0-indexed).",
+    "rings[i] where i is odd is a digit from '0' to '9' (0-indexed)."
+  ],
+  "examples": [
+    {
+      "input": "rings = \"B0B6G0R6R0R6G9\"",
+      "output": "1",
+      "explanation": "- The rod labeled 0 holds 3 rings with all colors: red, green, and blue.\n- The rod labeled 6 holds 3 rings, but it only has red and blue.\n- The rod labeled 9 holds only a green ring.\nThus, the number of rods with all three colors is 1."
+    },
+    {
+      "input": "rings = \"B0R0G0R9R0B0G0\"",
+      "output": "1",
+      "explanation": "- The rod labeled 0 holds 6 rings with all colors: red, green, and blue.\n- The rod labeled 9 holds only a red ring.\nThus, the number of rods with all three colors is 1."
+    },
+    {
+      "input": "rings = \"G4\"",
+      "output": "0",
+      "explanation": "Only one ring is given. Thus, no rods have all three colors."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countPoints(string rings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPoints(String rings) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countPoints(self, rings: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def countPoints(self, rings):\n        \"\"\"\n        :type rings: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} rings\n * @return {number}\n */\nvar countPoints = function(rings) {\n    \n};",
+    "typescript": "function countPoints(rings: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int CountPoints(string rings) {\n        \n    }\n}",
+    "c": "int countPoints(char* rings) {\n    \n}",
+    "golang": "func countPoints(rings string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countPoints(rings: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPoints(_ rings: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_points(rings: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} rings\n# @return {Integer}\ndef count_points(rings)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $rings\n     * @return Integer\n     */\n    function countPoints($rings) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPoints(String rings) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def countPoints(rings: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec count_points(rings :: String.t) :: integer\n  def count_points(rings) do\n    \n  end\nend",
+    "erlang": "-spec count_points(Rings :: unicode:unicode_binary()) -> integer().\ncount_points(Rings) ->\n  .",
+    "racket": "(define/contract (count-points rings)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"B0B6G0R6R0R6G9\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"B0R0G0R9R0B0G0\"",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"G4\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"B0B6G0R6R0R6G9\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"B0R0G0R9R0B0G0\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"R9G9B9\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"R0G1B2\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"R5R5R5\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"R0G0B0R9G9B9\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"G4G6G0G0R4B0R0R5R3R5B0\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"R0B0G1R0B2G2G7R2R3G0B1R1R5B0R4G5B2R0G3\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"G1G7R5G6G4R6G4R3R6G4R7G1R9\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"G3R2B1G7B3G5R1B0G1G0B2G2R0R3B3G1B2\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"G1B1B0R0R9G6G7G0R1R6G8B0R0R4\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"R0G1R2R3R0R4B4G4B3G4G3G2B0B1B3R1G0B2\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"G4G7R1B0G0G1G4R6G3R5R4R0G9G3B0R3\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"G4B5R4R2R3G1B0G1G0R8R0G3B0R1G5G7B1B2G8R0B3B4B0G8R5G2R4\"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"G6G8B7B4B2G4R5R8G8R5B3B4R2R1G0B6R7G6R0B8R8B5G1G2R3B1B2B5B7G5B0G7B5R3R4B6G3G4R6\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"B2G7G2R3G9G1B0G6B1G0G1G8R1B2R4G2R2B0R0G4R5B2R2\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"R2G4G2G2R1G1R4G8G7R3R8R6R6G3R9G4G9R6R0G6R7G1R5R2R6G9R6R1R1R7R9R0G7R3\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"B5R2G6G9R1B4R1R9G3B0B4G9G6B8B8R7R0R8R1G3R9B3G5G4R5G7R7B6G5G7G2B1B4G0R4B6B2G9B5B1R7G6G6R1B6R9G2B0G2R2R4G2R8G1G5G5B8G8G6R0R6R6B7G9B0G2R0G1R1G7G3R5G0R8G8R8G3G5R4R3B2B9B2G3G2R9B1R7G1B4B2R6B2B7B6B6R3G9R2G0\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"B0G9G8R2B1B2B2G0R2R6G5G7R4B5B6R4R4G3R3R4B2G5B3G3R4G9B5G8R4G1R1R3G5G0R6G2B2R0G6G1G3B5G4B0R3R5R5G5G7G1B5R0R1B4G4B4G1R3R1R7B2R1G1R5B0G6R2B1R2R7R4R4G4R8R5R7R3R8G7G0R4R5G9G0G6B5B2G4B3G0R0G6B2R1B0G9G5\"",
+      "expectedOutput": "7"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "For every rod, look through ‘rings’ to see if the rod contains all colors.",
+    "Create 3 booleans, 1 for each color, to store if that color is present for the current rod. If all 3 are true after looking through the string, then the rod contains all the colors."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/rings-and-rods/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.943Z",
+    "sourceUpdatedAt": null
+  }
+}

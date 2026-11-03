@@ -1,0 +1,151 @@
+{
+  "id": "3940",
+  "slug": "limit-occurrences-in-sorted-array",
+  "title": "Limit Occurrences in Sorted Array",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "statement": "You are given a **sorted** integer array `nums` and an integer `k`.\n\nReturn an array such that each **distinct** element appears **at most** `k` times, while preserving the relative order of the elements in `nums`.\n\nNote: If a distinct element appears **at least** `k` times, then it must appear **exactly** `k` times in the resulting array.\n\n**Example 1:**\n\n**Input:** nums = \\[1,1,1,2,2,3\\], k = 2\n\n**Output:** \\[1,1,2,2,3\\]\n\n**Explanation:**\n\nEach element can appear at most 2 times.\n\n*   The element 1 appears 3 times, so only 2 occurrences are kept.\n*   The element 2 appears 2 times, so both occurrences are kept.\n*   The element 3 appears 1 time, so it is kept.\n\nThus, the resulting array is `[1, 1, 2, 2, 3]`.\n\n**Example 2:**\n\n**Input:** nums = \\[1,2,3\\], k = 1\n\n**Output:** \\[1,2,3\\]\n\n**Explanation:**\n\nAll elements are distinct and already appear at most once, so the array remains unchanged.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `1 <= nums[i] <= 100`\n*   `nums` is sorted in non-decreasing order.\n*   `1 <= k <= nums.length`\n\n**Follow-up:**\n\n*   Can you solve this in-place using O(1) extra space?\n*   Note that the space used for returning or resizing the result does not count toward the space complexity mentioned above, as some languages do not support in-place resizing.",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "nums is sorted in non-decreasing order.",
+    "1 <= k <= nums.length"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,1,1,2,2,3], k = 2",
+      "output": "[1,1,2,2,3]",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,2,3], k = 1",
+      "output": "[1,2,3]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> limitOccurrences(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] limitOccurrences(int[] nums, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def limitOccurrences(self, nums: list[int], k: int) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def limitOccurrences(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar limitOccurrences = function(nums, k) {\n    \n};",
+    "typescript": "function limitOccurrences(nums: number[], k: number): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public int[] LimitOccurrences(int[] nums, int k) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* limitOccurrences(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "golang": "func limitOccurrences(nums []int, k int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun limitOccurrences(nums: IntArray, k: Int): IntArray {\n        \n    }\n}",
+    "swift": "class Solution {\n    func limitOccurrences(_ nums: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn limit_occurrences(nums: Vec<i32>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer[]}\ndef limit_occurrences(nums, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function limitOccurrences($nums, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> limitOccurrences(List<int> nums, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def limitOccurrences(nums: Array[Int], k: Int): Array[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec limit_occurrences(nums :: [integer], k :: integer) :: [integer]\n  def limit_occurrences(nums, k) do\n    \n  end\nend",
+    "erlang": "-spec limit_occurrences(Nums :: [integer()], K :: integer()) -> [integer()].\nlimit_occurrences(Nums, K) ->\n  .",
+    "racket": "(define/contract (limit-occurrences nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[84]\n1",
+      "expectedOutput": "[84]"
+    },
+    {
+      "input": "[6,79]\n2",
+      "expectedOutput": "[6,79]"
+    },
+    {
+      "input": "[19,45,57]\n2",
+      "expectedOutput": "[19,45,57]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[47,52,85,90]\n1",
+      "expectedOutput": "[47,52,85,90]"
+    },
+    {
+      "input": "[35,72,76,78,83,93]\n6",
+      "expectedOutput": "[35,72,76,78,83,93]"
+    },
+    {
+      "input": "[3,19,22,42,43,47,61,73]\n5",
+      "expectedOutput": "[3,19,22,42,43,47,61,73]"
+    },
+    {
+      "input": "[1,12,14,16,18,47,50,51,74,99]\n1",
+      "expectedOutput": "[1,12,14,16,18,47,50,51,74,99]"
+    },
+    {
+      "input": "[17,17,19,30,38,40,41,42,54,57,71,77]\n7",
+      "expectedOutput": "[17,17,19,30,38,40,41,42,54,57,71,77]"
+    },
+    {
+      "input": "[9,12,18,23,24,27,37,40,44,61,63,77,82,88,94]\n9",
+      "expectedOutput": "[9,12,18,23,24,27,37,40,44,61,63,77,82,88,94]"
+    },
+    {
+      "input": "[12,13,21,24,29,35,43,45,51,56,59,61,61,76,80,83,86,92]\n10",
+      "expectedOutput": "[12,13,21,24,29,35,43,45,51,56,59,61,61,76,80,83,86,92]"
+    },
+    {
+      "input": "[6,14,20,20,23,30,31,40,50,51,52,54,59,66,71,73,75,77,84,89,96]\n9",
+      "expectedOutput": "[6,14,20,20,23,30,31,40,50,51,52,54,59,66,71,73,75,77,84,89,96]"
+    },
+    {
+      "input": "[6,7,11,16,17,19,23,24,24,28,36,39,40,42,50,51,53,58,62,63,66,77,87,89]\n10",
+      "expectedOutput": "[6,7,11,16,17,19,23,24,24,28,36,39,40,42,50,51,53,58,62,63,66,77,87,89]"
+    },
+    {
+      "input": "[1,1,6,16,18,19,20,23,29,34,43,47,49,51,53,54,61,66,74,75,77,79,80,83,95,96,96]\n21",
+      "expectedOutput": "[1,1,6,16,18,19,20,23,29,34,43,47,49,51,53,54,61,66,74,75,77,79,80,83,95,96,96]"
+    },
+    {
+      "input": "[2,2,3,6,9,14,23,35,36,37,42,47,49,61,61,65,67,67,68,69,74,75,76,77,78,79,80,91,97,100]\n20",
+      "expectedOutput": "[2,2,3,6,9,14,23,35,36,37,42,47,49,61,61,65,67,67,68,69,74,75,76,77,78,79,80,91,97,100]"
+    },
+    {
+      "input": "[4,5,5,6,8,8,11,12,13,14,17,19,27,30,32,41,44,45,46,48,48,48,59,61,61,70,72,72,73,84,89,91,93,97]\n21",
+      "expectedOutput": "[4,5,5,6,8,8,11,12,13,14,17,19,27,30,32,41,44,45,46,48,48,48,59,61,61,70,72,72,73,84,89,91,93,97]"
+    },
+    {
+      "input": "[5,6,8,16,17,19,20,22,28,30,36,37,40,43,46,48,50,51,54,55,58,61,61,66,66,73,74,75,76,77,77,79,82,83,85,95,98,99]\n1",
+      "expectedOutput": "[5,6,8,16,17,19,20,22,28,30,36,37,40,43,46,48,50,51,54,55,58,61,66,73,74,75,76,77,79,82,83,85,95,98,99]"
+    },
+    {
+      "input": "[2,3,5,7,7,7,8,16,16,21,23,23,26,30,34,38,41,41,41,44,45,46,47,61,61,62,64,65,66,67,67,76,77,82,82,86,89,91,91,92,93,94]\n14",
+      "expectedOutput": "[2,3,5,7,7,7,8,16,16,21,23,23,26,30,34,38,41,41,41,44,45,46,47,61,61,62,64,65,66,67,67,76,77,82,82,86,89,91,91,92,93,94]"
+    },
+    {
+      "input": "[2,6,6,7,8,11,11,14,17,21,22,25,30,35,40,44,45,46,51,52,53,55,58,61,62,65,68,71,72,74,77,77,81,82,82,85,85,87,87,88,88,92,92,94,95,100]\n27",
+      "expectedOutput": "[2,6,6,7,8,11,11,14,17,21,22,25,30,35,40,44,45,46,51,52,53,55,58,61,62,65,68,71,72,74,77,77,81,82,82,85,85,87,87,88,88,92,92,94,95,100]"
+    },
+    {
+      "input": "[3,5,6,7,12,14,18,19,23,24,24,26,29,35,35,36,38,47,48,50,52,53,53,55,56,57,57,59,62,62,63,67,67,69,72,73,76,77,79,80,83,85,86,86,87,88,88,93,98,100]\n5",
+      "expectedOutput": "[3,5,6,7,12,14,18,19,23,24,24,26,29,35,35,36,38,47,48,50,52,53,53,55,56,57,57,59,62,62,63,67,67,69,72,73,76,77,79,80,83,85,86,86,87,88,88,93,98,100]"
+    },
+    {
+      "input": "[1,2,3,4,5,6,7,10,11,14,15,15,15,15,16,17,19,20,20,22,22,23,23,23,24,28,28,28,28,28,29,29,30,30,30,31,32,34,35,35,36,37,39,39,40,42,45,45,45,46,47,49,50,52,53,54,56,56,57,57,61,63,63,65,65,67,67,67,71,72,72,73,73,73,73,75,76,76,76,77,80,83,84,84,86,87,87,88,89,89,89,92,93,93,94,95,95,96,98,99]\n85",
+      "expectedOutput": "[1,2,3,4,5,6,7,10,11,14,15,15,15,15,16,17,19,20,20,22,22,23,23,23,24,28,28,28,28,28,29,29,30,30,30,31,32,34,35,35,36,37,39,39,40,42,45,45,45,46,47,49,50,52,53,54,56,56,57,57,61,63,63,65,65,67,67,67,71,72,72,73,73,73,73,75,76,76,76,77,80,83,84,84,86,87,87,88,89,89,89,92,93,93,94,95,95,96,98,99]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Go through the array, maintaining a counter of the number of occurrences of the largest integer so far.",
+    "If the counter is currently more than <code>k</code>, ignore the current element."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/limit-occurrences-in-sorted-array/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.303Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "id": "2380",
+  "slug": "time-needed-to-rearrange-a-binary-string",
+  "title": "Time Needed to Rearrange a Binary String",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Dynamic Programming",
+    "Simulation"
+  ],
+  "statement": "You are given a binary string `s`.\n\nIn one second, **all** occurrences of `\"01\"` are **simultaneously** replaced with `\"10\"`. This process **repeats** until no occurrences of `\"01\"` exist.\n\nReturn the number of seconds needed to complete this process.\n\n**Example 1:**\n\n```\nInput: s = \"0110101\"\nOutput: 4\nExplanation: \nAfter one second, s becomes \"1011010\".\nAfter another second, s becomes \"1101100\".\nAfter the third second, s becomes \"1110100\".\nAfter the fourth second, s becomes \"1111000\".\nNo occurrence of \"01\" exists any longer, and the process needed 4 seconds to complete,\nso we return 4.\n```\n\n**Example 2:**\n\n```\nInput: s = \"11100\"\nOutput: 0\nExplanation:\nNo occurrence of \"01\" exists in s, and the processes needed 0 seconds to complete,\nso we return 0.\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 1000`\n*   `s[i]` is either `'0'` or `'1'`.\n\n**Follow up:**\n\nCan you solve this problem in O(n) time complexity?",
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'."
+  ],
+  "examples": [
+    {
+      "input": "s = \"0110101\"",
+      "output": "4",
+      "explanation": "After one second, s becomes \"1011010\".\nAfter another second, s becomes \"1101100\".\nAfter the third second, s becomes \"1110100\".\nAfter the fourth second, s becomes \"1111000\".\nNo occurrence of \"01\" exists any longer, and the process needed 4 seconds to complete,\nso we return 4."
+    },
+    {
+      "input": "s = \"11100\"",
+      "output": "0",
+      "explanation": "No occurrence of \"01\" exists in s, and the processes needed 0 seconds to complete,\nso we return 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int secondsToRemoveOccurrences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int secondsToRemoveOccurrences(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def secondsToRemoveOccurrences(self, s: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def secondsToRemoveOccurrences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar secondsToRemoveOccurrences = function(s) {\n    \n};",
+    "typescript": "function secondsToRemoveOccurrences(s: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int SecondsToRemoveOccurrences(string s) {\n        \n    }\n}",
+    "c": "int secondsToRemoveOccurrences(char* s) {\n    \n}",
+    "golang": "func secondsToRemoveOccurrences(s string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun secondsToRemoveOccurrences(s: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func secondsToRemoveOccurrences(_ s: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn seconds_to_remove_occurrences(s: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef seconds_to_remove_occurrences(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function secondsToRemoveOccurrences($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int secondsToRemoveOccurrences(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def secondsToRemoveOccurrences(s: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec seconds_to_remove_occurrences(s :: String.t) :: integer\n  def seconds_to_remove_occurrences(s) do\n    \n  end\nend",
+    "erlang": "-spec seconds_to_remove_occurrences(S :: unicode:unicode_binary()) -> integer().\nseconds_to_remove_occurrences(S) ->\n  .",
+    "racket": "(define/contract (seconds-to-remove-occurrences s)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"0110101\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"11100\"",
+      "expectedOutput": "0"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"0110101\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"11100\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"0\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"1\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"01\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"0101\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"00111\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"01101110110\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"01100011011101101\"",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "\"00000000000000000000001\"",
+      "expectedOutput": "22"
+    },
+    {
+      "input": "\"0100111101100100000110000000000\"",
+      "expectedOutput": "12"
+    },
+    {
+      "input": "\"0010010100000011001101100110011001000\"",
+      "expectedOutput": "21"
+    },
+    {
+      "input": "\"0000001110110000101010000101101100011101101100011110001100010\"",
+      "expectedOutput": "35"
+    },
+    {
+      "input": "\"0010100111100111100011000110011001111101100010100011011001000101010110000110100\"",
+      "expectedOutput": "40"
+    },
+    {
+      "input": "\"00100011101001001010101010100100010011000010000001010\"",
+      "expectedOutput": "33"
+    },
+    {
+      "input": "\"00000100000101010000000010011011101110101101100111110011011101010011111101010001101001010\"",
+      "expectedOutput": "59"
+    },
+    {
+      "input": "\"001010001000011000011111111111110111001011111011100001110000100001110001011001000011011011001111101110011111101100111\"",
+      "expectedOutput": "74"
+    },
+    {
+      "input": "\"00000000000001010010100100011100000100010001101001100111011111001001111111111101001011110111110111111111000010100011010000000100001001010000110001101\"",
+      "expectedOutput": "91"
+    },
+    {
+      "input": "\"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111\"",
+      "expectedOutput": "999"
+    },
+    {
+      "input": "\"01011110000001011001000100100100010101100111000000000001000000010110100101000000110111011001000000001011011100100110110001010001000100000001100000010101000100000010001111000000000001000000001010000000011100000101000000101000000111000000000000100110101100000000100000000000010100111110010100000011011111111110111000111001001100101011001101110011011011010101111111011111101011111110111111110101010011111110101100110001001110110101011110100111011000000111111101111111010111111011111111100100011111111111010111111000010011111111011111111111111011111111011101011110110100110111111111110111111110111111011111100111111110111010111101000010111100111111110101111111101110111011111110110110111111101101110001111011100000100100101010001011001000100110110110000010000000000011101111111010000000101101110110011110000111010010000001100101011100000010111011011100000001100110000000000100010101111001010100111100110000010010000000010000100100010000000101011011001100001110101010010011110000100\"",
+      "expectedOutput": "610"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Try replicating the steps from the problem statement.",
+    "Perform the replacements simultaneously, and return the number of times the process repeats."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.046Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "id": "1455",
+  "slug": "check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence",
+  "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "String Matching"
+  ],
+  "statement": "Given a `sentence` that consists of some words separated by a **single space**, and a `searchWord`, check if `searchWord` is a prefix of any word in `sentence`.\n\nReturn _the index of the word in_ `sentence` _(**1-indexed**) where_ `searchWord` _is a prefix of this word_. If `searchWord` is a prefix of more than one word, return the index of the first word **(minimum index)**. If there is no such word return `-1`.\n\nA **prefix** of a string `s` is any leading contiguous substring of `s`.\n\n**Example 1:**\n\n```\nInput: sentence = \"i love eating burger\", searchWord = \"burg\"\nOutput: 4\nExplanation: \"burg\" is prefix of \"burger\" which is the 4th word in the sentence.\n```\n\n**Example 2:**\n\n```\nInput: sentence = \"this problem is an easy problem\", searchWord = \"pro\"\nOutput: 2\nExplanation: \"pro\" is prefix of \"problem\" which is the 2nd and the 6th word in the sentence, but we return 2 as it's the minimal index.\n```\n\n**Example 3:**\n\n```\nInput: sentence = \"i am tired\", searchWord = \"you\"\nOutput: -1\nExplanation: \"you\" is not a prefix of any word in the sentence.\n```\n\n**Constraints:**\n\n*   `1 <= sentence.length <= 100`\n*   `1 <= searchWord.length <= 10`\n*   `sentence` consists of lowercase English letters and spaces.\n*   `searchWord` consists of lowercase English letters.",
+  "constraints": [
+    "1 <= sentence.length <= 100",
+    "1 <= searchWord.length <= 10",
+    "sentence consists of lowercase English letters and spaces.",
+    "searchWord consists of lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "sentence = \"i love eating burger\", searchWord = \"burg\"",
+      "output": "4",
+      "explanation": "\"burg\" is prefix of \"burger\" which is the 4th word in the sentence."
+    },
+    {
+      "input": "sentence = \"this problem is an easy problem\", searchWord = \"pro\"",
+      "output": "2",
+      "explanation": "\"pro\" is prefix of \"problem\" which is the 2nd and the 6th word in the sentence, but we return 2 as it's the minimal index."
+    },
+    {
+      "input": "sentence = \"i am tired\", searchWord = \"you\"",
+      "output": "-1",
+      "explanation": "\"you\" is not a prefix of any word in the sentence."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int isPrefixOfWord(string sentence, string searchWord) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int isPrefixOfWord(String sentence, String searchWord) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def isPrefixOfWord(self, sentence, searchWord):\n        \"\"\"\n        :type sentence: str\n        :type searchWord: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} sentence\n * @param {string} searchWord\n * @return {number}\n */\nvar isPrefixOfWord = function(sentence, searchWord) {\n    \n};",
+    "typescript": "function isPrefixOfWord(sentence: string, searchWord: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int IsPrefixOfWord(string sentence, string searchWord) {\n        \n    }\n}",
+    "c": "int isPrefixOfWord(char* sentence, char* searchWord) {\n    \n}",
+    "golang": "func isPrefixOfWord(sentence string, searchWord string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun isPrefixOfWord(sentence: String, searchWord: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPrefixOfWord(_ sentence: String, _ searchWord: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_prefix_of_word(sentence: String, search_word: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} sentence\n# @param {String} search_word\n# @return {Integer}\ndef is_prefix_of_word(sentence, search_word)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $sentence\n     * @param String $searchWord\n     * @return Integer\n     */\n    function isPrefixOfWord($sentence, $searchWord) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int isPrefixOfWord(String sentence, String searchWord) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def isPrefixOfWord(sentence: String, searchWord: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec is_prefix_of_word(sentence :: String.t, search_word :: String.t) :: integer\n  def is_prefix_of_word(sentence, search_word) do\n    \n  end\nend",
+    "erlang": "-spec is_prefix_of_word(Sentence :: unicode:unicode_binary(), SearchWord :: unicode:unicode_binary()) -> integer().\nis_prefix_of_word(Sentence, SearchWord) ->\n  .",
+    "racket": "(define/contract (is-prefix-of-word sentence searchWord)\n  (-> string? string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"alutbolvtv\"\n\"a\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"ojjceqkb xcjfxx\"\n\"wvrexefdar\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"zvhqdppito jicxil lxsnk\"\n\"ji\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"gztx jrnamvz szs fjqwlqttan\"\n\"mvzqn\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"fhhozkk rmpwcdjyxc lpeoljxq iorymbduy hpzvlxvgr\"\n\"fhhozk\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"x styzyvmtz dyvk tb qzytepu g\"\n\"hi\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"zscwrgiyjh rrlnhno oa vsyf ytgojyyzdc efoyqu mz\"\n\"zscwrgiyj\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"zixvnnuzod kx yjcn dyaawc ouje miroegmvz wyhfq dl\"\n\"itd\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"kafdilyfey xjvivvm ksjofqwnag nh s oxsra z bxfi uesdwrno\"\n\"xjv\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"tfhwxwrtz\"\n\"yczzfolqg\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"kkifro imlte\"\n\"k\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"m f n\"\n\"adfhaurl\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"zanigfyj mgbuiz ge gxm\"\n\"zani\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"gsylubwt sihelpjd dgpafx xvscefkrqd qselip\"\n\"tumy\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"dqpbvda myl sznsnlmpl q ctipumkkgr htoa\"\n\"c\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"gpgbirgemt cdn lwsqnmgbt bolmm rsiftc zocdzvqvzd ejwqavqqf\"\n\"jqaddui\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"htmsqzajea zxpkmlknrg pxqulqrlfc vzb twxqswu haiyddojqo f sqatstkno\"\n\"twxqswu\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"xzulelg u nzjgozpym yz zo txqm meepfiu ow dhu\"\n\"lyzjalb\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"ocundyg\"\n\"ocun\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"htknm fddzoq\"\n\"r\"",
+      "expectedOutput": "-1"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "First extract the words of the sentence.",
+    "Check for each word if searchWord occurs at index 0, if so return the index of this word (1-indexed)",
+    "If searchWord doesn't exist as a prefix of any word return the default value (-1)."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.065Z",
+    "sourceUpdatedAt": null
+  }
+}

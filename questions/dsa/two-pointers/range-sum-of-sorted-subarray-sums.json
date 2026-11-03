@@ -1,0 +1,159 @@
+{
+  "id": "1508",
+  "slug": "range-sum-of-sorted-subarray-sums",
+  "title": "Range Sum of Sorted Subarray Sums",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "statement": "You are given the array `nums` consisting of `n` positive integers. You computed the sum of all non-empty continuous subarrays from the array and then sorted them in non-decreasing order, creating a new array of `n * (n + 1) / 2` numbers.\n\n_Return the sum of the numbers from index_ `left` _to index_ `right` (**indexed from 1**)_, inclusive, in the new array._ Since the answer can be a huge number return it modulo `10^(9) + 7`.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3,4], n = 4, left = 1, right = 5\nOutput: 13 \nExplanation: All subarray sums are 1, 3, 6, 10, 2, 5, 9, 3, 7, 4. After sorting them in non-decreasing order we have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 1 to ri = 5 is 1 + 2 + 3 + 3 + 4 = 13.\n```\n\n**Example 2:**\n\n```\nInput: nums = [1,2,3,4], n = 4, left = 3, right = 4\nOutput: 6\nExplanation: The given array is the same as example 1. We have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 3 to ri = 4 is 3 + 3 = 6.\n```\n\n**Example 3:**\n\n```\nInput: nums = [1,2,3,4], n = 4, left = 1, right = 10\nOutput: 50\n```\n\n**Constraints:**\n\n*   `n == nums.length`\n*   `1 <= nums.length <= 1000`\n*   `1 <= nums[i] <= 100`\n*   `1 <= left <= right <= n * (n + 1) / 2`",
+  "constraints": [
+    "n == nums.length",
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 100",
+    "1 <= left <= right <= n * (n + 1) / 2"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,3,4], n = 4, left = 1, right = 5",
+      "output": "13",
+      "explanation": "All subarray sums are 1, 3, 6, 10, 2, 5, 9, 3, 7, 4. After sorting them in non-decreasing order we have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 1 to ri = 5 is 1 + 2 + 3 + 3 + 4 = 13."
+    },
+    {
+      "input": "nums = [1,2,3,4], n = 4, left = 3, right = 4",
+      "output": "6",
+      "explanation": "The given array is the same as"
+    },
+    {
+      "input": "nums = [1,2,3,4], n = 4, left = 1, right = 10",
+      "output": "50",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int rangeSum(vector<int>& nums, int n, int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rangeSum(int[] nums, int n, int left, int right) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def rangeSum(self, nums: list[int], n: int, left: int, right: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def rangeSum(self, nums, n, left, right):\n        \"\"\"\n        :type nums: List[int]\n        :type n: int\n        :type left: int\n        :type right: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} n\n * @param {number} left\n * @param {number} right\n * @return {number}\n */\nvar rangeSum = function(nums, n, left, right) {\n    \n};",
+    "typescript": "function rangeSum(nums: number[], n: number, left: number, right: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int RangeSum(int[] nums, int n, int left, int right) {\n        \n    }\n}",
+    "c": "int rangeSum(int* nums, int numsSize, int n, int left, int right) {\n    \n}",
+    "golang": "func rangeSum(nums []int, n int, left int, right int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun rangeSum(nums: IntArray, n: Int, left: Int, right: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rangeSum(_ nums: [Int], _ n: Int, _ left: Int, _ right: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn range_sum(nums: Vec<i32>, n: i32, left: i32, right: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} n\n# @param {Integer} left\n# @param {Integer} right\n# @return {Integer}\ndef range_sum(nums, n, left, right)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $n\n     * @param Integer $left\n     * @param Integer $right\n     * @return Integer\n     */\n    function rangeSum($nums, $n, $left, $right) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rangeSum(List<int> nums, int n, int left, int right) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def rangeSum(nums: Array[Int], n: Int, left: Int, right: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec range_sum(nums :: [integer], n :: integer, left :: integer, right :: integer) :: integer\n  def range_sum(nums, n, left, right) do\n    \n  end\nend",
+    "erlang": "-spec range_sum(Nums :: [integer()], N :: integer(), Left :: integer(), Right :: integer()) -> integer().\nrange_sum(Nums, N, Left, Right) ->\n  .",
+    "racket": "(define/contract (range-sum nums n left right)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[66]\n1\n1\n1",
+      "expectedOutput": "66"
+    },
+    {
+      "input": "[60,51]\n2\n1\n2",
+      "expectedOutput": "111"
+    },
+    {
+      "input": "[65,54,18]\n3\n1\n1",
+      "expectedOutput": "18"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[80,53,34,31]\n4\n1\n1",
+      "expectedOutput": "31"
+    },
+    {
+      "input": "[39,92,26,65,90,7]\n6\n15\n17",
+      "expectedOutput": "593"
+    },
+    {
+      "input": "[86,39,35,83,15,87,6,72]\n8\n33\n36",
+      "expectedOutput": "1456"
+    },
+    {
+      "input": "[13,9,71,76,72,6,79,60,80,55]\n10\n24\n40",
+      "expectedOutput": "3953"
+    },
+    {
+      "input": "[69,5,57,48,53,57,20,96,73,79,99,74]\n12\n57\n75",
+      "expectedOutput": "9411"
+    },
+    {
+      "input": "[18,19,13,32,8,70,6,55,45,6,5,98,82,97,11]\n15\n34\n35",
+      "expectedOutput": "209"
+    },
+    {
+      "input": "[99,56,51,91,28,81,93,87,44,78,41,22,98,9,72,6,29,64]\n18\n146\n154",
+      "expectedOutput": "6697"
+    },
+    {
+      "input": "[79,1,4,1,69,97,49,44,14,76,75,60,48,62,12,56,93,65,55,18,29]\n21\n100\n175",
+      "expectedOutput": "33083"
+    },
+    {
+      "input": "[71,84,16,15,68,36,86,74,46,80,29,85,19,11,75,34,83,27,37,84,25,73,50,60]\n24\n28\n43",
+      "expectedOutput": "1673"
+    },
+    {
+      "input": "[1,69,45,15,97,37,2,51,23,74,35,1,51,12,11,90,82,16,62,72,21,56,64,4,99,26,39]\n27\n197\n318",
+      "expectedOutput": "66070"
+    },
+    {
+      "input": "[43,23,39,10,89,24,33,49,10,71,41,79,39,82,44,26,69,98,99,2,69,90,68,70,37,61,37,17,1,44]\n30\n98\n453",
+      "expectedOutput": "238926"
+    },
+    {
+      "input": "[94,60,94,76,77,49,30,68,3,14,85,25,53,3,26,87,86,97,79,75,19,96,41,83,12,98,95,64,50,86,68,51,5,20]\n34\n474\n520",
+      "expectedOutput": "57841"
+    },
+    {
+      "input": "[52,92,86,23,67,81,63,60,82,29,53,33,36,25,86,54,2,67,42,31,86,60,63,83,70,61,96,68,49,76,40,92,21,68,93,8,51,33]\n38\n727\n739",
+      "expectedOutput": "26336"
+    },
+    {
+      "input": "[66,71,13,56,8,55,34,87,10,35,98,86,76,16,63,12,76,13,20,85,100,83,30,86,51,62,44,63,74,62,17,49,69,40,48,82,39,46,82,75,65,16]\n42\n483\n668",
+      "expectedOutput": "179903"
+    },
+    {
+      "input": "[91,53,54,26,86,83,54,26,48,12,58,65,10,81,1,79,49,68,74,3,2,19,81,79,71,9,8,33,35,31,29,57,100,6,86,70,69,80,97,93,66,31,57,80,17,47]\n46\n1063\n1076",
+      "expectedOutput": "30238"
+    },
+    {
+      "input": "[21,47,65,54,51,72,24,84,7,84,23,99,57,95,79,14,87,80,89,88,91,23,32,91,28,92,74,7,17,81,83,24,41,29,100,74,29,93,91,35,57,10,45,20,85,76,68,1,38,95,35,20,69,99,42,34,14,97,24,97,38,15,98,29,90,60,59,57,37,17,1,58,90,55,23,55,17,66,4,46,68,48,53,48,1,1,94,42,15,76,75,62,62,90,97,65,1,40,21,52,5,15,81,92,73,51,42,54,76,99,12,2,92,1,30,85,17,36,95,20,34,65,59,93,96,84,76,44,2,14,97,94,78,43,45,40,30,85,37,94,70,93,66,75,12,18,82,34,100,82,28,81,42,73,88,22,41,39,95,31,53,94,68,84,19,43,8,66,49,65,89,27,78,71,15,89,31,77,54,97,73,1,10,55,53,85,4,20,1,50,32,80,69,46,86,32,3,42,27,63]\n200\n15062\n17375",
+      "expectedOutput": "13911508"
+    },
+    {
+      "input": "[25,56,64,46,12,3,13,70,69,36,62,10,43,95,47,93,11,77,56,23,81,66,95,93,4,70,75,91,67,22,62,38,77,66,6,73,8,58,87,83,62,24,17,49,97,48,65,89,64,12,70,18,58,68,44,50,73,40,68,42,96,31,27,27,73,60,46,33,85,33,29,86,26,95,10,11,70,43,32,77,10,10,37,30,16,83,31,49,6,6,67,7,93,18,92,44,83,95,98,68,87,44,46,31,77,24,91,65,30,31,21,98,70,1,76,9,88,42,30,22,86,95,22,74,54,42,38,24,28,45,99,20,67,7,83,77,21,62,60,41,76,30,19,90,4,54,4,86,17,94,52,92,92,92,64,42,35,39,41,71,65,53,29,99,10,24,69,62,37,83,80,7,88,50,48,93,14,57,73,76,16,7,33,70,17,43,48,4,19,36,12,83,54,87,42,73,94,25,25,95,88,76,22,80,35,61,47,79,20,81,86,81,99,93,40,54,17,7,48,93,91,22,2,8,40,49,75,37,67,60,37,67,9,84,47,50,51,20,18,76,9,11,84,19,60,50,9,80,75,40,23,76,14,86,50,20,68,73,52,97,30,50,56,14,83,98,77,39,89,42,68,90,16,100,91,6,29,87,90,25,55,13,21,79,71,54,65,81,45,37,75,52,67,29,78,88,22,50,98,74,20,33,17,2,60,87,85,8,89,23,68,47,61,56,87,82,96,3,87,31,34,19,8,93,56,28,44,80,74,87,75,57,43,16,81,95,94,54,16,14,22,9,31,66,71,88,47,49,29,19,37,12,4,10,43,40,65,74,26,98,43,39,85,65,17,67,72,87,93,67,41,4,95,24,65,68,49,52,80,77,47,68,72,28,81,38,28,42,72,50,85,90,95,77,34,51,11,35,3,87]\n400\n54481\n74260",
+      "expectedOutput": "233641849"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Compute all sums and save it in array.",
+    "Then just go from LEFT to RIGHT index and calculate answer modulo 1e9 + 7."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.182Z",
+    "sourceUpdatedAt": null
+  }
+}

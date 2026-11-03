@@ -1,0 +1,159 @@
+{
+  "id": "819",
+  "slug": "most-common-word",
+  "title": "Most Common Word",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "statement": "Given a string `paragraph` and a string array of the banned words `banned`, return _the most frequent word that is not banned_. It is **guaranteed** there is **at least one word** that is not banned, and that the answer is **unique**.\n\nThe words in `paragraph` are **case-insensitive** and the answer should be returned in **lowercase**.\n\n**Note** that words can not contain punctuation symbols.\n\n**Example 1:**\n\n```\nInput: paragraph = \"Bob hit a ball, the hit BALL flew far after it was hit.\", banned = [\"hit\"]\nOutput: \"ball\"\nExplanation: \n\"hit\" occurs 3 times, but it is a banned word.\n\"ball\" occurs twice (and no other word does), so it is the most frequent non-banned word in the paragraph. \nNote that words in the paragraph are not case sensitive,\nthat punctuation is ignored (even if adjacent to words, such as \"ball,\"), \nand that \"hit\" isn't the answer even though it occurs more because it is banned.\n```\n\n**Example 2:**\n\n```\nInput: paragraph = \"a.\", banned = []\nOutput: \"a\"\n```\n\n**Constraints:**\n\n*   `1 <= paragraph.length <= 1000`\n*   paragraph consists of English letters, space `' '`, or one of the symbols: `\"!?',;.\"`.\n*   `0 <= banned.length <= 100`\n*   `1 <= banned[i].length <= 10`\n*   `banned[i]` consists of only lowercase English letters.",
+  "constraints": [
+    "1 <= paragraph.length <= 1000",
+    "paragraph consists of English letters, space ' ', or one of the symbols: \"!?',;.\".",
+    "0 <= banned.length <= 100",
+    "1 <= banned[i].length <= 10",
+    "banned[i] consists of only lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "paragraph = \"Bob hit a ball, the hit BALL flew far after it was hit.\", banned = [\"hit\"]",
+      "output": "\"ball\"",
+      "explanation": "\"hit\" occurs 3 times, but it is a banned word.\n\"ball\" occurs twice (and no other word does), so it is the most frequent non-banned word in the paragraph. \nNote that words in the paragraph are not case sensitive,\nthat punctuation is ignored (even if adjacent to words, such as \"ball,\"), \nand that \"hit\" isn't the answer even though it occurs more because it is banned."
+    },
+    {
+      "input": "paragraph = \"a.\", banned = []",
+      "output": "\"a\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string mostCommonWord(string paragraph, vector<string>& banned) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String mostCommonWord(String paragraph, String[] banned) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def mostCommonWord(self, paragraph: str, banned: list[str]) -> str:\n        ",
+    "python": "class Solution(object):\n    def mostCommonWord(self, paragraph, banned):\n        \"\"\"\n        :type paragraph: str\n        :type banned: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} paragraph\n * @param {string[]} banned\n * @return {string}\n */\nvar mostCommonWord = function(paragraph, banned) {\n    \n};",
+    "typescript": "function mostCommonWord(paragraph: string, banned: string[]): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string MostCommonWord(string paragraph, string[] banned) {\n        \n    }\n}",
+    "c": "char* mostCommonWord(char* paragraph, char** banned, int bannedSize) {\n    \n}",
+    "golang": "func mostCommonWord(paragraph string, banned []string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun mostCommonWord(paragraph: String, banned: Array<String>): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostCommonWord(_ paragraph: String, _ banned: [String]) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_common_word(paragraph: String, banned: Vec<String>) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} paragraph\n# @param {String[]} banned\n# @return {String}\ndef most_common_word(paragraph, banned)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $paragraph\n     * @param String[] $banned\n     * @return String\n     */\n    function mostCommonWord($paragraph, $banned) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String mostCommonWord(String paragraph, List<String> banned) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def mostCommonWord(paragraph: String, banned: Array[String]): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec most_common_word(paragraph :: String.t, banned :: [String.t]) :: String.t\n  def most_common_word(paragraph, banned) do\n    \n  end\nend",
+    "erlang": "-spec most_common_word(Paragraph :: unicode:unicode_binary(), Banned :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nmost_common_word(Paragraph, Banned) ->\n  .",
+    "racket": "(define/contract (most-common-word paragraph banned)\n  (-> string? (listof string?) string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"a,b,b\"\n[]",
+      "expectedOutput": "\"b\""
+    },
+    {
+      "input": "\"hit cat\"\n[\"hit\"]",
+      "expectedOutput": "\"cat\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"a.\"\n[]",
+      "expectedOutput": "\"a\""
+    },
+    {
+      "input": "\"A a\"\n[]",
+      "expectedOutput": "\"a\""
+    },
+    {
+      "input": "\"a,b,b\"\n[]",
+      "expectedOutput": "\"b\""
+    },
+    {
+      "input": "\"hit cat\"\n[\"hit\"]",
+      "expectedOutput": "\"cat\""
+    },
+    {
+      "input": "\"can't\"\n[\"can\"]",
+      "expectedOutput": "\"t\""
+    },
+    {
+      "input": "\"x!Y;y\"\n[]",
+      "expectedOutput": "\"y\""
+    },
+    {
+      "input": "\"white hit\"\n[\"hit\"]",
+      "expectedOutput": "\"white\""
+    },
+    {
+      "input": "\"Bob hit a ball, the hit BALL flew far after it was hit.\"\n[\"hit\"]",
+      "expectedOutput": "\"ball\""
+    },
+    {
+      "input": "\"Red,blue;RED!green.\"\n[]",
+      "expectedOutput": "\"red\""
+    },
+    {
+      "input": "\"one'one?TWO!two;two.\"\n[]",
+      "expectedOutput": "\"two\""
+    },
+    {
+      "input": "\"TOP top top small Small,rare\"\n[\"top\"]",
+      "expectedOutput": "\"small\""
+    },
+    {
+      "input": "\"Alpha?beta!alpha. BETA,alpha\"\n[]",
+      "expectedOutput": "\"alpha\""
+    },
+    {
+      "input": "\"bad!bad?GOOD;good,ok\"\n[\"bad\",\"bad\"]",
+      "expectedOutput": "\"good\""
+    },
+    {
+      "input": "\"Solo???solo!noise;NOISE,sOlO\"\n[]",
+      "expectedOutput": "\"solo\""
+    },
+    {
+      "input": "\"BAn.ban?AlPha.omEGa;aLphA.Ban, AlPHA;OmEGA'BAn Ban;BeTa'bEtA'BAn, BAn,OmEga!OMeGa!!omeGa;OmeGa\"\n[\"ban\"]",
+      "expectedOutput": "\"omega\""
+    },
+    {
+      "input": "\"ROSE!WEed rOSE!WEED;vIOleT!!WEED!BLUe.VIOlET, violEt!!bLUE, WEed.vIOLEt,VIoleT?WeeD wEeD'BLuE,wEED;roSe'WeEd,rose, rOSe!!ROsE'RoSe\"\n[\"weed\"]",
+      "expectedOutput": "\"rose\""
+    },
+    {
+      "input": "\"OAK?MAPLe.OAk;cEDar.MAPlE.oaK;CedaR?CeDAR?mAple?CedAr?CEdar!!MApLE!!mAPlE mapLe.CeDaR;mapLE!!Cedar?cedAr\"\n[]",
+      "expectedOutput": "\"cedar\""
+    },
+    {
+      "input": "\"MOoN?noise'STaR!SuN;Bad BAD, bAd'SUn!bAD?sUn!!BAD!sUN,mooN, bAD.sTaR nOIse!NOISE,MOon mOoN SuN\"\n[\"bad\",\"noise\"]",
+      "expectedOutput": "\"sun\""
+    },
+    {
+      "input": "\"ZAA OAk;ZBd'zdK.WateR'zBF?zaA iRiS?zCb'Fern.ZAU;IrIs'zDs;zAA'ZdN.zbr?ZCC,ferN ZaA!MOss.mOss!ZCD.Iris!zba!oAK bE;ZAK?Zaa?Zbw;zDa zcu;a!ZAA,WAter'Zaa,ZaO,zbS!zcm,FErn,zbt,ZAA zBL!BE Zaw?ZAA'IRiS'iRIs'mOSS'ZDB;Zaa'zAa,zAa'ZAa!ZAA.iRIs,ZBK OAk!zaa;iRIs,IRIs!zcw.zaa;mosS.ZBU;zbo;bE?ZAa'zar,ZDC.ZAH PLant!a,A'mOss'IriS;iriS'ZAq zaF;ZcH'iRis ZdH;ZDU'ZBe!zAG?Be;ZdQ!IRIs.IRis.FErN,ZbJ ZAN iRiS!A.fERn?ZbI ZdJ?zcN;ZcY waTER!ZAP a,ZBq.MoSS;ZaA;ZaV!zaD zAa.zBp?zCf;Zaa?be ZAC IRIS'Zaa;zcg?waTEr?Zaj;Plant?ZDD,ZAE;ZCr,wAteR.ZAA'ZcS?A?oAk?mOSS zAA IriS.waTeR.irIs,Be'IRIS zdm ZdT;Zct?zBZ!BE'ZCk'IrIS;irIs!ZAA PLANta'iRIs.ZDO'aBCDEfGHij;Iris.PLant!ZCe'ZaA'zdf?IRis Zcj?zaa!IriS?iriS?Zbc.ZbX Zaa!Zaa;zaa oAK?zAA?ZCq;planT!IRIS'zaa'zcv.ZCX!ZCL!zai?ZBM ZAM!Oak?zbH,zCi.zaA;PLaNt,iriS;Zal;irIs;ZdR,zab!ZAA'WateR;ZBG!A?ZaX.zaS.ZDL.MoSs'Zaa?ZBV!ZDP?ZAa'oAk'BE,zdE!IrIs?ZdI.fErN,PLaNT?Iris!ZAa!zAt!ZAA'a;PlanT zAa OAK;IRIs!ZCA.Zco;zcz ZCp!zAA!zAA;zDg.feRN;IRis!ZBY'IRIs;zaY Iris,ZAz.fern;iRIS?iriS'iRIs;Zaa;WAtEr!ZBN?zbB\"\n[\"abcdefghij\",\"zaa\",\"zab\",\"zac\",\"zad\",\"zae\",\"zaf\",\"zag\",\"zah\",\"zai\",\"zaj\",\"zak\",\"zal\",\"zam\",\"zan\",\"zao\",\"zap\",\"zaq\",\"zar\",\"zas\",\"zat\",\"zau\",\"zav\",\"zaw\",\"zax\",\"zay\",\"zaz\",\"zba\",\"zbb\",\"zbc\",\"zbd\",\"zbe\",\"zbf\",\"zbg\",\"zbh\",\"zbi\",\"zbj\",\"zbk\",\"zbl\",\"zbm\",\"zbn\",\"zbo\",\"zbp\",\"zbq\",\"zbr\",\"zbs\",\"zbt\",\"zbu\",\"zbv\",\"zbw\",\"zbx\",\"zby\",\"zbz\",\"zca\",\"zcb\",\"zcc\",\"zcd\",\"zce\",\"zcf\",\"zcg\",\"zch\",\"zci\",\"zcj\",\"zck\",\"zcl\",\"zcm\",\"zcn\",\"zco\",\"zcp\",\"zcq\",\"zcr\",\"zcs\",\"zct\",\"zcu\",\"zcv\",\"zcw\",\"zcx\",\"zcy\",\"zcz\",\"zda\",\"zdb\",\"zdc\",\"zdd\",\"zde\",\"zdf\",\"zdg\",\"zdh\",\"zdi\",\"zdj\",\"zdk\",\"zdl\",\"zdm\",\"zdn\",\"zdo\",\"zdp\",\"zdq\",\"zdr\",\"zds\",\"zdt\",\"zdu\"]",
+      "expectedOutput": "\"iris\""
+    },
+    {
+      "input": "\"FErN?zar;zCu ZaA'zdH?irIS!IRis;zAu;zDo zdm!MoSS.zaW Zcj ZAG.zAa,pLanT?zCt PLaNT;ZCL;Zbv IRis?watER'Be?iRis,bE A'zAa.BE.zBA.MOSs'zcW Iris;ZbP!Zaa;zbE zBN be;zaA.zAb'ZAV?Zaa?BE'ZDd,zdP.ZAS.ZAa;ferN!ZAD,iriS'ZcB;zAm;IRIS moss Zda;ZAj,irIs?ZDN,ZAa;Zbd.iRiS'ZCi.zDR.Zaa'ZbX ZAq'zCz!zDi!wATer,ZcM,iris,Zce!zaa.ZAa?zbk!zan.zBU,zaA,a;ZCG;A,OAK;A.ZAA ZDE?ZCP;ZDc;plaNt oAK MosS!OaK?ZbO FERn!zAa'fern'zbc!IrIS'IRis,waTER.zAa,ZBR.OAK'ZaA.IrIS'zAt'zae.iRIS,ZBg'IRis ZAZ zaA!A;MOsS'ZaA?ZCs,WaTEr;pLANt;iriS'zaA.irIS?Oak ZBl?bE;Zcx?zAa!ZAA.zbm!AbCdEFGhiJ!zcy?plAnT,ZCV iRIs;zCO?Iris,WAteR.FERN,ZBQ.IrIs?WaTER;zAA'Be;FerN;iRIS.IrIS;ZAA ZcK?iRIs zAA'zAY!ZDq.zAA!zBZ'ZAA.zaa;moSs!ZCC'ZAc.Zbh,zby,ZAO'iris'BE.plaNt;zaP,iRiS;MoSS,Zai!zAa zAA'zaA,ZDG oak?zAA iriS?oaK;IRIS IRiS'ZCq.zbj;PlanT?Zbt;IRIS!a,ZAX zaa;ZAf.Zdf,ZAa?OAK?zaA'zDK?MOsS?waTER!ZcN;ZBW.ZAh.Zaa!zAl zCF?zbi;Be?Zdb ZCD?iriS?IriS feRn zcr irIs?ZAA,zCA.Zaa?IrIs?IrIS!WATer ZBF'iRiS ZbS?zAa.zaA'Iris;iris'A.zak;ZDl;ZDJ?zaA ZaA.zCH.zbb\"\n[\"abcdefghij\",\"zaa\",\"zab\",\"zac\",\"zad\",\"zae\",\"zaf\",\"zag\",\"zah\",\"zai\",\"zaj\",\"zak\",\"zal\",\"zam\",\"zan\",\"zao\",\"zap\",\"zaq\",\"zar\",\"zas\",\"zat\",\"zau\",\"zav\",\"zaw\",\"zax\",\"zay\",\"zaz\",\"zba\",\"zbb\",\"zbc\",\"zbd\",\"zbe\",\"zbf\",\"zbg\",\"zbh\",\"zbi\",\"zbj\",\"zbk\",\"zbl\",\"zbm\",\"zbn\",\"zbo\",\"zbp\",\"zbq\",\"zbr\",\"zbs\",\"zbt\",\"zbu\",\"zbv\",\"zbw\",\"zbx\",\"zby\",\"zbz\",\"zca\",\"zcb\",\"zcc\",\"zcd\",\"zce\",\"zcf\",\"zcg\",\"zch\",\"zci\",\"zcj\",\"zck\",\"zcl\",\"zcm\",\"zcn\",\"zco\",\"zcp\",\"zcq\",\"zcr\",\"zcs\",\"zct\",\"zcu\",\"zcv\",\"zcw\",\"zcx\",\"zcy\",\"zcz\",\"zda\",\"zdb\",\"zdc\",\"zdd\",\"zde\",\"zdf\",\"zdg\",\"zdh\",\"zdi\",\"zdj\",\"zdk\",\"zdl\",\"zdm\",\"zdn\",\"zdo\",\"zdp\",\"zdq\",\"zdr\"]",
+      "expectedOutput": "\"iris\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/most-common-word/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.438Z",
+    "sourceUpdatedAt": null
+  }
+}

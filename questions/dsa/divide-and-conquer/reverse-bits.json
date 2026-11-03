@@ -1,0 +1,154 @@
+{
+  "id": "190",
+  "slug": "reverse-bits",
+  "title": "Reverse Bits",
+  "category": "dsa",
+  "subcategory": "divide-and-conquer",
+  "difficulty": "Easy",
+  "tags": [
+    "Divide and Conquer",
+    "Bit Manipulation"
+  ],
+  "statement": "Reverse bits of a given 32 bits signed integer.\n\n**Example 1:**\n\n**Input:** n = 43261596\n\n**Output:** 964176192\n\n**Explanation:**\n\nInteger\n\nBinary\n\n43261596\n\n00000010100101000001111010011100\n\n964176192\n\n00111001011110000010100101000000\n\n**Example 2:**\n\n**Input:** n = 2147483644\n\n**Output:** 1073741822\n\n**Explanation:**\n\nInteger\n\nBinary\n\n2147483644\n\n01111111111111111111111111111100\n\n1073741822\n\n00111111111111111111111111111110\n\n**Constraints:**\n\n*   `0 <= n <= 2^(31) - 2`\n*   `n` is even.\n\n**Follow up:** If this function is called many times, how would you optimize it?",
+  "constraints": [
+    "0 <= n <= 231 - 2",
+    "n is even."
+  ],
+  "examples": [
+    {
+      "input": "n = 43261596",
+      "output": "964176192",
+      "explanation": "Integer\n\t\t\tBinary\n\t\t\n\t\t\n\t\t\t43261596\n\t\t\t00000010100101000001111010011100\n\t\t\n\t\t\n\t\t\t964176192\n\t\t\t00111001011110000010100101000000"
+    },
+    {
+      "input": "n = 2147483644",
+      "output": "1073741822",
+      "explanation": "Integer\n\t\t\tBinary\n\t\t\n\t\t\n\t\t\t2147483644\n\t\t\t01111111111111111111111111111100\n\t\t\n\t\t\n\t\t\t1073741822\n\t\t\t00111111111111111111111111111110"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int reverseBits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int reverseBits(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def reverseBits(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def reverseBits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar reverseBits = function(n) {\n    \n};",
+    "typescript": "function reverseBits(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int ReverseBits(int n) {\n        \n    }\n}",
+    "c": "int reverseBits(int n) {\n    \n}",
+    "golang": "func reverseBits(n int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun reverseBits(n: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reverseBits(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reverse_bits(n: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef reverse_bits(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function reverseBits($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int reverseBits(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def reverseBits(n: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec reverse_bits(n :: integer) :: integer\n  def reverse_bits(n) do\n    \n  end\nend",
+    "erlang": "-spec reverse_bits(N :: integer()) -> integer().\nreverse_bits(N) ->\n  .",
+    "racket": "(define/contract (reverse-bits n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "6",
+      "expectedOutput": "1610612736"
+    },
+    {
+      "input": "42",
+      "expectedOutput": "1409286144"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "0",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "2",
+      "expectedOutput": "1073741824"
+    },
+    {
+      "input": "4",
+      "expectedOutput": "536870912"
+    },
+    {
+      "input": "6",
+      "expectedOutput": "1610612736"
+    },
+    {
+      "input": "8",
+      "expectedOutput": "268435456"
+    },
+    {
+      "input": "10",
+      "expectedOutput": "1342177280"
+    },
+    {
+      "input": "14",
+      "expectedOutput": "1879048192"
+    },
+    {
+      "input": "18",
+      "expectedOutput": "1207959552"
+    },
+    {
+      "input": "26",
+      "expectedOutput": "1476395008"
+    },
+    {
+      "input": "42",
+      "expectedOutput": "1409286144"
+    },
+    {
+      "input": "86",
+      "expectedOutput": "1778384896"
+    },
+    {
+      "input": "128",
+      "expectedOutput": "16777216"
+    },
+    {
+      "input": "174",
+      "expectedOutput": "1962934272"
+    },
+    {
+      "input": "298",
+      "expectedOutput": "1417674752"
+    },
+    {
+      "input": "502",
+      "expectedOutput": "1870659584"
+    },
+    {
+      "input": "642",
+      "expectedOutput": "1094713344"
+    },
+    {
+      "input": "812",
+      "expectedOutput": "884998144"
+    },
+    {
+      "input": "998",
+      "expectedOutput": "1740636160"
+    },
+    {
+      "input": "2147483646",
+      "expectedOutput": "2147483646"
+    },
+    {
+      "input": "1073741826",
+      "expectedOutput": "1073741826"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/reverse-bits/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.816Z",
+    "sourceUpdatedAt": null
+  }
+}

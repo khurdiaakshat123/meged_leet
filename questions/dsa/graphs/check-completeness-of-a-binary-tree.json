@@ -1,0 +1,155 @@
+{
+  "id": "958",
+  "slug": "check-completeness-of-a-binary-tree",
+  "title": "Check Completeness of a Binary Tree",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "statement": "Given the `root` of a binary tree, determine if it is a _complete binary tree_.\n\nIn a **[complete binary tree](http://en.wikipedia.org/wiki/Binary_tree#Types_of_binary_trees)**, every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between `1` and `2^(h)` nodes inclusive at the last level `h`.\n\n**Example 1:**\n\n![](./assets/check-completeness-of-a-binary-tree-1.png)\n```\nInput: root = [1,2,3,4,5,6]\nOutput: true\nExplanation: Every level before the last is full (ie. levels with node-values {1} and {2, 3}), and all nodes in the last level ({4, 5, 6}) are as far left as possible.\n```\n\n**Example 2:**\n\n![](./assets/check-completeness-of-a-binary-tree-2.png)\n```\nInput: root = [1,2,3,4,5,null,7]\nOutput: false\nExplanation: The node with value 7 isn't as far left as possible.\n```\n\n**Constraints:**\n\n*   The number of nodes in the tree is in the range `[1, 100]`.\n*   `1 <= Node.val <= 1000`",
+  "constraints": [
+    "The number of nodes in the tree is in the range [1, 100].",
+    "1 <= Node.val <= 1000"
+  ],
+  "examples": [
+    {
+      "input": "root = [1,2,3,4,5,6]",
+      "output": "true",
+      "explanation": "Every level before the last is full (ie. levels with node-values {1} and {2, 3}), and all nodes in the last level ({4, 5, 6}) are as far left as possible."
+    },
+    {
+      "input": "root = [1,2,3,4,5,null,7]",
+      "output": "false",
+      "explanation": "The node with value 7 isn't as far left as possible."
+    }
+  ],
+  "starterCode": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isCompleteTree(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public boolean isCompleteTree(TreeNode root) {\n        \n    }\n}",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def isCompleteTree(self, root: TreeNode | None) -> bool:\n        ",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def isCompleteTree(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isCompleteTree = function(root) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction isCompleteTree(root: TreeNode | null): boolean {\n    \n};",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public bool IsCompleteTree(TreeNode root) {\n        \n    }\n}",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nbool isCompleteTree(struct TreeNode* root) {\n    \n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc isCompleteTree(root *TreeNode) bool {\n    \n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun isCompleteTree(root: TreeNode?): Boolean {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func isCompleteTree(_ root: TreeNode?) -> Bool {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn is_complete_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {\n        \n    }\n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @return {Boolean}\ndef is_complete_tree(root)\n    \nend",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $root\n     * @return Boolean\n     */\n    function isCompleteTree($root) {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  bool isCompleteTree(TreeNode? root) {\n    \n  }\n}",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def isCompleteTree(root: TreeNode): Boolean = {\n        \n    }\n}",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec is_complete_tree(root :: TreeNode.t | nil) :: boolean\n  def is_complete_tree(root) do\n    \n  end\nend",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec is_complete_tree(Root :: #tree_node{} | null) -> boolean().\nis_complete_tree(Root) ->\n  .",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (is-complete-tree root)\n  (-> (or/c tree-node? #f) boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[7,9,2,5]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[5,4,6,1,null,8]",
+      "expectedOutput": "false"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1000]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[8,1]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[4,null,9]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[3,3,3]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[7,9,2,5]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[5,4,6,1,null,8]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[7,8,9,10,11,null,12,13]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[382,874,560,678,998,560,67,678,99,658,507]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[940,865,213,443,984,658,888,553,655,577,251,490,515,976,177,485,153,null,952,682]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[816,538,168,859,659,855,424,721,193,415,513,222,441]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[287,961,null,263,null,208,null,924,null,205,null,356,null,102,null,344,null,674,null,47,null,806,null,647,null,993,null,649,null,839,null,794]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[583,799,575,304,272,391,230,829,174,858]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[7,946,779,155,67,503,139,410,118,797,566,535,948,164,95,null,null,null,null,null,null,null,null,496]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[44,44,44,44,44,44,44,44,44,44,44,44,44,44,44]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[993,566,510,323,846,577,475,474,810,756,171,300,813,98,199,510,62,942,78,935,830,985,515]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[171,null,305,441,null,null,272,887,null,null,798,228,null,null,858,800,null,null,908,253,null,null,188,690,null,null,284,481,null,null,89,891,null,null,627,211,null,null,474,65,null,null,756,411,null,null,311,237,null,null,998,526,null,null,541,901,null,null,559,397,null,null,928,301,null,null,730,942,null,null,828,607]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[475,315,449,607,597,180,821,650,606,865,489,170,937,925,950,59,309,148,916,null,503,778,213,881,762,869,546,335,599]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[5,329,560,207,814,850,832,962,96,205,113,703,559,425,262,936,919,361,74,114,767,70,286,66,664,401,618,727,829,483,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,970,747,747,825,165,237,415,47,999]",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "[723,415,614,387,341,99,340,959,294,740,375,683,118,86,368,902,13,430,843,377,516,572,207,69,5,705,808,665,434,841,813,834,136,421,823,932,479,428,580,24,375,288,777,49,149,551,39,501,684,673,54,576,269,506,387,558,263,187,312,528,649,454,430,363,865,76,632,390,40,26,228,469,835,482,152,27,769,884,20,6,322,122,618,473,897,573,700,986,207,568,503,940,738,880,77,877,927,918,305,257]",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "[160,101,588,798,964,286,264,22,635,493,360,993,769,860,308,237,599,154,331,199,114,129,719,763,413,262,916,682,934,631,547,975,287,505,353,68,924,960,337,683,766,661,557,879,146,753,822,916,18,267,399,830,974,313,472,373,927,674,515,106,291,717,353,102,951,153,938,993,758,955,538,703,813,273,442,924,589,528,122,113,587,526,921,36,705,3,398,443,478,408,691,966,730,461,793,null,509,362]",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/check-completeness-of-a-binary-tree/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.027Z",
+    "sourceUpdatedAt": null
+  }
+}

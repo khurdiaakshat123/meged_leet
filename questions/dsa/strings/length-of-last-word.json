@@ -1,0 +1,151 @@
+{
+  "id": "58",
+  "slug": "length-of-last-word",
+  "title": "Length of Last Word",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "Given a string `s` consisting of words and spaces, return _the length of the **last** word in the string._\n\nA **word** is a maximal substring consisting of non-space characters only.\n\n**Example 1:**\n\n```\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\n```\n\n**Example 2:**\n\n```\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\n```\n\n**Example 3:**\n\n```\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 10^(4)`\n*   `s` consists of only English letters and spaces `' '`.\n*   There will be at least one word in `s`.",
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of only English letters and spaces ' '.",
+    "There will be at least one word in s."
+  ],
+  "examples": [
+    {
+      "input": "s = \"Hello World\"",
+      "output": "5",
+      "explanation": "The last word is \"World\" with length 5."
+    },
+    {
+      "input": "s = \"   fly me   to   the moon  \"",
+      "output": "4",
+      "explanation": "The last word is \"moon\" with length 4."
+    },
+    {
+      "input": "s = \"luffy is still joyboy\"",
+      "output": "6",
+      "explanation": "The last word is \"joyboy\" with length 6."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthOfLastWord(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def lengthOfLastWord(self, s: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def lengthOfLastWord(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLastWord = function(s) {\n    \n};",
+    "typescript": "function lengthOfLastWord(s: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int LengthOfLastWord(string s) {\n        \n    }\n}",
+    "c": "int lengthOfLastWord(char* s) {\n    \n}",
+    "golang": "func lengthOfLastWord(s string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun lengthOfLastWord(s: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lengthOfLastWord(_ s: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn length_of_last_word(s: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef length_of_last_word(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function lengthOfLastWord($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lengthOfLastWord(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def lengthOfLastWord(s: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec length_of_last_word(s :: String.t) :: integer\n  def length_of_last_word(s) do\n    \n  end\nend",
+    "erlang": "-spec length_of_last_word(S :: unicode:unicode_binary()) -> integer().\nlength_of_last_word(S) ->\n  .",
+    "racket": "(define/contract (length-of-last-word s)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"LuDUcIb   \"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"SypFCw oLA \"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"jc CNCKfhISMs O  \"",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"M AzmCBTqTMN eeEVmsz BiMU zDv    \"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"WQ wDfpzF z Z d OcT ZDchbZ \"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"wHm mI bsBQER C VaFI Li LzKFCFNc AJ GxtWTOx aWBMlbM \"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"Ix XxypRtU TcX Jrfhp kMHShd oeAFA qvLz Dhrv CTcOY WZkRP gk vowcIxpaPn RYJc    \"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"BLTZ KCNKiJ SkL jsYyPtabBr Dt ZlKLzka CbK csV ymubIleIwR gmNvaZmyI pg zFDGSRQw NbcEAS OMejLHRuLo BT UIzfeIXKFa\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"B D W ViQi cjIW Vfokq JYXzDgER FrgCOWQxeK wHsKdnW t YZRgzb FDUMMj hHpGz SHLJV HDyW LykceBTXv caXKZ CY tgHGHIngNc\"",
+      "expectedOutput": "10"
+    },
+    {
+      "input": "\"BxIhyDQomO K SmB TMKbyBiAN aWaxCwYZ hb w DGyHozdUP BtBW wYfGDyqJBQ fnoVy NQA eZ Q bxEco MR SLyBXrH GmUIqz fmfkfReI AFUvZKfoRe dm IsAdDArMlr krmJzYSSK\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"hmFl lUjsV Wyykcg VSYYPkzK TLJ Qrr xDEPfGsKa NKX RBrTEEaUZs IDGlr oQmwSpC PKbgMvEBi ga kQ QG GVQXMmcr C oP PWAFstGwry ESWG lnhPCJk zrrfXlIs rCqpPrJ pqKp hNpHDyNH r BkAJtEV \"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"FdngY sLxB b cBDuuzG BPllKa gvh CslUcvNTB hGQIcyV pLkTotpBWb gG hVuSgkDxT FsQJGRIJ pJTTJp w i VqlTnplBL MwgREJHF PWxZ fENaF TwVO Y xnxo qmAeq ZqzRmOUT brjo nLYuV lUIxWbtdT IrHZBIG LF KRcOvuHM bKZR dzxBjD  \"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"qXpMQXqw YFrkRLl CwXH fhTT DwRfeBKat s ModzZbdX rfngZLWbwl F pNGU JxijoUQ FdjcycWFcs sxAeg BoEODP rzmVXTeQsB nKxOxdM oF KBJ JOAYuwyr DVFTSWgyF CV gFATSgp qB dgJqEEo K cCGajChfu QtsuG QHPF zPyf sBA zaD cVZiug FDc ye njb PRWWUT VT \"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"wvWfhm u UZEjWD dHs mspwZmcowa CKBTveGFRJ Irgnt lGkEGtVFCg SQLfyBIeq ojP MzhiorjV daAsrDY tfWKUId WX augYR ohKMgpX NirPEyW G QLh K VLZqrjfFlU A r JrBkIgz vfkpjWXcfB DAaYrfXn TyYNeY tPvmkyr F M I X PymKMJQx LtleXTpFn GKxt VBzCIoBZh QyB RoGMxhJ tbKClHZHJp lVAVccRt yPaSd QjQWdT \"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"jYv mAyS TZdg njbQgNCsy FRulB qaGMgXPIi ZSUaI SbDoVM skKXlvGNf czzCw cjLOklvnp DEyVRmzYIb EcuCNH ksgmb bapEYun MoknTK bAMsGProXH VFZzibTEA rHCrs aKExstQJhU ZcRhZaLkj njvB xEDE xoEZSgRVqh nxEpubi SYIBccC yEOnHeJ gAnK ivu o VNTiaQoa TNHpBja SmtRMDDRq H iSPqvUIDuy QQJVi bOvA yQaToaULsu hcppsSy HQhtDB UrtMN BNowKrI jt MiBhQW E jKISscg J   \"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"HzoFCdpf i iZMZ WyVGH FmlYRKN dQp hVXSwAa WEWWUKfd MEuOU D IE inhqOaMdY I RpsYUnP eJejSE vAPdiZ XzbI sH ZIxfrKgWl G ffhf OOBxsf aG YmcbIApd MEEW rM TTZ jbRskXUch MU PdSwHZJt q yPJSldeR TPsvfCc iiE GETvcXVecd WL PW aGEbud O VoroaH vCrA rOqx hyndOkT M ADzws KI WwHdQ ca A wS QIpea WctH jTMRdK  \"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"bVoI gMcgi Bi tOTgp ClTOcPgi IlXFqayv TehMk VpS eNkwAsV rydTGBaF XIbVvzzH T nXCfWPvnZ tJmGoscX XJBvKzVb Gm DU eEw qkhUZR ClSuvgbU OLR zkZkx u qbvogXV qnH NdNLHtC plzz JuwmdCegq YyahMS NmNTGKP FHjR vCIjeLMRK toKbgXG WDlRkoHU VkhmXzlFw NcKMqave rMATeBHpkW jvICoLd znRkgvya UNh CyPERg hF fk wqWsbBIiUd jLUErXP LAK XwMfvJKMV frH cXkO aeYjERcWWh OsOwuq TMEVIPpm DZbMSNP dQyWezY mhenHlqlpK jnStj rcO nJf lyxfsW   \"",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "\"WDgFCgZM HaZrzBj lZbKv ZcgxSb zC dQORBn bBr UsYA KtF kNK ymzBs QrRHrt aYffyfszX HYMXOJ qTyCsDxGML ojvnbr hsejeINXGW bXVBlVA PuvxLo ZM nMFh Zg sRASJ GgOOtqT kzVye OosacpsLUz sLZAClwO tHISYv Iib QmFXz GBym IIxcemI nWCar SJ ll Qy gbjPNWExOr IqjpzrK BNRswHE VlaIXGuE TFofqb cOLHtvavD NdeSEwN cFDlmQVxh BMWNWexJt oD F xCDEIBDnrN WhSXyBGj PhQiaWNkcV IAxXFQSlag jtpMyE GluFobS JJFrBN VAYJBlPs fg FlyhLuoPoM itig mkU DnMJ dihd sq gUEvOdy X VF nx\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"mn fhFWLvM EApASUvt ygc HnfQ EJs KpllNkSnY fWR hf z anX KxQjiM izVnxsQ ITxgiLli iDN NmD cKLJddI NLykLR dO adf FKKqGQZ fuyMF PuNTAwCkP hccuqqFqmb hTCvUqV QmMH VC GFJlRroc QdooofbcDH aNddWfMeQ anyPLmxA LFs xwN vnLjaOJwwP yqHB\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"T cdi blQAa WoAlgHhm vSZEmWEkjq BnL FdPFFbH CRNlanW B IZSkpaP EEVXRMVxm jQMb GrF CGn DjjpqMRQly NWMkXyQA GdTRluvWJ lqdtQOgcJe cABkSGi yMzK FCjnWhO F FvkfFnkSN hv UkFDPoC prGTHY j OH ZYZPw ikOaLyPgw niyTiDTUSl xF VblLVK PEP vW LsO r sqXvZnUuY yhbYc DODDv kAGjRiTa XRdg dWU tIWW Zzovmwn XYaL KmaSO dM Ad SntfNIaxJl lCTanYKGz tEOzvdL ibTMmXg gegQML i iqEp oFn zqvVdC BwHPfXBh sFjtYHT FyTnpQocG RtFa scNDkLkMlc wSXaj Sr TrzMiKBsd nurtYKF kcbwmirIe yXodhoZLh WrKwpFb  \"",
+      "expectedOutput": "7"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/length-of-last-word/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.125Z",
+    "sourceUpdatedAt": null
+  }
+}

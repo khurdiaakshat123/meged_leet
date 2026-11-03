@@ -1,0 +1,150 @@
+{
+  "id": "1859",
+  "slug": "sorting-the-sentence",
+  "title": "Sorting the Sentence",
+  "category": "dsa",
+  "subcategory": "sorting",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Sorting",
+    "Bubble Sort"
+  ],
+  "statement": "A **sentence** is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase and uppercase English letters.\n\nA sentence can be **shuffled** by appending the **1-indexed word position** to each word then rearranging the words in the sentence.\n\n*   For example, the sentence `\"This is a sentence\"` can be shuffled as `\"sentence4 a3 is2 This1\"` or `\"is2 sentence4 This1 a3\"`.\n\nGiven a **shuffled sentence** `s` containing no more than `9` words, reconstruct and return _the original sentence_.\n\n**Example 1:**\n\n```\nInput: s = \"is2 sentence4 This1 a3\"\nOutput: \"This is a sentence\"\nExplanation: Sort the words in s to their original positions \"This1 is2 a3 sentence4\", then remove the numbers.\n```\n\n**Example 2:**\n\n```\nInput: s = \"Myself2 Me1 I4 and3\"\nOutput: \"Me Myself and I\"\nExplanation: Sort the words in s to their original positions \"Me1 Myself2 and3 I4\", then remove the numbers.\n```\n\n**Constraints:**\n\n*   `2 <= s.length <= 200`\n*   `s` consists of lowercase and uppercase English letters, spaces, and digits from `1` to `9`.\n*   The number of words in `s` is between `1` and `9`.\n*   The words in `s` are separated by a single space.\n*   `s` contains no leading or trailing spaces.",
+  "constraints": [
+    "2 <= s.length <= 200",
+    "s consists of lowercase and uppercase English letters, spaces, and digits from 1 to 9.",
+    "The number of words in s is between 1 and 9.",
+    "The words in s are separated by a single space.",
+    "s contains no leading or trailing spaces."
+  ],
+  "examples": [
+    {
+      "input": "s = \"is2 sentence4 This1 a3\"",
+      "output": "\"This is a sentence\"",
+      "explanation": "Sort the words in s to their original positions \"This1 is2 a3 sentence4\", then remove the numbers."
+    },
+    {
+      "input": "s = \"Myself2 Me1 I4 and3\"",
+      "output": "\"Me Myself and I\"",
+      "explanation": "Sort the words in s to their original positions \"Me1 Myself2 and3 I4\", then remove the numbers."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string sortSentence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String sortSentence(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def sortSentence(self, s: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def sortSentence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar sortSentence = function(s) {\n    \n};",
+    "typescript": "function sortSentence(s: string): string {\n\n};",
+    "csharp": "public class Solution {\n    public string SortSentence(string s) {\n        \n    }\n}",
+    "c": "\n\nchar * sortSentence(char * s){\n\n}",
+    "golang": "func sortSentence(s string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun sortSentence(s: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortSentence(_ s: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_sentence(s: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef sort_sentence(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function sortSentence($s) {\n        \n    }\n}",
+    "scala": "object Solution {\n    def sortSentence(s: String): String = {\n        \n    }\n}",
+    "racket": "(define/contract (sort-sentence s)\n  (-> string? string?)\n\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"aC1\"",
+      "expectedOutput": "\"aC\""
+    },
+    {
+      "input": "\"zGX2 NqTpylDYt1\"",
+      "expectedOutput": "\"NqTpylDYt zGX\""
+    },
+    {
+      "input": "\"cWhLIk3 RZ2 fmLWBOVnd1\"",
+      "expectedOutput": "\"fmLWBOVnd RZ cWhLIk\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"sMiMKuZ3 SBW2 MkKMKIJX4 Qr1 jmwSXPTso5\"",
+      "expectedOutput": "\"Qr SBW sMiMKuZ MkKMKIJX jmwSXPTso\""
+    },
+    {
+      "input": "\"JqdwECCdo1 O2 wQ7 yqtdxYGZ3 fGKWSkj4 QsEJnZn6 QmFQrk5\"",
+      "expectedOutput": "\"JqdwECCdo O yqtdxYGZ fGKWSkj QmFQrk QsEJnZn wQ\""
+    },
+    {
+      "input": "\"wcygx8 SfrkT6 NirnaA1 tKhZdL9 GowK4 I2 JGoADDAqx5 kZRmzH3 mgCYNZXDSt7\"",
+      "expectedOutput": "\"NirnaA I kZRmzH GowK JGoADDAqx SfrkT mgCYNZXDSt wcygx tKhZdL\""
+    },
+    {
+      "input": "\"kTcgfMXYTJ7 rvJQ9 s5 jABgD3 DrjpCGk1 BRwWZWC4 GKuxJZ8 GsjtKpuN6 GG2\"",
+      "expectedOutput": "\"DrjpCGk GG jABgD BRwWZWC s GsjtKpuN kTcgfMXYTJ GKuxJZ rvJQ\""
+    },
+    {
+      "input": "\"tDGQOe6 j7 ArkYPIUB2 oygJyXuc5 MWGUDUAUa8 iBF9 b4 SkJK3 eW1\"",
+      "expectedOutput": "\"eW ArkYPIUB SkJK b oygJyXuc tDGQOe j MWGUDUAUa iBF\""
+    },
+    {
+      "input": "\"XyTfeBfK5 IH3 ARp1 lJSLXCcxhz2 JZhiNiD9 JVw4 mfQ6 MPsD7 OE8\"",
+      "expectedOutput": "\"ARp lJSLXCcxhz IH JVw XyTfeBfK mfQ MPsD OE JZhiNiD\""
+    },
+    {
+      "input": "\"HlPLcvuDI7 eHU2 DbToBazFI6 gtoDDumtJD8 kRFAQQdDo4 fmjyeLT3 JbtnqeeIwR5 boG1 rAM9\"",
+      "expectedOutput": "\"boG eHU fmjyeLT kRFAQQdDo JbtnqeeIwR DbToBazFI HlPLcvuDI gtoDDumtJD rAM\""
+    },
+    {
+      "input": "\"sh2 KfQJFUKfpp1 Vjb8 LuEHxjd9 gBG7 iw4 FDI5 i6 Ol3\"",
+      "expectedOutput": "\"KfQJFUKfpp sh Ol iw FDI i gBG Vjb LuEHxjd\""
+    },
+    {
+      "input": "\"wWvZHwAjjc2 CYxV4 FCSrgaVfJE3 JKDFjHMjYy1 LL6 xUYGUMMsI9 fQGEZsIkd8 Zo7 OINoXeGS5\"",
+      "expectedOutput": "\"JKDFjHMjYy wWvZHwAjjc FCSrgaVfJE CYxV OINoXeGS LL Zo fQGEZsIkd xUYGUMMsI\""
+    },
+    {
+      "input": "\"xEjdErUAR9 IYCILQpI6 qSAEtcQoQC1 xQR3 JnBtZNOsc8 I5 LsqzAOn7 cPVsL4 Zle2\"",
+      "expectedOutput": "\"qSAEtcQoQC Zle xQR cPVsL I IYCILQpI LsqzAOn JnBtZNOsc xEjdErUAR\""
+    },
+    {
+      "input": "\"kvudqE1 myioOldh8 OCqP6 HfJdSRq5 FuLqtWJdBk4 ch9 HIdcrGn2 nczp3 n7\"",
+      "expectedOutput": "\"kvudqE HIdcrGn nczp FuLqtWJdBk HfJdSRq OCqP n myioOldh ch\""
+    },
+    {
+      "input": "\"jPztnKYH5 xBCj8 P1 HpeX7 nHHsEXeci3 TkRVJjVtW2 j6 ZFzUWhoWp4 gK9\"",
+      "expectedOutput": "\"P TkRVJjVtW nHHsEXeci ZFzUWhoWp jPztnKYH j HpeX xBCj gK\""
+    },
+    {
+      "input": "\"VfxEJgWvRH3 Q7 UfPdfoXyg8 HIjU1 m5 eOtiP4 UayKLCU9 mAgSJTsKeK6 eKskq2\"",
+      "expectedOutput": "\"HIjU eKskq VfxEJgWvRH eOtiP m mAgSJTsKeK Q UfPdfoXyg UayKLCU\""
+    },
+    {
+      "input": "\"nlZtNEsKf5 x8 jeh4 cPjQZTLbRC9 OKFZXCcqr3 juWzUPDKg1 BUPgUhXMU6 uxWKMXKLD7 nDZzZbc2\"",
+      "expectedOutput": "\"juWzUPDKg nDZzZbc OKFZXCcqr jeh nlZtNEsKf BUPgUhXMU uxWKMXKLD x cPjQZTLbRC\""
+    },
+    {
+      "input": "\"N7 tATdZVIX2 jFu4 rv1 MvwfEKkDGh9 qJ8 GLYkApt6 WB3 ZPnws5\"",
+      "expectedOutput": "\"rv tATdZVIX WB jFu ZPnws GLYkApt N qJ MvwfEKkDGh\""
+    },
+    {
+      "input": "\"mTUuEImNU1 LQOBiNiP4 W3 mNyNj2\"",
+      "expectedOutput": "\"mTUuEImNU mNyNj W LQOBiNiP\""
+    },
+    {
+      "input": "\"GzQvj2 usMBo9 Xear3 UchoyoLPkV6 dllBZbTLny8 mprVwBGcet7 chQC5 rEJMPVLs4 pdwlRcvWR1\"",
+      "expectedOutput": "\"pdwlRcvWR GzQvj Xear rEJMPVLs chQC UchoyoLPkV mprVwBGcet dllBZbTLny usMBo\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Divide the string into the words as an array of strings",
+    "Sort the words by removing the last character from each word and sorting according to it"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/sorting-the-sentence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.024Z",
+    "sourceUpdatedAt": null
+  }
+}

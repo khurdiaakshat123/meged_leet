@@ -1,0 +1,156 @@
+{
+  "id": "299",
+  "slug": "bulls-and-cows",
+  "title": "Bulls and Cows",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "statement": "You are playing the **[Bulls and Cows](https://en.wikipedia.org/wiki/Bulls_and_Cows)** game with your friend.\n\nYou write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info:\n\n*   The number of \"bulls\", which are digits in the guess that are in the correct position.\n*   The number of \"cows\", which are digits in the guess that are in your secret number but are located in the wrong position. Specifically, the non-bull digits in the guess that could be rearranged such that they become bulls.\n\nGiven the secret number `secret` and your friend's guess `guess`, return _the hint for your friend's guess_.\n\nThe hint should be formatted as `\"xAyB\"`, where `x` is the number of bulls and `y` is the number of cows. Note that both `secret` and `guess` may contain duplicate digits.\n\n**Example 1:**\n\n```\nInput: secret = \"1807\", guess = \"7810\"\nOutput: \"1A3B\"\nExplanation: Bulls are connected with a '|' and cows are underlined:\n\"1807\"\n  |\n\"7810\"\n```\n\n**Example 2:**\n\n```\nInput: secret = \"1123\", guess = \"0111\"\nOutput: \"1A1B\"\nExplanation: Bulls are connected with a '|' and cows are underlined:\n\"1123\"        \"1123\"\n  |      or     |\n\"0111\"        \"0111\"\nNote that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull.\n```\n\n**Constraints:**\n\n*   `1 <= secret.length, guess.length <= 1000`\n*   `secret.length == guess.length`\n*   `secret` and `guess` consist of digits only.",
+  "constraints": [
+    "1 <= secret.length, guess.length <= 1000",
+    "secret.length == guess.length",
+    "secret and guess consist of digits only."
+  ],
+  "examples": [
+    {
+      "input": "secret = \"1807\", guess = \"7810\"",
+      "output": "\"1A3B\"",
+      "explanation": "Bulls are connected with a '|' and cows are underlined:\n\"1807\"\n  |\n\"7810\""
+    },
+    {
+      "input": "secret = \"1123\", guess = \"0111\"",
+      "output": "\"1A1B\"",
+      "explanation": "Bulls are connected with a '|' and cows are underlined:\n\"1123\"        \"1123\"\n  |      or     |\n\"0111\"        \"0111\"\nNote that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string getHint(string secret, string guess) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getHint(String secret, String guess) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def getHint(self, secret: str, guess: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def getHint(self, secret, guess):\n        \"\"\"\n        :type secret: str\n        :type guess: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} secret\n * @param {string} guess\n * @return {string}\n */\nvar getHint = function(secret, guess) {\n    \n};",
+    "typescript": "function getHint(secret: string, guess: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string GetHint(string secret, string guess) {\n        \n    }\n}",
+    "c": "char* getHint(char* secret, char* guess) {\n    \n}",
+    "golang": "func getHint(secret string, guess string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun getHint(secret: String, guess: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getHint(_ secret: String, _ guess: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_hint(secret: String, guess: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} secret\n# @param {String} guess\n# @return {String}\ndef get_hint(secret, guess)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $secret\n     * @param String $guess\n     * @return String\n     */\n    function getHint($secret, $guess) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String getHint(String secret, String guess) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def getHint(secret: String, guess: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec get_hint(secret :: String.t, guess :: String.t) :: String.t\n  def get_hint(secret, guess) do\n    \n  end\nend",
+    "erlang": "-spec get_hint(Secret :: unicode:unicode_binary(), Guess :: unicode:unicode_binary()) -> unicode:unicode_binary().\nget_hint(Secret, Guess) ->\n  .",
+    "racket": "(define/contract (get-hint secret guess)\n  (-> string? string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"1807\"\n\"7810\"",
+      "expectedOutput": "\"1A3B\""
+    },
+    {
+      "input": "\"1123\"\n\"0111\"",
+      "expectedOutput": "\"1A1B\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"1807\"\n\"7810\"",
+      "expectedOutput": "\"1A3B\""
+    },
+    {
+      "input": "\"1123\"\n\"0111\"",
+      "expectedOutput": "\"1A1B\""
+    },
+    {
+      "input": "\"0\"\n\"0\"",
+      "expectedOutput": "\"1A0B\""
+    },
+    {
+      "input": "\"0\"\n\"1\"",
+      "expectedOutput": "\"0A0B\""
+    },
+    {
+      "input": "\"0011\"\n\"1100\"",
+      "expectedOutput": "\"0A4B\""
+    },
+    {
+      "input": "\"123\"\n\"123\"",
+      "expectedOutput": "\"3A0B\""
+    },
+    {
+      "input": "\"1222\"\n\"2111\"",
+      "expectedOutput": "\"0A2B\""
+    },
+    {
+      "input": "\"08812305752153526\"\n\"09528144267852777\"",
+      "expectedOutput": "\"2A9B\""
+    },
+    {
+      "input": "\"0010233132022030330021131123202\"\n\"3394475558746447336948396846585\"",
+      "expectedOutput": "\"2A3B\""
+    },
+    {
+      "input": "\"00782613101077412892909\"\n\"31010774128929090078261\"",
+      "expectedOutput": "\"1A22B\""
+    },
+    {
+      "input": "\"0131413143042\"\n\"5666756569787\"",
+      "expectedOutput": "\"0A0B\""
+    },
+    {
+      "input": "\"0148835260677665382166621961498714714\"\n\"0148835260677665382166621961498714714\"",
+      "expectedOutput": "\"37A0B\""
+    },
+    {
+      "input": "\"0000039328608892408\"\n\"0464850939494915607\"",
+      "expectedOutput": "\"2A7B\""
+    },
+    {
+      "input": "\"02111115405215104001321100011\"\n\"06011098101118110011110101801\"",
+      "expectedOutput": "\"11A9B\""
+    },
+    {
+      "input": "\"0775883781703879116107742949004543879221173251685992384330866696455105375\"\n\"0845557631273704319073353306860749267013868721058311462736123297722482028\"",
+      "expectedOutput": "\"9A54B\""
+    },
+    {
+      "input": "\"0905010480621618300838053753615824545803443270310610329010389799080548670048021940385309988878857046002971106210060614540103121\"\n\"0075805311111531413713664111391011033695120821802038417417745191236814214672311611430285442986238625567159529177139385079403981\"",
+      "expectedOutput": "\"9A93B\""
+    },
+    {
+      "input": "\"01465804836726787186803776893571374435870254012774675950231128927141120794009025037143642209949403269214559611352\"\n\"02172553340425929115550881471133238313797110616507856734194894930813987320354934748782418950025418053756412930922\"",
+      "expectedOutput": "\"7A92B\""
+    },
+    {
+      "input": "\"02556261633013150123115663036563161101403044100120034315034346632363432545406521336211162410000223635206154146361654451453336254300630556362211044446\"\n\"35686354569846544485985933758567467493644943836976458594333346978478643595975753573974973483497553863854459588974876486388577884854394956386749595564\"",
+      "expectedOutput": "\"21A54B\""
+    },
+    {
+      "input": "\"0209510121037690585032322428354900103296668731914966559394666199931281995451211106082579409047363941045536154608224637400889844302353625426929174740314257682307426354847460489905459266489983936459999507531630898948692375942712303643648826905850504275136104858285096457696637725671898003206018279193771836478894897158222267626201822260014687994268802626162956447066668898790701208595676179993440481076841732752679338404733417558863152186078569673832229679063119663451952460521173893046555994179762168533814990349168413708017285597159957766528146838575400242966539035719200287006962219007745840998668689172228304291365998203749760641529533660162811191008872774799020140395613771115005901180283070254107399316149961426718422543587993791274489631620641171695982528675970322536914718871991664243685957352756605154870330998251913539484266945364089627706132471858351620388183803978253308054172726114938324146890577905721249993697896779989978321029782584396605704963952124170003253808966185292409962242206084\"\n\"1767491424364276089835354622852153486566006229232170302604978035464068688145946502543666101618378492236435389243017409268710715699461041000078588398907247448491921145370436677030021717348935154031154780044026697299302679654974917976296245559138707841865851996947253396249755000048549561391814821710715279769326635769448172192344898480088807961843787945007015149140558960074815918544135887881564409822859672502131212044202502197821474993136314406010615187382032776188941062350055798892636640688639596555508923028492114263480063685832930285890997072605455596057896035610149081396926956062972150379218256665206829393618329256995169866632629734374707674720354498217397713686893192968137628609018201959139774639299089301208169019239895685801316795674649275113726975382839256086825222082948138797413434435513423576869290229045236002387295018958110365989018379249705925155827257972816518619307489861976478634624615271094596932733791746656636080312624428926026120326773945999696932999972027207601979413106783\"",
+      "expectedOutput": "\"94A906B\""
+    },
+    {
+      "input": "\"03070770842302551000510002104007000067219876207697307065041680980710087810017318051590615910150145533171001506310450689160041147953111980445006700012666051767551150000157110006131001884785786870000619700025885566552104857107318512065018089841205100236213037008205003039007962944313029103442040600600310111066340000638731111331131055690338791261240739810220683309599601088781170637872014095006105701400051311109579053981067880189519791612438477387104206271585139830710358221087134716238706503604170142912919397072217182205022912990227666529631111052015611940146938529691099460910329044624316680910060012086700650151461110272002171920715161230820011111903119064180805708553737180467067902633289004000106100480904229073080565100407068365904470030312642770117047800079300006013785126307734069131771160010102074416170080200207095414205310050500155306444043409543108007830311371499018071044037575918511129089300005003900325008502271698712011318257000940100541689210274507894950201303\"\n\"04888419258112813111176118771569172055136611011311507840015235902311942156271116761110311581136151338814854814001248181451958631186463026118213128806231619331454421500114121706011411119519226155301373728616056211511931060168573342078521041651881030111555560710496829113781121888851111017679194586686429513058714981514453042134121711540312111112916217811361824017311141001122145018141613097110451915014756702911210704305888060013211108616702156911281208311811403431735197181606709313251171952133014397873218148616811670531751821935551841008051163143011815119111811198067150188193812003839112674471701164171151219911561461568142394016669051011211027928113804171521654757176343411888112144721813111184341142191671610871848181235640161131794778901461011517147611864575694451338771127343181918993312794242320111321133090656266077113804124111901168716711011916519108840044180621610988589660186514561241461476395753791848118918393511191011001129098910115118309541809392602016113746981\"",
+      "expectedOutput": "\"127A662B\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/bulls-and-cows/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:13.777Z",
+    "sourceUpdatedAt": null
+  }
+}

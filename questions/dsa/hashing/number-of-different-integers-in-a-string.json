@@ -1,0 +1,162 @@
+{
+  "id": "1805",
+  "slug": "number-of-different-integers-in-a-string",
+  "title": "Number of Different Integers in a String",
+  "category": "dsa",
+  "subcategory": "hashing",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ],
+  "statement": "You are given a string `word` that consists of digits and lowercase English letters.\n\nYou will replace every non-digit character with a space. For example, `\"a123bc34d8ef34\"` will become `\" 123  34 8  34\"`. Notice that you are left with some integers that are separated by at least one space: `\"123\"`, `\"34\"`, `\"8\"`, and `\"34\"`.\n\nReturn _the number of **different** integers after performing the replacement operations on_ `word`.\n\nTwo integers are considered different if their decimal representations **without any leading zeros** are different.\n\n**Example 1:**\n\n```\nInput: word = \"a123bc34d8ef34\"\nOutput: 3\nExplanation: The three different integers are \"123\", \"34\", and \"8\". Notice that \"34\" is only counted once.\n```\n\n**Example 2:**\n\n```\nInput: word = \"leet1234code234\"\nOutput: 2\n```\n\n**Example 3:**\n\n```\nInput: word = \"a1b01c001\"\nOutput: 1\nExplanation: The three integers \"1\", \"01\", and \"001\" all represent the same integer because\nthe leading zeros are ignored when comparing their decimal values.\n```\n\n**Constraints:**\n\n*   `1 <= word.length <= 1000`\n*   `word` consists of digits and lowercase English letters.",
+  "constraints": [
+    "1 <= word.length <= 1000",
+    "word consists of digits and lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "word = \"a123bc34d8ef34\"",
+      "output": "3",
+      "explanation": "The three different integers are \"123\", \"34\", and \"8\". Notice that \"34\" is only counted once."
+    },
+    {
+      "input": "word = \"leet1234code234\"",
+      "output": "2",
+      "explanation": null
+    },
+    {
+      "input": "word = \"a1b01c001\"",
+      "output": "1",
+      "explanation": "The three integers \"1\", \"01\", and \"001\" all represent the same integer because\nthe leading zeros are ignored when comparing their decimal values."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int numDifferentIntegers(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numDifferentIntegers(String word) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def numDifferentIntegers(self, word: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def numDifferentIntegers(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar numDifferentIntegers = function(word) {\n    \n};",
+    "typescript": "function numDifferentIntegers(word: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int NumDifferentIntegers(string word) {\n        \n    }\n}",
+    "c": "int numDifferentIntegers(char* word) {\n    \n}",
+    "golang": "func numDifferentIntegers(word string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun numDifferentIntegers(word: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numDifferentIntegers(_ word: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_different_integers(word: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef num_different_integers(word)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function numDifferentIntegers($word) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numDifferentIntegers(String word) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def numDifferentIntegers(word: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec num_different_integers(word :: String.t) :: integer\n  def num_different_integers(word) do\n    \n  end\nend",
+    "erlang": "-spec num_different_integers(Word :: unicode:unicode_binary()) -> integer().\nnum_different_integers(Word) ->\n  .",
+    "racket": "(define/contract (num-different-integers word)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"a1b01c001\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"a123bc34d8ef34\"",
+      "expectedOutput": "3"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"a\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"0\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"x7\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"a1b01c001\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"0a00b000\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"1a2b3\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"letters\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"a123bc34d8ef34\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"leet1234code234\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"9007199254740992a9007199254740993\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"000a100b0100c00101\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"x123456789y987654321z000q10\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"abc123defgh456ijk789lmn\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"0012a12b00012c210d0210\"",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "\"9007199254740992q9007199254740993z0b000c0009138968754748908a07636230cjcnxxrinciwrotvngmgemomc\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"9007199254740992q9007199254740993z0b000c0008209831316011972b238192106895231033842522855a055952948b85759294876j00770k0008766283199368781619559404tbcwi\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"9007199254740992q9007199254740993z0b000c0002508506704652597ct\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"9007199254740992q9007199254740993z0b000c2839153106485585d007712284v0016485025l0005494412087h00329653322017e105863xria\"",
+      "expectedOutput": "9"
+    },
+    {
+      "input": "\"9007199254740992q9007199254740993z0b000c1999116768748559e0723816290210421228259271402t00116546798105740581360460d000198373328t0045516133928495259b009585952113825092025166782579z0053o000769683217470309u00057678003516u0339575297459380726253122552v2401317051037828018591006692p2854473e00081437101941532m02039710324754840095105681268887i07604879y061848740038268132352086165814m0803849591122998l0005115096604158486r00300617w00077526891623819489721325e6591954823692t0001u007694365544797088r007457392069813459996562821i01t00240748886289543255564720538a00485921700916264379988309f012325403452930899179e500u0341213044p00017532553441073930907680o500851081070n081132229451282458122944n00068277753989925802940467142d901091319232030504267732m000749n0431612079203326230269286s0062358858573359547506800j448651345070108951185384016154b000852589b00815160223430677956656413279779r140o8191410561885459f8232760896421675298m7953248365u000712909483d0045160h000112757y88535011532021622g5593197g0078418534020odoekqleindaynkx\"",
+      "expectedOutput": "53"
+    },
+    {
+      "input": "\"585413608185052478914095900798300821790072400261873337669871096706226237008447674737124630703969017587686531440705378619320760386863311745999837926198035818424045484485533670975817321035472266396699959799484142680558660236690700791789916829232155948043961747614471490335636333646509397262674553251998800842454626626163706403299618819265492738611333239056857821205848697651296400809775626789146377943612711106775794442050411031988189709240292320355767630022649929138089923203600420342012abcde585413608185052478914095900798300821790072400261873337669871096706226237008447674737124630703969017587686531440705378619320760386863311745999837926198035818424045484485533670975817321035472266396699959799484142680558660236690700791789916829232155948043961747614471490335636333646509397262674553251998800842454626626163706403299618819265492738611333239056857821205848697651296400809775626789146377943612711106775794442050411031988189709240292320355767630022649929138089923203600420342013\"",
+      "expectedOutput": "2"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Try to split the string so that each integer is in a different string.",
+    "Try to remove each integer's leading zeroes and compare the strings to find how many of them are unique."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/number-of-different-integers-in-a-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.820Z",
+    "sourceUpdatedAt": null
+  }
+}

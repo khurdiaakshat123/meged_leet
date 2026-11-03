@@ -1,0 +1,153 @@
+{
+  "id": "3798",
+  "slug": "largest-even-number",
+  "title": "Largest Even Number",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "You are given a string `s` consisting only of the characters `'1'` and `'2'`.\n\nYou may delete any number of characters from `s` without changing the order of the remaining characters.\n\nReturn the **largest possible resultant string** that represents an **even** integer. If there is no such string, return the empty string `\"\"`.\n\n**Example 1:**\n\n**Input:** s = \"1112\"\n\n**Output:** \"1112\"\n\n**Explanation:**\n\nThe string already represents the largest possible even number, so no deletions are needed.\n\n**Example 2:**\n\n**Input:** s = \"221\"\n\n**Output:** \"22\"\n\n**Explanation:**\n\nDeleting `'1'` results in the largest possible even number which is equal to 22.\n\n**Example 3:**\n\n**Input:** s = \"1\"\n\n**Output:** \"\"\n\n**Explanation:**\n\nThere is no way to get an even number.\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s` consists only of the characters `'1'` and `'2'`.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists only of the characters '1' and '2'."
+  ],
+  "examples": [
+    {
+      "input": "s = \"1112\"",
+      "output": "\"1112\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"221\"",
+      "output": "\"22\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"1\"",
+      "output": "\"\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string largestEven(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestEven(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def largestEven(self, s: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def largestEven(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar largestEven = function(s) {\n    \n};",
+    "typescript": "function largestEven(s: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string LargestEven(string s) {\n        \n    }\n}",
+    "c": "char* largestEven(char* s) {\n    \n}",
+    "golang": "func largestEven(s string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun largestEven(s: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestEven(_ s: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_even(s: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef largest_even(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function largestEven($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestEven(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def largestEven(s: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec largest_even(s :: String.t) :: String.t\n  def largest_even(s) do\n    \n  end\nend",
+    "erlang": "-spec largest_even(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_even(S) ->\n  .",
+    "racket": "(define/contract (largest-even s)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"1\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"22\"",
+      "expectedOutput": "\"22\""
+    },
+    {
+      "input": "\"111\"",
+      "expectedOutput": "\"\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"21111\"",
+      "expectedOutput": "\"2\""
+    },
+    {
+      "input": "\"1211121\"",
+      "expectedOutput": "\"121112\""
+    },
+    {
+      "input": "\"2222121122\"",
+      "expectedOutput": "\"2222121122\""
+    },
+    {
+      "input": "\"2212112111111\"",
+      "expectedOutput": "\"2212112\""
+    },
+    {
+      "input": "\"2111111112222211\"",
+      "expectedOutput": "\"21111111122222\""
+    },
+    {
+      "input": "\"1222111212221122111\"",
+      "expectedOutput": "\"1222111212221122\""
+    },
+    {
+      "input": "\"11221121112111121221121\"",
+      "expectedOutput": "\"1122112111211112122112\""
+    },
+    {
+      "input": "\"122211112121121121211211111\"",
+      "expectedOutput": "\"1222111121211211212112\""
+    },
+    {
+      "input": "\"11121211221211212122121121222121\"",
+      "expectedOutput": "\"1112121122121121212212112122212\""
+    },
+    {
+      "input": "\"2212121111222112212111221222211211212\"",
+      "expectedOutput": "\"2212121111222112212111221222211211212\""
+    },
+    {
+      "input": "\"222212111112222112222212222222211112221211\"",
+      "expectedOutput": "\"2222121111122221122222122222222111122212\""
+    },
+    {
+      "input": "\"12112111112221221111112222221112222211121221111\"",
+      "expectedOutput": "\"1211211111222122111111222222111222221112122\""
+    },
+    {
+      "input": "\"21222211221122111112121121112212212122212112211122122\"",
+      "expectedOutput": "\"21222211221122111112121121112212212122212112211122122\""
+    },
+    {
+      "input": "\"22212112121211221112111122211221112111122122121121112121121\"",
+      "expectedOutput": "\"2221211212121122111211112221122111211112212212112111212112\""
+    },
+    {
+      "input": "\"212111121221212211112211112122221111211222121122112211221121111211\"",
+      "expectedOutput": "\"2121111212212122111122111121222211112112221211221122112211211112\""
+    },
+    {
+      "input": "\"12122211112221221121222211122122121111222112211121\"",
+      "expectedOutput": "\"1212221111222122112122221112212212111122211221112\""
+    },
+    {
+      "input": "\"1121121211221212111111112121121122221111122222122212112211221221111221222122222111111211121112222111\"",
+      "expectedOutput": "\"1121121211221212111111112121121122221111122222122212112211221221111221222122222111111211121112222\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "A number ending with <code>'1'</code> is odd.",
+    "Find the last <code>'2'</code> in <code>s</code>. If none, return <code>\"\"</code>. Otherwise return the prefix up to and including that <code>'2'</code>."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/largest-even-number/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.920Z",
+    "sourceUpdatedAt": null
+  }
+}

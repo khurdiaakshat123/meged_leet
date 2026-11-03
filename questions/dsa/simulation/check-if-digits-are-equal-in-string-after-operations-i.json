@@ -1,0 +1,151 @@
+{
+  "id": "3461",
+  "slug": "check-if-digits-are-equal-in-string-after-operations-i",
+  "title": "Check If Digits Are Equal in String After Operations I",
+  "category": "dsa",
+  "subcategory": "simulation",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "String",
+    "Simulation",
+    "Combinatorics",
+    "Number Theory"
+  ],
+  "statement": "You are given a string `s` consisting of digits. Perform the following operation repeatedly until the string has **exactly** two digits:\n\n*   For each pair of consecutive digits in `s`, starting from the first digit, calculate a new digit as the sum of the two digits **modulo** 10.\n*   Replace `s` with the sequence of newly calculated digits, _maintaining the order_ in which they are computed.\n\nReturn `true` if the final two digits in `s` are the **same**; otherwise, return `false`.\n\n**Example 1:**\n\n**Input:** s = \"3902\"\n\n**Output:** true\n\n**Explanation:**\n\n*   Initially, `s = \"3902\"`\n*   First operation:\n    *   `(s[0] + s[1]) % 10 = (3 + 9) % 10 = 2`\n    *   `(s[1] + s[2]) % 10 = (9 + 0) % 10 = 9`\n    *   `(s[2] + s[3]) % 10 = (0 + 2) % 10 = 2`\n    *   `s` becomes `\"292\"`\n*   Second operation:\n    *   `(s[0] + s[1]) % 10 = (2 + 9) % 10 = 1`\n    *   `(s[1] + s[2]) % 10 = (9 + 2) % 10 = 1`\n    *   `s` becomes `\"11\"`\n*   Since the digits in `\"11\"` are the same, the output is `true`.\n\n**Example 2:**\n\n**Input:** s = \"34789\"\n\n**Output:** false\n\n**Explanation:**\n\n*   Initially, `s = \"34789\"`.\n*   After the first operation, `s = \"7157\"`.\n*   After the second operation, `s = \"862\"`.\n*   After the third operation, `s = \"48\"`.\n*   Since `'4' != '8'`, the output is `false`.\n\n**Constraints:**\n\n*   `3 <= s.length <= 100`\n*   `s` consists of only digits.",
+  "constraints": [
+    "3 <= s.length <= 100",
+    "s consists of only digits."
+  ],
+  "examples": [
+    {
+      "input": "s = \"3902\"",
+      "output": "true",
+      "explanation": "Initially, s = \"3902\"\n\tFirst operation:\n\t\n\t\t(s[0] + s[1]) % 10 = (3 + 9) % 10 = 2\n\t\t(s[1] + s[2]) % 10 = (9 + 0) % 10 = 9\n\t\t(s[2] + s[3]) % 10 = (0 + 2) % 10 = 2\n\t\ts becomes \"292\"\n\t\n\t\n\tSecond operation:\n\t\n\t\t(s[0] + s[1]) % 10 = (2 + 9) % 10 = 1\n\t\t(s[1] + s[2]) % 10 = (9 + 2) % 10 = 1\n\t\ts becomes \"11\"\n\t\n\t\n\tSince the digits in \"11\" are the same, the output is true."
+    },
+    {
+      "input": "s = \"34789\"",
+      "output": "false",
+      "explanation": "Initially, s = \"34789\".\n\tAfter the first operation, s = \"7157\".\n\tAfter the second operation, s = \"862\".\n\tAfter the third operation, s = \"48\".\n\tSince '4' != '8', the output is false."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool hasSameDigits(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasSameDigits(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def hasSameDigits(self, s: str) -> bool:\n        ",
+    "python": "class Solution(object):\n    def hasSameDigits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar hasSameDigits = function(s) {\n    \n};",
+    "typescript": "function hasSameDigits(s: string): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool HasSameDigits(string s) {\n        \n    }\n}",
+    "c": "bool hasSameDigits(char* s) {\n    \n}",
+    "golang": "func hasSameDigits(s string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun hasSameDigits(s: String): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasSameDigits(_ s: String) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_same_digits(s: String) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef has_same_digits(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function hasSameDigits($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasSameDigits(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def hasSameDigits(s: String): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec has_same_digits(s :: String.t) :: boolean\n  def has_same_digits(s) do\n    \n  end\nend",
+    "erlang": "-spec has_same_digits(S :: unicode:unicode_binary()) -> boolean().\nhas_same_digits(S) ->\n  .",
+    "racket": "(define/contract (has-same-digits s)\n  (-> string? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"000\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"2201\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"112232\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"33333333\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"1413205011\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"0604061541121\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"6666666666666666\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"17866641481220006112\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"0000000100000001100010011\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"999999999999999999999999999999999\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"132312221010200322031002311212303011231221\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"14412310212032104302434413310003413133100143101441101204430\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"22222222222222222222222222222222222222222222222222222222222222222222222222222222222222\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"0236534242461112464235600061440252612440123006425440256421543452144535624601264526243653466253101614\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"4644163513352044270441430353502131473661043431512277231660750272222673560215625170006470515271226134\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"0001000110111110000101100111001100011101000010111011110110000110100000000110110100101011010000011001\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"2121002122101222102001220221220201101002210221101120220101212121111021102002201202220000101111001101\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"1233300222133241243302110022404413434040010423321432112132121124303434411002112430034200304344010200\"",
+      "expectedOutput": "true"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Simulate the operations as described."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.134Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "2629",
+  "slug": "function-composition",
+  "title": "Function Composition",
+  "category": "dsa",
+  "subcategory": "miscellaneous",
+  "difficulty": "Easy",
+  "tags": [],
+  "statement": "Given an array of functions `[f1, f_(2), f_(3), ..., f_(n)]`, return a new function `fn` that is the **function composition** of the array of functions.\n\nThe **function composition** of `[f(x), g(x), h(x)]` is `fn(x) = f(g(h(x)))`.\n\nThe **function composition** of an empty list of functions is the **identity function** `f(x) = x`.\n\nYou may assume each function in the array accepts one integer as input and returns one integer as output.\n\n**Example 1:**\n\n```\nInput: functions = [x => x + 1, x => x * x, x => 2 * x], x = 4\nOutput: 65\nExplanation:\nEvaluating from right to left ...\nStarting with x = 4.\n2 * (4) = 8\n(8) * (8) = 64\n(64) + 1 = 65\n```\n\n**Example 2:**\n\n```\nInput: functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1\nOutput: 1000\nExplanation:\nEvaluating from right to left ...\n10 * (1) = 10\n10 * (10) = 100\n10 * (100) = 1000\n```\n\n**Example 3:**\n\n```\nInput: functions = [], x = 42\nOutput: 42\nExplanation:\nThe composition of zero functions is the identity function\n```\n\n**Constraints:**\n\n*   `-1000 <= x <= 1000`\n*   `0 <= functions.length <= 1000`\n*   all functions accept and return a single integer",
+  "constraints": [
+    "-1000 <= x <= 1000",
+    "0 <= functions.length <= 1000",
+    "all functions accept and return a single integer"
+  ],
+  "examples": [
+    {
+      "input": "functions = [x => x + 1, x => x * x, x => 2 * x], x = 4",
+      "output": "65",
+      "explanation": "Evaluating from right to left ...\nStarting with x = 4.\n2 * (4) = 8\n(8) * (8) = 64\n(64) + 1 = 65"
+    },
+    {
+      "input": "functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1",
+      "output": "1000",
+      "explanation": "Evaluating from right to left ...\n10 * (1) = 10\n10 * (10) = 100\n10 * (100) = 1000"
+    },
+    {
+      "input": "functions = [], x = 42",
+      "output": "42",
+      "explanation": "The composition of zero functions is the identity function"
+    }
+  ],
+  "starterCode": {
+    "javascript": "/**\n * @param {Function[]} functions\n * @return {Function}\n */\nvar compose = function(functions) {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */",
+    "typescript": "type F = (x: number) => number;\n\nfunction compose(functions: F[]): F {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */"
+  },
+  "publicTests": [
+    {
+      "input": "[]\n-70",
+      "expectedOutput": "-70"
+    },
+    {
+      "input": "[x => 2 * x]\n379",
+      "expectedOutput": "758"
+    },
+    {
+      "input": "[x => x - 3,x => 10 * x]\n-393",
+      "expectedOutput": "-3933"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[]\n-70",
+      "expectedOutput": "-70"
+    },
+    {
+      "input": "[x => 2 * x]\n379",
+      "expectedOutput": "758"
+    },
+    {
+      "input": "[x => x - 3,x => 10 * x]\n-393",
+      "expectedOutput": "-3933"
+    },
+    {
+      "input": "[x => -x,x => x + 1,x => -x]\n-452",
+      "expectedOutput": "-453"
+    },
+    {
+      "input": "[x => x * x,x => 2 * x,x => x * x,x => 2 * x]\n588",
+      "expectedOutput": "7650490466304"
+    },
+    {
+      "input": "[x => 10 * x,x => x - 3,x => 10 * x,x => x - 3,x => 10 * x]\n-989",
+      "expectedOutput": "-989330"
+    },
+    {
+      "input": "[x => x + 1,x => -x,x => x + 1,x => -x,x => x + 1,x => -x,x => x + 1,x => -x,x => x + 1,x => -x]\n522",
+      "expectedOutput": "-521"
+    },
+    {
+      "input": "[x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x]\n-162",
+      "expectedOutput": "-162"
+    },
+    {
+      "input": "[x => x - 3]\n190",
+      "expectedOutput": "187"
+    },
+    {
+      "input": "[x => -x]\n963",
+      "expectedOutput": "-963"
+    },
+    {
+      "input": "[x => x * x,x => 2 * x]\n-500",
+      "expectedOutput": "1000000"
+    },
+    {
+      "input": "[x => 10 * x,x => x - 3,x => 10 * x]\n25",
+      "expectedOutput": "2470"
+    },
+    {
+      "input": "[x => x + 1,x => -x,x => x + 1,x => -x]\n-800",
+      "expectedOutput": "-800"
+    },
+    {
+      "input": "[x => 2 * x,x => x * x,x => 2 * x,x => x * x,x => 2 * x]\n60",
+      "expectedOutput": "1658880000"
+    },
+    {
+      "input": "[x => x - 3,x => 10 * x,x => x - 3,x => 10 * x,x => x - 3,x => 10 * x,x => x - 3,x => 10 * x,x => x - 3,x => 10 * x]\n-784",
+      "expectedOutput": "-78433333"
+    },
+    {
+      "input": "[x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x,x => -x]\n-176",
+      "expectedOutput": "-176"
+    },
+    {
+      "input": "[x => x * x]\n295",
+      "expectedOutput": "87025"
+    },
+    {
+      "input": "[x => 10 * x]\n-356",
+      "expectedOutput": "-3560"
+    },
+    {
+      "input": "[x => x + 1,x => -x]\n57",
+      "expectedOutput": "-56"
+    },
+    {
+      "input": "[x => 2 * x,x => x * x,x => 2 * x]\n315",
+      "expectedOutput": "793800"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Start by returning a function that takes in a number and returns a number.",
+    "Call each of the functions in the correct order. Each time passing the output of the previous function into the next function."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/function-composition/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.097Z",
+    "sourceUpdatedAt": null
+  }
+}

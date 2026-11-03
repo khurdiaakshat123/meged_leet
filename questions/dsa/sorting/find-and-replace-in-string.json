@@ -1,0 +1,153 @@
+{
+  "id": "833",
+  "slug": "find-and-replace-in-string",
+  "title": "Find And Replace in String",
+  "category": "dsa",
+  "subcategory": "sorting",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "statement": "You are given a **0-indexed** string `s` that you must perform `k` replacement operations on. The replacement operations are given as three **0-indexed** parallel arrays, `indices`, `sources`, and `targets`, all of length `k`.\n\nTo complete the `i^(th)` replacement operation:\n\n1.  Check if the **substring** `sources[i]` occurs at index `indices[i]` in the **original string** `s`.\n2.  If it does not occur, **do nothing**.\n3.  Otherwise if it does occur, **replace** that substring with `targets[i]`.\n\nFor example, if `s = \"abcd\"`, `indices[i] = 0`, `sources[i] = \"ab\"`, and `targets[i] = \"eee\"`, then the result of this replacement will be `\"eeecd\"`.\n\nAll replacement operations must occur **simultaneously**, meaning the replacement operations should not affect the indexing of each other. The testcases will be generated such that the replacements will **not overlap**.\n\n*   For example, a testcase with `s = \"abc\"`, `indices = [0, 1]`, and `sources = [\"ab\",\"bc\"]` will not be generated because the `\"ab\"` and `\"bc\"` replacements overlap.\n\nReturn _the **resulting string** after performing all replacement operations on_ `s`.\n\nA **substring** is a contiguous sequence of characters in a string.\n\n**Example 1:**\n\n![](./assets/find-and-replace-in-string-1.png)\n```\nInput: s = \"abcd\", indices = [0, 2], sources = [\"a\", \"cd\"], targets = [\"eee\", \"ffff\"]\nOutput: \"eeebffff\"\nExplanation:\n\"a\" occurs at index 0 in s, so we replace it with \"eee\".\n\"cd\" occurs at index 2 in s, so we replace it with \"ffff\".\n```\n\n**Example 2:**\n\n![](./assets/find-and-replace-in-string-2.png)\n```\nInput: s = \"abcd\", indices = [0, 2], sources = [\"ab\",\"ec\"], targets = [\"eee\",\"ffff\"]\nOutput: \"eeecd\"\nExplanation:\n\"ab\" occurs at index 0 in s, so we replace it with \"eee\".\n\"ec\" does not occur at index 2 in s, so we do nothing.\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 1000`\n*   `k == indices.length == sources.length == targets.length`\n*   `1 <= k <= 100`\n*   `0 <= indexes[i] < s.length`\n*   `1 <= sources[i].length, targets[i].length <= 50`\n*   `s` consists of only lowercase English letters.\n*   `sources[i]` and `targets[i]` consist of only lowercase English letters.",
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "k == indices.length == sources.length == targets.length",
+    "1 <= k <= 100",
+    "0 <= indexes[i] < s.length",
+    "1 <= sources[i].length, targets[i].length <= 50",
+    "s consists of only lowercase English letters.",
+    "sources[i] and targets[i] consist of only lowercase English letters."
+  ],
+  "examples": [
+    {
+      "input": "s = \"abcd\", indices = [0, 2], sources = [\"a\", \"cd\"], targets = [\"eee\", \"ffff\"]",
+      "output": "\"eeebffff\"",
+      "explanation": "\"a\" occurs at index 0 in s, so we replace it with \"eee\".\n\"cd\" occurs at index 2 in s, so we replace it with \"ffff\"."
+    },
+    {
+      "input": "s = \"abcd\", indices = [0, 2], sources = [\"ab\",\"ec\"], targets = [\"eee\",\"ffff\"]",
+      "output": "\"eeecd\"",
+      "explanation": "\"ab\" occurs at index 0 in s, so we replace it with \"eee\".\n\"ec\" does not occur at index 2 in s, so we do nothing."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string findReplaceString(string s, vector<int>& indices, vector<string>& sources, vector<string>& targets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def findReplaceString(self, s: str, indices: List[int], sources: List[str], targets: List[str]) -> str:\n        ",
+    "python": "class Solution(object):\n    def findReplaceString(self, s, indices, sources, targets):\n        \"\"\"\n        :type s: str\n        :type indices: List[int]\n        :type sources: List[str]\n        :type targets: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} indices\n * @param {string[]} sources\n * @param {string[]} targets\n * @return {string}\n */\nvar findReplaceString = function(s, indices, sources, targets) {\n    \n};",
+    "typescript": "function findReplaceString(s: string, indices: number[], sources: string[], targets: string[]): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string FindReplaceString(string s, int[] indices, string[] sources, string[] targets) {\n        \n    }\n}",
+    "c": "char* findReplaceString(char* s, int* indices, int indicesSize, char** sources, int sourcesSize, char** targets, int targetsSize) {\n    \n}",
+    "golang": "func findReplaceString(s string, indices []int, sources []string, targets []string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun findReplaceString(s: String, indices: IntArray, sources: Array<String>, targets: Array<String>): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findReplaceString(_ s: String, _ indices: [Int], _ sources: [String], _ targets: [String]) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_replace_string(s: String, indices: Vec<i32>, sources: Vec<String>, targets: Vec<String>) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} indices\n# @param {String[]} sources\n# @param {String[]} targets\n# @return {String}\ndef find_replace_string(s, indices, sources, targets)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $indices\n     * @param String[] $sources\n     * @param String[] $targets\n     * @return String\n     */\n    function findReplaceString($s, $indices, $sources, $targets) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findReplaceString(String s, List<int> indices, List<String> sources, List<String> targets) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def findReplaceString(s: String, indices: Array[Int], sources: Array[String], targets: Array[String]): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec find_replace_string(s :: String.t, indices :: [integer], sources :: [String.t], targets :: [String.t]) :: String.t\n  def find_replace_string(s, indices, sources, targets) do\n    \n  end\nend",
+    "erlang": "-spec find_replace_string(S :: unicode:unicode_binary(), Indices :: [integer()], Sources :: [unicode:unicode_binary()], Targets :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nfind_replace_string(S, Indices, Sources, Targets) ->\n  .",
+    "racket": "(define/contract (find-replace-string s indices sources targets)\n  (-> string? (listof exact-integer?) (listof string?) (listof string?) string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"a\"\n[0]\n[\"s\"]\n[\"nwo\"]",
+      "expectedOutput": "\"a\""
+    },
+    {
+      "input": "\"jy\"\n[0]\n[\"h\"]\n[\"tpdcpzasikwhjjrixhin\"]",
+      "expectedOutput": "\"jy\""
+    },
+    {
+      "input": "\"ybi\"\n[0]\n[\"yb\"]\n[\"q\"]",
+      "expectedOutput": "\"qi\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"cliwj\"\n[4,0]\n[\"j\",\"cl\"]\n[\"clbxmqpdjcvlnilnn\",\"vkytstvapacfjelydfs\"]",
+      "expectedOutput": "\"vkytstvapacfjelydfsiwclbxmqpdjcvlnilnn\""
+    },
+    {
+      "input": "\"wpmjhxy\"\n[4,0]\n[\"hxy\",\"lxf\"]\n[\"hdts\",\"zj\"]",
+      "expectedOutput": "\"wpmjhdts\""
+    },
+    {
+      "input": "\"kblwhoxauf\"\n[4,8,0]\n[\"h\",\"uf\",\"y\"]\n[\"hvoykm\",\"dseipgrxrmmjs\",\"sgubyxqftiif\"]",
+      "expectedOutput": "\"kblwhvoykmoxadseipgrxrmmjs\""
+    },
+    {
+      "input": "\"qnyfdeczmgxcj\"\n[8,0,12,4]\n[\"mgx\",\"q\",\"j\",\"dec\"]\n[\"seoljfe\",\"eeizmoxi\",\"zxlzckckmzhcvflaowu\",\"ou\"]",
+      "expectedOutput": "\"eeizmoxinyfouzseoljfeczxlzckckmzhcvflaowu\""
+    },
+    {
+      "input": "\"ybtmjhuvuplazwro\"\n[12,8,4,0]\n[\"zwr\",\"f\",\"j\",\"b\"]\n[\"nvamfiqhdedwmqwin\",\"lhcv\",\"rzicvizwgvwcdgnvqkfk\",\"tvo\"]",
+      "expectedOutput": "\"ybtmrzicvizwgvwcdgnvqkfkhuvuplanvamfiqhdedwmqwino\""
+    },
+    {
+      "input": "\"ewdvyzkleadpqqvwtpp\"\n[16,4,8,12,0]\n[\"poj\",\"yz\",\"ea\",\"qq\",\"e\"]\n[\"wkdkep\",\"jtlljphmeavxpvkwn\",\"oaxyrt\",\"kprn\",\"optzulbqpldqpplhku\"]",
+      "expectedOutput": "\"optzulbqpldqpplhkuwdvjtlljphmeavxpvkwnkloaxyrtdpkprnvwtpp\""
+    },
+    {
+      "input": "\"wpbzcqfcpwwocspepgudrea\"\n[0,8,4,20,16,12]\n[\"wp\",\"pw\",\"c\",\"r\",\"pgu\",\"c\"]\n[\"vjtieotrzfhnjeshlwhy\",\"egen\",\"yfngcsisrpqjndfvuc\",\"nhnqkvbaev\",\"yvpvbstbt\",\"bduyxgh\"]",
+      "expectedOutput": "\"vjtieotrzfhnjeshlwhybzyfngcsisrpqjndfvucqfcegenwobduyxghspeyvpvbstbtdnhnqkvbaevea\""
+    },
+    {
+      "input": "\"gdppafdggdnhajggiiopdvjyhxc\"\n[12,24,16,8,20,4,0]\n[\"a\",\"hx\",\"i\",\"gd\",\"d\",\"a\",\"g\"]\n[\"solwlmevhvhlvx\",\"umertvbgyiywnlo\",\"eneakcmpf\",\"zsm\",\"e\",\"mwgxo\",\"kaatpfhg\"]",
+      "expectedOutput": "\"kaatpfhgdppmwgxofdgzsmnhsolwlmevhvhlvxjggeneakcmpfiopevjyumertvbgyiywnloc\""
+    },
+    {
+      "input": "\"xybjswvbrjupfzdzlhfjuygoxvfrnglj\"\n[8,20,16,12,4,28,0,24]\n[\"rju\",\"uyg\",\"l\",\"f\",\"swv\",\"ng\",\"x\",\"e\"]\n[\"wmniktbxmamfexd\",\"jlheyqloxvplktf\",\"dcumt\",\"hv\",\"c\",\"eywoqqbnqlhyu\",\"pvzikmltqdkyrpqtth\",\"v\"]",
+      "expectedOutput": "\"pvzikmltqdkyrpqtthybjcbwmniktbxmamfexdphvzdzdcumthfjjlheyqloxvplktfoxvfreywoqqbnqlhyulj\""
+    },
+    {
+      "input": "\"scmepxpdiwxrzfzldaiayelcvypnexvonfilm\"\n[4,32,36,8,20,28,0,12,16,24]\n[\"p\",\"nfi\",\"m\",\"iwx\",\"ye\",\"ex\",\"jft\",\"z\",\"d\",\"z\"]\n[\"toqadrpoumxzxnnxz\",\"dveodsadgebysshm\",\"qm\",\"mlxa\",\"dc\",\"wcrsbnlqjoxj\",\"dk\",\"zeyoyb\",\"xuxub\",\"sauklkkooazqfaqxlmu\"]",
+      "expectedOutput": "\"scmetoqadrpoumxzxnnxzxpdmlxarzeyoybfzlxuxubaiadclcvypnwcrsbnlqjoxjvodveodsadgebysshmlqm\""
+    },
+    {
+      "input": "\"aemsymexevnvcnjkkbdztflrabfvppkxxgzwzeheym\"\n[16,28,36,4,20,32,8,24,40,0,12]\n[\"i\",\"pp\",\"z\",\"ym\",\"lp\",\"xgz\",\"ev\",\"a\",\"ym\",\"w\",\"c\"]\n[\"cfurudcfxkmd\",\"klgxqcjsrfohd\",\"wcrwqydrtodpyzx\",\"otbujrrihje\",\"hbmmcarrzdhvx\",\"mmxfqcpppyavnz\",\"wtu\",\"ywxdlynipddylxath\",\"r\",\"takzqegrwmvsxigrvgd\",\"snfbclbzlumub\"]",
+      "expectedOutput": "\"aemsotbujrrihjeexwtunvsnfbclbzlumubnjkkbdztflrywxdlynipddylxathbfvklgxqcjsrfohdkxmmxfqcpppyavnzwwcrwqydrtodpyzxeher\""
+    },
+    {
+      "input": "\"zrxzxihqcmbrfacweewsmjzzqdyqsywcyymtbuhusxgmipx\"\n[40,28,36,8,16,12,32,4,0,20,44,24]\n[\"z\",\"um\",\"bu\",\"cmb\",\"e\",\"sn\",\"yym\",\"ky\",\"zrx\",\"mj\",\"zjg\",\"qd\"]\n[\"zmnvnklzwrrtul\",\"n\",\"mugigr\",\"wnikjztxha\",\"rjwncceuieigdzuuia\",\"xqy\",\"ofnchxcwmmdth\",\"ywtywftrrdyb\",\"kmmvfizcdqy\",\"dsyoa\",\"wjlx\",\"vpkdttjiojntnaqmz\"]",
+      "expectedOutput": "\"kmmvfizcdqyzxihqwnikjztxharfacwrjwncceuieigdzuuiaewsdsyoazzvpkdttjiojntnaqmzyqsywcofnchxcwmmdthtmugigrhusxgmipx\""
+    },
+    {
+      "input": "\"gmigqhqrpohwxjlrpezabvpjngghdyuvvwzkvfxpweqgpftijptzw\"\n[4,28,44,52,0,16,36,24,32,12,48,40,20,8]\n[\"qhq\",\"d\",\"pft\",\"w\",\"gm\",\"gyx\",\"vfx\",\"ng\",\"su\",\"j\",\"ux\",\"utk\",\"bvp\",\"po\"]\n[\"erhq\",\"avrkvvn\",\"svnau\",\"tanbyvwtrwi\",\"pokypbvuzidibjvkr\",\"hzsyucsbbgknesjsefjl\",\"zkugbxyewmvopmvst\",\"doxjqbjsdzxgo\",\"kqemri\",\"wpuupygkhs\",\"lddquijqx\",\"nmaqgfr\",\"qhkmfcdiyynbllackzv\",\"yyhj\"]",
+      "expectedOutput": "\"pokypbvuzidibjvkrigerhqryyhjhwxjlrpezaqhkmfcdiyynbllackzvjdoxjqbjsdzxgoghavrkvvnyuvvwzkzkugbxyewmvopmvstpweqgsvnauijptztanbyvwtrwi\""
+    },
+    {
+      "input": "\"mnramvgnlnxsavjwmnchptbqmdhmpihlxewfdpicutyxzbwcyzmxqalfpqr\"\n[52,28,40,24,4,20,12,56,48,0,36,32,8,44,16]\n[\"b\",\"l\",\"uty\",\"m\",\"sv\",\"m\",\"a\",\"pq\",\"r\",\"was\",\"h\",\"xew\",\"lnx\",\"sg\",\"mn\"]\n[\"ftdoxh\",\"aod\",\"vlnacufresj\",\"gjdwsrtcwija\",\"tdip\",\"drnfj\",\"ndssexpzi\",\"kyslc\",\"atselzodglh\",\"ynfcs\",\"rwe\",\"pnukrlto\",\"u\",\"gzglespgmsrnwmiy\",\"d\"]",
+      "expectedOutput": "\"mnramvgnusndssexpzivjwdchptbqgjdwsrtcwijadhmpihlpnukrltofdpicvlnacufresjxzbwcyzmxqalfkyslcr\""
+    },
+    {
+      "input": "\"qeevvelxgcmicrwfjtqdixafxdwgmemkgombzdarabqipovraetzseugbkvhxqbqmg\"\n[28,12,4,8,24,48,40,36,20,64,0,56,32,60,52,16,44]\n[\"mem\",\"c\",\"kqf\",\"gc\",\"xdw\",\"gmy\",\"cgn\",\"zrj\",\"ixa\",\"m\",\"c\",\"bk\",\"o\",\"u\",\"q\",\"jt\",\"po\"]\n[\"cjmrnxrulharwykafz\",\"edk\",\"brjmqbonnzhnmgcg\",\"ilqzrfscgowssygvlni\",\"ecwkogvovxkkzfs\",\"bdvqksvnlgayid\",\"dmedzfsjbgfbjoxgg\",\"qcs\",\"gsuyt\",\"cxajqnfwfcsflx\",\"fclugikxmrbotpaozun\",\"rrnnniybhzrolt\",\"juc\",\"rgoodtqsyqphjrzg\",\"rx\",\"cjnwmjlmpejfjdhtujst\",\"qskmf\"]",
+      "expectedOutput": "\"qeevvelxilqzrfscgowssygvlnimiedkrwfcjnwmjlmpejfjdhtujstqdgsuytfecwkogvovxkkzfsgcjmrnxrulharwykafzkgombzdarabqiqskmfvraetzseugrrnnniybhzroltvhxqbqcxajqnfwfcsflxg\""
+    },
+    {
+      "input": "\"ryismlioyxdnrmojfsrmuwhqfxmkdqcjrwxksnumqqjsdvdffbinnbgphkdbltlqpmcbgbsbcreznppqtrkufhxbrhcziockaapitlsfhgykecbaoeectpfqabmmsmxxgtqykduzndichauojkuheygkbfidzrnfbsbpihtdwhvdijrgdjrdsyscmhtidczvfjewycvusgozajtnxmvyhaoikqtgucfhufxxokrepmuxggwuzisymguiebslspwbmsufexbyhjpotlxvinafumgqpcuslwdussbbzsjeanwrddmymxoaokyprpfjwnldkghixosclycfuqkjupeqthqaphsyvfpcxzqtxbtvpkcyjkactwnxmxuugpnmhftjfuqtrizbjkqjzqvdgmviaqryjuwdshjvxauxmktxttxqgxhpgqfeooehcerxvnztlqqsqtvdkrgjsuvqnunmvrnnlsydollainsneayiqyfopqkmayvd\"\n[200,92,136,364,312,404,348,384,28,52,340,324,104,208,436,76,148,412,40,84,204,256,24,220,60,8,68,388,424,272,460,360,168,264,36,488,464,432,396,32,292,416,492,372,336,300,444,156,468,476]\n[\"gkm\",\"io\",\"ndi\",\"g\",\"rp\",\"pa\",\"sl\",\"fu\",\"cxs\",\"n\",\"z\",\"x\",\"h\",\"wv\",\"oo\",\"npp\",\"mad\",\"s\",\"qqj\",\"fh\",\"fek\",\"msu\",\"fxm\",\"qif\",\"l\",\"ylx\",\"c\",\"kq\",\"wib\",\"in\",\"suv\",\"gi\",\"whv\",\"hjp\",\"sn\",\"f\",\"im\",\"g\",\"ou\",\"rwx\",\"zs\",\"x\",\"p\",\"u\",\"upe\",\"o\",\"vn\",\"z\",\"dwb\",\"ol\"]\n[\"chvw\",\"d\",\"hmkulrffrhm\",\"ntmogqj\",\"yymzunyrrhwlzpiglgt\",\"irkpyojhssodgzeqa\",\"ze\",\"iwfyzynavdbzosjpd\",\"haiqffvpelaiocgaugy\",\"fklh\",\"n\",\"ixxucl\",\"nrerkxtfxukx\",\"l\",\"eyscflqtpbdyu\",\"znr\",\"dbdgqfodtfuwhnzf\",\"in\",\"f\",\"pjbwutymngiqqhc\",\"tsdceqqtnp\",\"gxwkyetoae\",\"zaupsxwofrwenjhw\",\"krgsbeacowhhb\",\"mwtlzhygwsr\",\"uikwpq\",\"r\",\"jmifpgrwkzlg\",\"wexbfsgsedgbrq\",\"ynqbxgefjwpt\",\"wxmzraptdlhgpswjm\",\"aa\",\"vt\",\"rfmeb\",\"ufp\",\"ihvux\",\"ffqopuepaezhfqoz\",\"jsflwpde\",\"vphtgjljvs\",\"gkfjf\",\"mysoultsa\",\"v\",\"xcqujvkakcjkeogz\",\"fnluirwfxynymc\",\"ezaqtoab\",\"kcoexsztmxtpo\",\"yhesrsbiwscfu\",\"qgkakccjkcvaumqga\",\"cm\",\"m\"]",
+      "expectedOutput": "\"ryismlioyxdnrmojfsrmuwhqzaupsxwofrwenjhwkdqcjgkfjfkufpumfsdvdffbinfklhbgphkdbmwtlzhygwsrtlqpmcbgbsbcrezznrqtrkupjbwutymngiqqhcxbrhczdckaapitlsfnrerkxtfxukxgykecbaoeectpfqabmmsmxxgtqykduzhmkulrffrhmchauojkuheygkbfidqgkakccjkcvaumqgarnfbsbpihtdvtdijrgdjrdsyscmhtidczvfjewycvusgozajtnxmvyhaoikqtgucfhufxxokrepmuxggwuzisymguiebslspwbgxwkyetoaefexbyrfmebotlxvynqbxgefjwptafumgqpcuslwdussbbmysoultsajeanwrddmymxoaokypyymzunyrrhwlzpiglgtfjwnldkghiixxuclosclycfuqkjezaqtoabqthqaphsyvfpcxzqtxbtvpkcyjkactwnxmxuugpnmhftjiwfyzynavdbzosjpdqtrizbjkqjzqvdgmviaqryjuwdinhjvvauxmktxttxqgxhpjsflwpdeqfeeyscflqtpbdyuehcerxyhesrsbiwscfuztlqqsqtvdkrgjwxmzraptdlhgpswjmqnunmvrnnlsydmlainsneayiqyfoxcqujvkakcjkeogzqkmayvd\""
+    },
+    {
+      "input": "\"trdhqcgutekophcgeqbfljxspduhylavgeizmwbfyeyllyfktnfmfrslfoizyohvcdjdfbfdsigstmbwswcmdmhcpbcudegylidadkbahzvbmodknjqjkzjuawavrarwcnkgqrcvmqhrowftrmmfthrcsgwrnnigvwfkcmiqrabnatmtcpiuceqsprnndlxuiqotzvkwybdutihtikzlocttupoyahjuyfwdsznxqxvcrhbhzlejdppbjugfrndwtjgumlmoohtfzhonayvogvrhislixhelbjyxblbmwlphogwqajcubdoxbkxmmwjrmckplgtehtsmyagjjczurozhbptbiaxuvwfxckxojgpjywknfytjfkefhxohuwifktsswldzkqnimpuwkpwjmbuuahpjlwdhcvuwjwmxlwcwyygycfjhwnocnfgnzowiifawofvivhxgtrmphnmbsbyjygxemxntyybvwvarqeebdvbfflmpilhnummpdtflbavbzlgflnswnzewninvfolvrjuxuhqyesxgflxlymchvhtaqvggulrrqjtvyeiqtuqzpgoagsprdgxfljgxarqohmqtzsxiejedbobfzkutvvkxwmrzxocciciywqjwmwlqngkfajmifwtvsghfhcaefdkpbdubpcvhyjljxreeqbiodclozsmdfcsyjdjrqygflylgnotmjedjbvpnaojfnoaxvwrknyrvtuxkfeedbolpebtllqgwtsvweijpsotwaabbnxjqzvddazinbcqdoxwevgnfvaryfwnllwxhfgigvrusovompetimqzlqmulyhtjxsajvywbjfhdbyvhazbavhwodaosimbufujwwtvnnbuabauupfyiubovxmdwmuezwsmclbspkqqkwajlakeaskbxlrbxkaimeachwcoufarlwusgqgrdesccejbqvsunwgbuvhgapqglretyvrxjdcoakyqvktyu\"\n[652,872,272,644,880,800,40,60,960,352,56,528,796,284,696,484,984,932,208,980,596,372,740,692,712,88,504,408,364,824,324,680,404,916,196,84,572,288,140,972,36,448,120,904,340,148,124,520,356,0,188,192,732,396,720,536,708,964,44,144,564,268,436,252,944,488,76,256,332,952,32,756,48,392,28,116,108,656,856,768,168,896,516,304,360,548,744,388,600,24,580,672,292,184,660,860,868,788,376,380]\n[\"f\",\"fuj\",\"qvi\",\"ao\",\"j\",\"var\",\"y\",\"y\",\"ej\",\"v\",\"foi\",\"ni\",\"vgn\",\"ln\",\"f\",\"wv\",\"v\",\"ka\",\"i\",\"ret\",\"arq\",\"b\",\"soc\",\"zsm\",\"giy\",\"p\",\"dv\",\"ahp\",\"cz\",\"pe\",\"l\",\"x\",\"m\",\"wa\",\"smu\",\"sop\",\"y\",\"clx\",\"o\",\"vhg\",\"rxs\",\"f\",\"sp\",\"ws\",\"ro\",\"th\",\"snc\",\"i\",\"ckx\",\"trd\",\"d\",\"i\",\"at\",\"v\",\"b\",\"rj\",\"lyl\",\"v\",\"xz\",\"t\",\"u\",\"zh\",\"wn\",\"r\",\"fa\",\"qee\",\"t\",\"hif\",\"y\",\"qgb\",\"ge\",\"l\",\"wrw\",\"kq\",\"yl\",\"ra\",\"mb\",\"sg\",\"az\",\"s\",\"hf\",\"uam\",\"z\",\"n\",\"jgp\",\"ba\",\"fee\",\"wl\",\"hmq\",\"vtx\",\"p\",\"zvb\",\"cec\",\"tj\",\"h\",\"vh\",\"imb\",\"es\",\"nw\",\"s\"]\n[\"iptn\",\"pckfq\",\"dvlaueqmxcmlcuno\",\"ncosl\",\"dfhmpu\",\"owafwuqgfeji\",\"qeplcxzjhcdexreog\",\"rwpawcfealmzhipga\",\"kgfgwffjtcvurukoqt\",\"iqheeoy\",\"srfet\",\"eenyasqthjsan\",\"omuc\",\"wsxyqrl\",\"lydtwybcbrmwocouz\",\"seocrtholeslwqxstrbs\",\"syoctzbhgaxdyiawxr\",\"citymxrw\",\"kba\",\"l\",\"dacupepk\",\"fd\",\"amwruycigxoxka\",\"gwszytbhncvvvblspcus\",\"prra\",\"tdtxfca\",\"zeiyecuuwymhh\",\"ltcsokfes\",\"nkarxagdmpczksbiek\",\"nibcmxqflclrqk\",\"ucdurroqehzehlrlf\",\"wulixcnqkcjfl\",\"cbfkfhfldkumwo\",\"imxifc\",\"jnznzijpikrjkmp\",\"nhdbltuumesmvuro\",\"fthwcrkjxvwmrvrtwajb\",\"vazvbnlp\",\"cdoy\",\"wfyd\",\"rwyccnig\",\"xslorsycdyhuoccahnrh\",\"nihgerfoxepicl\",\"zbf\",\"wezrcpyfxyngnmgr\",\"zpzfgnokt\",\"plxet\",\"wrmabgdgiyshm\",\"alafwdl\",\"meqqroynewaukr\",\"rkleofbyxafjufeehqe\",\"ckykmtt\",\"ehqaxzko\",\"psuqydygffwtdkir\",\"avafytfoqpebghwgqng\",\"vln\",\"qqzfsmqkxzmunjil\",\"eazamiqsqjmusmyki\",\"ebsq\",\"dxzctwehodkcajhqnb\",\"owiyqhnqhlxhyl\",\"ukbs\",\"lasmvjelrvrbw\",\"siufxgxktmoyyzuda\",\"xzrip\",\"wvkle\",\"fublzprbthalnvudjxh\",\"hyksb\",\"ttrwppjouvoydwchpe\",\"kspri\",\"v\",\"jvdpjysfxjrmcsz\",\"omwcgeo\",\"pzbwjypsdducknsiwtq\",\"pssdjwhrnkcu\",\"mwkzyyithauqldorlqdf\",\"sjikabiuhnnpkdqzbh\",\"kmfnookylegcn\",\"rdpxiasgzvruci\",\"mmf\",\"uwqptb\",\"tjojqc\",\"kyxgmvalqtnlu\",\"rrjlpdq\",\"paofnnicabsaxtufmv\",\"tcxkch\",\"iviug\",\"tqekr\",\"knxqfz\",\"rj\",\"frdqxsxbsnzju\",\"utfusamvyqfqdqzx\",\"yjfosokyl\",\"ubdchikpd\",\"krr\",\"qokwy\",\"vntj\",\"n\",\"hnbopnoblqtz\",\"nhfjcbsxipeqry\"]",
+      "expectedOutput": "\"meqqroynewaukrhqcgutekophcgeqbfljxspduhpssdjwhrnkcuavvizmwbfqeplcxzjhcdexreogeyllyfktnfmfrslsrfetzrwpawcfealmzhipgaohvcdjdfbfdsigsfublzprbthalnvudjxhmbwswcmdmhctdtxfcabcudegylidadkbahzvbmodknjqjkzjuawavrarwcnkgqrcvmqhrcdoywftrmmfzpzfgnoktrcsgwrnnigvwfkcmiqrabnatmtcpiuceqsprnnrkleofbyxafjufeehqelxuckykmttqotzvkwybdutihtkbakzlocttupoyahjuyfwdsznxqxvcrhbhzlejdppbjugfsiufxgxktmoyyzudandwtjgumlmoohtfukbsonayvogvrhislixhelbjyxblbmwlphogwqajcubdoxbkxmmwjrmckpucdurroqehzehlrlfgtehtsmttrwppjouvoydwchpeagjjczuwezrcpyfxyngnmgrzhbptbiaxuiqheeoywfxalafwdlopaofnnicabsaxtufmvjywknfytjfkefhxohuwifktsstqekrdzpzbwjypsdducknsiwtqnimpuwkpwjcbfkfhfldkumwobuultcsokfesjlwdhcvuwjwmxlwcwyygycfjhlasmvjelrvrbwocnfgnzowiifawofvivhxgtrmphnmbsbyjygxemxntyybvseocrtholeslwqxstrbsarwvklebdvbfflmpilhnummpdtflbavbkyxgmvalqtnlulgflnswnzeweenyasqthjsannvfolvvlnuxuhqyesxgflxlymchvhtaqvggowiyqhnqhlxhyllrrqjtvfthwcrkjxvwmrvrtwajbeiqtuqzfrdqxsxbsnzjugoagsprdgxfljgxdacupepkoknxqfztzsxiejedbobfzkutvvkxwmrzxocciciywqjwmwlqngkfajmiiptnwtvkmfnookylegcnhfkrrcaefdkpbdubpcvhyjljwulixcnqkcjflreeqbiodclogwszytbhncvvvblspcusdlydtwybcbrmwocouzcsyjdjrqygfqqzfsmqkxzmunjilgnotmjedjavafytfoqpebghwgqngvpnaojfnoaxvwrknyrvtuxkiviugdbolpebtljvdpjysfxjrmcszqgwtsvweijpmmfotwaabbnxjqzvddazinbcqdoxweomucfowafwuqgfejiyfwnllwxhfgigvrusovomnibcmxqflclrqktimqzlqmulyhtjxsajvywbjfhdbyvhrdpxiasgzvrucibaqokwywodaosvntjupckfqwwtvnnbuabauupfyiubovxmdwmuezzbfmclbspkqqkimxifcjlakeaskbxlrbxcitymxrwimeachwcouxzriprlwusgqgrdescckgfgwffjtcvurukoqtbqeazamiqsqjmusmykisunwgbuwfydapqgllysyoctzbhgaxdyiawxrrxjdcoakyqvktyu\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/find-and-replace-in-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:17.467Z",
+    "sourceUpdatedAt": null
+  }
+}

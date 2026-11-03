@@ -1,0 +1,157 @@
+{
+  "id": "1816",
+  "slug": "truncate-sentence",
+  "title": "Truncate Sentence",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String"
+  ],
+  "statement": "A **sentence** is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of **only** uppercase and lowercase English letters (no punctuation).\n\n*   For example, `\"Hello World\"`, `\"HELLO\"`, and `\"hello world hello world\"` are all sentences.\n\nYou are given a sentence `s`​​​​​​ and an integer `k`​​​​​​. You want to **truncate** `s`​​​​​​ such that it contains only the **first** `k`​​​​​​ words. Return `s`​​​​_​​ after **truncating** it._\n\n**Example 1:**\n\n```\nInput: s = \"Hello how are you Contestant\", k = 4\nOutput: \"Hello how are you\"\nExplanation:\nThe words in s are [\"Hello\", \"how\", \"are\", \"you\", \"Contestant\"].\nThe first 4 words are [\"Hello\", \"how\", \"are\", \"you\"].\nHence, you should return \"Hello how are you\".\n```\n\n**Example 2:**\n\n```\nInput: s = \"What is the solution to this problem\", k = 4\nOutput: \"What is the solution\"\nExplanation:\nThe words in s are [\"What\", \"is\", \"the\", \"solution\", \"to\", \"this\", \"problem\"].\nThe first 4 words are [\"What\", \"is\", \"the\", \"solution\"].\nHence, you should return \"What is the solution\".\n```\n\n**Example 3:**\n\n```\nInput: s = \"chopper is not a tanuki\", k = 5\nOutput: \"chopper is not a tanuki\"\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 500`\n*   `k` is in the range `[1, the number of words in s]`.\n*   `s` consist of only lowercase and uppercase English letters and spaces.\n*   The words in `s` are separated by a single space.\n*   There are no leading or trailing spaces.",
+  "constraints": [
+    "1 <= s.length <= 500",
+    "k is in the range [1, the number of words in s].",
+    "s consist of only lowercase and uppercase English letters and spaces.",
+    "The words in s are separated by a single space.",
+    "There are no leading or trailing spaces."
+  ],
+  "examples": [
+    {
+      "input": "s = \"Hello how are you Contestant\", k = 4",
+      "output": "\"Hello how are you\"",
+      "explanation": "The words in s are [\"Hello\", \"how\", \"are\", \"you\", \"Contestant\"].\nThe first 4 words are [\"Hello\", \"how\", \"are\", \"you\"].\nHence, you should return \"Hello how are you\"."
+    },
+    {
+      "input": "s = \"What is the solution to this problem\", k = 4",
+      "output": "\"What is the solution\"",
+      "explanation": "The words in s are [\"What\", \"is\", \"the\", \"solution\", \"to\", \"this\", \"problem\"].\nThe first 4 words are [\"What\", \"is\", \"the\", \"solution\"].\nHence, you should return \"What is the solution\"."
+    },
+    {
+      "input": "s = \"chopper is not a tanuki\", k = 5",
+      "output": "\"chopper is not a tanuki\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string truncateSentence(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String truncateSentence(String s, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def truncateSentence(self, s: str, k: int) -> str:\n        ",
+    "python": "class Solution(object):\n    def truncateSentence(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar truncateSentence = function(s, k) {\n    \n};",
+    "typescript": "function truncateSentence(s: string, k: number): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string TruncateSentence(string s, int k) {\n        \n    }\n}",
+    "c": "char* truncateSentence(char* s, int k) {\n    \n}",
+    "golang": "func truncateSentence(s string, k int) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun truncateSentence(s: String, k: Int): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func truncateSentence(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn truncate_sentence(s: String, k: i32) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef truncate_sentence(s, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function truncateSentence($s, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String truncateSentence(String s, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def truncateSentence(s: String, k: Int): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec truncate_sentence(s :: String.t, k :: integer) :: String.t\n  def truncate_sentence(s, k) do\n    \n  end\nend",
+    "erlang": "-spec truncate_sentence(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ntruncate_sentence(S, K) ->\n  .",
+    "racket": "(define/contract (truncate-sentence s k)\n  (-> string? exact-integer? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"GGlu\"\n1",
+      "expectedOutput": "\"GGlu\""
+    },
+    {
+      "input": "\"oBG otQIyn\"\n1",
+      "expectedOutput": "\"oBG\""
+    },
+    {
+      "input": "\"AaBFYc vBj RiF\"\n3",
+      "expectedOutput": "\"AaBFYc vBj RiF\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"Ry Ln BEe tFtxmufx sJDnvvwa\"\n2",
+      "expectedOutput": "\"Ry Ln\""
+    },
+    {
+      "input": "\"licnsGkUay JwjH ZZWy iur AtOMCW BFdG PJzhvBmoi\"\n6",
+      "expectedOutput": "\"licnsGkUay JwjH ZZWy iur AtOMCW BFdG\""
+    },
+    {
+      "input": "\"a EQ r ocpHeLilT j aHAa waI Ovms cddTQULm HOd\"\n10",
+      "expectedOutput": "\"a EQ r ocpHeLilT j aHAa waI Ovms cddTQULm HOd\""
+    },
+    {
+      "input": "\"FPfMkOUG gsaB dknxBKGjiT XcwahQ lSM kxU fZszUcLMD wmEWffgn lgnitJz wuBNGDv ARgDvPBr tHZfYZLMt Kwzw\"\n8",
+      "expectedOutput": "\"FPfMkOUG gsaB dknxBKGjiT XcwahQ lSM kxU fZszUcLMD wmEWffgn\""
+    },
+    {
+      "input": "\"fFSpp KYbXaQJr vv OhsZWS az snlbg R qEPxYn JSLnyq sm CA wirnlyGSq MKELqMzaJ GID Qhc tqg\"\n11",
+      "expectedOutput": "\"fFSpp KYbXaQJr vv OhsZWS az snlbg R qEPxYn JSLnyq sm CA\""
+    },
+    {
+      "input": "\"s ceFZTf XdzyGMsLY YlGe zbiFFESc dQVGKo g MDgl IGvGYEjiFV ftYkvbVizp vpbsSlAmax Dmibl TXjiOby XDNOX OOUeYKXRiZ bPEPXM eMn znz MnE\"\n4",
+      "expectedOutput": "\"s ceFZTf XdzyGMsLY YlGe\""
+    },
+    {
+      "input": "\"MJELdRdQQd hcqjC tVlkG CwKQQ FB ZlYhJHhV BhUG vMkfN xqlSvOeWqC nyWRFclRhj H ir dvpWhEmAct Fr hE MEDOqUVF mNGDnMKZB cxOYJ zHA EBvowmy HriG bfL Dcwq\"\n8",
+      "expectedOutput": "\"MJELdRdQQd hcqjC tVlkG CwKQQ FB ZlYhJHhV BhUG vMkfN\""
+    },
+    {
+      "input": "\"lZcw nbQSrgE SflSsdqMnc bjYOicwSYV PgfJeXoMX RHkpfytss rhEfuuZBBk b KZx KlR sP Limxe PgSV W XtztosKWEM FdgMUu SGcNKOHUI mvihVFiYb lYghuY ZOTjSoAJtU vU vA VzoU tp F JiozChcPGY NhZZKG\"\n11",
+      "expectedOutput": "\"lZcw nbQSrgE SflSsdqMnc bjYOicwSYV PgfJeXoMX RHkpfytss rhEfuuZBBk b KZx KlR sP\""
+    },
+    {
+      "input": "\"rSxwD VUQr zmzfwENxJG jnVLa SGI WCjjiwnfhr lJjcOdIxUI BMgtsYCxd SfisLAsy RjRipj KarczwyAnZ sJJATFoGMP iUxkBq wNR uFwEy KqDoqCS uUHdUkm NDxLxt N CBkdFvd OAys pdEaA zEadiJ YLdVZF uNRpIVP kOoiJuD x KhpkHmmW QsHgQ fEaW OwtBIj ZSoaQmA\"\n17",
+      "expectedOutput": "\"rSxwD VUQr zmzfwENxJG jnVLa SGI WCjjiwnfhr lJjcOdIxUI BMgtsYCxd SfisLAsy RjRipj KarczwyAnZ sJJATFoGMP iUxkBq wNR uFwEy KqDoqCS uUHdUkm\""
+    },
+    {
+      "input": "\"GfMiW VcFbWbHMwG brQHkBn cUwa tzGRViX jbLCpHm SaThr WKfHvHs mHblSZz jIbXmMxf QvOuIYAyc nOdOPCggY MVvsZg mBbhHpUg jjeRPAB PM VUyr IzzGNlIf oaXhLEX Fa OzcX GvGyd MPTBk yHxu xGQjQAsc XZejquSz GpZOxAiIkR RjhC pJVsEvATj du oxulRk w nXeWWgnA uweRP F jD Ko\"\n10",
+      "expectedOutput": "\"GfMiW VcFbWbHMwG brQHkBn cUwa tzGRViX jbLCpHm SaThr WKfHvHs mHblSZz jIbXmMxf\""
+    },
+    {
+      "input": "\"pgV aZFPgOQ BUEF gvhaTe FXuYpACRc JmmEtTHg QapG ne Vowkw bRXNCgZoDC Is MkOFj QGiHmcMu oDf I DiQKs c bSUaW DBRvvulDQ EsOgt TjKwzgJ CZ aSIfFfb AgVFnZlpn K Qh cIksgiFKBD JzYuvvGg MD Xqi YaOpN jY DKflmzTCR AdELUdXnWO x jzRenfuCBK wMytY bulSwzqUb rkXyQHrRO jUHAvlWsQs\"\n19",
+      "expectedOutput": "\"pgV aZFPgOQ BUEF gvhaTe FXuYpACRc JmmEtTHg QapG ne Vowkw bRXNCgZoDC Is MkOFj QGiHmcMu oDf I DiQKs c bSUaW DBRvvulDQ\""
+    },
+    {
+      "input": "\"VNoX LhfGGmB WrFxFRUv AMBAzHVHvY WVUNOBbpoE qmqwSvC BxNCaRb vGTYuwC NFa TSkWrlXaz fxXPaGekD WdegSjd nJ HAcUK OIYbw kbxoiY GBQzrzjlW VdeiVcutrs zFG bWPyekejA bHQAMiW B NOXtBpSmV bQN psEffbDwZH UxYJ dFil hjdKvkxy Ep g C wNTAyjB TxT TsFyWBM KZuNq bkfFkA ndVQqRxzu sNYvDW EKkcBccLP Lb\"\n9",
+      "expectedOutput": "\"VNoX LhfGGmB WrFxFRUv AMBAzHVHvY WVUNOBbpoE qmqwSvC BxNCaRb vGTYuwC NFa\""
+    },
+    {
+      "input": "\"AiM DywWvqMpC qE nbh wkHN zgsfINez oxS nNATKmC UycLVRQ TqC c hFKpEIjY JaUqmhL cNZyXTUTJO dJbgm nqUhe Q CtIOk RboRu ydWr rovyvFcXB zzhAMEmXsE Foq w wF uHuRPXdgZm YX McVGqqGTS wvwVM lpHd HsCqpr DSeOAvWYyl cO YbGRHuqK tNxaAjOy IXamktE fNaTly ZZUyULB xkEraG oKdeb\"\n2",
+      "expectedOutput": "\"AiM DywWvqMpC\""
+    },
+    {
+      "input": "\"cNuR UvH qSUuew WP wClK ltFHRxNZ bl oFLKMW TundwJ sQTn hent GtQXpsZa CtnNqStwn wfgIqV sOcvzP e HxCqcASzj LO L d aiPsqnVKi enwlHjS XGVIG KNM DCQGg UbRolYh hIgJz QTrGzt pkRjitwg qFR lVzRVgWt RDTKlFNk exvF dJn fsRSNmTBTk vseT TPmBpCwstH DOsIopin asxzeTzZM V\"\n4",
+      "expectedOutput": "\"cNuR UvH qSUuew WP\""
+    },
+    {
+      "input": "\"bfjrGUD wAbf tI GpVFl A Cniuz B Oohuj lUWUA OQ V pHI qUxDCHz xdVR iKle esA XginQ ZyOit WkJ gwCg JYyT XYc Odtqs lDasv nRahkwm jD FpKXCqznXp warlM kgiO J vBE Oecn dsIuJ L Ho vdvnPyV CHo MBABRyAs pRNoMpC WYF\"\n12",
+      "expectedOutput": "\"bfjrGUD wAbf tI GpVFl A Cniuz B Oohuj lUWUA OQ V pHI\""
+    },
+    {
+      "input": "\"F mOD YkyZqAUIJ Tuod vHQ MkkRz JaHd wIWpsPQe wvmHEQvC gOSLG cpRIwV CzTz nsNHC BJItjTx d JbqySnnvYF ddU\"\n14",
+      "expectedOutput": "\"F mOD YkyZqAUIJ Tuod vHQ MkkRz JaHd wIWpsPQe wvmHEQvC gOSLG cpRIwV CzTz nsNHC BJItjTx\""
+    },
+    {
+      "input": "\"Rm Zj rBMEqDaA SNgRGWb BTnTNpetzR ksFYlnRKi vEWGczK NFKoNBCTob SWFOTNibc FTeoplDy QZ RnPk CyNfLNI iCKAtz g Xl PQER ffdA UiIAcVcMY fFrejRSqQ vpmYgvthTs FyGpV bVutTKr StPPZNDDk NMgwpPQ uwvnsCXaz PwDBYcMaqc bYflW kESYCR h w bbDBsWSVI SALMstucK yXDJKLeC qfxz\"\n2",
+      "expectedOutput": "\"Rm Zj\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "It's easier to solve this problem on an array of strings so parse the string to an array of words",
+    "After return the first k words as a sentence"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/truncate-sentence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:31.263Z",
+    "sourceUpdatedAt": null
+  }
+}

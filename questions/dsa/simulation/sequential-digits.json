@@ -1,0 +1,147 @@
+{
+  "id": "1291",
+  "slug": "sequential-digits",
+  "title": "Sequential Digits",
+  "category": "dsa",
+  "subcategory": "simulation",
+  "difficulty": "Medium",
+  "tags": [
+    "Enumeration"
+  ],
+  "statement": "An integer has _sequential digits_ if and only if each digit in the number is one more than the previous digit.\n\nReturn a **sorted** list of all the integers in the range `[low, high]` inclusive that have sequential digits.\n\n**Example 1:**\n\n```\nInput: low = 100, high = 300\nOutput: [123,234]\n```\n\n**Example 2:**\n\n```\nInput: low = 1000, high = 13000\nOutput: [1234,2345,3456,4567,5678,6789,12345]\n```\n\n**Constraints:**\n\n*   `10 <= low <= high <= 10^9`",
+  "constraints": [
+    "10 <= low <= high <= 10^9"
+  ],
+  "examples": [
+    {
+      "input": "low = 100, high = 300",
+      "output": "[123,234]",
+      "explanation": null
+    },
+    {
+      "input": "low = 1000, high = 13000",
+      "output": "[1234,2345,3456,4567,5678,6789,12345]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sequentialDigits(int low, int high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> sequentialDigits(int low, int high) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def sequentialDigits(self, low: int, high: int) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def sequentialDigits(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @return {number[]}\n */\nvar sequentialDigits = function(low, high) {\n    \n};",
+    "typescript": "function sequentialDigits(low: number, high: number): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<int> SequentialDigits(int low, int high) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sequentialDigits(int low, int high, int* returnSize) {\n    \n}",
+    "golang": "func sequentialDigits(low int, high int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun sequentialDigits(low: Int, high: Int): List<Int> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sequentialDigits(_ low: Int, _ high: Int) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sequential_digits(low: i32, high: i32) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer} low\n# @param {Integer} high\n# @return {Integer[]}\ndef sequential_digits(low, high)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $low\n     * @param Integer $high\n     * @return Integer[]\n     */\n    function sequentialDigits($low, $high) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sequentialDigits(int low, int high) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def sequentialDigits(low: Int, high: Int): List[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec sequential_digits(low :: integer, high :: integer) :: [integer]\n  def sequential_digits(low, high) do\n    \n  end\nend",
+    "erlang": "-spec sequential_digits(Low :: integer(), High :: integer()) -> [integer()].\nsequential_digits(Low, High) ->\n  .",
+    "racket": "(define/contract (sequential-digits low high)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "12\n17",
+      "expectedOutput": "[12]"
+    },
+    {
+      "input": "18\n23",
+      "expectedOutput": "[23]"
+    },
+    {
+      "input": "72240567\n842676787",
+      "expectedOutput": "[123456789]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "42\n47",
+      "expectedOutput": "[45]"
+    },
+    {
+      "input": "51\n58",
+      "expectedOutput": "[56]"
+    },
+    {
+      "input": "901114221\n933801073",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "75\n80",
+      "expectedOutput": "[78]"
+    },
+    {
+      "input": "86\n94",
+      "expectedOutput": "[89]"
+    },
+    {
+      "input": "869246882\n905257608",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "229\n235",
+      "expectedOutput": "[234]"
+    },
+    {
+      "input": "342\n350",
+      "expectedOutput": "[345]"
+    },
+    {
+      "input": "839214396\n912312009",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "565\n567",
+      "expectedOutput": "[567]"
+    },
+    {
+      "input": "677\n683",
+      "expectedOutput": "[678]"
+    },
+    {
+      "input": "227229282\n661036553",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "1230\n1238",
+      "expectedOutput": "[1234]"
+    },
+    {
+      "input": "2340\n2348",
+      "expectedOutput": "[2345]"
+    },
+    {
+      "input": "697955612\n791706123",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "4562\n4567",
+      "expectedOutput": "[4567]"
+    },
+    {
+      "input": "5675\n5681",
+      "expectedOutput": "[5678]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Generate all numbers with sequential digits and check if they are in the given range.",
+    "Fix the starting digit then do a recursion that tries to append all valid digits."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/sequential-digits/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.288Z",
+    "sourceUpdatedAt": null
+  }
+}

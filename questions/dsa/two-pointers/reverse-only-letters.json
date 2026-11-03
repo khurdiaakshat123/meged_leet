@@ -1,0 +1,154 @@
+{
+  "id": "917",
+  "slug": "reverse-only-letters",
+  "title": "Reverse Only Letters",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ],
+  "statement": "Given a string `s`, reverse the string according to the following rules:\n\n*   All the characters that are not English letters remain in the same position.\n*   All the English letters (lowercase or uppercase) should be reversed.\n\nReturn `s` _after reversing it_.\n\n**Example 1:**\n\n```\nInput: s = \"ab-cd\"\nOutput: \"dc-ba\"\n```\n\n**Example 2:**\n\n```\nInput: s = \"a-bC-dEf-ghIj\"\nOutput: \"j-Ih-gfE-dCba\"\n```\n\n**Example 3:**\n\n```\nInput: s = \"Test1ng-Leet=code-Q!\"\nOutput: \"Qedo1ct-eeLg=ntse-T!\"\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 100`\n*   `s` consists of characters with ASCII values in the range `[33, 122]`.\n*   `s` does not contain `'\\\"'` or `'\\\\'`.",
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of characters with ASCII values in the range [33, 122].",
+    "s does not contain '\\\"' or '\\\\'."
+  ],
+  "examples": [
+    {
+      "input": "s = \"ab-cd\"",
+      "output": "\"dc-ba\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"a-bC-dEf-ghIj\"",
+      "output": "\"j-Ih-gfE-dCba\"",
+      "explanation": null
+    },
+    {
+      "input": "s = \"Test1ng-Leet=code-Q!\"",
+      "output": "\"Qedo1ct-eeLg=ntse-T!\"",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string reverseOnlyLetters(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseOnlyLetters(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def reverseOnlyLetters(self, s: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def reverseOnlyLetters(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reverseOnlyLetters = function(s) {\n    \n};",
+    "typescript": "function reverseOnlyLetters(s: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string ReverseOnlyLetters(string s) {\n        \n    }\n}",
+    "c": "char* reverseOnlyLetters(char* s) {\n    \n}",
+    "golang": "func reverseOnlyLetters(s string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun reverseOnlyLetters(s: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reverseOnlyLetters(_ s: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reverse_only_letters(s: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef reverse_only_letters(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function reverseOnlyLetters($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reverseOnlyLetters(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def reverseOnlyLetters(s: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec reverse_only_letters(s :: String.t) :: String.t\n  def reverse_only_letters(s) do\n    \n  end\nend",
+    "erlang": "-spec reverse_only_letters(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreverse_only_letters(S) ->\n  .",
+    "racket": "(define/contract (reverse-only-letters s)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"w\"",
+      "expectedOutput": "\"w\""
+    },
+    {
+      "input": "\"r<\"",
+      "expectedOutput": "\"r<\""
+    },
+    {
+      "input": "\"UJZ\"",
+      "expectedOutput": "\"ZJU\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"NS=.\"",
+      "expectedOutput": "\"SN=.\""
+    },
+    {
+      "input": "\"(!:oXL\"",
+      "expectedOutput": "\"(!:LXo\""
+    },
+    {
+      "input": "\"X1i,m4p@\"",
+      "expectedOutput": "\"p1m,i4X@\""
+    },
+    {
+      "input": "\"x!UK_iMVU)\"",
+      "expectedOutput": "\"U!VM_iKUx)\""
+    },
+    {
+      "input": "\"lXsg^Y+9]!z&\"",
+      "expectedOutput": "\"zYgs^X+9]!l&\""
+    },
+    {
+      "input": "\"w#R.K-)'Bq#N[2K\"",
+      "expectedOutput": "\"K#N.q-)'BK#R[2w\""
+    },
+    {
+      "input": "\"wj1vPxOtgm+Drd$%:W\"",
+      "expectedOutput": "\"Wd1rDmgtOx+Pvj$%:w\""
+    },
+    {
+      "input": "\"rk,@X1xZD/GLDr%@x+MEO\"",
+      "expectedOutput": "\"OE,@M1xrD/LGDZ%@x+Xkr\""
+    },
+    {
+      "input": "\"`o+[#scv;m8pIw$nXbsAA87(\"",
+      "expectedOutput": "\"`A+[#Asb;X8nwI$pmvcso87(\""
+    },
+    {
+      "input": "\"q;u)*f+cE%ixyv^2xQjzT[GsqmU\"",
+      "expectedOutput": "\"U;m)*q+sG%TzjQ^2xvyxi[Ecfuq\""
+    },
+    {
+      "input": "\"HNV])$!q0LeE3RTDe!V&`=*@TWrn)7\"",
+      "expectedOutput": "\"nrW])$!T0VeD3TREe!L&`=*@qVNH)7\""
+    },
+    {
+      "input": "\".C/Xn>VywAg;I0Fv:eC!zc1#^7wED)0GG-\"",
+      "expectedOutput": "\".G/GD>EwczC;e0vF:Ig!Aw1#^7yVn)0XC-\""
+    },
+    {
+      "input": "\"J$'lDHlRQ!^4Bvp=t2oTAfxY&,!LS[3z3l)CP]\"",
+      "expectedOutput": "\"P$'ClzSLY!^4xfA=T2otpvBQ&,!Rl[3H3D)lJ]\""
+    },
+    {
+      "input": "\"(+s7gZg^Q3&z3qb'm.9?Z!+=jJVHD&%=A!H86xaX-O\"",
+      "expectedOutput": "\"(+O7Xax^H3&A3DH'V.9?J!+=jZmbq&%=z!Q86gZg-s\""
+    },
+    {
+      "input": "\"LmzILHczHW^0u8g@y-oSFI'Pd'3pbMqG#1z/]bj1d6R&:[\"",
+      "expectedOutput": "\"RdjbzGqMbp^0d8P@I-FSoy'gu'3WHzcH#1L/]Iz1m6L&:[\""
+    },
+    {
+      "input": "\"uRVbG)6<i/w1eLd(NoPm4)v7rno?bLuFU.xxjsF#CP^KgLy;uT\"",
+      "expectedOutput": "\"TuyLg)6<K/P1CFs(jxxU4)F7uLb?onrvm.PoNdL#ew^iGbV;Ru\""
+    },
+    {
+      "input": "\")@-Ce)2&?HEJD)J&mIWh1VB/4-$h/G^vK*,)/jYp9m0mE%n;&u^!=w+D(X@d5pg%aGZp6B#C>53C4NOTDvP@/kSFS)<8d4bA;hk[\"",
+      "expectedOutput": "\")@-kh)2&?AbdS)F&SkPv1DT/4-$O/N^CC*,)/BpZ9G0ag%p;&d^!=X+D(w@u5nE%mmpY6j#K>53v4GhBVhW@/ImJD)<8J4EH;eC[\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "This problem is exactly like reversing a normal string except that there are certain characters that we have to simply skip. That should be easy enough to do if you know how to reverse a string using the two-pointer approach."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/reverse-only-letters/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.858Z",
+    "sourceUpdatedAt": null
+  }
+}

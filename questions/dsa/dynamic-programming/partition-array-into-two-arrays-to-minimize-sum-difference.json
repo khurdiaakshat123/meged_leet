@@ -1,0 +1,172 @@
+{
+  "id": "2035",
+  "slug": "partition-array-into-two-arrays-to-minimize-sum-difference",
+  "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Meet in the Middle",
+    "Sorting",
+    "Ordered Set",
+    "Bitmask"
+  ],
+  "statement": "You are given an integer array `nums` of `2 * n` integers. You need to partition `nums` into **two** arrays of length `n` to **minimize the absolute difference** of the **sums** of the arrays. To partition `nums`, put each element of `nums` into **one** of the two arrays.\n\nReturn _the **minimum** possible absolute difference_.\n\n**Example 1:**\n\n![example-1](./assets/partition-array-into-two-arrays-to-minimize-sum-difference-1.png)\n```\nInput: nums = [3,9,7,3]\nOutput: 2\nExplanation: One optimal partition is: [3,9] and [7,3].\nThe absolute difference between the sums of the arrays is abs((3 + 9) - (7 + 3)) = 2.\n```\n\n**Example 2:**\n\n```\nInput: nums = [-36,36]\nOutput: 72\nExplanation: One optimal partition is: [-36] and [36].\nThe absolute difference between the sums of the arrays is abs((-36) - (36)) = 72.\n```\n\n**Example 3:**\n\n![example-3](./assets/partition-array-into-two-arrays-to-minimize-sum-difference-2.png)\n```\nInput: nums = [2,-1,0,4,-2,-9]\nOutput: 0\nExplanation: One optimal partition is: [2,4,-9] and [-1,0,-2].\nThe absolute difference between the sums of the arrays is abs((2 + 4 + -9) - (-1 + 0 + -2)) = 0.\n```\n\n**Constraints:**\n\n*   `1 <= n <= 15`\n*   `nums.length == 2 * n`\n*   `-10^(7) <= nums[i] <= 10^(7)`",
+  "constraints": [
+    "1 <= n <= 15",
+    "nums.length == 2 * n",
+    "-107 <= nums[i] <= 107"
+  ],
+  "examples": [
+    {
+      "input": "nums = [3,9,7,3]",
+      "output": "2",
+      "explanation": "One optimal partition is: [3,9] and [7,3].\nThe absolute difference between the sums of the arrays is abs((3 + 9) - (7 + 3)) = 2."
+    },
+    {
+      "input": "nums = [-36,36]",
+      "output": "72",
+      "explanation": "One optimal partition is: [-36] and [36].\nThe absolute difference between the sums of the arrays is abs((-36) - (36)) = 72."
+    },
+    {
+      "input": "nums = [2,-1,0,4,-2,-9]",
+      "output": "0",
+      "explanation": "One optimal partition is: [2,4,-9] and [-1,0,-2].\nThe absolute difference between the sums of the arrays is abs((2 + 4 + -9) - (-1 + 0 + -2)) = 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minimumDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDifference(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minimumDifference(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def minimumDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDifference = function(nums) {\n    \n};",
+    "typescript": "function minimumDifference(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinimumDifference(int[] nums) {\n        \n    }\n}",
+    "c": "int minimumDifference(int* nums, int numsSize) {\n    \n}",
+    "golang": "func minimumDifference(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minimumDifference(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_difference(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_difference(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumDifference($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDifference(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minimumDifference(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec minimum_difference(nums :: [integer]) :: integer\n  def minimum_difference(nums) do\n    \n  end\nend",
+    "erlang": "-spec minimum_difference(Nums :: [integer()]) -> integer().\nminimum_difference(Nums) ->\n  .",
+    "racket": "(define/contract (minimum-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[3,9,7,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[2,-1,0,4,-2,-9]",
+      "expectedOutput": "0"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[3,9,7,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[-36,36]",
+      "expectedOutput": "72"
+    },
+    {
+      "input": "[2,-1,0,4,-2,-9]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[1,2]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[1,1,1,3]",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[-10000000,10000000]",
+      "expectedOutput": "20000000"
+    },
+    {
+      "input": "[4522458,8175262,-7494282,5291941,-8250363,-9377293,7074922,8251219]",
+      "expectedOutput": "6830192"
+    },
+    {
+      "input": "[-2692265,-27918,-6582149,-7912066,-9149231,-9963343,-9738096,-936036,-1397331,-9352914,-6054676,-7096654]",
+      "expectedOutput": "65557"
+    },
+    {
+      "input": "[7330989,5414309,4500349,4308917,838746,4899310]",
+      "expectedOutput": "124532"
+    },
+    {
+      "input": "[4723985,-4658780,8554020,4540451,-1687908,-567642,-8785822,4650759,9645577,7379751]",
+      "expectedOutput": "475101"
+    },
+    {
+      "input": "[4700000,2500000,3300000,7500000,-8300000,-700000,5600000,-2000000,-9600000,-8000000,1200000,2300000,-6900000,-2600000]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[-2576000,-2816788,-1169667,-6807157,-9209353,-5650083,-426986,-6090147]",
+      "expectedOutput": "480145"
+    },
+    {
+      "input": "[4956516,9763479,-621017,6750271,-1808154,8058879,9836398,-5657464,-5125344,1848847,-2830781,-1558597]",
+      "expectedOutput": "55221"
+    },
+    {
+      "input": "[5049529,-8467618,3708969,-4365802,-1856252,7509487,-6714715,-5780753,-3033712,-4363515,6063375,2796324,-4502344,743477,1169961,-6376305,6286247,-1308480,6563939,4363759]",
+      "expectedOutput": "233"
+    },
+    {
+      "input": "[7563520,9836568,5325312,6518736,718500,3525831,4746346,3724920,4354658,8563093,3404252,4879379,434952,553501,8417649,8421371]",
+      "expectedOutput": "668"
+    },
+    {
+      "input": "[-2428730,-8349357,-980524,-2740938,-5952175,-1519953,-6632914,-7952022,-5471040,-287938,-7521236,-1424378,-27824,-410147,-7015819,-2256726,-3478372,-3830203,-5887926,-6404434,-7193904,-9117364]",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "[5200000,5900000,-5400000,-2100000,-1900000,-3800000,-8000000,3900000,2100000,-9800000,-1700000,-6300000,1600000,-8100000,-1800000,-6700000,-1800000,7800000]",
+      "expectedOutput": "100000"
+    },
+    {
+      "input": "[5421579,-1392003,1028910,-8830091,-2048644,5311919,7080837,-6273910,5332817,-9212961,1639997,216007,-6715556,-5511605,363573,1075111,-6685710,-6716182,-6795218,-4326743,-6805178,-2997964,-1586877,8692878,-3245809,-4905961,-8992728,4651685,9546391,9720251]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[5410000,1779000,1302000,-2858000,-7289000,-7231000,1779000,-7289000,-7231000,4428000,-4031000,-7361000,-7361000,3945000,4428000,-4234000,3256017,-2858000,5090000,3256000,5410000,-4031000,3945000,-4234000,-1408000,1302000,-1408000,5090000]",
+      "expectedOutput": "17"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "The target sum for the two partitions is sum(nums) / 2.",
+    "Could you reduce the time complexity if you arbitrarily divide nums into two halves (two arrays)? Meet-in-the-Middle?",
+    "For both halves, pre-calculate a 2D array where the kth index will store all possible sum values if only k elements from this half are added.",
+    "For each sum of k elements in the first half, find the best sum of n-k elements in the second half such that the two sums add up to a value closest to the target sum from hint 1. These two subsets will form one array of the partition."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:26.553Z",
+    "sourceUpdatedAt": null
+  }
+}

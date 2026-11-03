@@ -1,0 +1,153 @@
+{
+  "id": "2264",
+  "slug": "largest-3-same-digit-number-in-string",
+  "title": "Largest 3-Same-Digit Number in String",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "You are given a string `num` representing a large integer. An integer is **good** if it meets the following conditions:\n\n*   It is a **substring** of `num` with length `3`.\n*   It consists of only one unique digit.\n\nReturn _the **maximum good** integer as a **string** or an empty string_ `\"\"` _if no such integer exists_.\n\nNote:\n\n*   A **substring** is a contiguous sequence of characters within a string.\n*   There may be **leading zeroes** in `num` or a good integer.\n\n**Example 1:**\n\n```\nInput: num = \"6777133339\"\nOutput: \"777\"\nExplanation: There are two distinct good integers: \"777\" and \"333\".\n\"777\" is the largest, so we return \"777\".\n```\n\n**Example 2:**\n\n```\nInput: num = \"2300019\"\nOutput: \"000\"\nExplanation: \"000\" is the only good integer.\n```\n\n**Example 3:**\n\n```\nInput: num = \"42352338\"\nOutput: \"\"\nExplanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.\n```\n\n**Constraints:**\n\n*   `3 <= num.length <= 1000`\n*   `num` only consists of digits.",
+  "constraints": [
+    "3 <= num.length <= 1000",
+    "num only consists of digits."
+  ],
+  "examples": [
+    {
+      "input": "num = \"6777133339\"",
+      "output": "\"777\"",
+      "explanation": "There are two distinct good integers: \"777\" and \"333\".\n\"777\" is the largest, so we return \"777\"."
+    },
+    {
+      "input": "num = \"2300019\"",
+      "output": "\"000\"",
+      "explanation": "\"000\" is the only good integer."
+    },
+    {
+      "input": "num = \"42352338\"",
+      "output": "\"\"",
+      "explanation": "No substring of length 3 consists of only one unique digit. Therefore, there are no good integers."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string largestGoodInteger(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestGoodInteger(String num) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def largestGoodInteger(self, num: str) -> str:\n        ",
+    "python": "class Solution(object):\n    def largestGoodInteger(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} num\n * @return {string}\n */\nvar largestGoodInteger = function(num) {\n    \n};",
+    "typescript": "function largestGoodInteger(num: string): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string LargestGoodInteger(string num) {\n        \n    }\n}",
+    "c": "char* largestGoodInteger(char* num) {\n    \n}",
+    "golang": "func largestGoodInteger(num string) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun largestGoodInteger(num: String): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestGoodInteger(_ num: String) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_good_integer(num: String) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} num\n# @return {String}\ndef largest_good_integer(num)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return String\n     */\n    function largestGoodInteger($num) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestGoodInteger(String num) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def largestGoodInteger(num: String): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec largest_good_integer(num :: String.t) :: String.t\n  def largest_good_integer(num) do\n    \n  end\nend",
+    "erlang": "-spec largest_good_integer(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_good_integer(Num) ->\n  .",
+    "racket": "(define/contract (largest-good-integer num)\n  (-> string? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"333\"",
+      "expectedOutput": "\"333\""
+    },
+    {
+      "input": "\"4979\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"52067\"",
+      "expectedOutput": "\"\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"9901999\"",
+      "expectedOutput": "\"999\""
+    },
+    {
+      "input": "\"756008075\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"502893476324\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"570011215653222\"",
+      "expectedOutput": "\"222\""
+    },
+    {
+      "input": "\"801737835296925056\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"975809718241212713477\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"8518401151904606319591777\"",
+      "expectedOutput": "\"777\""
+    },
+    {
+      "input": "\"19501009699048099733414745381\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"1922625199541023818574993275537430\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"874643354961231410554926383357796655999\"",
+      "expectedOutput": "\"999\""
+    },
+    {
+      "input": "\"36363078340095916058948658109123168199962489\"",
+      "expectedOutput": "\"999\""
+    },
+    {
+      "input": "\"0688357418466638659209250864618601113409434133620\"",
+      "expectedOutput": "\"666\""
+    },
+    {
+      "input": "\"3822279238147950784638966648536725925448109165763570000\"",
+      "expectedOutput": "\"666\""
+    },
+    {
+      "input": "\"5862946419105741152739546122390730440985395951416117121041506\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"57465066105748290131187531458619691905818586511609424330934730081835\"",
+      "expectedOutput": "\"\""
+    },
+    {
+      "input": "\"8501384883068257299453391366299697952522920092585636311978076953680386959478050333626001971275635333\"",
+      "expectedOutput": "\"333\""
+    },
+    {
+      "input": "\"71620235788204906200892746241662127248029667789337306679821426743194425296977096520672380260957711932298048877761409434872396569224245446447853311856063377709857395689694434004477414342836253613865680\"",
+      "expectedOutput": "\"777\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "We can sequentially check if “999”, “888”, “777”, … , “000” exists in num in that order. The first to be found is the maximum good integer.",
+    "If we cannot find any of the above integers, we return an empty string “”."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/largest-3-same-digit-number-in-string/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:19.892Z",
+    "sourceUpdatedAt": null
+  }
+}

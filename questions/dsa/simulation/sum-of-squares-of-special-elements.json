@@ -1,0 +1,149 @@
+{
+  "id": "2778",
+  "slug": "sum-of-squares-of-special-elements",
+  "title": "Sum of Squares of Special Elements ",
+  "category": "dsa",
+  "subcategory": "simulation",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Enumeration"
+  ],
+  "statement": "You are given a **1-indexed** integer array `nums` of length `n`.\n\nAn element `nums[i]` of `nums` is called **special** if `i` divides `n`, i.e. `n % i == 0`.\n\nReturn _the **sum of the squares** of all **special** elements of_ `nums`.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3,4]\nOutput: 21\nExplanation: There are exactly 3 special elements in nums: nums[1] since 1 divides 4, nums[2] since 2 divides 4, and nums[4] since 4 divides 4. \nHence, the sum of the squares of all special elements of nums is nums[1] * nums[1] + nums[2] * nums[2] + nums[4] * nums[4] = 1 * 1 + 2 * 2 + 4 * 4 = 21.\n```\n\n**Example 2:**\n\n```\nInput: nums = [2,7,1,19,18,3]\nOutput: 63\nExplanation: There are exactly 4 special elements in nums: nums[1] since 1 divides 6, nums[2] since 2 divides 6, nums[3] since 3 divides 6, and nums[6] since 6 divides 6. \nHence, the sum of the squares of all special elements of nums is nums[1] * nums[1] + nums[2] * nums[2] + nums[3] * nums[3] + nums[6] * nums[6] = 2 * 2 + 7 * 7 + 1 * 1 + 3 * 3 = 63.\n```\n\n**Constraints:**\n\n*   `1 <= nums.length == n <= 50`\n*   `1 <= nums[i] <= 50`",
+  "constraints": [
+    "1 <= nums.length == n <= 50",
+    "1 <= nums[i] <= 50"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,3,4]",
+      "output": "21",
+      "explanation": "There are exactly 3 special elements in nums: nums[1] since 1 divides 4, nums[2] since 2 divides 4, and nums[4] since 4 divides 4. \nHence, the sum of the squares of all special elements of nums is nums[1] * nums[1] + nums[2] * nums[2] + nums[4] * nums[4] = 1 * 1 + 2 * 2 + 4 * 4 = 21."
+    },
+    {
+      "input": "nums = [2,7,1,19,18,3]",
+      "output": "63",
+      "explanation": "There are exactly 4 special elements in nums: nums[1] since 1 divides 6, nums[2] since 2 divides 6, nums[3] since 3 divides 6, and nums[6] since 6 divides 6. \nHence, the sum of the squares of all special elements of nums is nums[1] * nums[1] + nums[2] * nums[2] + nums[3] * nums[3] + nums[6] * nums[6] = 2 * 2 + 7 * 7 + 1 * 1 + 3 * 3 = 63."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int sumOfSquares(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfSquares(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def sumOfSquares(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def sumOfSquares(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumOfSquares = function(nums) {\n    \n};",
+    "typescript": "function sumOfSquares(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int SumOfSquares(int[] nums) {\n        \n    }\n}",
+    "c": "int sumOfSquares(int* nums, int numsSize) {\n    \n}",
+    "golang": "func sumOfSquares(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun sumOfSquares(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfSquares(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_squares(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef sum_of_squares(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function sumOfSquares($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumOfSquares(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def sumOfSquares(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec sum_of_squares(nums :: [integer]) :: integer\n  def sum_of_squares(nums) do\n    \n  end\nend",
+    "erlang": "-spec sum_of_squares(Nums :: [integer()]) -> integer().\nsum_of_squares(Nums) ->\n  .",
+    "racket": "(define/contract (sum-of-squares nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[45]",
+      "expectedOutput": "2025"
+    },
+    {
+      "input": "[50,1,50,1]",
+      "expectedOutput": "2502"
+    },
+    {
+      "input": "[3,2,1,6,5,4]",
+      "expectedOutput": "30"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[8,9,10,14,22,41,43,48]",
+      "expectedOutput": "2645"
+    },
+    {
+      "input": "[48,45,44,43,43,36,28,8,3,1]",
+      "expectedOutput": "6179"
+    },
+    {
+      "input": "[2,3,3,6,6,8,8,10,10,11,13,13,13]",
+      "expectedOutput": "173"
+    },
+    {
+      "input": "[7,50,42,10,45,8,13,50,47,16,41,50,19,7,39,22]",
+      "expectedOutput": "5633"
+    },
+    {
+      "input": "[1,47,48,37,28,25,22,32,3,44,5,27,49,42,34,10,44,34,3,34]",
+      "expectedOutput": "7455"
+    },
+    {
+      "input": "[26,26,1,1,50,50,26,1,50,1,50,1,50,50,26,35,2,50,50,1,26,26,26,1,50]",
+      "expectedOutput": "5676"
+    },
+    {
+      "input": "[10,8,6,4,2,19,17,15,13,11,9,7,5,3,1,18,16,14,12,10,8,6,4,2,19,17,15,13,11,9,7,5,3]",
+      "expectedOutput": "226"
+    },
+    {
+      "input": "[1,2,5,7,7,9,9,11,11,12,13,17,17,18,18,20,21,21,21,24,25,25,27,27,28,29,30,33,33,35,37,39,42,42,43,43,44,46,47,47,49,50]",
+      "expectedOutput": "3641"
+    },
+    {
+      "input": "[50,48,48,44,42,38,37,37,37,36,36,36,36,34,33,31,29,28,26,25,25,25,24,24,23,20,20,20,19,18,17,17,16,16,13,13,13,12,10,9,9,8,8,8,7,6,4,2,2,1]",
+      "expectedOutput": "8394"
+    },
+    {
+      "input": "[1,2,2,3,2,4,5,3,5,5,4,4,7,7,7,6,8,6,9,9,9,9,10,9,10,10,11,11,12,11,11,11,11,13,12,14,13,13,15,14,16,14,17,17,15,18,16,18,18,17]",
+      "expectedOutput": "423"
+    },
+    {
+      "input": "[14,17,14,17,19,28,20,37,8,23,20,30,26,46,42,29,49,43,32,38,18,35,43,19,38,26,16,41,13,19,44,27,16,47,32,42,50,42,4,3,39,46,6,21,27,9,42,29,12,29]",
+      "expectedOutput": "3660"
+    },
+    {
+      "input": "[34,22,28,25,19,32,27,31,39,9,36,19,8,10,3,43,6,29,36,45,49,26,7,23,40,32,7,13,37,46,2,37,21,46,11,7,43,12,25,33,29,33,2,37,14,20,41,1,25,42]",
+      "expectedOutput": "5446"
+    },
+    {
+      "input": "[1,26,26,1,1,26,1,10,50,5,26,1,39,50,50,48,50,34,1,19,1,1,1,26,1,26,1,32,26,26,26,50,26,14,26,1,50,26,1,26,1,26,1,1,50,50,26,1,9,35]",
+      "expectedOutput": "1929"
+    },
+    {
+      "input": "[17,6,23,12,1,18,7,24,13,2,19,8,25,14,3,20,9,26,15,4,21,10,27,16,5,22,11,28,17,6,23,12,1,18,7,24,13,2,19,8,25,14,3,20,9,26,15,4,21,10]",
+      "expectedOutput": "455"
+    },
+    {
+      "input": "[1,1,5,5,5,6,8,11,12,13,14,16,18,21,21,22,22,23,23,24,25,27,27,28,28,30,31,31,31,32,32,33,34,34,34,35,36,38,39,40,41,42,43,44,45,47,47,47,48,50]",
+      "expectedOutput": "3480"
+    },
+    {
+      "input": "[49,46,46,43,43,42,42,41,40,40,39,39,38,38,36,36,36,36,35,35,35,35,35,34,34,34,33,31,31,29,29,27,27,25,25,25,20,20,19,18,14,13,11,10,9,8,5,3,3,1]",
+      "expectedOutput": "9123"
+    },
+    {
+      "input": "[1,2,1,1,1,4,2,2,4,3,4,3,5,4,3,6,6,4,6,6,5,5,6,5,6,6,6,8,7,7,9,9,7,8,7,9,10,10,8,10,11,9,10,10,11,11,11,12,12,10]",
+      "expectedOutput": "151"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Iterate over all the elements of the array. For each index i, check if it is special using the modulo operator.",
+    "if n%i == 0, index i is special and you should add nums[i] to the answer."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/sum-of-squares-of-special-elements/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:30.704Z",
+    "sourceUpdatedAt": null
+  }
+}

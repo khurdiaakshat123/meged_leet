@@ -1,0 +1,166 @@
+{
+  "id": "1864",
+  "slug": "minimum-number-of-swaps-to-make-the-binary-string-alternating",
+  "title": "Minimum Number of Swaps to Make the Binary String Alternating",
+  "category": "dsa",
+  "subcategory": "greedy",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Greedy"
+  ],
+  "statement": "Given a binary string `s`, return _the **minimum** number of character swaps to make it **alternating**, or_ `-1` _if it is impossible._\n\nThe string is called **alternating** if no two adjacent characters are equal. For example, the strings `\"010\"` and `\"1010\"` are alternating, while the string `\"0100\"` is not.\n\nAny two characters may be swapped, even if they are **not adjacent**.\n\n**Example 1:**\n\n```\nInput: s = \"111000\"\nOutput: 1\nExplanation: Swap positions 1 and 4: \"111000\" -> \"101010\"\nThe string is now alternating.\n```\n\n**Example 2:**\n\n```\nInput: s = \"010\"\nOutput: 0\nExplanation: The string is already alternating, no swaps are needed.\n```\n\n**Example 3:**\n\n```\nInput: s = \"1110\"\nOutput: -1\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 1000`\n*   `s[i]` is either `'0'` or `'1'`.",
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'."
+  ],
+  "examples": [
+    {
+      "input": "s = \"111000\"",
+      "output": "1",
+      "explanation": "Swap positions 1 and 4: \"111000\" -> \"101010\"\nThe string is now alternating."
+    },
+    {
+      "input": "s = \"010\"",
+      "output": "0",
+      "explanation": "The string is already alternating, no swaps are needed."
+    },
+    {
+      "input": "s = \"1110\"",
+      "output": "-1",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minSwaps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minSwaps(self, s: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def minSwaps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minSwaps = function(s) {\n    \n};",
+    "typescript": "function minSwaps(s: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinSwaps(string s) {\n        \n    }\n}",
+    "c": "int minSwaps(char* s) {\n    \n}",
+    "golang": "func minSwaps(s string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minSwaps(s: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwaps(_ s: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps(s: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_swaps(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minSwaps($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwaps(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minSwaps(s: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec min_swaps(s :: String.t) :: integer\n  def min_swaps(s) do\n    \n  end\nend",
+    "erlang": "-spec min_swaps(S :: unicode:unicode_binary()) -> integer().\nmin_swaps(S) ->\n  .",
+    "racket": "(define/contract (min-swaps s)\n  (-> string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"0011\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"11011\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"11001\"",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"0\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"0011\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"11011\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"11001\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"01010011\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"000000\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"0101001\"",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "\"10101010010011101100100101\"",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "\"00100111000101011110000000011101\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"01010101010\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"011101100100011101111000100\"",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "\"0101000001110\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"000000000000000011111111111111111\"",
+      "expectedOutput": "8"
+    },
+    {
+      "input": "\"0000100111111\"",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "\"0011100100100101001000011000100011111110101011100111110001000000010011111011101010100101100001011001001110\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"111001000111100111001100110110101111000110010110100010111001010000011100001100\"",
+      "expectedOutput": "19"
+    },
+    {
+      "input": "\"111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111\"",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "\"00100011001001100111110100001110000111001011111101100011011101001111100001101000100100011100101010010101100\"",
+      "expectedOutput": "27"
+    },
+    {
+      "input": "\"1100010011111101111011010101000000011000100100010011000000000011101010100010110100111011010011110001001000101010110000111000111011001011000001101001001111101011110100010001001010011010110111100110010000011001100011111100000010001110010101110011110001101101110111000000000001101110001001010101101100100010110011101001111100100101101010011001000101010000100011111110011011111111111011010001001111000101110101110011111001111011100000100110010100010111000111011001100110000000010010111010000100101100110111010110000100010010011000001100110001111100111100000001011011001111001001101010000110000011001011110000010110010100111101000001001000110110111100101010010011101111101101100000000101010100011111001111100000000110001011010001100111111001111000110110101111010111010100111001110011001000101111111100001111110001100110011011110011110100111100000100111101101001000110110011011111110110010010001100010100101101111011100111001110011000000111100110011100101011010001011001001011000110101100000110110110010110\"",
+      "expectedOutput": "245"
+    },
+    {
+      "input": "\"0000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000010100000000000000000000000000000000000000000000000100000000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001000000000000000100010000000100000000000000000000000000001000000000000000011001001000000000000000000010100000000000000000000000000000000000000000000010001000000000001111111111111111111101111110111111111111111111111111111111111111111110111111111111101111111101111111111111111111111111111111111111111111111111111111111111101111111111111111101111111101111111111111111111111011011111111110111111111111111111111111111111111111111111111111111111111110111011111111111111111111111111111111111111101111111111011111111111111111111111111111111111111111111111111111111111111110011111111111111111111111111111110111111011111111111111111111111111111011111111011111111\"",
+      "expectedOutput": "236"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Think about all valid strings of length n.",
+    "Try to count the mismatched positions with each valid string of length n."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:24.480Z",
+    "sourceUpdatedAt": null
+  }
+}

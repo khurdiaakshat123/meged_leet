@@ -1,0 +1,146 @@
+{
+  "id": "728",
+  "slug": "self-dividing-numbers",
+  "title": "Self Dividing Numbers",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math"
+  ],
+  "statement": "A **self-dividing number** is a number that is divisible by every digit it contains.\n\n*   For example, `128` is **a self-dividing number** because `128 % 1 == 0`, `128 % 2 == 0`, and `128 % 8 == 0`.\n\nA **self-dividing number** is not allowed to contain the digit zero.\n\nGiven two integers `left` and `right`, return _a list of all the **self-dividing numbers** in the range_ `[left, right]` (both **inclusive**).\n\n**Example 1:**\n\n```\nInput: left = 1, right = 22\nOutput: [1,2,3,4,5,6,7,8,9,11,12,15,22]\n```\n\n**Example 2:**\n\n```\nInput: left = 47, right = 85\nOutput: [48,55,66,77]\n```\n\n**Constraints:**\n\n*   `1 <= left <= right <= 10^(4)`",
+  "constraints": [
+    "1 <= left <= right <= 104"
+  ],
+  "examples": [
+    {
+      "input": "left = 1, right = 22",
+      "output": "[1,2,3,4,5,6,7,8,9,11,12,15,22]",
+      "explanation": null
+    },
+    {
+      "input": "left = 47, right = 85",
+      "output": "[48,55,66,77]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<int> selfDividingNumbers(int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> selfDividingNumbers(int left, int right) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def selfDividingNumbers(self, left: int, right: int) -> list[int]:\n        ",
+    "python": "class Solution(object):\n    def selfDividingNumbers(self, left, right):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} left\n * @param {number} right\n * @return {number[]}\n */\nvar selfDividingNumbers = function(left, right) {\n    \n};",
+    "typescript": "function selfDividingNumbers(left: number, right: number): number[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<int> SelfDividingNumbers(int left, int right) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* selfDividingNumbers(int left, int right, int* returnSize) {\n    \n}",
+    "golang": "func selfDividingNumbers(left int, right int) []int {\n    \n}",
+    "kotlin": "class Solution {\n    fun selfDividingNumbers(left: Int, right: Int): List<Int> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func selfDividingNumbers(_ left: Int, _ right: Int) -> [Int] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {\n        \n    }\n}",
+    "ruby": "# @param {Integer} left\n# @param {Integer} right\n# @return {Integer[]}\ndef self_dividing_numbers(left, right)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $left\n     * @param Integer $right\n     * @return Integer[]\n     */\n    function selfDividingNumbers($left, $right) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> selfDividingNumbers(int left, int right) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def selfDividingNumbers(left: Int, right: Int): List[Int] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec self_dividing_numbers(left :: integer, right :: integer) :: [integer]\n  def self_dividing_numbers(left, right) do\n    \n  end\nend",
+    "erlang": "-spec self_dividing_numbers(Left :: integer(), Right :: integer()) -> [integer()].\nself_dividing_numbers(Left, Right) ->\n  .",
+    "racket": "(define/contract (self-dividing-numbers left right)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1\n215",
+      "expectedOutput": "[1,2,3,4,5,6,7,8,9,11,12,15,22,24,33,36,44,48,55,66,77,88,99,111,112,115,122,124,126,128,132,135,144,155,162,168,175,184,212]"
+    },
+    {
+      "input": "2\n363",
+      "expectedOutput": "[2,3,4,5,6,7,8,9,11,12,15,22,24,33,36,44,48,55,66,77,88,99,111,112,115,122,124,126,128,132,135,144,155,162,168,175,184,212,216,222,224,244,248,264,288,312,315,324,333,336]"
+    },
+    {
+      "input": "10000\n10000",
+      "expectedOutput": "[]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "9999\n10000",
+      "expectedOutput": "[9999]"
+    },
+    {
+      "input": "2495\n2921",
+      "expectedOutput": "[2616,2622,2664,2688,2744,2772,2824,2832,2848,2888,2916]"
+    },
+    {
+      "input": "5497\n5790",
+      "expectedOutput": "[5515,5535,5555,5775]"
+    },
+    {
+      "input": "2801\n3185",
+      "expectedOutput": "[2824,2832,2848,2888,2916,3111,3126,3132,3135,3144,3162,3168,3171]"
+    },
+    {
+      "input": "7626\n7817",
+      "expectedOutput": "[7644,7728,7777,7784]"
+    },
+    {
+      "input": "6634\n7132",
+      "expectedOutput": "[6636,6648,6666,6696,6762,6816,6864,6888,6912,6966,6984,7112,7119]"
+    },
+    {
+      "input": "1469\n1752",
+      "expectedOutput": "[1488,1515,1555,1575,1626,1632,1644,1662,1692,1715,1722]"
+    },
+    {
+      "input": "3423\n3695",
+      "expectedOutput": "[3432,3444,3492,3555,3612,3624,3636,3648,3666]"
+    },
+    {
+      "input": "8684\n8775",
+      "expectedOutput": "[8688,8736]"
+    },
+    {
+      "input": "7659\n7736",
+      "expectedOutput": "[7728]"
+    },
+    {
+      "input": "4217\n4222",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "9061\n9420",
+      "expectedOutput": "[9126,9135,9144,9162,9216,9288,9315,9324,9333,9396]"
+    },
+    {
+      "input": "9163\n9463",
+      "expectedOutput": "[9216,9288,9315,9324,9333,9396,9432]"
+    },
+    {
+      "input": "7785\n8026",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "4490\n4963",
+      "expectedOutput": "[4632,4644,4824,4848,4872,4888,4896,4932]"
+    },
+    {
+      "input": "2968\n2987",
+      "expectedOutput": "[]"
+    },
+    {
+      "input": "5831\n5870",
+      "expectedOutput": "[]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "For each number in the range, check whether it is self dividing by converting that number to a character array (or string in Python), then checking that each digit is nonzero and divides the original number."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/self-dividing-numbers/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:28.231Z",
+    "sourceUpdatedAt": null
+  }
+}

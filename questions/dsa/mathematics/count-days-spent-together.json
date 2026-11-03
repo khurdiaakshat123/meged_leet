@@ -1,0 +1,150 @@
+{
+  "id": "2409",
+  "slug": "count-days-spent-together",
+  "title": "Count Days Spent Together",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "String"
+  ],
+  "statement": "Alice and Bob are traveling to Rome for separate business meetings.\n\nYou are given 4 strings `arriveAlice`, `leaveAlice`, `arriveBob`, and `leaveBob`. Alice will be in the city from the dates `arriveAlice` to `leaveAlice` (**inclusive**), while Bob will be in the city from the dates `arriveBob` to `leaveBob` (**inclusive**). Each will be a 5-character string in the format `\"MM-DD\"`, corresponding to the month and day of the date.\n\nReturn _the total number of days that Alice and Bob are in Rome together._\n\nYou can assume that all dates occur in the **same** calendar year, which is **not** a leap year. Note that the number of days per month can be represented as: `[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]`.\n\n**Example 1:**\n\n```\nInput: arriveAlice = \"08-15\", leaveAlice = \"08-18\", arriveBob = \"08-16\", leaveBob = \"08-19\"\nOutput: 3\nExplanation: Alice will be in Rome from August 15 to August 18. Bob will be in Rome from August 16 to August 19. They are both in Rome together on August 16th, 17th, and 18th, so the answer is 3.\n```\n\n**Example 2:**\n\n```\nInput: arriveAlice = \"10-01\", leaveAlice = \"10-31\", arriveBob = \"11-01\", leaveBob = \"12-31\"\nOutput: 0\nExplanation: There is no day when Alice and Bob are in Rome together, so we return 0.\n```\n\n**Constraints:**\n\n*   All dates are provided in the format `\"MM-DD\"`.\n*   Alice and Bob's arrival dates are **earlier than or equal to** their leaving dates.\n*   The given dates are valid dates of a **non-leap** year.",
+  "constraints": [
+    "All dates are provided in the format \"MM-DD\".",
+    "Alice and Bob's arrival dates are earlier than or equal to their leaving dates.",
+    "The given dates are valid dates of a non-leap year."
+  ],
+  "examples": [
+    {
+      "input": "arriveAlice = \"08-15\", leaveAlice = \"08-18\", arriveBob = \"08-16\", leaveBob = \"08-19\"",
+      "output": "3",
+      "explanation": "Alice will be in Rome from August 15 to August 18. Bob will be in Rome from August 16 to August 19. They are both in Rome together on August 16th, 17th, and 18th, so the answer is 3."
+    },
+    {
+      "input": "arriveAlice = \"10-01\", leaveAlice = \"10-31\", arriveBob = \"11-01\", leaveBob = \"12-31\"",
+      "output": "0",
+      "explanation": "There is no day when Alice and Bob are in Rome together, so we return 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countDaysTogether(string arriveAlice, string leaveAlice, string arriveBob, string leaveBob) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countDaysTogether(self, arriveAlice: str, leaveAlice: str, arriveBob: str, leaveBob: str) -> int:\n        ",
+    "python": "class Solution(object):\n    def countDaysTogether(self, arriveAlice, leaveAlice, arriveBob, leaveBob):\n        \"\"\"\n        :type arriveAlice: str\n        :type leaveAlice: str\n        :type arriveBob: str\n        :type leaveBob: str\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} arriveAlice\n * @param {string} leaveAlice\n * @param {string} arriveBob\n * @param {string} leaveBob\n * @return {number}\n */\nvar countDaysTogether = function(arriveAlice, leaveAlice, arriveBob, leaveBob) {\n    \n};",
+    "typescript": "function countDaysTogether(arriveAlice: string, leaveAlice: string, arriveBob: string, leaveBob: string): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int CountDaysTogether(string arriveAlice, string leaveAlice, string arriveBob, string leaveBob) {\n        \n    }\n}",
+    "c": "int countDaysTogether(char* arriveAlice, char* leaveAlice, char* arriveBob, char* leaveBob) {\n    \n}",
+    "golang": "func countDaysTogether(arriveAlice string, leaveAlice string, arriveBob string, leaveBob string) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countDaysTogether(arriveAlice: String, leaveAlice: String, arriveBob: String, leaveBob: String): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countDaysTogether(_ arriveAlice: String, _ leaveAlice: String, _ arriveBob: String, _ leaveBob: String) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_days_together(arrive_alice: String, leave_alice: String, arrive_bob: String, leave_bob: String) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {String} arrive_alice\n# @param {String} leave_alice\n# @param {String} arrive_bob\n# @param {String} leave_bob\n# @return {Integer}\ndef count_days_together(arrive_alice, leave_alice, arrive_bob, leave_bob)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $arriveAlice\n     * @param String $leaveAlice\n     * @param String $arriveBob\n     * @param String $leaveBob\n     * @return Integer\n     */\n    function countDaysTogether($arriveAlice, $leaveAlice, $arriveBob, $leaveBob) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def countDaysTogether(arriveAlice: String, leaveAlice: String, arriveBob: String, leaveBob: String): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec count_days_together(arrive_alice :: String.t, leave_alice :: String.t, arrive_bob :: String.t, leave_bob :: String.t) :: integer\n  def count_days_together(arrive_alice, leave_alice, arrive_bob, leave_bob) do\n    \n  end\nend",
+    "erlang": "-spec count_days_together(ArriveAlice :: unicode:unicode_binary(), LeaveAlice :: unicode:unicode_binary(), ArriveBob :: unicode:unicode_binary(), LeaveBob :: unicode:unicode_binary()) -> integer().\ncount_days_together(ArriveAlice, LeaveAlice, ArriveBob, LeaveBob) ->\n  .",
+    "racket": "(define/contract (count-days-together arriveAlice leaveAlice arriveBob leaveBob)\n  (-> string? string? string? string? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"03-03\"\n\"10-27\"\n\"07-27\"\n\"11-29\"",
+      "expectedOutput": "93"
+    },
+    {
+      "input": "\"02-02\"\n\"04-24\"\n\"12-25\"\n\"12-30\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"02-11\"\n\"07-09\"\n\"03-04\"\n\"06-25\"",
+      "expectedOutput": "114"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"05-30\"\n\"09-11\"\n\"01-21\"\n\"08-20\"",
+      "expectedOutput": "83"
+    },
+    {
+      "input": "\"04-14\"\n\"09-21\"\n\"03-27\"\n\"06-22\"",
+      "expectedOutput": "70"
+    },
+    {
+      "input": "\"04-21\"\n\"07-09\"\n\"04-21\"\n\"08-28\"",
+      "expectedOutput": "80"
+    },
+    {
+      "input": "\"07-24\"\n\"11-13\"\n\"10-07\"\n\"12-24\"",
+      "expectedOutput": "38"
+    },
+    {
+      "input": "\"02-04\"\n\"11-17\"\n\"05-26\"\n\"08-11\"",
+      "expectedOutput": "78"
+    },
+    {
+      "input": "\"03-01\"\n\"03-28\"\n\"04-23\"\n\"04-24\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"05-17\"\n\"11-28\"\n\"05-08\"\n\"10-08\"",
+      "expectedOutput": "145"
+    },
+    {
+      "input": "\"03-19\"\n\"09-09\"\n\"04-26\"\n\"11-19\"",
+      "expectedOutput": "137"
+    },
+    {
+      "input": "\"03-14\"\n\"09-19\"\n\"04-14\"\n\"04-17\"",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "\"02-28\"\n\"07-08\"\n\"03-16\"\n\"09-17\"",
+      "expectedOutput": "115"
+    },
+    {
+      "input": "\"02-13\"\n\"10-08\"\n\"09-28\"\n\"10-10\"",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "\"09-09\"\n\"10-02\"\n\"06-27\"\n\"09-15\"",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "\"04-10\"\n\"06-03\"\n\"01-28\"\n\"12-25\"",
+      "expectedOutput": "55"
+    },
+    {
+      "input": "\"01-13\"\n\"05-15\"\n\"09-24\"\n\"10-04\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"03-01\"\n\"07-28\"\n\"11-08\"\n\"12-11\"",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "\"02-18\"\n\"11-30\"\n\"01-27\"\n\"12-24\"",
+      "expectedOutput": "286"
+    },
+    {
+      "input": "\"02-18\"\n\"07-24\"\n\"05-24\"\n\"09-21\"",
+      "expectedOutput": "62"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "For a given day, determine if Alice or Bob or both are in Rome.",
+    "Brute force all 365 days for both Alice and Bob."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-days-spent-together/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.056Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "2490",
+  "slug": "circular-sentence",
+  "title": "Circular Sentence",
+  "category": "dsa",
+  "subcategory": "strings",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ],
+  "statement": "A **sentence** is a list of words that are separated by a **single** space with no leading or trailing spaces.\n\n*   For example, `\"Hello World\"`, `\"HELLO\"`, `\"hello world hello world\"` are all sentences.\n\nWords consist of **only** uppercase and lowercase English letters. Uppercase and lowercase English letters are considered different.\n\nA sentence is **circular** if:\n\n*   The last character of each word in the sentence is equal to the first character of its next word.\n*   The last character of the last word is equal to the first character of the first word.\n\nFor example, `\"leetcode exercises sound delightful\"`, `\"eetcode\"`, `\"leetcode eats soul\"` are all circular sentences. However, `\"Leetcode is cool\"`, `\"happy Leetcode\"`, `\"Leetcode\"` and `\"I like Leetcode\"` are **not** circular sentences.\n\nGiven a string `sentence`, return `true` _if it is circular_. Otherwise, return `false`.\n\n**Example 1:**\n\n```\nInput: sentence = \"leetcode exercises sound delightful\"\nOutput: true\nExplanation: The words in sentence are [\"leetcode\", \"exercises\", \"sound\", \"delightful\"].\n- leetcode's last character is equal to exercises's first character.\n- exercises's last character is equal to sound's first character.\n- sound's last character is equal to delightful's first character.\n- delightful's last character is equal to leetcode's first character.\nThe sentence is circular.\n```\n\n**Example 2:**\n\n```\nInput: sentence = \"eetcode\"\nOutput: true\nExplanation: The words in sentence are [\"eetcode\"].\n- eetcode's last character is equal to eetcode's first character.\nThe sentence is circular.\n```\n\n**Example 3:**\n\n```\nInput: sentence = \"Leetcode is cool\"\nOutput: false\nExplanation: The words in sentence are [\"Leetcode\", \"is\", \"cool\"].\n- Leetcode's last character is not equal to is's first character.\nThe sentence is not circular.\n```\n\n**Constraints:**\n\n*   `1 <= sentence.length <= 500`\n*   `sentence` consist of only lowercase and uppercase English letters and spaces.\n*   The words in `sentence` are separated by a single space.\n*   There are no leading or trailing spaces.",
+  "constraints": [
+    "1 <= sentence.length <= 500",
+    "sentence consist of only lowercase and uppercase English letters and spaces.",
+    "The words in sentence are separated by a single space.",
+    "There are no leading or trailing spaces."
+  ],
+  "examples": [
+    {
+      "input": "sentence = \"leetcode exercises sound delightful\"",
+      "output": "true",
+      "explanation": "The words in sentence are [\"leetcode\", \"exercises\", \"sound\", \"delightful\"].\n- leetcode's last character is equal to exercises's first character.\n- exercises's last character is equal to sound's first character.\n- sound's last character is equal to delightful's first character.\n- delightful's last character is equal to leetcode's first character.\nThe sentence is circular."
+    },
+    {
+      "input": "sentence = \"eetcode\"",
+      "output": "true",
+      "explanation": "The words in sentence are [\"eetcode\"].\n- eetcode's last character is equal to eetcode's first character.\nThe sentence is circular."
+    },
+    {
+      "input": "sentence = \"Leetcode is cool\"",
+      "output": "false",
+      "explanation": "The words in sentence are [\"Leetcode\", \"is\", \"cool\"].\n- Leetcode's last character is not equal to is's first character.\nThe sentence is not circular."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    bool isCircularSentence(string sentence) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isCircularSentence(String sentence) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def isCircularSentence(self, sentence: str) -> bool:\n        ",
+    "python": "class Solution(object):\n    def isCircularSentence(self, sentence):\n        \"\"\"\n        :type sentence: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} sentence\n * @return {boolean}\n */\nvar isCircularSentence = function(sentence) {\n    \n};",
+    "typescript": "function isCircularSentence(sentence: string): boolean {\n    \n};",
+    "csharp": "public class Solution {\n    public bool IsCircularSentence(string sentence) {\n        \n    }\n}",
+    "c": "bool isCircularSentence(char* sentence) {\n    \n}",
+    "golang": "func isCircularSentence(sentence string) bool {\n    \n}",
+    "kotlin": "class Solution {\n    fun isCircularSentence(sentence: String): Boolean {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isCircularSentence(_ sentence: String) -> Bool {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_circular_sentence(sentence: String) -> bool {\n        \n    }\n}",
+    "ruby": "# @param {String} sentence\n# @return {Boolean}\ndef is_circular_sentence(sentence)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $sentence\n     * @return Boolean\n     */\n    function isCircularSentence($sentence) {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isCircularSentence(String sentence) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def isCircularSentence(sentence: String): Boolean = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec is_circular_sentence(sentence :: String.t) :: boolean\n  def is_circular_sentence(sentence) do\n    \n  end\nend",
+    "erlang": "-spec is_circular_sentence(Sentence :: unicode:unicode_binary()) -> boolean().\nis_circular_sentence(Sentence) ->\n  .",
+    "racket": "(define/contract (is-circular-sentence sentence)\n  (-> string? boolean?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"xNx\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"iDySr rez\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"CUu uNY YBKtMoC\"",
+      "expectedOutput": "true"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"ZhpRdf fu uaVpiFu uOSt tSOz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"JtCW Wo og gvDoMW WLDSA AC CFIxyvJ\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"gqDWhI IElaEm mu uaA Av vi iv vDWe eR RoRCz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"dk kHDRht traTMJY YRYM MuD DWM MOjFuV VcDRT TrD DnHjiU UYbmEgn nCC Cd\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"ruXzWO OW WDE EYsxUDl lMxJ JKQzP Pnywrv vOYx xD DCrkS SjQigzn nDFyBtA ACjO OHbIjtR Rc cMz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"bqfY YwML Lbfsj jw wUd dNgUt tPw wtN Nzkv vHjHU UiUGNh hkiX Xh hTxNzO OD Dl lDFJh hjht tIrYb\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"KAlkr rMHMv vCxx xI IBezpU UzPK KSqh hepmWJb blqxOZO ONiwl lRE EX XpeL LZ ZOEWR RC CjqmsoV VCFFj jHur rUxn nqUej jeJRy yvgBqbz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"hKiS SLMLX XEcI Iyjbz zVAWGWo oTZRnFL LwxxC CzxS SR RIFuiKL LHJZ ZE ELEN NcASNhY YnPvK KMqoClB Bg gVTx xFlDML Lv vobCF FeD DvmJf fgXz zVq qQFTwwX XHONh\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"Bpyqc czWC CtMwJo on nG GGk kwl lwQUhv vSHi iAB BFGNV VDGu ugQA Ax xuNHV VmNV Vy yjdl lDeZjH HhDz zEV Vqpvk kW WU UGLSjMb bq qxsId dFG GZhrDmJ JCz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"Fp pNoTvXB Bet tXqNrpy yRqIAEU UXg gRCwZvn nb bSW WNd dFo ouobNie eg gUIL LWy yj jQWmr rx xHohnZ ZN Nq qfWBC CQMhH HkDNx xcJE EyEx xKa aslhJ Jbd dvbXF\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"pKT TFBa aVZc cWXC CkpTK Kij jn ncmw waLAQdk kh hMZELi ijZq qmbPPqi irt tft tXD DW Wj jBJTbcZ Zn nD DwiBJp pk kEjYr rBefIc cEa atgn nnReFgk kRZWu udntXXz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"xLLKnzT TMvqc czaYzN NaKx xa aKU UAyhvKJ JWPtL Lg gS SkXOHU UPAigg grUmVNp pgm mhFWpL Lt toHKM MYUiVZL LkLqpSv vMrPN NnXTo oKKGLR Rzyz zTw wUIK KPX Xsr rWVJHk kmnCIA ANx\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"QH HZxY YbG GWy yB BIZpAeN Nz zFeSq qT ToNVYG GbaKjSP PyHTM MEFY YBG GPn nURo ohOo ojuxQUT TfnG GKikMr radhDMD DjkaHwT TauFyL Llo oDmLs sTGwbx xPPJBFL LL LALapKP Pojz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"Fca aVIiw wRptUrv vKRDKs sAkU UG GJRqFW WFeyXiO OwZdQp pQTw wThpEL LJvTdc cf fRy yF Fbsp phgdAi iaJVOU UH HZXZ ZVzzibG Gwi iSqc cvO OfHO Omk kGb bbU UwQVj jDF\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"gS SI IEFd dkknOf floDL LuV VdGTTg gBzQML LBkoae ehZ ZtNYFz zZoJ JaPOLb bDSTX XQIqQfh hneQE EntC CpOJ JJ JzRAeOR RM MqM MwAc cted dVSCg gPv veXR RDIXbiN NNT TmNz\"",
+      "expectedOutput": "false"
+    },
+    {
+      "input": "\"UOlt teh hIpJi izgAz zxrqzu uNopMg gciPT TVW WUCuG GwOsnB BctRR RfvOU\"",
+      "expectedOutput": "true"
+    },
+    {
+      "input": "\"lhZ Zft tD DxlZnV VUqhUGc cF FCWelC CRPYFN NmZGjIG GuUr rPvV VMYsn ngn nn nbeN NJG GiK KqKyBtJ JEW WHJ JIrv vBYYKlm mXJ JOTDw wwz\"",
+      "expectedOutput": "false"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Check the character before the empty space and the character after the empty space.",
+    "Check the first character and the last character of the sentence."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/circular-sentence/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:14.386Z",
+    "sourceUpdatedAt": null
+  }
+}

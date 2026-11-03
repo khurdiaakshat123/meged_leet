@@ -1,0 +1,143 @@
+{
+  "id": "1523",
+  "slug": "count-odd-numbers-in-an-interval-range",
+  "title": "Count Odd Numbers in an Interval Range",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Easy",
+  "tags": [
+    "Math"
+  ],
+  "statement": "Given two non-negative integers `low` and `high`. Return the _count of odd numbers between_ `low` _and_ `high` _(inclusive)_.\n\n**Example 1:**\n\n```\nInput: low = 3, high = 7\nOutput: 3\nExplanation: The odd numbers between 3 and 7 are [3,5,7].\n```\n\n**Example 2:**\n\n```\nInput: low = 8, high = 10\nOutput: 1\nExplanation: The odd numbers between 8 and 10 are [9].\n```\n\n**Constraints:**\n\n*   `0 <= low <= high <= 10^9`",
+  "constraints": [
+    "0 <= low <= high <= 10^9"
+  ],
+  "examples": [
+    {
+      "input": "low = 3, high = 7",
+      "output": "3",
+      "explanation": "The odd numbers between 3 and 7 are [3,5,7]."
+    },
+    {
+      "input": "low = 8, high = 10",
+      "output": "1",
+      "explanation": "The odd numbers between 8 and 10 are [9]."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int countOdds(int low, int high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countOdds(int low, int high) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def countOdds(self, low: int, high: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def countOdds(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @return {number}\n */\nvar countOdds = function(low, high) {\n    \n};",
+    "typescript": "function countOdds(low: number, high: number): number {\n\n};",
+    "csharp": "public class Solution {\n    public int CountOdds(int low, int high) {\n        \n    }\n}",
+    "c": "\n\nint countOdds(int low, int high){\n\n}",
+    "golang": "func countOdds(low int, high int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun countOdds(low: Int, high: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countOdds(_ low: Int, _ high: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_odds(low: i32, high: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} low\n# @param {Integer} high\n# @return {Integer}\ndef count_odds(low, high)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $low\n     * @param Integer $high\n     * @return Integer\n     */\n    function countOdds($low, $high) {\n        \n    }\n}",
+    "scala": "object Solution {\n    def countOdds(low: Int, high: Int): Int = {\n        \n    }\n}"
+  },
+  "publicTests": [
+    {
+      "input": "0\n35408636",
+      "expectedOutput": "17704318"
+    },
+    {
+      "input": "1\n660327168",
+      "expectedOutput": "330163584"
+    },
+    {
+      "input": "1000000000\n1000000000",
+      "expectedOutput": "0"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "999999999\n1000000000",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "69343294\n325414086",
+      "expectedOutput": "128035396"
+    },
+    {
+      "input": "351856520\n431223111",
+      "expectedOutput": "39683296"
+    },
+    {
+      "input": "17977430\n673852400",
+      "expectedOutput": "327937485"
+    },
+    {
+      "input": "601620716\n665968476",
+      "expectedOutput": "32173880"
+    },
+    {
+      "input": "742199950\n793534936",
+      "expectedOutput": "25667493"
+    },
+    {
+      "input": "686179420\n831730209",
+      "expectedOutput": "72775395"
+    },
+    {
+      "input": "847859463\n973222325",
+      "expectedOutput": "62681432"
+    },
+    {
+      "input": "824103740\n948493312",
+      "expectedOutput": "62194786"
+    },
+    {
+      "input": "676229039\n967450823",
+      "expectedOutput": "145610893"
+    },
+    {
+      "input": "470152588\n576023925",
+      "expectedOutput": "52935669"
+    },
+    {
+      "input": "465543719\n556979896",
+      "expectedOutput": "45718089"
+    },
+    {
+      "input": "537001710\n608353538",
+      "expectedOutput": "35675914"
+    },
+    {
+      "input": "312502571\n959045088",
+      "expectedOutput": "323271259"
+    },
+    {
+      "input": "283125983\n305250589",
+      "expectedOutput": "11062304"
+    },
+    {
+      "input": "929776952\n979280198",
+      "expectedOutput": "24751623"
+    },
+    {
+      "input": "783320908\n806341283",
+      "expectedOutput": "11510188"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "If the range (high - low + 1) is even, the number of even and odd numbers in this range will be the same.",
+    "If the range (high - low + 1) is odd, the solution will depend on the parity of high and low."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.389Z",
+    "sourceUpdatedAt": null
+  }
+}

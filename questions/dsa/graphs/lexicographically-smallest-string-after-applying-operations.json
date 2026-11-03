@@ -1,0 +1,172 @@
+{
+  "id": "1625",
+  "slug": "lexicographically-smallest-string-after-applying-operations",
+  "title": "Lexicographically Smallest String After Applying Operations",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Enumeration"
+  ],
+  "statement": "You are given a string `s` of **even length** consisting of digits from `0` to `9`, and two integers `a` and `b`.\n\nYou can apply either of the following two operations any number of times and in any order on `s`:\n\n*   Add `a` to all odd indices of `s` **(0-indexed)**. Digits post `9` are cycled back to `0`. For example, if `s = \"3456\"` and `a = 5`, `s` becomes `\"3951\"`.\n*   Rotate `s` to the right by `b` positions. For example, if `s = \"3456\"` and `b = 1`, `s` becomes `\"6345\"`.\n\nReturn _the **lexicographically smallest** string you can obtain by applying the above operations any number of times on_ `s`.\n\nA string `a` is lexicographically smaller than a string `b` (of the same length) if in the first position where `a` and `b` differ, string `a` has a letter that appears earlier in the alphabet than the corresponding letter in `b`. For example, `\"0158\"` is lexicographically smaller than `\"0190\"` because the first position they differ is at the third letter, and `'5'` comes before `'9'`.\n\n**Example 1:**\n\n```\nInput: s = \"5525\", a = 9, b = 2\nOutput: \"2050\"\nExplanation: We can apply the following operations:\nStart:  \"5525\"\nRotate: \"2555\"\nAdd:    \"2454\"\nAdd:    \"2353\"\nRotate: \"5323\"\nAdd:    \"5222\"\nAdd:    \"5121\"\nRotate: \"2151\"\nAdd:    \"2050\"​​​​​\nThere is no way to obtain a string that is lexicographically smaller than \"2050\".\n```\n\n**Example 2:**\n\n```\nInput: s = \"74\", a = 5, b = 1\nOutput: \"24\"\nExplanation: We can apply the following operations:\nStart:  \"74\"\nRotate: \"47\"\n​​​​​​​Add:    \"42\"\n​​​​​​​Rotate: \"24\"​​​​​​​​​​​​\nThere is no way to obtain a string that is lexicographically smaller than \"24\".\n```\n\n**Example 3:**\n\n```\nInput: s = \"0011\", a = 4, b = 2\nOutput: \"0011\"\nExplanation: There are no sequence of operations that will give us a lexicographically smaller string than \"0011\".\n```\n\n**Constraints:**\n\n*   `2 <= s.length <= 100`\n*   `s.length` is even.\n*   `s` consists of digits from `0` to `9` only.\n*   `1 <= a <= 9`\n*   `1 <= b <= s.length - 1`",
+  "constraints": [
+    "2 <= s.length <= 100",
+    "s.length is even.",
+    "s consists of digits from 0 to 9 only.",
+    "1 <= a <= 9",
+    "1 <= b <= s.length - 1"
+  ],
+  "examples": [
+    {
+      "input": "s = \"5525\", a = 9, b = 2",
+      "output": "\"2050\"",
+      "explanation": "We can apply the following operations:\nStart:  \"5525\"\nRotate: \"2555\"\nAdd:    \"2454\"\nAdd:    \"2353\"\nRotate: \"5323\"\nAdd:    \"5222\"\nAdd:    \"5121\"\nRotate: \"2151\"\nAdd:    \"2050\"​​​​​\nThere is no way to obtain a string that is lexicographically smaller than \"2050\"."
+    },
+    {
+      "input": "s = \"74\", a = 5, b = 1",
+      "output": "\"24\"",
+      "explanation": "We can apply the following operations:\nStart:  \"74\"\nRotate: \"47\"\n​​​​​​​Add:    \"42\"\n​​​​​​​Rotate: \"24\"​​​​​​​​​​​​\nThere is no way to obtain a string that is lexicographically smaller than \"24\"."
+    },
+    {
+      "input": "s = \"0011\", a = 4, b = 2",
+      "output": "\"0011\"",
+      "explanation": "There are no sequence of operations that will give us a lexicographically smaller string than \"0011\"."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    string findLexSmallestString(string s, int a, int b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findLexSmallestString(String s, int a, int b) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def findLexSmallestString(self, s: str, a: int, b: int) -> str:\n        ",
+    "python": "class Solution(object):\n    def findLexSmallestString(self, s, a, b):\n        \"\"\"\n        :type s: str\n        :type a: int\n        :type b: int\n        :rtype: str\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @param {number} a\n * @param {number} b\n * @return {string}\n */\nvar findLexSmallestString = function(s, a, b) {\n    \n};",
+    "typescript": "function findLexSmallestString(s: string, a: number, b: number): string {\n    \n};",
+    "csharp": "public class Solution {\n    public string FindLexSmallestString(string s, int a, int b) {\n        \n    }\n}",
+    "c": "char* findLexSmallestString(char* s, int a, int b) {\n    \n}",
+    "golang": "func findLexSmallestString(s string, a int, b int) string {\n    \n}",
+    "kotlin": "class Solution {\n    fun findLexSmallestString(s: String, a: Int, b: Int): String {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLexSmallestString(_ s: String, _ a: Int, _ b: Int) -> String {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_lex_smallest_string(s: String, a: i32, b: i32) -> String {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @param {Integer} a\n# @param {Integer} b\n# @return {String}\ndef find_lex_smallest_string(s, a, b)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $a\n     * @param Integer $b\n     * @return String\n     */\n    function findLexSmallestString($s, $a, $b) {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findLexSmallestString(String s, int a, int b) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def findLexSmallestString(s: String, a: Int, b: Int): String = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec find_lex_smallest_string(s :: String.t, a :: integer, b :: integer) :: String.t\n  def find_lex_smallest_string(s, a, b) do\n    \n  end\nend",
+    "erlang": "-spec find_lex_smallest_string(S :: unicode:unicode_binary(), A :: integer(), B :: integer()) -> unicode:unicode_binary().\nfind_lex_smallest_string(S, A, B) ->\n  .",
+    "racket": "(define/contract (find-lex-smallest-string s a b)\n  (-> string? exact-integer? exact-integer? string?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"6831\"\n9\n2",
+      "expectedOutput": "\"3067\""
+    },
+    {
+      "input": "\"9182\"\n2\n1",
+      "expectedOutput": "\"0019\""
+    },
+    {
+      "input": "\"750496\"\n5\n2",
+      "expectedOutput": "\"049675\""
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"00\"\n1\n1",
+      "expectedOutput": "\"00\""
+    },
+    {
+      "input": "\"97\"\n5\n1",
+      "expectedOutput": "\"24\""
+    },
+    {
+      "input": "\"6831\"\n9\n2",
+      "expectedOutput": "\"3067\""
+    },
+    {
+      "input": "\"9182\"\n2\n1",
+      "expectedOutput": "\"0019\""
+    },
+    {
+      "input": "\"750496\"\n5\n2",
+      "expectedOutput": "\"049675\""
+    },
+    {
+      "input": "\"82615307\"\n4\n4",
+      "expectedOutput": "\"51058069\""
+    },
+    {
+      "input": "\"9041726385\"\n3\n3",
+      "expectedOutput": "\"0012338891\""
+    },
+    {
+      "input": "\"639571240684\"\n6\n4",
+      "expectedOutput": "\"008867997528\""
+    },
+    {
+      "input": "\"26811809759643\"\n7\n5",
+      "expectedOutput": "\"00158319623148\""
+    },
+    {
+      "input": "\"1290594793258566\"\n8\n6",
+      "expectedOutput": "\"1098574591238364\""
+    },
+    {
+      "input": "\"387185078572649964\"\n5\n9",
+      "expectedOutput": "\"027194419832630523\""
+    },
+    {
+      "input": "\"24029911743811566455\"\n2\n10",
+      "expectedOutput": "\"20089517703417526051\""
+    },
+    {
+      "input": "\"2957296962718094396698\"\n1\n21",
+      "expectedOutput": "\"0000312213570073960986\""
+    },
+    {
+      "input": "\"200684654212980716132403\"\n9\n8",
+      "expectedOutput": "\"101728072400886946169201\""
+    },
+    {
+      "input": "\"45939885094924356698381612279844\"\n3\n7",
+      "expectedOutput": "\"00015954416505809122549472788354\""
+    },
+    {
+      "input": "\"3174546745861376153215132973420691249498943336\"\n4\n23",
+      "expectedOutput": "\"1075120847902727672111419523245236491549310939\""
+    },
+    {
+      "input": "\"2730876759051996286481142447261720363127135328337226011248314869\"\n5\n16",
+      "expectedOutput": "\"2036312713532833722601124831486927308767590519962864811424472617\""
+    },
+    {
+      "input": "\"5212306067532813396647003414629614450906799079269120976988475611930526295425336525\"\n6\n41",
+      "expectedOutput": "\"1070982825118671972405689272205472036764375837845988552746051479516384871283912383\""
+    },
+    {
+      "input": "\"1214757467412932475664888480815733713912796057464667783270474119821442069465253421971733737083719411\"\n7\n37",
+      "expectedOutput": "\"0000213296340105734678066058298998855171973734473558757678393821058396011028424844451197359376332411\""
+    },
+    {
+      "input": "\"21182858131738322090815078193528968123537155007567391186621401305936605281256616081368926758793127\"\n9\n43",
+      "expectedOutput": "\"00028025722148668331961588706831709387213635560154914052688747865750560648589774738072566827543387\""
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Since the length of s is even, the total number of possible sequences is at most 10 * 10 * s.length.",
+    "You can generate all possible sequences and take their minimum.",
+    "Keep track of already generated sequences so they are not processed again."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/lexicographically-smallest-string-after-applying-operations/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:20.269Z",
+    "sourceUpdatedAt": null
+  }
+}

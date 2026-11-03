@@ -1,0 +1,156 @@
+{
+  "id": "3334",
+  "slug": "find-the-maximum-factor-score-of-array",
+  "title": "Find the Maximum Factor Score of Array",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Number Theory",
+    "Least Common Multiple"
+  ],
+  "statement": "You are given an integer array `nums`.\n\nThe **factor score** of an array is defined as the _product_ of the LCM and GCD of all elements of that array.\n\nReturn the **maximum factor score** of `nums` after removing **at most** one element from it.\n\n**Note** that _both_ the LCM and GCD of a single number are the number itself, and the _factor score_ of an **empty** array is 0.\n\n**Example 1:**\n\n**Input:** nums = \\[2,4,8,16\\]\n\n**Output:** 64\n\n**Explanation:**\n\nOn removing 2, the GCD of the rest of the elements is 4 while the LCM is 16, which gives a maximum factor score of `4 * 16 = 64`.\n\n**Example 2:**\n\n**Input:** nums = \\[1,2,3,4,5\\]\n\n**Output:** 60\n\n**Explanation:**\n\nThe maximum factor score of 60 can be obtained without removing any elements.\n\n**Example 3:**\n\n**Input:** nums = \\[3\\]\n\n**Output:** 9\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `1 <= nums[i] <= 30`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 30"
+  ],
+  "examples": [
+    {
+      "input": "nums = [2,4,8,16]",
+      "output": "64",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,2,3,4,5]",
+      "output": "60",
+      "explanation": null
+    },
+    {
+      "input": "nums = [3]",
+      "output": "9",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def maxScore(self, nums: List[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "typescript": "function maxScore(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public long MaxScore(int[] nums) {\n        \n    }\n}",
+    "c": "long long maxScore(int* nums, int numsSize) {\n    \n}",
+    "golang": "func maxScore(nums []int) int64 {\n    \n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray): Long {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_score(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxScore($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer]) :: integer\n  def max_score(nums) do\n    \n  end\nend",
+    "erlang": "-spec max_score(Nums :: [integer()]) -> integer().\nmax_score(Nums) ->\n  .",
+    "racket": "(define/contract (max-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[28]",
+      "expectedOutput": "784"
+    },
+    {
+      "input": "[1,15]",
+      "expectedOutput": "225"
+    },
+    {
+      "input": "[5,7,12]",
+      "expectedOutput": "420"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[30,26,26,20]",
+      "expectedOutput": "1560"
+    },
+    {
+      "input": "[5,22,9,26,13]",
+      "expectedOutput": "12870"
+    },
+    {
+      "input": "[1,2,3,4,5,6,7]",
+      "expectedOutput": "420"
+    },
+    {
+      "input": "[1,23,28,1,13,14,1,13,29]",
+      "expectedOutput": "242788"
+    },
+    {
+      "input": "[6,8,23,21,24,17,5,20,13,10,26,3]",
+      "expectedOutput": "4269720"
+    },
+    {
+      "input": "[15,1,15,1,1,5,15,30,24,15,1,5,10,4,30,15]",
+      "expectedOutput": "120"
+    },
+    {
+      "input": "[2,4,5,7,7,10,11,12,13,13,14,17,18,19,22,23,23,23,23,23,24,25,26,30]",
+      "expectedOutput": "13385572200"
+    },
+    {
+      "input": "[30,28,28,27,26,26,26,25,25,22,22,20,20,19,19,18,17,16,15,14,12,11,11,9,8,8,7,5,4,4,4,3,2,2,1]",
+      "expectedOutput": "3491888400"
+    },
+    {
+      "input": "[12,29,16,3,20,7,24,11,28,15,2,19,6,23,10,27,14,1,18,5,22,9,26,13,30,17,4,21,8,25,12,29,16,3,20,7,24,11,28,15,2,19,6,23,10,27,14,1,18,5]",
+      "expectedOutput": "2329089562800"
+    },
+    {
+      "input": "[1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,9,10,10,10,11,11,11,12,12,12,13,13,13,14,14,14,15,15,15,16,16,16,17,17,17,18,18,18,19,19,19,20,20,20,21,21,21,22,22,22,23,23,23,24,24,24,25,25,25]",
+      "expectedOutput": "26771144400"
+    },
+    {
+      "input": "[1,5,12,1,15,24,1,16,20,1,1,1,1,18,15,1,2,5,1,26,1,1,11,19,1,17,8,1,12,21,1,26,19,1,28,5,1,28,12,1,6,1,1,12,22,1,18,22,1,21,3,1,10,20,1,16,21,1,20,9,1,16,15,1,20,5,1,3,13,1,1,20,1,5,4,1,16,10,1,15,30,1,12,7,1,16,29,1,27,1,1,22,10,1,26,29,1,2,6,1]",
+      "expectedOutput": "20252952720"
+    },
+    {
+      "input": "[29,2,26,16,24,25,17,1,8,13,8,6,6,7,23,29,9,5,5,11,16,18,8,13,13,30,8,21,22,27,1,3,2,9,10,11,2,26,21,19,12,8,30,18,12,19,30,14,28,4,7,30,16,14,28,22,7,14,25,17,22,30,18,4,17,19,22,11,25,29,22,24,13,20,25,12,6,27,17,20,21,6,17,9,30,30,7,1,5,23,1,15,10,25,17,19,18,15,15,9]",
+      "expectedOutput": "2329089562800"
+    },
+    {
+      "input": "[30,9,30,15,15,1,30,1,1,30,1,30,30,13,30,1,30,1,3,19,27,30,1,1,29,29,30,1,30,5,1,30,25,30,1,30,1,15,1,23,30,12,15,15,1,30,15,15,1,27,30,1,19,1,1,15,15,15,30,1,22,28,29,30,30,1,30,30,15,25,11,1,15,1,1,15,15,13,25,1,30,1,15,30,15,1,30,1,1,30,30,15,1,15,5,1,15,30,11,30]",
+      "expectedOutput": "34251317100"
+    },
+    {
+      "input": "[1,1,1,1,2,2,2,2,2,3,4,4,4,4,5,5,6,6,6,7,7,8,8,8,8,8,8,9,9,9,9,10,10,10,10,10,10,10,11,11,11,11,11,11,12,12,13,13,13,14,14,14,15,15,15,15,16,16,17,17,17,17,18,18,18,18,19,19,19,20,20,20,21,21,23,23,23,23,24,24,25,25,25,26,26,26,27,27,27,27,28,28,29,29,29,29,29,30,30,30]",
+      "expectedOutput": "2329089562800"
+    },
+    {
+      "input": "[30,30,30,30,30,30,29,29,29,29,28,27,27,27,26,26,26,26,26,26,25,25,25,24,23,23,23,23,22,22,22,22,21,21,20,20,20,20,19,19,19,19,18,18,18,18,18,17,17,17,16,16,16,16,15,14,14,13,13,13,12,12,12,11,11,11,11,11,10,10,10,10,10,10,9,8,8,8,7,7,6,6,5,5,5,5,5,4,4,4,3,3,3,2,2,2,1,1,1,1]",
+      "expectedOutput": "2329089562800"
+    },
+    {
+      "input": "[19,6,23,10,27,14,1,18,5,22,9,26,13,30,17,4,21,8,25,12,29,16,3,20,7,24,11,28,15,2,19,6,23,10,27,14,1,18,5,22,9,26,13,30,17,4,21,8,25,12,29,16,3,20,7,24,11,28,15,2,19,6,23,10,27,14,1,18,5,22,9,26,13,30,17,4,21,8,25,12,29,16,3,20,7,24,11,28,15,2,19,6,23,10,27,14,1,18,5,22]",
+      "expectedOutput": "2329089562800"
+    },
+    {
+      "input": "[1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8,9,9,9,9,9,10,10,10,10,10,11,11,11,11,11,12,12,12,12,12,13,13,13,13,13,14,14,14,14,14,15,15,15,15,15,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18,19,19,19,19,19,20,20,20,20,20]",
+      "expectedOutput": "232792560"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use brute force approach with two loops.",
+    "Optimize using prefix and suffix arrays."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/find-the-maximum-factor-score-of-array/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:18.405Z",
+    "sourceUpdatedAt": null
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "id": "2579",
+  "slug": "count-total-number-of-colored-cells",
+  "title": "Count Total Number of Colored Cells",
+  "category": "dsa",
+  "subcategory": "mathematics",
+  "difficulty": "Medium",
+  "tags": [
+    "Math"
+  ],
+  "statement": "There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer `n`, indicating that you must do the following routine for `n` minutes:\n\n*   At the first minute, color **any** arbitrary unit cell blue.\n*   Every minute thereafter, color blue **every** uncolored cell that touches a blue cell.\n\nBelow is a pictorial representation of the state of the grid after minutes 1, 2, and 3.\n\n![](./assets/count-total-number-of-colored-cells-1.png)\n\nReturn _the number of **colored cells** at the end of_ `n` _minutes_.\n\n**Example 1:**\n\n```\nInput: n = 1\nOutput: 1\nExplanation: After 1 minute, there is only 1 blue cell, so we return 1.\n```\n\n**Example 2:**\n\n```\nInput: n = 2\nOutput: 5\nExplanation: After 2 minutes, there are 4 colored cells on the boundary and 1 in the center, so we return 5.\n```\n\n**Constraints:**\n\n*   `1 <= n <= 10^(5)`",
+  "constraints": [
+    "1 <= n <= 105"
+  ],
+  "examples": [
+    {
+      "input": "n = 1",
+      "output": "1",
+      "explanation": "After 1 minute, there is only 1 blue cell, so we return 1."
+    },
+    {
+      "input": "n = 2",
+      "output": "5",
+      "explanation": "After 2 minutes, there are 4 colored cells on the boundary and 1 in the center, so we return 5."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    long long coloredCells(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long coloredCells(int n) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def coloredCells(self, n: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def coloredCells(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar coloredCells = function(n) {\n    \n};",
+    "typescript": "function coloredCells(n: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public long ColoredCells(int n) {\n        \n    }\n}",
+    "c": "long long coloredCells(int n) {\n    \n}",
+    "golang": "func coloredCells(n int) int64 {\n    \n}",
+    "kotlin": "class Solution {\n    fun coloredCells(n: Int): Long {\n        \n    }\n}",
+    "swift": "class Solution {\n    func coloredCells(_ n: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn colored_cells(n: i32) -> i64 {\n        \n    }\n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef colored_cells(n)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function coloredCells($n) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int coloredCells(int n) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def coloredCells(n: Int): Long = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec colored_cells(n :: integer) :: integer\n  def colored_cells(n) do\n    \n  end\nend",
+    "erlang": "-spec colored_cells(N :: integer()) -> integer().\ncolored_cells(N) ->\n  .",
+    "racket": "(define/contract (colored-cells n)\n  (-> exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "1",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "2",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "100000",
+      "expectedOutput": "19999800001"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "99999",
+      "expectedOutput": "19999400005"
+    },
+    {
+      "input": "86267",
+      "expectedOutput": "14883818045"
+    },
+    {
+      "input": "18209",
+      "expectedOutput": "663098945"
+    },
+    {
+      "input": "8963",
+      "expectedOutput": "160652813"
+    },
+    {
+      "input": "615",
+      "expectedOutput": "755221"
+    },
+    {
+      "input": "86004",
+      "expectedOutput": "14793204025"
+    },
+    {
+      "input": "49231",
+      "expectedOutput": "4847284261"
+    },
+    {
+      "input": "71164",
+      "expectedOutput": "10128487465"
+    },
+    {
+      "input": "15963",
+      "expectedOutput": "509602813"
+    },
+    {
+      "input": "77055",
+      "expectedOutput": "11874791941"
+    },
+    {
+      "input": "30490",
+      "expectedOutput": "1859219221"
+    },
+    {
+      "input": "21072",
+      "expectedOutput": "888016225"
+    },
+    {
+      "input": "93595",
+      "expectedOutput": "17519860861"
+    },
+    {
+      "input": "29040",
+      "expectedOutput": "1686585121"
+    },
+    {
+      "input": "13064",
+      "expectedOutput": "341310065"
+    },
+    {
+      "input": "7058",
+      "expectedOutput": "99616613"
+    },
+    {
+      "input": "1609",
+      "expectedOutput": "5174545"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Derive a mathematical relation between total number of colored cells and the time elapsed in minutes."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/count-total-number-of-colored-cells/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:15.858Z",
+    "sourceUpdatedAt": null
+  }
+}

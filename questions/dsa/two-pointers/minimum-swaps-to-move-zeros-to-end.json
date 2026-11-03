@@ -1,0 +1,154 @@
+{
+  "id": "3936",
+  "slug": "minimum-swaps-to-move-zeros-to-end",
+  "title": "Minimum Swaps to Move Zeros to End",
+  "category": "dsa",
+  "subcategory": "two-pointers",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "statement": "You are given an integer array `nums`.\n\nIn one operation, you can choose any two **distinct** indices `i` and `j` and swap `nums[i]` and `nums[j]`.\n\nReturn an integer denoting the **minimum** number of operations required to move all 0s to the end of the array.\n\n**Example 1:**\n\n**Input:** nums = \\[0,1,0,3,12\\]\n\n**Output:** 2\n\n**Explanation:**\n\nWe perform the following swap operations:\n\n*   Swap `nums[0]` and `nums[3]`, giving `nums = [3, 1, 0, 0, 12]`.\n*   Swap `nums[2]` and `nums[4]`, giving `nums = [3, 1, 12, 0, 0]`.\n\nThus, the answer is 2.\n\n**Example 2:**\n\n**Input:** nums = \\[0,1,0,2\\]\n\n**Output:** 1\n\n**Explanation:**\n\nWe perform the following swap operations:\n\n*   Swap `nums[0]` and `nums[3]`, giving `nums = [2, 1, 0, 0]`.\n\nThus, the answer is 1.\n\n**Example 3:**\n\n**Input:** nums = \\[1,2,0\\]\n\n**Output:** 0\n\n**Explanation:**\n\nThe array already satisfies the condition. Therefore, no swap operations are needed.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 100`\n*   `0 <= nums[i] <= 100`",
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 100"
+  ],
+  "examples": [
+    {
+      "input": "nums = [0,1,0,3,12]",
+      "output": "2",
+      "explanation": null
+    },
+    {
+      "input": "nums = [0,1,0,2]",
+      "output": "1",
+      "explanation": null
+    },
+    {
+      "input": "nums = [1,2,0]",
+      "output": "0",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minimumSwaps(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSwaps(int[] nums) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minimumSwaps(self, nums: list[int]) -> int:\n        ",
+    "python": "class Solution(object):\n    def minimumSwaps(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumSwaps = function(nums) {\n    \n};",
+    "typescript": "function minimumSwaps(nums: number[]): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinimumSwaps(int[] nums) {\n        \n    }\n}",
+    "c": "int minimumSwaps(int* nums, int numsSize) {\n    \n}",
+    "golang": "func minimumSwaps(nums []int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minimumSwaps(nums: IntArray): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSwaps(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_swaps(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_swaps(nums)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumSwaps($nums) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSwaps(List<int> nums) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minimumSwaps(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec minimum_swaps(nums :: [integer]) :: integer\n  def minimum_swaps(nums) do\n    \n  end\nend",
+    "erlang": "-spec minimum_swaps(Nums :: [integer()]) -> integer().\nminimum_swaps(Nums) ->\n  .",
+    "racket": "(define/contract (minimum-swaps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[0,69,62]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[0,42,0,32,83,59,12,90,88,0]",
+      "expectedOutput": "2"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[45,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[50,5,94,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[0,23,98,94,61,0]",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[5,96,13,76,79,62,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[12,75,60,65,32,12,98,74,73,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[42,93,87,0,86,2,80,0,14,0,62,93,66,0,0]",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[8,80,93,99,33,34,72,33,35,42,10,33,56,31,0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[63,0,0,10,0,72,58,0,26,52,69,39,38,98,97,36,39,0,0,80,0]",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[43,71,20,94,87,75,10,91,2,39,82,5,5,53,86,63,52,45,0,0,0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[11,95,0,0,23,0,64,0,50,0,84,81,59,40,26,0,0,86,4,30,68,17,41,0,0,40,76]",
+      "expectedOutput": "7"
+    },
+    {
+      "input": "[50,19,92,35,36,99,46,72,75,12,29,84,67,32,30,92,33,25,56,92,62,69,89,0,0,0,0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[90,24,76,83,0,2,47,21,77,20,82,1,11,5,17,0,0,57,0,74,0,0,32,43,0,0,11,5,0,51,45,0,0,64]",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[11,85,22,46,76,8,48,49,69,46,75,74,91,90,47,100,50,91,79,85,50,19,97,18,44,52,43,18,35,0,0,0,0,0,0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[0,78,21,66,40,88,0,0,0,0,0,80,0,55,0,0,2,56,52,1,7,13,60,10,0,38,71,0,0,37,65,0,19,15,42,47,70,0,62,6,36,32]",
+      "expectedOutput": "11"
+    },
+    {
+      "input": "[27,4,1,20,78,95,53,76,20,54,47,63,88,9,86,98,72,66,26,71,30,63,86,11,30,60,54,15,32,80,47,57,75,62,100,0,0,0,0,0,0,0,0,0,0,0]",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[23,0,36,99,0,0,0,92,0,28,77,8,0,98,85,0,0,89,0,38,1,66,0,75,0,77,31,0,0,8,10,17,0,73,0,9,70,4,73,15,85,0,45,77,74,90,80,46,22,80]",
+      "expectedOutput": "14"
+    },
+    {
+      "input": "[97,51,95,35,65,2,62,51,77,66,6,73,37,15,54,89,94,90,52,16,33,14,59,94,89,94,44,37,9,74,90,73,22,39,75,71,33,1,89,76,98,87,93,25,45,3,94,3,12,25,72,43,47,87,99,10,95,92,32,35,8,57,58,82,96,19,46,47,47,48,73,42,81,12,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+      "expectedOutput": "0"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "The values of non-zero elements do not matter.\r\nConvert the array to zeros and ones.",
+    "All ones that are in positions where a zero should be must be swapped out."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:25.111Z",
+    "sourceUpdatedAt": null
+  }
+}

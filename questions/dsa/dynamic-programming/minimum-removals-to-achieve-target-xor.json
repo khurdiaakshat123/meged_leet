@@ -1,0 +1,163 @@
+{
+  "id": "3877",
+  "slug": "minimum-removals-to-achieve-target-xor",
+  "title": "Minimum Removals to Achieve Target XOR",
+  "category": "dsa",
+  "subcategory": "dynamic-programming",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "statement": "You are given an integer array `nums` and an integer `target`.\n\nYou may remove **any** number of elements from `nums` (possibly zero).\n\nReturn the **minimum** number of removals required so that the **bitwise XOR** of the remaining elements equals `target`. If it is impossible to achieve `target`, return -1.\n\nThe bitwise XOR of an empty array is 0.\n\n**Example 1:**\n\n**Input:** nums = \\[1,2,3\\], target = 2\n\n**Output:** 1\n\n**Explanation:**\n\n*   Removing `nums[1] = 2` leaves `[nums[0], nums[2]] = [1, 3]`.\n*   The XOR of `[1, 3]` is 2, which equals `target`.\n*   It is not possible to achieve XOR = 2 in less than one removal, therefore the answer is 1.\n\n**Example 2:**\n\n**Input:** nums = \\[2,4\\], target = 1\n\n**Output:** \\-1\n\n**Explanation:**\n\nIt is impossible to remove elements to achieve `target`. Thus, the answer is -1.\n\n**Example 3:**\n\n**Input:** nums = \\[7\\], target = 7\n\n**Output:** 0\n\n**Explanation:**\n\nThe XOR of all elements is `nums[0] = 7`, which equals `target`. Thus, no removal is needed.\n\n**Constraints:**\n\n*   `1 <= nums.length <= 40`\n*   `0 <= nums[i] <= 10^(4)`\n*   `0 <= target <= 10^(4)`",
+  "constraints": [
+    "1 <= nums.length <= 40",
+    "0 <= nums[i] <= 104",
+    "0 <= target <= 104"
+  ],
+  "examples": [
+    {
+      "input": "nums = [1,2,3], target = 2",
+      "output": "1",
+      "explanation": "Removing nums[1] = 2 leaves [nums[0], nums[2]] = [1, 3].\n\tThe XOR of [1, 3] is 2, which equals target.\n\tIt is not possible to achieve XOR = 2 in less than one removal, therefore the answer is 1."
+    },
+    {
+      "input": "nums = [2,4], target = 1",
+      "output": "-1",
+      "explanation": null
+    },
+    {
+      "input": "nums = [7], target = 7",
+      "output": "0",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int minRemovals(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minRemovals(int[] nums, int target) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def minRemovals(self, nums: List[int], target: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def minRemovals(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar minRemovals = function(nums, target) {\n    \n};",
+    "typescript": "function minRemovals(nums: number[], target: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int MinRemovals(int[] nums, int target) {\n        \n    }\n}",
+    "c": "int minRemovals(int* nums, int numsSize, int target) {\n    \n}",
+    "golang": "func minRemovals(nums []int, target int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun minRemovals(nums: IntArray, target: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minRemovals(_ nums: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_removals(nums: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer}\ndef min_removals(nums, target)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer\n     */\n    function minRemovals($nums, $target) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minRemovals(List<int> nums, int target) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def minRemovals(nums: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec min_removals(nums :: [integer], target :: integer) :: integer\n  def min_removals(nums, target) do\n    \n  end\nend",
+    "erlang": "-spec min_removals(Nums :: [integer()], Target :: integer()) -> integer().\nmin_removals(Nums, Target) ->\n  .",
+    "racket": "(define/contract (min-removals nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[1,2,3]\n2",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[7]\n0",
+      "expectedOutput": "1"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[1,2,3]\n2",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[2,4]\n1",
+      "expectedOutput": "-1"
+    },
+    {
+      "input": "[7]\n7",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[7]\n0",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[0]\n0",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[0,1,1]\n0",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[1,2,3,4]\n4",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[13,142,144,133,89,44]\n13",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[17,169,209,267,88,36,6]\n17",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[29,32,241,33,88,182,182,240]\n29",
+      "expectedOutput": "1"
+    },
+    {
+      "input": "[53,30,260,278,287,17,26,287,173]\n53",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[79,85,71,300,86,166,286,236,178,119]\n79",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[127,249,103,66,86,11,161,85,194,223,148]\n127",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[293,275,168,200,85,3,213,83,226,130,282]\n293",
+      "expectedOutput": "6"
+    },
+    {
+      "input": "[503,549,886,332,281,470,469,768,908,466,104,795,472,763]\n503",
+      "expectedOutput": "5"
+    },
+    {
+      "input": "[617,912,625,480,947,461,193,432,943,696,920,534,379,570,217,795,477]\n617",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[809,182,210,999,277,929,227,258,64,501,271,121,55,896,413,320,621,187,700,137,668]\n809",
+      "expectedOutput": "2"
+    },
+    {
+      "input": "[997,726,319,220,276,415,814,756,117,846,994,230,917,606,784,116,540,278,491,458,814,329,815,411,593]\n997",
+      "expectedOutput": "3"
+    },
+    {
+      "input": "[10000,889,578,3685,9423,4059,5379,4199,1517,750,8088,9699,8242,4135,6967,9809,1526,3390,6853,49,5785,5803,4958,6975,625,9356,7896,4176,9880,2192,3207,1817,1448,7882,1171,4846,5022,7870,5178,7544]\n10000",
+      "expectedOutput": "4"
+    },
+    {
+      "input": "[1234,8913,10000,1088,2715,3601,1586,7430,3261,2240,8833,6661,3613,4499,2632,3027,2157,6431,6570,7406,4002,8369,9005,1316,4105,7718,7762,7592,1849,5655,728,2842,4111,9160,646,9396,6337,2270,4867]\n9731",
+      "expectedOutput": "4"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Use meet in the middle or dynamic programming"
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/minimum-removals-to-achieve-target-xor/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:24.918Z",
+    "sourceUpdatedAt": null
+  }
+}

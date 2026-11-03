@@ -1,0 +1,149 @@
+{
+  "id": "3774",
+  "slug": "absolute-difference-between-maximum-and-minimum-k-elements",
+  "title": "Absolute Difference Between Maximum and Minimum K Elements",
+  "category": "dsa",
+  "subcategory": "sorting",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sorting"
+  ],
+  "statement": "You are given an integer array `nums` and an integer `k`.\n\nFind the absolute difference between:\n\n*   the **sum** of the `k` **largest** elements in the array; and\n*   the **sum** of the `k` **smallest** elements in the array.\n\nReturn an integer denoting this difference.\n\n**Example 1:**\n\n**Input:** nums = \\[5,2,2,4\\], k = 2\n\n**Output:** 5\n\n**Explanation:**\n\n*   The `k = 2` largest elements are 4 and 5. Their sum is `4 + 5 = 9`.\n*   The `k = 2` smallest elements are 2 and 2. Their sum is `2 + 2 = 4`.\n*   The absolute difference is `abs(9 - 4) = 5`.\n\n**Example 2:**\n\n**Input:** nums = \\[100\\], k = 1\n\n**Output:** 0\n\n**Explanation:**\n\n*   The largest element is 100.\n*   The smallest element is 100.\n*   The absolute difference is `abs(100 - 100) = 0`.\n\n**Constraints:**\n\n*   `1 <= n == nums.length <= 100`\n*   `1 <= nums[i] <= 100`\n*   `1 <= k <= n`",
+  "constraints": [
+    "1 <= n == nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "1 <= k <= n"
+  ],
+  "examples": [
+    {
+      "input": "nums = [5,2,2,4], k = 2",
+      "output": "5",
+      "explanation": "The k = 2 largest elements are 4 and 5. Their sum is 4 + 5 = 9.\n\tThe k = 2 smallest elements are 2 and 2. Their sum is 2 + 2 = 4.\n\tThe absolute difference is abs(9 - 4) = 5."
+    },
+    {
+      "input": "nums = [100], k = 1",
+      "output": "0",
+      "explanation": "The largest element is 100.\n\tThe smallest element is 100.\n\tThe absolute difference is abs(100 - 100) = 0."
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    int absDifference(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int absDifference(int[] nums, int k) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def absDifference(self, nums: List[int], k: int) -> int:\n        ",
+    "python": "class Solution(object):\n    def absDifference(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar absDifference = function(nums, k) {\n    \n};",
+    "typescript": "function absDifference(nums: number[], k: number): number {\n    \n};",
+    "csharp": "public class Solution {\n    public int AbsDifference(int[] nums, int k) {\n        \n    }\n}",
+    "c": "int absDifference(int* nums, int numsSize, int k) {\n    \n}",
+    "golang": "func absDifference(nums []int, k int) int {\n    \n}",
+    "kotlin": "class Solution {\n    fun absDifference(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "swift": "class Solution {\n    func absDifference(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn abs_difference(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef abs_difference(nums, k)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function absDifference($nums, $k) {\n        \n    }\n}",
+    "dart": "class Solution {\n  int absDifference(List<int> nums, int k) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def absDifference(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec abs_difference(nums :: [integer], k :: integer) :: integer\n  def abs_difference(nums, k) do\n    \n  end\nend",
+    "erlang": "-spec abs_difference(Nums :: [integer()], K :: integer()) -> integer().\nabs_difference(Nums, K) ->\n  .",
+    "racket": "(define/contract (abs-difference nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "[15]\n1",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[11,13]\n2",
+      "expectedOutput": "0"
+    },
+    {
+      "input": "[61,4,28]\n1",
+      "expectedOutput": "57"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[69,4,45,56,53]\n3",
+      "expectedOutput": "76"
+    },
+    {
+      "input": "[97,12,78,18,60,4,91]\n3",
+      "expectedOutput": "232"
+    },
+    {
+      "input": "[90,23,90,18,23,41,64,49,1,50]\n1",
+      "expectedOutput": "89"
+    },
+    {
+      "input": "[14,88,35,73,9,88,53,42,37,23,39,1,31]\n6",
+      "expectedOutput": "270"
+    },
+    {
+      "input": "[81,58,5,59,15,18,36,35,67,75,100,92,97,85,96,48]\n10",
+      "expectedOutput": "394"
+    },
+    {
+      "input": "[23,100,85,29,8,29,48,15,61,66,56,51,53,91,93,8,34,14,8]\n15",
+      "expectedOutput": "331"
+    },
+    {
+      "input": "[40,66,97,94,85,87,34,28,21,86,57,1,92,13,23,97,41,75,20,8,78,85,15]\n14",
+      "expectedOutput": "638"
+    },
+    {
+      "input": "[64,13,40,86,13,42,47,20,21,52,31,63,69,35,69,26,66,3,31,73,31,4,95,34,78,56,98]\n26",
+      "expectedOutput": "95"
+    },
+    {
+      "input": "[11,33,69,27,77,88,28,59,43,75,44,65,80,79,28,45,51,33,21,19,68,84,8,84,73,28,60,13,17,67,99,36]\n24",
+      "expectedOutput": "522"
+    },
+    {
+      "input": "[13,24,48,37,100,83,64,85,85,24,54,4,62,7,95,87,43,53,78,21,33,9,9,73,29,75,46,74,49,58,5,63,94,49,37,17,25]\n14",
+      "expectedOutput": "861"
+    },
+    {
+      "input": "[64,86,57,89,41,72,60,28,13,4,55,42,13,31,9,34,78,19,55,66,72,79,61,13,38,58,74,86,92,74,47,29,62,100,98,18,100,13,14,48,68,8]\n30",
+      "expectedOutput": "847"
+    },
+    {
+      "input": "[18,37,53,33,39,70,33,20,28,60,19,70,65,96,58,29,5,14,71,8,93,65,26,71,34,17,61,96,85,18,1,84,32,5,22,88,91,21,36,44,70,21,88,28,18,53,17]\n7",
+      "expectedOutput": "570"
+    },
+    {
+      "input": "[75,24,62,14,56,60,96,37,15,37,38,86,67,39,70,29,29,46,71,26,62,6,7,82,5,6,32,65,35,40,54,21,43,100,11,81,28,75,93,32,20,75,16,78,64,86,35,37,82,23,39,45,41]\n37",
+      "expectedOutput": "1002"
+    },
+    {
+      "input": "[76,39,59,77,73,8,59,53,83,4,80,73,55,39,62,100,42,75,42,53,53,23,52,66,30,87,47,77,51,77,84,99,32,71,99,31,94,7,57,90,9,34,10,71,2,70,100,74,95,84,64,20,32,52,67,68,42,62,87]\n38",
+      "expectedOutput": "1188"
+    },
+    {
+      "input": "[3,13,44,16,68,89,78,2,66,20,26,3,76,72,56,12,49,79,92,44,57,43,42,65,47,15,70,47,22,7,64,88,91,27,88,38,39,80,51,25,33,54,33,46,48,34,88,34,6,12,70,47,20,73,47,62,5,100,64,46,63,90,68,42,76,82]\n31",
+      "expectedOutput": "1470"
+    },
+    {
+      "input": "[34,72,68,16,41,84,46,15,81,88,87,22,99,73,77,82,25,27,16,56,87,68,12,3,49,8,10,79,52,62,19,22,27,51,15,30,63,91,15,39,47,78,62,8,79,57,58,39,8,36]\n6",
+      "expectedOutput": "487"
+    },
+    {
+      "input": "[13,17,93,37,92,53,30,19,30,37,73,54,31,54,2,80,5,54,42,52,50,3,78,1,35,40,15,23,11,10,64,98,53,4,78,39,14,79,66,91,43,61,74,1,92,1,78,69,91,85,6,11,41,30,47,8,43,100,11,19,23,17,83,89,33,83,22,59,68,93,46,33,62,16,73,51,44,8,60,52,88,52,58,55,77,2,6,19,57,93,40,87,87,6,40,51,31,82,20,48]\n60",
+      "expectedOutput": "2398"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Sort the array and find the difference between the first and last <code>k</code> values."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/absolute-difference-between-maximum-and-minimum-k-elements/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:12.771Z",
+    "sourceUpdatedAt": null
+  }
+}

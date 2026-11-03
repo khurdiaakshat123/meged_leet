@@ -1,0 +1,145 @@
+{
+  "id": "677",
+  "slug": "map-sum-pairs",
+  "title": "Map Sum Pairs",
+  "category": "dsa",
+  "subcategory": "tries",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Design",
+    "Trie"
+  ],
+  "statement": "Design a map that allows you to do the following:\n\n*   Maps a string key to a given value.\n*   Returns the sum of the values that have a key with a prefix equal to a given string.\n\nImplement the `MapSum` class:\n\n*   `MapSum()` Initializes the `MapSum` object.\n*   `void insert(String key, int val)` Inserts the `key-val` pair into the map. If the `key` already existed, the original `key-value` pair will be overridden to the new one.\n*   `int sum(string prefix)` Returns the sum of all the pairs' value whose `key` starts with the `prefix`.\n\n**Example 1:**\n\n```\nInput\n[\"MapSum\", \"insert\", \"sum\", \"insert\", \"sum\"]\n[[], [\"apple\", 3], [\"ap\"], [\"app\", 2], [\"ap\"]]\nOutput\n[null, null, 3, null, 5]\n\nExplanation\nMapSum mapSum = new MapSum();\nmapSum.insert(\"apple\", 3);  \nmapSum.sum(\"ap\");           // return 3 (apple = 3)\nmapSum.insert(\"app\", 2);    \nmapSum.sum(\"ap\");           // return 5 (apple + app = 3 + 2 = 5)\n```\n\n**Constraints:**\n\n*   `1 <= key.length, prefix.length <= 50`\n*   `key` and `prefix` consist of only lowercase English letters.\n*   `1 <= val <= 1000`\n*   At most `50` calls will be made to `insert` and `sum`.",
+  "constraints": [
+    "1 <= key.length, prefix.length <= 50",
+    "key and prefix consist of only lowercase English letters.",
+    "1 <= val <= 1000",
+    "At most 50 calls will be made to insert and sum."
+  ],
+  "examples": [
+    {
+      "input": "[\"MapSum\", \"insert\", \"sum\", \"insert\", \"sum\"]\n[[], [\"apple\", 3], [\"ap\"], [\"app\", 2], [\"ap\"]]",
+      "output": "[null, null, 3, null, 5]",
+      "explanation": "MapSum mapSum = new MapSum();\nmapSum.insert(\"apple\", 3);  \nmapSum.sum(\"ap\");           // return 3 (apple = 3)\nmapSum.insert(\"app\", 2);    \nmapSum.sum(\"ap\");           // return 5 (apple + app = 3 + 2 = 5)"
+    }
+  ],
+  "starterCode": {
+    "cpp": "class MapSum {\npublic:\n    MapSum() {\n        \n    }\n    \n    void insert(string key, int val) {\n        \n    }\n    \n    int sum(string prefix) {\n        \n    }\n};\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * MapSum* obj = new MapSum();\n * obj->insert(key,val);\n * int param_2 = obj->sum(prefix);\n */",
+    "java": "class MapSum {\n\n    public MapSum() {\n        \n    }\n    \n    public void insert(String key, int val) {\n        \n    }\n    \n    public int sum(String prefix) {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * MapSum obj = new MapSum();\n * obj.insert(key,val);\n * int param_2 = obj.sum(prefix);\n */",
+    "python3": "class MapSum:\n\n    def __init__(self):\n        \n\n    def insert(self, key: str, val: int) -> None:\n        \n\n    def sum(self, prefix: str) -> int:\n        \n\n\n# Your MapSum object will be instantiated and called as such:\n# obj = MapSum()\n# obj.insert(key,val)\n# param_2 = obj.sum(prefix)",
+    "python": "class MapSum(object):\n\n    def __init__(self):\n        \n\n    def insert(self, key, val):\n        \"\"\"\n        :type key: str\n        :type val: int\n        :rtype: None\n        \"\"\"\n        \n\n    def sum(self, prefix):\n        \"\"\"\n        :type prefix: str\n        :rtype: int\n        \"\"\"\n        \n\n\n# Your MapSum object will be instantiated and called as such:\n# obj = MapSum()\n# obj.insert(key,val)\n# param_2 = obj.sum(prefix)",
+    "javascript": "\nvar MapSum = function() {\n    \n};\n\n/** \n * @param {string} key \n * @param {number} val\n * @return {void}\n */\nMapSum.prototype.insert = function(key, val) {\n    \n};\n\n/** \n * @param {string} prefix\n * @return {number}\n */\nMapSum.prototype.sum = function(prefix) {\n    \n};\n\n/** \n * Your MapSum object will be instantiated and called as such:\n * var obj = new MapSum()\n * obj.insert(key,val)\n * var param_2 = obj.sum(prefix)\n */",
+    "typescript": "class MapSum {\n    constructor() {\n        \n    }\n\n    insert(key: string, val: number): void {\n        \n    }\n\n    sum(prefix: string): number {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * var obj = new MapSum()\n * obj.insert(key,val)\n * var param_2 = obj.sum(prefix)\n */",
+    "csharp": "public class MapSum {\n\n    public MapSum() {\n        \n    }\n    \n    public void Insert(string key, int val) {\n        \n    }\n    \n    public int Sum(string prefix) {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * MapSum obj = new MapSum();\n * obj.Insert(key,val);\n * int param_2 = obj.Sum(prefix);\n */",
+    "c": "\n\n\ntypedef struct {\n    \n} MapSum;\n\n\nMapSum* mapSumCreate() {\n    \n}\n\nvoid mapSumInsert(MapSum* obj, char* key, int val) {\n    \n}\n\nint mapSumSum(MapSum* obj, char* prefix) {\n    \n}\n\nvoid mapSumFree(MapSum* obj) {\n    \n}\n\n/**\n * Your MapSum struct will be instantiated and called as such:\n * MapSum* obj = mapSumCreate();\n * mapSumInsert(obj, key, val);\n \n * int param_2 = mapSumSum(obj, prefix);\n \n * mapSumFree(obj);\n*/",
+    "golang": "type MapSum struct {\n    \n}\n\n\nfunc Constructor() MapSum {\n    \n}\n\n\nfunc (this *MapSum) Insert(key string, val int)  {\n    \n}\n\n\nfunc (this *MapSum) Sum(prefix string) int {\n    \n}\n\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * obj := Constructor();\n * obj.Insert(key,val);\n * param_2 := obj.Sum(prefix);\n */",
+    "kotlin": "class MapSum() {\n\n    fun insert(key: String, `val`: Int) {\n        \n    }\n\n    fun sum(prefix: String): Int {\n        \n    }\n\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * var obj = MapSum()\n * obj.insert(key,`val`)\n * var param_2 = obj.sum(prefix)\n */",
+    "swift": "\nclass MapSum {\n\n    init() {\n        \n    }\n    \n    func insert(_ key: String, _ val: Int) {\n        \n    }\n    \n    func sum(_ prefix: String) -> Int {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * let obj = MapSum()\n * obj.insert(key, val)\n * let ret_2: Int = obj.sum(prefix)\n */",
+    "rust": "struct MapSum {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl MapSum {\n\n    fn new() -> Self {\n        \n    }\n    \n    fn insert(&self, key: String, val: i32) {\n        \n    }\n    \n    fn sum(&self, prefix: String) -> i32 {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * let obj = MapSum::new();\n * obj.insert(key, val);\n * let ret_2: i32 = obj.sum(prefix);\n */",
+    "ruby": "class MapSum\n    def initialize()\n        \n    end\n\n\n=begin\n    :type key: String\n    :type val: Integer\n    :rtype: Void\n=end\n    def insert(key, val)\n        \n    end\n\n\n=begin\n    :type prefix: String\n    :rtype: Integer\n=end\n    def sum(prefix)\n        \n    end\n\n\nend\n\n# Your MapSum object will be instantiated and called as such:\n# obj = MapSum.new()\n# obj.insert(key, val)\n# param_2 = obj.sum(prefix)",
+    "php": "class MapSum {\n    /**\n     */\n    function __construct() {\n        \n    }\n  \n    /**\n     * @param String $key\n     * @param Integer $val\n     * @return NULL\n     */\n    function insert($key, $val) {\n        \n    }\n  \n    /**\n     * @param String $prefix\n     * @return Integer\n     */\n    function sum($prefix) {\n        \n    }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * $obj = MapSum();\n * $obj->insert($key, $val);\n * $ret_2 = $obj->sum($prefix);\n */",
+    "dart": "class MapSum {\n\n  MapSum() {\n    \n  }\n  \n  void insert(String key, int val) {\n    \n  }\n  \n  int sum(String prefix) {\n    \n  }\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * MapSum obj = MapSum();\n * obj.insert(key,val);\n * int param2 = obj.sum(prefix);\n */",
+    "scala": "class MapSum() {\n\n    def insert(key: String, `val`: Int): Unit = {\n        \n    }\n\n    def sum(prefix: String): Int = {\n        \n    }\n\n}\n\n/**\n * Your MapSum object will be instantiated and called as such:\n * val obj = new MapSum()\n * obj.insert(key,`val`)\n * val param_2 = obj.sum(prefix)\n */",
+    "elixir": "defmodule MapSum do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec insert(key :: String.t, val :: integer) :: any\n  def insert(key, val) do\n    \n  end\n\n  @spec sum(prefix :: String.t) :: integer\n  def sum(prefix) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MapSum.init_()\n# MapSum.insert(key, val)\n# param_2 = MapSum.sum(prefix)\n\n# MapSum.init_ will be called before every test case, in which you can do some necessary initializations.",
+    "erlang": "-spec map_sum_init_() -> any().\nmap_sum_init_() ->\n  .\n\n-spec map_sum_insert(Key :: unicode:unicode_binary(), Val :: integer()) -> any().\nmap_sum_insert(Key, Val) ->\n  .\n\n-spec map_sum_sum(Prefix :: unicode:unicode_binary()) -> integer().\nmap_sum_sum(Prefix) ->\n  .\n\n\n%% Your functions will be called as such:\n%% map_sum_init_(),\n%% map_sum_insert(Key, Val),\n%% Param_2 = map_sum_sum(Prefix),\n\n%% map_sum_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "racket": "(define map-sum%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; insert : string? exact-integer? -> void?\n    (define/public (insert key val)\n      )\n    ; sum : string? -> exact-integer?\n    (define/public (sum prefix)\n      )))\n\n;; Your map-sum% object will be instantiated and called as such:\n;; (define obj (new map-sum%))\n;; (send obj insert key val)\n;; (define param_2 (send obj sum prefix))"
+  },
+  "publicTests": [
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\"]\n[[],[\"ff\"],[\"ffdf\",421],[\"c\",164],[\"ffd\"]]",
+      "expectedOutput": "[null,0,null,null,421]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"adccbeed\"],[\"ffd\",766],[\"adccbeed\",896],[\"eda\"],[\"bafc\",879]]",
+      "expectedOutput": "[null,0,null,null,0,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"dfa\"],[\"eeadfac\",491],[\"eeadfac\",945],[\"accfe\"],[\"bbbac\",449],[\"bafeedf\",414]]",
+      "expectedOutput": "[null,0,null,null,0,null,null]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"edeae\"],[\"cd\",867],[\"fceba\",169],[\"cd\"],[\"f\",756],[\"fceba\",241],[\"abfaaf\"],[\"adcceb\",259]]",
+      "expectedOutput": "[null,0,null,null,867,null,null,0,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\"]\n[[],[\"bd\"],[\"acffa\",833],[\"bcbdb\",148],[\"eddc\"],[\"bdbfede\",31],[\"eecf\",526],[\"bdbfede\"],[\"bdaafbfc\",432],[\"eecf\",187],[\"d\"]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,31,null,null,0]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"e\"],[\"eeaa\",148],[\"aebcebc\",202],[\"eeaebcb\"],[\"e\",121],[\"abdadcc\",306],[\"b\"],[\"e\",72],[\"dfeffb\",426],[\"dfe\"],[\"dfeffb\",831],[\"afafccae\",351]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,426,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"dbafd\"],[\"bdbcbd\",384],[\"cfcfad\",38],[\"decde\"],[\"fe\",211],[\"eadc\",419],[\"decad\"],[\"cddfb\",146],[\"eadc\",684],[\"a\"],[\"decde\",880],[\"cddfb\",752],[\"a\"],[\"fe\",909],[\"cfcfad\",543]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,0,null,null,0,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"f\"],[\"f\",137],[\"f\",120],[\"d\"],[\"efcc\",678],[\"ac\",865],[\"ad\"],[\"deafcbdb\",560],[\"ae\",251],[\"ea\"],[\"ac\",399],[\"adcfc\",529],[\"efcc\"],[\"adaee\",898],[\"efcc\",65],[\"c\"],[\"eac\",882],[\"eac\",21]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,0,null,null,678,null,null,0,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"ffdcafaa\"],[\"bd\",17],[\"cd\",917],[\"dfee\"],[\"cd\",276],[\"feedbe\",97],[\"fb\"],[\"ddedf\",877],[\"ffdcafaa\",559],[\"dc\"],[\"dcabdf\",132],[\"cabbbdee\",787],[\"f\"],[\"cabbbdee\",524],[\"bfbfb\",393],[\"b\"],[\"ffdcafaa\",515],[\"cd\",176],[\"cabb\"],[\"cabbbdee\",593],[\"ffebbbbb\",484]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,0,null,null,656,null,null,410,null,null,524,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"aaaba\"],[\"fb\",919],[\"cbec\",955],[\"cb\"],[\"fb\",950],[\"f\",381],[\"dcbeb\"],[\"cbec\",290],[\"b\",374],[\"b\"],[\"ecaf\",181],[\"eeec\",578],[\"f\"],[\"fbfaa\",104],[\"afdbdbab\",447],[\"fb\"],[\"afeeefe\",23],[\"fab\",173],[\"ee\"],[\"ecaf\",954],[\"afdbdbab\",357],[\"b\"],[\"f\",897],[\"fab\",942]]",
+      "expectedOutput": "[null,0,null,null,955,null,null,0,null,null,374,null,null,1331,null,null,1054,null,null,578,null,null,374,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\"]\n[[],[\"c\"],[\"ceeedf\",723],[\"d\",236],[\"fa\"],[\"bdf\",893],[\"aff\",564],[\"b\"],[\"fb\",548],[\"faebea\",575],[\"eae\"],[\"fcc\",681],[\"ca\",150],[\"d\"],[\"eaf\",821],[\"dbcce\",342],[\"dbcc\"],[\"ceeedf\",739],[\"bbbcf\",124],[\"eae\"],[\"aff\",299],[\"eaf\",134],[\"be\"],[\"ceeedf\",901],[\"bbbcf\",880],[\"d\"],[\"dbcce\",212],[\"e\",57],[\"fb\"]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,893,null,null,0,null,null,236,null,null,342,null,null,0,null,null,0,null,null,578,null,null,548]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"bac\"],[\"ffecbed\",310],[\"dbfefb\",421],[\"f\"],[\"baefe\",659],[\"cecacae\",565],[\"dd\"],[\"baefe\",799],[\"bac\",927],[\"eeaecfbc\"],[\"efcafbcd\",498],[\"c\",66],[\"efca\"],[\"aebadda\",854],[\"ffecbed\",764],[\"efcafbc\"],[\"c\",268],[\"efcafbcd\",357],[\"afc\"],[\"afcd\",887],[\"c\",48],[\"eeaecfb\"],[\"eeaecfbc\",560],[\"aebadda\",541],[\"afcd\"],[\"afcd\",891],[\"f\",592],[\"ceca\"],[\"bac\",845],[\"f\",972],[\"f\"],[\"eccec\",424]]",
+      "expectedOutput": "[null,0,null,null,310,null,null,0,null,null,0,null,null,498,null,null,498,null,null,0,null,null,0,null,null,887,null,null,565,null,null,1736,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\"]\n[[],[\"aaa\"],[\"b\",282],[\"ebeeafab\",499],[\"fbcabeec\"],[\"e\",223],[\"d\",259],[\"b\"],[\"deee\",304],[\"fbcabeec\",716],[\"deee\"],[\"ebeeafab\",440],[\"fbc\",971],[\"d\"],[\"faaee\",384],[\"d\",470],[\"ba\"],[\"bcfbbff\",297],[\"deee\",44],[\"f\"],[\"deee\",289],[\"ddfeacde\",279],[\"ebeeafab\"],[\"eaabadce\",311],[\"dfede\",160],[\"ebeeafab\"],[\"deee\",827],[\"aaaa\",214],[\"b\"],[\"b\",642],[\"faaee\",478],[\"a\"],[\"faaee\",389],[\"deee\",999],[\"fbc\"],[\"faaee\",79],[\"ebeeafab\",532]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,282,null,null,304,null,null,563,null,null,0,null,null,2071,null,null,440,null,null,440,null,null,579,null,null,214,null,null,1687,null,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"ea\"],[\"bcecbafc\",257],[\"bcecbafc\",117],[\"ebce\"],[\"bcecbafc\",342],[\"ebeecbca\",788],[\"cba\"],[\"fc\",192],[\"fc\",35],[\"ee\"],[\"baace\",590],[\"ebeecbca\",299],[\"baa\"],[\"ebeecbca\",488],[\"cbabbeb\",156],[\"eec\"],[\"fdce\",663],[\"fc\",978],[\"bcecbafc\"],[\"ebcedfff\",472],[\"beaeeebf\",394],[\"ebcedff\"],[\"eecbbb\",16],[\"cbabbeb\",636],[\"defb\"],[\"ebcedfff\",989],[\"cbabbeb\",15],[\"ea\"],[\"cea\",307],[\"fdce\",314],[\"d\"],[\"eecbbb\",231],[\"ebcedfff\",976],[\"ebced\"],[\"defbbdaf\",188],[\"eecbbb\",263],[\"bce\"],[\"cea\",116],[\"beaeeebf\",844],[\"b\"],[\"beaeeebf\",643]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,0,null,null,590,null,null,0,null,null,342,null,null,472,null,null,0,null,null,0,null,null,0,null,null,976,null,null,342,null,null,1776,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\"]\n[[],[\"cdaa\"],[\"acb\",508],[\"fadc\",62],[\"bdcecb\"],[\"b\",55],[\"dadcbfae\",847],[\"dadcbfae\"],[\"dadcbfae\",600],[\"aefa\",511],[\"cd\"],[\"da\",860],[\"bcafef\",438],[\"bdcecb\"],[\"ec\",58],[\"bcafef\",285],[\"dbd\"],[\"cdcaebff\",120],[\"ec\",834],[\"cdaa\"],[\"ec\",172],[\"fadc\",768],[\"e\"],[\"fadc\",95],[\"bdcecbc\",619],[\"ac\"],[\"daacab\",852],[\"ec\",894],[\"aeba\"],[\"dadcbfae\",382],[\"fadc\",537],[\"b\"],[\"dbdbcfbe\",594],[\"aefa\",347],[\"dbdbcfb\"],[\"cdcaebff\",273],[\"cdcaebff\",76],[\"fadc\"],[\"cdaa\",472],[\"aebaf\",629],[\"d\"],[\"cdaa\",285],[\"cdaa\",840],[\"ac\"],[\"dbdbcfbe\",796],[\"bdcecbc\",853],[\"d\"]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,847,null,null,0,null,null,0,null,null,0,null,null,0,null,null,172,null,null,508,null,null,0,null,null,959,null,null,594,null,null,537,null,null,2688,null,null,508,null,null,2890]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"fbcc\"],[\"cad\",147],[\"ebbca\",548],[\"ebbc\"],[\"bae\",649],[\"ba\",966],[\"f\"],[\"ebebe\",539],[\"ba\",37],[\"af\"],[\"fdccfd\",520],[\"cad\",383],[\"fbccab\"],[\"dcc\",546],[\"e\",979],[\"f\"],[\"bc\",253],[\"f\",978],[\"bc\"],[\"dcc\",188],[\"fdccfd\",396],[\"e\"],[\"ebebe\",903],[\"cad\",953],[\"bc\"],[\"bae\",378],[\"ba\",214],[\"b\"],[\"ffeabdd\",416],[\"ebabbf\",720],[\"f\"],[\"ba\",505],[\"f\",621],[\"ebabbf\"],[\"bae\",850],[\"ebabbf\",70],[\"afc\"],[\"fdccfd\",365],[\"ebebe\",478],[\"b\"],[\"e\",983],[\"ebebe\",541],[\"b\"],[\"ebabbf\",182],[\"fdccfd\",576],[\"fbccab\"],[\"bc\",424],[\"bae\",872],[\"ebabb\"],[\"e\",167]]",
+      "expectedOutput": "[null,0,null,null,548,null,null,0,null,null,0,null,null,0,null,null,520,null,null,253,null,null,2066,null,null,253,null,null,845,null,null,1790,null,null,720,null,null,0,null,null,1608,null,null,1608,null,null,0,null,null,182,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"b\"],[\"aeecafbd\",160],[\"fe\",448],[\"d\"],[\"fb\",782],[\"fe\",1],[\"fe\"],[\"fb\",419],[\"edaae\",804],[\"fb\"],[\"aefbfe\",226],[\"bfcdedcc\",483],[\"f\"],[\"aeecafbd\",414],[\"fb\",708],[\"ffb\"],[\"fb\",407],[\"fbdffedf\",574],[\"b\"],[\"c\",128],[\"ffb\",405],[\"abcd\"],[\"aefbfe\",295],[\"b\",818],[\"f\"],[\"edaae\",25],[\"fe\",964],[\"b\"],[\"fbdffedf\",481],[\"fe\",38],[\"eda\"],[\"fbdffedf\",319],[\"fde\",708],[\"bd\"],[\"fde\",271],[\"bddabf\",310],[\"c\"],[\"deeacb\",894],[\"affafbd\",900],[\"aeecafbd\"],[\"fe\",596],[\"fb\",331],[\"affa\"],[\"ffb\",480],[\"aeecafbd\",185],[\"de\"],[\"aefbfe\",686],[\"fbdffedf\",48],[\"fb\"],[\"deeacb\",500]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,1,null,null,419,null,null,420,null,null,0,null,null,483,null,null,0,null,null,1387,null,null,1301,null,null,25,null,null,0,null,null,128,null,null,414,null,null,900,null,null,894,null,null,379,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"b\"],[\"cef\",728],[\"ccccbbfc\",68],[\"acbcc\"],[\"cef\",497],[\"fbb\",941],[\"cbed\"],[\"aedfcfb\",467],[\"cbed\",21],[\"acb\"],[\"eeedacba\",13],[\"a\",367],[\"ee\"],[\"dddfed\",536],[\"cda\",227],[\"a\"],[\"acbcc\",566],[\"cda\",844],[\"ccccb\"],[\"cef\",767],[\"eeedacba\",697],[\"b\"],[\"cbed\",937],[\"a\",446],[\"dddfe\"],[\"fbb\",39],[\"a\",631],[\"ccccb\"],[\"cef\",559],[\"a\",136],[\"b\"],[\"b\",339],[\"fdecd\",104],[\"ccccbb\"],[\"cda\",322],[\"dddfed\",446],[\"ccc\"],[\"fdecd\",495],[\"cef\",858],[\"fbb\"],[\"b\",40],[\"dddfed\",346],[\"c\"],[\"b\",668],[\"cda\",813],[\"fbb\"],[\"cda\",234],[\"eed\",572],[\"dddfed\"],[\"aedfcfb\",259]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,0,null,null,13,null,null,834,null,null,68,null,null,0,null,null,536,null,null,68,null,null,0,null,null,68,null,null,68,null,null,39,null,null,2185,null,null,39,null,null,346,null]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\"]\n[[],[\"c\"],[\"febfdfed\",277],[\"cf\",468],[\"b\"],[\"acafbfeb\",467],[\"ece\",41],[\"acaf\"],[\"cfeb\",148],[\"c\",997],[\"a\"],[\"cff\",559],[\"cf\",155],[\"e\"],[\"ece\",362],[\"cfeb\",621],[\"ab\"],[\"cfc\",821],[\"becbfbdf\",752],[\"aac\"],[\"ece\",410],[\"becbfbdf\",236],[\"c\"],[\"eedde\",917],[\"eedaaed\",284],[\"a\"]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,467,null,null,467,null,null,41,null,null,0,null,null,0,null,null,3153,null,null,467]"
+    },
+    {
+      "input": "[\"MapSum\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\",\"insert\",\"sum\",\"insert\"]\n[[],[\"fbdff\"],[\"afe\",219],[\"ff\",752],[\"fbd\"],[\"cdeca\",738],[\"d\",60],[\"fcbae\"],[\"dd\",738],[\"afe\",90],[\"d\"],[\"d\",725],[\"bab\",636],[\"dc\"],[\"dd\",298],[\"dd\",635],[\"fcba\"],[\"afe\",232],[\"dc\",194],[\"d\"],[\"fcbaeaab\",130],[\"ccd\",648],[\"d\"],[\"ffcaf\",721],[\"efebbdaf\",208],[\"fcbaeaab\"],[\"ccd\",124],[\"afe\",341],[\"fbdff\"],[\"acb\",852],[\"ccd\",726],[\"cde\"],[\"cdedfffe\",717],[\"cdeca\",711],[\"dd\"],[\"ccd\",280],[\"d\",255],[\"a\"],[\"fbdff\",267],[\"d\",972],[\"ff\"],[\"ccd\",340],[\"ff\",958],[\"d\"],[\"d\",491],[\"fbdff\",360],[\"fbdf\"],[\"afe\",132],[\"d\",189],[\"fcb\"],[\"bab\",994]]",
+      "expectedOutput": "[null,0,null,null,0,null,null,0,null,null,798,null,null,0,null,null,0,null,null,1554,null,null,1554,null,null,130,null,null,0,null,null,738,null,null,635,null,null,1193,null,null,1473,null,null,1801,null,null,360,null,null,130,null]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/map-sum-pairs/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:21.048Z",
+    "sourceUpdatedAt": null
+  }
+}

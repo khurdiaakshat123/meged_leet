@@ -1,0 +1,170 @@
+{
+  "id": "301",
+  "slug": "remove-invalid-parentheses",
+  "title": "Remove Invalid Parentheses",
+  "category": "dsa",
+  "subcategory": "graphs",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Backtracking",
+    "Breadth-First Search"
+  ],
+  "statement": "Given a string `s` that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.\n\nReturn _a list of **unique strings** that are valid with the minimum number of removals_. You may return the answer in **any order**.\n\n**Example 1:**\n\n```\nInput: s = \"()())()\"\nOutput: [\"(())()\",\"()()()\"]\n```\n\n**Example 2:**\n\n```\nInput: s = \"(a)())()\"\nOutput: [\"(a())()\",\"(a)()()\"]\n```\n\n**Example 3:**\n\n```\nInput: s = \")(\"\nOutput: [\"\"]\n```\n\n**Constraints:**\n\n*   `1 <= s.length <= 25`\n*   `s` consists of lowercase English letters and parentheses `'('` and `')'`.\n*   There will be at most `20` parentheses in `s`.",
+  "constraints": [
+    "1 <= s.length <= 25",
+    "s consists of lowercase English letters and parentheses '(' and ')'.",
+    "There will be at most 20 parentheses in s."
+  ],
+  "examples": [
+    {
+      "input": "s = \"()())()\"",
+      "output": "[\"(())()\",\"()()()\"]",
+      "explanation": null
+    },
+    {
+      "input": "s = \"(a)())()\"",
+      "output": "[\"(a())()\",\"(a)()()\"]",
+      "explanation": null
+    },
+    {
+      "input": "s = \")(\"",
+      "output": "[\"\"]",
+      "explanation": null
+    }
+  ],
+  "starterCode": {
+    "cpp": "class Solution {\npublic:\n    vector<string> removeInvalidParentheses(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> removeInvalidParentheses(String s) {\n        \n    }\n}",
+    "python3": "class Solution:\n    def removeInvalidParentheses(self, s: str) -> list[str]:\n        ",
+    "python": "class Solution(object):\n    def removeInvalidParentheses(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar removeInvalidParentheses = function(s) {\n    \n};",
+    "typescript": "function removeInvalidParentheses(s: string): string[] {\n    \n};",
+    "csharp": "public class Solution {\n    public IList<string> RemoveInvalidParentheses(string s) {\n        \n    }\n}",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** removeInvalidParentheses(char* s, int* returnSize) {\n    \n}",
+    "golang": "func removeInvalidParentheses(s string) []string {\n    \n}",
+    "kotlin": "class Solution {\n    fun removeInvalidParentheses(s: String): List<String> {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeInvalidParentheses(_ s: String) -> [String] {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_invalid_parentheses(s: String) -> Vec<String> {\n        \n    }\n}",
+    "ruby": "# @param {String} s\n# @return {String[]}\ndef remove_invalid_parentheses(s)\n    \nend",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String[]\n     */\n    function removeInvalidParentheses($s) {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> removeInvalidParentheses(String s) {\n    \n  }\n}",
+    "scala": "object Solution {\n    def removeInvalidParentheses(s: String): List[String] = {\n        \n    }\n}",
+    "elixir": "defmodule Solution do\n  @spec remove_invalid_parentheses(s :: String.t) :: [String.t]\n  def remove_invalid_parentheses(s) do\n    \n  end\nend",
+    "erlang": "-spec remove_invalid_parentheses(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nremove_invalid_parentheses(S) ->\n  .",
+    "racket": "(define/contract (remove-invalid-parentheses s)\n  (-> string? (listof string?))\n  )"
+  },
+  "publicTests": [
+    {
+      "input": "\"(\"",
+      "expectedOutput": "[\"\"]"
+    },
+    {
+      "input": "\"a(b)\"",
+      "expectedOutput": "[\"a(b)\"]"
+    },
+    {
+      "input": "\"())()\"",
+      "expectedOutput": "[\"()()\"]"
+    }
+  ],
+  "testCases": [
+    {
+      "input": "\"(\"",
+      "expectedOutput": "[\"\"]"
+    },
+    {
+      "input": "\")\"",
+      "expectedOutput": "[\"\"]"
+    },
+    {
+      "input": "\"m\"",
+      "expectedOutput": "[\"m\"]"
+    },
+    {
+      "input": "\")(\"",
+      "expectedOutput": "[\"\"]"
+    },
+    {
+      "input": "\"(()\"",
+      "expectedOutput": "[\"()\"]"
+    },
+    {
+      "input": "\"a(b)\"",
+      "expectedOutput": "[\"a(b)\"]"
+    },
+    {
+      "input": "\"())()\"",
+      "expectedOutput": "[\"()()\"]"
+    },
+    {
+      "input": "\"(c))(d\"",
+      "expectedOutput": "[\"(c)d\"]"
+    },
+    {
+      "input": "\"()())()\"",
+      "expectedOutput": "[\"(())()\",\"()()()\"]"
+    },
+    {
+      "input": "\"(e)())()\"",
+      "expectedOutput": "[\"(e())()\",\"(e)()()\"]"
+    },
+    {
+      "input": "\"((f)))(g)\"",
+      "expectedOutput": "[\"((f))(g)\"]"
+    },
+    {
+      "input": "\")h((i)))j(\"",
+      "expectedOutput": "[\"h((i))j\"]"
+    },
+    {
+      "input": "\"klnopqrstuv\"",
+      "expectedOutput": "[\"klnopqrstuv\"]"
+    },
+    {
+      "input": "\"((w)x))((yz)\"",
+      "expectedOutput": "[\"((w)x)(yz)\",\"((wx))(yz)\"]"
+    },
+    {
+      "input": "\"())g(j()))v((h\"",
+      "expectedOutput": "[\"()g(j())vh\",\"(g(j()))vh\"]"
+    },
+    {
+      "input": "\"a((()m)(t))(i()(\"",
+      "expectedOutput": "[\"a((()m)(t))(i)\",\"a((()m)(t))i()\"]"
+    },
+    {
+      "input": "\")i()(u(())()x)c(()\"",
+      "expectedOutput": "[\"i()(u(())()x)c()\"]"
+    },
+    {
+      "input": "\"((v))j(()h()e)()()()\"",
+      "expectedOutput": "[\"((v))j(()h()e)()()()\"]"
+    },
+    {
+      "input": "\"(((((())d)))c))p)))o))r))\"",
+      "expectedOutput": "[\"(((((())d)))c)por\",\"(((((())d)))cp)or\",\"(((((())d)))cpo)r\",\"(((((())d)))cpor)\",\"(((((())d))c))por\",\"(((((())d))c)p)or\",\"(((((())d))c)po)r\",\"(((((())d))c)por)\",\"(((((())d))cp))or\",\"(((((())d))cp)o)r\",\"(((((())d))cp)or)\",\"(((((())d))cpo))r\",\"(((((())d))cpo)r)\",\"(((((())d))cpor))\",\"(((((())d)c))p)or\",\"(((((())d)c))po)r\",\"(((((())d)c))por)\",\"(((((())d)c)p))or\",\"(((((())d)c)p)o)r\",\"(((((())d)c)p)or)\",\"(((((())d)c)po))r\",\"(((((())d)c)po)r)\",\"(((((())d)c)por))\",\"(((((())d)cp)))or\",\"(((((())d)cp))o)r\",\"(((((())d)cp))or)\",\"(((((())d)cp)o))r\",\"(((((())d)cp)o)r)\",\"(((((())d)cp)or))\",\"(((((())d)cpo))r)\",\"(((((())d)cpo)r))\",\"(((((())dc))p))or\",\"(((((())dc))p)o)r\",\"(((((())dc))p)or)\",\"(((((())dc))po))r\",\"(((((())dc))po)r)\",\"(((((())dc))por))\",\"(((((())dc)p)))or\",\"(((((())dc)p))o)r\",\"(((((())dc)p))or)\",\"(((((())dc)p)o))r\",\"(((((())dc)p)o)r)\",\"(((((())dc)p)or))\",\"(((((())dc)po))r)\",\"(((((())dc)po)r))\",\"(((((())dcp)))o)r\",\"(((((())dcp)))or)\",\"(((((())dcp))o))r\",\"(((((())dcp))o)r)\",\"(((((())dcp))or))\",\"(((((())dcp)o))r)\",\"(((((())dcp)o)r))\",\"(((((())dcpo))r))\",\"(((((()d)))c))por\",\"(((((()d)))c)p)or\",\"(((((()d)))c)po)r\",\"(((((()d)))c)por)\",\"(((((()d)))cp))or\",\"(((((()d)))cp)o)r\",\"(((((()d)))cp)or)\",\"(((((()d)))cpo))r\",\"(((((()d)))cpo)r)\",\"(((((()d)))cpor))\",\"(((((()d))c))p)or\",\"(((((()d))c))po)r\",\"(((((()d))c))por)\",\"(((((()d))c)p))or\",\"(((((()d))c)p)o)r\",\"(((((()d))c)p)or)\",\"(((((()d))c)po))r\",\"(((((()d))c)po)r)\",\"(((((()d))c)por))\",\"(((((()d))cp)))or\",\"(((((()d))cp))o)r\",\"(((((()d))cp))or)\",\"(((((()d))cp)o))r\",\"(((((()d))cp)o)r)\",\"(((((()d))cp)or))\",\"(((((()d))cpo))r)\",\"(((((()d))cpo)r))\",\"(((((()d)c))p))or\",\"(((((()d)c))p)o)r\",\"(((((()d)c))p)or)\",\"(((((()d)c))po))r\",\"(((((()d)c))po)r)\",\"(((((()d)c))por))\",\"(((((()d)c)p)))or\",\"(((((()d)c)p))o)r\",\"(((((()d)c)p))or)\",\"(((((()d)c)p)o))r\",\"(((((()d)c)p)o)r)\",\"(((((()d)c)p)or))\",\"(((((()d)c)po))r)\",\"(((((()d)c)po)r))\",\"(((((()d)cp)))o)r\",\"(((((()d)cp)))or)\",\"(((((()d)cp))o))r\",\"(((((()d)cp))o)r)\",\"(((((()d)cp))or))\",\"(((((()d)cp)o))r)\",\"(((((()d)cp)o)r))\",\"(((((()d)cpo))r))\",\"(((((()dc))p)))or\",\"(((((()dc))p))o)r\",\"(((((()dc))p))or)\",\"(((((()dc))p)o))r\",\"(((((()dc))p)o)r)\",\"(((((()dc))p)or))\",\"(((((()dc))po))r)\",\"(((((()dc))po)r))\",\"(((((()dc)p)))o)r\",\"(((((()dc)p)))or)\",\"(((((()dc)p))o))r\",\"(((((()dc)p))o)r)\",\"(((((()dc)p))or))\",\"(((((()dc)p)o))r)\",\"(((((()dc)p)o)r))\",\"(((((()dc)po))r))\",\"(((((()dcp)))o))r\",\"(((((()dcp)))o)r)\",\"(((((()dcp)))or))\",\"(((((()dcp))o))r)\",\"(((((()dcp))o)r))\",\"(((((()dcp)o))r))\",\"((((((d)))c))p)or\",\"((((((d)))c))po)r\",\"((((((d)))c))por)\",\"((((((d)))c)p))or\",\"((((((d)))c)p)o)r\",\"((((((d)))c)p)or)\",\"((((((d)))c)po))r\",\"((((((d)))c)po)r)\",\"((((((d)))c)por))\",\"((((((d)))cp)))or\",\"((((((d)))cp))o)r\",\"((((((d)))cp))or)\",\"((((((d)))cp)o))r\",\"((((((d)))cp)o)r)\",\"((((((d)))cp)or))\",\"((((((d)))cpo))r)\",\"((((((d)))cpo)r))\",\"((((((d))c))p))or\",\"((((((d))c))p)o)r\",\"((((((d))c))p)or)\",\"((((((d))c))po))r\",\"((((((d))c))po)r)\",\"((((((d))c))por))\",\"((((((d))c)p)))or\",\"((((((d))c)p))o)r\",\"((((((d))c)p))or)\",\"((((((d))c)p)o))r\",\"((((((d))c)p)o)r)\",\"((((((d))c)p)or))\",\"((((((d))c)po))r)\",\"((((((d))c)po)r))\",\"((((((d))cp)))o)r\",\"((((((d))cp)))or)\",\"((((((d))cp))o))r\",\"((((((d))cp))o)r)\",\"((((((d))cp))or))\",\"((((((d))cp)o))r)\",\"((((((d))cp)o)r))\",\"((((((d))cpo))r))\",\"((((((d)c))p)))or\",\"((((((d)c))p))o)r\",\"((((((d)c))p))or)\",\"((((((d)c))p)o))r\",\"((((((d)c))p)o)r)\",\"((((((d)c))p)or))\",\"((((((d)c))po))r)\",\"((((((d)c))po)r))\",\"((((((d)c)p)))o)r\",\"((((((d)c)p)))or)\",\"((((((d)c)p))o))r\",\"((((((d)c)p))o)r)\",\"((((((d)c)p))or))\",\"((((((d)c)p)o))r)\",\"((((((d)c)p)o)r))\",\"((((((d)c)po))r))\",\"((((((d)cp)))o))r\",\"((((((d)cp)))o)r)\",\"((((((d)cp)))or))\",\"((((((d)cp))o))r)\",\"((((((d)cp))o)r))\",\"((((((d)cp)o))r))\",\"((((((dc))p)))o)r\",\"((((((dc))p)))or)\",\"((((((dc))p))o))r\",\"((((((dc))p))o)r)\",\"((((((dc))p))or))\",\"((((((dc))p)o))r)\",\"((((((dc))p)o)r))\",\"((((((dc))po))r))\",\"((((((dc)p)))o))r\",\"((((((dc)p)))o)r)\",\"((((((dc)p)))or))\",\"((((((dc)p))o))r)\",\"((((((dc)p))o)r))\",\"((((((dc)p)o))r))\",\"((((((dcp)))o))r)\",\"((((((dcp)))o)r))\",\"((((((dcp))o))r))\"]"
+    },
+    {
+      "input": "\"))((n((q((d((c(k())))))((\"",
+      "expectedOutput": "[\"((n((q((dck))))))\",\"((n((q(d(ck))))))\",\"((n((q(dc(k))))))\",\"((n((q(dck())))))\",\"((n((qd((ck))))))\",\"((n((qd(c(k))))))\",\"((n((qd(ck())))))\",\"((n((qdc(k())))))\",\"((n(q((d(ck))))))\",\"((n(q((dc(k))))))\",\"((n(q((dck())))))\",\"((n(q(d((ck))))))\",\"((n(q(d(c(k))))))\",\"((n(q(d(ck())))))\",\"((n(q(dc(k())))))\",\"((n(qd((c(k))))))\",\"((n(qd((ck())))))\",\"((n(qd(c(k())))))\",\"((nq((d((ck))))))\",\"((nq((d(c(k))))))\",\"((nq((d(ck())))))\",\"((nq((dc(k())))))\",\"((nq(d((c(k))))))\",\"((nq(d((ck())))))\",\"((nq(d(c(k())))))\",\"((nqd((c(k())))))\",\"(n((q((d(ck))))))\",\"(n((q((dc(k))))))\",\"(n((q((dck())))))\",\"(n((q(d((ck))))))\",\"(n((q(d(c(k))))))\",\"(n((q(d(ck())))))\",\"(n((q(dc(k())))))\",\"(n((qd((c(k))))))\",\"(n((qd((ck())))))\",\"(n((qd(c(k())))))\",\"(n(q((d((ck))))))\",\"(n(q((d(c(k))))))\",\"(n(q((d(ck())))))\",\"(n(q((dc(k())))))\",\"(n(q(d((c(k))))))\",\"(n(q(d((ck())))))\",\"(n(q(d(c(k())))))\",\"(n(qd((c(k())))))\",\"(nq((d((c(k))))))\",\"(nq((d((ck())))))\",\"(nq((d(c(k())))))\",\"(nq(d((c(k())))))\",\"n((q((d((ck))))))\",\"n((q((d(c(k))))))\",\"n((q((d(ck())))))\",\"n((q((dc(k())))))\",\"n((q(d((c(k))))))\",\"n((q(d((ck())))))\",\"n((q(d(c(k())))))\",\"n((qd((c(k())))))\",\"n(q((d((c(k))))))\",\"n(q((d((ck())))))\",\"n(q((d(c(k())))))\",\"n(q(d((c(k())))))\",\"nq((d((c(k())))))\"]"
+    }
+  ],
+  "sqlSchema": null,
+  "sqlSetup": null,
+  "expectedOutput": null,
+  "solution": null,
+  "hints": [
+    "Since we do not know which brackets can be removed, we try all the options! We can use recursion.",
+    "In the recursion, for each bracket, we can either use it or remove it.",
+    "Recursion will generate all the valid parentheses strings but we want the ones with the least number of parentheses deleted.",
+    "We can count the number of invalid brackets to be deleted and only generate the valid strings in the recusrion."
+  ],
+  "source": {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/problems/remove-invalid-parentheses/",
+    "licenseOrPermissionReference": "Authorized collection",
+    "collectedAt": "2026-10-19T18:40:27.531Z",
+    "sourceUpdatedAt": null
+  }
+}
